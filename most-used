@@ -1,0 +1,21 @@
+use warnings;
+use strict;
+my (%a, %b, $p, $last, $th);
+while (<>) {
+    for my $tok (/\S+/g) {
+        if ($tok eq '$=') { $p=1; %a = () }
+        elsif ($p && ($tok eq ')' || $tok eq '$.')) { $p = 0; push @{$b{$_}}, $th for keys %a; %a = () }
+        elsif ($tok eq '$p') { $th = $last }
+        elsif ($tok ne '(') { $a{$tok}=1; $last=$tok; }
+    }
+print STDERR $., "\r" if !($. % 100);
+}
+
+use List::Util 'shuffle';
+for (reverse sort { @{$b{$a}} <=> @{$b{$b}} } keys %b) {
+    my @sampl = shuffle @{$b{$_}};
+    last if @sampl < 100;
+    splice(@sampl, 20);
+    printf "%5d  %-20s %s\n", scalar(@{$b{$_}}), $_, "@sampl";
+    last if $b{$_} < 100
+}
