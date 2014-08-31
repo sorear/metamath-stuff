@@ -188,6 +188,31 @@ ${
     df-recgeneral $a |- RecGeneral = ran RecArithGeneral $.
 $}
 
+${
+    $d a b c d e f g $.
+
+    totfa-is-parfa $p |- ( A e. NN -> ( RecTotFa ` A ) C_ ( RecParFa ` A ) ) $= ? $.
+    totf-is-parf $p |- RecTotF C_ RecParF $= ? $.
+    parfa-disjoint $p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecParFa ` A ) /\ C e. ( RecParFa ` B ) ) ) -> A = B ) $= ? $.
+    arity-defined $p |- ( A e. RecParF -> ( RecArity ` A ) e. NN ) $= ? $.
+    arity-fun $p |- RecArity : RecParF --> NN $= ? $.
+    arity-df2 $p |- ( A e. NN -> ( B e. ( RecParFa ` A ) <-> ( B e. RecParF /\ ( RecArity ` B ) = A ) ) ) $= ? $.
+    arity-dftot $p |- ( A e. NN -> ( B e. ( RecTotFa ` A ) <-> ( B e. RecTotF /\ ( RecArity ` B ) = A ) ) ) $= ? $.
+$}
+
+${
+    $d a b c d e f g $.
+
+    zer-totfa $p |- RecZer e. ( RecTotFa ` 0 ) $= ? $.
+    suc-totfa $p |- RecSuc e. ( RecTotFa ` 1 ) $= ? $.
+    prj-totfa $p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) e. ( RecTotFa ` B ) ) $= ? $.
+    sub-totfa $p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecTotFa ` A ) /\ D e. ( ( RecTotFa ` B ) ^m ( 1 ... A ) ) ) ) -> ( C ( A RecSub B ) D ) e. ( RecTotFa ` B ) ) $= ? $.
+    sub-parfa $p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecParFa ` A ) /\ D e. ( ( RecParFa ` B ) ^m ( 1 ... A ) ) ) ) -> ( C ( A RecSub B ) D ) e. ( RecParFa ` B ) ) $= ? $.
+    prc-totfa $p |- ( ( A e. NN /\ B e. ( RecTotFa ` A ) /\ C e. ( RecTotFa ` ( A + 1 ) ) ) -> ( B ( RecPrc ` A ) C ) e. ( RecTotFa ` ( A + 1 ) ) ) $= ? $.
+    prc-parfa $p |- ( ( A e. NN /\ B e. ( RecParFa ` A ) /\ C e. ( RecParFa ` ( A + 1 ) ) ) -> ( B ( RecPrc ` A ) C ) e. ( RecParFa ` ( A + 1 ) ) ) $= ? $.
+    sea-parfa $p |- ( ( A e. NN /\ B e. ( RecParFa ` ( A + 1 ) ) ) -> ( ( RecSea ` A ) ` B ) e. ( RecParFa ` A ) ) $= ? $.
+$}
+
 $( ---- HALTING ---- $)
 $( Prove the existance of a Universal Turing Machine (i.o.w. the Turing evaluation function is a partial computable function) and formalize the existance of semidecidable predicates that are not decidable. $)
 
