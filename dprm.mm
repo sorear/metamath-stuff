@@ -60,7 +60,7 @@ ${
 $}
 
 $( loosely inspired by some lecture notes I found by Lou van den Dries $)
-$c RecZer RecSuc RecSub RecSea RecPrj RecPrc RecParF RecArity RecParFa $.
+$c RecZer RecSuc RecSub RecSea RecPrj RecPrc RecParF RecArity RecParFa RecTotF RecTotFa RecArithPrimitiveStep RecArithGeneralStep RecArithPrimitiveL RecArithPrimitive RecArithGeneralL RecArithGeneral RecPrimitive RecGeneral RecPreList $.
 ${
     creczer $a class RecZer $.
     crecsuc $a class RecSuc $.
@@ -71,20 +71,46 @@ ${
     crecparf $a class RecParF $.
     crecarity $a class RecArity $.
     crecparfa $a class RecParFa $.
+    crectotf $a class RecTotF $.
+    crectotfa $a class RecTotFa $.
+    crecprelist $a class RecPreList $.
+    crecarithprimitivestep $a class RecArithPrimitiveStep $.
+    crecarithprimitivel $a class RecArithPrimitiveL $.
+    crecarithprimitive $a class RecArithPrimitive $.
+    crecprimitive $a class RecPrimitive $.
+    crecarithgeneralstep $a class RecArithGeneralStep $.
+    crecarithgenerall $a class RecArithGeneralL $.
+    crecarithgeneral $a class RecArithGeneral $.
+    crecgeneral $a class RecGeneral $.
 
-    $d x y z f g h w a $.
+    $d x y z f g h w a b c i j k $.
+
+    $( -- unified treatment of partial/total functions for recursion theory -- $)
+
     $( Set of partial functions from NN^x -> NN, not necessarily recursive.  Set theoretically these are total functions, in order to avoid a pathology where nowhere-defined functions can have multiple arities at the same time. $)
     df-recparfa $a |- RecParFa = ( x e. NN |-> ( ( NN0 u. { ( Undef ` NN0 ) } ) ^m ( NN0 ^m ( 1 ... x ) ) ) ) $.
+
     $( All partial functions, regardless of arity $)
     df-recparf $a |- RecParF = U. ran RecParFa $.
+
     $( Arity of a partial function $)
     df-recarity $a |- RecArity = ( f e. RecParF |-> ( iota_ x e. NN f e. ( RecParFa ` x ) ) ) $.
+
+    $( Total functions, a subset of partial functions $)
+    df-rectotfa $a |- RecTotFa = ( x e. NN |-> ( NN0 ^m ( NN0 ^m ( 1 ... x ) ) ) ) $.
+    df-rectotf $a |- RecTotF = U. ran RecTotFa $.
+    $( we can use the same arity $)
+
+    $( TODO: define RecPreList $)
+
+    $( -- recursive function builders -- $)
+
     $( Zero recursive function $)
     df-reczer $a |- RecZer = ( x e. ( NN0 ^m ( 1 ... 0 ) ) |-> 0 ) $.
     $( Successor $)
     df-recsuc $a |- RecSuc = ( x e. ( NN0 ^m ( 1 ... 1 ) ) |-> ( ( x ` 1 ) + 1 ) ) $.
     $( Projector family $)
-    df-recprj $a |- RecPrj = ( x e. NN , y e. NN |-> ( z e. ( NN0 ^m ( 1 ... y ) ) |-> ( z ` x ) ) ) $.
+    df-recprj $a |- RecPrj = ( x e. NN , y e. NN |-> ( z e. ( NN0 ^m ( 1 ... y ) ) |-> if ( x <_ y , ( z ` x ) , 0 ) ) ) $.
     $( Substitution $)
     df-recsub $a |- RecSub =
         ( x e. NN , y e. NN |->
@@ -116,7 +142,7 @@ ${
         )
     ) $.
 
-    $( Unbounded search / general recursion.  Here originates NN0. $)
+    $( Unbounded search / general recursion.  Here originates Undef. $)
     df-recsea $a |- RecSea = ( x e. NN |->
         ( f e. ( RecParFa ` ( x + 1 ) ) |->
             ( y e. ( 1 ... x ) |->
@@ -127,6 +153,39 @@ ${
             )
         )
     ) $.
+
+    $( -- let's define the arithmetization predicate and the set of general recursive functions at the same time, I think this will save work -- $)
+
+    $( naming a step of the construction, do not use except to prove properties on RecArithPrimitiveL $)
+    df-recarithprimitivestep $a |- RecArithPrimitiveStep = ( f e. ~P ( NN0 X. RecParF ) |-> { <. x , g >. |
+        (
+            ( ( x = ( 1 ,n 0 ) /\ g = RecZer ) \/
+                ( x = ( 1 ,n 1 ) /\ g = RecSuc ) ) \/
+            (
+                E. i e. NN E. j e. NN ( x = ( 2 ,n ( i ,n j ) ) /\ i <_ j /\ g = ( i RecPrj j ) ) \/
+                E. i e. NN E. j e. NN E. a e. ( RecParFa ` i ) E. b e. ( ( RecParFa ` j ) ^m ( 1 ... i ) )
+                    E. c e. NN0 E. d e. NN0 E. e e. ( NN0 ^m ( 1 ... i ) )
+                        ( ( c f a /\ A. l e. ( 1 ... i ) ( e ` l ) f ( b ` l ) ) /\
+                            ( x = ( 3 ,n ( i ,n ( c ,n d ) ) ) /\ d = ( RecPreList ` e ) /\  g = ( a ( i RecSub j ) b ) ) ) \/
+                E. i e. NN E. j e. NN0 E. k e. NN0 E. a e. ( RecParFa ` i ) E. b e. ( RecParFa ` ( i + 1 ) )
+                    ( ( j f a /\ k f b ) /\ ( x = ( 4 ,n ( j ,n k ) ) /\ g = ( a ( RecPrc ` i ) b ) ) )
+            )
+        )
+    } ) $.
+
+    df-recarithgeneralstep $a |- RecArithGeneralStep ( f e. ~P ( NN0 X. RecParF ) |-> { <. x , g >. |
+        x ( RecArithPrimitiveStep ` f ) g \/
+        E. i e. NN E. j e. NN0 E. a e. ( RecParFa ` ( i + 1 ) )
+            ( j f a /\ x = ( 5 ,n j ) /\ g = ( ( RecSea ` i ) ` a ) )
+    } ) $.
+
+    $( Primitive recursion - levelled version, avoid using $)
+    df-recarithprimitivel $a |- RecArithPrimitiveL = seq 0 ( ( x e. ~P ( NN0 X. RecParF ) , y e. { (/) } |-> ( RecArithPrimitiveStep ` x ) ) , ( NN0 X. { (/) } ) ) $.
+    df-recarithgenerall $a |- RecArithGeneralL = seq 0 ( ( x e. ~P ( NN0 X. RecParF ) , y e. { (/) } |-> ( RecArithGeneralStep ` x ) ) , ( NN0 X. { (/) } ) ) $.
+    df-recarithprimitive $a |- RecArithPrimitive = U. ran RecArithPrimitiveL $.
+    df-recarithgeneral $a |- RecArithGeneral = U. ran RecArithGeneralL $.
+    df-recprimitive $a |- RecPrimitive = ran RecArithPrimitive $.
+    df-recgeneral $a |- RecGeneral = ran RecArithGeneral $.
 $}
 
 $( ---- HALTING ---- $)
