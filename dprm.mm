@@ -45,18 +45,40 @@ $( Define Turing machines and computable functions and prove composition laws as
 
 $( we're about to use this a ton, so give it a proper name $)
 
-$c ,n $.
+$c ,n 1st_n 2nd_n $.
 ${
-    csnn0op $a class ,n $.
+    cgoedel-pair $a class ,n $.
     $d x y $.
-    df-snn0op $a |- ,n = ( x e. NN0 , y e. NN0 |-> ( ( ( A + B ) ^ 2 ) + B ) ) $.
+    $( The Goedel pair.  Similar to ~ nn0opth from the core, but with the refinement of being onto. $)
+    df-goedel-pair $a |- ,n = ( x e. NN0 , y e. NN0 |-> ( ( ( ( x + y ) x. ( ( x + y ) + 1 ) ) / 2 ) + x ) ) $.
 
-    $( restate core theorem $)
-    $d a w x y z A $.
-    $d a w x y z B $.
-    $d a w x y z C $.
-    $d a w x y z D $.
-    snn0opth $p |- ( ( ( A e. NN0 /\ B e. NN0 ) /\ ( C e. NN0 /\ D e. NN0 ) ) -> ( ( A ,n B ) = ( C ,n D ) <-> ( A = C /\ B = D ) ) ) $= ( vz vw vx va cn0 wcel wa csnn0op co wceq caddc c2 cexp cv oveq1 oveq1d simpl id oveq2d oveq12d df-snn0op ovex ovmpt2 syl simpr eqeq12d nn0opth2 bitrd ) AIJBIJKZCIJDIJKZKZABLMZCDLMZNABOMZPQMZBOMZCDOMZPQMZDOMZNACNBDNKUOUPUTUQVCUOUMUPUTNUMUNUAEFABIIERZFRZOMZPQMZVEOMUTLAVEOMZPQMZVEOMVDANZVGVIVEOVJVFVHPQVDAVEOSTTVEBNZVIUSVEBOVKVHURPQVKVEBAOVKUBZUCTVLUDEFVDVEUEUSBOUFUGUHUOUNUQVCNUMUNUIGHCDIIGRZHRZOMZPQMZVNOMVCLCVNOMZPQMZVNOMVMCNZVPVRVNOVSVOVQPQVMCVNOSTTVNDNZVRVBVNDOVTVQVAPQVTVNDCOVTUBZUCTWAUDGHVMVNUEVBDOUFUGUHUJABCDUKUL $.  $( [31-Aug-2014] $)
+    $d a b c d e f A $.
+    $d a b c d e f B $.
+    $d a b c d e f C $.
+    $d a b c d e f D $.
+    goedel-pair-lem0 $p |- ( E e. NN0 -> ( ( E x. ( E + 1 ) ) / 2 ) e. NN0 ) $= ( c1 caddc co cmul c2 cdiv cn0 wcel cc0 wceq id oveq1 oveq12d oveq1d eleq1d cc a1i syl syl2anc vb va cv weq 0cnALT ax-1cn addcli mul02i oveq1i 2cn idiVD wne 2ne0 div0i eqtri 0nn0 eqeltri simpl w3a nn0cn 3jca ax-addass df-2 eqcomi oveq2d eqtrd jca ax-addcl ax-distr wa eqid 3eqtrd ax-mulcl pm3.2i divdir divcan4 syl3anc peano2nn0 adantr ax-mulcom simpr eqeltrd nn0addcl ex nn0ind ) UAUCZWFBCDZEDZFGDZHIJJBCDZEDZFGDZHIUBUCZWMBCDZEDZFGDZHIZWNWNBCDZEDZFGDZHIZAABCDZEDZFGDZHIUAUBAWFJKZWIWLHXEWHWKFGXEWFJWGWJEXELWFJBCMNOPUAUBUDZWIWPHXFWHWOFGXFWFWMWGWNEXFLWFWMBCMNOPWFWNKZWIWTHXGWHWSFGXGWFWNWGWREXGLWFWNBCMNOPWFAKZWIXDHXHWHXCFGXHWFAWGXBEXHLWFABCMNOPWLJHWLJFGDJWKJFGWJJBUEUFUGUHUIFFQIZUJUKZFJULZUMUKUNUOJHIUPUKUQWMHIZWQXAXLWQVJZWTWNWMEDZFGDZWNCDZHXMXLWTXPKXLWQURXLWTXNWNFEDZCDZFGDZXOXQFGDZCDZXPXLWSXRFGXLWSWNWMFCDZEDZXRXRXLWRYBWNEXLWRWMBBCDZCDZYBXLWMQIZBQIZYGUSWRYEKXLYFYGYGWMUTZYGXLUFRZYIVAWMBBVBSXLYDFWMCYDFKXLFYDVCVDRVEVFVEXLWNQIZYFXIUSYCXRKXLYJYFXIXLYFYGVJYJXLYFYGYHYIVGWMBVHZSYHXIXLXJRVAWNWMFVISXRXRKXLXRVKRVLOXLXNQIZXQQIZXIXKVJZUSXSYAKXLYLYMYNXLYJYFYLXLYFYGYJYHYIYKTZYHWNWMVMTXLYJXIYMYOXIXLUJRZWNFVMTYNXLXIXKUJUMVNRVAXNXQFVOSXLXTWNXOCXLYJXIXKXTWNKYOYPXKXLUMRWNFVPVQVEVLSXMXOHIWNHIZXPHIXMXOWPHXMXNWOFGXMYJYFXNWOKXLYJWQXLYQYJWMVRZWNUTSVSXLYFWQYHVSWNWMVTTOXLWQWAWBXLYQWQYRVSXOWNWCTWBWDWE $.  $( [1-Sep-2014] $)
+
+    $(
+        ( ( ( A + 1 ) x. ( ( A + 1 ) + 1 ) ) / 2 ) =
+        ( ( ( A + 1 ) x. ( A + ( 1 + 1 ) ) ) / 2 ) =
+        ( ( ( A + 1 ) x. ( A + 2 ) ) / 2 ) =
+        ( ( ( ( A + 1 ) x. A ) + ( ( A + 1 ) x. 2 ) ) / 2 ) =
+        ( ( ( A x. ( A + 1 ) ) + ( ( A + 1 ) x. 2 ) ) / 2 ) =
+        ( ( ( ( A + 1 ) x. A ) / 2 ) + ( ( ( A + 1 ) x. 2 ) / 2 ) ) =
+        ( ( ( A + 1 ) x. A ) / 2 ) + ( A + 1 )
+    $)
+
+    goedel-pair-lem3 $p |- ( A e. CC -> ( ( ( A + 1 ) x. ( ( A + 1 ) + 1 ) ) / 2 ) = ( ( ( A x. ( A + 1 ) ) / 2 ) + ( A + 1 ) ) ) $= ( cc wcel c1 caddc co cmul c2 cdiv wceq id1 ax-1cn a1i syl3anc oveq2d syl2anc oveq1d 3eqtrd ax-mulcl 2ne0 ax-addass 1p1e2apr1 idiVD eqtrd peano2cn 2cn ax-distr ax-mulcom cc0 wne wa jctir divdir divcan4 ) ABCZADEFZUPDEFZGFZHIFAUPGFZUPHGFZEFZHIFZUSHIFZUTHIFZEFZVCUPEFUOURVAHIUOURUPAHEFZGFZUPAGFZUTEFZVAUOUQVFUPGUOUQADDEFZEFZVFUOUODBCZVLUQVKJUOKZVLUOLMZVNADDUANUOVJHAEVJHJZUOVOUBUCMOUDOUOUPBCZUOHBCZVGVIJAUEZVMVQUOUFMZUPAHUGNUOVHUSUTEUOVPUOVHUSJVRVMUPAUHPQRQUOUSBCZUTBCZVQHUIUJZUKVBVEJUOUOVPVTVMVRAUPSPUOVPVQWAVRVSUPHSPUOVQWBVSTULUSUTHUMNUOVDUPVCEUOVPVQWBVDUPJVRVSWBUOTMUPHUNNOR $.  $( [1-Sep-2014] $)
+    goedel-pair-lem4 $p |- ( A = 0 -> ( ( A x. ( A + 1 ) ) / 2 ) = 0 ) $= ( cc0 wceq c1 caddc co cmul c2 cdiv oveq1 cc wcel id 0cnALT a1i eqeltrd ax-1cn ax-addcl syl2anc mul02 syl eqtrd oveq1d 2cn 2ne0 div0i syl6eq ) ABCZAADEFZGFZHIFBHIFBUHUJBHIUHUJBUIGFZBABUIGJUHUIKLZUKBCUHAKLDKLZULUHABKUHMBKLUHNOPUMUHQOADRSUITUAUBUCHUDUEUFUG $.  $( [1-Sep-2014] $)
+    goedel-pair-lem5 $p |- ( A e. NN0 -> ( ( A x. ( A + 1 ) ) / 2 ) e. NN0 ) $= ( vb va cv c1 caddc co cmul c2 cdiv cn0 wcel cc0 wceq id oveq1 oveq12d oveq1d eleq1d adantr weq eqid1 goedel-pair-lem4 ax-mp 0nn0 eqeltri wa cc nn0cn goedel-pair-lem3 syl simpr peano2nn0 nn0addcl syl2anc eqeltrd ex nn0ind ) BDZUSEFGZHGZIJGZKLMMEFGZHGZIJGZKLCDZVFEFGZHGZIJGZKLZVGVGEFGZHGZIJGZKLZAAEFGZHGZIJGZKLBCAUSMNZVBVEKVRVAVDIJVRUSMUTVCHVROUSMEFPQRSBCUAZVBVIKVSVAVHIJVSUSVFUTVGHVSOUSVFEFPQRSUSVGNZVBVMKVTVAVLIJVTUSVGUTVKHVTOUSVGEFPQRSUSANZVBVQKWAVAVPIJWAUSAUTVOHWAOUSAEFPQRSVEMKMMNVEMNMUBMUCUDUEUFVFKLZVJVNWBVJUGZVMVIVGFGZKWBVMWDNZVJWBVFUHLWEVFUIVFUJUKTWCVJVGKLZWDKLWBVJULWBWFVJVFUMTVIVGUNUOUPUQUR $.  $( [1-Sep-2014] $)
+
+
+    goedel-pair-lem6 $p |- ( ( A e. CC /\ B e. CC /\ A <_ B ) -> ( ( A x. ( A + 1 ) ) / 2 ) <_ ( ( B x. ( B + 1 ) ) / 2 ) ) $= ? $.
+
+    goedel-pair-lem1 $p |- ( ( ( ( A + B ) x. ( ( A + B ) + 1 ) ) / 2 ) + A ) < ( ( ( ( A + B ) + 1 ) x. ( ( ( A + B ) + 1 ) + 1 ) ) / 2 ) $= ? $.
+    goedel-pair-lem2 $p |- ( A <_ B -> ( ( A x. ( A + 1 ) ) / 2 ) <_ ( ( B x. ( B + 1 ) ) / 2 ) ) $= ? $.
+
+    goedel-pair-1t1o $p |- ,n : ( NN0 X. NN0 ) -1-1-onto-> NN0 $= ? $.
 $}
 
 $( loosely inspired by some lecture notes I found by Lou van den Dries $)
@@ -180,10 +202,10 @@ ${
     } ) $.
 
     $( Primitive recursion - levelled version, avoid using $)
-    df-recarithprimitivel $a |- RecArithPrimitiveL = seq 0 ( ( x e. ~P ( NN0 X. RecParF ) , y e. { (/) } |-> ( RecArithPrimitiveStep ` x ) ) , ( NN0 X. { (/) } ) ) $.
-    df-recarithgenerall $a |- RecArithGeneralL = seq 0 ( ( x e. ~P ( NN0 X. RecParF ) , y e. { (/) } |-> ( RecArithGeneralStep ` x ) ) , ( NN0 X. { (/) } ) ) $.
-    df-recarithprimitive $a |- RecArithPrimitive = U. ran RecArithPrimitiveL $.
-    df-recarithgeneral $a |- RecArithGeneral = U. ran RecArithGeneralL $.
+    df-recarithprimitivel $a |- RecArithPrimitiveL = rec ( RecArithPrimitiveStep , (/) ) $.
+    df-recarithgenerall $a |- RecArithGeneralL = rec ( RecArithGeneralStep , (/) ) $.
+    df-recarithprimitive $a |- RecArithPrimitive = ( RecArithPrimitiveL ` om ) $.
+    df-recarithgeneral $a |- RecArithGeneral = ( RecArithGeneralL ` om ) $.
     df-recprimitive $a |- RecPrimitive = ran RecArithPrimitive $.
     df-recgeneral $a |- RecGeneral = ran RecArithGeneral $.
 $}
@@ -213,8 +235,69 @@ ${
     sea-parfa $p |- ( ( A e. NN /\ B e. ( RecParFa ` ( A + 1 ) ) ) -> ( ( RecSea ` A ) ` B ) e. ( RecParFa ` A ) ) $= ? $.
 $}
 
+${
+    $d a b c d e f g $.
+
+    $( we probably need to go finer grained than this $)
+
+    prim-is-gen-lem0 $p |- ( ( B C_ ( NN0 X. RecParF ) /\ A C_ B ) -> ( RecArithPrimitiveStep ` A ) C_ ( RecArithPrimitiveStep ` B ) ) $= ? $.
+    prim-is-gen-lem1 $p |- ( ( B C_ ( NN0 X. RecParF ) /\ A C_ B ) -> ( RecArithGeneralStep ` A ) C_ ( RecArithGeneralStep ` B ) ) $= ? $.
+    prim-is-gen-lem2 $p |- ( A C_ ( NN0 X. RecParF ) -> ( RecArithPrimitiveStep ` A ) C_ ( RecArithGeneralStep ` A ) ) $= ? $.
+    prim-is-gen-lem3 $p |- ( X e. On -> ( RecArithPrimitiveL ` X ) C_ ( RecArithGeneralL ` X ) ) $= ? $.
+    prim-is-gen-arith $p |- RecArithPrimitive C_ RecArithGeneral $= ? $.
+    prim-is-gen $p |- RecPrimitive C_ RecGeneral $= ? $.
+
+    $( not super sure how to prove these $)
+
+    gen-arith-isfun $p |- Fun RecArithGeneral $= ? $.
+    gen-arith-dom $p |- dom RecArithGeneral C_ NN $= ? $.
+    gen-are-parf $p |- RecGeneral C_ RecParF $= ? $.
+
+    $( easy consequences of the above, except for prim-are-totf $)
+    prim-arith-isfun $p |- Fun RecArithPrimitive $= ? $.
+    prim-arith-dom $p |- dom RecArithPrimitive C_ NN $= ? $.
+    prim-are-totf $p |- RecPrimitive C_ RecTotF $= ? $.
+
+    $( nonconstructive cardinality proof.  we will see the explicit diagonalization construction later $)
+    ex-nongen-totf-card-lem0 $p |- RecGeneral ~< NN $= ? $.
+    ex-nongen-totf-card-lem1 $p |- RecParF ~~ ~P NN $= ? $.
+    ex-nongen-totf-card $p |- RecGeneral C. RecParF $= ? $.
+$}
+
+${
+    $( construction and induction principles $)
+
+    zer-arith-prim $p |- <. ( 1 ,n 0 ) , RecZer >. e. RecPrimitive $= ? $.
+    suc-arith-prim $p |- <. ( 1 ,n 1 ) , RecSuc >. e. RecPrimitive $= ? $.
+    prj-arith-prim $p |- ( ( A e. NN /\ B e. NN /\ A <_ B ) -> <. ( 2 ,n ( A ,n B ) ) , ( A RecPrj B ) >. e. RecPrimitive ) $= ? $.
+
+    zer-prim $p |- RecZer e. RecPrimitive $= ? $.
+    suc-prim $p |- RecSuc e. RecPrimitive $= ? $.
+
+    prim-en-nn $p |- RecPrimitive ~~ NN $= ? $.
+    gen-en-nn $p |- RecGeneral ~~ NN $= ? $.
+
+    $( We may not need a full induction schema; coinduction + Goedel implies that ordinary induction on NN0 can be lifted to induction here $)
+$}
+
 $( ---- HALTING ---- $)
 $( Prove the existance of a Universal Turing Machine (i.o.w. the Turing evaluation function is a partial computable function) and formalize the existance of semidecidable predicates that are not decidable. $)
+
+$( doing this by recursion theory now.
+   define [] = 0, (x:y) = ( x ,n y ) + 1
+   define a primitive-recursive step function on stacks of frames:
+   step ( [_,[1,0]] : (_:x) : y ) = (0:x) : y
+   step ( [_,[1,1],a] : (_:x) : y ) = (a+1:x) : y
+   step ( (_:[2,i,j]:l) : (_:x) : y ) = (( l !! i ) : x) : y
+   step ( (_:[3,f,vs,(g:gs)]:l) : (_:x) : y ) = (0:g:l) : (0:
+   ...
+   definition needs work, but point is it's a straightforward reified continuation interpreter
+   prove that the transitive closure includes ( EVAL f x1 x2 x3 ... ) : C --> ( RET v ) : C iff f(x1,x2,x3,...) = v and v e. NN0
+   use a single RecSea to build a general recursive function which searches for ( RET v ) in the closure of ( EVAL f x ), and returns it
+   thus:
+$)
+
+eval-recursive $p |- ( x e. ( NN0 ^m ( 1 ... 2 ) ) |-> if ( ( x ` 1 ) e. dom RecArithGeneral , ( ( RecArithGeneral ` ( x ` 1 ) ) ` ( { 1 } X. { ( x ` 2 ) } ) ) , ( Undef ` NN0 ) ) ) e. RecArithGeneral $= ? $.
 
 $( ---- DIOPHANTINE ---- $)
 $( Define Diophantine sets and relations.  Prove composition laws and important cases like the exponential relation. $)
