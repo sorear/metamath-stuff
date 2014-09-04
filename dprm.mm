@@ -433,7 +433,62 @@ ${
     prim-en-nn $p |- RecPrimitive ~~ NN $= ? $.
     gen-en-nn $p |- RecGeneral ~~ NN $= ? $.
 
-    $( We may not need a full induction schema; coinduction + Goedel implies that ordinary induction on NN0 can be lifted to induction here $)
+    $( We may not need a full induction schema; coinduction + cantor pair comparison lemmata implies that ordinary induction on NN0 can be lifted to induction here $)
+    $( generally have +, -, *, /, 1st_n, 2nd_n, ,n, all constants, bounded looping, bounded iota, composition (normal subsititute-y), anything else we might need $)
+$}
+
+${
+    $( tree recursion lemma: reifies the stacks, takes p.r. f, g, fc, gc, h and builds F:
+       F(x) = h( x, fc(x) ? F(f(x)) : 0, gc(x) ? F(g(x)) : 0 )  details TBD $)
+    $( F is general recursive $)
+    $( F is total if there exists T : NN --> On which is decreased by f and g $)
+    $( F is primitive recursive if there exists T : NN -> NN which is primitve recursive and T(f(x)) + T(g(x)) < T(x) $)
+$}
+
+${
+    $( succinct encodings $)
+    $( ( x -> 2*x ) has some number < A = A ^ ( k ^ 0 ) $)
+    $( ( x -> 2*x + 1 ) has some number < A ^ ( k ^ 0 ) $)
+    $( if A >= A_base and f# < A and g# < A, (f o. g)# < A ^ k $)
+    $( for i = 0, all N < 2 ^ ( 2 ^ i ), ( x -> (2^(2^i))*x + N )# < A ^ ( k ^ 0 ) $)
+    $( for i >= 0, N < 2 ^ ( 2 ^ ( i + 1 ) ), ( x -> (2^(2^(i+1)))*x + N ) = ( x -> (2^(2^i))*x + A ) o. ( x -> (2^(2^i))*x + B ) for A,B determined by the division theorem $)
+    $( for i >= 0, N < 2 ^ ( 2 ^ i ), ( x -> (2^(2^i))*x + N )# < A ^ ( k ^ i ) by induction $)
+    $( for x >= 0, exists i such that x <_ ( 2 ^ ( 2 ^ i ) ) <_ ( x ^ 2 ) $)
+    $( for x >= 0, ( () -> x )# < ( A ^ ( k ^ i ) ) -> log( () -> x ) <
+       log( A ^ ( k ^ i ) ) = (k^i).log(A) = (2^i)^(log(k)/log(2))*log(A) <
+       log(A)/log(2)*log(2^2^i)^(log(k)/log(2)) <
+       log(A)/log(2) * log(x^2) ^ (log(k)/log(2)) = K * log(x) ^ L $)
+
+$}
+
+${
+    $( Raphael Robinson's inductive intrinsic characterization of the one-argument p.r. functions.  use ( ( ( x ,n b ) - a ) ,n a ) as an increment-friendly pair that works with our lemmas $)
+$}
+
+${
+    $( Peter-Ackermann function $)
+    $( A(0)   = Suc $)
+    $( A(i+1) = Prc(A(i),A(i)) $)
+    $( A(i,_) is primitive recursive at level i $)
+    $( let P(i) = for all p.r. F at level i and all [x...], F(x...) <_ A(max(x...)) $)
+    $( P(0) : F at 0 is Zer, Suc, or Prj $)
+    $( P(i+1) : zer/suc/prj handled.  either Sub or Prc remains $)
+    $( Prj(f,g)(const,N) : note g(const) <_ A(const), for all v >= max(const) (f(const,i) <_ partial ackerman) $)
+    $( requires A_i(i) is monotonic $)
+    $( requires definition of iterates of A $)
+    $( Sub(f,g...) : note all g values are less than A_i(in), so the result is less than A_i(A_i(in)) $)
+    $( requires: A(i,A(i,x)) <_ A(i+1,x) $)
+    $( requires: A(i,j) is strictly monotonic in i,j $)
+    $( A(j,j) is not dominated by A(i,j) for any fixed i $)
+    $( A(j,j) is not primitive recursive $)
+    $( suppose phi(f#, x) were primitive recursive.  then f(x) <_ A(i,max(f#,x)) for some i and all pr f $)
+    $( let f = A(i+1,_), y = f#.  A(i+1,y) = f(y) <_ A(i,max(f#,y)) = A(i,y), contradicting A(i+1,y) > A(i,j) $)
+    $( thus phi is not pr.  it will be shown gr in the next section $)
+    $( todo: this does not seem to quite be the standard Peter-Ackerman function, which has A(i+1) = Prc(A(i),1).  I like how much sharper my version is, the fastest-growing PR function of a given rank.  OTOH it's a little harder to calculate $)
+$}
+
+${
+    $( Relativization and the Turing Degrees? $)
 $}
 
 $( ---- HALTING ---- $)
@@ -466,3 +521,11 @@ $( Semidecidable sets are decidable by Turing machines, which can be expressed a
 
 $( ---- MATIJASEVICH 3 ---- $)
 $( Diophantine <-> Semidecidable.  There exist non-decidable diophantine sets. $)
+
+$( TODO
+    Things I've wanted.  If I still want them after I'm more familiar with the system, I'll implement/call for them
+    1. Cheat sheet of "do you want to do this -> use these theorems".  tell people to take advantage of min *
+    2. WRITE SOURCE with $[ $] would make my life much easier
+    3. Namespaces - see separate doc
+    4. How to handle similar subtrees in the PA: command to copy a subtree to a new node, either with or without syntax proofs(?).  An easy way to create new lemmas from completely proved subtrees without losing PA state would be nice.
+$)
