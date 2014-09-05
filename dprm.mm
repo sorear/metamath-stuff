@@ -410,6 +410,13 @@ ${
       va cv totfa-is-parfa mprg dfrecparf1 sseqtr4i eqsstri ) AKBKLZCDZEZFKGTKBR
       HDZEZFSUAITUBIKBKBSUAJRMNKOPQ $.
 
+    totfa-is-parfa-g $p |- ( RecTotFa ` A ) C_ ( RecParFa ` A ) $=
+      ( cn0 wcel crectotfa cfv crecparfa wss totfa-is-parfa wn cdm wceq totfa-fn
+      c0 wfn fndm ax-mp eqcomi eleq2i notbii biimpi syl 0ss a1i eqsstrd pm2.61i
+      ndmfv ) ABCZADEZAFEZGAHUGIZUHMUIUJADJZCZIZUHMKUJUMUGULBUKAUKBDBNUKBKLBDOPQ
+      RSTADUFUAMUIGUJUIUBUCUDUE $.
+      $( [5-Sep-2014] $)
+
     ${
         mapcan0.0 $e |- B e. _V $.
         mapcan0.1 $e |- C e. _V $.
@@ -450,6 +457,11 @@ ${
       fndm syl ) ABCDEBCFZEZBGEABCHSBRGSIRGJZSCGKTLGCPMNOQ $.
       $( [4-Sep-2014] $)
 
+    totfa-domlem $p |- ( A e. ( RecTotFa ` B ) -> B e. NN0 ) $=
+      ( crectotfa cfv wcel cdm cn0 elfvdm id wceq wfn totfa-fn ax-mp a1i eleqtrd
+      fndm syl ) ABCDEBCFZEZBGEABCHSBRGSIRGJZSCGKTLGCPMNOQ $.
+      $( [4-Sep-2014] $)
+
     $( use elmapg to derive C : (^A) --> NN0 and C : (^B) ---> NN0 $)
     $( use fdm to get (^A) = dom C = (^B) $)
     parfa-disjoint $p |- ( ( ( A e. NN0 /\ B e. NN0 ) /\ ( C e. ( RecParFa ` A ) /\ C e. ( RecParFa ` B ) ) ) -> A = B ) $=
@@ -461,27 +473,51 @@ ${
       FUGZDVENTVSDVFNTUHUIDVEVFUJQAITQBITSUKULUSVGVHUSVGVHABUMUNUOUP $.
       $( [4-Sep-2014] $)
 
+    parfa-disjoint-g $p |- ( ( C e. ( RecParFa ` A ) /\ C e. ( RecParFa ` B ) ) -> A = B ) $=
+      ( cn0 wcel crecparfa cfv wceq parfa-domlem anim12i parfa-disjoint mpancom
+      wa ) ADEZBDEZMCAFGEZCBFGEZMABHPNQOCAICBIJABCKL $.
+      $( [5-Sep-2014] $)
+
     dfarity1 $p |- ( A e. RecParF -> ( RecArity ` A ) = ( iota_ a e. NN0 A e. ( RecParFa ` a ) ) ) $=
       ( vb crecparfa cfv wcel cn0 crio crecparf crecarity wceq eleq1 df-recarity
       cv riotabidv riotaex fvmpt ) CACNZBNDEZFZBGHASFZBGHIJRAKTUABGRASLOBCMUABGP
       Q $.
       $( [4-Sep-2014] $)
 
+    parfa-is-parf $p |- ( A e. NN0 -> ( RecParFa ` A ) C_ RecParF ) $=
+      ( va cn0 wcel crecparfa cfv cv crecparf fveq2 ssiun2s dfrecparf1 syl6sseqr
+      ciun ) ACDAEFZBCBGZEFZMHBCPANOAEIJBKL $.
+      $( [4-Sep-2014] $)
+
+    totfa-is-totf $p |- ( A e. NN0 -> ( RecTotFa ` A ) C_ RecTotF ) $=
+      ( va cn0 wcel crectotfa cfv cv crectotf fveq2 ssiun2s dfrectotf1 syl6sseqr
+      ciun ) ACDAEFZBCBGZEFZMHBCPANOAEIJBKL $.
+      $( [4-Sep-2014] $)
+
+    dfparf2 $p |- ( A e. RecParF <-> E. a e. NN0 A e. ( RecParFa ` a ) ) $=
+      ( crecparf wcel cn0 crecparfa cfv ciun wrex dfrecparf1 eleq2i eliun bitri
+      cv ) ACDABEBNFGZHZDAODBEICPABJKBAEOLM $.
+      $( [5-Sep-2014] $)
+
+    dftotf2 $p |- ( A e. RecTotF <-> E. a e. NN0 A e. ( RecTotFa ` a ) ) $=
+      ( crectotf wcel cn0 crectotfa cfv ciun wrex dfrectotf1 eleq2i eliun bitri
+      cv ) ACDABEBNFGZHZDAODBEICPABJKBAEOLM $.
+      $( [5-Sep-2014] $)
+
+    dfarity4 $p |- ( B e. ( RecParFa ` A ) -> ( RecArity ` B ) = A ) $=
+      ( va crecparfa cfv wcel cn0 crecarity wceq parfa-domlem wa cv crecparf wss
+      crio parfa-is-parf adantl simpl sseldd simpl1 syl parfa-disjoint-g syl2anc
+      dfarity1 w3a simpr fveq2 eqcomd eleqtrd impbida riota5 eqtrd mpdan ) BADEZ
+      FZAGFZBHEZAIBAJUOUPKZUQBCLZDEZFZCGOZAURBMFUQVBIURUNMBUPUNMNUOAPQUOUPRSBCUD
+      UAUOVACGAUOUPUSGFZUEZVAUSAIZVDVAKVAUOVEVDVAUFUOUPVCVATUSABUBUCVDVEKBUNUTUO
+      UPVCVETVEUNUTIVDVEUTUNUSADUGUHQUIUJUKULUM $.
+      $( [5-Sep-2014] $)
+
     $( possible to factor out "partition of sets"/"rank function" concept $)
     arity-defined $p |- ( A e. RecParF -> ( RecArity ` A ) e. NN0 ) $=
-      ( va vb vc crecparf wcel crecparfa cfv cn0 eleq2i wa cv wceq weq wral wrex
-      wb bnj232 ex adantl cuni crecarity df-recparf biimpi crio adantr wreu ciun
-      crn dfarity1 wfn parfa-fn fniunfv ax-mp eliun w3a simp1 parfa-domlem simp2
-      id1 parfa-disjoint wi simpl fveq2 eleqtrrd 3ad2ant2 impbid 3expia ralrimiv
-      syl2anc equequ2 bibi2d ralbidv rcla4ev syldan rexlimiva sylbir reu6 sylibr
-      sylbi riotacl syl eqeltrd mpdan ) AEFZAGUIUAZFZAUBHZIFWEWGEWFAUCJUDWEWGKZW
-      HABLZGHZFZBIUEZIWEWHWMMWGABUJUFWIWLBIUGZWMIFWIWLBCNZQZBIOZCIPZWNWGWRWEWGAD
-      IDLZGHZUHZFZWRXAWFAGIUKXAWFMULDIGUMUNJXBAWTFZDIPWRDAIWTUOXCWRDIWSIFZXCWLBD
-      NZQZBIOZWRXDXCKXFBIXDXCWJIFZXFXDXCXHUPZWLXEXIWLXEXIWLKXHXDKWLXCKXEXIWLXDXH
-      XDXCXHUQAWJURRXIWLXCWLXDXCXHUSWLUTRWJWSAVAVJSXCXDXEWLVBXHXCXEWLXCXEKAWTWKX
-      CXEVCXEWKWTMXCWJWSGVDTVESVFVGVHVIWQXGCWSICDNZWPXFBIXJWOXEWLCDBVKVLVMVNVOVP
-      VTVQTWLBCIVRVSWLBIWAWBWCWD $.
-      $( [4-Sep-2014] $)
+      ( va crecparf wcel cv crecparfa cfv cn0 wrex dfparf2 dfarity4 parfa-domlem
+      crecarity eqeltrd rexlimivw sylbi ) ACDABEZFGDZBHIAMGZHDZABJRTBHRSQHQAKAQL
+      NOP $.
 
     arity-fn $p |- RecArity Fn RecParF $=
       ( va vb cv crecparfa cfv wcel cn0 crio cvv crecparf wral crecarity riotaex
@@ -503,27 +539,22 @@ ${
       $( [4-Sep-2014] $)
 
     arity-df3 $p |- ( B e. ( RecParFa ` A ) <-> ( B e. RecParF /\ ( RecArity ` B ) = A ) ) $=
-      ( va crecparfa cfv wcel crecparf crecarity wceq wa cn0 parfa-domlem cv wss
-      ciun fveq2 ssiun2s simpl mpdan simpr adantl dfrecparf1 syl6sseqr sseldd wb
-      arity-df2 sylan mpbid arity-defined adantr eqeltrrd syl2anc mpbird impbii
-      jca ) BADEZFZBGFZBHEZAIZJZUQURVAUQAKFZURBALZUQVBJZUPGBVDUPCKCMZDEZOZGVBUPV
-      GNUQCKVFAUPVEADPQUACUBUCUQVBRUDSUQURJZURUTUQURTVHUQUTUQURRUQVBURUQUTUEZVCA
-      BUFZUGUHUOSVAUQUTURUTTZVAVBURVIVAUSAKVKURUSKFUTBUIUJUKURUTRVJULUMUN $.
+      ( crecparfa cfv wcel crecparf crecarity wceq wa parfa-domlem parfa-is-parf
+      cn0 wss adantl simpl sseldd mpdan dfarity4 jca simpr wb eqeltrrd arity-df2
+      arity-defined adantr syl2anc mpbird impbii ) BACDZEZBFEZBGDZAHZIZUJUKUMUJA
+      LEZUKBAJUJUOIUIFBUOUIFMUJAKNUJUOOPQABRSUNUJUMUKUMTZUNUOUKUJUMUAUNULALUPUKU
+      LLEUMBUDUEUBUKUMOABUCUFUGUH $.
       $( [4-Sep-2014] $)
 
     arity-dftot $p |- ( B e. ( RecTotFa ` A ) <-> ( B e. RecTotF /\ ( RecArity ` B ) = A ) ) $=
-      ( vc va crectotfa cfv wcel crectotf wceq wa cn0 a1i eleqtrd syl wss sseldd
-      cv simpr biimpi jca crecarity cdm elfvdm id totfa-fn fndm ax-mp ciun fveq2
-      ssiun2s simpl dfrectotf1 eleqtrrd crecparfa crecparf totfa-is-parfa adantl
-      wfn arity-df3 3syl mpdan totf-is-parf sseldi biimpri syl2anc wi wrex eliun
-      eleq2i simplr simpll parfa-domlem ad2antrr parfa-disjoint fveq2d rexlimiva
-      ex adantr mpd impbii ) BAEFZGZBHGZBUAFAIZJZWBAKGZWEWBAEUBZGZWFBAEUCWHAWGKW
-      HUDWGKIZWHEKURWIUEKEUFUGLMNWBWFJZWCWDWJBCKCQZEFZUHZHWJWAWMBWJWFWAWMOWBWFRC
-      KWLAWAWKAEUIUJNWBWFUKZPHWMIWJCULLUMWJBAUNFZGZBUOGZWDJZWDWJWAWOBWFWAWOOWBAU
-      PUQWNPWPWRABUSZSWQWDRUTTVAWEWPWBWEWQWDWPWEHUOBVBWCWDUKVCWCWDRWPWRWSVDVEWCW
-      PWBVFZWDWCBDKDQZEFZUHZGZBXBGZDKVGZWTWCXDHXCBDULVISXDXFDBKXBVHSXEWTDKXAKGZX
-      EJZWPWBXHWPJZBXBWAXGXEWPVJZXIXAAEXIXGWFJBXAUNFZGZWPJXAAIXIXGWFXGXEWPVKWPWF
-      XHBAVLUQTXIXLWPXIXBXKBXGXBXKOXEWPXAUPVMXJPXHWPRTXAABVNVEVOMVQVPUTVRVSVT $.
+      ( vd crectotfa cfv wcel crectotf crecarity wceq totfa-domlem totfa-is-totf
+      wa cn0 wss simpl crecparfa crecparf totfa-is-parfa-g sseli simpr arity-df3
+      adantl sseldd biimpi 3syl adantr jca mpdan totf-is-parf sseldi sylanbrc cv
+      wrex wi dftotf2 parfa-disjoint-g sylan fveq2d eleqtrd rexlimivw sylbi sylc
+      ex impbii ) BADEZFZBGFZBHEAIZLZVFAMFZVIBAJVFVJLZVGVHVKVEGBVJVEGNVFAKUBVFVJ
+      OUCVFVHVJVFBAPEZFZBQFZVHLZVHVEVLBARSVMVOABUAZUDVNVHTUEUFUGUHVIVGVMVFVGVHOZ
+      VIVNVHVMVIGQBUIVQUJVGVHTVPUKVGBCULZDEZFZCMUMVMVFUNZBCUOVTWACMVTVMVFVTVMLZB
+      VSVEVTVMOWBVRADVTBVRPEZFVMVRAIVSWCBVRRSVRABUPUQURUSVCUTVAVBVD $.
       $( [4-Sep-2014] $)
 $}
 
