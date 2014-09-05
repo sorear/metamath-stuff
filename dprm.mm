@@ -266,16 +266,16 @@ ${
     $( -- unified treatment of partial/total functions for recursion theory -- $)
 
     $( Set of partial functions from NN^x -> NN, not necessarily recursive.  Set theoretically these are total functions, in order to avoid a pathology where nowhere-defined functions can have multiple arities at the same time. $)
-    df-recparfa $a |- RecParFa = ( x e. NN |-> ( ( NN0 u. { ( Undef ` NN0 ) } ) ^m ( NN0 ^m ( 1 ... x ) ) ) ) $.
+    df-recparfa $a |- RecParFa = ( x e. NN0 |-> ( ( NN0 u. { ( Undef ` NN0 ) } ) ^m ( NN0 ^m ( 1 ... x ) ) ) ) $.
 
     $( All partial functions, regardless of arity $)
     df-recparf $a |- RecParF = U. ran RecParFa $.
 
     $( Arity of a partial function $)
-    df-recarity $a |- RecArity = ( f e. RecParF |-> ( iota_ x e. NN f e. ( RecParFa ` x ) ) ) $.
+    df-recarity $a |- RecArity = ( f e. RecParF |-> ( iota_ x e. NN0 f e. ( RecParFa ` x ) ) ) $.
 
     $( Total functions, a subset of partial functions $)
-    df-rectotfa $a |- RecTotFa = ( x e. NN |-> ( NN0 ^m ( NN0 ^m ( 1 ... x ) ) ) ) $.
+    df-rectotfa $a |- RecTotFa = ( x e. NN0 |-> ( NN0 ^m ( NN0 ^m ( 1 ... x ) ) ) ) $.
     df-rectotf $a |- RecTotF = U. ran RecTotFa $.
     $( we can use the same arity $)
 
@@ -287,11 +287,11 @@ ${
     df-reczer $a |- RecZer = ( x e. ( NN0 ^m ( 1 ... 0 ) ) |-> 0 ) $.
     $( Successor $)
     df-recsuc $a |- RecSuc = ( x e. ( NN0 ^m ( 1 ... 1 ) ) |-> ( ( x ` 1 ) + 1 ) ) $.
-    $( Projector family $)
+    $( Projector family: not defined for zero arity $)
     df-recprj $a |- RecPrj = ( x e. NN , y e. NN |-> ( z e. ( NN0 ^m ( 1 ... y ) ) |-> if ( x <_ y , ( z ` x ) , 0 ) ) ) $.
     $( Substitution $)
     df-recsub $a |- RecSub =
-        ( x e. NN , y e. NN |->
+        ( x e. NN0 , y e. NN0 |->
             ( f e. ( RecParFa ` x ) , g e. ( ( RecParFa ` y ) ^m ( 1 ... x ) ) |->
                 ( h e. ( NN ^m ( 1 ... y ) ) |->
                     if (
@@ -305,7 +305,7 @@ ${
     $.
 
     $( Primitive recursion $)
-    df-recprc $a |- RecPrc = ( x e. NN |->
+    df-recprc $a |- RecPrc = ( x e. NN0 |->
         ( g e. ( RecParFa ` x ) , h e. ( RecParFa ` ( x + 1 ) ) |->
             ( y e. ( 1 ... ( x + 1 ) ) |->
                 ( seq 0 (
@@ -321,7 +321,7 @@ ${
     ) $.
 
     $( Unbounded search / general recursion.  Here originates Undef. $)
-    df-recsea $a |- RecSea = ( x e. NN |->
+    df-recsea $a |- RecSea = ( x e. NN0 |->
         ( f e. ( RecParFa ` ( x + 1 ) ) |->
             ( y e. ( 1 ... x ) |->
                 ( iota_ z e. NN0 (
@@ -367,15 +367,79 @@ ${
 $}
 
 ${
-    $d a b c d e f g $.
+    $d a b c d e f g A $.
+    $d a b c d e f g B $.
+    $d a b c d e f g C $.
+    $d a b c d e f g D $.
+    $d a b c d e f g E $.
 
-    totfa-is-parfa $p |- ( A e. NN -> ( RecTotFa ` A ) C_ ( RecParFa ` A ) ) $= ? $.
-    totf-is-parf $p |- RecTotF C_ RecParF $= ? $.
-    parfa-disjoint $p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecParFa ` A ) /\ C e. ( RecParFa ` B ) ) ) -> A = B ) $= ? $.
-    arity-defined $p |- ( A e. RecParF -> ( RecArity ` A ) e. NN ) $= ? $.
-    arity-fun $p |- RecArity : RecParF --> NN $= ? $.
-    arity-df2 $p |- ( A e. NN -> ( B e. ( RecParFa ` A ) <-> ( B e. RecParF /\ ( RecArity ` B ) = A ) ) ) $= ? $.
-    arity-dftot $p |- ( A e. NN -> ( B e. ( RecTotFa ` A ) <-> ( B e. RecTotF /\ ( RecArity ` B ) = A ) ) ) $= ? $.
+    dfrecparfa1 $p |- ( A e. NN0 -> ( RecParFa ` A ) = ( ( NN0 u. { ( Undef ` NN0 ) } ) ^m ( NN0 ^m ( 1 ... A ) ) ) ) $=
+      ( va cn0 cund cfv csn cun c1 cv cfz cmap crecparfa wceq oveq2d df-recparfa
+      co oveq2 ovex fvmpt ) BACCDEFGZCHBIZJPZKPZKPTCHAJPZKPZKPCLUAAMZUCUETKUFUBU
+      DCKUAAHJQNNBOTUEKRS $.
+      $( [4-Sep-2014] $)
+
+    dfrectotfa1 $p |- ( A e. NN0 -> ( RecTotFa ` A ) = ( NN0 ^m ( NN0 ^m ( 1 ... A ) ) ) ) $=
+      ( va cn0 c1 cv cfz cmap crectotfa wceq oveq2 oveq2d df-rectotfa ovex fvmpt
+      co ) BACCDBEZFOZGOZGOCCDAFOZGOZGOCHPAIZRTCGUAQSCGPADFJKKBLCTGMN $.
+      $( [4-Sep-2014] $)
+
+    totfa-is-parfa $p |- ( A e. NN0 -> ( RecTotFa ` A ) C_ ( RecParFa ` A ) ) $=
+      ( cn0 wcel crectotfa cfv cund csn cun c1 cfz co cmap crecparfa dfrectotfa1
+      wss ssun1 a1i nn0ex snex unex ovex mapss syl eqsstrd dfrecparfa1 sseqtr4d
+      ) ABCZADEZBBFEZGZHZBIAJKZLKZLKZAMEUGUHBUMLKZUNANUGBUKOZUOUNOUPUGBUJPQBUKUM
+      BUJRUISTBULLUAUBUCUDAUEUF $.
+      $( [4-Sep-2014] $)
+
+    totfa-fn $p |- RecTotFa Fn NN0 $=
+      ( va cn0 c1 cv cfz cmap cvv wcel crectotfa wfn df-rectotfa fnmpt ovex mprg
+      co a1i ) BBCADZEOFOZFOZGHZIBJABABSIGAKLTQBHBRFMPN $.
+      $( [4-Sep-2014] $)
+
+    parfa-fn $p |- RecParFa Fn NN0 $=
+      ( va cn0 cund cfv csn cun c1 cv cfz co cmap cvv wcel crecparfa df-recparfa
+      wfn fnmpt ovex a1i mprg ) BBCDEFZBGAHZIJKJZKJZLMZNBPABABUDNLAOQUEUBBMUAUCK
+      RST $.
+      $( [4-Sep-2014] $)
+
+    $( may contain abstractible bits $)
+    totf-is-parf $p |- RecTotF C_ RecParF $=
+      ( va vb vc crectotfa crn cuni crecparf crecparfa cv wss wrex wcel cfv wceq
+      cn0 wfn ax-mp wa parfa-fn a1i crectotf df-rectotf wb totfa-fn fvelrnb wfun
+      uniss2 cdm fnfun simpl eleqtrrd jca fvelrn syl simpr eqcomd totfa-is-parfa
+      fndm adantr eqsstrd sseq2 rcla4ev rexlimiva sylbi mprg df-recparf sseqtr4i
+      eqsstri ) UADEZFZGUBVJHEZFZGAIZBIZJZBVKKZVJVLJAVIABVIVKUGVMVILZCIZDMZVMNZC
+      OKZVPDOPVQWAUCUDCOVMDUEQVTVPCOVROLZVTRZVRHMZVKLZVMWDJZRVPWCWEWFWCHUFZVRHUH
+      ZLZRWEWCWGWIWGWCHOPZWGSOHUIQTWCVROWHWBVTUJWHONZWCWJWKSOHURQTUKULVRHUMUNWCV
+      MVSWDWCVSVMWBVTUOUPWBVSWDJVTVRUQUSUTULVOWFBWDVKVNWDVMVAVBUNVCVDVEVFVGVH $.
+      $( [4-Sep-2014] $)
+
+    mapcan0 $p |- ( ( A e. ( B ^m C ) /\ A e. ( D ^m E ) ) -> C = E ) $=
+        ? $.
+
+    mapcan1 $p |- ( ( A e. B /\ ( B ^m C ) = ( B ^m D ) ) -> C = D ) $=
+        ? $.
+
+    $( use fz1eqb, elfvdm $)
+    parfa-domlem $p |- ( A e. ( RecParFa ` B ) -> B e. NN0 ) $=
+        ? $.
+
+    $( use elmapg to derive C : (^A) --> NN0 and C : (^B) ---> NN0 $)
+    $( use fdm to get (^A) = dom C = (^B) $)
+    parfa-disjoint $p |- ( ( ( A e. NN0 /\ B e. NN0 ) /\ ( C e. ( RecParFa ` A ) /\ C e. ( RecParFa ` B ) ) ) -> A = B ) $=
+    ? $.
+
+    arity-fn $p |- RecArity Fn RecParF $=
+    ? $.
+
+    arity-defined $p |- ( A e. RecParF -> ( RecArity ` A ) e. NN0 ) $=
+    ? $.
+
+    arity-fun $p |- RecArity : RecParF --> NN0 $=
+    ? $.
+
+    arity-df2 $p |- ( B e. ( RecParFa ` A ) <-> ( B e. RecParF /\ ( RecArity ` B ) = A ) ) $= ? $.
+    arity-dftot $p |- ( B e. ( RecTotFa ` A ) <-> ( B e. RecTotF /\ ( RecArity ` B ) = A ) ) $= ? $.
 $}
 
 ${
