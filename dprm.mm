@@ -71,7 +71,11 @@ ${
       $( [6-Sep-2014] $)
 
     nn0leadd1 $p |- ( ( A e. NN0 /\ B e. NN0 ) -> B <_ ( A + B ) ) $=
-        ? $.
+      ( cn0 wcel wa cc0 caddc co cle cc wceq cr nn0re adantl recnd addid2 nn0ge0
+      syl wbr adantr wb 0reALT a1i leadd1 syl3anc mpbid eqbrtrrd ) ACDZBCDZEZFBG
+      HZBABGHZIUJBJDUKBKUJBUIBLDZUHBMNZOBPRUJFAISZUKULISZUHUOUIAQTUJFLDZALDZUMUO
+      UPUAUQUJUBUCUHURUIAMTUNFABUDUEUFUG $.
+      $( [6-Sep-2014] $)
 
     $( so we don't have to keep proving the same substitutions a billion times $)
     cantor-pair-lem13 $p |- ( A = B -> ( ( A x. ( A + 1 ) ) / 2 ) = ( ( B x. ( B + 1 ) ) / 2 ) ) $= ( wceq c1 caddc co cmul c2 cdiv id1 oveq1 oveq12d oveq1d ) ABCZAADEFZGFBBDEFZGFHINABOPGNJABDEKLM $.  $( [2-Sep-2014] $)
@@ -242,15 +246,14 @@ ${
     cantor-pair-1o  $p |- ,n : ( NN0 X. NN0 ) -1-1-onto-> NN0 $= ( cn0 cxp ccantor-pair wf1o wf1 wfo df-f1o cantor-pair-1 cantor-pair-o mpbir2an ) AABZACDKACEKACFKACGHIJ $.  $( [1-Sep-2014] $)
 
     cantor-pair-lem19 $p |- ( A e. NN0 -> A <_ ( ( A x. ( A + 1 ) ) / 2 ) ) $=
-      ( va vb c1 caddc co cmul c2 cdiv cle wbr wceq id cantor-pair-lem13 breq12d
-      cc0 cn0 wcel adantr cc cv weq 0nn0 nn0ge0i eqid1 cantor-pair-lem4 breqtrri
-      ax-mp wa peano2nn0 cantor-pair-lem5 nn0leadd2 syl2anc cantor-pair-lem3 syl
-      nn0cn addcom eqtrd breqtrrd ex nn0ind ) BUAZVBVBDEFGFHIFZJKPPPDEFGFHIFZJKC
-      UAZVEVEDEFZGFHIFZJKZVFVFVFDEFGFHIFZJKZAAADEFGFHIFZJKBCAVBPLZVBPVCVDJVLMVBP
-      NOBCUBZVBVEVCVGJVMMVBVENOVBVFLZVBVFVCVIJVNMVBVFNOVBALZVBAVCVKJVOMVBANOPPVD
-      JPUCUDPPLVDPLPUEPUFUHUGVEQRZVHVJVPVHUIZVFVFVGEFZVIJVQVFQRZVGQRZVFVRJKVPVSV
-      HVEUJZSVPVTVHVEUKZSVFVGULUMVQVIVGVFEFZVRVPVIWCLZVHVPVETRWDVEUPVEUNUOSVPWCV
-      RLZVHVPVGTRZVFTRZWEVPVTWFWBVGUPUOVPVSWGWAVFUPUOVGVFUQUMSURUSUTVA $.
+      ( va vb cv c1 caddc co cmul c2 cdiv cle wbr wceq cantor-pair-lem13 breq12d
+      cc0 id weq cn0 wcel eqid1 cantor-pair-lem4 ax-mp breqtrri cantor-pair-lem5
+      nn0ge0i peano2nn0 nn0leadd1 syl2anc cc nn0cn cantor-pair-lem3 syl breqtrrd
+      0nn0 a1d nn0ind ) BDZURUREFGHGIJGZKLPPPEFGHGIJGZKLCDZVAVAEFGZHGIJGZKLZVBVB
+      VBEFGHGIJGZKLZAAAEFGHGIJGZKLBCAURPMZURPUSUTKVHQURPNOBCRZURVAUSVCKVIQURVANO
+      URVBMZURVBUSVEKVJQURVBNOURAMZURAUSVGKVKQURANOPPUTKPUOUFPPMUTPMPUAPUBUCUDVA
+      STZVFVDVLVBVCVBFGZVEKVLVCSTVBSTVBVMKLVAUEVAUGVCVBUHUIVLVAUJTVEVMMVAUKVAULU
+      MUNUPUQ $.
       $( [6-Sep-2014] $)
 
     cantor-pair-lesum $p |- ( ( A e. NN0 /\ B e. NN0 ) -> ( A + B ) <_ ( A ,n B ) ) $=
@@ -264,17 +267,18 @@ ${
 
     cantor-pair-le1 $p |- ( ( A e. NN0 /\ B e. NN0 ) -> A <_ ( A ,n B ) ) $=
       ( cn0 wcel wa caddc co ccantor-pair cr adantr nn0addcl syl cantor-pair-map
-      nn0re fovcl cc0 cle cc wbr adantl nn0cn addid1 nn0ge0 wb 0reALT a1i leadd2
-      wceq syl3anc mpbid eqbrtrrd cantor-pair-lesum letrd ) ACDZBCDZEZAABFGZABHG
-      ZUNAIDZUOANJZUPUQCDUQIDABKUQNLUPURCDURIDABCCCHMOURNLUPAPFGZAUQQUPARDZVAAUH
-      UNVBUOAUAJAUBLUPPBQSZVAUQQSZUOVCUNBUCTUPPIDZBIDZUSVCVDUDVEUPUEUFUOVFUNBNTU
-      TPBAUGUIUJUKABULUM $.
+      nn0re fovcl nn0leadd2 cantor-pair-lesum letrd ) ACDZBCDZEZAABFGZABHGZSAIDT
+      ANJUAUBCDUBIDABKUBNLUAUCCDUCIDABCCCHMOUCNLABPABQR $.
     $( [1-Sep-2014] $)
 
 
     cantor-pair-fixpoint $p |- ( 0 ,n 0 ) = 0 $= ( cc0 ccantor-pair co caddc c1 cmul c2 cdiv cn0 wcel wceq 0nn0 cantor-pair-value mp2an 00id cantor-pair-lem4 oveq1d ax-mp eqtri ) AABCZAADCZUAEDCFCGHCZADCZAAIJZUDTUCKLLAAMNUCUAAUAAKZUCUAKOUEUBAADUAPQROSS $.  $( [2-Sep-2014] $)
 
-    cantor-pair-le2 $p |- ( ( A e. NN0 /\ B e. NN0 ) -> B <_ ( A ,n B ) ) $= ? $.
+    cantor-pair-le2 $p |- ( ( A e. NN0 /\ B e. NN0 ) -> B <_ ( A ,n B ) ) $=
+      ( cn0 wcel wa caddc co ccantor-pair cr adantl nn0addcl syl cantor-pair-map
+      nn0re fovcl nn0leadd1 cantor-pair-lesum letrd ) ACDZBCDZEZBABFGZABHGZTBIDS
+      BNJUAUBCDUBIDABKUBNLUAUCCDUCIDABCCCHMOUCNLABPABQR $.
+      $( [6-Sep-2014] $)
 
     df-cantor-pair-1st $a |- 1st_n = ( 1st o. `' ,n ) $.
     df-cantor-pair-2nd $a |- 2nd_n = ( 2nd o. `' ,n ) $.
