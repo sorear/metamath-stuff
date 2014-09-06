@@ -356,6 +356,111 @@ ${
 
 $}
 
+${
+    $( Finite-recursive set descriptions / Inductive ADTs for combinatorial objects $)
+    $c FRSD $.
+    cfrsd $a class FRSD $.
+
+    $d a b c d e f A $.
+    $d a b c d e f B $.
+    $d a b c d e f C $.
+    $d a b c d e f D $.
+    $d a b c d e f r $.
+
+    $( FRSD defines a set as the closure of a defining relation composed with
+       the taking of finite sequences.  If infinite sequences were allowed, we
+       could not guarantee a fixed point at ` om ` . $)
+    df-frsd $a |- FRSD = ( a e. _V |-> ( rec ( ( b e. _V |->
+        ( a " U_ c e. NN0 ( b ^m ( 1 ... c ) ) ) ) , (/) ) ` om ) ) $.
+
+    $( Substitution lemma for FRSD $)
+    frsd-lem1 $p |- ( R e. _V -> ( FRSD ` R ) = ( rec ( ( a e. _V |->
+        ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` om ) ) $=
+      ( vc com cvv cv cn0 c1 cfz co cmap ciun cima cmpt c0 crdg cfv cfrsd wceq
+      wcel imaeq1 adantr mpteq2dva rdgeq1 syl fveq1d df-frsd fvex fvmpt ) DAEBFD
+      GZCHBGZICGJKLKMZNZOZPQZREBFAUMNZOZPQZRFSUKATZEUPUSUTUOURTUPUSTUTBFUNUQUTUN
+      UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
+      $( [6-Sep-2014] $)
+
+    $( Given a finite sequence of finite ordinals, there is a finite ordinal
+       which is ge all of them $)
+    frsd-lem3 $p |- ( ( A e. NN0 /\ B e. ( om ^m ( 1 ... A ) ) ) ->
+        E. a e. om A. b e. ( 1 ... A ) ( B ` b ) C_ a ) $=
+    ? $.
+
+    $( Substititution lemma for the FRSD step function $)
+    frsd-lem5 $p |- ( A e. _V -> ( ( a e. _V |-> ( r " U_ b e. NN0 ( a ^m
+        ( 1 ... b ) ) ) ) ` A ) = ( r " U_ b e. NN0 ( A ^m ( 1 ... b ) ) ) ) $=
+      ( cv cn0 c1 cfz co cmap ciun cima cvv cmpt wceq wcel oveq1 adantr iuneq2dv
+      imaeq2d eqid crn vex rnex imassrn ssexi fvmpt ) CABEZDFCEZGDEZHIZJIZKZLZUH
+      DFAUKJIZKZLZMCMUNNZUIAOZUMUPUHUSDFULUOUSULUOOUJFPUIAUKJQRSTURUAUQUHUBUHBUC
+      UDUHUPUEUFUG $.
+      $( [6-Sep-2014] $)
+
+    ${
+    mapssi.1 $e |- C e. _V $.
+    mapssi $p |- ( ( A C_ B /\ B e. _V ) -> ( A ^m C ) C_ ( B ^m C ) ) $=
+      ( va cvv wcel wss cmap co wa cv wf cab wi fss wceq ancoms mapvalg sylancl
+      expcom adantl ss2abdv ssexg simpl 3sstr4d ) BFGZABHZACIJZBCIJZHUGUHKZCAELZ
+      MZENZCBULMZENZUIUJUKUMUOEUHUMUOOUGUMUHUOCABULPUAUBUCUKAFGZCFGZUIUNQUHUGUQA
+      BFUDRDACFFESTUKUGURUJUPQUGUHUEDBCFFESTUFR $.
+      $( [6-Sep-2014] $)
+    $}
+
+    $( The iterative construction of FRSD preserves subsets $)
+    frsd-lem4 $p |- ( ( B e. _V /\ A C_ B ) -> ( ( a e. _V |-> ( r "
+        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) ` A ) C_ ( ( a e. _V |-> ( r "
+        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) ` B ) ) $=
+      ( cvv wcel wss cv cn0 c1 cfz co cmap ciun cima cfv ancoms wceq frsd-lem5
+      wa cmpt wral ovex mapssi ralrimivw ss2iun imass2 3syl ssexg adantr 3sstr4d
+      syl ) BFGZABHZUAZCIZEJAKEIZLMZNMZOZPZUQEJBUSNMZOZPZADFUQEJDIUSNMOPUBZQZBVF
+      QZUPUTVCHZEJUCVAVDHVBVEHUPVIEJUOUNVIABUSKURLUDUERUFEJUTVCUGVAVDUQUHUIUPAFG
+      ZVGVBSUOUNVJABFUJRACDETUMUNVHVESUOBCDETUKUL $.
+
+    $( The FRSD construction produces a cumulative hierarchy 1 $)
+    frsd-lem6 $p |- ( A e. om -> ( rec ( ( a e. _V |-> ( r " U_ b e. NN0 ( a ^m
+        ( 1 ... b ) ) ) ) , (/) ) ` A ) C_ ( rec ( ( a e. _V |-> ( r "
+        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` suc A ) ) $=
+      ( vd vc cv cvv co cfv csuc wss wceq fveq2 suceq fveq2d sseq12d wcel con0
+      c0 cn0 c1 cfz cmap ciun cima cmpt crdg weq 0ex rdg0 0ss eqsstri com wa a1i
+      fvex frsd-lem4 sylancom nnon rdgsuc syl adantr suceloni 3syl 3sstr4d finds
+      ex ) EGZCHBGDUACGUBDGUCIUDIUEUFUGZTUHZJZVIKZVKJZLTVKJZTKZVKJZLFGZVKJZVRKZV
+      KJZLZWAVTKZVKJZLZAVKJZAKZVKJZLEFAVITMZVLVOVNVQVITVKNWIVMVPVKVITOPQEFUIZVLV
+      SVNWAVIVRVKNWJVMVTVKVIVROPQVIVTMZVLWAVNWDVIVTVKNWKVMWCVKVIVTOPQVIAMZVLWFVN
+      WHVIAVKNWLVMWGVKVIAOPQVOTVQTVJUJUKVQULUMVRUNRZWBWEWMWBUOZVSVJJZWAVJJZWAWDW
+      MWBWAHRZWOWPLWQWNVTVKUQUPVSWABCDURUSWMWAWOMZWBWMVRSRZWRVRUTZTVRVJVAVBVCWMW
+      DWPMZWBWMWSVTSRXAWTVRVDTVTVJVAVEVCVFVHVG $.
+      $( [6-Sep-2014] $)
+
+    $( The FRSD construction produces a cumulative hierarchy 2 $)
+    frsd-lem7 $p |- ( ( A e. om /\ B e. om /\ A C_ B ) -> ( rec ( ( a e. _V |-> ( r "
+        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` A ) C_
+        ( rec ( ( a e. _V |-> ( r " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) ,
+        (/) ) ` B ) ) $=
+    ? $.
+
+    $( Given a finite sequence of elements in the complete FRSD construction,
+       there is a finite level of the constructon which contains the entire
+       sequence $)
+    frsd-lem2 $p |- ( ( A e. NN0 /\ B e. ( ( rec ( ( a e. _V |-> ( r "
+        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` om ) ^m
+        ( 1 ... A ) ) ) -> E. c e. om B e. ( ( rec ( ( a e. _V |-> ( r "
+        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` c ) ^m
+        ( 1 ... A ) ) ) $=
+    ? $.
+
+    $( Constructor rule for FRSD.  We prove that there is some level of the construction that contains all of the arguments, then show that that level + 1 contains the result. $)
+    ${
+    frsd-con.1 $e |- R e. _V $.
+    frsd-conx $p |- ( ( A e. NN0 /\ B e. ( ( FRSD ` R ) ^m ( 1 ... A ) ) /\ B R D ) -> D e. ( FRSD ` R ) ) $=
+        ? $.
+
+    frsd-con0 $p |- ( (/) R A -> A e. ( FRSD ` R ) ) $=
+        ? $.
+    $}
+
+$}
+
 $( loosely inspired by some lecture notes I found by Lou van den Dries $)
 $c RecZer RecSuc RecSub RecSea RecPrj RecPrc RecParF RecArity RecParFa RecTotF RecTotFa RecArithPrimitiveStep RecArithGeneralStep RecArithPrimitiveL RecArithPrimitive RecArithGeneralL RecArithGeneral RecPrimitive RecGeneral RecPreList $.
 ${
