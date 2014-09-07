@@ -817,7 +817,14 @@ ${
       DBUECUAUBAPZNQBUEHUCUFCBUBUGRST $.
       $( [7-Sep-2014] $)
 
-    frsd-lem11 $p |- ( ( A C_ B /\ B e. om ) -> ( ( FRSDlevel ` r ) ` A ) C_ ( ( FRSDlevel ` r ) ` B ) ) $= ? $.
+    frsd-lem11 $p |- ( ( A e. om /\ B e. om /\ A C_ B ) -> ( ( FRSDlevel `
+        r ) ` A ) C_ ( ( FRSDlevel ` r ) ` B ) ) $=
+      ( va vb com wcel wss w3a cvv cv cn0 c1 co cfv wceq a1i fveq1d fvres eqtrd
+      cfz cmap ciun cima cmpt crdg cfrsdlevel frsd-lem7 cres frsd-lem13 3ad2ant1
+      c0 vex 3ad2ant2 3sstr4d ) AFGZBFGZABHZIADJCKZELDKMEKUANUBNUCUDUEULUFZOZBUT
+      OZAUSUGOZOZBVCOZABCDEUHUPUQVDVAPURUPVDAUTFUIZOVAUPAVCVFVCVFPZUPDEUSCUMUJZQ
+      RAFUTSTUKUQUPVEVBPURUQVEBVFOVBUQBVCVFVGUQVHQRBFUTSTUNUO $.
+      $( [7-Sep-2014] $)
 
     frsd-lem10 $p |- ( A e. ( FRSD ` r ) -> A e. ( ( FRSDlevel ` r ) `
         ( ( FRSDrank ` r ) ` A ) ) ) $=
@@ -838,19 +845,22 @@ ${
     $d x y r $. $d z w r $. $d u r $. $d u A $. $d u B $.
     frsd-lem2 $p |- ( ( A e. NN0 /\ B e. ( ( FRSD ` r ) ^m ( 1 ... A ) ) ) ->
         E. u e. om B e. ( ( ( FRSDlevel ` r ) ` u ) ^m ( 1 ... A ) ) ) $= 
-      ( vb va vc wcel cv cfv co cmap wa wss wral com wrex simpr syl3anc syl2anc
-      cn0 cfrsd cfz cfrsdrank ccom cfrsdlevel simpl a1i frsd-lem3 simplr simplll
-      c1 wf simpllr weq fveq2 sseq1d rcla4va wfun cdm wceq ax-mp adantl ad2antrr
-      wb ffun eleqtrrd fvco eqcomd adantlr mpbird adantr sseldd ralrimiva oveq1d
-      syl eleq2d rcla4ev ex rexlimdva mpd ) BUAHZCDIZUBJZULBUCKZLKHZMZEIZWCUDJZC
-      UEZJZFIZNZEWEOZFPQZCAIZWCUFJZJZWELKZHZAPQZWGWBWJPWELKHZWOWBWFUGZWGWBWFWDPW
-      IUMZXBXCWBWFRXDWG?UH?SBWJFEUITWGWNXAFPWGWLPHZMZWNXAXFWNMZXECWLWQJZWELKZHZX
-      AWGXEWNUJXGWBWFGIZCJZXHHZGWEOXJWBWFXEWNUKZWBWFXEWNUNZXGXMGWEXGXKWEHZMZXLWI
-      JZWQJZXHXLXQXRWLNZXSXHNXQXTXKWJJZWLNZXQXPWNYBXGXPRZXFWNXPUJWMYBEXKWEEGUOWK
-      YAWLWHXKWJUPUQURTXFXPXTYBVEWNXFXPMZXRYAWLYDYAXRYDWIUSZCUSZXKCUTZHYAXRVAYEY
-      DXDYE?WDPWIVFVBUHWGYFXEXPWFYFWB?VCVDYDXKWEYGXFXPRWGYGWEVAZXEXPWFYHWB?VCVDV
-      GXKWICVHSVIUQVJVK?VPXQXLWDHZXLXSHXQWBWFXPYIXGWBXPXNVLXGWFXPXOVLYC?S?VPVMVN
-      ?SWTXJAWLPAFUOZWSXICYJWRXHWELWPWLWQUPVOVQVRTVSVTWA $.
+      ( vb va vc wcel cv cfrsd cfv c1 cfz co cmap wa wss com simpr syl2anc simpl
+      cn0 cfrsdrank ccom wral wrex cfrsdlevel frsd-lem12 a1i fvex ovex grothomex
+      mapco1 frsd-lem3 simplr simpllr mapfv sylan ffvelrni syl weq fveq2 rcla4va
+      wf sseq1d wb wfun cdm wceq ffun ax-mp mapfun adantl ad2antrr eleqtrrd fvco
+      mapdom syl3anc eqcomd adantlr mpbird frsd-lem11 frsd-lem10 sseldd mapdmres
+      ralrimiva oveq1d eleq2d rcla4ev ex rexlimdva mpd ) BUBHZCDIZJKZLBMNZONHZPZ
+      EIZWNUCKZCUDZKZFIZQZEWPUEZFRUFZCAIZWNUGKZKZWPONZHZARUFZWRWMXARWPONHZXFWMWQ
+      UAWRWQWORWTVDZXMWMWQSXNWRDUHZUIWPCWOWTRWNJUJZLBMUKZULUMTBXAFEUNTWRXEXLFRWR
+      XCRHZPZXEXLXSXEPZXRCXCXHKZWPONZHZXLWRXRXEUOXTWQGIZCKZYAHZGWPUEYCWMWQXRXEUP
+      ZXTYFGWPXTYDWPHZPZYEWTKZXHKZYAYEYIYJRHZXRYJXCQZYKYAQYIYEWOHZYLXTWQYHYNYGWO
+      CWPYDXQXPUQURZWORYEWTXOUSUTWRXRXEYHUPYIYMYDXAKZXCQZYIYHXEYQXTYHSXSXEYHUOXD
+      YQEYDWPEGVAXBYPXCWSYDXAVBVEVCTXSYHYMYQVFXEXSYHPZYJYPXCYRYPYJYRWTVGZCVGZYDC
+      VHZHYPYJVIYSYRXNYSXOWORWTVJVKUIWRYTXRYHWQYTWMWOCWPXQXPVLVMVNYRYDWPUUAXSYHS
+      WRUUAWPVIZXRYHWQUUBWMWOCWPXQXPVQVMVNVOYDWTCVPVRVSVEVTWAYJXCDWBVRYIYNYEYKHY
+      OYEDWCUTWDWFGWOCWPYAXQXPXCXHUJWETXKYCAXCRAFVAZXJYBCUUCXIYAWPOXGXCXHVBWGWHW
+      ITWJWKWL $.
       $( [7-Sep-2014] $)
     $}
 
