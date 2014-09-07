@@ -366,6 +366,7 @@ ${
     $d a b c d e f g h i C $.
     $d a b c d e f g h i D $.
     $d a b c d e f g h i r $.
+    $d a b c d e f g h i R $.
 
     $( FRSD defines a set as the closure of a defining relation composed with
        the taking of finite sequences.  If infinite sequences were allowed, we
@@ -444,10 +445,17 @@ ${
     mapfzrecons $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) ->
         B = ( ( B |` ( 1 ... A ) ) u. { <. ( A + 1 ) , ( B ` ( A + 1 ) ) >.
         } ) ) $=
-    ? $.
+      ( c1 caddc co cfz cmap wcel cn0 wf cres cfv cop csn cun wceq ovex a1i snid
+      elmap wfn ffn adantl fnresdm syl elfz-induct adantr eqcomd reseq2d resundi
+      wa eqtr3d ssun2 sseldi eleqtrd fnressn syl2anc uneq2d 3eqtrd sylan2b ) BCE
+      AEFGZHGZIGJAKJZVDCBLZBBEAHGZMZVCVCBNOPZQZRCVDBDEVCHSUBVEVFUMZBBVGVCPZQZMZV
+      HBVLMZQZVJVKBVDMZBVNVKBVDUCZVQBRVFVRVEVDCBUDUEZVDBUFUGVKVDVMBVKVMVDVEVMVDR
+      VFAUHUIZUJUKUNVNVPRVKBVGVLULTVKVOVIVHVKVRVCVDJVOVIRVSVKVCVMVDVKVLVMVCVLVGU
+      OVCVLJVKVCAEFSUATUPVTUQVDVCBURUSUTVAVB $.
+      $( [7-Sep-2014] $)
 
     ${
-    $d a b c d e f g h i j ph $.
+    $d c d e f g h i j ph $.
     mapfzinde.10 $e |- [ 0 / a ] [ (/) / b ] ph $.
     mapfzinde.11 $e |- ( ( c e. NN0 /\ d e. ( C ^m ( 1 ... c ) ) /\ e e. C ) -> ( [ c / a ] [ d / b ] ph -> [ ( c + 1 ) / a ] [ ( d u. { <. ( c + 1 ) , e >. } ) / b ] ph ) ) $.
 
@@ -506,45 +514,28 @@ ${
     ${
     $d f g h i   a b c d e A $.
     $d f g h i   a b c d e B $.
-    $d f g h i   a b c d e ch $.
-    $d f g h i   a b c d e ta $.
-    $d f g h i   a b e ze $.
-    $d f g h i   a b rh $.
-    $d f g h i   a c d e ps $.
-    $d f g h i   a c d e th $.
-    $d f g h i   a d e et $.
-    $d f g h i   a d e si $.
     $d f g h i   c d e ph $.
+    $d f g h i   a b ps $.
+    $d f g h i   a b ch $.
+    $d f g h i   a b th $.
+    $d f g h i   a b ta $.
 
-    mapfzind.2 $e |- ( a = A -> ( ph <-> ps ) ) $.
-    mapfzind.3 $e |- ( b = B -> ( ps <-> ch ) ) $.
-    mapfzind.4 $e |- ( a = 0 -> ( ph <-> th ) ) $.
-    mapfzind.5 $e |- ( b = (/) -> ( th <-> ta ) ) $.
-    mapfzind.6 $e |- ( a = c -> ( ph <-> et ) ) $.
-    mapfzind.7 $e |- ( b = d -> ( et <-> ze ) ) $.
-    mapfzind.8 $e |- ( a = ( c + 1 ) -> ( ph <-> si ) ) $.
-    mapfzind.9 $e |- ( b = ( d u. { <. ( c + 1 ) , e >. } ) -> ( si <-> rh ) ) $.
-    mapfzind.10 $e |- ta $.
-    mapfzind.11 $e |- ( ( c e. NN0 /\ d e. ( C ^m ( 1 ... c ) ) /\ ze ) -> rh ) $.
+    mapfzind.2 $e |- ( ( a = A /\ b = B )   -> ( ph <-> ps ) ) $.
+    mapfzind.4 $e |- ( ( a = 0 /\ b = (/) ) -> ( ph <-> ch ) ) $.
+    mapfzind.6 $e |- ( ( a = c /\ b = d )   -> ( ph <-> th ) ) $.
+    mapfzind.8 $e |- ( ( a = ( c + 1 ) /\ b = ( d u. { <. ( c + 1 ) , e >.
+        } ) ) -> ( ph <-> ta ) ) $.
+    mapfzind.10 $e |- ch $.
+    mapfzind.11 $e |- ( ( c e. NN0 /\ d e. ( C ^m ( 1 ... c ) ) /\ e e. C ) -> ( th -> ta ) ) $.
 
-    mapfzind.base $p |- A. f e. ( C ^m ( 1 ... 0 ) ) [ f / b ] [ 0 / a ] ph $=
-      ( cc0 wsbc wsb c1 cfz co cmap cv wcel c1o c0 wceq fz10 oveq2i map0e eleq2i
-      eqtri biimpi el1o dfsbcq cvv wb 0ex cc 0cn elexi sbcie sbcbii ax-mp bnj527
-      bitri syl6bb mpbiri 3syl rgen ) AOUJUKZPNULZNLUMUJUNUOZUPUOZNUQZWHURZWIUSU
-      RZWIUTVAZWFWJWKWHUSWIWHLUTUPUOUSWGUTLUPVBVCLSVDVFVEVGWKWLWIVHVGWLWFEUHWLWF
-      WEPUTUKZEWEPWIUTVIWMDPUTUKZEUTVJURWMWNVKVLWEDPUTVJADOUJUJVMVNVOUBVPVQVRDEP
-      UTUCVLVSVTWAWBWCWD $.
-      $( [6-Sep-2014] $)
-
-    mapfzind.ind $p |- ( g e. NN0 -> ( A. f e. ( C ^m ( 1 ... g ) ) [ f / b ]
-        [ g / a ] ph -> A. f e. ( C ^m ( 1 ... ( g + 1 ) ) ) [ f / b ]
-        [ ( g + 1 ) / a ] ph ) ) $=
-        ? $.
-
-    mapfzind.test $p |- ( ( ( g e. NN0 /\ h e. C ) /\ f e. ( C ^m ( 1 ... g ) ) /\ [ f / b ] [ g / a ] ph ) -> [ ( f u. { <. ( g + 1 ) , h >. } ) / b ] [ ( g + 1  ) / a ] ph ) $= ? $.
-
-    mapfzind $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) ) -> ch ) $=
-        ? $.
+    mapfzind $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) ) -> ps ) $=
+      ( cn0 wcel c1 cfz co cmap wa wsbc c0 cc0 cc 0cn elexi 0ex sbc2ie mpbir w3a
+      cv wsb caddc cop csn cun vex ovex snex unex mapfzinde ax-17 sbc2iegf mpbid
+      3imtr4g ) FUAUBGHUCFUDUEUFUEZUBZUGAKGUHJFUHBAFGHIJKLMNAKUIUHJUJUHCSACJKUJU
+      IUJUKULUMUNPUOUPLURZUAUBMURZHUCVOUDUEUFUEUBIURZHUBUQDEAKMUSJLUSAKVPVOUCUTU
+      EZVQVAZVBZVCZUHJVRUHTADJKVOVPLVDMVDZQUOAEJKVRWAVOUCUTVEVPVTWBVSVFVGRUOVLVH
+      ABJKFGUAVMBJVIBKVIVNJVIOVJVK $.
+      $( [7-Sep-2014] $)
     $}
     $}
 
