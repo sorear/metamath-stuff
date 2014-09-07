@@ -591,13 +591,38 @@ ${
           $( [4-Sep-2014] $)
     $}
 
-    mapco1 $p |- ( ( B e. ( C ^m A ) /\ D : C --> E ) -> ( D o. B ) e. ( E ^m A ) ) $= ? $.
-    mapfun $p |- ( A e. ( B ^m C ) -> Fun A ) $= ? $.
-    mapdom $p |- ( A e. ( B ^m C ) -> dom A = C ) $= ? $.
-    mapfv $p |- ( ( A e. ( B ^m C ) /\ D e. C ) -> ( A ` D ) e. B ) $= ? $.
     ${
-    $d u A $. $d u C $. $d u D $.
-    mapdmres $p |- ( ( A e. ( B ^m C ) /\ A. u e. C ( A ` u ) e. D ) -> A e. ( D ^m C ) ) $= ? $.
+    mapco1.1 $e |- C e. _V $.
+    mapco1.2 $e |- A e. _V $.
+    ${
+    mapco1.3 $e |- E e. _V $.
+    mapco1 $p |- ( ( B e. ( C ^m A ) /\ D : C --> E ) ->
+        ( D o. B ) e. ( E ^m A ) ) $=
+      ( cmap co wcel wf wa ccom simpr elmap biimpi adantr fco syl2anc sylibr ) B
+      CAIJKZCEDLZMZAEDBNZLZUEEAIJKUDUCACBLZUFUBUCOUBUGUCUBUGCABFGPQRACEDBSTEAUEH
+      GPUA $.
+      $( [7-Sep-2014] $)
+    $}
+    mapfun $p |- ( B e. ( A ^m C ) -> Fun B ) $=
+      ( cmap co wcel wf wfun elmap ffun sylbi ) BACFGHCABIBJACBEDKCABLM $.
+      $( [7-Sep-2014] $)
+    mapdom $p |- ( B e. ( A ^m C ) -> dom B = C ) $=
+      ( cmap co wcel wf cdm wceq elmap fdm sylbi ) BACFGHCABIBJCKACBEDLCABMN $.
+      $( [7-Sep-2014] $)
+    mapfv $p |- ( ( B e. ( A ^m C ) /\ D e. C ) -> ( B ` D ) e. A ) $=
+      ( cmap co wcel wf cfv elmap ffvelrn sylanb ) BACGHICABJDCIDBKAIACBFELCADBM
+      N $.
+      $( [7-Sep-2014] $)
+    ${
+    $d u B $. $d u C $. $d u D $.
+    mapdmres.3 $e |- D e. _V $.
+    mapdmres $p |- ( ( B e. ( A ^m C ) /\ A. u e. C ( B ` u ) e. D ) ->
+        B e. ( D ^m C ) ) $=
+      ( cmap co wcel cv cfv wral wa wf wfn crn wss elmap ffn sylbi fnfvrnss df-f
+      adantr sylan sylanbrc sylibr ) CBDIJKZALCMEKADNZOZDECPZCEDIJKUKCDQZCRESZUL
+      UIUMUJUIDBCPUMBDCGFTDBCUAUBZUEUIUMUJUNUOADECUCUFDECUDUGEDCHFTUH $.
+      $( [7-Sep-2014] $)
+    $}
     $}
 $}
 
