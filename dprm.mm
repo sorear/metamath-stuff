@@ -591,6 +591,14 @@ ${
           $( [4-Sep-2014] $)
     $}
 
+    mapco1 $p |- ( ( B e. ( C ^m A ) /\ D : C --> E ) -> ( D o. B ) e. ( E ^m A ) ) $= ? $.
+    mapfun $p |- ( A e. ( B ^m C ) -> Fun A ) $= ? $.
+    mapdom $p |- ( A e. ( B ^m C ) -> dom A = C ) $= ? $.
+    mapfv $p |- ( ( A e. ( B ^m C ) /\ D e. C ) -> ( A ` D ) e. B ) $= ? $.
+    ${
+    $d u A $. $d u C $. $d u D $.
+    mapdmres $p |- ( ( A e. ( B ^m C ) /\ A. u e. C ( A ` u ) e. D ) -> A e. ( D ^m C ) ) $= ? $.
+    $}
 $}
 
 $( Note for future: a-i are dummy variables that are disjoint from each other
@@ -599,21 +607,38 @@ $( Note for future: a-i are dummy variables that are disjoint from each other
 
 ${
     $( Finite-recursive set descriptions / Inductive ADTs for combinatorial objects $)
-    $c FRSD $.
+    $c FRSD FRSDrank FRSDlevel $.
     cfrsd $a class FRSD $.
+    cfrsdrank $a class FRSDrank $.
+    cfrsdlevel $a class FRSDlevel $.
 
     $d a b c d e f g h i A $.
     $d a b c d e f g h i B $.
     $d a b c d e f g h i C $.
     $d a b c d e f g h i D $.
     $d a b c d e f g h i r $.
+    $d a b c d e f g h i u $.
+    $d a b c d e f g h i v $.
+    $d a b c d e f g h i w $.
+    $d a b c d e f g h i x $.
+    $d a b c d e f g h i y $.
+    $d a b c d e f g h i z $.
     $d a b c d e f g h i R $.
 
     $( FRSD defines a set as the closure of a defining relation composed with
        the taking of finite sequences.  If infinite sequences were allowed, we
        could not guarantee a fixed point at ` om ` . $)
-    df-frsd $a |- FRSD = ( a e. _V |-> ( rec ( ( b e. _V |->
-        ( a " U_ c e. NN0 ( b ^m ( 1 ... c ) ) ) ) , (/) ) ` om ) ) $.
+    ${
+    $d x y z $.
+    df-frsd $a |- FRSD = ( x e. _V |-> ( rec ( ( y e. _V |->
+        ( x " U_ z e. NN0 ( y ^m ( 1 ... z ) ) ) ) , (/) ) ` om ) ) $.
+
+    df-frsdlevel $a |- FRSDlevel = ( x e. _V |-> rec ( ( y e. _V |->
+        ( x " U_ z e. NN0 ( y ^m ( 1 ... z ) ) ) ) , (/) ) ) $.
+
+    df-frsdrank $a |- FRSDrank = ( x e. _V |-> ( y e. ( FRSD ` x ) |->
+        |^| { z e. om | y e. ( ( FRSDlevel ` x ) ` z ) } ) ) $.
+    $}
 
     $( Substitution lemma for FRSD $)
     frsd-lem1 $p |- ( R e. _V -> ( FRSD ` R ) = ( rec ( ( a e. _V |->
@@ -712,15 +737,32 @@ ${
       VMCDEUOUPUSUTVAVB $.
       $( [6-Sep-2014] $)
 
+    frsd-lem12 $p |- ( FRSDrank ` r ) : ( FRSD ` r ) --> om $= ? $.
+    frsd-lem11 $p |- ( A C_ B -> ( ( FRSDlevel ` r ) ` A ) C_ ( ( FRSDlevel ` r ) ` B ) ) $= ? $.
+    frsd-lem10 $p |- ( A e. ( FRSD ` r ) -> A e. ( ( FRSDlevel ` r ) ` ( ( FRSDrank ` r ) ` A ) ) ) $= ? $.
+
     $( Given a finite sequence of elements in the complete FRSD construction,
        there is a finite level of the constructon which contains the entire
        sequence $)
-    frsd-lem2 $p |- ( ( A e. NN0 /\ B e. ( ( rec ( ( a e. _V |-> ( r "
-        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` om ) ^m
-        ( 1 ... A ) ) ) -> E. c e. om B e. ( ( rec ( ( a e. _V |-> ( r "
-        U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` c ) ^m
-        ( 1 ... A ) ) ) $=
-    ? $.
+    ${
+    $d x y r $. $d z w r $. $d u r $. $d u A $. $d u B $.
+    frsd-lem2 $p |- ( ( A e. NN0 /\ B e. ( ( FRSD ` r ) ^m ( 1 ... A ) ) ) ->
+        E. u e. om B e. ( ( ( FRSDlevel ` r ) ` u ) ^m ( 1 ... A ) ) ) $= 
+      ( vb va vc wcel cv cfv co cmap wa wss wral com wrex simpr syl3anc syl2anc
+      cn0 cfrsd cfz cfrsdrank ccom cfrsdlevel simpl a1i frsd-lem3 simplr simplll
+      c1 wf simpllr weq fveq2 sseq1d rcla4va wfun cdm wceq ax-mp adantl ad2antrr
+      wb ffun eleqtrrd fvco eqcomd adantlr mpbird adantr sseldd ralrimiva oveq1d
+      syl eleq2d rcla4ev ex rexlimdva mpd ) BUAHZCDIZUBJZULBUCKZLKHZMZEIZWCUDJZC
+      UEZJZFIZNZEWEOZFPQZCAIZWCUFJZJZWELKZHZAPQZWGWBWJPWELKHZWOWBWFUGZWGWBWFWDPW
+      IUMZXBXCWBWFRXDWG?UH?SBWJFEUITWGWNXAFPWGWLPHZMZWNXAXFWNMZXECWLWQJZWELKZHZX
+      AWGXEWNUJXGWBWFGIZCJZXHHZGWEOXJWBWFXEWNUKZWBWFXEWNUNZXGXMGWEXGXKWEHZMZXLWI
+      JZWQJZXHXLXQXRWLNZXSXHNXQXTXKWJJZWLNZXQXPWNYBXGXPRZXFWNXPUJWMYBEXKWEEGUOWK
+      YAWLWHXKWJUPUQURTXFXPXTYBVEWNXFXPMZXRYAWLYDYAXRYDWIUSZCUSZXKCUTZHYAXRVAYEY
+      DXDYE?WDPWIVFVBUHWGYFXEXPWFYFWB?VCVDYDXKWEYGXFXPRWGYGWEVAZXEXPWFYHWB?VCVDV
+      GXKWICVHSVIUQVJVK?VPXQXLWDHZXLXSHXQWBWFXPYIXGWBXPXNVLXGWFXPXOVLYC?S?VPVMVN
+      ?SWTXJAWLPAFUOZWSXICYJWRXHWELWPWLWQUPVOVQVRTVSVTWA $.
+      $( [7-Sep-2014] $)
+    $}
 
     $( Constructor rule for FRSD.  We prove that there is some level of the construction that contains all of the arguments, then show that that level + 1 contains the result. $)
     ${
