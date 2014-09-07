@@ -383,6 +383,14 @@ ${
       UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
       $( [6-Sep-2014] $)
 
+    frsd-lem9 $p |- ( a e. _V |-> ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) =
+        ( c e. _V |-> ( R " U_ d e. NN0 ( c ^m ( 1 ... d ) ) ) ) $=
+      ( cvv cn0 cv c1 cfz co cmap ciun cima weq wceq wcel oveq1 adantr iuneq2dv
+      oveq2 oveq2d cbviunv syl6eq imaeq2d cbvmptv ) BDFACGBHZICHZJKZLKZMZNAEGDHZ
+      IEHZJKZLKZMZNBDOZUKUPAUQUKCGULUILKZMUPUQCGUJURUQUJURPUHGQUGULUILRSTCEGURUO
+      CEOUIUNULLUHUMIJUAUBUCUDUEUF $.
+      $( [7-Sep-2014] $)
+
     $( could still stand to be shortened but at least it's highly reusable $)
     elfz-lastp $p |- ( ( A e. ZZ /\ B e. ( 1 ... ( A + 1 ) ) ) ->
         ( B = ( A + 1 ) \/ B e. ( 1 ... A ) ) ) $=
@@ -631,15 +639,17 @@ ${
     frsd-lem6 $p |- ( A e. om -> ( rec ( ( a e. _V |-> ( r " U_ b e. NN0 ( a ^m
         ( 1 ... b ) ) ) ) , (/) ) ` A ) C_ ( rec ( ( a e. _V |-> ( r "
         U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` suc A ) ) $=
-      ( vd vc cv cvv co cfv csuc wss wceq fveq2 suceq fveq2d sseq12d wcel con0
-      c0 cn0 c1 cfz cmap ciun cima cmpt crdg weq 0ex rdg0 0ss eqsstri com wa a1i
-      fvex frsd-lem4 sylancom nnon rdgsuc syl adantr suceloni 3syl 3sstr4d finds
-      ex ) EGZCHBGDUACGUBDGUCIUDIUEUFUGZTUHZJZVIKZVKJZLTVKJZTKZVKJZLFGZVKJZVRKZV
-      KJZLZWAVTKZVKJZLZAVKJZAKZVKJZLEFAVITMZVLVOVNVQVITVKNWIVMVPVKVITOPQEFUIZVLV
-      SVNWAVIVRVKNWJVMVTVKVIVROPQVIVTMZVLWAVNWDVIVTVKNWKVMWCVKVIVTOPQVIAMZVLWFVN
-      WHVIAVKNWLVMWGVKVIAOPQVOTVQTVJUJUKVQULUMVRUNRZWBWEWMWBUOZVSVJJZWAVJJZWAWDW
-      MWBWAHRZWOWPLWQWNVTVKUQUPVSWABCDURUSWMWAWOMZWBWMVRSRZWRVRUTZTVRVJVAVBVCWMW
-      DWPMZWBWMWSVTSRXAWTVRVDTVTVJVAVEVCVFVHVG $.
+      ( vd vc ve cv cvv co c0 cfv csuc wss wceq fveq2 suceq fveq2d sseq12d wcel
+      cn0 c1 cfz cmap ciun cima cmpt crdg weq 0ex rdg0 0ss eqsstri com frsd-lem4
+      wa fvex a1i biid frsd-lem9 fveq1i sseq12i 3imtr4i sylancom con0 rdgsuc syl
+      nnon adantr suceloni 3syl 3sstr4d ex finds ) EHZCIBHZDUACHUBDHUCJUDJUEUFUG
+      ZKUHZLZVOMZVRLZNKVRLZKMZVRLZNFHZVRLZWEMZVRLZNZWHWGMZVRLZNZAVRLZAMZVRLZNEFA
+      VOKOZVSWBWAWDVOKVRPWPVTWCVRVOKQRSEFUIZVSWFWAWHVOWEVRPWQVTWGVRVOWEQRSVOWGOZ
+      VSWHWAWKVOWGVRPWRVTWJVRVOWGQRSVOAOZVSWMWAWOVOAVRPWSVTWNVRVOAQRSWBKWDKVQUJU
+      KWDULUMWEUNTZWIWLWTWIUPZWFVQLZWHVQLZWHWKWTWIWHITZXBXCNZXDXAWGVRUQURXDWIUPZ
+      WFEIVPGUAVOUBGHUCJUDJUEUFUGZLZWHXGLZNXFXEWFWHBEGUOXFUSXBXHXCXIWFVQXGVPCDEG
+      UTZVAWHVQXGXJVAVBVCVDWTWHXBOZWIWTWEVETZXKWEVHZKWEVQVFVGVIWTWKXCOZWIWTXLWGV
+      ETXNXMWEVJKWGVQVFVKVIVLVMVN $.
       $( [6-Sep-2014] $)
 
     $( The FRSD construction produces a cumulative hierarchy 2 $)
