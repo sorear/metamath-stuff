@@ -397,6 +397,17 @@ ${
       DZVNWLNWQVRWAWRWDVIWRVQVIWHWRAVCVJRVDUQTBVJVEQUTPVFVGVH $.
       $( [6-Sep-2014] $)
 
+    elfz-induct $p |- ( A e. NN0 -> ( ( 1 ... A ) u. { ( A + 1 ) } ) =
+        ( 1 ... ( A + 1 ) ) ) $=
+      ( va cn0 wcel c1 cfz co caddc csn cun fzssp1 nn0p1nn cle wbr fznn id1 nnre
+      cn cr syl leid mpbir2and snssd unssd cv wral wa wceq wo cz nn0z elfz-lastp
+      sylan ssun2 elsn biimpri sseldi elun1 jaoi ralrimiva dfss3 sylibr eqssd
+      wss ) ACDZEAFGZAEHGZIZJZEVGFGZVEVFVHVJEACKVEVGVJVEVGRDZVGVJDZALVKVLVKVGVGM
+      NZVGVGOVKPVKVGSDVMVGQVGUATUBTUCUDVEBUEZVIDZBVJUFVJVIVDVEVOBVJVEVNVJDZUGVNV
+      GUHZVNVFDZUIZVOVEAUJDVPVSAUKAVNULUMVQVOVRVQVHVIVNVHVFUNVNVHDVQBVGUOUPUQVNV
+      FVHURUSTUTBVJVIVAVBVC $.
+      $( [7-Sep-2014] $)
+
     $( Can remove the last element of a sequence $)
     ${
     mapfz-rmlast.1 $e |- C e. _V $.
@@ -420,19 +431,14 @@ ${
 
     mapfzconsex $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) /\ D e. C ) ->
         ( B u. { <. ( A + 1 ) , D >. } ) e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) $=
-      ( va cn0 wcel c1 cfz co cmap caddc csn cun wf wceq ovex elmap syl c0 simp2
-      w3a cop cin sylib wss eqid cvv wb simp3 fsng syl2anc mpbiri snssd fzp1disj
-      a1i fss 3ad2ant1 fun syl21anc fzssp1 cn nn0p1nn cle wbr fznn id1 nnre leid
-      cr mpbir2and unssd cv wral wa wo nn0z elfz-lastp sylan elsn biimpri sseldi
-      cz ssun2 elun1 jaoi ralrimiva dfss3 sylibr eqssd unidm feq23d mpbid ) AGHZ
-      BCIAJKZLKHZDCHZUCZIAIMKZJKZCBWTDUDNZOZPZXCCXALKHWSWPWTNZOZCCOZXCPZXDWSWPCB
-      PZXECXBPZWPXEUEUAQZXHWSWQXIWOWQWRUBCWPBEIAJRSUFWSXEDNZXBPZXLCUGXJWSXMXBXBQ
-      ZXBUHWSWTUIHZWRXMXNUJXOWSAIMRUQWOWQWRUKZWTDUICXBULUMUNWSDCXPUOXEXLCXBURUMW
-      OWQXKWRIAGUPUSWPXECCBXBUTVAWSXFXGXACXCWOWQXFXAQWRWOXFXAWOWPXEXAIAGVBWOWTXA
-      WOWTVCHZWTXAHZAVDXQXRXQWTWTVEVFZWTWTVGXQVHXQWTVKHXSWTVIWTVJTVLTUOVMWOFVNZX
-      FHZFXAVOXAXFUGWOYAFXAWOXTXAHZVPXTWTQZXTWPHZVQZYAWOAWDHYBYEAVRAXTVSVTYCYAYD
-      YCXEXFXTXEWPWEXTXEHYCFWTWAWBWCXTWPXEWFWGTWHFXAXFWIWJWKUSXGCQWSCWLUQWMWNCXA
-      XCEIWTJRSWJ $.
+      ( cn0 wcel c1 cfz co cmap caddc csn cun wf wceq ovex elmap cvv a1i w3a cop
+      cin c0 simp2 sylib wss eqid wb simp3 fsng syl2anc mpbiri fzp1disj 3ad2ant1
+      snssd fss fun syl21anc elfz-induct unidm feq23d mpbid sylibr ) AFGZBCHAIJZ
+      KJGZDCGZUAZHAHLJZIJZCBVJDUBMZNZOZVMCVKKJGVIVFVJMZNZCCNZVMOZVNVIVFCBOZVOCVL
+      OZVFVOUCUDPZVRVIVGVSVEVGVHUECVFBEHAIQRUFVIVODMZVLOZWBCUGVTVIWCVLVLPZVLUHVI
+      VJSGZVHWCWDUIWEVIAHLQTVEVGVHUJZVJDSCVLUKULUMVIDCWFUPVOWBCVLUQULVEVGWAVHHAF
+      UNUOVFVOCCBVLURUSVIVPVQVKCVMVEVGVPVKPVHAUTUOVQCPVICVATVBVCCVKVMEHVJIQRVD
+      $.
       $( [7-Sep-2014] $)
 
     mapfzrecons $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) ->
