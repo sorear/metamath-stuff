@@ -353,13 +353,10 @@ ${
       VIVNVJVOHWCVSVIWBJLVNAWBJSVNVOUJTWCVSVJWBKLVOAWBKSVNVOUKTULWCVSUOUPUQURUSU
       TVAVB $.
       $( [6-Sep-2014] $)
-
 $}
 
 ${
-    $( Finite-recursive set descriptions / Inductive ADTs for combinatorial objects $)
-    $c FRSD $.
-    cfrsd $a class FRSD $.
+    $( Facts about map, fz, and mapfz: if you have to use elmap, your subproof should probably be moved here. $)
 
     $d a b c d e f g h i A $.
     $d a b c d e f g h i B $.
@@ -368,28 +365,6 @@ ${
     $d a b c d e f g h i r $.
     $d a b c d e f g h i R $.
 
-    $( FRSD defines a set as the closure of a defining relation composed with
-       the taking of finite sequences.  If infinite sequences were allowed, we
-       could not guarantee a fixed point at ` om ` . $)
-    df-frsd $a |- FRSD = ( a e. _V |-> ( rec ( ( b e. _V |->
-        ( a " U_ c e. NN0 ( b ^m ( 1 ... c ) ) ) ) , (/) ) ` om ) ) $.
-
-    $( Substitution lemma for FRSD $)
-    frsd-lem1 $p |- ( R e. _V -> ( FRSD ` R ) = ( rec ( ( a e. _V |->
-        ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` om ) ) $=
-      ( vc com cvv cv cn0 c1 cfz co cmap ciun cima cmpt c0 crdg cfv cfrsd wceq
-      wcel imaeq1 adantr mpteq2dva rdgeq1 syl fveq1d df-frsd fvex fvmpt ) DAEBFD
-      GZCHBGZICGJKLKMZNZOZPQZREBFAUMNZOZPQZRFSUKATZEUPUSUTUOURTUPUSTUTBFUNUQUTUN
-      UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
-      $( [6-Sep-2014] $)
-
-    frsd-lem9 $p |- ( a e. _V |-> ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) =
-        ( c e. _V |-> ( R " U_ d e. NN0 ( c ^m ( 1 ... d ) ) ) ) $=
-      ( cvv cn0 cv c1 cfz co cmap ciun cima weq wceq wcel oveq1 adantr iuneq2dv
-      oveq2 oveq2d cbviunv syl6eq imaeq2d cbvmptv ) BDFACGBHZICHZJKZLKZMZNAEGDHZ
-      IEHZJKZLKZMZNBDOZUKUPAUQUKCGULUILKZMUPUQCGUJURUQUJURPUHGQUGULUILRSTCEGURUO
-      CEOUIUNULLUHUMIJUAUBUCUDUEUF $.
-      $( [7-Sep-2014] $)
 
     $( could still stand to be shortened but at least it's highly reusable $)
     elfz-lastp $p |- ( ( A e. ZZ /\ B e. ( 1 ... ( A + 1 ) ) ) ->
@@ -573,8 +548,89 @@ ${
       ABJKFGUAVMBJVIBKVIVNJVIOVJVK $.
       $( [7-Sep-2014] $)
     $}
+
+    mapssi $p |- ( ( A C_ B /\ B e. _V ) -> ( A ^m C ) C_ ( B ^m C ) ) $=
+      ( va cvv wcel wss cmap co wa cv wf cab wi fss wceq ancoms mapvalg sylancl
+      expcom adantl ss2abdv ssexg simpl 3sstr4d ) BFGZABHZACIJZBCIJZHUGUHKZCAELZ
+      MZENZCBULMZENZUIUJUKUMUOEUHUMUOOUGUMUHUOCABULPUAUBUCUKAFGZCFGZUIUNQUHUGUQA
+      BFUDRDACFFESTUKUGURUJUPQUGUHUEDBCFFESTUFR $.
+      $( [6-Sep-2014] $)
     $}
 
+    ${
+        mapcan0.0 $e |- B e. _V $.
+        mapcan0.1 $e |- C e. _V $.
+        mapcan0.2 $e |- D e. _V $.
+        mapcan0.3 $e |- E e. _V $.
+
+        mapcan0 $p |- ( ( A e. ( B ^m C ) /\ A e. ( D ^m E ) ) -> C = E ) $=
+          ( cmap co wcel wa cdm wceq wf elmap biimpi fdm syl adantr adantl
+          eqtr3d ) ABCJKLZADEJKLZMANZCEUDUFCOZUEUDCBAPZUGUDUHBCAFGQRCBASTUAUEUFE
+          OZUDUEEDAPZUIUEUJDEAHIQREDASTUBUC $.
+          $( [4-Sep-2014] $)
+    $}
+
+    ${
+        constmap.1 $e |- A e. _V $.
+        constmap.2 $e |- B e. _V $.
+        constmap.3 $e |- C e. _V $.
+        $( a constant is a function $)
+        constmap $p |- ( B e. C -> ( A X. { B } ) e. ( C ^m A ) )  $= ( wcel csn cmap co cxp wss snssi mapss syl wf fconst snex elmap mpbir a1i sseldd ) BCGZBHZAIJZCAIJZAUDKZUCUDCLUEUFLBCMUDCAFDNOUGUEGZUCUHAUDUGPABEQUDAUGBRDSTUAUB $.  $( [30-Aug-2014] $)
+    $}
+
+    ${
+        mapcan1.0 $e |- A e. B $.
+        mapcan1.1 $e |- C e. _V $.
+        mapcan1.2 $e |- D e. _V $.
+        mapcan1.3 $e |- B e. _V $.
+
+        mapcan1 $p |- ( ( B ^m C ) = ( B ^m D ) -> C = D ) $=
+          ( csn cxp cmap co wcel wceq elexi constmap ax-mp wa simpl simpr syldan
+          eleqtrd mapcan0 mpan ) CAIJZBCKLZMZUFBDKLZNZCDNZABMUGECABFABEOHPQUGUIU
+          EUHMUJUGUIRUEUFUHUGUISUGUITUBUEBCBDHFHGUCUAUD $.
+          $( [4-Sep-2014] $)
+    $}
+
+$}
+
+$( Note for future: a-i are dummy variables that are disjoint from each other
+   and from all other variables.  they should not be used in the statement of
+   a theorem. $)
+
+${
+    $( Finite-recursive set descriptions / Inductive ADTs for combinatorial objects $)
+    $c FRSD $.
+    cfrsd $a class FRSD $.
+
+    $d a b c d e f g h i A $.
+    $d a b c d e f g h i B $.
+    $d a b c d e f g h i C $.
+    $d a b c d e f g h i D $.
+    $d a b c d e f g h i r $.
+    $d a b c d e f g h i R $.
+
+    $( FRSD defines a set as the closure of a defining relation composed with
+       the taking of finite sequences.  If infinite sequences were allowed, we
+       could not guarantee a fixed point at ` om ` . $)
+    df-frsd $a |- FRSD = ( a e. _V |-> ( rec ( ( b e. _V |->
+        ( a " U_ c e. NN0 ( b ^m ( 1 ... c ) ) ) ) , (/) ) ` om ) ) $.
+
+    $( Substitution lemma for FRSD $)
+    frsd-lem1 $p |- ( R e. _V -> ( FRSD ` R ) = ( rec ( ( a e. _V |->
+        ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) , (/) ) ` om ) ) $=
+      ( vc com cvv cv cn0 c1 cfz co cmap ciun cima cmpt c0 crdg cfv cfrsd wceq
+      wcel imaeq1 adantr mpteq2dva rdgeq1 syl fveq1d df-frsd fvex fvmpt ) DAEBFD
+      GZCHBGZICGJKLKMZNZOZPQZREBFAUMNZOZPQZRFSUKATZEUPUSUTUOURTUPUSTUTBFUNUQUTUN
+      UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
+      $( [6-Sep-2014] $)
+
+    frsd-lem9 $p |- ( a e. _V |-> ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) =
+        ( c e. _V |-> ( R " U_ d e. NN0 ( c ^m ( 1 ... d ) ) ) ) $=
+      ( cvv cn0 cv c1 cfz co cmap ciun cima weq wceq wcel oveq1 adantr iuneq2dv
+      oveq2 oveq2d cbviunv syl6eq imaeq2d cbvmptv ) BDFACGBHZICHZJKZLKZMZNAEGDHZ
+      IEHZJKZLKZMZNBDOZUKUPAUQUKCGULUILKZMUPUQCGUJURUQUJURPUHGQUGULUILRSTCEGURUO
+      CEOUIUNULLUHUMIJUAUBUCUDUEUF $.
+      $( [7-Sep-2014] $)
     $( Given a finite sequence of finite ordinals, there is a finite ordinal
        which is ge all of them $)
     frsd-lem3 $p |- ( ( A e. NN0 /\ B e. ( om ^m ( 1 ... A ) ) ) ->
@@ -614,16 +670,6 @@ ${
       DFAUKJIZKZLZMCMUNNZUIAOZUMUPUHUSDFULUOUSULUOOUJFPUIAUKJQRSTURUAUQUHUBUHBUC
       UDUHUPUEUFUG $.
       $( [6-Sep-2014] $)
-
-    ${
-    mapssi.1 $e |- C e. _V $.
-    mapssi $p |- ( ( A C_ B /\ B e. _V ) -> ( A ^m C ) C_ ( B ^m C ) ) $=
-      ( va cvv wcel wss cmap co wa cv wf cab wi fss wceq ancoms mapvalg sylancl
-      expcom adantl ss2abdv ssexg simpl 3sstr4d ) BFGZABHZACIJZBCIJZHUGUHKZCAELZ
-      MZENZCBULMZENZUIUJUKUMUOEUHUMUOOUGUMUHUOCABULPUAUBUCUKAFGZCFGZUIUNQUHUGUQA
-      BFUDRDACFFESTUKUGURUJUPQUGUHUEDBCFFESTUFR $.
-      $( [6-Sep-2014] $)
-    $}
 
     $( The iterative construction of FRSD preserves subsets $)
     frsd-lem4 $p |- ( ( B e. _V /\ A C_ B ) -> ( ( a e. _V |-> ( r "
@@ -874,40 +920,6 @@ ${
       ndmfv ) ABCZADEZAFEZGAHUGIZUHMUIUJADJZCZIZUHMKUJUMUGULBUKAUKBDBNUKBKLBDOPQ
       RSTADUFUAMUIGUJUIUBUCUDUE $.
       $( [5-Sep-2014] $)
-
-    ${
-        mapcan0.0 $e |- B e. _V $.
-        mapcan0.1 $e |- C e. _V $.
-        mapcan0.2 $e |- D e. _V $.
-        mapcan0.3 $e |- E e. _V $.
-
-        mapcan0 $p |- ( ( A e. ( B ^m C ) /\ A e. ( D ^m E ) ) -> C = E ) $=
-          ( cmap co wcel wa cdm wceq wf elmap biimpi fdm syl adantr adantl
-          eqtr3d ) ABCJKLZADEJKLZMANZCEUDUFCOZUEUDCBAPZUGUDUHBCAFGQRCBASTUAUEUFE
-          OZUDUEEDAPZUIUEUJDEAHIQREDASTUBUC $.
-          $( [4-Sep-2014] $)
-    $}
-
-    ${
-        constmap.1 $e |- A e. _V $.
-        constmap.2 $e |- B e. _V $.
-        constmap.3 $e |- C e. _V $.
-        $( a constant is a function $)
-        constmap $p |- ( B e. C -> ( A X. { B } ) e. ( C ^m A ) )  $= ( wcel csn cmap co cxp wss snssi mapss syl wf fconst snex elmap mpbir a1i sseldd ) BCGZBHZAIJZCAIJZAUDKZUCUDCLUEUFLBCMUDCAFDNOUGUEGZUCUHAUDUGPABEQUDAUGBRDSTUAUB $.  $( [30-Aug-2014] $)
-    $}
-
-    ${
-        mapcan1.0 $e |- A e. B $.
-        mapcan1.1 $e |- C e. _V $.
-        mapcan1.2 $e |- D e. _V $.
-        mapcan1.3 $e |- B e. _V $.
-
-        mapcan1 $p |- ( ( B ^m C ) = ( B ^m D ) -> C = D ) $=
-          ( csn cxp cmap co wcel wceq elexi constmap ax-mp wa simpl simpr syldan
-          eleqtrd mapcan0 mpan ) CAIJZBCKLZMZUFBDKLZNZCDNZABMUGECABFABEOHPQUGUIU
-          EUHMUJUGUIRUEUFUHUGUISUGUITUBUEBCBDHFHGUCUAUD $.
-          $( [4-Sep-2014] $)
-    $}
 
     $( use fz1eqb, elfvdm $)
     parfa-domlem $p |- ( A e. ( RecParFa ` B ) -> B e. NN0 ) $=
