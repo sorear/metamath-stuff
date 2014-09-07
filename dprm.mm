@@ -410,11 +410,30 @@ ${
     mapfzres $p |- ( ( ( A e. NN0 /\ B e. NN0 /\ A <_ B ) /\
         D e. ( C ^m ( 1 ... B ) ) ) ->
         ( D |` ( 1 ... A ) ) e. ( C ^m ( 1 ... A ) ) ) $=
-    ? $.
+      ( cn0 wcel cle wbr w3a c1 cfz co cmap wf cz nn0z adantr ovex elmap cres wa
+      wss simpr cuz cfv 3ad2ant1 simpl3 eluz2 syl3anbrc fzss2 syl fssres syl2anc
+      3ad2ant2 ex 3imtr4g imp ) AFGZBFGZABHIZJZDCKBLMZNMGZDKALMZUAZCVENMGZVBVCCD
+      OZVECVFOZVDVGVBVHVIVBVHUBZVHVEVCUCZVIVBVHUDVJBAUEUFGZVKVJAPGZBPGZVAVLVBVMV
+      HUSUTVMVAAQUGRVBVNVHUTUSVNVABQUORUSUTVAVHUHABUIUJAKBUKULVCCVEDUMUNUPCVCDEK
+      BLSTCVEVFEKALSTUQUR $.
+      $( [7-Sep-2014] $)
 
     mapfzconsex $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) /\ D e. C ) ->
-        ( C u. { <. ( A + 1 ) , D >. } ) e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) $=
-    ? $.
+        ( B u. { <. ( A + 1 ) , D >. } ) e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) $=
+      ( va cn0 wcel c1 cfz co cmap caddc csn cun wf wceq ovex elmap syl c0 simp2
+      w3a cop cin sylib wss eqid cvv wb simp3 fsng syl2anc mpbiri snssd fzp1disj
+      a1i fss 3ad2ant1 fun syl21anc fzssp1 cn nn0p1nn cle wbr fznn id1 nnre leid
+      cr mpbir2and unssd cv wral wa wo nn0z elfz-lastp sylan elsn biimpri sseldi
+      cz ssun2 elun1 jaoi ralrimiva dfss3 sylibr eqssd unidm feq23d mpbid ) AGHZ
+      BCIAJKZLKHZDCHZUCZIAIMKZJKZCBWTDUDNZOZPZXCCXALKHWSWPWTNZOZCCOZXCPZXDWSWPCB
+      PZXECXBPZWPXEUEUAQZXHWSWQXIWOWQWRUBCWPBEIAJRSUFWSXEDNZXBPZXLCUGXJWSXMXBXBQ
+      ZXBUHWSWTUIHZWRXMXNUJXOWSAIMRUQWOWQWRUKZWTDUICXBULUMUNWSDCXPUOXEXLCXBURUMW
+      OWQXKWRIAGUPUSWPXECCBXBUTVAWSXFXGXACXCWOWQXFXAQWRWOXFXAWOWPXEXAIAGVBWOWTXA
+      WOWTVCHZWTXAHZAVDXQXRXQWTWTVEVFZWTWTVGXQVHXQWTVKHXSWTVIWTVJTVLTUOVMWOFVNZX
+      FHZFXAVOXAXFUGWOYAFXAWOXTXAHZVPXTWTQZXTWPHZVQZYAWOAWDHYBYEAVRAXTVSVTYCYAYD
+      YCXEXFXTXEWPWEXTXEHYCFWTWAWBWCXTWPXEWFWGTWHFXAXFWIWJWKUSXGCQWSCWLUQWMWNCXA
+      XCEIWTJRSWJ $.
+      $( [7-Sep-2014] $)
 
     mapfzrecons $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) ->
         B = ( ( B |` ( 1 ... A ) ) u. { <. ( A + 1 ) , ( B ` ( A + 1 ) ) >.
