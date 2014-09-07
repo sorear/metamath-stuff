@@ -674,6 +674,14 @@ ${
       UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
       $( [6-Sep-2014] $)
 
+    frsd-lem9 $p |- ( a e. _V |-> ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) =
+        ( c e. _V |-> ( R " U_ d e. NN0 ( c ^m ( 1 ... d ) ) ) ) $=
+      ( cvv cn0 cv c1 cfz co cmap ciun cima weq wceq wcel oveq1 adantr iuneq2dv
+      oveq2 oveq2d cbviunv syl6eq imaeq2d cbvmptv ) BDFACGBHZICHZJKZLKZMZNAEGDHZ
+      IEHZJKZLKZMZNBDOZUKUPAUQUKCGULUILKZMUPUQCGUJURUQUJURPUHGQUGULUILRSTCEGURUO
+      CEOUIUNULLUHUMIJUAUBUCUDUEUF $.
+      $( [7-Sep-2014] $)
+
     ${
     $d x y R $.
     $d x y A $.
@@ -721,15 +729,27 @@ ${
       ZGZBCHFZFBPUGPQZAQCIFFZGZAJKZLZMZFZBUKGZAJKZLZBUIUOAPCDNOUHUSJGUPUSRABCDSP
       BUNUSUGJUOUJBRZUMURUTULUQAJUJBUKTUAUBUOUCUDUEUF $.
       $( [7-Sep-2014] $)
+
+    frsd-lem18 $p |- ( ( FRSDlevel ` R ) ` (/) ) = (/) $=
+      ( va vb c0 cfrsdlevel cfv cvv cn0 cv cfz cmap ciun cima cmpt crdg com cres
+      c1 co frsd-lem13 fveq1i wcel wceq peano1 fvres ax-mp 0ex rdg0 3eqtri ) EAF
+      GZGECHADICJSDJKTLTMNOZEPZQRZGZEUMGZEEUKUNCDABUAUBEQUCUOUPUDUEEQUMUFUGEULUH
+      UIUJ $.
+      $( [7-Sep-2014] $)
+
+    frsd-lem19 $p |- ( A e. om -> ( ( FRSDlevel ` R ) ` suc A ) = ( R " U_ x e.
+        NN0 ( ( ( FRSDlevel ` R ) ` A ) ^m ( 1 ... x ) ) ) ) $=
+      ( va vb vc com wcel cvv cn0 cv c1 co cmap ciun cima c0 cfv wceq cfrsdlevel
+      csuc cfz cmpt crdg cres con0 imaexg ax-mp frsd-lem9 rdgeq1 wa simpl oveq1d
+      nnon iuneq2dv imaeq2d rdgsucmpt sylancl peano2 fvres syl adantr frsd-lem13
+      3eqtr4d fveq1i oveq1i a1i iuneq2i imaeq2i 3eqtr4g ) BHIZBUBZEJCFKELMFLUCNO
+      NPQUDZRUEZHUFZSZCAKBVPSZMALZUCNZONZPZQZVMCUASZSCAKBWDSZVTONZPZQVLVMVOSZCAK
+      BVOSZVTONZPZQZVQWCVLBUGIWLJIZWHWLTBUOCJIWMDCWKJUHUIGRBCAKGLZVTONZPZQZWLVOJ
+      VNGJWQUDZTVOWRRUETCEFGAUJRVNWRUKUIWNWITZWPWKCWSAKWOWJWSVSKIZULWNWIVTOWSWTU
+      MUNUPUQURUSVLVMHIVQWHTBUTVMHVOVAVBVLWBWKCVLAKWAWJVLWAWJTWTVLVRWIVTOBHVOVAU
+      NVCUPUQVEVMWDVPEFCDVDZVFWGWBCAKWFWAWFWATWTWEVRVTOBWDVPXAVFVGVHVIVJVK $.
     $}
 
-    frsd-lem9 $p |- ( a e. _V |-> ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) =
-        ( c e. _V |-> ( R " U_ d e. NN0 ( c ^m ( 1 ... d ) ) ) ) $=
-      ( cvv cn0 cv c1 cfz co cmap ciun cima weq wceq wcel oveq1 adantr iuneq2dv
-      oveq2 oveq2d cbviunv syl6eq imaeq2d cbvmptv ) BDFACGBHZICHZJKZLKZMZNAEGDHZ
-      IEHZJKZLKZMZNBDOZUKUPAUQUKCGULUILKZMUPUQCGUJURUQUJURPUHGQUGULUILRSTCEGURUO
-      CEOUIUNULLUHUMIJUAUBUCUDUEUF $.
-      $( [7-Sep-2014] $)
     $( Given a finite sequence of finite ordinals, there is a finite ordinal
        which is ge all of them $)
     frsd-lem3 $p |- ( ( A e. NN0 /\ B e. ( om ^m ( 1 ... A ) ) ) ->
