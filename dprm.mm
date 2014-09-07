@@ -658,8 +658,8 @@ ${
     df-frsd $a |- FRSD = ( x e. _V |-> ( rec ( ( y e. _V |->
         ( x " U_ z e. NN0 ( y ^m ( 1 ... z ) ) ) ) , (/) ) ` om ) ) $.
 
-    df-frsdlevel $a |- FRSDlevel = ( x e. _V |-> rec ( ( y e. _V |->
-        ( x " U_ z e. NN0 ( y ^m ( 1 ... z ) ) ) ) , (/) ) ) $.
+    df-frsdlevel $a |- FRSDlevel = ( x e. _V |-> ( rec ( ( y e. _V |->
+        ( x " U_ z e. NN0 ( y ^m ( 1 ... z ) ) ) ) , (/) ) |` om ) ) $.
 
     df-frsdrank $a |- FRSDrank = ( x e. _V |-> ( y e. ( FRSD ` x ) |->
         |^| { z e. om | y e. ( ( FRSDlevel ` x ) ` z ) } ) ) $.
@@ -673,6 +673,55 @@ ${
       GZCHBGZICGJKLKMZNZOZPQZREBFAUMNZOZPQZRFSUKATZEUPUSUTUOURTUPUSTUTBFUNUQUTUN
       UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
       $( [6-Sep-2014] $)
+
+    ${
+    $d x y R $.
+    $d x y A $.
+    frsd-lem13.1 $e |- R e. _V $.
+    frsd-lem13 $p |- ( FRSDlevel ` R ) = ( rec ( ( x e. _V |->
+        ( R " U_ y e. NN0 ( x ^m ( 1 ... y ) ) ) ) , (/) ) |` om ) $=
+      ( va cvv wcel cfrsdlevel cfv cv co cima cmpt crdg com cres wceq con0 ax-mp
+      c0 cn0 c1 cfz cmap ciun imaeq1 adantr mpteq2dva rdgeq1 reseq1 df-frsdlevel
+      3syl wfun wfn rdgfnon fnfun omex resfunexg mp2an fvmpt ) CFGCHIAFCBUAAJZUB
+      BJUCKUDKUEZLZMZTNZOPZQDECAFEJZVBLZMZTNZOPZVFFHVGCQZVIVDQVJVEQVKVFQVLAFVHVC
+      VLVHVCQVAFGVGCVBUFUGUHTVIVDUIVJVEOUJULEABUKVEUMZOFGVFFGVERUNVMTVDUORVEUPSU
+      QVEOFURUSUTS $.
+      $( [7-Sep-2014] $)
+
+    frsd-lem15 $p |- ( FRSDrank ` R ) = ( y e. ( FRSD ` R ) |->
+        |^| { x e. om | y e.  ( ( FRSDlevel ` R ) ` x ) } ) $=
+      ( va cvv wcel cfrsdrank cfv cfrsd cfrsdlevel com crab cint cmpt wceq fveq2
+      cv fveq1d eleq2d rabbidv inteqd mpteq12dv df-frsdrank mptex fvmpt ax-mp
+      fvex ) CFGCHIBCJIZBRZARZCKIZIZGZALMZNZOZPDECBERZJIZUJUKURKIZIZGZALMZNZOUQF
+      HURCPZBUSVDUIUPURCJQVEVCUOVEVBUNALVEVAUMUJVEUKUTULURCKQSTUAUBUCEBAUDBUIUPC
+      JUHUEUFUG $.
+      $( [7-Sep-2014] $)
+
+    frsd-lem17 $p |- ( FRSD ` R ) = U_ x e. om ( ( FRSDlevel ` R ) ` x ) $=
+      ( va vb com cvv cn0 cv c1 cfz co cmap ciun cima cmpt c0 cfv wcel wceq crdg
+      cfrsd cfrsdlevel grothomex limom rdglim2a mp2an frsd-lem1 ax-mp frsd-lem13
+      wlim cres a1i fveq1d fvres eqtrd iuneq2i 3eqtr4i ) FDGBEHDIJEIKLMLNOPZQUAZ
+      RZAFAIZUTRZNZBUBRZAFVBBUCRZRZNFGSFUKVAVDTUDUEAQFGUSUFUGBGSVEVATCBDEUHUIAFV
+      GVCVBFSZVGVBUTFULZRVCVHVBVFVIVFVITVHDEBCUJUMUNVBFUTUOUPUQUR $.
+      $( [7-Sep-2014] $)
+
+    frsd-lem16 $p |- ( A e. ( FRSD ` R ) -> |^| { x e. om | A e.
+        ( ( FRSDlevel ` R ) ` x ) } e. om ) $=
+      ( cfrsd cfv wcel cv cfrsdlevel com crab cint con0 wss c0 wne ssrab2 omsson
+      sstri a1i wrex ciun frsd-lem17 eleq2i eliun biimpi sylbi rabn0 onint sseli
+      sylibr syl2anc syl ) BCEFZGZBAHCIFFZGZAJKZLZURGZUSJGUOURMNZUROPZUTVAUOURJM
+      UQAJQZRSTUOUQAJUAZVBUOBAJUPUBZGZVDUNVEBACDUCUDVFVDABJUPUEUFUGUQAJUHUKURUIU
+      LURJUSVCUJUM $.
+      $( [7-Sep-2014] $)
+
+    frsd-lem14 $p |- ( A e. ( FRSD ` R ) -> ( ( FRSDrank ` R ) ` A ) =
+        |^| { x e. om | A e.  ( ( FRSDlevel ` R ) ` x ) } ) $=
+      ( cfrsd cfv wcel cfrsdrank cfrsdlevel com crab cint cmpt frsd-lem15 fveq1i
+      va cv wceq frsd-lem16 eleq1 rabbidv inteqd eqid fvmptg mpdan syl5eq ) BCEF
+      ZGZBCHFZFBPUGPQZAQCIFFZGZAJKZLZMZFZBUKGZAJKZLZBUIUOAPCDNOUHUSJGUPUSRABCDSP
+      BUNUSUGJUOUJBRZUMURUTULUQAJUJBUKTUAUBUOUCUDUEUF $.
+      $( [7-Sep-2014] $)
+    $}
 
     frsd-lem9 $p |- ( a e. _V |-> ( R " U_ b e. NN0 ( a ^m ( 1 ... b ) ) ) ) =
         ( c e. _V |-> ( R " U_ d e. NN0 ( c ^m ( 1 ... d ) ) ) ) $=
@@ -762,9 +811,25 @@ ${
       VMCDEUOUPUSUTVAVB $.
       $( [6-Sep-2014] $)
 
-    frsd-lem12 $p |- ( FRSDrank ` r ) : ( FRSD ` r ) --> om $= ? $.
-    frsd-lem11 $p |- ( A C_ B -> ( ( FRSDlevel ` r ) ` A ) C_ ( ( FRSDlevel ` r ) ` B ) ) $= ? $.
-    frsd-lem10 $p |- ( A e. ( FRSD ` r ) -> A e. ( ( FRSDlevel ` r ) ` ( ( FRSDrank ` r ) ` A ) ) ) $= ? $.
+    frsd-lem12 $p |- ( FRSDrank ` r ) : ( FRSD ` r ) --> om $=
+      ( va vb cv cfrsdlevel cfv wcel com crab cint cfrsd cfrsdrank wf frsd-lem16
+      wral vex rgen frsd-lem15 fmpt mpbi ) BDZCDADZEFFGCHIJZHGZBUBKFZOUEHUBLFZMU
+      DBUECUAUBAPZNQBUEHUCUFCBUBUGRST $.
+      $( [7-Sep-2014] $)
+
+    frsd-lem11 $p |- ( ( A C_ B /\ B e. om ) -> ( ( FRSDlevel ` r ) ` A ) C_ ( ( FRSDlevel ` r ) ` B ) ) $= ? $.
+
+    frsd-lem10 $p |- ( A e. ( FRSD ` r ) -> A e. ( ( FRSDlevel ` r ) `
+        ( ( FRSDrank ` r ) ` A ) ) ) $=
+      ( va vb cv cfrsd cfv wcel cfrsdlevel com crab cint cfrsdrank wa wss c0 wne
+      con0 fveq2 eleq2d ssrab2 omsson sstri cvv vex frsd-lem16 elex intex sylibr
+      syl onint sylancr wceq elrab biimpi cbvrabv eleq2s simpr frsd-lem14 fveq2d
+      weq 3syl eleqtrrd ) ABEZFGHZAACEZVDIGZGZHZCJKZLZVGGZAVDMGGZVGGVEVKVJHZVKJH
+      ZAVLHZNZVPVEVJROVJPQZVNVJJRVICJUAUBUCVEVKUDHZVRVEVOVSCAVDBUEZUFVKJUGUJVJUH
+      UIVJUKULVQVKADEZVGGZHZDJKZVJVKWDHVQWCVPDVKJWAVKUMWBVLAWAVKVGSTUNUOVIWCCDJC
+      DVAVHWBAVFWAVGSTUPUQVOVPURVBVEVMVKVGCAVDVTUSUTVC $.
+      $( [7-Sep-2014] $)
+
 
     $( Given a finite sequence of elements in the complete FRSD construction,
        there is a finite level of the constructon which contains the entire
