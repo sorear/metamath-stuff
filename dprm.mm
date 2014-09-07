@@ -382,6 +382,21 @@ ${
       UQTULFUAUKAUMUBUCUDPUOURUEUFUGDBCUHEUSUIUJ $.
       $( [6-Sep-2014] $)
 
+    $( could still stand to be shortened but at least it's highly reusable $)
+    elfz-lastp $p |- ( ( A e. ZZ /\ B e. ( 1 ... ( A + 1 ) ) ) ->
+        ( B = ( A + 1 ) \/ B e. ( 1 ... A ) ) ) $=
+      ( cz wcel c1 co cfz wa wn cle wbr ad2antlr jca wb elfz syl3anc syl2anc zre
+      cr 3ad2ant1 caddc wceq simpll elfzelz simplr elfzel1 peano2zdi mpbid simpr
+      mtbid w3a simp2r clt simp2l simp3 pm3.2 adantr adantl ltnle mpbird zltp1le
+      bnj2 peano2z syl letri3 ex orrd orcomd ) ACDZBEAEUAFZGFDZHZBEAGFDZBVJUBZVL
+      VMVNVLVMIZVNVLVOHZVIBCDZHZEBJKZBVJJKZHZVSBAJKZHZIZVNVPVIVQVIVKVOUCZVKVQVIV
+      OBEVJUDLZMVPVKWAVIVKVOUEVPVQECDZVJCDZVKWANWFVKWGVIVOBEVJUFLZVPAWEUGBEVJOPU
+      HVPVMWCVLVOUIVPVQWGVIVMWCNWFWIWEBEAOPUJVRWAWDUKZVNVTVJBJKZHZWJVTWKVRVSVTWD
+      ULWJABUMKZWKWJWMWBIZWJVSWDWNVRVSVTWDUNVRWAWDUOVSWBWCVSWBUPVBQWJASDZBSDZWMW
+      NNVRWAWOWDVIWOVQARUQTVRWAWPWDVQWPVIBRURTZABUSQUTVRWAWMWKNWDABVATUHMWJWPVJS
+      DZVNWLNWQVRWAWRWDVIWRVQVIWHWRAVCVJRVDUQTBVJVEQUTPVFVGVH $.
+      $( [6-Sep-2014] $)
+
     $( Can remove the last element of a sequence $)
     ${
     mapfz-rmlast.1 $e |- C e. _V $.
@@ -391,6 +406,121 @@ ${
       wss syl 3imtr4g imp ) AEFZBCGAGHIZJIZKIFZBGAJIZLZCUHKIFZUDUFCBMZUHCUIMZUGU
       JUDUHUFTZUKULNGAEOUKUMULUFCUHBPQUACUFBDGUEJRSCUHUIDGAJRSUBUC $.
       $( [6-Sep-2014] $)
+
+    mapfzres $p |- ( ( ( A e. NN0 /\ B e. NN0 /\ A <_ B ) /\
+        D e. ( C ^m ( 1 ... B ) ) ) ->
+        ( D |` ( 1 ... A ) ) e. ( C ^m ( 1 ... A ) ) ) $=
+    ? $.
+
+    mapfzconsex $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) /\ D e. C ) ->
+        ( C u. { <. ( A + 1 ) , D >. } ) e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) $=
+    ? $.
+
+    mapfzrecons $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... ( A + 1 ) ) ) ) ->
+        B = ( ( B |` ( 1 ... A ) ) u. { <. ( A + 1 ) , ( B ` ( A + 1 ) ) >.
+        } ) ) $=
+    ? $.
+
+    ${
+    $d a b c d e f g h i j ph $.
+    mapfzinde.10 $e |- [ 0 / a ] [ (/) / b ] ph $.
+    mapfzinde.11 $e |- ( ( c e. NN0 /\ d e. ( C ^m ( 1 ... c ) ) /\ e e. C ) -> ( [ c / a ] [ d / b ] ph -> [ ( c + 1 ) / a ] [ ( d u. { <. ( c + 1 ) , e >. } ) / b ] ph ) ) $.
+
+    mapfzinde.base $p |- A. f e. ( C ^m ( 1 ... 0 ) ) [ 0 / a ] [ f / b ] ph $=
+      ( cc0 wsbc co cmap wcel c0 wceq cvv c1o wsb c1 cfz cv fz10OLD oveq2i map0e
+      wb eqtri eleq2i biimpi el1o eqimss2 eqimss eqssd 3syl cc 0cn elexi sbcbidv
+      dfsbcq sylancl mpbii rgen ) AFDUAZELMZDBUBLUCNZONZDUDZVHPZAFQMZELMZVFJVJQV
+      IRZLSPVLVFUHVJVITPZVIQRZVMVJVNVHTVIVHBQONTVGQBOUEUFBIUGUIUJUKVNVOVIULUKVOQ
+      VIQVIUMVIQUNUOUPLUQURUSVMVKVEELSAFQVIVAUTVBVCVD $.
+      $( [7-Sep-2014] $)
+
+    mapfzinde.ind $p |- ( g e. NN0 -> ( A. f e. ( C ^m ( 1 ... g ) ) [ g / a ]
+        [ f / b ] ph -> A. f e. ( C ^m ( 1 ... ( g + 1 ) ) ) [ ( g + 1 ) / a ]
+        [ f / b ] ph ) ) $=
+      ( vh wcel wsb c1 co wsbc wa wb cv cn0 cmap wral caddc mapfz-rmlast adantlr
+      cfz cres simplr wceq cvv vex sbcbidv mpan2 rcla4va syl2anc cfv cop csn cun
+      dfsbcq simplll jca wf ovex elmap biimpi cn cle nn0p1nn nn0re peano2re leid
+      wbr cr 3syl fznn syl mpbird ffvelrn syl2anr anim1i resexOLD fvex weq simp1
+      w3a eleq1d simp2 oveq2d eleq12d anbi12d simp3 3ad2ant1 bitrd oveq1 opeq12d
+      wi oveq1d sneqd uneq12d imbi12d simpll simprl 3jca simprr sylc mapfzrecons
+      vtocl3 mpdan ralrimiva cbvralv sylib ex ) EUAZUBNZAGDOZFEOZDBPXPUHQZUCQZUD
+      ZXRFXPPUEQZRZDBPYCUHQZUCQZUDZXQYBSZAGMOZFYCRZMYFUDYGYHYJMYFYHMUAZYFNZSZAGY
+      KXTUIZRZFEOZYJYMYNYANZYBYPXQYLYQYBXPYKBJUFZUGXQYBYLUJXSYPDYNYADUAZYNUKZXPU
+      LNZXSYPTEUMZYTXRYOFXPULAGYSYNVBUNUOUPUQYMYPSZYJAGYNYCYCYKURZUSZUTZVAZRZFYC
+      RZUUCXQYQSZUUDBNZYPSZUUIUUCXQYQXQYBYLYPVCZUUCXQYLYQUUMYHYLYPUJZYRUQVDYMUUK
+      YPXQYLUUKYBYLYEBYKVEZYCYENZUUKXQYLUUOBYEYKJPYCUHVFVGVHXQUUPYCVINZYCYCVJVOZ
+      SZXQUUQUURXPVKZXQXPVPNYCVPNUURXPVLXPVMYCVNVQVDXQUUQUUPUUSTUUTYCYCVRVSVTYEB
+      YCYKWAWBUGWCHUAZUBNZIUAZBPUVAUHQZUCQZNZSZCUAZBNZAGIOZFHOZSZSZAGUVCUVAPUEQZ
+      UVHUSZUTZVAZRZFUVNRZWSUUJUULSZUUIWSHICXPYNUUDUUBYKXTMUMWDYCYKWEHEWFZUVCYNU
+      KZUVHUUDUKZWHZUVMUVTUVSUUIUWDUVGUUJUVLUULUWDUVBXQUVFYQUWDUVAXPUBUWAUWBUWCW
+      GZWIUWDUVCYNUVEYAUWAUWBUWCWJZUWDUVDXTBUCUWDUVAXPPUHUWEWKWKWLWMUWDUVIUUKUVK
+      YPUWDUVHUUDBUWAUWBUWCWNZWIUWDUVKUVJFEOZYPUWAUWBUVKUWHTUWCUVJFUVAXPVBWOUWDU
+      UAUWHYPTUUBUWDUVJYOFXPULUWDUWBUVJYOTUWFAGUVCYNVBVSUNUOWPWMWMUWDUVSUVRFYCRZ
+      UUIUWDUVNYCUKZUVSUWITUWAUWBUWJUWCUVAXPPUEWQWOUVRFUVNYCVBVSUWDYCULNZUWIUUIT
+      XPPUEVFZUWDUVRUUHFYCULUWDUVQUUGUKUVRUUHTUWDUVCYNUVPUUFUWFUWDUVOUUEUWDUVNYC
+      UVHUUDUWDUVAXPPUEUWEWTUWGWRXAXBAGUVQUUGVBVSUNUOWPXCUVMUVBUVFUVIWHUVKUVSUVM
+      UVBUVFUVIUVBUVFUVLXDUVBUVFUVLUJUVGUVIUVKXEXFUVGUVIUVKXGLXHXJUQUUCXQYLYJUUI
+      TZUUMUUNXQYLSZUWKUWMUWLUWNYIUUHFYCULUWNYKUUGUKYIUUHTXPYKBJXIAGYKUUGVBVSUNU
+      OUQVTXKXLYJYDMDYFMDWFZUWKYJYDTUWLUWOYIXRFYCULAGYKYSVBUNUOXMXNXO $.
+      $( [7-Sep-2014] $)
+
+    mapfzinde $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) ) -> [ A / a ] [ B / b ] ph ) $=
+      ( vh vg c1 cfz co cmap wsbc wral vf cn0 wcel wa wsb caddc wceq eqidd oveq2
+      cc0 dfsbcq raleqbidv weq oveq2d mapfzinde.base mapfzinde.ind nn0ind adantr
+      cv oveq123d simpll simplr jca simpr simpl sbcbidv syl2anc rcla4dv imp mpd
+      wb ex ) BUBUCZCDOBPQZRQZUCZUDZAGMUEZFBSZMVOTZAGCSZFBSZVMVTVPVRFUAUEZMDOUAU
+      SZPQZRQZTVRFUJSZMDOUJPQZRQZTVRFNUEZMDONUSZPQZRQZTVRFWKOUFQZSZMDOWNPQZRQZTV
+      TUANBWDUJUGZWCWGMWFWIWRDDWEWHRRWRRUHWRDUHWDUJOPUIUTVRFWDUJUKULUANUMZWCWJMW
+      FWMWSDDWEWLRRWSRUHWSDUHWDWKOPUIUTVRFWDWKUKULWDWNUGZWCWOMWFWQWTWEWPDRWDWNOP
+      UIUNVRFWDWNUKULWDBUGZWCVSMWFVOXAWEVNDRWDBOPUIUNVRFWDBUKULADEMFGHIJKLUOADEM
+      NFGHIJKLUPUQURVQVTWBVQVTUDZVQVTWBXBVMVPVMVPVTVAVMVPVTVBVCVQVTVDVQVTWBVMVSW
+      BMCVOVMMUSZCUGZUDXDVMVSWBVKVMXDVDVMXDVEXDVRWAFBUBAGXCCUKVFVGVHVIVGVLVJ $.
+      $( [7-Sep-2014] $)
+    $}
+
+    ${
+    $d f g h i   a b c d e A $.
+    $d f g h i   a b c d e B $.
+    $d f g h i   a b c d e ch $.
+    $d f g h i   a b c d e ta $.
+    $d f g h i   a b e ze $.
+    $d f g h i   a b rh $.
+    $d f g h i   a c d e ps $.
+    $d f g h i   a c d e th $.
+    $d f g h i   a d e et $.
+    $d f g h i   a d e si $.
+    $d f g h i   c d e ph $.
+
+    mapfzind.2 $e |- ( a = A -> ( ph <-> ps ) ) $.
+    mapfzind.3 $e |- ( b = B -> ( ps <-> ch ) ) $.
+    mapfzind.4 $e |- ( a = 0 -> ( ph <-> th ) ) $.
+    mapfzind.5 $e |- ( b = (/) -> ( th <-> ta ) ) $.
+    mapfzind.6 $e |- ( a = c -> ( ph <-> et ) ) $.
+    mapfzind.7 $e |- ( b = d -> ( et <-> ze ) ) $.
+    mapfzind.8 $e |- ( a = ( c + 1 ) -> ( ph <-> si ) ) $.
+    mapfzind.9 $e |- ( b = ( d u. { <. ( c + 1 ) , e >. } ) -> ( si <-> rh ) ) $.
+    mapfzind.10 $e |- ta $.
+    mapfzind.11 $e |- ( ( c e. NN0 /\ d e. ( C ^m ( 1 ... c ) ) /\ ze ) -> rh ) $.
+
+    mapfzind.base $p |- A. f e. ( C ^m ( 1 ... 0 ) ) [ f / b ] [ 0 / a ] ph $=
+      ( cc0 wsbc wsb c1 cfz co cmap cv wcel c1o c0 wceq fz10 oveq2i map0e eleq2i
+      eqtri biimpi el1o dfsbcq cvv wb 0ex cc 0cn elexi sbcie sbcbii ax-mp bnj527
+      bitri syl6bb mpbiri 3syl rgen ) AOUJUKZPNULZNLUMUJUNUOZUPUOZNUQZWHURZWIUSU
+      RZWIUTVAZWFWJWKWHUSWIWHLUTUPUOUSWGUTLUPVBVCLSVDVFVEVGWKWLWIVHVGWLWFEUHWLWF
+      WEPUTUKZEWEPWIUTVIWMDPUTUKZEUTVJURWMWNVKVLWEDPUTVJADOUJUJVMVNVOUBVPVQVRDEP
+      UTUCVLVSVTWAWBWCWD $.
+      $( [6-Sep-2014] $)
+
+    mapfzind.ind $p |- ( g e. NN0 -> ( A. f e. ( C ^m ( 1 ... g ) ) [ f / b ]
+        [ g / a ] ph -> A. f e. ( C ^m ( 1 ... ( g + 1 ) ) ) [ f / b ]
+        [ ( g + 1 ) / a ] ph ) ) $=
+        ? $.
+
+    mapfzind.test $p |- ( ( ( g e. NN0 /\ h e. C ) /\ f e. ( C ^m ( 1 ... g ) ) /\ [ f / b ] [ g / a ] ph ) -> [ ( f u. { <. ( g + 1 ) , h >. } ) / b ] [ ( g + 1  ) / a ] ph ) $= ? $.
+
+    mapfzind $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) ) -> ch ) $=
+        ? $.
+    $}
     $}
 
     $( Given a finite sequence of finite ordinals, there is a finite ordinal
