@@ -928,6 +928,43 @@ ${
       $( [7-Sep-2014] $)
     $}
 
+    frsd-lem20 $p |- ( FRSD ` (/) ) = (/) $=
+      ( va vb vc c0 cfrsd cfv wss wceq 0ex cv wbr cn0 wcel c1 cfz cmap cop df-br
+      co noel pm2.21i sylbi 3ad2ant3 frsd-indc ss0 ax-mp ) DEFZDGUGDHABCDDIIBJZC
+      JZDKZAJZLMUIDMZUHDNUKOSPSMUJUHUIQZDMZULUHUIDRUNULUMTUAUBUCUDUGUEUF $.
+      $( [7-Sep-2014] $)
+
+    ${
+    $d x y z R $.  $d x y z C $.
+    frsd-indcd.1 $e |- R e. _V $.
+    frsd-indcd.2 $e |- C e. _V $.
+    $( ~ dedth seems to run out of steam when the hypotheses have embedded quantifiers and discrete variable constraints $)
+    frsd-indcd $p |- ( A. x e. NN0 A. y e. ( C ^m ( 1 ... x ) ) A. z e. _V ( y R z -> z e. C ) -> ( FRSD ` R ) C_ C ) $=
+      ( va vd ve cv wcel wi wral co cn0 cfv com wss wa vb vc vf wbr cvv cfz cmap
+      c1 cfrsd cfrsdlevel ciun wceq frsd-lem17 a1i csuc sseq1d imbi2d frsd-lem18
+      c0 fveq2 weq 0ss eqsstri w3a cima imaiun vex elima simpllr simp3 ad3antrrr
+      wrex oveq2 oveq2d biidd raleqbidv rcla4va syl2anc simpl3 simpl2 idiVD ovex
+      mpd mapssi sseldd simpr breq1 imbi1d breq2 eleq1 imbi12d rcla42va mpdan ex
+      rexlimdva syl5bi ssrdv ralrimiva iunss sylibr syl5eqss frsd-lem19 3ad2ant1
+      jca wb mpbird 3exp finds impcom eqsstrd ) BKZCKZEUDZXLDLZMZCUENZBDUHAKZUFO
+      ZUGOZNZAPNZEUIQZHRHKZEUJQZQZUKZDYBYFULYAHEFUMUNYAYEDSZHRNYFDSYAYGHRYCRLYAY
+      GYAUAKZYDQZDSZMYAUSYDQZDSZMYAUBKZYDQZDSZMZYAYMUOZYDQZDSZMYAYGMUAUBYCYHUSUL
+      ZYJYLYAYTYIYKDYHUSYDUTUPUQUAUBVAZYJYOYAUUAYIYNDYHYMYDUTUPUQYHYQULZYJYSYAUU
+      BYIYRDYHYQYDUTUPUQUAHVAZYJYGYAUUCYIYEDYHYCYDUTUPUQYLYAYKUSDEFURDVBVCUNYMRL
+      ZYPYAYSUUDYPYAVDZYSEIPYNUHIKZUFOZUGOZUKVEZDSZUUEUUIIPEUUHVEZUKZDIEPUUHVFUU
+      EUUKDSZIPNUULDSUUEUUMIPUUEUUFPLZTZUCUUKDUCKZUUKLJKZUUPEUDZJUUHVLUUOUUPDLZJ
+      UUPEUUHUCVGZVHUUOUURUUSJUUHUUOUUQUUHLZTZUURUUSUVBUURTZXPBDUUGUGOZNZUUSUVCU
+      UNYAUVEUUEUUNUVAUURVIUUEYAUUNUVAUURUUDYPYAVJVKXTUVEAUUFPAIVAZXPXPBXSUVDUVF
+      XRUUGDUGXQUUFUHUFVMVNUVFXPVOVPVQVRUVCUVETZUURUUSMZUUSUVGUUQUVDLZUUPUELZTUV
+      EUVHUVGUVIUVJUVGUUHUVDUUQUVGYODUELZUUHUVDSUVGYAYOUUOYAUVAUURUVEUUDYPYAUUNV
+      SVKUUOYPUVAUURUVEUUOYPMUUDYPYAUUNVTWAVKWCUVKUVGGUNYNDUUGUHUUFUFWBWDVRUUOUV
+      AUURUVEVIWEUVJUVGUUTUNXDUVCUVEWFXOUVHUUQXLEUDZXNMBCUUQUUPUVDUEBJVAXMUVLXNX
+      KUUQXLEWGWHCUCVAUVLUURXNUUSXLUUPUUQEWIXLUUPDWJWKWLVRUVGUVHTZUURUUSUVMUURMU
+      VBUURUVEUVHVIWAUVGUVHWFWCWMWMWNWOWPWQWRIPUUKDWSWTXAUUDYPYSUUJXEYAUUDYRUUID
+      IYMEFXBUPXCXFXGXHXIWRHRYEDWSWTXJ $.
+      $( [7-Sep-2014] $)
+    $}
+
 $}
 
 $( loosely inspired by some lecture notes I found by Lou van den Dries $)
