@@ -1475,14 +1475,18 @@ $( ---- MULTIVARIATE POLYNOMIALS ---- $)
 $( Define multivariate polynomials and prove that they include constants and projections and are closed under addition, multiplication, and renaming of variables. Later we will also need the property that polynomial functions are computable. $)
 $( in particular, we don't need normal forms, so just define these as a recursive set $)
 
-$c MVZPolyF $.
+$c MVZPolyF MVZPolyF_R $.
 cmvzpolyf $a class MVZPolyF $.
+cmvzpolyf_r $a class MVZPolyF_R $.
 
 $( the smallest set of integer functions containing constants and projectors and closed under +, * $)
 
 ${
 $d x y z u v w $.
-df-mvzpolyf $a |- MVZPolyF = ( x e. NN0 |-> ( FRSD ` { <. y , z >. | (
+df-mvzpolyf-r $a |- MVZPolyF_R = ( x e. NN0 |-> { <. y , z >. | ( (
+    y e. U_ u e. NN0 ( ( ZZ ^m ( ZZ ^m ( 1 ... x ) ) ) ^m ( 1 ... u ) ) /\
+    z e. ( ZZ ^m ( ZZ ^m ( 1 ... x ) ) )
+) /\ (
     ( y = (/) /\ (
         E. u e. ( 1 ... x ) z = ( v e. ( ZZ ^m ( 1 ... x ) ) |-> ( v ` u ) ) \/
         E. u e. ZZ z = ( v e. ( ZZ ^m ( 1 ... x ) ) |-> u )
@@ -1493,7 +1497,9 @@ df-mvzpolyf $a |- MVZPolyF = ( x e. NN0 |-> ( FRSD ` { <. y , z >. | (
         ( z = ( w e. ( ZZ ^m ( 1 ... x ) ) |-> ( ( u ` w ) + ( v ` w ) ) ) \/
           z = ( w e. ( ZZ ^m ( 1 ... x ) ) |-> ( ( u ` w ) x. ( v ` w ) ) ) )
     )
-) } ) ) $.
+) ) } ) $.
+
+df-mvzpolyf $a |- MVZPolyF = ( x e. NN0 |-> ( FRSD ` ( MVZPolyF_R ` x ) ) ) $.
 $}
 
 ${
@@ -1503,10 +1509,21 @@ ${
     $d a b c d e f g h i j D $.
     $d a b c d e f g h i j M $.
     $d a b c d e f g h i j N $.
+    $d a b c d e f g h i j N $.
+    $d a b c d e f g h i j u $.
+    $d a b c d e f g h i j v $.
+    $d a b c d e f g h i j w $.
+    $d a b c d e f g h i j x $.
+    $d a b c d e f g h i j y $.
+    $d a b c d e f g h i j z $.
 
     ${
     $d u v w x y z a N $.
-    dfmvzpolyf $p |- ( N e. NN0 -> ( MVZPolyF ` N ) = ( FRSD ` { <. y , z >. | (
+
+    dfmvzpolyf-r1 $p |- ( N e. NN0 -> ( MVZPolyF_R ` N ) = { <. y , z >. | ( (
+        y e. U_ u e. NN0 ( ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) ) ^m ( 1 ... u ) ) /\
+        z e. ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) )
+    ) /\ (
         ( y = (/) /\ (
             E. u e. ( 1 ... N ) z = ( v e. ( ZZ ^m ( 1 ... N ) ) |-> ( v ` u ) ) \/
             E. u e. ZZ z = ( v e. ( ZZ ^m ( 1 ... N ) ) |-> u )
@@ -1517,25 +1534,85 @@ ${
             ( z = ( w e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` w ) + ( v ` w ) ) ) \/
               z = ( w e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` w ) x. ( v ` w ) ) ) )
         )
-    ) } ) ) $=
-      ( cv wceq cz c1 co cmap cfv cmpt wrex wo wa cfrsd eqidd eqeq2d cfz cop cpr
-      va c0 c2 caddc cmul copab cn0 cmvzpolyf oveq2 oveq123d mpteq12dv rexeqbidv
-      rexbidv orbi12d anbi2d ax-17 mpteq12d opabbidv fveq2d df-mvzpolyf fvmpt
-      fvex ) UDFAGZUEHZBGZDIJUDGZUAKZLKZEGZDGZMZNZHZEVJOZVHDVKVLNZHZEIOZPZQZVFJV
-      LUBUFVMUBUCHZVHCVKCGZVLMZWDVMMZUGKZNZHZVHCVKWEWFUHKZNZHZPZQZDIVKLKZOZEWOOZ
-      PZABUIZRMVGVHDIJFUAKZLKZVNNZHZEWTOZVHDXAVLNZHZEIOZPZQZWCVHCXAWGNZHZVHCXAWJ
-      NZHZPZQZDIXALKZOZEXPOZPZABUIZRMUJUKVIFHZWSXTRYAWRXSABYAWBXIWQXRYAWAXHVGYAV
-      QXDVTXGYAVPXCEVJWTVIFJUAULZYAVOXBVHYADVKVNXAVNYAIIVJWTLLYALSZYAISZYBUMZYAV
-      NSUNTUOYAVSXFEIYAVRXEVHYADVKVLXAVLYEYAVLSUNTUPUQURYAWPXQEWOXPYAIIVKXALLYCY
-      DYEUMZYAWNXODWOXPYFYAWMXNWCYAWIXKWLXMYAWHXJVHYACVKWGXAWGYACUSYEYAWGSUTTYAW
-      KXLVHYACVKWJXAWJYEYAWJSUNTUQURUOUOUQVAVBUDABCDEVCXTRVEVD $.
+    ) ) } ) $=
+      ( cv cn0 cz c1 cfz co cmap wcel wa wceq cmpt wrex wo eqidd va ciun cfv cop
+      c0 c2 cpr caddc cmul copab cmvzpolyf_r oveq2 oveq2d oveq1d adantr iuneq2dv
+      eleq2d anbi12d mpteq12dv eqeq2d rexeqbidv rexbidv anbi2d mpteq12d opabbidv
+      orbi12d ax-17 df-mvzpolyf-r cxp nn0ex ovex iunex xpex opabssxp ssexi fvmpt
+      ) UAFAGZEHIIJUAGZKLZMLZMLZJEGZKLZMLZUBZNZBGZWANZOZVQUEPZWGDVTWBDGZUCZQZPZE
+      VSRZWGDVTWBQZPZEIRZSZOZVQJWBUDUFWKUDUGPZWGCVTCGZWBUCZXBWKUCZUHLZQZPZWGCVTX
+      CXDUILZQZPZSZOZDWARZEWARZSZOZABUJVQEHIIJFKLZMLZMLZWCMLZUBZNZWGXSNZOZWJWGDX
+      RWLQZPZEXQRZWGDXRWBQZPZEIRZSZOZXAWGCXRXEQZPZWGCXRXHQZPZSZOZDXSRZEXSRZSZOZA
+      BUJZHUKVRFPZXPUUBABUUDWIYDXOUUAUUDWFYBWHYCUUDWEYAVQUUDEHWDXTUUDWDXTPWBHNUU
+      DWAXSWCMUUDVTXRIMUUDVSXQIMVRFJKULZUMZUMZUNUOUPUQUUDWAXSWGUUGUQURUUDWTYLXNY
+      TUUDWSYKWJUUDWOYGWRYJUUDWNYFEVSXQUUEUUDWMYEWGUUDDVTWLXRWLUUFUUDWLTUSUTVAUU
+      DWQYIEIUUDWPYHWGUUDDVTWBXRWBUUFUUDWBTUSUTVBVFVCUUDXMYSEWAXSUUGUUDXLYRDWAXS
+      UUGUUDXKYQXAUUDXGYNXJYPUUDXFYMWGUUDCVTXEXRXEUUDCVGUUFUUDXETVDUTUUDXIYOWGUU
+      DCVTXHXRXHUUFUUDXHTUSUTVFVCVAVAVFURVEUAABCDEVHUUCYAXSVIYAXSEHXTVJXSWCMVKVL
+      IXRMVKVMUUAABYAXSVNVOVP $.
+      $( [8-Sep-2014] $)
+
+    $d A u $.  $d A v $.  $d B u $.  $d B v $.
+    dfmvzpolyf-r2 $p |- ( ( N e. NN0 /\ A e. _V /\ B e. _V ) -> (
+        A ( MVZPolyF_R ` N ) B <-> ( (
+            A e. U_ u e. NN0 ( ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) ) ^m ( 1 ... u ) ) /\
+            B e. ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) )
+        ) /\ (
+            ( A = (/) /\ (
+                E. u e. ( 1 ... N ) B = ( v e. ( ZZ ^m ( 1 ... N ) ) |-> ( v ` u ) ) \/
+                E. u e. ZZ B = ( v e. ( ZZ ^m ( 1 ... N ) ) |-> u )
+            ) ) \/
+            E. u e. ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) )
+            E. v e. ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) ) (
+                A = { <. 1 , u >. , <. 2 , v >. } /\
+                ( B = ( w e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` w ) + ( v ` w ) ) ) \/
+                  B = ( w e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` w ) x. ( v ` w ) ) ) )
+            )
+        ) )
+    ) ) $=
+      ( va vb wcel cvv cfv cv cz co wa c0 wceq wrex wo eqidd cn0 w3a cmvzpolyf_r
+      wbr cop c1 cfz cmap ciun cmpt c2 cpr caddc cmul copab wb a1i dfmvzpolyf-r1
+      df-br 3ad2ant1 eleq2d simpl eleq12d simpr anbi12d id1 eqeqan12d eqeqan12rd
+      rexbidv orbi12d eqeq1d opelopabga 3adant1 3bitrd ) FUAIZDJIZEJIZUBZDEFUCKZ
+      UDZDEUEZVSIZWAGLZCUAMMUFFUGNZUHNZUHNZUFCLZUGNUHNUIZIZHLZWFIZOZWCPQZWJBWEWG
+      BLZKUJZQZCWDRZWJBWEWGUJZQZCMRZSZOZWCUFWGUEUKWNUEULZQZWJAWEALZWGKZXEWNKZUMN
+      UJZQZWJAWEXFXGUNNUJZQZSZOZBWFRZCWFRZSZOZGHUOZIZDWHIZEWFIZOZDPQZEWOQZCWDRZE
+      WRQZCMRZSZOZDXCQZEXHQZEXJQZSZOZBWFRZCWFRZSZOZVTWBUPVRDEVSUSUQVRVSXRWAVOVPV
+      SXRQVQGHABCFURUTVAVPVQXSYRUPVOXQYRGHDEJJWCDQZWJEQZOZWLYBXPYQUUAWIXTWKYAUUA
+      WCDWHWHYSYTVBUUAWHTVCUUAWJEWFWFYSYTVDZUUAWFTVCVEUUAXBYIXOYPUUAWMYCXAYHYSYT
+      WCDPPYSVFZYTPTVGUUAWQYEWTYGUUAWPYDCWDYTYSWJEWOWOYTVFZYSWOTVHVIUUAWSYFCMYTY
+      SWJEWRWRUUDYSWRTVHVIVJVEUUAXNYOCWFUUAXMYNBWFUUAXDYJXLYMYSYTWCDXCXCUUCYTXCT
+      VGUUAXIYKXKYLYTYSWJEXHXHUUDYSXHTVHUUAWJEXJUUBVKVJVEVIVIVJVEVLVMVN $.
+      $( [8-Sep-2014] $)
+
+    dfmvzpolyf1 $p |- ( N e. NN0 -> ( MVZPolyF ` N ) = ( FRSD ` ( MVZPolyF_R ` N ) ) ) $=
+      ( va cv cmvzpolyf_r cfv cfrsd cn0 cmvzpolyf wceq eqidd fveq12d df-mvzpolyf
+      fveq2 fvex fvmpt ) BABCZDEZFEADEZFEGHPAIZQRFFSFJPADMKBLRFNO $.
       $( [8-Sep-2014] $)
     $}
 
+    $( mapfz0 and an easy way to get from map to unimap would help here a bit.  there's still a lot of apparently irreducible tedium $)
+    $( what else might help are quick bound variable changers and a short notation for tuples $)
     ${
     $d x A $.  $d x B $.  $d x C $.
     const-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ZZ ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> B ) e. ( MVZPolyF ` A ) ) $=
-        ?
+      ( vb va vc cn0 wcel cz wa c1 cfz co cmap cmpt cfv cc0 c0 wceq wrex cvv wbr
+      cmvzpolyf_r cfrsd cmvzpolyf 0nn0 a1i wf simplr eqid fmptd zex elmap sylibr
+      ovex elex syl jca c1o 0lt1o fz10 oveq2i fvex map0e eqtri eleqtrri ciun cop
+      cv wo c2 cpr caddc cmul wb simpl dfmvzpolyf-r2 syl3anc oveq2 oveq2d eleq2d
+      0ex rcla4ev syl2anc eliun eqidd simpr id mpteq12dv weq cbvmptv syl6eq olcd
+      eqeq2d orcd mpbir2and frsd-con dfmvzpolyf1 adantr eleqtrrd ) BGHZCIHZJZAIK
+      BLMZNMZCOZBUCPZUDPZBUEPZXCQGHZXFUAHZJRXHKQLMZNMZHZRXFXGUBZXFXHHXCXJXKXJXCU
+      FUGZXCXFIXENMZHZXKXCXEIXFUHXRXCAXECIXFXAXBAVIXEHUIXFUJUKIXEXFULIXDNUOUMUNZ
+      XFXQUPUQZURXNXCRUSXMUTXMXHRNMUSXLRXHNVAVBXHXGUDVCVDVEVFUGXCXORDGXQKDVIZLMZ
+      NMZVGHZXRJZRRSZXFEXEYAEVIZPOSDXDTZXFEXEYAOZSZDITZVJZJZRKYAVHVKYGVHVLSXFFXE
+      FVIZYAPZYNYGPZVMMOSXFFXEYOYPVNMOSVJJEXQTDXQTZVJZXCXARUAHZXKXOYEYRJVOXAXBVP
+      YSXCWBUGXTFEDRXFBVQVRXCYDXRXCRYCHZDGTZYDXCXJRXQXLNMZHZUUAXPUUCXCRUSUUBUTUU
+      BXQRNMUSXLRXQNVAVBXQIXENUOVDVEVFUGYTUUCDQGYAQSZYCUUBRUUDYBXLXQNYAQKLVSVTWA
+      WCWDDRGYCWEUNXSURXCYMYQXCYFYLXCRWFXCYKYHXCXBXFXFSZYKXAXBWGXCXFWFYJUUEDCIYA
+      CSZYIXFXFUUFYIEXECOXFUUFEXEYAXECUUFXEWFUUFWHWIEAXECCEAWJCWFWKWLWNWCWDWMURW
+      OWPQRXFXGBUCVCWQVRXAXIXHSXBBWRWSWT $.
+      $( [8-Sep-2014] $)
     $.
 
     proj-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( 1 ... A ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( x ` B ) ) e. ( MVZPolyF ` A ) ) $=
@@ -1549,6 +1626,17 @@ ${
     mul-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) /\ C e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( ( B ` x ) x. ( C ` x ) ) ) e. ( MVZPolyF ` A ) ) $=
         ?
     $.
+    $}
+
+    ${
+    $d x y f g C $.
+    $d x y f g N $.
+    mvzpolyf-inddc.1 $e |- ( ( ph /\ y e. ZZ ) -> ( x e. ( ZZ ^m ( 1 ... N ) ) |-> y ) e. C ) $.
+    mvzpolyf-inddc.2 $e |- ( ( ph /\ y e. ( 1 ... N ) ) -> ( x e. ( ZZ ^m ( 1 ... N ) ) |-> ( x ` y ) ) e. C ) $.
+    mvzpolyf-inddc.3 $e |- ( ( ph /\ f e. C /\ g e. C ) -> ( x e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( f ` x ) + ( g ` x ) ) ) e. C ) $.
+    mvzpolyf-inddc.4 $e |- ( ( ph /\ f e. C /\ g e. C ) -> ( x e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( f ` x ) x. ( g ` x ) ) ) e. C ) $.
+    mvzpolyf-inddc $p |- ( ( N e. NN0 /\ C e. _V /\ ph ) -> ( MVZPolyF ` N ) C_ C ) $=
+        ? $.
     $}
 
 $}
