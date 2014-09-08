@@ -904,8 +904,16 @@ ${
       MWRWSVNVDICDYIUAVOVPVQXTYDYKVRWTXEXTYCYJCHXADEVSTVTVQWAYAYCWOCYAYCJRJQZXBN
       ZVAZWOYAYBRLZYCUUAWHXTUUBWTXAWBWCJRYTYBYCYSYBXBUJWDVPJDEWEWFWGWIWJWK $.
       $( [7-Sep-2014] $)
-
     $}
+
+    frsd-cong $p |- ( R e. _V -> ( ( ( A e. NN0 /\ D e. _V ) /\ B e. ( ( FRSD `
+        R ) ^m ( 1 ... A ) ) /\ B R D ) -> D e. ( FRSD ` R ) ) ) $=
+      ( cvv wcel cn0 wa cfrsd cfv c1 cfz co cmap wbr w3a wi c0 eleq2d eleq1 wceq
+      cif fveq2 oveq1d breq 3anbi23d imbi12d 0ex elimhyp frsd-con dedth ) DEFZAG
+      FCEFHZBDIJZKALMZNMZFZBCDOZPZCUNFZQUMBULDRUBZIJZUONMZFZBCVAOZPZCVBFZQDRDVAU
+      AZUSVFUTVGVHUQVDURVEUMVHUPVCBVHUNVBUONDVAIUCZUDSBCDVAUEUFVHUNVBCVISUGABCVA
+      ULVAEFREFDRDVAETRVAETUHUIUJUK $.
+      $( [7-Sep-2014] $)
 
     ${
     $d x y z R $. $d x y z C $.
@@ -981,6 +989,33 @@ ${
       $( [7-Sep-2014] $)
     $}
 
+    frsd-ss $p |- ( ( A C_ B /\ B e. _V ) -> ( FRSD ` A ) C_ ( FRSD ` B ) ) $=
+      ( vb vc va wss cvv wcel wa cfrsd cfv cv wbr wi wral c1 co cn0 w3a sylc cfz
+      cmap ssexg fvex jctir simpllr 3simpb ad2antlr simplr2 simpll imp frsd-cong
+      ssbrd 3jca ex ralrimivvva frsd-indcdd ) ABFZBGHZIZAGHZBJKZGHZICLZDLZAMZVEV
+      BHZNZDGOCVBPELZUAQUBQZOEROAJKVBFUTVAVCABGUCBJUDUEUTVHECDRVJGUTVIRHZVDVJHZV
+      EGHZSZIZVFVGVOVFIZUSVKVMIZVLVDVEBMZSVGURUSVNVFUFVPVQVLVRVNVQUTVFVKVLVMUGUH
+      VKVLVMUTVFUIVOVFVRVOABVDVEURUSVNUJUMUKUNVIVDVEBULTUOUPECDVBAUQT $.
+      $( [7-Sep-2014] $)
+
+    frsd-ssrn $p |- ( R e. _V -> ( FRSD ` R ) C_ ran R ) $=
+      ( vb vc va cvv wcel crn wa cv wbr wi wral c1 cfz co cmap cn0 cfrsd cfv vex
+      wss rnexg ancli w3a brelrn a1i ralrimivvva frsd-indcdd sylc ) AEFZUJAGZEFZ
+      HBIZCIZAJUNUKFKZCELBUKMDIZNOPOZLDQLARSUKUAUJULAEUBUCUJUODBCQUQEUOUJUPQFUMU
+      QFUNEFUDHUMUNABTCTUEUFUGDBCUKAUHUI $.
+      $( [7-Sep-2014] $)
+
+    $( TODO: if K is an infinite cardinal such that all images of singletons under R have cardinality at most K, then ( FRSD ` R ) has cardinality at most K.  In other words finitary structures are countable $)
+    $( TODO: provide an easy way to prove your constructed set is a function, using a local determinism predicate like that suggested below.  informally, if the recursive calls are determined by the local arguments, and the result is determined by the arguments and recursive results, the function will be defined in at most one way $)
+    $( TODO: with a founded relation on the domain this can be strengthened to directly proving a dom $)
+    $(
+    $d u v w x y z A $.  $d u v w x y z B $.  $d u v w x y z R $.
+    frsd-fun $p |- ( ( ( R e. _V /\ A e. _V /\ B e. _V ) /\ ( ran R C_ ( A X. B ) /\
+        A. w e. U_ u e. NN0 ( ( A X. B ) ^m ( 1 ... u ) ) A. x e. ( A X. B )
+            A. y e. U_ v e. NN0 ( ( A X. B ) ^m ( 1 ... v ) ) A. z e. ( A X. B )
+                ( ( w R x /\ y R z /\ ( 1st ` x ) = ( 1st ` z ) ) ->
+                    ( ( 1st o. w ) = ( 1st o. y ) /\ ( w = y -> x = z ) ) ) ) ) -> Fun ( FRSD ` R ) ) $= ? $.
+    $)
 $}
 
 $( loosely inspired by some lecture notes I found by Lou van den Dries $)
