@@ -887,11 +887,45 @@ ${
     $( Constructor rule for FRSD.  We prove that there is some level of the construction that contains all of the arguments, then show that that level + 1 contains the result. $)
     ${
     frsd-con.1 $e |- R e. _V $.
-    frsd-conx $p |- ( ( A e. NN0 /\ B e. ( ( FRSD ` R ) ^m ( 1 ... A ) ) /\ B R D ) -> D e. ( FRSD ` R ) ) $=
-        ? $.
+    frsd-con $p |- ( ( ( A e. NN0 /\ D e. _V ) /\ B e. ( ( FRSD ` R ) ^m
+        ( 1 ... A ) ) /\ B R D ) -> D e. ( FRSD ` R ) ) $=
+      ( va ve vc vb vd cn0 wcel wa cfv co cmap cv com wrex eleq2d cvv c1 cfz wbr
+      cfrsd w3a cfrsdlevel wi wceq fveq2 oveq1d anbi2d rexbidv imbi12d frsd-lem2
+      fveq1d vtocl adantlr 3adant3 csuc ciun cima simp1l ad2antrr oveq2d rcla4ev
+      oveq2 sylancom eliun sylibr simpll3 breq1 syl2anc simp1r elimag syl mpbird
+      wb frsd-lem19 ad2antlr ex peano2 adantl ssiun2s frsd-lem17 syl6sseqr sseld
+      wss syld rexlimdva mpd ) AKLZCUALZMZBDUENZUBAUCOZPOZLZBCDUDZUFZBFQZDUGNZNZ
+      WPPOZLZFRSZCWOLZWNWRXFWSWLWRXFWMWLBGQZUENZWPPOZLZMZBXAXHUGNZNZWPPOZLZFRSZU
+      HWLWRMZXFUHGDEXHDUIZXLXRXQXFXSXKWRWLXSXJWQBXSXIWOWPPXHDUEUJUKTULXSXPXEFRXS
+      XOXDBXSXNXCWPPXSXAXMXBXHDUGUJUPUKTUMUNFABGUOUQURUSWTXEXGFRWTXARLZMZXECXAUT
+      ZXBNZLZXGYAXEYDYAXEMZYDCDHKXCUBHQZUCOZPOZVAZVBZLZYEYKIQZCDUDZIYISZYEBYILZW
+      SYNYEBYHLZHKSZYOYAXEWLYQWTWLXTXEWLWMWRWSVCVDYPXEHAKYFAUIZYHXDBYRYGWPXCPYFA
+      UBUCVGVETVFVHHBKYHVIVJWNWRWSXTXEVKYMWSIBYIYLBCDVLVFVMYEWMYKYNVRWTWMXTXEWLW
+      MWRWSVNVDICDYIUAVOVPVQXTYDYKVRWTXEXTYCYJCHXADEVSTVTVQWAYAYCWOCYAYCJRJQZXBN
+      ZVAZWOYAYBRLZYCUUAWHXTUUBWTXAWBWCJRYTYBYCYSYBXBUJWDVPJDEWEWFWGWIWJWK $.
+      $( [7-Sep-2014] $)
 
-    frsd-con0 $p |- ( (/) R A -> A e. ( FRSD ` R ) ) $=
-        ? $.
+    $}
+
+    ${
+    $d x y z R $. $d x y z C $.
+    frsd-indc.1 $e |- R e. _V $.
+    frsd-indc.2 $e |- C e. _V $.
+    frsd-indc.3 $e |- ( ( x e. NN0 /\ y e. ( C ^m ( 1 ... x ) ) /\ y R z ) -> z e. C ) $.
+    frsd-indc $p |- ( FRSD ` R ) C_ C $=
+      ( va vb cfv com cv wss c0 fveq2 sseq1d wcel wa cn0 vc cfrsdlevel ciun csuc
+      cfrsd frsd-lem17 iunss wceq weq frsd-lem18 0ss eqsstri c1 cfz co cmap cima
+      imaiun wral wbr wrex vex elima simpllr anass1rs ovex mapssi sylancl simplr
+      sseldd simpr syl3anc ex rexlimdva syl5bi ssrdv ralrimiva sylibr frsd-lem19
+      cvv syl5eqss wb adantr mpbird finds mprgbir ) EUEKILIMZEUBKZKZUCZDIEFUFWJD
+      NWIDNZILILWIDUGJMZWHKZDNOWHKZDNUAMZWHKZDNZWOUDZWHKZDNZWKJUAWGWLOUHWMWNDWLO
+      WHPQJUAUIWMWPDWLWOWHPQWLWRUHWMWSDWLWRWHPQJIUIWMWIDWLWGWHPQWNODEFUJDUKULWOL
+      RZWQWTXAWQSZWTEATWPUMAMZUNUOZUPUOZUCUQZDNZXBXFATEXEUQZUCZDAETXEURXBXHDNZAT
+      USXIDNXBXJATXBXCTRZSZCXHDCMZXHRBMZXMEUTZBXEVAXLXMDRZBXMEXECVBVCXLXOXPBXEXL
+      XNXERZSZXOXPXRXOSZXKXNDXDUPUOZRXOXPXBXKXQXOVDXSXEXTXNXSWQDVTRXEXTNXLXOXQWQ
+      XAWQXKXOXQSVDVEGWPDXDUMXCUNVFVGVHXLXQXOVIVJXRXOVKHVLVMVNVOVPVQATXHDUGVRWAX
+      AWTXGWBWQXAWSXFDAWOEFVSQWCWDVMWEWFUL $.
+      $( [7-Sep-2014] $)
     $}
 
 $}
