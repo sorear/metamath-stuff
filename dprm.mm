@@ -1,18 +1,6 @@
 $[ set.mm $]
 
-$( ---- MULTIVARIATE POLYNOMIALS ---- $)
-$( Define multivariate polynomials and prove that they include constants and projections and are closed under addition, multiplication, and renaming of variables. Later we will also need the property that polynomial functions are computable. $)
-
-$c MVZMonoF $.
-
-${
-    $( Multivariate polynomials over ` CC ` .  Should generalize to any ring soon.  These are real polynomial functions, not formal polynomials; this, for instance, we do not distinguish the Froebnius polynomial on a prime field from the identity. $)
-
-    $( Warmup version: limited to ZZ $)
-    cmvzmonof $a class MVZMonoF $.
-    $d n f x y z k $.
-    df-mvzmonof $a |- MVZMonoF = ( n e. NN0 |-> { f e. ( ZZ ^m ( ZZ ^m ( 1 ... n ) ) ) | E. x e. ZZ E. y e. ( NN0 ^m ( 1 ... n ) ) A. z e. ( ZZ ^m ( 1 ... n ) ) ( f ` z ) = ( x x. prod_ k e. ( 1 ... n ) x. ( ( z ` k ) ^ ( y ` k ) ) ) } ) $.
-$}
+$( early warmup proofs.  I may find a use for Id ` x. later $)
 
 wu0 $p |- ( ( ZZ ^m ( 1 ... 0 ) ) X. { 0 } ) e. ( ZZ ^m ( ZZ ^m ( 1 ... 0 ) ) ) $= ( cc0 csn cz c1 cfz co cmap cxp wss wcel 0z snssi ax-mp zex ovex mapss wf elexi fconst snex elmap mpbir sselii ) ABZCDAEFZGFZGFZCUFGFZUFUDHZUDCIZUGUHIACJUJKACLMUDCUFNCUEGOZPMUIUGJUFUDUIQUFAACKRSUDUFUIATUKUAUBUC $.
 ${
@@ -25,10 +13,6 @@ ${
     wu10 $p |- x. : ( CC X. CC ) -onto-> CC $= ( vb va cc cxp cmul wfo wf cv cfv wceq wrex wral dffo3 ax-mulopr wcel c1 wa a1i jca syl cop ax-1cn id opelxpi co mulid2 eqcomd df-ov eqtrd fveq2 eqeq2d rcla4ev rgen mpbir2an ) CCDZCEFUOCEGAHZBHZEIZJZBUOKZACLBAUOCEMNUTACUPCOZPUPUAZUOOZUPVBEIZJZQUTVAVCVEVAPCOZVAQVCVAVFVAVFVAUBRVAUCSPUPCCUDTVAUPPUPEUEZVDVAVGUPUPUFUGVGVDJVAPUPEUHRUISUSVEBVBUOUQVBJURVDUPUQVBEUJUKULTUMUN $.  $( [30-Aug-2014] $)
     wu9 $p |- ( Id ` x. ) = 1 $= ( va vb cmul cgi cfv cv co wceq wa cc wral crio c1 cvv wcel mulex crn cxp wfo ax-mp wu10 forn eqcomi gidval wu5 eqtri ) CDEZAFZBFZCGUIHUIUHCGUIHIBJKAJLZMCNOUGUJHPBACNJCQZJJJRZJCSUKJHUAULJCUBTUCUDTBAUEUF $.  $( [30-Aug-2014] $)
 $}
-wu2 $p |- prod_ k e. ( 1 ... 0 ) x. A = 1 $= ( c1 cc0 cfz co cmul cprd c0 cgi cfv wceq fz10OLD prodeq1 ax-mp prod0 wu9 3eqtri ) CDEFZABGHZIABGHZGJKCSILTUALMSIABGNOABGPQR $.   $( [30-Aug-2014] $)
-wu3 $p |- ( n e. NN0 -> prod_ k e. ( 1 ... n ) x. 1 = 1 ) $= ? $.
-wu4 $p |- E. x e. ZZ E. y e. ( NN0 ^m ( 1 ... n ) ) A. z e. ( ZZ ^m ( 1 ... 0 ) ) ( ( ( ZZ ^m ( 1 ... 0 ) ) X. { 0 } ) ` z ) = ( x x. prod_ k e. ( 1 ... 0 ) x. ( ( z ` k ) ^ ( y ` k ) ) ) $= ? $.
-scalar0-is-mvzmonof0 $p |- ( ( ZZ ^m ( 1 ... 0 ) ) X. { 0 } ) e. ( MVZMonoF ` 0 ) $= ? $.
 
 $( ---- NUMBER THEORY ---- $)
 $( Special Pell equations and Kummer's theorem.  Prove that certain polynomial identities are equivalent to exponential and bitwise ones. $)
@@ -630,12 +614,12 @@ $( Note for future: a-i are dummy variables that are disjoint from each other
    and from all other variables.  they should not be used in the statement of
    a theorem. $)
 
+$c FRSD FRSDrank FRSDlevel $.
+cfrsd $a class FRSD $.
+cfrsdrank $a class FRSDrank $.
+cfrsdlevel $a class FRSDlevel $.
 ${
     $( Finite-recursive set descriptions / Inductive ADTs for combinatorial objects $)
-    $c FRSD FRSDrank FRSDlevel $.
-    cfrsd $a class FRSD $.
-    cfrsdrank $a class FRSDrank $.
-    cfrsdlevel $a class FRSDlevel $.
 
     $d a b c d e f g h i A $.
     $d a b c d e f g h i B $.
@@ -1486,6 +1470,88 @@ $( doing this by recursion theory now.
 $)
 
 eval-recursive $p |- ( x e. ( NN0 ^m ( 1 ... 2 ) ) |-> if ( ( x ` 1 ) e. dom RecArithGeneral , ( ( RecArithGeneral ` ( x ` 1 ) ) ` ( { 1 } X. { ( x ` 2 ) } ) ) , ( Undef ` NN0 ) ) ) e. RecArithGeneral $= ? $.
+
+$( ---- MULTIVARIATE POLYNOMIALS ---- $)
+$( Define multivariate polynomials and prove that they include constants and projections and are closed under addition, multiplication, and renaming of variables. Later we will also need the property that polynomial functions are computable. $)
+$( in particular, we don't need normal forms, so just define these as a recursive set $)
+
+$c MVZPolyF $.
+cmvzpolyf $a class MVZPolyF $.
+
+$( the smallest set of integer functions containing constants and projectors and closed under +, * $)
+
+${
+$d x y z u v w $.
+df-mvzpolyf $a |- MVZPolyF = ( x e. NN0 |-> ( FRSD ` { <. y , z >. | (
+    ( y = (/) /\ (
+        E. u e. ( 1 ... x ) z = ( v e. ( ZZ ^m ( 1 ... x ) ) |-> ( v ` u ) ) \/
+        E. u e. ZZ z = ( v e. ( ZZ ^m ( 1 ... x ) ) |-> u )
+    ) ) \/
+    E. u e. ( ZZ ^m ( ZZ ^m ( 1 ... x ) ) )
+    E. v e. ( ZZ ^m ( ZZ ^m ( 1 ... x ) ) ) (
+        y = { <. 1 , u >. , <. 2 , v >. } /\
+        ( z = ( w e. ( ZZ ^m ( 1 ... x ) ) |-> ( ( u ` w ) + ( v ` w ) ) ) \/
+          z = ( w e. ( ZZ ^m ( 1 ... x ) ) |-> ( ( u ` w ) x. ( v ` w ) ) ) )
+    )
+) } ) ) $.
+$}
+
+${
+    $d a b c d e f g h i j A $.
+    $d a b c d e f g h i j B $.
+    $d a b c d e f g h i j C $.
+    $d a b c d e f g h i j D $.
+    $d a b c d e f g h i j M $.
+    $d a b c d e f g h i j N $.
+
+    ${
+    $d u v w x y z a N $.
+    dfmvzpolyf $p |- ( N e. NN0 -> ( MVZPolyF ` N ) = ( FRSD ` { <. y , z >. | (
+        ( y = (/) /\ (
+            E. u e. ( 1 ... N ) z = ( v e. ( ZZ ^m ( 1 ... N ) ) |-> ( v ` u ) ) \/
+            E. u e. ZZ z = ( v e. ( ZZ ^m ( 1 ... N ) ) |-> u )
+        ) ) \/
+        E. u e. ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) )
+        E. v e. ( ZZ ^m ( ZZ ^m ( 1 ... N ) ) ) (
+            y = { <. 1 , u >. , <. 2 , v >. } /\
+            ( z = ( w e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` w ) + ( v ` w ) ) ) \/
+              z = ( w e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` w ) x. ( v ` w ) ) ) )
+        )
+    ) } ) ) $=
+      ( cv wceq cz c1 co cmap cfv cmpt wrex wo wa cfrsd eqidd eqeq2d cfz cop cpr
+      va c0 c2 caddc cmul copab cn0 cmvzpolyf oveq2 oveq123d mpteq12dv rexeqbidv
+      rexbidv orbi12d anbi2d ax-17 mpteq12d opabbidv fveq2d df-mvzpolyf fvmpt
+      fvex ) UDFAGZUEHZBGZDIJUDGZUAKZLKZEGZDGZMZNZHZEVJOZVHDVKVLNZHZEIOZPZQZVFJV
+      LUBUFVMUBUCHZVHCVKCGZVLMZWDVMMZUGKZNZHZVHCVKWEWFUHKZNZHZPZQZDIVKLKZOZEWOOZ
+      PZABUIZRMVGVHDIJFUAKZLKZVNNZHZEWTOZVHDXAVLNZHZEIOZPZQZWCVHCXAWGNZHZVHCXAWJ
+      NZHZPZQZDIXALKZOZEXPOZPZABUIZRMUJUKVIFHZWSXTRYAWRXSABYAWBXIWQXRYAWAXHVGYAV
+      QXDVTXGYAVPXCEVJWTVIFJUAULZYAVOXBVHYADVKVNXAVNYAIIVJWTLLYALSZYAISZYBUMZYAV
+      NSUNTUOYAVSXFEIYAVRXEVHYADVKVLXAVLYEYAVLSUNTUPUQURYAWPXQEWOXPYAIIVKXALLYCY
+      DYEUMZYAWNXODWOXPYFYAWMXNWCYAWIXKWLXMYAWHXJVHYACVKWGXAWGYACUSYEYAWGSUTTYAW
+      KXLVHYACVKWJXAWJYEYAWJSUNTUQURUOUOUQVAVBUDABCDEVCXTRVEVD $.
+      $( [8-Sep-2014] $)
+    $}
+
+    ${
+    $d x A $.  $d x B $.  $d x C $.
+    const-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ZZ ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> B ) e. ( MVZPolyF ` A ) ) $=
+        ?
+    $.
+
+    proj-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( 1 ... A ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( x ` B ) ) e. ( MVZPolyF ` A ) ) $=
+        ?
+    $.
+
+    sum-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) /\ C e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( ( B ` x ) + ( C ` x ) ) ) e. ( MVZPolyF ` A ) ) $=
+        ?
+    $.
+
+    mul-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) /\ C e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( ( B ` x ) x. ( C ` x ) ) ) e. ( MVZPolyF ` A ) ) $=
+        ?
+    $.
+    $}
+
+$}
 
 $( ---- DIOPHANTINE ---- $)
 $( Define Diophantine sets and relations.  Prove composition laws and important cases like the exponential relation. $)
