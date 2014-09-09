@@ -348,6 +348,8 @@ ${
     $d a b c d e f g h i D $.
     $d a b c d e f g h i r $.
     $d a b c d e f g h i R $.
+    $d a b c d e f g h i x $.
+    $d a b c d e f g h i y $.
 
 
     $( could still stand to be shortened but at least it's highly reusable $)
@@ -590,7 +592,7 @@ ${
     mapfun $p |- ( B e. ( A ^m C ) -> Fun B ) $=
       ( cmap co wcel wf wfun elmap ffun sylbi ) BACFGHCABIBJACBEDKCABLM $.
       $( [7-Sep-2014] $)
-    mapdom $p |- ( B e. ( A ^m C ) -> dom B = C ) $=
+    elmapdm $p |- ( B e. ( A ^m C ) -> dom B = C ) $=
       ( cmap co wcel wf cdm wceq elmap fdm sylbi ) BACFGHCABIBJCKACBEDLCABMN $.
       $( [7-Sep-2014] $)
     mapfv $p |- ( ( B e. ( A ^m C ) /\ D e. C ) -> ( B ` D ) e. A ) $=
@@ -606,6 +608,37 @@ ${
       adantr sylan sylanbrc sylibr ) CBDIJKZALCMEKADNZOZDECPZCEDIJKUKCDQZCRESZUL
       UIUMUJUIDBCPUMBDCGFTDBCUAUBZUEUIUMUJUNUOADECUCUFDECUDUGEDCHFTUH $.
       $( [7-Sep-2014] $)
+    $}
+    $}
+
+    ${
+    elmapfz.0 $e |- C e. _V $.
+    elmapfz0 $p |- (/) e. ( C ^m ( 1 ... 0 ) ) $=
+      ( c0 c1o c1 cc0 cfz co cmap 0lt1o fz10 oveq2i map0e eqtri eleqtrri ) CDAEF
+      GHZIHZJQACIHDPCAIKLABMNO $.
+      $( [9-Sep-2014] $)
+    elmapfz1 $p |- ( A e. C -> { <. 1 , A >. } e. ( C ^m ( 1 ... 1 ) ) ) $=
+      ( wcel c1 cfz co cop csn wf cmap wss cz wa wceq jctl eqidd syl2anc sylibr
+      1z fsng biimpar snssiALT fss fzsn ax-mp feq2i ovex elmap ) ABDZEEFGZBEAHIZ
+      JZULBUKKGDUJEIZBULJZUMUJUNAIZULJZUPBLUOUJEMDZUJNZULULOZUQUJURTPUJULQUSUQUT
+      EAMBULUAUBRABUCUNUPBULUDRUKUNBULURUKUNOTEUEUFUGSBUKULCEEFUHUIS $.
+      $( [9-Sep-2014] $)
+    elmapfz2 $p |- ( ( A e. C /\ B e. C ) -> { <. 1 , A >. , <. 2 , B >. } e. ( C ^m ( 1 ... 2 ) ) ) $=
+      ( wcel wa c1 c2 cpr cop wf cfz co cmap wss cn0 wne 1nn0 2nn0 pm3.2i oveq2i
+      1ne2 fprg mp3an13 prssg ibi fss syl2anc ovex elmap caddc df-2 cz wceq fzpr
+      1z ax-mp 1p1e2apr1 preq2i 3eqtri feq2i bitri sylibr ) ACEBCEFZGHIZCGAJHBJI
+      ZKZVFCGHLMZNMEZVDVEABIZVFKZVJCOZVGGPEZHPEZFVDGHQVKVMVNRSTUBGHABPPCCUCUDVDV
+      LABCCCUEUFVEVJCVFUGUHVIVHCVFKVGCVHVFDGHLUIUJVHVECVFVHGGGUKMZLMZGVOIZVEHVOG
+      LULUAGUMEVPVQUNUPGUOUQVOHGURUSUTVAVBVC $.
+      $( [9-Sep-2014] $)
+    ${
+    $d x C $.
+    elmapeliunmap $p |- ( ( A e. NN0 /\ B e. ( C ^m ( 1 ... A ) ) ) -> B e. U_ x e. NN0 ( C ^m ( 1 ... x ) ) ) $=
+      ( va cn0 wcel c1 cfz co cmap wa cv ciun wrex wceq oveq2 oveq2d eleq2d weq
+      rcla4ev eliun sylibr cbviunv syl6eleq ) BGHCDIBJKZLKZHZMZCFGDIFNZJKZLKZOZA
+      GDIANZJKZLKZOUJCUMHZFGPCUNHURUIFBGUKBQZUMUHCUSULUGDLUKBIJRSTUBFCGUMUCUDFAG
+      UMUQFAUAULUPDLUKUOIJRSUEUF $.
+      $( [9-Sep-2014] $)
     $}
     $}
 $}
@@ -853,7 +886,7 @@ ${
       cn0 cfrsdrank ccom wral wrex cfrsdlevel frsd-lem12 a1i fvex ovex grothomex
       mapco1 frsd-lem3 simplr simpllr mapfv sylan ffvelrni syl weq fveq2 rcla4va
       wf sseq1d wb wfun cdm wceq ffun ax-mp mapfun adantl ad2antrr eleqtrrd fvco
-      mapdom syl3anc eqcomd adantlr mpbird frsd-lem11 frsd-lem10 sseldd mapdmres
+      elmapdm syl3anc eqcomd adantlr mpbird frsd-lem11 frsd-lem10 sseldd mapdmres
       ralrimiva oveq1d eleq2d rcla4ev ex rexlimdva mpd ) BUBHZCDIZJKZLBMNZONHZPZ
       EIZWNUCKZCUDZKZFIZQZEWPUEZFRUFZCAIZWNUGKZKZWPONZHZARUFZWRWMXARWPONHZXFWMWQ
       UAWRWQWORWTVDZXMWMWQSXNWRDUHZUIWPCWOWTRWNJUJZLBMUKZULUMTBXAFEUNTWRXEXLFRWR
@@ -1596,24 +1629,21 @@ ${
     ${
     $d x A $.  $d x B $.  $d x C $.
     const-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ZZ ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> B ) e. ( MVZPolyF ` A ) ) $=
-      ( vb va vc cn0 wcel cz wa c1 cfz co cmap cmpt cfv cc0 c0 wceq wrex cvv wbr
-      cmvzpolyf_r cfrsd cmvzpolyf 0nn0 a1i wf simplr eqid fmptd zex elmap sylibr
-      ovex elex syl jca c1o 0lt1o fz10 oveq2i fvex map0e eqtri eleqtrri ciun cop
-      cv wo c2 cpr caddc cmul wb simpl dfmvzpolyf-r2 syl3anc oveq2 oveq2d eleq2d
-      0ex rcla4ev syl2anc eliun eqidd simpr id mpteq12dv weq cbvmptv syl6eq olcd
-      eqeq2d orcd mpbir2and frsd-con dfmvzpolyf1 adantr eleqtrrd ) BGHZCIHZJZAIK
-      BLMZNMZCOZBUCPZUDPZBUEPZXCQGHZXFUAHZJRXHKQLMZNMZHZRXFXGUBZXFXHHXCXJXKXJXCU
-      FUGZXCXFIXENMZHZXKXCXEIXFUHXRXCAXECIXFXAXBAVIXEHUIXFUJUKIXEXFULIXDNUOUMUNZ
-      XFXQUPUQZURXNXCRUSXMUTXMXHRNMUSXLRXHNVAVBXHXGUDVCVDVEVFUGXCXORDGXQKDVIZLMZ
-      NMZVGHZXRJZRRSZXFEXEYAEVIZPOSDXDTZXFEXEYAOZSZDITZVJZJZRKYAVHVKYGVHVLSXFFXE
-      FVIZYAPZYNYGPZVMMOSXFFXEYOYPVNMOSVJJEXQTDXQTZVJZXCXARUAHZXKXOYEYRJVOXAXBVP
-      YSXCWBUGXTFEDRXFBVQVRXCYDXRXCRYCHZDGTZYDXCXJRXQXLNMZHZUUAXPUUCXCRUSUUBUTUU
-      BXQRNMUSXLRXQNVAVBXQIXENUOVDVEVFUGYTUUCDQGYAQSZYCUUBRUUDYBXLXQNYAQKLVSVTWA
-      WCWDDRGYCWEUNXSURXCYMYQXCYFYLXCRWFXCYKYHXCXBXFXFSZYKXAXBWGXCXFWFYJUUEDCIYA
-      CSZYIXFXFUUFYIEXECOXFUUFEXEYAXECUUFXEWFUUFWHWIEAXECCEAWJCWFWKWLWNWCWDWMURW
-      OWPQRXFXGBUCVCWQVRXAXIXHSXBBWRWSWT $.
+      ( vb va vc wcel cz wa c1 co cmap cmpt cfv cc0 c0 cv wceq wrex eqidd cn0 wf
+      cfz cmvzpolyf_r cfrsd cmvzpolyf cvv wbr simplr eqid fmptd zex elmap sylibr
+      ovex elex syl 0nn0 jctil fvex elmapfz0 a1i ciun wo cop c2 caddc cmul simpl
+      cpr wb 0ex dfmvzpolyf-r2 syl3anc elmapeliunmap mp2an mpteq12dv weq cbvmptv
+      simpr id syl6eq eqeq2d rcla4ev syl2anc olcd jca orcd mpbir2and dfmvzpolyf1
+      frsd-con adantr eleqtrrd ) BUAGZCHGZIZAHJBUCKZLKZCMZBUDNZUENZBUFNZWPOUAGZW
+      SUGGZIPXAJOUCKZLKGZPWSWTUHZWSXAGWPXDXCWPWSHWRLKZGZXDWPWRHWSUBXIWPAWRCHWSWN
+      WOAQWRGUIWSUJUKHWRWSULHWQLUOUMUNZWSXHUPUQZURUSXFWPXAWTUEUTVAVBWPXGPDUAXHJD
+      QZUCKLKVCGZXIIZPPRZWSEWRXLEQZNMRDWQSZWSEWRXLMZRZDHSZVDZIZPJXLVEVFXPVEVJRWS
+      FWRFQZXLNZYCXPNZVGKMRWSFWRYDYEVHKMRVDIEXHSDXHSZVDZWPWNPUGGZXDXGXNYGIVKWNWO
+      VIYHWPVLVBXKFEDPWSBVMVNWPXIXMXJXCPXHXELKGXMURXHHWRLUOZVADOPXHYIVOVPUSWPYBY
+      FWPXOYAWPPTWPXTXQWPWOWSWSRZXTWNWOVTWPWSTXSYJDCHXLCRZXRWSWSYKXREWRCMWSYKEWR
+      XLWRCYKWRTYKWAVQEAWRCCEAVRCTVSWBWCWDWEWFWGWHWIOPWSWTBUDUTWKVNWNXBXARWOBWJW
+      LWM $.
       $( [8-Sep-2014] $)
-    $.
 
     proj-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( 1 ... A ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( x ` B ) ) e. ( MVZPolyF ` A ) ) $=
         ?
@@ -1638,6 +1668,9 @@ ${
     mvzpolyf-inddc $p |- ( ( N e. NN0 /\ C e. _V /\ ph ) -> ( MVZPolyF ` N ) C_ C ) $=
         ? $.
     $}
+
+    $( all polynomials are dominated by 2^|x|, 2^|x| is not a polynomial $)
+    $( all polynomials are primitive recursive (to be defined) under integer code NGC_Z (to be defined) $)
 
 $}
 
