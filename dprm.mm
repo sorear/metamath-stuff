@@ -1653,7 +1653,11 @@ ${
       $.
       $( [9-Sep-2014] $)
     mvzpolyfssmap $p |- ( N e. NN0 -> ( MVZPolyF ` N ) C_ ( ZZ ^m ( ZZ ^m
-        ( 1 ... N ) ) ) ) $= ? $.
+        ( 1 ... N ) ) ) ) $=
+      ( cn0 wcel cmvzpolyf cfv cmvzpolyf_r crn cz c1 cfz co cmap dfmvzpolyf1 wss
+      cfrsd cvv fvex frsd-ssrn ax-mp a1i eqsstrd mvzpolyf-r-rnss sstrd ) ABCZADE
+      ZAFEZGZHHIAJKLKLKUDUEUFOEZUGAMUHUGNZUDUFPCUIAFQUFRSTUAAUBUC $.
+      $( [9-Sep-2014] $)
 
     $( mapfz0 and an easy way to get from map to unimap would help here a bit.  there's still a lot of apparently irreducible tedium $)
     $( what else might help are quick bound variable changers and a short notation for tuples $)
@@ -1677,8 +1681,21 @@ ${
       $( [8-Sep-2014] $)
 
     proj-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( 1 ... A ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( x ` B ) ) e. ( MVZPolyF ` A ) ) $=
-        ?
-    $.
+      ( va vb vc wcel c1 cfz co wa cz cmap cv cfv cmpt cc0 c0 wceq wrex cfrsd wf
+      cn0 cmvzpolyf_r cmvzpolyf cvv wbr simpr simplr ovex zex mapfv syl2anc eqid
+      fmptd elmap sylibr elex syl 0nn0 jctil fvex elmapfz0 a1i ciun wo cop caddc
+      c2 cpr cmul wb simpl dfmvzpolyf-r2 syl3anc elmapeliunmap mp2an eqidd fveq2
+      0ex mpteq12dv fveq1 cbvmptv syl6eq eqeq2d rcla4ev eqid1 mpbir2and frsd-con
+      orcd dfmvzpolyf1 adantr eleqtrrd ) BUCGZCHBIJZGZKZALWOMJZCANZOZPZBUDOZUAOZ
+      BUEOZWQQUCGZXAUFGZKRXCHQIJZMJGZRXAXBUGZXAXCGWQXFXEWQXALWRMJZGZXFWQWRLXAUBX
+      KWQAWRWTLXAWQWSWRGZKXLWPWTLGWQXLUHWNWPXLUILWSWOCHBIUJUKULUMXAUNUOLWRXAUKLW
+      OMUJUPUQZXAXJURUSZUTVAXHWQXCXBUAVBVCVDWQXIRDUCXJHDNZIJMJVEGZXKKZRRSZXAEWRX
+      OENZOZPZSZDWOTZXAEWRXOPSDLTZVFZKZRHXOVGVIXSVGVJSXAFWRFNZXOOZYGXSOZVHJPSXAF
+      WRYHYIVKJPSVFKEXJTDXJTZVFZWQWNRUFGZXFXIXQYKKVLWNWPVMYLWQVTVDXNFEDRXABVNVOW
+      QXKXPXMXERXJXGMJGXPUTXJLWRMUJZVCDQRXJYMVPVQVAWQYFYJWQYEXRWQYCYDWQWPXAXASZY
+      CWNWPUHWQXAVRYBYNDCWOXOCSZYAXAXAYOYAEWRCXSOZPXAYOEWRXTWRYPYOWRVRXOCXSVSWAE
+      AWRYPWTCXSWSWBWCWDWEWFUMWJRWGVAWJWHQRXAXBBUDVBWIVOWNXDXCSWPBWKWLWM $.
+      $( [9-Sep-2014] $)
 
     sum-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( MVZPolyF ` A ) /\ C e. ( MVZPolyF ` A ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( ( B ` x ) + ( C ` x ) ) ) e. ( MVZPolyF ` A ) ) $=
       ( va vb vc wcel cfv cz c1 co cmap caddc cmpt c2 wa wceq wo eqeq2d cv cfrsd
@@ -1710,9 +1727,35 @@ ${
       HXKXLXM $.
       $( [9-Sep-2014] $)
 
-    mul-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) /\ C e. ( ZZ ^m ( ZZ ^m ( 1 ... A ) ) ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( ( B ` x ) x. ( C ` x ) ) ) e. ( MVZPolyF ` A ) ) $=
-        ?
-    $.
+    mul-mvzpolyf $p |- ( ( A e. NN0 /\ B e. ( MVZPolyF ` A ) /\ C e. ( MVZPolyF ` A ) ) -> ( x e. ( ZZ ^m ( 1 ... A ) ) |-> ( ( B ` x ) x. ( C ` x ) ) ) e. ( MVZPolyF ` A ) ) $=
+      ( va vb vc wcel cfv cz c1 co cmap cmul cmpt c2 a1i wa wceq eqeq2d cv cfrsd
+      cn0 cmvzpolyf cfz cmvzpolyf_r w3a cvv cop cpr wbr 2nn0 ovex mptex elmapfz2
+      wi fvex 3adant1 c0 wo caddc elmvzpolyfelmap0 3adant3 3adant2 elmapeliunmap
+      ciun wrex syl2anc wf simp1 zex mapfv 3ad2antl2 3ad2antl3 zmulcl ex syl3anc
+      imp eqid fmptd elmap sylibr eqid1 fveq2 oveq12d cbvmptv opeq2 preq1d eqidd
+      weq olcd oveq1d mpteq12dv orbi12d anbi12d preq2d oveq2d rcla42ev syl112anc
+      fveq1 jca31 wb prex dfmvzpolyf-r2 mpbird syl211anc 3exp dfmvzpolyf1 eleq2d
+      frsd-con imbi12d 3imtr4d 3imp ) BUCHZCBUDIZHZDXOHZAJKBUELZMLZAUAZCIZXTDIZN
+      LZOZXOHZXNCBUFIZUBIZHZDYGHZYDYGHZUPXPXQYEUPXNYHYIYJXNYHYIUGZPUCHZYDUHHZKCU
+      IZPDUIZUJZYGKPUELZMLHZYPYDYFUKZYJYLYKULQZYMYKAXSYCJXRMUMZUNQZYHYIYRXNCDYGY
+      FUBUQUOURYKYSYPEUCJXSMLZKEUAZUELMLVFHZYDUUCHZRYPUSSYDFXSUUDFUAZIOSEXRVGYDF
+      XSUUDOSEJVGUTRZYPKUUDUIZPUUGUIZUJZSZYDGXSGUAZUUDIZUUMUUGIZVALZOZSZYDGXSUUN
+      UUONLZOZSZUTZRZFUUCVGEUUCVGZUTZRZYKUUEUUFUVEYKYLYPUUCYQMLHZUUEYTYKCUUCHZDU
+      UCHZUVGXNYHUVHYIBCVBVCZXNYIUVIYHBDVBVDZCDUUCJXSMUMZUOVHEPYPUUCUVLVEVHYKXSJ
+      YDVIUUFYKAXSYCJYDYKXTXSHZYCJHZYKXNUVHUVIUVMUVNUPXNYHYIVJZUVJUVKXNUVHUVIUGZ
+      UVMUVNUVPUVMRYAJHZYBJHZUVNUVHXNUVMUVQUVIJCXSXTUUAVKVLVMUVIXNUVMUVRUVHJDXSX
+      TUUAVKVLVNYAYBVOVHVPVQVRYDVSVTJXSYDVKUUAWAWBYKUVDUUHYKUVHUVIYPYPSZYDGXSUUM
+      CIZUUMDIZVALZOZSZYDGXSUVTUWANLZOZSZUTZUVDUVJUVKUVSYKYPWCQYKUWGUWDUWGYKAGXS
+      YCUWEAGWJYAUVTYBUWANXTUUMCWDXTUUMDWDWEWFQWKUVCUVSUWHRYPYNUUJUJZSZYDGXSUVTU
+      UOVALZOZSZYDGXSUVTUUONLZOZSZUTZREFCDUUCUUCUUDCSZUULUWJUVBUWQUWRUUKUWIYPUWR
+      UUIYNUUJUUDCKWGWHTUWRUURUWMUVAUWPUWRUUQUWLYDUWRGXSUUPXSUWKUWRXSWIZUWRUUNUV
+      TUUOVAUUMUUDCWTZWLWMTUWRUUTUWOYDUWRGXSUUSXSUWNUWSUWRUUNUVTUUONUWTWLWMTWNWO
+      UUGDSZUWJUVSUWQUWHUXAUWIYPYPUXAUUJYOYNUUGDPWGWPTUXAUWMUWDUWPUWGUXAUWLUWCYD
+      UXAGXSUWKXSUWBUXAXSWIZUXAUUOUWAUVTVAUUMUUGDWTZWQWMTUXAUWOUWFYDUXAGXSUWNXSU
+      WEUXBUXAUUOUWAUVTNUXCWQWMTWNWOWRWSWKXAYKXNYPUHHZYMYSUVFXBUVOUXDYKYNYOXCQUU
+      BGFEYPYDBXDVQXEPYPYDYFBUFUQXJXFXGXNXOYGCBXHZXIXNXQYIYEYJXNXOYGDUXEXIXNXOYG
+      YDUXEXIXKXLXM $.
+      $( [9-Sep-2014] $)
     $}
 
     ${
