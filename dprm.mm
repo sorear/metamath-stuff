@@ -1825,6 +1825,40 @@ ${
       $( [9-Sep-2014] $)
     $}
 
+    ${
+    $d x u v z $.  $d ph u v $.  $d ps u v x $.  $d ch z $.  $d th z $.  $d ta z $.  $d et z $.  $d ze z $.  $d si z $.  $d rh z $.
+    $d N u v x z $. $d A z $.
+    mvzpolyf-indd.1 $e |- ( z = A -> ( ps <-> ch ) ) $.
+    mvzpolyf-indd.2 $e |- ( z = u -> ( ps <-> th ) ) $.
+    mvzpolyf-indd.3 $e |- ( z = v -> ( ps <-> ta ) ) $.
+    mvzpolyf-indd.4 $e |- ( z = ( x e. ( ZZ ^m ( 1 ... N ) ) |-> u ) -> ( ps <-> et ) ) $.
+    mvzpolyf-indd.5 $e |- ( z = ( x e. ( ZZ ^m ( 1 ... N ) ) |-> ( x ` u ) ) -> ( ps <-> ze ) ) $.
+    mvzpolyf-indd.6 $e |- ( z = ( x e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` x ) + ( v ` x ) ) ) -> ( ps <-> si ) ) $.
+    mvzpolyf-indd.7 $e |- ( z = ( x e. ( ZZ ^m ( 1 ... N ) ) |-> ( ( u ` x ) x. ( v ` x ) ) ) -> ( ps <-> rh ) ) $.
+    mvzpolyf-indd.8 $e |- ( ( ph /\ u e. ZZ ) -> et ) $.
+    mvzpolyf-indd.9 $e |- ( ( ph /\ u e. ( 1 ... N ) ) -> ze ) $.
+    mvzpolyf-indd.10 $e |- ( ( ph /\ ( u e. ( MVZPolyF ` N ) /\ th ) /\ ( v e. ( MVZPolyF ` N ) /\ ta ) ) -> ( si /\ rh ) ) $.
+
+    mvzpolyf-indd $p |- ( ( ph /\ N e. NN0 /\ A e. ( MVZPolyF ` N ) ) -> ch ) $=
+      ( va cn0 wcel cmvzpolyf cfv w3a crab wa wss cv cz c1 co cmap cmpt wi eleq1
+      cfz weq anbi2d eqidd mpteq12dv eleq1d imbi12d const-mvzpolyf adantll elrab
+      id adantlr sylanbrc chvarv fveq2 proj-mvzpolyf caddc simp1r sseli 3ad2ant2
+      ssrab2 3ad2ant3 sum-mvzpolyf simp1l biimpi simpld cmul mul-mvzpolyf simprd
+      syl3anc mvzpolyf-inddc anabss7 sseld 3impia sylib ) AOUGUHZNOUIUJZUHZUKZWT
+      CXANBKWSULZUHZWTCUMAWRWTXCAWRUMZWSXBNAWRWSXBUNXDJUFLMXBOXDMUOZUPUHZUMZJUPU
+      QOVCURZUSURZXEUTZXBUHZVAXDUFUOZUPUHZUMZJXIXLUTZXBUHZVAMUFMUFVDZXGXNXKXPXQX
+      FXMXDXEXLUPVBVEXQXJXOXBXQJXIXEXIXLXQXIVFZXQVMVGVHVIXGXJWSUHZFXKWRXFXSAJOXE
+      VJVKAXFFWRUCVNBFKXJWSSVLVOVPXDXEXHUHZUMZJXIXEJUOZUJZUTZXBUHZVAXDXLXHUHZUMZ
+      JXIXLYBUJZUTZXBUHZVAMUFXQYAYGYEYJXQXTYFXDXEXLXHVBVEXQYDYIXBXQJXIYCXIYHXRXE
+      XLYBVQVGVHVIYAYDWSUHZGYEWRXTYKAJOXEVRVKAXTGWRUDVNBGKYDWSTVLVOVPXDXEXBUHZLU
+      OZXBUHZUKZJXIYBXEUJZYBYMUJZVSURUTZWSUHZHYRXBUHYOWRXEWSUHZYMWSUHZYSAWRYLYNV
+      TZYLXDYTYNXBWSXEBKWSWCZWAWBZYNXDUUAYLXBWSYMUUCWAWDZJOXEYMWEWLYOHIYOAYTDUMZ
+      UUAEUMZHIUMAWRYLYNWFYLXDUUFYNYLUUFBDKXEWSQVLWGWBYNXDUUGYLYNUUGBEKYMWSRVLWG
+      WDUEWLZWHBHKYRWSUAVLVOYOJXIYPYQWIURUTZWSUHZIUUIXBUHYOWRYTUUAUUJUUBUUDUUEJO
+      XEYMWJWLYOHIUUHWKBIKUUIWSUBVLVOWMWNWOWPBCKNWSPVLWQWK $.
+      $( [9-Sep-2014] $)
+    $}
+
     $( all polynomials are dominated by 2^|x|, 2^|x| is not a polynomial $)
     $( all polynomials are primitive recursive (to be defined) under integer code NGC_Z (to be defined) $)
 
