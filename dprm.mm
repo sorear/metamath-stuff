@@ -17,6 +17,117 @@ $}
 $( ---- NUMBER THEORY ---- $)
 $( Special Pell equations and Kummer's theorem.  Prove that certain polynomial identities are equivalent to exponential and bitwise ones. $)
 
+$( Another form of the pigeonhole principle. $)
+
+${
+    $d x y F $.  $d x y A $.
+    fphp $p |- ( ( ( A e. _V /\ B e. _V /\ B ~< A ) /\ F : A --> B ) -> E. x e. A E. y e. A ( x =/= y /\ ( F ` x ) = ( F ` y ) ) ) $=
+      ( cvv wcel csdm wbr w3a wf wa cv cfv wral wn wrex 3bitri rexbii rexnal weq
+      wceq wi wne cdom domnsym con2i 3ad2ant3 adantr wf1 simpll1 biimpri adantll
+      dff13 f1domg sylc mtand ancom df-ne anbi2i annim sylibr ) CFGZDFGZDCHIZJZC
+      DEKZLZAMZENBMZENUBZABUAZUCZBCOZACOZPZVIVJUDZVKLZBCQZACQZVHVOCDUEIZVFWAPZVG
+      VEVCWBVDWAVECDUFUGUHUIVHVOLVCCDEUJZWAVCVDVEVGVOUKVGVOWCVFWCVGVOLABCDEUNULU
+      MCDFEUOUPUQVTVMPZBCQZACQVNPZACQVPVSWEACVRWDBCVRVKVQLVKVLPZLWDVQVKURVQWGVKV
+      IVJUSUTVKVLVARSSWEWFACVMBCTSVNACTRVB $.
+      $( [11-Sep-2014] $)
+$}
+
+$( Pigeonhole principle expressed with implicit substitution.  Can this be done without the extra variable? $)
+${
+    $d ph x y z $.  $d A x y z $.  $d B z $.  $d C x y $.  $d D y z $.  $d E x z $.
+    fphpd.1 $e |- ( ph -> A e. _V ) $.
+    fphpd.2 $e |- ( ph -> B e. _V ) $.
+    fphpd.3 $e |- ( ph -> B ~< A ) $.
+    fphpd.4 $e |- ( ( ph /\ z e. A ) -> C e. B ) $.
+    fphpd.5 $e |- ( z = x -> C = D ) $.
+    fphpd.6 $e |- ( z = y -> C = E ) $.
+
+    fphpd $p |- ( ph -> E. x e. A E. y e. A ( x =/= y /\ D = E ) ) $=
+      ( cv wceq wa wrex wcel wne cmpt cfv cvv csdm wbr eqid fmptd syl31anc simpr
+      wf wi weq eleq1 anbi2d eleq1d imbi12d chvarv fvmptg syl2anc adantr adantlr
+      fphp eqeq12d rexbidva mpbid ) ABPZCPZUAZVGDEGUBZUCZVHVJUCZQZRZCESZBESZVIHI
+      QZRZCESZBESAEUDTFUDTFEUEUFEFVJUKVPJKLADEGFVJMVJUGZUHBCEFVJVCUIAVOVSBEAVGET
+      ZRZVNVRCEWBVHETZRZVMVQVIWDVKHVLIWBVKHQZWCWBWAHFTZWEAWAUJADPZETZRZGFTZULZWB
+      WFULDBDBUMZWIWBWJWFWLWHWAAWGVGEUNUOWLGHFNUPUQMURDVGGHEFVJNVTUSUTVAAWCVLIQZ
+      WAAWCRZWCIFTZWMAWCUJWKWNWOULDCDCUMZWIWNWJWOWPWHWCAWGVHEUNUOWPGIFOUPUQMURDV
+      HGIEFVJOVTUSUTVBVDUOVEVEVF $.
+      $( [11-Sep-2014] $)
+$}
+
+${
+    $( ~ cfslb2n transfered to arbitrary sets by cardinality. $)
+    $d a b c d e f x A $.
+    $d a b c d e f x B $.
+    encfslb2n.1 $e |- A e. _V $.
+    encfslb2n $p |- ( ( Lim ( card ` A ) /\ A. x e. B ( x C_ A /\ x ~< ( cf ` ( card ` A ) ) ) /\ B ~< ( cf ` ( card ` A ) ) ) -> U. B =/= A ) $=
+      ( vb vc vd vf wss csdm wbr wa cvv cima wcel wceq a1i ex syl2anc ax-mp ccrd
+      va ve cfv wlim cv ccf wral w3a wf1o wex cuni wne cen cardid fvex bren mpbi
+      ensymi cmpt simpl1 wrex wfun funmpt fvelima syl crn imassrn wfo f1ofo forn
+      wi adantl adantr sseqtrd simpr f1ofun imadomg imp simp2 ad2antrr weq sseq1
+      cdom breq1 anbi12d rcla4v simprd domsdomtr jca wb imaeq2 eqid imaexg fvmpt
+      vex eqeq1i sylbi mpbid rexlimdva ralrimiv relsdom brrelexi 3ad2ant3 simpl3
+      syld cfslb2n syl21anc simplr ciun wal wel ccnv wf1 simp1 ad3antrrr elssuni
+      mpan f1of1 simpll3 f1imacnv eqeltrd id eqtr3d imaeq2d eleq1d imp3a simpllr
+      eleqtrd eqcomd eleq2d rcla4ev exlimdv fveq2 eqeq1d wfn rgenw fnmpt 3eqtrd
+      ssv fvelimab mpbird eleq2 eleq1 cla4ev impbid eluni 3bitr4g alrimiv dfcleq
+      eliun sylibr imauni eqtr4d simp3 cdm 3ad2ant1 imadmrn 3syl syl3anc necon3d
+      f1odm mpd mpi ) BUAUDZUEZAUFZBIZUVGUVEUGUDZJKZLZACUHZCUVIJKZUIZBUVEUBUFZUJ
+      ZUBUKZCULZBUMZBUVEUNKUVQUVEBDBUOUSBUVEUBBUAUPZUQURUVNUVPUVSUBUVNUVPUVSUVNU
+      VPLZEMUVOEUFZNZUTZCNZULZUVEUMZUVSUWAUVFFUFZUVEIZUWHUVIJKZLZFUWEUHZUWEUVIJK
+      ZUWGUVFUVLUVMUVPVAUWAUWKFUWEUWAUWHUWEOZGUFZUWDUDZUWHPZGCVBZUWKUWAUWDVCZUWN
+      UWRVLUWSUWAEMUWCVDZQZUWSUWNUWRGUWHCUWDVERVFUWAUWQUWKGCUWAUWOCOZLZUWQUWKUXC
+      UWQLUVOUWONZUVEIZUXDUVIJKZLZUWKUXCUXGUWQUXCUXEUXFUXCUXDUVOVGZUVEUXDUXHIUXC
+      UVOUWOVHQUWAUXHUVEPZUXBUVPUXIUVNUVPBUVEUVOVIZUXIBUVEUVOVJZBUVEUVOVKZVFVMVN
+      VOUXCUXDUWOWDKZUWOUVIJKZUXFUXCUXBUVOVCZUXMUWAUXBVPZUWAUXOUXBUVPUXOUVNBUVEU
+      VOVQVMVNUXBUXOUXMUWOCUVOVRVSSUXCUWOBIZUXNUXCUXBUVLUXQUXNLZUXPUVNUVLUVPUXBU
+      VFUVLUVMVTWAUXBUVLUXRUVKUXRAUWOCAGWBUVHUXQUVJUXNUVGUWOBWCUVGUWOUVIJWEWFWGV
+      SSWHUXDUWOUVIWISWJVNUWQUXGUWKWKZUXCUWQUXDUWHPZUXSUWPUXDUWHUWOMOUWPUXDPGWPE
+      UWOUWCUXDMUWDUWBUWOUVOWLUWDWMZUVOMOZUXDMOUBWPZUVOUWOMWNTWOTWQUXTUXEUWIUXFU
+      WJUXDUWHUVEWCUXDUWHUVIJWEWFWRVMWSRWTXFXAUWAUWECWDKZUVMUWMUWACMOZUWSUYDUVNU
+      YEUVPUVMUVFUYEUVLCUVIJXBXCXDZVNUXAUYEUWSUYDCMUWDVRVSSUVFUVLUVMUVPXEUWECUVI
+      WISUVFUWLLUWMUWGFUVEUWEUVTXGVSXHUWAUVRBUWFUVEUWAUVRBPZUWFUVEPZUWAUYGLUVPUY
+      EUYGUYHUVNUVPUYGXIUVNUYEUVPUYGUYFWAUWAUYGVPUVPUYEUYGUIZUWFUVOUVRNZUVOBNZUV
+      EUYIUWFFCUVOUWHNZXJZUYJUYIUWOUWFOZUWOUYMOZWKZGXKUWFUYMPUYIUYPGUYIGUCXLZUCU
+      FZUWEOZLZUCUKZUWOUYLOZFCVBZUYNUYOUYIVUAVUCUYIUYTVUCUCUYIUYTVUCUYIUYTLUVOXM
+      ZUYRNZCOZUWOUVOVUENZOZVUCUYIUYTVUFUYIUYQUYSVUFUYIUYQUYSVUFVLUYIUYQLZUYSHUF
+      ZUWDUDZUYRPZHCVBZVUFUYSVUMVLVUIUWSUYSVUMUWTHUYRCUWDVEXRQZVUIVULVUFHCVUIVUJ
+      COZLZVULVUFVUPVULLZVUDUVOVUJNZNZCOZVUFVUQVUSVUJCVUQBUVEUVOXNZVUJBIZVUSVUJP
+      VUQUVPVVAUYIUVPUYQVUOVULUVPUYEUYGXOZXPBUVEUVOXSVFVUPVVBVULVUPVUJUVRBVUPVUO
+      VUJUVRIVUIVUOVPVUJCXQVFUVPUYEUYGUYQVUOXTVOVNBUVEVUJUVOYASZVUIVUOVULXIYBVUL
+      VUTVUFWKVUPVULVUSVUECVULVURUYRVUDVULVUKVURUYRVUKVURPZVULVUJMOVVEHWPEVUJUWC
+      VURMUWDUWBVUJUVOWLUYAUYBVURMOUYCUVOVUJMWNTWOTZQVULYCYDYEZYFVMWSRWTXFRYGVSU
+      YIUYTVUHUYIUYQUYSVUHUYIUYQUYSVUHVLVUIUYSVUMVUHVUNVUIVULVUHHCVUPVULVUHVUQUW
+      OUVOVUSNZOZVUHVUQUWOVUROVVIVUQUWOUYRVURUYIUYQVUOVULYHVUQVUKUYRVURVUPVULVPV
+      VEVUQVVFQYDYIVUQVURVVHUWOVUQVUJVUSUVOVUQVUSVUJVVDYJYEYKWSVULVVIVUHWKVUPVUL
+      VVHVUGUWOVULVUSVUEUVOVVGYEYKVMWSRWTXFRYGVSVUBVUHFVUECUWHVUEPUYLVUGUWOUWHVU
+      EUVOWLYKYLSRYMUYIVUBVUAFCUYIUWHCOZLZVUBVUAVVKVUBLZVUBUYLUWEOZLZVUAVVLVUBVV
+      MVVKVUBVPVVLVVMVUKUYLPZHCVBZVVLVVJUWHUWDUDZUYLPZVVPUYIVVJVUBXIVVRVVLUWHMOV
+      VRFWPEUWHUWCUYLMUWDUWBUWHUVOWLUYAUYBUYLMOUYCUVOUWHMWNTZWOTQVVOVVRHUWHCHFWB
+      VUKVVQUYLVUJUWHUWDYNYOYLSVVLUWDMYPZCMIZVVMVVPWKVVTVVLUWCMOZEMUHVVTVWBEMUYB
+      VWBUYCUVOUWBMWNTYQEMUWCUWDMUYAYRTQVWAVVLCYTQHMCUYLUWDUUASUUBWJUYTVVNUCUYLV
+      VSUYRUYLPUYQVUBUYSVVMUYRUYLUWOUUCUYRUYLUWEUUDWFUUEVFRWTUUFUCUWOUWEUUGFUWOC
+      UYLUUKUUHUUIGUWFUYMUUJUULUYJUYMPUYIFUVOCUUMQUUNUYIUVRBUVOUVPUYEUYGUUOYEUYI
+      UYKUVOUVOUUPZNZUXHUVEUYIBVWCUVOUVPUYEBVWCPUYGUVPVWCBBUVEUVOUVBYJUUQYEVWDUX
+      HPUYIUVOUURQUYIUVPUXJUXIVVCUXKUXLUUSYSYSUUTRUVAUVCRYMUVD $.
+      $( [11-Sep-2014] $)
+
+$}
+
+$( Infinite pigeonhole principle in its most general setting using cofinality. $)
+${
+    fiphp1.1 $e |- ( ph -> A e. _V ) $.
+    fiphp1.2 $e |- ( ph -> Lim ( card ` A ) ) $.
+    fiphp1.3 $e |- ( ph -> B ~< ( cf ` ( card ` A ) ) ) $.
+    fiphp1.4 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
+
+    fiphp1 $p |- ( ph -> E. y e. B ( cf ` ( card ` A ) ) ~<_ { x e. A | D = y } ) $=
+        ? $.
+$}
+
+$( Lagrange's diophantine approximation theorem, lemma 62 in [vandenDries] $)
+
+
+
 $( ---- COMPUTABILITY ---- $)
 $( Define Turing machines and computable functions and prove composition laws as needed. Polynomials are computable. $)
 
@@ -1867,13 +1978,13 @@ $}
 $( ---- DIOPHANTINE ---- $)
 $( Define Diophantine sets and relations.  Prove composition laws and important cases like the exponential relation. $)
 
-$( ---- MATIJASEVICH 1 ---- $)
+$( ---- MATIJASEVIC 1 ---- $)
 $( Diophantine sets are semidecidable because polynomial functions are computable. $)
 
-$( ---- MATIJASEVICH 2 ---- $)
+$( ---- MATIJASEVIC 2 ---- $)
 $( Semidecidable sets are decidable by Turing machines, which can be expressed as vectorial and thus exponential satisfaction problems and are Diophantine. $)
 
-$( ---- MATIJASEVICH 3 ---- $)
+$( ---- MATIJASEVIC 3 ---- $)
 $( Diophantine <-> Semidecidable.  There exist non-decidable diophantine sets. $)
 
 $( TODO
@@ -1882,4 +1993,5 @@ $( TODO
     2. WRITE SOURCE with $[ $] would make my life much easier
     3. Namespaces - see separate doc
     4. How to handle similar subtrees in the PA: command to copy a subtree to a new node, either with or without syntax proofs(?).  An easy way to create new lemmas from completely proved subtrees without losing PA state would be nice.
+        or, create a lemma from a part of a completely proved theorem.  that would be nice.
 $)
