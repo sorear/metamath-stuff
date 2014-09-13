@@ -54,6 +54,41 @@ ${
       $( [11-Sep-2014] $)
 $}
 
+$( Pigeonhole principle for sets of real numbers with an ordering constraint wlog. $)
+${
+    $d ph x y z a b c $.  $d A x y z a b c $.  $d B z a b c $.  $d C x y a b c $.  $d D y z a b c $.  $d E x z a b c $.
+    fphpdo.1 $e |- ( ph -> A C_ RR ) $.
+    fphpdo.2 $e |- ( ph -> B e. _V ) $.
+    fphpdo.3 $e |- ( ph -> B ~< A ) $.
+    fphpdo.4 $e |- ( ( ph /\ z e. A ) -> C e. B ) $.
+    fphpdo.5 $e |- ( z = x -> C = D ) $.
+    fphpdo.6 $e |- ( z = y -> C = E ) $.
+
+    fphpdo $p |- ( ph -> E. x e. A E. y e. A ( x < y /\ D = E ) ) $=
+      ( vb wceq wa clt wcel vc va cv wne cmpt cfv wrex wbr wss cvv reex ssex syl
+      cr wf eqid fmptd ffvelrn sylan fveq2 fphpd wo sselda adantrr adantr lttri2
+      wb adantrl syl2anc simplrl anass1rs simplrr simpr simplr weq breq1 anbi12d
+      eqeq1d breq2 eqeq2d rcla42ev syl112anc ex eqcomd jaod eleq1 anbi2d imbi12d
+      wi eleq1d chvarv fvmptg adantlr eqeq12d biimpd anim2d reximdva syld sylbid
+      expimpd ancomsd rexlimdvva mpd ) APUCZUAUCZUDZXDDEGUEZUFZXEXGUFZQZRZUAEUGP
+      EUGBUCZCUCZSUHZHIQZRZCEUGZBEUGZAPUAUBEFUBUCZXGUFZXHXIAEUNUIEUJTJEUNUKULUMK
+      LAEFXGUOXSETXTFTADEGFXGMXGUPZUQEFXSXGURUSXSXDXGUTXSXEXGUTVAAXKXRPUAEEAXDET
+      ZXEETZRZRZXJXFXRYEXJXFXRYEXJRZXFXDXESUHZXEXDSUHZVBZXRYFXDUNTZXEUNTZXFYIVGY
+      EYJXJAYBYJYCAEUNXDJVCVDVEYEYKXJAYCYKYBAEUNXEJVCVHVEXDXEVFVIYFYIXNXLXGUFZXM
+      XGUFZQZRZCEUGZBEUGZXRYFYGYQYHYFYGYQYFYGRYBYCYGXJYQYEYGXJYBAYBYCYGXJRZVJVKY
+      EYGXJYCAYBYCYRVLVKYFYGVMYEXJYGVNYOYRXDXMSUHZXHYMQZRBCXDXEEEBPVOZXNYSYNYTXL
+      XDXMSVPUUAYLXHYMXLXDXGUTVRVQCUAVOZYSYGYTXJXMXEXDSVSUUBYMXIXHXMXEXGUTVTVQWA
+      WBWCYFYHYQYFYHRZYCYBYHXIXHQZYQYEYHXJYCAYBYCYHXJRZVLVKYEYHXJYBAYBYCUUEVJVKY
+      FYHVMUUCXHXIYEXJYHVNWDYOYHUUDRXEXMSUHZXIYMQZRBCXEXDEEBUAVOZXNUUFYNUUGXLXEX
+      MSVPUUHYLXIYMXLXEXGUTVRVQCPVOZUUFYHUUGUUDXMXDXESVSUUIYMXHXIXMXDXGUTVTVQWAW
+      BWCWEYEYQXRWIZXJAUUJYDAYPXQBEAXLETZRZYOXPCEUULXMETZRZYNXOXNUUNYNXOUUNYLHYM
+      IUUNUUKHFTZYLHQAUUKUUMVNUULUUOUUMADUCZETZRZGFTZWIZUULUUOWIDBDBVOZUURUULUUS
+      UUOUVAUUQUUKAUUPXLEWFWGUVAGHFNWJWHMWKVEDXLGHEFXGNYAWLVIUUNUUMIFTZYMIQUULUU
+      MVMAUUMUVBUUKUUTAUUMRZUVBWIDCDCVOZUURUVCUUSUVBUVDUUQUUMAUUPXMEWFWGUVDGIFOW
+      JWHMWKWMDXMGIEFXGOYAWLVIWNWOWPWQWQVEVEWRWSWTXAXBXC $.
+      $( [12-Sep-2014] $)
+$}
+
 ${
     $( ~ cfslb2n transfered to arbitrary sets by cardinality. $)
     $( a direct proof might be much shorter? $)
@@ -240,9 +275,62 @@ ${
 
 $}
 
+${
+    hashfz $p |- ( ( A e. ZZ /\ B e. ZZ /\ A <_ B ) -> ( # ` ( A ... B ) ) = ( ( B - A ) + 1 ) ) $=
+      ( cz wcel cle wbr cfz co chash cfv c1 caddc wceq a1i syl2anc syl3anc wb cc
+      cr cc0 w3a cmin cen simp1 simp2 1z zsubcl fzen cfn hashen mp2an sylibr zre
+      fzfi 3ad2ant1 recnd 1re subcl addcom npcan eqtrd 3ad2ant2 addsub12 oveq12d
+      zcn fveq2d cn0 peano2zdi 0reALT resubcl readdcl addid1 syl simp3 wa pncan3
+      eqbrtrd eqcomd oveq2d breqtrd leadd2 mpbird nn0ge0i mpbii sylanbrc hashfz1
+      1nn0 letrd elnn0z 3eqtrd ) ACDZBCDZABEFZUAZABGHZIJZAKAUBHZLHZBWQLHZGHZIJZK
+      BAUBHZKLHZGHZIJZXCWNWOWTUCFZWPXAMZWNWKWLWQCDZXFWKWLWMUDZWKWLWMUEZWNKCDZWKX
+      HXKWNUFNXIKAUGOWQABUHPWOUIDWTUIDXGXFQABUNWRWSUNWOWTUJUKULWNWTXDIWNWRKWSXCG
+      WNWRWQALHZKWNARDZWQRDZWRXLMWNAWKWLASDZWMAUMUOZUPZWNKRDZXMXNWNKKSDZWNUQNZUP
+      ZXQKAUROAWQUSOWNXRXMXLKMYAXQKAUTOVAWNWSKXBLHZXCWNBRDZXRXMWSYBMWLWKYCWMBVEV
+      BZYAXQBKAVCPWNXRXBRDZYBXCMYAWNYCXMYEYDXQBAUROZKXBUSOVAVDVFWNXCVGDZXEXCMWNX
+      CCDTXCEFYGWNXBWNWLWKXBCDXJXIBAUGOVHWNTXBTLHZXCTSDZWNVINZWNXBSDZYIYHSDZWNBS
+      DZXOYKWLWKYMWMBUMVBXPBAVJOZYJXBTVKOZWNYKXSXCSDYNXTXBKVKOWNTYHEFZATLHZAYHLH
+      ZEFZWNYQBYREWNYQABEWNXMYQAMXQAVLVMWKWLWMVNVQWNBAXBLHZYRWNXMYCBYTMXQYDXMYCV
+      OYTBABVPVROWNXBYHALWNYHXBWNYEYHXBMYFXBVLVMVRVSVAVTWNYIYLXOYPYSQYJYOXPTYHAW
+      APWBWNTKEFZYHXCEFZKWGWCWNYIXSYKUUAUUBQYJXTYNTKXBWAPWDWHXCWIWEXCWFVMWJ $.
+      $( [12-Sep-2014] $)
+
+    hashsdom $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( # ` A ) < ( # ` B ) <-> A ~< B ) ) $=
+      ( cfn wcel wa chash cfv cle wbr wn cdom clt csdm wb ancoms cr hashcl nn0re
+      cn0 3syl hashdom notbid simpl simpr ltnle syl2anc domtri con2bid 3bitr4d )
+      ACDZBCDZEZBFGZAFGZHIZJZBAKIZJUNUMLIZABMIZULUOUQUKUJUOUQNBAUAOUBULUNPDZUMPD
+      ZURUPNULUJUNSDUTUJUKUCAQUNRTULUKUMSDVAUJUKUDBQUMRTUNUMUEUFULUQUSUKUJUQUSJN
+      BACCUGOUHUI $.
+      $( [12-Sep-2014] $)
+
+    fzsdom2 $p |- ( ( A e. ZZ /\ B e. ZZ /\ C e. ZZ ) -> ( A <_ B -> ( B < C -> ( A ... B ) ~< ( A ... C ) ) ) ) $=
+      ( cz wcel w3a cle wbr clt cfz co chash cfv cmin c1 cr zre 3ad2ant1 syl3anc
+      wb csdm caddc simp3 3ad2ant2 3ad2ant3 ltsub1 mpbid resubcl syl2anc 1re a1i
+      ltadd1 wceq simp11 simp12 simp2 hashfz simp13 wa ltle imp syl21anc 3brtr4d
+      letrd cfn fzfi hashsdom mp2an sylib 3exp ) ADEZBDEZCDEZFZABGHZBCIHZABJKZAC
+      JKZUAHZVNVOVPFZVQLMZVRLMZIHZVSVTBANKZOUBKZCANKZOUBKZWAWBIVTWDWFIHZWEWGIHZV
+      TVPWHVNVOVPUCZVTBPEZCPEZAPEZVPWHTVNVOWKVPVLVKWKVMBQUDRZVNVOWLVPVMVKWLVLCQU
+      ERZVNVOWMVPVKVLWMVMAQRRZBCAUFSUGVTWDPEZWFPEZOPEZWHWITVTWKWMWQWNWPBAUHUIVTW
+      LWMWRWOWPCAUHUIWSVTUJUKWDWFOULSUGVTVKVLVOWAWEUMVKVLVMVOVPUNZVKVLVMVOVPUOVN
+      VOVPUPZABUQSVTVKVMACGHWBWGUMWTVKVLVMVOVPURVTABCWPWNWOXAVTWKWLVPBCGHZWNWOWJ
+      WKWLUSVPXBBCUTVAVBVDACUQSVCVQVEEVRVEEWCVSTABVFACVFVQVRVGVHVIVJ $.
+      $( [12-Sep-2014] $)
+$}
+
 $( Lagrange's diophantine approximation theorem, lemma 62 in [vandenDries] $)
 
+${
+    $d x a b c $.  $d A a b c d x y z w $.  $d B a b c d x y z w $.
+    irrapxlem1 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 0 ... B ) E. y e. ( 0 ... B ) ( x < y /\ ( |_ ` ( B x. ( ( A x. x ) mod 1 ) ) ) = ( |_ ` ( B x. ( ( A x. y ) mod 1 ) ) ) ) ) $=
+        ? $.
+    irrapxlem2 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 0 ... B ) E. y e. ( 0 ... B ) ( x < y /\ ( ( abs ` ( ( A x. x ) mod 1 ) - ( ( A x. y ) mod 1 ) ) < ( 1 / B ) ) ) ) $=
+        ? $.
+    irrapxlem3 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 0 ... B ) E. y e. NN0 ( abs ` ( ( A x. x ) - y ) ) < ( 1 / B ) ) $=
+        ? $.
 
+    irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { <. x , y >. | ( ( x e. NN /\ y e. NN ) /\ ( abs ` ( A - ( x / y ) ) ) e. ( 0 (,) ( 1 / ( y ^ 2 ) ) ) ) } ~~ NN ) $=
+        ? $.
+$}
 
 $( ---- COMPUTABILITY ---- $)
 $( Define Turing machines and computable functions and prove composition laws as needed. Polynomials are computable. $)
