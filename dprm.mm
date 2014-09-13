@@ -448,6 +448,9 @@ ${
 
 $}
 
+$c numer denom $.
+$( define canonical numerator/denominator, any necessary theorems $)
+
 $( Lagrange's diophantine approximation theorem, lemma 62 in [vandenDries] $)
 
 ${
@@ -543,8 +546,42 @@ ${
       WSXEXJYPUUISZUXJUUMYJGUXLUXIUULKYPUUIUUKJXMXEXJXOVFXPXQXR $.
       $( [13-Sep-2014] $)
 
-    irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { <. x , y >. | ( ( x e. NN /\ y e. NN ) /\ ( abs ` ( A - ( x / y ) ) ) e. ( 0 (,) ( 1 / ( y ^ 2 ) ) ) ) } ~~ NN ) $=
+    irrapxlem4 $p |- ( ( A e. RR+ /\ B e. RR+ ) -> E. x e. { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ( abs ` ( x - A ) ) < B ) $=
         ? $.
+
+    irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ~~ NN ) $=
+        ? $.
+$}
+
+$( the following development comprises [vandenDries] lemma 62, credited to Dirichlet $)
+${
+    $d a b c d e f A $.
+    $d a b c d e f B $.
+    $d a b c d e f C $.
+    $d a b c d e f D $.
+    $d a b c d e f E $.
+    $d a b c d e f F $.
+    $d a b c d e f u $.
+    $d a b c d e f v $.
+    $d a b c d e f w $.
+    $d a b c d e f x $.
+    $d a b c d e f y $.
+    $d a b c d e f z $.
+
+    $( To each good rational approximation of ` ( sqr `` D ) ` , there exists a near-solution $)
+    pellexlem1 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { x e. QQ | ( 0 < x /\ ( abs ` ( x - ( sqr ` D ) ) ) < ( ( denom ` x ) ^ -u 2 ) ) } ~<_ { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) <_ ( 1 + ( sqr ` D ) ) ) ) } ) $= ? $.
+
+    $( invoking ~ irrapx1 , we have infinitely many near-solutions $)
+    pellexlem2 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) <_ ( 1 + ( sqr ` D ) ) ) ) } ~~ NN ) $= ? $.
+
+    $( invoking ~ fiphpd3 , we have infinitely many near-solutions for some specific norm $)
+    pellexlem3 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. x e. ZZ ( x =/= 0 /\ { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) = x ) } ~~ NN ) ) $= ? $.
+
+    $( invoking PHP again we get two near-solutions with the same norm and modularly related coefficients $)
+    pellexlem4 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. u e. ZZ E. v e. NN E. w e. NN E. x e. NN E. y e. NN ( ( u =/= 0 /\ -. ( v = x /\ w = y ) ) /\ ( ( ( v ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = u /\ ( ( x ^ 2 ) - ( D x. ( y ^ 2 ) ) ) = u ) /\ ( ( v mod ( abs ` u ) ) = ( x mod ( abs ` u ) ) /\ ( w mod ( abs ` u ) ) = ( y mod ( abs ` u ) ) ) ) ) $= ? $.
+
+    $( doing a field division get us to norm 1, and the modularity constraint ensures we still have an integer $)
+    pellex $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. x e. NN E. y e. NN ( ( x ^ 2 ) - ( D x. ( y ^ 2 ) ) ) = 1 ) $= ? $.
 $}
 
 $( ---- COMPUTABILITY ---- $)
