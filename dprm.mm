@@ -198,23 +198,46 @@ ${
 $}
 
 ${
+    $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
+
     fiphp2d.1 $e |- ( ph -> A e. _V ) $.
     fiphp2d.2 $e |- ( ph -> Lim ( card ` A ) ) $.
-    fiphp2d.2 $e |- ( ph -> ( cf ` ( card ` A ) ) = ( card ` A ) ) $.
-    fiphp2d.3 $e |- ( ph -> B ~< A ) $.
-    fiphp2d.4 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
-    fiphp2d.5 $e |- ( x = z -> D = E ) $.
+    fiphp2d.3 $e |- ( ph -> ( cf ` ( card ` A ) ) = ( card ` A ) ) $.
+    fiphp2d.4 $e |- ( ph -> B ~< A ) $.
+    fiphp2d.5 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
+    fiphp2d.6 $e |- ( x = z -> D = E ) $.
 
     fiphp2d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ A ) $=
+      ( cfv cdom wbr cvv wcel wa ccrd ccf cv wceq crab wrex cen csdm fvex cardcf
+      a1i syl5req wb carden syl2anc mpbid jca sdomentr sylc fiphp1d wss ad2antrr
+      ssrab2 ssdom2g ee10 endomtr sylancom sbth ex reximdva mpd ) AEUAOZUBOZGCUC
+      ZUDZBEUEZPQZCFUFVPEUGQZCFUFABCDEFGHIJAVMRSZFEUHQZEVMUGQZTFVMUHQVSAVLUBUIUK
+      ZAVTWALAVLVMUAOZUDZWAAWCVMVLVLUJKULAERSZVSWDWAUMIWBEVMRRUNUOUPZUQFEVMRURUS
+      MNUTAVQVRCFAVNFSZTZVQVRWHVQTZVPEPQZEVPPQZVRWIWEVPEVAWJAWEWGVQIVBVOBEVCVPER
+      VDVEWHVQWAWKAWAWGVQWFVBEVMVPVFVGVPEVHUOVIVJVK $.
+      $( [12-Sep-2014] $)
 $}
 
 ${
+    $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
     fiphp3d.1 $e |- ( ph -> A ~~ NN ) $.
-    fiphp3d.3 $e |- ( ph -> B e. Fin ) $.
-    fiphp3d.4 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
-    fiphp3d.5 $e |- ( x = z -> D = E ) $.
+    fiphp3d.2 $e |- ( ph -> B e. Fin ) $.
+    fiphp3d.3 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
+    fiphp3d.4 $e |- ( x = z -> D = E ) $.
 
     fiphp3d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
+      ( wceq cen wbr cn cvv wcel syl com crab wrex relen brrelexi ccrd cfv limom
+      cv wlim wb omex jctir nnenom entr mpan2 carden biimprd sylc cardom syl6req
+      limeq mpbii ccf cfom fveq2 eqeq12d csdm cfn ficard biimpd eleqtrd cardsdom
+      wa id syl2anc mpbid fiphp2d simpr ad2antrr ex reximdva mpd ) AGCUHZMBEUAZE
+      NOZCFUBWDPNOZCFUBABCDEFGHAEPNOZEQRZIEPNUCUDZSZAWGEUEUFZUIZIWGTUIZWLUGWGTWK
+      MZWMWLUJWGWKTUEUFZTWGWHTQRZVMZETNOZWKWOMZWGWHWPWIUKULWGPTNOWRUMEPTUNUOWQWS
+      WRETQQUPUQURUSUTZTWKVASVBSATVCUFZTMZWKVCUFZWKMZVDAWNXBXDUJAWGWNIWTSZWNXAXC
+      TWKTWKVCVEWNVNVFSVBAFUEUFZWKRZFEVGOZAXFTWKAFVHRZXIXFTRZJJXIXIXJFVHVIVJURXE
+      VKAXIWHXGXHUJJWJFEVHQVLVOVPKLVQAWEWFCFAWCFRZVMZWEWFXLWEVMWEWGWFXLWEVRAWGXK
+      WEIVSWDEPUNVOVTWAWB $.
+      $( [12-Sep-2014] $)
+
 $}
 
 $( Lagrange's diophantine approximation theorem, lemma 62 in [vandenDries] $)
