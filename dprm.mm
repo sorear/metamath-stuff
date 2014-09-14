@@ -451,6 +451,178 @@ $}
 $c numer denom $.
 $( define canonical numerator/denominator, any necessary theorems $)
 
+${
+    cnumer $a class numer $.
+    cdenum $a class denom $.
+
+    ${
+    $d x y $.
+    df-numer $a |- numer = ( y e. QQ |-> ( 1st ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ y = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $.
+    df-denom $a |- denom = ( y e. QQ |-> ( 2nd ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ y = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $.
+    $}
+
+    ${
+    $d A a b c d $.
+    $d B a b c d $.
+    $d C a b c d $.
+    $d x y a b c d $.
+
+    ${
+    $d A x $.
+    qnumval $p |- ( A e. QQ -> ( numer ` A ) = ( 1st ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
+      ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cnumer eqeq1
+      cq anbi2d riotabidv fveq2d df-numer fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
+      LIZKZMZANOPZQZEFUJBULKZMZAUOQZEFTRUKBKZUPUSEUTUNURAUOUTUMUQUJUKBULSUAUBUCA
+      CUDUSEUEUF $.
+      $( [13-Sep-2014] $)
+
+    qdenval $p |- ( A e. QQ -> ( denom ` A ) = ( 2nd ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
+      ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cdenum eqeq1
+      cq anbi2d riotabidv fveq2d df-denom fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
+      LIZKZMZANOPZQZGFUJBULKZMZAUOQZGFTRUKBKZUPUSGUTUNURAUOUTUMUQUJUKBULSUAUBUCA
+      CUDUSGUEUF $.
+      $( [13-Sep-2014] $)
+    $}
+
+    qnumdencl $p |- ( A e. QQ -> ( ( numer ` A ) e. ZZ /\ ( denom ` A ) e. NN ) ) $=
+      ( va cq wcel cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cxp cnumer eleq1d
+      cn crio cdenum wreu qredeu riotacl syl cop qnumval qdenval anbi12d biimprd
+      elxp6 adantld syl5bi mpd ) ACDZBEZFGZUPHGZIJKLAUQURMJLNZBOSPZTZUTDZAQGZODZ
+      AUAGZSDZNZUOUSBUTUBVBBAUCUSBUTUDUEVBVAVAFGZVAHGZUFLZVHODZVISDZNZNUOVGVAOSU
+      KUOVMVGVJUOVGVMUOVDVKVFVLUOVCVHOBAUGRUOVEVISBAUHRUIUJULUMUN $.
+      $( [13-Sep-2014] $)
+
+    qnumcl $p |- ( A e. QQ -> ( numer ` A ) e. ZZ ) $=
+      ( cq wcel cnumer cfv cz cdenum cn qnumdencl simpld ) ABCADEFCAGEHCAIJ $.
+      $( [13-Sep-2014] $)
+
+    qdencl $p |- ( A e. QQ -> ( denom ` A ) e. NN ) $=
+      ( cq wcel cnumer cfv cz cdenum cn qnumdencl simprd ) ABCADEFCAGEHCAIJ $.
+      $( [13-Sep-2014] $)
+
+    fnum $p |- numer : QQ --> ZZ $=
+      ( vb va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn crio wcel cq cnumer
+      cxp wf wral df-numer fmpt biimpi qnumval qnumcl eqeltrrd mprg ) ACZDEZUIFE
+      ZGHIJBCZUJUKKHJLAMNSODEZMPZQMRTZBQUNBQUAUOBQMUMRABUBUCUDULQPULREUMMAULUEUL
+      UFUGUH $.
+      $( [13-Sep-2014] $)
+
+    fden $p |- denom : QQ --> NN $=
+      ( vb va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn crio wcel cq cdenum
+      cxp wf wral df-denom fmpt biimpi qdenval qdencl eqeltrrd mprg ) ACZDEZUIFE
+      ZGHIJBCZUJUKKHJLAMNSOFEZNPZQNRTZBQUNBQUAUOBQNUMRABUBUCUDULQPULREUMNAULUEUL
+      UFUGUH $.
+      $( [13-Sep-2014] $)
+
+    qnumdenbi $p |- ( ( A e. QQ /\ B e. ZZ /\ C e. NN ) -> ( ( ( B gcd C ) = 1 /\ A = ( B / C ) ) <-> ( ( numer ` A ) = B /\ ( denom ` A ) = C ) ) ) $=
+      ( va wcel cz cn cfv wceq wa c1st c2nd cgcd co c1 cdiv cop eqeq1d oveq12d
+      wb vb cq w3a cnumer cdenum cv cxp crio wreu qredeu riotacl 1st2nd2 qnumval
+      3syl qdenval opeq12d eqtr4d 3ad2ant1 opthg 3ad2ant3 bitr2d opelxpi 3adant1
+      ax-17 fveq2 eqeq2d anbi12d riota2f syl2anc op1stg 3ad2ant2 op2ndg 3bitr2rd
+      fvex a17d ) AUBEZBFEZCGEZUCZAUDHZBIAUEHZCIJZDUFZKHZWCLHZMNZOIZAWDWEPNZIZJZ
+      DFGUGZUHZBCQZIZWMKHZWMLHZMNZOIZAWOWPPNZIZJZBCMNZOIZABCPNZIZJVSWNVTWAQZWMIZ
+      WBVPVQWNXGTVRVPWLXFWMVPWLWLKHZWLLHZQZXFVPWJDWKUIZWLWKEWLXJIDAUJZWJDWKUKWLF
+      GULUNVPVTXHWAXIDAUMDAUOUPUQRURVRVPXGWBTVQVTWABCGAUDVNAUEVNUSUTVAVSWMWKEZXK
+      XAWNTVQVRXMVPBCFGVBVCVPVQXKVRXLURWJXADUAWKWMUAUFWMEDVDXMXADVOWCWMIZWGWRWIW
+      TXNWFWQOXNWDWOWEWPMWCWMKVEZWCWMLVEZSRXNWHWSAXNWDWOWEWPPXOXPSVFVGVHVIVSWRXC
+      WTXEVSWQXBOVSWOBWPCMVQVPWOBIVRBCFVJVKZVQVRWPCIVPBCFGVLVCZSRVSWSXDAVSWOBWPC
+      PXQXRSVFVGVM $.
+      $( [13-Sep-2014] $)
+
+    qnumdencoprm $p |- ( A e. QQ -> ( ( numer ` A ) gcd ( denom ` A ) ) = 1 ) $=
+      ( cq wcel cnumer cdenum cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
+      cfv qnumcl qdencl qnumdenbi mpd3an23 mpbird simpld ) ABCZADRZAERZFGHIZAUFU
+      GJGIZUEUHUIKZUFUFIZUGUGIZKZUEUKULUEUFLUGMNUEUFOCUGPCUJUMQASATAUFUGUAUBUCUD
+      $.
+      $( [13-Sep-2014] $)
+
+    qeqnumdivden $p |- ( A e. QQ -> A = ( ( numer ` A ) / ( denom ` A ) ) ) $=
+      ( cq wcel cnumer cdenum cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
+      cfv qnumcl qdencl qnumdenbi mpd3an23 mpbird simprd ) ABCZADRZAERZFGHIZAUFU
+      GJGIZUEUHUIKZUFUFIZUGUGIZKZUEUKULUEUFLUGMNUEUFOCUGPCUJUMQASATAUFUGUAUBUCUD
+      $.
+      $( [13-Sep-2014] $)
+
+    qmuldeneqnum $p |- ( A e. QQ -> ( A x. ( denom ` A ) ) = ( numer ` A ) ) $=
+      ( cq wcel cdenum cfv cmul co cnumer cdiv qeqnumdivden oveq1d cc cc0 wne cz
+      wceq qnumcl zcn syl cn qdencl nncn nnne0 divcan1 syl3anc eqtrd ) ABCZAADEZ
+      FGAHEZUHIGZUHFGZUIUGAUJUHFAJKUGUILCZUHLCZUHMNZUKUIPUGUIOCULAQUIRSUGUHTCZUM
+      AUAZUHUBSUGUOUNUPUHUCSUIUHUDUEUF $.
+      $( [13-Sep-2014] $)
+
+    zdivnndivides $p |- ( ( A e. ZZ /\ B e. NN ) -> ( B || A <-> ( A / B ) e. ZZ ) ) $=
+      ( va cz wcel cn wa cdivides wbr cv cmul co wceq wrex wb nnz adantl syl2anc
+      cdiv cc simpl divides zcn nncn ad2antlr mulcom eqeq1d rexbidva zdiv ancoms
+      3bitrd ) ADEZBFEZGZBAHIZCJZBKLZAMZCDNZBUPKLZAMZCDNZABSLDEZUNBDEZULUOUSOUMV
+      DULBPQULUMUACBAUBRUNURVACDUNUPDEZGZUQUTAVFUPTEZBTEZUQUTMVEVGUNUPUCQUMVHULV
+      EBUDUEUPBUFRUGUHUMULVBVCOCBAUIUJUK $.
+      $( [13-Sep-2014] $)
+
+    znegclb $p |- ( A e. CC -> ( A e. ZZ <-> -u A e. ZZ ) ) $=
+      ( cc wcel cz cneg znegcl negneg eleq1d syl5ib impbid2 ) ABCZADCZAEZDCZAFNM
+      EZDCKLMFKOADAGHIJ $.
+      $( [13-Sep-2014] $)
+
+    lt0ne0 $p |- ( ( A e. RR /\ A < 0 ) -> A =/= 0 ) $=
+      ( cr wcel cc0 clt wbr wa wne 0re ltne mp3an2 necomd ) ABCZADEFZGDAMDBCNDAH
+      IADJKL $.
+      $( [13-Sep-2014] $)
+
+    divneg2 $p |- ( ( A e. CC /\ B e. CC /\ B =/= 0 ) -> -u ( A / B ) = ( A / -u B ) ) $=
+      ( cc wcel cc0 wne w3a cdiv cneg divneg negneg 3ad2ant2 eqcomd oveq2d simp1
+      co wceq negcl negeq0 biimprd necon3d imp 3adant1 div2neg syl3anc 3eqtrd )
+      ACDZBCDZBEFZGZABHPIAIZBHPUKBIZIZHPZAULHPZABJUJBUMUKHUJUMBUHUGUMBQUIBKLMNUJ
+      UGULCDZULEFZUNUOQUGUHUIOUHUGUPUIBRLUHUIUQUGUHUIUQUHULEBEUHBEQULEQBSTUAUBUC
+      AULUDUEUF $.
+      $( [13-Sep-2014] $)
+
+    zdivzne0divides $p |- ( ( A e. ZZ /\ B e. ZZ /\ B =/= 0 ) -> ( B || A <-> ( A / B ) e. ZZ ) ) $=
+      ( cz wcel cc0 cdivides wbr cdiv co wb wa clt cneg simpll ad2antlr sylancom
+      cr cn syl2anc cc wne wo zre adantl 0re lttri2 sylancl znegcl lt0neg1 elnnz
+      biimpa biimpri zdivnndivides negdvdsb ancoms adantr zcn recnd lt0ne0 divcl
+      ad2antrr syl3anc znegclb wceq divneg2 eleq1d bitrd 3bitr4d ex adantll jaod
+      syl sylbid 3impia ) ACDZBCDZBEUAZBAFGZABHIZCDZJZVOVPKZVQBELGZEBLGZUBZWAWBB
+      QDZEQDVQWEJVPWFVOBUCZUDUEBEUFUGWBWCWAWDWBWCWAWBWCKZBMZAFGZAWIHIZCDZVRVTWHV
+      OWIRDZWJWLJVOVPWCNWHWICDZEWILGZWMVPWNVOWCBUHOWBWCWFWOVPWFVOWCWGOZWFWCWOBUI
+      UKPWMWNWOKWIUJULSAWIUMSWBVRWJJZWCVPVOWQBAUNUOUPWHVTVSMZCDZWLWHVSTDZVTWSJWH
+      ATDZBTDZVQWTVOXAVPWCAUQVAZWHBWPURZWBWCWFVQWPBUSPZABUTVBVSVCVLWHWRWKCWHXAXB
+      VQWRWKVDXCXDXEABVEVBVFVGVHVIWBWDWAWBWDKVOBRDZWAVOVPWDNVPWDXFVOXFVPWDKBUJUL
+      VJABUMSVIVKVMVN $.
+
+    nndivdivides $p |- ( ( A e. NN /\ B e. NN ) -> ( B || A <-> ( A / B ) e. NN ) ) $=
+      ( cn wcel wa cdivides wbr cc0 cdiv co clt cz nnz zdivnndivides nnre adantr
+      wb cr nngt0 adantl sylan anbi1d divgt0 syl22anc biantrud elnnz a1i 3bitr4d
+      ) ACDZBCDZEZBAFGZHABIJZKGZEUMLDZUNEZULUMCDZUKULUOUNUIALDUJULUOQAMABNUAUBUK
+      UNULUKARDZHAKGZBRDZHBKGZUNUIURUJAOPUIUSUJASPUJUTUIBOTUJVAUIBSTABUCUDUEUQUP
+      QUKUMUFUGUH $.
+      $( [13-Sep-2014] $)
+
+    divnumden $p |- ( ( A e. ZZ /\ B e. NN ) -> ( ( numer ` ( A / B ) ) = ( A / ( A gcd B ) ) /\ ( denom ` ( A / B ) ) = ( B / ( A gcd B ) ) ) ) $=
+      ( cz wcel cn wa cgcd co cdiv c1 cfv wb cdivides wbr adantl syl2anc cc0 wne
+      wceq cc cnumer cdenum cq znq simpl gcddvds simpld wn nnne0 bnj1540 intnand
+      nnz gcdn0cl syl21anc zdivnndivides mpbid simprd simpr nndivdivides syl3anc
+      qnumdenbi gcddiv syl31anc nncn syl eqtr3d zcn adantr w3a divcan7 syl122anc
+      divid eqcomd mpbi2and ) ACDZBEDZFZAABGHZIHZBVRIHZGHZJSZABIHZVSVTIHZSZWCUAK
+      VSSWCUBKVTSFZVQWCUCDVSCDZVTEDZWBWEFWFLABUDVQVRAMNZWGVQWIVRBMNZVQVOBCDZWIWJ
+      FZVOVPUEZVPWKVOBULOZABUFPZUGVQVOVREDZWIWGLWMVQVOWKAQSZBQSZFUHWPWMWNVQWRWQV
+      QBQVPBQRZVOBUIOZUJUKABUMUNZAVRUOPUPVQWJWHVQWIWJWOUQVQVPWPWJWHLVOVPURXABVRU
+      SPUPWCVSVTVAUTVQVRVRIHZWAJVQVOWKWPWLXBWASWMWNXAWOABVRVBVCVQVRTDZVRQRZXBJSV
+      QWPXCXAVRVDVEZVQWPXDXAVRUIVEZVRVLPVFVQATDZBTDZWSXCXDWEVOXGVPAVGVHVPXHVOBVD
+      OWTXEXFXGXHWSFXCXDFVIWDWCABVRVJVMVKVN $.
+
+    divdenle $p |- ( ( A e. ZZ /\ B e. NN ) -> ( denom ` ( A / B ) ) <_ B ) $=
+      ( cz wcel cn wa cdiv co cfv cle wceq c1 wbr cc0 wn adantl syl cr clt a1i
+      cdenum cgcd cnumer divnumden simprd simpl bnj1540 intnand gcdn0cl syl21anc
+      nnz nnne0 nnge1 wb 1re lt01 nnre nngt0 lediv2 syl222anc mpbid cc nncn div1
+      breqtrd eqbrtrd ) ACDZBEDZFZABGHZUAIZBABUBHZGHZBJVIVJUCIAVLGHKVKVMKABUDUEV
+      IVMBLGHZBJVILVLJMZVMVNJMZVIVLEDZVOVIVGBCDZANKZBNKZFOVQVGVHUFVHVRVGBUKPVIVT
+      VSVHVTOVGVHBNBULUGPUHABUIUJZVLUMQVILRDZNLSMZVLRDZNVLSMZBRDZNBSMZVOVPUNWBVI
+      UOTWCVIUPTVIVQWDWAVLUQQVIVQWEWAVLURQVHWFVGBUQPVHWGVGBURPLVLBUSUTVAVIBVBDZV
+      NBKVHWHVGBVCPBVDQVEVF $.
+      $( [13-Sep-2014] $)
+    $}
+$}
+
 $( Lagrange's diophantine approximation theorem, lemma 62 in [vandenDries] $)
 
 ${
