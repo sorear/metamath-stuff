@@ -890,17 +890,93 @@ ${
     $d a b c d e f y $.
     $d a b c d e f z $.
 
+    $( Arithmetical core of pellexlem3, norm lower bound $)
+    pellexlem1 $p |- ( ( ( D e. NN /\ A e. NN /\ B e. NN ) /\ -. ( sqr ` D ) e. QQ ) -> ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) =/= 0 ) $=
+      ( cn wcel csqr cfv cq c2 cexp co cc0 wne wceq cc wb nncn 3ad2ant2 3ad2ant3
+      syl w3a wn cmul cmin sqcl 3ad2ant1 mulcl syl2anc subeq0 nnne0 sqne0 mpbird
+      cdiv divmul3 syl112anc sqdiv fveq2d syl3anc cle wbr nnre redivcl clt nnnn0
+      cr cn0 nn0ge0 nngt0 divge0 syl22anc sqrsq eqtr3d nnq qdivcl eqeltrd eleq1d
+      fveq2 syl5ibcom sylbird sylbid necon3bd imp ) CDEZADEZBDEZUAZCFGZHEZUBAIJK
+      ZCBIJKZUCKZUDKZLMWFWHWLLWFWLLNZWIWKNZWHWFWIOEZWKOEZWMWNPWFAOEZWOWDWCWQWEAQ
+      RZAUETZWFCOEZWJOEZWPWCWDWTWECQUFZWFBOEZXAWEWCXCWDBQSZBUETZCWJUGUHWIWKUIUHW
+      FWNWIWJUMKZCNZWHWFWOWTXAWJLMZXGWNPWSXBXEWFXHBLMZWEWCXIWDBUJSZWFXCXHXIPXDBU
+      KTULWICWJUNUOWFXFFGZHEXGWHWFXKABUMKZHWFXLIJKZFGZXKXLWFWQXCXIXNXKNWRXDXJWQX
+      CXIUAXMXFFABUPUQURWFXLVEEZLXLUSUTZXNXLNWFAVEEZBVEEZXIXOWDWCXQWEAVARZWEWCXR
+      WDBVASZXJABVBURWFXQLAUSUTZXRLBVCUTZXPXSWDWCYAWEWDAVFEYAAVDAVGTRXTWEWCYBWDB
+      VHSABVIVJXLVKUHVLWFAHEZBHEZXIXLHEWDWCYCWEAVMRWEWCYDWDBVMSXJABVNURVOXGXKWGH
+      XFCFVQVPVRVSVTWAWB $.
+      $( [14-Sep-2014] $)
+
+    $( Arithmetical core of pellexlem3, norm upper bound $)
+    pellexlem2 $p |- ( ( ( D e. NN /\ A e. NN /\ B e. NN ) /\ ( abs ` ( ( A / B ) - ( sqr ` D ) ) ) < ( B ^ -u 2 ) ) -> ( abs ` ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) ) < ( 1 + ( 2 x. ( sqr ` D ) ) ) ) $=
+      ( wcel co cabs c2 clt wbr cmul caddc c1 cc cc0 wceq cr syl syl2anc syl3anc
+      cle cn w3a cdiv csqr cfv cmin cneg cexp wne simpl2 nncn sqcl simpl1 simpl3
+      mulcl subcl abscl recn nnne0 sqne0 biimprd imp divcan2 eqcomd resqcl sqge0
+      nnre absid oveq2d absdiv eqtrd divsubdir syl112anc sqdiv divcan4 cn0 nnnn0
+      wa nn0ge0 resqrcl sqval remsqsqr oveq12d divcl subsq addcl redivcl resubcl
+      eqtr2d mulcom 3eqtrd fveq2d remulcl 2nn0 nn0negzi a1i reexpclz 1re readdcl
+      absmul cz 2re simpr wb nngt0 divgt0 syl22anc sqrgt0 addgt0 syl21anc gt0ne0
+      absgt0 biimpd ltmul1 mpbid sqgt0 ltmul2 expclz mulass expneg oveq1d mulid2
+      jca recid addcom ppncan 2times 3syl abstri sqrge0 mulge0 nnsqcl nnge1 lt01
+      nn0ge0i lerec ax-1cn div1i eqbrtrd ltletrd breqtrd ltle leadd1 letrd ) CUA
+      DZAUADZBUADZUBZABUCEZCUDUEZUFEZFUEZBGUGZUHEZHIZVRZAGUHEZCBGUHEZJEZUFEZFUEZ
+      UURUUKUUIUUJKEZJEZFUEZJEZLGUUJJEZKEZHUUPUVAUURUUTUURUCEZFUEZJEZUVEUUPUVAUU
+      RUVAUURUCEZJEZUVJUUPUVLUVAUUPUVAMDZUURMDZUURNUIZUVLUVAOUUPUVAPDZUVMUUPUUTM
+      DZUVPUUPUUQMDZUUSMDZUVQUUPAMDZUVRUUPUUFUVTUUEUUFUUGUUOUJZAUKQZAULQZUUPCMDZ
+      UVNUVSUUPUUEUWDUUEUUFUUGUUOUMZCUKQZUUPBMDZUVNUUPUUGUWGUUEUUFUUGUUOUNZBUKQZ
+      BULQZCUURUORZUUQUUSUPRZUUTUQQUVAURQUWJUUPUWGBNUIZUVOUWIUUPUUGUWMUWHBUSQZUW
+      GUWMUVOUWGUVOUWMBUTVAVBRZUVAUURVCSVDUUPUVKUVIUURJUUPUVKUVAUURFUEZUCEZUVIUU
+      PUURUWPUVAUCUUPUWPUURUUPUURPDZNUURTIZUWPUUROUUPBPDZUWRUUPUUGUWTUWHBVGQZBVE
+      QZUUPUWTUWSUXABVFQUURVHRVDVIUUPUVIUWQUUPUVQUVNUVOUVIUWQOUWLUWJUWOUUTUURVJS
+      VDVKVIVKUUPUVIUVDUURJUUPUVHUVCFUUPUVHUUQUURUCEZUUSUURUCEZUFEZUUIGUHEZUUJGU
+      HEZUFEZUVCUUPUVRUVSUVNUVOUVHUXEOUWCUWKUWJUWOUUQUUSUURVLVMUUPUXCUXFUXDUXGUF
+      UUPUXFUXCUUPUVTUWGUWMUXFUXCOUWBUWIUWNABVNSVDUUPUXDCUXGUUPUWDUVNUVOUXDCOUWF
+      UWJUWOCUURVOSUUPUXGUUJUUJJEZCUUPUUJMDZUXGUXIOUUPUUJPDZUXJUUPCPDZNCTIZUXKUU
+      PUUEUXLUWECVGQZUUPCVPDZUXMUUPUUEUXOUWECVQQCVSQZCVTRZUUJURQZUUJWAQUUPUXLUXM
+      UXICOUXNUXPCWBRWIVKWCUUPUXHUVBUUKJEZUVCUUPUUIMDZUXJUXHUXSOUUPUVTUWGUWMUXTU
+      WBUWIUWNABWDSZUXRUUIUUJWERUUPUVBMDZUUKMDZUXSUVCOUUPUXTUXJUYBUYAUXRUUIUUJWF
+      RZUUPUUKPDZUYCUUPUUIPDZUXKUYEUUPAPDZUWTUWMUYFUUPUUFUYGUWAAVGQZUXAUWNABWGSZ
+      UXQUUIUUJWHRZUUKURQZUVBUUKWJRVKWKWLVIVKUUPUVEUURUULUVBFUEZJEZJEZUVGHUUPUVD
+      UYMUURJUUPUYCUYBUVDUYMOUYKUYDUUKUVBWTRVIUUPUYNUURUUNUYLJEZJEZUVGUUPUWRUYMP
+      DZUYNPDUXBUUPUULPDZUYLPDZUYQUUPUYCUYRUYKUUKUQQZUUPUYBUYSUYDUVBUQQZUULUYLWM
+      RZUURUYMWMRUUPUWRUYOPDZUYPPDUXBUUPUUNPDZUYSVUCUUPUWTUWMUUMXADZVUDUXAUWNVUE
+      UUPGWNWOWPZBUUMWQSZVUAUUNUYLWMRZUURUYOWMRUUPLPDZUVFPDZUVGPDVUIUUPWRWPZUUPG
+      PDZUXKVUJVULUUPXBWPZUXQGUUJWMRZLUVFWSRZUUPUYMUYOHIZUYNUYPHIZUUPUUOVUPUUHUU
+      OXCZUUPUYRVUDUYSNUYLHIZUUOVUPXDUYTVUGVUAUUPUYBUVBNUIZVUSUYDUUPUVBPDZNUVBHI
+      ZVUTUUPUYFUXKVVAUYIUXQUUIUUJWSRUUPUYFUXKNUUIHIZNUUJHIZVRVVBUYIUXQUUPVVCVVD
+      UUPUYGNAHIZUWTNBHIZVVCUYHUUPUUFVVEUWAAXEQUXAUUPUUGVVFUWHBXEQABXFXGUUPUXLNC
+      HIZVVDUXNUUPUUEVVGUWECXEQCXHRYCUUIUUJXIXJUVBXKRUYBVUTVUSUYBVUTVUSUVBXLXMVB
+      RUULUUNUYLXNVMXOUUPUYQVUCUWRNUURHIZVUPVUQXDVUBVUHUXBUUPUWTUWMVVHUXAUWNBXPR
+      ZUYMUYOUURXQVMXOUUPUYPUYLUVGTUUPUYPUURUUNJEZUYLJEZLUYLJEZUYLUUPUVNUUNMDZUY
+      LMDZUYPVVKOUWJUUPUWGUWMVUEVVMUWIUWNVUFBUUMXRSUUPUYSVVNVUAUYLURQZUVNVVMVVNU
+      BVVKUYPUURUUNUYLXSVDSUUPVVJLUYLJUUPVVJUURLUURUCEZJEZLUUPUUNVVPUURJUUPUWGGV
+      PDZUUNVVPOUWIVVRUUPWNWPBGXTRZVIUUPUVNUVOVVQLOUWJUWOUURYDRVKYAUUPVVNVVLUYLO
+      VVOUYLYBQWKUUPUYLUUKUVFKEZFUEZUVGTUUPUVBVVTFUUPUVBUUJUUIKEZUUJUUJKEZUUKKEZ
+      VVTUUPUXTUXJUVBVWBOUYAUXRUUIUUJYERUUPUXJUXJUXTVWBVWDOUXRUXRUYAUXJUXJUXTUBV
+      WDVWBUUJUUJUUIYFVDSUUPVWDUUKVWCKEZVVTUUPVWCMDZUYCVWDVWEOUUPUXJUXJVWFUXRUXR
+      UUJUUJWFRUYKVWCUUKYERUUPVWCUVFUUKKUUPUXJVWCUVFOUXRUXJUVFVWCUUJYGVDQVIVKWKW
+      LUUPVWAUULUVFFUEZKEZUVGUUPVVTPDZVVTMDVWAPDUUPUYEVUJVWIUYJVUNUUKUVFWSRVVTUR
+      VVTUQYHUUPUYRVWGPDZVWHPDUYTUUPUVFMDZVWJUUPVUJVWKVUNUVFURQZUVFUQQUULVWGWSRV
+      UOUUPUYCVWKVWAVWHTIUYKVWLUUKUVFYIRUUPVWHUULUVFKEZUVGTUUPVWGUVFUULKUUPVUJNU
+      VFTIZVWGUVFOVUNUUPVULNGTIZUXKNUUJTIZVWNVUMVWOUUPGWNYOWPUXQUUPUXLUXMVWPUXNU
+      XPCYJRGUUJYKXGUVFVHRVIUUPUULLTIZVWMUVGTIZUUPUYRVUIUULLHIZVWQUYTVUKUUPUULUU
+      NLUYTVUGVUKVURUUPUUNVVPLTVVSUUPVVPLLUCEZLTUUPLUURTIZVVPVWTTIZUUPUURUADZVXA
+      UUPUUGVXCUWHBYLQUURYMQUUPVUINLHIZUWRVVHVXAVXBXDVUKVXDUUPYNWPUXBVVILUURYPXG
+      XOVWTLOUUPLYQYRWPUUAYSYTUYRVUIVRVWSVWQUULLUUBVBXJUUPUYRVUIVUJVWQVWRXDUYTVU
+      KVUNUULLUVFUUCSXOYSUUDYSYSYTYSYS $.
+      $( [14-Sep-2014] $)
+
     $( To each good rational approximation of ` ( sqr `` D ) ` , there exists a near-solution $)
-    pellexlem1 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { x e. QQ | ( 0 < x /\ ( abs ` ( x - ( sqr ` D ) ) ) < ( ( denom ` x ) ^ -u 2 ) ) } ~<_ { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) <_ ( 1 + ( sqr ` D ) ) ) ) } ) $= ? $.
+    pellexlem3 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { x e. QQ | ( 0 < x /\ ( abs ` ( x - ( sqr ` D ) ) ) < ( ( denom ` x ) ^ -u 2 ) ) } ~<_ { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) < ( 1 + ( sqr ` D ) ) ) ) } ) $= ? $.
 
     $( invoking ~ irrapx1 , we have infinitely many near-solutions $)
-    pellexlem2 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) <_ ( 1 + ( sqr ` D ) ) ) ) } ~~ NN ) $= ? $.
+    pellexlem4 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) < ( 1 + ( sqr ` D ) ) ) ) } ~~ NN ) $= ? $.
 
     $( invoking ~ fiphpd3 , we have infinitely many near-solutions for some specific norm $)
-    pellexlem3 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. x e. ZZ ( x =/= 0 /\ { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) = x ) } ~~ NN ) ) $= ? $.
+    pellexlem5 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. x e. ZZ ( x =/= 0 /\ { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) = x ) } ~~ NN ) ) $= ? $.
 
     $( invoking PHP again we get two near-solutions with the same norm and modularly related coefficients $)
-    pellexlem4 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. u e. ZZ E. v e. NN E. w e. NN E. x e. NN E. y e. NN ( ( u =/= 0 /\ -. ( v = x /\ w = y ) ) /\ ( ( ( v ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = u /\ ( ( x ^ 2 ) - ( D x. ( y ^ 2 ) ) ) = u ) /\ ( ( v mod ( abs ` u ) ) = ( x mod ( abs ` u ) ) /\ ( w mod ( abs ` u ) ) = ( y mod ( abs ` u ) ) ) ) ) $= ? $.
+    pellexlem6 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. u e. ZZ E. v e. NN E. w e. NN E. x e. NN E. y e. NN ( ( u =/= 0 /\ -. ( v = x /\ w = y ) ) /\ ( ( ( v ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = u /\ ( ( x ^ 2 ) - ( D x. ( y ^ 2 ) ) ) = u ) /\ ( ( v mod ( abs ` u ) ) = ( x mod ( abs ` u ) ) /\ ( w mod ( abs ` u ) ) = ( y mod ( abs ` u ) ) ) ) ) $= ? $.
 
     $( doing a field division get us to norm 1, and the modularity constraint ensures we still have an integer $)
     pellex $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. x e. NN E. y e. NN ( ( x ^ 2 ) - ( D x. ( y ^ 2 ) ) ) = 1 ) $= ? $.
