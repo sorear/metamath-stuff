@@ -474,7 +474,7 @@ $( define canonical numerator/denominator, any necessary theorems $)
 
 ${
     cnumer $a class numer $.
-    cdenum $a class denom $.
+    cdenom $a class denom $.
 
     ${
     $d x y $.
@@ -498,7 +498,7 @@ ${
       $( [13-Sep-2014] $)
 
     qdenval $p |- ( A e. QQ -> ( denom ` A ) = ( 2nd ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
-      ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cdenum eqeq1
+      ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cdenom eqeq1
       cq anbi2d riotabidv fveq2d df-denom fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
       LIZKZMZANOPZQZGFUJBULKZMZAUOQZGFTRUKBKZUPUSGUTUNURAUOUTUMUQUJUKBULSUAUBUCA
       CUDUSGUEUF $.
@@ -507,18 +507,18 @@ ${
 
     qnumdencl $p |- ( A e. QQ -> ( ( numer ` A ) e. ZZ /\ ( denom ` A ) e. NN ) ) $=
       ( va cq wcel cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cxp cnumer eleq1d
-      cn crio cdenum wreu qredeu riotacl syl cop qnumval qdenval anbi12d biimprd
+      cn crio cdenom wreu qredeu riotacl syl cop qnumval qdenval anbi12d biimprd
       elxp6 adantld syl5bi mpd ) ACDZBEZFGZUPHGZIJKLAUQURMJLNZBOSPZTZUTDZAQGZODZ
       AUAGZSDZNZUOUSBUTUBVBBAUCUSBUTUDUEVBVAVAFGZVAHGZUFLZVHODZVISDZNZNUOVGVAOSU
       KUOVMVGVJUOVGVMUOVDVKVFVLUOVCVHOBAUGRUOVEVISBAUHRUIUJULUMUN $.
       $( [13-Sep-2014] $)
 
     qnumcl $p |- ( A e. QQ -> ( numer ` A ) e. ZZ ) $=
-      ( cq wcel cnumer cfv cz cdenum cn qnumdencl simpld ) ABCADEFCAGEHCAIJ $.
+      ( cq wcel cnumer cfv cz cdenom cn qnumdencl simpld ) ABCADEFCAGEHCAIJ $.
       $( [13-Sep-2014] $)
 
     qdencl $p |- ( A e. QQ -> ( denom ` A ) e. NN ) $=
-      ( cq wcel cnumer cfv cz cdenum cn qnumdencl simprd ) ABCADEFCAGEHCAIJ $.
+      ( cq wcel cnumer cfv cz cdenom cn qnumdencl simprd ) ABCADEFCAGEHCAIJ $.
       $( [13-Sep-2014] $)
 
     fnum $p |- numer : QQ --> ZZ $=
@@ -529,7 +529,7 @@ ${
       $( [13-Sep-2014] $)
 
     fden $p |- denom : QQ --> NN $=
-      ( vb va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn crio wcel cq cdenum
+      ( vb va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn crio wcel cq cdenom
       cxp wf wral df-denom fmpt biimpi qdenval qdencl eqeltrrd mprg ) ACZDEZUIFE
       ZGHIJBCZUJUKKHJLAMNSOFEZNPZQNRTZBQUNBQUAUOBQNUMRABUBUCUDULQPULREUMNAULUEUL
       UFUGUH $.
@@ -537,7 +537,7 @@ ${
 
     qnumdenbi $p |- ( ( A e. QQ /\ B e. ZZ /\ C e. NN ) -> ( ( ( B gcd C ) = 1 /\ A = ( B / C ) ) <-> ( ( numer ` A ) = B /\ ( denom ` A ) = C ) ) ) $=
       ( va wcel cz cn cfv wceq wa c1st c2nd cgcd co c1 cdiv cop eqeq1d oveq12d
-      wb vb cq w3a cnumer cdenum cv cxp crio wreu qredeu riotacl 1st2nd2 qnumval
+      wb vb cq w3a cnumer cdenom cv cxp crio wreu qredeu riotacl 1st2nd2 qnumval
       3syl qdenval opeq12d eqtr4d 3ad2ant1 opthg 3ad2ant3 bitr2d opelxpi 3adant1
       ax-17 fveq2 eqeq2d anbi12d riota2f syl2anc op1stg 3ad2ant2 op2ndg 3bitr2rd
       fvex a17d ) AUBEZBFEZCGEZUCZAUDHZBIAUEHZCIJZDUFZKHZWCLHZMNZOIZAWDWEPNZIZJZ
@@ -551,21 +551,21 @@ ${
       $( [13-Sep-2014] $)
 
     qnumdencoprm $p |- ( A e. QQ -> ( ( numer ` A ) gcd ( denom ` A ) ) = 1 ) $=
-      ( cq wcel cnumer cdenum cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
+      ( cq wcel cnumer cdenom cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
       cfv qnumcl qdencl qnumdenbi mpd3an23 mpbird simpld ) ABCZADRZAERZFGHIZAUFU
       GJGIZUEUHUIKZUFUFIZUGUGIZKZUEUKULUEUFLUGMNUEUFOCUGPCUJUMQASATAUFUGUAUBUCUD
       $.
       $( [13-Sep-2014] $)
 
     qeqnumdivden $p |- ( A e. QQ -> A = ( ( numer ` A ) / ( denom ` A ) ) ) $=
-      ( cq wcel cnumer cdenum cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
+      ( cq wcel cnumer cdenom cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
       cfv qnumcl qdencl qnumdenbi mpd3an23 mpbird simprd ) ABCZADRZAERZFGHIZAUFU
       GJGIZUEUHUIKZUFUFIZUGUGIZKZUEUKULUEUFLUGMNUEUFOCUGPCUJUMQASATAUFUGUAUBUCUD
       $.
       $( [13-Sep-2014] $)
 
     qmuldeneqnum $p |- ( A e. QQ -> ( A x. ( denom ` A ) ) = ( numer ` A ) ) $=
-      ( cq wcel cdenum cfv cmul co cnumer cdiv qeqnumdivden oveq1d cc cc0 wne cz
+      ( cq wcel cdenom cfv cmul co cnumer cdiv qeqnumdivden oveq1d cc cc0 wne cz
       wceq qnumcl zcn syl cn qdencl nncn nnne0 divcan1 syl3anc eqtrd ) ABCZAADEZ
       FGAHEZUHIGZUHFGZUIUGAUJUHFAJKUGUILCZUHLCZUHMNZUKUIPUGUIOCULAQUIRSUGUHTCZUM
       AUAZUHUBSUGUOUNUPUHUCSUIUHUDUEUF $.
@@ -620,7 +620,7 @@ ${
 
     divnumden $p |- ( ( A e. ZZ /\ B e. NN ) -> ( ( numer ` ( A / B ) ) = ( A / ( A gcd B ) ) /\ ( denom ` ( A / B ) ) = ( B / ( A gcd B ) ) ) ) $=
       ( cz wcel cn wa cgcd co cdiv c1 cfv wb cdivides wbr adantl syl2anc cc0 wne
-      wceq cc cnumer cdenum cq znq simpl gcddvds simpld wn nnne0 bnj1540 intnand
+      wceq cc cnumer cdenom cq znq simpl gcddvds simpld wn nnne0 bnj1540 intnand
       nnz gcdn0cl syl21anc zdivnndivides mpbid simprd simpr nndivdivides syl3anc
       qnumdenbi gcddiv syl31anc nncn syl eqtr3d zcn adantr w3a divcan7 syl122anc
       divid eqcomd mpbi2and ) ACDZBEDZFZAABGHZIHZBVRIHZGHZJSZABIHZVSVTIHZSZWCUAK
@@ -633,7 +633,7 @@ ${
 
     divdenle $p |- ( ( A e. ZZ /\ B e. NN ) -> ( denom ` ( A / B ) ) <_ B ) $=
       ( cz wcel cn wa cdiv co cfv cle wceq c1 wbr cc0 wn adantl syl cr clt a1i
-      cdenum cgcd cnumer divnumden simprd simpl bnj1540 intnand gcdn0cl syl21anc
+      cdenom cgcd cnumer divnumden simprd simpl bnj1540 intnand gcdn0cl syl21anc
       nnz nnne0 nnge1 wb 1re lt01 nnre nngt0 lediv2 syl222anc mpbid cc nncn div1
       breqtrd eqbrtrd ) ACDZBEDZFZABGHZUAIZBABUBHZGHZBJVIVJUCIAVLGHKVKVMKABUDUEV
       IVMBLGHZBJVILVLJMZVMVNJMZVIVLEDZVOVIVGBCDZANKZBNKZFOVQVGVHUFVHVRVGBUKPVIVT
@@ -789,7 +789,7 @@ ${
     $( switching to real intervals and fraction syntax $)
     irrapxlem5 $p |- ( ( A e. RR+ /\ B e. RR+ ) -> E. x e. QQ ( 0 < x /\ ( abs ` ( x - A ) ) < B /\ ( abs ` ( x - A ) ) < ( ( denom ` x ) ^ -u 2 ) ) ) $=
       ( crp wcel cmul co cabs cfv c1 cdiv cle wbr clt cc0 cr syl syl2anc wceq cc
-      va vb wa cv cmin cfl caddc cif cn wrex cdenum c2 cneg cexp w3a simpl simpr
+      va vb wa cv cmin cfl caddc cif cn wrex cdenom c2 cneg cexp w3a simpl simpr
       cq cn0 rpreccl rpre rpge0 jca flge0nn0 nn0p1nn 3syl irrapxlem4 wne simplrr
       nnq simplrl nnne0 qdivcl syl3anc nnrp rpgt0 nnre nnnn0 nn0ge0 absid eqcomd
       rpdivcl oveq1d recn qre simplll resubcl absmul rpcn divcan2 mulcom oveq12d
@@ -851,7 +851,7 @@ ${
 
     $( explicit description of a non-closed set $)
     irrapxlem6 $p |- ( ( A e. RR+ /\ B e. RR+ ) -> E. x e. { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ( abs ` ( x - A ) ) < B ) $=
-      ( va crp wcel wa cc0 cv clt wbr cmin co cabs cfv cdenum cexp cq wrex breq2
+      ( va crp wcel wa cc0 cv clt wbr cmin co cabs cfv cdenom cexp cq wrex breq2
       c2 cneg w3a crab irrapxlem5 simplr simpr1 simpr3 oveq1 fveq2d fveq2 oveq1d
       jca weq breq12d anbi12d sylibr simpr2 breq1d rcla4ev syl2anc rexlimdva mpd
       elrab ex ) CFGDFGHZIEJZKLZVHCMNZOPZDKLZVKVHQPZUBUCZRNZKLZUDZESTAJZCMNZOPZD
@@ -864,7 +864,7 @@ ${
     $( every irrational number has an infinite number of good rational approximations $)
     irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ~~ NN ) $=
       ( vb va crp cq wcel cv clt wbr cmin co cabs cfv cn cdom cen cvv com cr cc0
-      cdif cdenum c2 cneg cexp wa crab wss qex rabex ssrab2 ssdomg mp2 qnnen a1i
+      cdif cdenom c2 cneg cexp wa crab wss qex rabex ssrab2 ssdomg mp2 qnnen a1i
       domentr sylancr nnenom wn wrex wral qssre sstri eldifi rpre syl sseli nsyl
       eldifn irrapxlem6 sylan ralrimiva renclddom syl31anc endomtr sbth syl2anc
       ) BEFUBGZUAAHZIJVTBKLMNVTUCNUDUEUFLIJUGZAFUHZOPJZOWBPJZWBOQJVSWBFPJZFOQJZW
