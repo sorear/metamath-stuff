@@ -648,6 +648,80 @@ ${
     qgt0numnn $p |- ( ( A e. QQ /\ 0 < A ) -> ( numer ` A ) e. NN ) $=
         ? $.
 
+    qsqcl $p |- ( A e. QQ -> ( A ^ 2 ) e. QQ ) $=
+      ( cq wcel c2 cexp co cmul cc wceq qcn sqval syl qmulcl anidms eqeltrd ) AB
+      CZADEFZAAGFZBPAHCQRIAJAKLPRBCAAMNO $.
+      $( [15-Sep-2014] $)
+
+    nn0gcdsq $p |- ( ( A e. NN0 /\ B e. NN0 ) -> ( ( A gcd B ) ^ 2 ) = ( ( A ^ 2 ) gcd ( B ^ 2 ) ) ) $=
+      ( cn0 wcel cn cc0 wceq wo cgcd co c2 cexp wa cabs cfv syl oveq1d sq0 oveq1
+      cz elnn0 sqgcd cc nncn abssq nnz gcd0id zsqcl 3syl eqtrd 3eqtr4d adantl wb
+      a1i eqeq12d adantr mpbird gcdid0 oveq2d oveq2 gcd0val oveq1i oveq12i eqtri
+      3eqtr4i oveq12 oveqan12d 3eqtr4a ccase syl2anb ) ACDAEDZAFGZHBEDZBFGZHABIJ
+      ZKLJZAKLJZBKLJZIJZGZBCDAUABUAVKVMVLVNVTABUBVLVMMVTFBIJZKLJZFKLJZVRIJZGZVMW
+      EVLVMBNOZKLJZVRNOZWBWDVMBUCDWGWHGBUDBUEPVMWAWFKLVMBTDZWAWFGBUFZBUGPQVMWDFV
+      RIJZWHVMWCFVRIWCFGZVMRUNQVMWIVRTDWKWHGWJBUHVRUGUIUJUKULVLVTWEUMVMVLVPWBVSW
+      DVLVOWAKLAFBISQVLVQWCVRIAFKLSZQUOUPUQVKVNMVTAFIJZKLJZVQWCIJZGZVKWQVNVKANOZ
+      KLJZVQNOZWOWPVKAUCDWSWTGAUDAUEPVKWNWRKLVKATDZWNWRGAUFZAURPQVKWPVQFIJZWTVKW
+      CFVQIWLVKRUNUSVKXAVQTDXCWTGXBAUHVQURUIUJUKUPVNVTWQUMVKVNVPWOVSWPVNVOWNKLBF
+      AIUTQVNVRWCVQIBFKLSZUSUOULUQVLVNMZFFIJZKLJZWCWCIJZVPVSWCFXGXHRXFFKLVAVBXHX
+      FFWCFWCFIRRVCVAVDVEXEVOXFKLAFBFIVFQVLVNVQWCVRWCIWMXDVGVHVIVJ $.
+      $( [15-Sep-2014] $)
+
+    zgcdsq $p |- ( ( A e. ZZ /\ B e. ZZ ) -> ( ( A gcd B ) ^ 2 ) = ( ( A ^ 2 ) gcd ( B ^ 2 ) ) ) $=
+      ( cz wcel wa cgcd co cexp cabs cfv gcdabs eqcomd cn0 wceq nn0abscl absresq
+      c2 cr zre syl oveq1d nn0gcdsq syl2an adantr adantl oveq12d 3eqtrd ) ACDZBC
+      DZEZABFGZQHGAIJZBIJZFGZQHGZULQHGZUMQHGZFGZAQHGZBQHGZFGUJUKUNQHUJUNUKABKLUA
+      UHULMDUMMDUOURNUIAOBOULUMUBUCUJUPUSUQUTFUJARDZUPUSNUHVAUIASUDAPTUJBRDZUQUT
+      NUIVBUHBSUEBPTUFUG $.
+      $( [15-Sep-2014] $)
+
+    numdensq $p |- ( A e. QQ -> ( ( numer ` ( A ^ 2 ) ) = ( ( numer ` A ) ^ 2 ) /\ ( denom ` ( A ^ 2 ) ) = ( ( denom ` A ) ^ 2 ) ) ) $=
+      ( cq wcel cnumer cfv c2 cexp co cdenom cgcd c1 wceq cdiv wa cz syl syl3anc
+      cn oveq1d cc qsqcl qnumcl qdencl nnsqcl qnumdenbi qnumdencoprm nnz syl2anc
+      wb zsqcl zgcdsq sq1 a1i 3eqtr3d qeqnumdivden cc0 wne zcn nnne0 sqdiv eqtrd
+      nncn mpbi2and ) ABCZADEZFGHZAIEZFGHZJHZKLZAFGHZVFVHMHZLZVKDEVFLVKIEVHLNZVD
+      VKBCVFOCZVHRCZVJVMNVNUIAUAVDVEOCZVOAUBZVEUJPVDVGRCZVPAUCZVGUDPVKVFVHUEQVDV
+      EVGJHZFGHZKFGHZVIKVDWAKFGAUFSVDVQVGOCZWBVILVRVDVSWDVTVGUGPVEVGUKUHWCKLVDUL
+      UMUNVDVKVEVGMHZFGHZVLVDAWEFGAUOSVDVETCZVGTCZVGUPUQZWFVLLVDVQWGVRVEURPVDVSW
+      HVTVGVBPVDVSWIVTVGUSPVEVGUTQVAVC $.
+      $( [15-Sep-2014] $)
+
+    numsq $p |- ( A e. QQ -> ( numer ` ( A ^ 2 ) ) = ( ( numer ` A ) ^ 2 ) ) $=
+      ( cq wcel c2 cexp co cnumer cfv wceq cdenom numdensq simpld ) ABCADEFZGHAG
+      HDEFIMJHAJHDEFIAKL $.
+      $( [15-Sep-2014] $)
+
+    densq $p |- ( A e. QQ -> ( denom ` ( A ^ 2 ) ) = ( ( denom ` A ) ^ 2 ) ) $=
+      ( cq wcel c2 cexp co cnumer cfv wceq cdenom numdensq simprd ) ABCADEFZGHAG
+      HDEFIMJHAJHDEFIAKL $.
+      $( [15-Sep-2014] $)
+
+    qden1elz $p |- ( A e. QQ -> ( ( denom ` A ) = 1 <-> A e. ZZ ) ) $=
+      ( cq wcel cdenom cfv c1 wceq cz wa cnumer cdiv co adantr zcn div1 3syl cle
+      cc wbr cn qeqnumdivden oveq2 adantl qnumcl 3eqtrd eqeltrd simpr fveq2d 1nn
+      divdenle sylancl eqbrtrrd wb qdencl nnle1eq1 syl mpbid impbida ) ABCZADEZF
+      GZAHCZUSVAIZAAJEZHVCAVDUTKLZVDFKLZVDUSAVEGVAAUAMVAVEVFGUSUTFVDKUBUCVCVDHCZ
+      VDRCVFVDGUSVGVAAUDMZVDNVDOPUEVHUFUSVBIZUTFQSZVAVIAFKLZDEZUTFQVIVKADVIVBARC
+      VKAGUSVBUGZANAOPUHVIVBFTCVLFQSVMUIAFUJUKULVIUTTCZVJVAUMUSVNVBAUNMUTUOUPUQU
+      R $.
+      $( [15-Sep-2014] $)
+
+    zsqrelqelz $p |- ( ( A e. ZZ /\ ( sqr ` A ) e. QQ ) -> ( sqr ` A ) e. ZZ ) $=
+      ( cz wcel cfv cq cdenom c1 wceq c2 co a1i syl adantr wb qden1elz adantl cr
+      cexp cc0 cle csqr wa sq1 cc zcn sqrth fveq2d simpl zq eqtrd densq 3eqtr2rd
+      mpbird wbr cn qdencl nnre cn0 nnnn0 nn0ge0 3syl 1nn0 nn0ge0i sq11 syl22anc
+      1re mpbid ) ABCZAUADZECZUBZVIFDZGHZVIBCZVKVLIRJZGIRJZHZVMVKVPGVIIRJZFDZVOV
+      PGHVKUCKVKVSAFDZGVKVRAFVHVRAHZVJVHAUDCWAAUEAUFLMUGVKVTGHZVHVHVJUHVKAECZWBV
+      HNVHWCVJAUIMAOLUMUJVJVSVOHVHVIUKPULVKVLQCZSVLTUNZGQCZSGTUNZVQVMNVKVLUOCZWD
+      VJWHVHVIUPPZVLUQLVKWHVLURCWEWIVLUSVLUTVAWFVKVFKWGVKGVBVCKVLGVDVEVGVJVMVNNV
+      HVIOPVG $.
+      $( [15-Sep-2014] $)
+
+    $( trap ( sqr ` A ) with sqrlt, then use btwnnz and zsqrelqelz $)
+    nonsq $p |- ( ( ( A e. NN0 /\ B e. NN0 ) /\ ( ( B ^ 2 ) < A /\ A < ( ( B + 1 ) ^ 2 ) ) ) -> -. ( sqr ` A ) e. QQ ) $=
+        ? $.
+
     $}
 $}
 
@@ -1319,6 +1393,12 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       IYR $.
     $}
 
+    $( define image of ZZ or NN $)
+    $( prove non-denseness $)
+    $( use logarithms to show all elements are powers of a base $)
+    $( value of PellFund ` a*a-1 $)
+    $( define Ak, Bk $)
+    $( Lucas sequence $)
 $}
 
 $( ---- COMPUTABILITY ---- $)
