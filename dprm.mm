@@ -643,10 +643,17 @@ ${
       $( [13-Sep-2014] $)
 
     qnumgt0 $p |- ( A e. QQ -> ( 0 < A <-> 0 < ( numer ` A ) ) ) $=
-        ? $.
+      ( cq wcel cc0 clt wbr cdenom cfv cmul co cnumer cr wb 0reALT a1i cn qdencl
+      qre nnre syl nngt0 ltmul1 syl112anc cc wceq nncn 3syl qmuldeneqnum breq12d
+      mul02 bitrd ) ABCZDAEFZDAGHZIJZAUNIJZEFZDAKHZEFULDLCZALCUNLCZDUNEFZUMUQMUS
+      ULNOARULUNPCZUTAQZUNSTULVBVAVCUNUATDAUNUBUCULUODUPUREULVBUNUDCUODUEVCUNUFU
+      NUJUGAUHUIUK $.
+      $( [15-Sep-2014] $)
 
     qgt0numnn $p |- ( ( A e. QQ /\ 0 < A ) -> ( numer ` A ) e. NN ) $=
-        ? $.
+      ( cq cc0 clt wbr wa cnumer cfv cz cn qnumcl adantr qnumgt0 biimpa sylanbrc
+      wcel elnnz ) ABPZCADEZFAGHZIPZCTDEZTJPRUASAKLRSUBAMNTQO $.
+      $( [15-Sep-2014] $)
 
     qsqcl $p |- ( A e. QQ -> ( A ^ 2 ) e. QQ ) $=
       ( cq wcel c2 cexp co cmul cc wceq qcn sqval syl qmulcl anidms eqeltrd ) AB
@@ -720,7 +727,17 @@ ${
 
     $( trap ( sqr ` A ) with sqrlt, then use btwnnz and zsqrelqelz $)
     nonsq $p |- ( ( ( A e. NN0 /\ B e. NN0 ) /\ ( ( B ^ 2 ) < A /\ A < ( ( B + 1 ) ^ 2 ) ) ) -> -. ( sqr ` A ) e. QQ ) $=
-        ? $.
+      ( cn0 wcel wa c2 cexp co clt wbr cz ad2antlr cr nn0re ad2antrr syl cc0 cle
+      nn0z nn0ge0 c1 caddc csqr cfv cq wn simprl cc wceq recnd sqrth breqtrrd wb
+      resqrcl syl2anc sqrge0 lt2sq syl22anc mpbird simprr eqbrtrd btwnnz syl3anc
+      peano2re peano2nn0 wi zsqrelqelz ex mtod ) ACDZBCDZEZBFGHZAIJZABUAUBHZFGHZ
+      IJZEZEZAUCUDZUEDZVTKDZVSBKDZBVTIJZVTVOIJZWBUFVKWCVJVRBSLVSWDVMVTFGHZIJZVSV
+      MAWFIVLVNVQUGVSAUHDWFAUIVSAVJAMDZVKVRANOZUJAUKPZULVSBMDZQBRJZVTMDZQVTRJZWD
+      WGUMVKWKVJVRBNLZVKWLVJVRBTLVSWHQARJZWMWIVJWPVKVRATOZAUNUOZVSWHWPWNWIWQAUPU
+      OZBVTUQURUSVSWEWFVPIJZVSWFAVPIWJVLVNVQUTVAVSWMWNVOMDZQVORJZWEWTUMWRWSVSWKX
+      AWOBVDPVKXBVJVRVKVOCDXBBVEVOTPLVTVOUQURUSBVTVBVCVSAKDZWAWBVFVJXCVKVRASOXCW
+      AWBAVGVHPVI $.
+      $( [15-Sep-2014] $)
 
     $}
 $}
