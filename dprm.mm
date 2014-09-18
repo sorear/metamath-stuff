@@ -1754,6 +1754,51 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
 
     $( [Characterize the first quadrant Pell1 as the elements ge 1] $)
 
+    pell1qrss14 $p |- ( D e. ( NN \ []NN ) -> ( Pell1QR ` D ) C_ ( Pell14QR ` D ) ) $=
+      ( va vc vb cn csquarenn cdif wcel cpell1qr cfv cv cmul co wceq c2 cexp cn0
+      wa wrex cz cpell14qr cr csqr caddc cmin c1 wi nn0z anim1d reximdv2 reximdv
+      a1i anim2d elpell1qr elpell14qr 3imtr4d ssrdv ) AEFGHZBAIJZAUAJZURBKZUBHZV
+      ACKZAUCJDKZLMUDMNVCOPMAVDOPMLMUEMUFNRZDQSZCQSZRVBVEDTSZCQSZRVAUSHVAUTHURVG
+      VIVBURVFVHCQURVEVEDQTURVDQHZVDTHZVEVJVKUGURVDUHULUIUJUKUMCDVAAUNCDVAAUOUPU
+      Q $.
+      $( [18-Sep-2014] $)
+
+    pell14qrdich $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> ( A e. ( Pell1QR ` D ) \/ ( 1 / A ) e. ( Pell1QR ` D ) ) ) $=
+      ( va vb wcel wa cmul co caddc wceq c2 cexp c1 cn0 adantr ad3antrrr syl2anc
+      cmin cc oveq2d vc cn csquarenn cdif cpell14qr cfv cr cv csqr wrex cpell1qr
+      cz cdiv elpell14qr biimpa cneg simplrr elznn0 sylib simprd simpllr simplrl
+      wo anass1rs simpr simplr ra42e syl3anc jca ex wb elpell1qr sylibrd cc0 wne
+      simpll pell14qrne0 rereccl pell14qrre recnd recid simprr nn0cn eldifi nncn
+      ad2antrl syl sqrcl ad2antll mulcl subsq sqmul oveq1d eqtr2d mulneg2 negsub
+      zcn sqrth eqcomd eqtr4d oveq12d 3eqtr4d adantrr 3eqtr2d reccl negcl mulcan
+      addcl mpbid ad2antrr sqneg eqtrd oveq2 eqeq2d oveq1 eqeq1d anbi12d rcla4ev
+      syl112anc ra4e orim12d mpd rexlimdvva expimpd ) BUBUCUDEZABUEUFEZFZAUGEZAC
+      UHZBUIUFZDUHZGHZIHZJZYIKLHZBYKKLHZGHZRHZMJZFZDULUJCNUJZFZABUKUFZEZMAUMHZUU
+      CEZVCZYEYFUUBCDABUNUOYGYHUUAUUGYGYHFZYTUUGCDNULUUHYINEZYKULEZFZFZYTUUGUULY
+      TFZYKNEZYKUPZNEZVCZUUGUUMYKUGEZUUQUUMUUJUURUUQFUUHUUIUUJYTUQYKURUSUTUUMUUN
+      UUDUUPUUFUUMUUNYHYTDNUJCNUJZFZUUDUUMUUNUUTUUMUUNFZYHUUSUULUUNYTYHYGYHUUKUU
+      NYTFZVAVDUVAUUIUUNYTUUSUULUUNYTUUIUUHUUIUUJUVBVBVDUUMUUNVEUULYTUUNVFYTCDNN
+      VGVHVIVJYGUUDUUTVKZYHUUKYTYEUVCYFCDABVLOPVMUUMUUPUUEUGEZUUEYIYJUAUHZGHZIHZ
+      JZYOBUVEKLHZGHZRHZMJZFZUANUJZCNUJZFZUUFUUMUUPUVPUUMUUPFZUVDUVOUVQYHAVNVOZU
+      VDUULUUPYTYHYGYHUUKUUPYTFZVAVDUVQYEYFUVRUUHYEUUKYTUUPYEYFYHVPPUUHYFUUKYTUU
+      PYEYFYHVFPABVQZQAVRQUVQUUIUVNUVOUULUUPYTUUIUUHUUIUUJUVSVBVDUVQUUPUUEYIYJUU
+      OGHZIHZJZYOBUUOKLHZGHZRHZMJZFZUVNUUMUUPVEUVQUWCUWGUUMUWCUUPUUMAUUEGHZAUWBG
+      HZJZUWCUUMUWIMYRUWJYGUWIMJZYHUUKYTYGASEZUVRUWLYGAABVSVTZUVTAWAQPUULYNYSWBU
+      ULYNYRUWJJYSUULYNFZYOYLKLHZRHZYMYIYLRHZGHZYRUWJUWOYISEZYLSEZUWQUWSJUULUWTY
+      NUUIUWTUUHUUJYIWCWFZOUULUXAYNUULYJSEZYKSEZUXAUULBSEZUXCYEUXEYFYHUUKYEBUBEU
+      XEBUBUCWDBWEWGPZBWHWGZUUJUXDUUHUUIYKWQWIZYJYKWJQZOYIYLWKQUULYRUWQJYNUULYQU
+      WPYORUULUWPYJKLHZYPGHZYQUULUXCUXDUWPUXKJUXGUXHYJYKWLQUULUXJBYPGUULUXEUXJBJ
+      UXFBWRWGWMWNTOUWOAYMUWBUWRGUULYNVEUULUWBUWRJYNUULUWBYIYLUPZIHZUWRUULUWAUXL
+      YIIUULUXCUXDUWAUXLJUXGUXHYJYKWOQTUULUWTUXAUWRUXMJUXBUXIUWTUXAFUXMUWRYIYLWP
+      WSQWTOXAXBXCXDUUMUUESEZUWBSEZUWMUVRUWKUWCVKYGUXNYHUUKYTYGUWMUVRUXNUWNUVTAX
+      EQPUULUXOYTUULUWTUWASEZUXOUXBUULUXCUUOSEZUXPUXGUULUXDUXQUXHYKXFWGYJUUOWJQY
+      IUWAXHQOYGUWMYHUUKYTUWNPYGUVRYHUUKYTUVTPUUEUWBAXGXSXIOUVQUWFYRMUVQUWEYQYOR
+      UVQUWDYPBGUVQUXDUWDYPJUULUXDYTUUPUXHXJYKXKWGTTUULYNYSUUPUQXLVIUVMUWHUAUUON
+      UVEUUOJZUVHUWCUVLUWGUXRUVGUWBUUEUXRUVFUWAYIIUVEUUOYJGXMTXNUXRUVKUWFMUXRUVJ
+      UWEYORUXRUVIUWDBGUVEUUOKLXOTTXPXQXRQUVNCNXTQVIVJYGUUFUVPVKZYHUUKYTYEUXSYFC
+      UAUUEBVLOPVMYAYBVJYCYDYB $.
+      $( [18-Sep-2014] $)
+
     pell1qrge1 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) ) -> 1 <_ A ) $=
       ( va vb wcel c1 cle wbr cr co wceq c2 wa cn0 a1i nn0re syl cc0 syl2anc cc
       cn csquarenn cdif cpell1qr cfv cv csqr cmul caddc cexp cmin wrex elpell1qr
@@ -1776,33 +1821,6 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       WLSVIWQWMYBXKXOWRWNWOWPWSWTXA $.
       $( [17-Sep-2014] $)
 
-    pell1qrssrp $p |- ( D e. ( NN \ []NN ) -> ( Pell1QR ` D ) C_ RR+ ) $=
-      ( vb vc wcel cr co wceq c2 c1 cn0 cc0 clt wbr cle nn0re adantr syl syl2anc
-      wa a1i va cn csquarenn cdif cpell1qr cfv cv csqr cmul caddc cexp cmin wrex
-      elpell1qr simprl ad2antrl simpll eldifi nnnn0 3syl nn0ge0 resqrcl ad2antll
-      crp remulcl simprr 2nn0 nn0expcl nn0mulcl 1re lt01 addgegt0 syl22anc cc wb
-      sq0 nn0cn ax-1cn subadd syl3anc biimpa eqcomd 3brtr4d 0reALT 0nn0 ad2antlr
-      nn0ge0i lt2sq mpbird sqrge0 mulge0 addgtge0 adantrl breqtrrd ex rexlimdvva
-      impr elrp sylanbrc sylbid ssrdv ) AUBUCUDDZUAAUEUFZVDXBUAUGZXCDXDEDZXDBUGZ
-      AUHUFZCUGZUIFZUJFZGZXFHUKFZAXHHUKFZUIFZULFIGZSZCJUMBJUMZSZXDVDDZBCXDAUNXBX
-      RXSXBXRSXEKXDLMZXSXBXEXQUOXBXEXQXTXBXESZXPXTBCJJYAXFJDZXHJDZSZSZXPXTYEXPSK
-      XJXDLYEXOKXJLMZXKYEXOSZXFEDZXIEDZKXFLMZKXINMZYFYEYHXOYBYHYAYCXFOUPPZYEYIXO
-      YEXGEDZXHEDZYIYEAEDZKANMZYMYEAJDZYOYEXBAUBDYQXBXEYDUQAUBUCURAUSUTZAOQZYEYQ
-      YPYRAVAQZAVBRZYCYNYAYBXHOVCZXGXHVERPYGYJKHUKFZXLLMZYGKXNIUJFZUUCXLLYEKUUEL
-      MZXOYEXNEDZIEDZKXNNMZKILMZUUFYEXNJDZUUGYEYQXMJDZUUKYRYEYCHJDZUULYAYBYCVFUU
-      MYEVGTZXHHVHRAXMVIRZXNOQUUHYEVJTYEUUKUUIUUOXNVAQUUJYEVKTXNIVLVMPUUCKGYGVPT
-      YGUUEXLYEXOUUEXLGZYEXLVNDZXNVNDZIVNDZXOUUPVOYEXLJDZUUQYEYBUUMUUTYAYBYCUOUU
-      NXFHVHRXLVQQYEUUKUURUUOXNVQQUUSYEVRTXLXNIVSVTWAWBWCYGKEDZKKNMZYHKXFNMZYJUU
-      DVOUVAYGWDTUVBYGKWEWGTYLYDUVCYAXOYBUVCYCXFVAPWFKXFWHVMWIYEYKXOYEYMKXGNMZYN
-      KXHNMZYKUUAYEYOYPUVDYSYTAWJRUUBYCUVEYAYBXHVAVCXGXHWKVMPXFXIWLVMWMYEXKXOUOW
-      NWOWPWQXDWRWSWOWTXA $.
-      $( [17-Sep-2014] $)
-
-    ${
-    ge1elpell1qr.1 $e |- C = ( A + ( ( sqr ` D ) x. B ) ) $.
-    ge1elpell1qr $p |- ( ( D e. ( NN \ []NN ) /\ ( A e. ZZ /\ B e. ZZ /\ ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) = 1 ) /\ 1 <_ C ) -> C e. ( Pell1QR ` D ) ) $= ? $.
-    $}
-
     pell1qr1 $p |- ( D e. ( NN \ []NN ) -> 1 e. ( Pell1QR ` D ) ) $=
       ( va vb cn wcel c1 cmul co caddc wceq c2 cexp cmin wa cn0 a1i oveq2d oveq1
       cc0 syl csquarenn cdif cpell1qr cfv cr cv csqr wrex elpell1qr 1nn0 0nn0 cc
@@ -1817,67 +1835,49 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       RWPMXJWEWQAGVTSKLRQQVJVKVMVNVO $.
       $( [17-Sep-2014] $)
 
+    elpell1qr2 $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> ( A e. ( Pell14QR ` D ) /\ 1 <_ A ) ) ) $=
+      ( wcel cfv c1 cle wbr wa pell1qrge1 clt wceq wo cr wb 1re a1i syl2anc cdiv
+      co adantr csquarenn cpell1qr cpell14qr pell1qrss14 sselda pell14qrre leloe
+      cn cdif jca ltnle biimpa ax-1cn div1i eqcomi breq2d cc0 pell14qrgt0 lerec2
+      wn syl22anc bitrd mtbid simplll simpr mtand pell14qrdich pell1qr1 ad2antrr
+      lt01 orel2 sylc eqeltrrd jaodan ex sylbid impr impbida ) BUHUAUICZABUBDZCZ
+      ABUCDZCZEAFGZHVSWAHWCWDVSVTWBABUDUEABIUJVSWCWDWAVSWCHZWDEAJGZEAKZLZWAWEEMC
+      ZAMCZWDWHNWIWEOPZABUFZEAUGQWEWHWAWEWFWAWGWEWFHZEARSZVTCZUTWAWOLZWAWMWOEWNF
+      GZWMAEFGZWQWEWFWRUTZWEWIWJWFWSNWKWLEAUKQULWMWRAEERSZFGZWQWMEWTAFEWTKWMWTEE
+      UMUNUOPUPWMWJUQAJGZWIUQEJGZXAWQNWEWJWFWLTWEXBWFABURTWIWMOPXCWMVJPAEUSVAVBV
+      CWMWOHVSWOWQVSWCWFWOVDWMWOVEWNBIQVFWEWPWFABVGTWOWAVKVLWEWGHEAVTWEWGVEVSEVT
+      CWCWGBVHVIVMVNVOVPVQVR $.
+      $( [18-Sep-2014] $)
+
+    pell1qrgap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ 1 < A ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ A ) $= ? $.
+
+    pell14qrgap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ 1 < A ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ A ) $= ? $.
+
+    pell14qrgapw $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ 1 < A ) -> 2 < A ) $= ? $.
+
+    pellqrex $p |- ( D e. ( NN \ []NN ) -> E. x e. ( Pell1QR ` D ) 1 < x ) $= ? $.
+
+    pellfundval $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) = sup ( { x e. ( Pell1QR ` x ) | 1 < z } , RR , `' < ) ) $= ? $.
+
+    pellfundre $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. RR+ ) $= ? $.
+    pellfundge $p |- ( D e. ( NN \ []NN ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ ( PellFund ` D ) ) $= ? $.
+    pellfundgt1 $p |- ( D e. ( NN \ []NN ) -> 1 < ( PellFund ` D ) ) $= ? $.
+
+    $( use the infimum to find an element ge Fund and lt 2*Fund.  if = Fund we're done, otherwise use the infimum again to find another element which must be ge Fund and lt the first element; their ratio is a group element in (1,2), contradicting pell1qrgapw $)
+    pellfundex $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. ( Pell1QR ` D ) ) $= ? $.
+
+    pellfund14gap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ ( 1 <_ A /\ A < ( PellFund ` D ) ) ) -> A = 1 ) $= ? $.
+
     $(
     qirropth $p |- ( ( E e. ( RR \ QQ ) /\ ( A e. QQ /\ B e. QQ ) /\ ( C e. QQ /\ D e. QQ ) ) -> ( ( A + ( E x. B ) ) = ( C + ( E x. D ) ) <-> ( A = C /\ B = D ) ) ) $=
         ? $.
     $)
 
-
-
-    $( if ` 0 < w ` , the conjugate has ` w < 0 ` and is in ` Pell1QR ` ; otherwise we contradict the third antecedent $)
-    $( requires reality for pell14qr $)
-    pell1qrpell14qrlem $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ -. A e. ( Pell1QR ` D ) ) -> ( 1 / A ) e. ( Pell1QR ` D ) ) $=
-      ( va vc wcel c1 co cmul caddc wceq c2 cexp cmin cn0 wrex ad3antrrr syl2anc
-      wa cc oveq2d vb cn csquarenn cdif cpell14qr cfv cpell1qr wn w3a cdiv cr cv
-      csqr cz elpell14qr biimpa 3adant3 cneg wo simp3 pell14qrre adantr anass1rs
-      simpllr simpr simplr ra42e syl3anc jca wb elpell1qr 3ad2ant1 mpbird elznn0
-      mtand biimpi 3syl orel1 sylc simprr eldifi nncn syl sqrcl ad2antlr mulneg2
-      zcn nn0cn mulcl negsub eqtrd oveq12d subsq sqmul sqrth 3eqtr2d adantrr cc0
-      oveq1d wne recnd pell14qrne0 recid 3eqtr4rd rereccl ad2antrr adantl mulcan
-      negcl addcl syl112anc mpbid sqneg oveq2 eqeq2d eqeq1d anbi12d ex rexlimdva
-      oveq1 rcla4ev reximdva jctild adantld mpd ) BUBUCUDEZABUEUFEZABUGUFZEZUHZU
-      IZFAUJGZYHEZYLUKEZYLCULZBUMUFZUAULZHGZIGZJZYOKLGZBYQKLGZHGZMGZFJZRZUANOZCN
-      OZRZYKAUKEZAYOYPDULZHGZIGZJZUUABUUKKLGZHGZMGZFJZRZDUNOZCNOZRZUUIYFYGUVBYJY
-      FYGUVBCDABUOUPUQYKUVAUUIUUJYKUVAUUHYNYKUUTUUGCNYKYONEZRZUUSUUGDUNUVDUUKUNE
-      ZRZUUSUUGUVFUUSRZUUKURZNEZYLYOYPUVHHGZIGZJZUUABUVHKLGZHGZMGZFJZRZUUGUVGUUK
-      NEZUHUVRUVIUSZUVIUVGUVRYIYKYJUVCUVEUUSYFYGYJUTPUVGUVRRZYIUUJUUSDNOCNOZRZUV
-      TUUJUWAUVDUUJUVEUUSUVRYKUUJUVCYFYGUUJYJABVAUQZVBPUVTUVCUVRUUSUWAUVFUVRUUSU
-      VCYKUVCUVEUVRUUSRVDVCUVGUVRVEUVFUUSUVRVFUUSCDNNVGVHVIUVDYIUWBVJZUVEUUSUVRY
-      KUWDUVCYFYGUWDYJCDABVKVLVBPVMVOUVGUVEUUKUKEZUVSRZUVSUVDUVEUUSVFZUVEUWFUUKV
-      NVPUWEUVSVEVQUVRUVIVRVSUVGUVLUVPUVGAYLHGZAUVKHGZJZUVLUVGUUQFUWIUWHUVFUUNUU
-      RVTZUVFUUNUWIUUQJUURUVFUUNRZUWIUUMYOUULMGZHGZUUAUULKLGZMGZUUQUWLAUUMUVKUWM
-      HUVFUUNVEUWLUVKYOUULURZIGZUWMUWLUVJUWQYOIUWLYPSEZUUKSEZUVJUWQJYKUWSUVCUVEU
-      UNYKBSEZUWSYFYGUXAYJYFBUBEZUXABUBUCWAZBWBZWCVLZBWDZWCPZUVEUWTUVDUUNUUKWGZW
-      EZYPUUKWFQTUWLYOSEZUULSEZUWRUWMJUVFUXJUUNUVCUXJYKUVEYOWHWEZVBZUWLUWSUWTUXK
-      UXGUXIYPUUKWIQZYOUULWJQWKWLUWLUXJUXKUWPUWNJUXMUXNYOUULWMQUWLUWOUUPUUAMUWLU
-      WOYPKLGZUUOHGZUUPUWLUWSUWTUWOUXPJUXGUXIYPUUKWNQUWLUXOBUUOHUWLUXAUXOBJYKUXA
-      UVCUVEUUNUXEPBWOWCWSWKTWPWQYKUWHFJZUVCUVEUUSYKASEZAWRWTZUXQYKAUWCXAZYFYGUX
-      SYJABXBUQZAXCQPXDUVGYLSEZUVKSEZUXRUXSUWJUVLVJYKUYBUVCUVEUUSYKYLYKUUJUXSYNU
-      WCUYAAXEQZXAPUVFUYCUUSUVFUXJUVJSEZUYCUXLUVFUWSUVHSEZUYEUVFUXBUXAUWSYKUXBUV
-      CUVEYFYGUXBYJUXCVLXFUXDUXFVQUVFUWTUYFUVEUWTUVDUXHXGUUKXIWCYPUVHWIQYOUVJXJQ
-      VBYKUXRUVCUVEUUSUXTPYKUXSUVCUVEUUSUYAPYLUVKAXHXKXLUVGUVOUUQFUVGUVNUUPUUAMU
-      VGUVMUUOBHUVGUVEUWTUVMUUOJUWGUXHUUKXMVQTTUWKWKVIUUFUVQUAUVHNYQUVHJZYTUVLUU
-      EUVPUYGYSUVKYLUYGYRUVJYOIYQUVHYPHXNTXOUYGUUDUVOFUYGUUCUVNUUAMUYGUUBUVMBHYQ
-      UVHKLXTTTXPXQYAQXRXSYBUYDYCYDYEYFYGYMUUIVJYJCUAYLBVKVLVM $.
-
-
-    $( forward is already proved.  for reverse, consider ` 1 = A ` case (use ~ pell1qr1 ) and ` 1 < A ` case ( ` ( 1 / A ) ` is clearly less than 1, thus not in ` Pell1QR ` , so ` ( 1 / ( 1 / A ) ) ` is by the lemma ) $)
-    pell1qrpell14qr $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> ( A e. ( Pell14QR ` D ) /\ 1 <_ A ) ) ) $= ? $.
-
     pell1qrmulcl $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. ( Pell1QR ` D ) ) -> ( A x. B ) e. ( Pell1QR ` D ) ) $= ? $.
     pell1qrexpcl $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. NN0 ) -> ( A ^ B ) e. ( Pell1QR ` D ) ) $= ? $.
     pell1qrdivcl $p |- ( ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. ( Pell1QR ` D ) ) /\ B <_ A ) -> ( A / B ) e. ( Pell1QR ` D ) ) $= ? $.
-    pell1qrex $p |- ( D e. ( NN \ []NN ) -> E. x e. ( Pell1QR ` D ) 1 < x ) $= ? $.
-    pell1qrgap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ 1 < A ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ A ) $= ? $.
-    pell1qrgapw $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ 1 < A ) -> 2 < A ) $= ? $.
 
-    pellfundval $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) = sup ( { x e. ( Pell1QR ` x ) | 1 < z } , RR , `' < ) ) $= ? $.
-    $( use the infimum to find an element ge Fund and lt 2*Fund.  if = Fund we're done, otherwise use the infimum again to find another element which must be ge Fund and lt the first element; their ratio is a group element in (1,2), contradicting pell1qrgapw $)
-    pellfundex $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. ( Pell1QR ` D ) ) $= ? $.
-    pellfundge $p |- ( D e. ( NN \ []NN ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ ( PellFund ` D ) ) $= ? $.
-    pellfundgt1 $p |- ( D e. ( NN \ []NN ) -> 1 < ( PellFund ` D ) ) $= ? $.
     pellfundspec $p |- ( A e. ( ZZ>= ` 2 ) -> ( PellFund ` ( ( A ^ 2 ) - 1 ) ) = ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ) $= ? $.
-    pellfund14gap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ ( 1 <_ A /\ A < ( PellFund ` D ) ) ) -> A = 1 ) $= ? $.
     pellfund14 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) $= ? $.
     pellfund14b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell14QR ` D ) <-> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) ) $= ? $.
     pellfund1b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> E. x e. NN0 A = ( ( PellFund ` D ) ^ x ) ) ) $= ? $.
