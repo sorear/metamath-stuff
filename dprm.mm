@@ -973,6 +973,8 @@ ${
       $( [14-Sep-2014] $)
 $}
 
+$c Pell1QR Pell14QR PellFund []NN $.
+
 $( the following development comprises [vandenDries] lemma 62, credited to Dirichlet $)
 ${
     $d a b c d e f g A $.
@@ -988,6 +990,8 @@ ${
     $d a b c d e f g y $.
     $d a b c d e f g z $.
     $d a b c d e f g ph $.
+
+    $( a bit of terminology - Pell field = Q[sqr d], Pell ring = Z[sqr d] (algebraic integers in Pell field), Pell group = right branch of the group of units in Pell ring - isomorphic to ZZ, Pell semigroup = Pell group elements >= 1, resembles NN0 $)
 
     $( Arithmetical core of pellexlem3, norm lower bound $)
     pellexlem1 $p |- ( ( ( D e. NN /\ A e. NN /\ B e. NN ) /\ -. ( sqr ` D ) e. QQ ) -> ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) =/= 0 ) $=
@@ -1410,12 +1414,272 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       IYR $.
     $}
 
+    $( from now on, all work is in the Pell group, either in ( NN X. ZZ ) or RR $)
+    $( multiplication formula $)
+
+    $(
+    pellmulfo $p |- ( ( D e. NN /\ ( A e. ZZ /\ B e. ZZ /\ ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) = 1 ) /\ ( E e. ZZ /\ F e. ZZ /\ ( ( E ^ 2 ) - ( D x. ( F ^ 2 ) ) ) = 1 ) ) -> (   /\ ) ) $=
+        ? $.
+    $)
+
+    $( reciprocal/conjugate formula $)
+    $( pell group is in RR+ - 1Q case $)
+    $( extend to both 1Q+4Q using rpreccl $)
+    $( 1Q iff > 1 $)
+    $( 1Q exists (restate pellex) $)
+    $( a minimal 1Q exists [most likely using an order isomorphism and a well-ordering on NN] $)
+    $( if a PGE is in [1,PellFund), it equals 1 $)
+    $( any PGE equals ` ( Fund ^ ( |_ `` ( ( log `` A ) / ( log `` Fund ) ) ) ) ` $)
+
     $( define image of ZZ or NN $)
     $( prove non-denseness $)
     $( use logarithms to show all elements are powers of a base $)
     $( value of PellFund ` a*a-1 $)
     $( define Ak, Bk $)
     $( Lucas sequence $)
+
+    $( feasibility study of proving existance of the fundamental theorem and the structure theorem using only Pell1QR and a cancellation law $)
+
+    cpell1qr $a class Pell1QR $.
+    cpell14qr $a class Pell14QR $.
+    cpellfund $a class PellFund $.
+    csquarenn $a class []NN $.
+
+    df-squarenn $a |- []NN = { x e. NN | ( sqr ` x ) e. QQ } $.
+
+    ${
+    $d x y z w $.
+    df-pell1qr $a |- Pell1QR = ( x e. ( NN \ []NN ) |-> { y e. RR | E. z e. NN0 E. w e. NN0 ( y = ( z + ( ( sqr ` x ) x. w ) ) /\ ( ( z ^ 2 ) - ( x x. ( w ^ 2 ) ) ) = 1 ) } ) $.
+    df-pell14qr $a |- Pell14QR = ( x e. ( NN \ []NN ) |-> { y e. RR | E. z e. NN0 E. w e. ZZ ( y = ( z + ( ( sqr ` x ) x. w ) ) /\ ( ( z ^ 2 ) - ( x x. ( w ^ 2 ) ) ) = 1 ) } ) $.
+    df-pellfund $a |- PellFund = ( x e. ( NN \ []NN ) |-> sup ( { z e. ( Pell1QR ` x ) | 1 < z } , RR , `' < ) ) $.
+    $}
+
+    ${
+    $d y z w D $.
+    $d y z w A $.
+    pell1qrval $p |- ( D e. ( NN \ []NN ) -> ( Pell1QR ` D ) = { y e. RR | E. z e. NN0 E. w e. NN0 ( y = ( z + ( ( sqr ` D ) x. w ) ) /\ ( ( z ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = 1 ) } ) $=
+      ( va cv csqr cfv cmul co caddc wceq c2 cexp cmin c1 wa cn0 wrex cr crab cn
+      csquarenn cdif cpell1qr fveq2 oveq1d oveq2d eqeq2d eqeq1d anbi12d 2rexbidv
+      oveq1 rabbidv df-pell1qr reex rabex fvmpt ) EDAFZBFZEFZGHZCFZIJZKJZLZUTMNJ
+      ZVAVCMNJZIJZOJZPLZQZCRSBRSZATUAUSUTDGHZVCIJZKJZLZVGDVHIJZOJZPLZQZCRSBRSZAT
+      UAUBUCUDUEVADLZVMWBATWCVLWABCRRWCVFVQVKVTWCVEVPUSWCVDVOUTKWCVBVNVCIVADGUFU
+      GUHUIWCVJVSPWCVIVRVGOVADVHIUMUHUJUKULUNEABCUOWBATUPUQUR $.
+      $( [17-Sep-2014] $)
+
+    elpell1qr $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> ( A e. RR /\ E. z e. NN0 E. w e. NN0 ( A = ( z + ( ( sqr ` D ) x. w ) ) /\ ( ( z ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = 1 ) ) ) ) $=
+      ( va cn csquarenn cdif wcel cfv cv cmul co wceq c2 cexp wa cn0 wrex cr c1
+      cpell1qr csqr caddc cmin crab pell1qrval eleq2d eqeq1 anbi1d elrab syl6bb
+      2rexbidv ) DFGHIZCDUBJZICEKZAKZDUCJBKZLMUDMZNZUQOPMDUROPMLMUEMUANZQZBRSARS
+      ZETUFZICTICUSNZVAQZBRSARSZQUNUOVDCEABDUGUHVCVGECTUPCNZVBVFABRRVHUTVEVAUPCU
+      SUIUJUMUKUL $.
+      $( [17-Sep-2014] $)
+
+    pell14qrval $p |- ( D e. ( NN \ []NN ) -> ( Pell14QR ` D ) = { y e. RR | E. z e. NN0 E. w e. ZZ ( y = ( z + ( ( sqr ` D ) x. w ) ) /\ ( ( z ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = 1 ) } ) $=
+      ( va cv csqr cfv cmul co caddc wceq c2 cexp cmin c1 cz wrex cn0 cr wa crab
+      csquarenn cdif cpell14qr fveq2 oveq1d oveq2d eqeq2d oveq1 anbi12d 2rexbidv
+      cn eqeq1d rabbidv df-pell14qr reex rabex fvmpt ) EDAFZBFZEFZGHZCFZIJZKJZLZ
+      VAMNJZVBVDMNJZIJZOJZPLZUAZCQRBSRZATUBUTVADGHZVDIJZKJZLZVHDVIIJZOJZPLZUAZCQ
+      RBSRZATUBUMUCUDUEVBDLZVNWCATWDVMWBBCSQWDVGVRVLWAWDVFVQUTWDVEVPVAKWDVCVOVDI
+      VBDGUFUGUHUIWDVKVTPWDVJVSVHOVBDVIIUJUHUNUKULUOEABCUPWCATUQURUS $.
+      $( [17-Sep-2014] $)
+
+
+    elpell14qr $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell14QR ` D ) <-> ( A e. RR /\ E. z e. NN0 E. w e. ZZ ( A = ( z + ( ( sqr ` D ) x. w ) ) /\ ( ( z ^ 2 ) - ( D x. ( w ^ 2 ) ) ) = 1 ) ) ) ) $=
+      ( va cn csquarenn wcel cfv cv cmul co wceq c2 cexp wa cz wrex cn0 cr caddc
+      cdif cpell14qr csqr cmin c1 pell14qrval eleq2d eqeq1 anbi1d 2rexbidv elrab
+      crab syl6bb ) DFGUBHZCDUCIZHCEJZAJZDUDIBJZKLUALZMZURNOLDUSNOLKLUELUFMZPZBQ
+      RASRZETUMZHCTHCUTMZVBPZBQRASRZPUOUPVECEABDUGUHVDVHECTUQCMZVCVGABSQVIVAVFVB
+      UQCUTUIUJUKULUN $.
+      $( [17-Sep-2014] $)
+
+    $}
+
+    pell1qrge1 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) ) -> 1 <_ A ) $=
+      ( va vb wcel c1 cle wbr cr co wceq c2 wa cn0 a1i nn0re syl cc0 syl2anc cc
+      cn csquarenn cdif cpell1qr cfv cv csqr cmul caddc cexp cmin wrex elpell1qr
+      1re simplrl simplll eldifi nnnn0 3syl resqrcl simplrr remulcl readdcl 2nn0
+      nn0ge0 nn0expcl nn0mulcl addge02 mpbid sq1 nn0cn ad2antrl sqcl simpll nncn
+      wb ad2antll mulcl ax-1cn subadd syl3anc biimpa eqcomd 3brtr4d 1nn0 nn0ge0i
+      le2sq syl22anc mpbird sqrge0 mulge0 addge01 adantrl breqtrrd ex rexlimdvva
+      letrd simprl expimpd sylbid imp ) BUAUBUCEZABUDUEEZFAGHZXBXCAIEZACUFZBUGUE
+      ZDUFZUHJZUIJZKZXFLUJJZBXHLUJJZUHJZUKJFKZMZDNULCNULZMXDCDABUMXBXEXQXDXBXEMZ
+      XPXDCDNNXRXFNEZXHNEZMZMZXPXDYBXPMFXJAGYBXOFXJGHXKYBXOMZFXFXJFIEZYCUNOZYCXS
+      XFIEZXRXSXTXOUOZXFPQZYCYFXIIEZXJIEYHYCXGIEZXHIEZYIYCBIEZRBGHZYJYCBNEZYLYCX
+      BBUAEZYNXBXEYAXOUPBUAUBUQZBURUSZBPQZYCYNYMYQBVEQZBUTSZYCXTYKXRXSXTXOVAZXHP
+      QZXGXHVBSZXFXIVCSYCFXFGHZFLUJJZXLGHZYCFXNFUIJZUUEXLGYCRXNGHZFUUGGHZYCXNNEZ
+      UUHYCYNXMNEZUUJYQYCXTLNEZUUKUUAUULYCVDOXHLVFSBXMVGSZXNVEQYCYDXNIEZUUHUUIVP
+      YEYCUUJUUNUUMXNPQFXNVHSVIUUEFKYCVJOYCUUGXLYBXOUUGXLKZYBXLTEZXNTEZFTEZXOUUO
+      VPYBXFTEZUUPXSUUSXRXTXFVKVLXFVMQYBBTEZXMTEZUUQYBXBYOUUTXBXEYAVNYPBVOUSYBXH
+      TEZUVAXTUVBXRXSXHVKVQXHVMQBXMVRSUURYBVSOXLXNFVTWAWBWCWDYCYDRFGHZYFRXFGHZUU
+      DUUFVPYEUVCYCFWEWFOYHYCXSUVDYGXFVEQFXFWGWHWIYCRXIGHZXFXJGHZYCYJRXGGHZYKRXH
+      GHZUVEYTYCYLYMUVGYRYSBWJSUUBYCXTUVHUUAXHVEQXGXHWKWHYCYFYIUVEUVFVPYHUUCXFXI
+      WLSVIWQWMYBXKXOWRWNWOWPWSWTXA $.
+      $( [17-Sep-2014] $)
+
+    pell1qrssrp $p |- ( D e. ( NN \ []NN ) -> ( Pell1QR ` D ) C_ RR+ ) $=
+      ( vb vc wcel cr co wceq c2 c1 cn0 cc0 clt wbr cle nn0re adantr syl syl2anc
+      wa a1i va cn csquarenn cdif cpell1qr cfv cv csqr cmul caddc cexp cmin wrex
+      elpell1qr simprl ad2antrl simpll eldifi nnnn0 3syl nn0ge0 resqrcl ad2antll
+      crp remulcl simprr 2nn0 nn0expcl nn0mulcl 1re lt01 addgegt0 syl22anc cc wb
+      sq0 nn0cn ax-1cn subadd syl3anc biimpa eqcomd 3brtr4d 0reALT 0nn0 ad2antlr
+      nn0ge0i lt2sq mpbird sqrge0 mulge0 addgtge0 adantrl breqtrrd ex rexlimdvva
+      impr elrp sylanbrc sylbid ssrdv ) AUBUCUDDZUAAUEUFZVDXBUAUGZXCDXDEDZXDBUGZ
+      AUHUFZCUGZUIFZUJFZGZXFHUKFZAXHHUKFZUIFZULFIGZSZCJUMBJUMZSZXDVDDZBCXDAUNXBX
+      RXSXBXRSXEKXDLMZXSXBXEXQUOXBXEXQXTXBXESZXPXTBCJJYAXFJDZXHJDZSZSZXPXTYEXPSK
+      XJXDLYEXOKXJLMZXKYEXOSZXFEDZXIEDZKXFLMZKXINMZYFYEYHXOYBYHYAYCXFOUPPZYEYIXO
+      YEXGEDZXHEDZYIYEAEDZKANMZYMYEAJDZYOYEXBAUBDYQXBXEYDUQAUBUCURAUSUTZAOQZYEYQ
+      YPYRAVAQZAVBRZYCYNYAYBXHOVCZXGXHVERPYGYJKHUKFZXLLMZYGKXNIUJFZUUCXLLYEKUUEL
+      MZXOYEXNEDZIEDZKXNNMZKILMZUUFYEXNJDZUUGYEYQXMJDZUUKYRYEYCHJDZUULYAYBYCVFUU
+      MYEVGTZXHHVHRAXMVIRZXNOQUUHYEVJTYEUUKUUIUUOXNVAQUUJYEVKTXNIVLVMPUUCKGYGVPT
+      YGUUEXLYEXOUUEXLGZYEXLVNDZXNVNDZIVNDZXOUUPVOYEXLJDZUUQYEYBUUMUUTYAYBYCUOUU
+      NXFHVHRXLVQQYEUUKUURUUOXNVQQUUSYEVRTXLXNIVSVTWAWBWCYGKEDZKKNMZYHKXFNMZYJUU
+      DVOUVAYGWDTUVBYGKWEWGTYLYDUVCYAXOYBUVCYCXFVAPWFKXFWHVMWIYEYKXOYEYMKXGNMZYN
+      KXHNMZYKUUAYEYOYPUVDYSYTAWJRUUBYCUVEYAYBXHVAVCXGXHWKVMPXFXIWLVMWMYEXKXOUOW
+      NWOWPWQXDWRWSWOWTXA $.
+      $( [17-Sep-2014] $)
+
+    ${
+    ge1elpell1qr.1 $e |- C = ( A + ( ( sqr ` D ) x. B ) ) $.
+    ge1elpell1qr $p |- ( ( D e. ( NN \ []NN ) /\ ( A e. ZZ /\ B e. ZZ /\ ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) = 1 ) /\ 1 <_ C ) -> C e. ( Pell1QR ` D ) ) $= ? $.
+    $}
+
+    pell1qr1 $p |- ( D e. ( NN \ []NN ) -> 1 e. ( Pell1QR ` D ) ) $=
+      ( va vb cn wcel c1 cmul co caddc wceq c2 cexp cmin wa cn0 a1i oveq2d oveq1
+      cc0 syl csquarenn cdif cpell1qr cfv cr cv csqr wrex elpell1qr 1nn0 0nn0 cc
+      1re eldifi nncn sqrcl ax-1cn addid1i syl6req sq1 sq0 oveq2i syl5eq oveq12d
+      mul01 subid1i syl6eq eqeq2d oveq1d eqeq1d anbi12d oveq2 rcla42ev syl112anc
+      mpbir2and ) ADUAUBEZFAUCUDEFUEEZFBUFZAUGUDZCUFZGHZIHZJZVRKLHZAVTKLHZGHZMHZ
+      FJZNZCOUHBOUHZBCFAUIVQVPUMPVPFOEZSOEZFFVSSGHZIHZJZFKLHZASKLHZGHZMHZFJZWJWK
+      VPUJPWLVPUKPVPWNFSIHFVPWMSFIVPVSULEZWMSJVPAULEZXAVPADEXBADUAUNAUOTZAUPTVSV
+      ETQFUQURUSVPWSFSMHFVPWPFWRSMWPFJVPUTPVPWRASGHZSWQSAGVAVBVPXBXDSJXCAVETVCVD
+      FUQVFVGWIWOWTNFFWAIHZJZWPWFMHZFJZNBCFSOOVRFJZWCXFWHXHXIWBXEFVRFWAIRVHXIWGX
+      GFXIWDWPWFMVRFKLRVIVJVKVTSJZXFWOXHWTXJXEWNFXJWAWMFIVTSVSGVLQVHXJXGWSFXJWFW
+      RWPMXJWEWQAGVTSKLRQQVJVKVMVNVO $.
+      $( [17-Sep-2014] $)
+
+    qirropth $p |- ( ( E e. ( RR \ QQ ) /\ ( A e. QQ /\ B e. QQ ) /\ ( C e. QQ /\ D e. QQ ) ) -> ( ( A + ( E x. B ) ) = ( C + ( E x. D ) ) <-> ( A = C /\ B = D ) ) ) $=
+        ? $.
+
+    pell14qrre $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> A e. RR ) $=
+      ( va vb cn csquarenn cdif wcel cpell14qr cfv wa cr cv csqr cmul co wceq c2
+      cexp wrex caddc cmin c1 cz cn0 elpell14qr biimpd imp simpld ) BEFGHZABIJHZ
+      KALHZACMZBNJDMZOPUAPQUMRSPBUNRSPOPUBPUCQKDUDTCUETZUJUKULUOKZUJUKUPCDABUFUG
+      UHUI $.
+      $( [17-Sep-2014] $)
+
+
+    pell14qrne0 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> A =/= 0 ) $=
+      ( va vb cn wcel cc0 cmul co wceq c2 cexp cmin c1 wa cz syl oveq1d syl2anc
+      cc csquarenn cdif cpell14qr cfv wne cr cv csqr wrex cn0 elpell14qr ax-1ne0
+      caddc nn0cn ad2antrl subid1 eqcomd simpr simplrl eqtr3d oveq2d cneg simpll
+      ad2antrr eldifi nncn 3syl sqrcl zcn ad2antll mulcl negcl nncan eqtrd sqneg
+      subneg sqmul sqrth 3eqtrd simplrr sqcl subid 3eqtr3d ex necon3d rexlimdvva
+      mpi expimpd sylbid imp ) BEUAUBFZABUCUDFZAGUEZWKWLAUFFZACUGZBUHUDZDUGZHIZU
+      MIZJZWOKLIZBWQKLIZHIZMIZNJZOZDPUICUJUIZOWMCDABUKWKWNXGWMWKWNOZXFWMCDUJPXHW
+      OUJFZWQPFZOZOZXFWMXLXFOZNGUEWMULXMAGNGXMAGJZNGJXMXNOZXDXCXCMIZNGXOXAXCXCMX
+      OXAWOGMIZKLIWOWSMIZKLIZXCXOWOXQKLXOXQWOXOWOTFZXQWOJXLXTXFXNXIXTXHXJWOUNUOZ
+      VDWOUPQUQRXOXQXRKLXOGWSWOMXOAGWSXMXNURXLWTXEXNUSUTVARXLXSXCJXFXNXLXSWRVBZK
+      LIZWRKLIZXCXLXRYBKLXLXRWOWOYBMIZMIZYBXLWSYEWOMXLYEWSXLXTWRTFZYEWSJYAXLWPTF
+      ZWQTFZYGXLBTFZYHXLWKBEFYJWKWNXKVCBEUAVEBVFVGZBVHQZXJYIXHXIWQVIVJZWPWQVKSZW
+      OWRVPSUQVAXLXTYBTFZYFYBJYAXLYGYOYNWRVLQWOYBVMSVNRXLYGYCYDJYNWRVOQXLYDWPKLI
+      ZXBHIZXCXLYHYIYDYQJYLYMWPWQVQSXLYPBXBHXLYJYPBJYKBVRQRVNVSVDVSRXLWTXEXNVTXO
+      XCTFZXPGJXLYRXFXNXLYJXBTFZYRYKXLYIYSYMWQWAQBXBVKSVDXCWBQWCWDWEWGWDWFWHWIWJ
+      $.
+      $( [17-Sep-2014] $)
+
+    $( probably a dead end, probably better to define Pell1234QR and prove mulcl on that $)
+    pell14qrmulcl $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ B e. ( Pell14QR ` D ) ) -> ( A x. B ) e. ( Pell14QR ` D ) ) $=
+      ( wcel cmul co cv caddc wceq c2 cexp cmin c1 wa cz wrex cn0 syl2anc cc syl
+      va vb vc vd ve vf cn csquarenn cdif cpell14qr cr csqr wi simpllr ad3antrrr
+      cfv remulcl simplrr zmulcl zaddcl simprl oveq12d simplrl nn0cn eldifi nncn
+      simplll 3syl sqrcl zcn mulcl muladd syl22anc mul4 sqval sqrth eqtr3d eqtrd
+      oveq1d oveq2d mul12 syl3anc adddi eqcomd 3eqtrd oveq1 eqeq2d anbi12d oveq2
+      jca eqeq1d rcla42ev ex rexlimdvva imp3a elpell14qr 3imtr4d exp3a 3imp ) CU
+      GUHUIDZACUJUPZDZBXADZABEFZXADZWTXBXCXEWTAUKDZAUAGZCULUPZUBGZEFZHFZIZXGJKFC
+      XIJKFEFLFMIZNZUBOPUAQPZNZBUKDZBUCGZXHUDGZEFZHFZIZXRJKFCXSJKFEFLFMIZNZUDOPU
+      CQPZNZNXDUKDZXDUEGZXHUFGZEFZHFZIZYHJKFZCYIJKFZEFZLFZMIZNZUFOPUEQPZNZXBXCNX
+      EWTXPYFYTWTXFXOYFYTUMZWTXFXOUUAUMWTXFNZXNUUAUAUBQOUUBXGQDZXIODZNZNZXNUUAUU
+      FXNNZXQYEYTUUGXQYEYTUMUUGXQNZYDYTUCUDQOUUHXRQDZXSODZNZNZYDYTUULYDNZYGYSUUM
+      XFXQYGUUGXFXQUUKYDWTXFUUEXNUNUOUUGXQUUKYDUNABUQRUUMXGXREFZCXSXIEFZEFZHFZQD
+      XGXSEFZXRXIEFZHFZODZXDUUQXHUUTEFZHFZIZUUQJKFZCUUTJKFZEFZLFZMIZNZYS?UUMUURO
+      DZUUSODZUVAUUMXGODUUJUVK?UUHUUIUUJYDURZXGXSUSRUUMXRODUUDUVL?UUGUUDXQUUKYDU
+      UBUUCUUDXNURUOZXRXIUSRUURUUSUTRUUMUVDUVIUUMXDXKYAEFZUUNXTXJEFZHFZXGXTEFZXR
+      XJEFZHFZHFZUVCUUMAXKBYAEUUGXLXQUUKYDUUFXLXMVAUOUULYBYCVAVBUUMXGSDZXJSDZXRS
+      DZXTSDZUVOUWAIUUMUUCUWBUUGUUCXQUUKYDUUBUUCUUDXNVCUOXGVDTZUUMXHSDZXISDZUWCU
+      UMCSDZUWGUUMWTCUGDUWIUUGWTXQUUKYDWTXFUUEXNVGUOCUGUHVECVFVHZCVITZUUMUUDUWHU
+      VNXIVJTZXHXIVKRUUMUUIUWDUUHUUIUUJYDVCXRVDTZUUMUWGXSSDZUWEUWKUUMUUJUWNUVMXS
+      VJTZXHXSVKRXGXJXRXTVLVMUUMUVQUUQUVTUVBHUUMUVPUUPUUNHUUMUVPXHXHEFZUUOEFZUUP
+      UUMUWGUWNUWGUWHUVPUWQIUWKUWOUWKUWLXHXSXHXIVNVMUUMUWPCUUOEUUMXHJKFZUWPCUUMU
+      WGUWRUWPIUWKXHVOTUUMUWIUWRCIUWJCVPTVQVSVRVTUUMUVTXHUUREFZXHUUSEFZHFZUVBUUM
+      UVRUWSUVSUWTHUUMUWBUWGUWNUVRUWSIUWFUWKUWOXGXHXSWAWBUUMUWDUWGUWHUVSUWTIUWMU
+      WKUWLXRXHXIWAWBVBUUMUVBUXAUUMUWGUURSDZUUSSDZUVBUXAIUWKUUMUWBUWNUXBUWFUWOXG
+      XSVKRUUMUWDUWHUXCUWMUWLXRXIVKRXHUURUUSWCWBWDVRVBWE?WJYRUVJXDUUQYJHFZIZUVEY
+      OLFZMIZNUEUFUUQUUTQOYHUUQIZYLUXEYQUXGUXHYKUXDXDYHUUQYJHWFWGUXHYPUXFMUXHYMU
+      VEYOLYHUUQJKWFVSWKWHYIUUTIZUXEUVDUXGUVIUXIUXDUVCXDUXIYJUVBUUQHYIUUTXHEWIVT
+      WGUXIUXFUVHMUXIYOUVGUVELUXIYNUVFCEYIUUTJKWFVTVTWKWHWLWBWJWMWNWMWOWMWNWMWOW
+      OWTXBXPXCYFUAUBACWPUCUDBCWPWHUEUFXDCWPWQWRWS $.
+      $( [17-Sep-2014] $)
+
+
+    pell14qrreccl $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> ( 1 / A ) e. ( Pell14QR ` D ) ) $= ? $.
+
+
+    $( if ` 0 < w ` , the conjugate has ` w < 0 ` and is in ` Pell1QR ` ; otherwise we contradict the third antecedent $)
+    $( requires reality for pell14qr $)
+    pell1qrpell14qrlem $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ -. A e. ( Pell1QR ` D ) ) -> ( 1 / A ) e. ( Pell1QR ` D ) ) $=
+      ( va vc wcel c1 co cmul caddc wceq c2 cexp cmin cn0 wrex ad3antrrr syl2anc
+      wa cc oveq2d vb cn csquarenn cdif cpell14qr cfv cpell1qr wn w3a cdiv cr cv
+      csqr cz elpell14qr biimpa 3adant3 cneg wo simp3 pell14qrre adantr anass1rs
+      simpllr simpr simplr ra42e syl3anc jca wb elpell1qr 3ad2ant1 mpbird elznn0
+      mtand biimpi 3syl orel1 sylc simprr eldifi nncn syl sqrcl ad2antlr mulneg2
+      zcn nn0cn mulcl negsub eqtrd oveq12d subsq sqmul sqrth 3eqtr2d adantrr cc0
+      oveq1d wne recnd pell14qrne0 recid 3eqtr4rd rereccl ad2antrr adantl mulcan
+      negcl addcl syl112anc mpbid sqneg oveq2 eqeq2d eqeq1d anbi12d ex rexlimdva
+      oveq1 rcla4ev reximdva jctild adantld mpd ) BUBUCUDEZABUEUFEZABUGUFZEZUHZU
+      IZFAUJGZYHEZYLUKEZYLCULZBUMUFZUAULZHGZIGZJZYOKLGZBYQKLGZHGZMGZFJZRZUANOZCN
+      OZRZYKAUKEZAYOYPDULZHGZIGZJZUUABUUKKLGZHGZMGZFJZRZDUNOZCNOZRZUUIYFYGUVBYJY
+      FYGUVBCDABUOUPUQYKUVAUUIUUJYKUVAUUHYNYKUUTUUGCNYKYONEZRZUUSUUGDUNUVDUUKUNE
+      ZRZUUSUUGUVFUUSRZUUKURZNEZYLYOYPUVHHGZIGZJZUUABUVHKLGZHGZMGZFJZRZUUGUVGUUK
+      NEZUHUVRUVIUSZUVIUVGUVRYIYKYJUVCUVEUUSYFYGYJUTPUVGUVRRZYIUUJUUSDNOCNOZRZUV
+      TUUJUWAUVDUUJUVEUUSUVRYKUUJUVCYFYGUUJYJABVAUQZVBPUVTUVCUVRUUSUWAUVFUVRUUSU
+      VCYKUVCUVEUVRUUSRVDVCUVGUVRVEUVFUUSUVRVFUUSCDNNVGVHVIUVDYIUWBVJZUVEUUSUVRY
+      KUWDUVCYFYGUWDYJCDABVKVLVBPVMVOUVGUVEUUKUKEZUVSRZUVSUVDUVEUUSVFZUVEUWFUUKV
+      NVPUWEUVSVEVQUVRUVIVRVSUVGUVLUVPUVGAYLHGZAUVKHGZJZUVLUVGUUQFUWIUWHUVFUUNUU
+      RVTZUVFUUNUWIUUQJUURUVFUUNRZUWIUUMYOUULMGZHGZUUAUULKLGZMGZUUQUWLAUUMUVKUWM
+      HUVFUUNVEUWLUVKYOUULURZIGZUWMUWLUVJUWQYOIUWLYPSEZUUKSEZUVJUWQJYKUWSUVCUVEU
+      UNYKBSEZUWSYFYGUXAYJYFBUBEZUXABUBUCWAZBWBZWCVLZBWDZWCPZUVEUWTUVDUUNUUKWGZW
+      EZYPUUKWFQTUWLYOSEZUULSEZUWRUWMJUVFUXJUUNUVCUXJYKUVEYOWHWEZVBZUWLUWSUWTUXK
+      UXGUXIYPUUKWIQZYOUULWJQWKWLUWLUXJUXKUWPUWNJUXMUXNYOUULWMQUWLUWOUUPUUAMUWLU
+      WOYPKLGZUUOHGZUUPUWLUWSUWTUWOUXPJUXGUXIYPUUKWNQUWLUXOBUUOHUWLUXAUXOBJYKUXA
+      UVCUVEUUNUXEPBWOWCWSWKTWPWQYKUWHFJZUVCUVEUUSYKASEZAWRWTZUXQYKAUWCXAZYFYGUX
+      SYJABXBUQZAXCQPXDUVGYLSEZUVKSEZUXRUXSUWJUVLVJYKUYBUVCUVEUUSYKYLYKUUJUXSYNU
+      WCUYAAXEQZXAPUVFUYCUUSUVFUXJUVJSEZUYCUXLUVFUWSUVHSEZUYEUVFUXBUXAUWSYKUXBUV
+      CUVEYFYGUXBYJUXCVLXFUXDUXFVQUVFUWTUYFUVEUWTUVDUXHXGUUKXIWCYPUVHWIQYOUVJXJQ
+      VBYKUXRUVCUVEUUSUXTPYKUXSUVCUVEUUSUYAPYLUVKAXHXKXLUVGUVOUUQFUVGUVNUUPUUAMU
+      VGUVMUUOBHUVGUVEUWTUVMUUOJUWGUXHUUKXMVQTTUWKWKVIUUFUVQUAUVHNYQUVHJZYTUVLUU
+      EUVPUYGYSUVKYLUYGYRUVJYOIYQUVHYPHXNTXOUYGUUDUVOFUYGUUCUVNUUAMUYGUUBUVMBHYQ
+      UVHKLXTTTXPXQYAQXRXSYBUYDYCYDYEYFYGYMUUIVJYJCUAYLBVKVLVM $.
+
+
+    $( forward is already proved.  for reverse, consider ` 1 = A ` case (use ~ pell1qr1 ) and ` 1 < A ` case ( ` ( 1 / A ) ` is clearly less than 1, thus not in ` Pell1QR ` , so ` ( 1 / ( 1 / A ) ) ` is by the lemma ) $)
+    pell1qrpell14qr $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> ( A e. ( Pell14QR ` D ) /\ 1 <_ A ) ) ) $= ? $.
+
+    pell1qrmulcl $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. ( Pell1QR ` D ) ) -> ( A x. B ) e. ( Pell1QR ` D ) ) $= ? $.
+    pell1qrexpcl $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. NN0 ) -> ( A ^ B ) e. ( Pell1QR ` D ) ) $= ? $.
+    pell1qrdivcl $p |- ( ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. ( Pell1QR ` D ) ) /\ B <_ A ) -> ( A / B ) e. ( Pell1QR ` D ) ) $= ? $.
+    pell1qrex $p |- ( D e. ( NN \ []NN ) -> E. x e. ( Pell1QR ` D ) 1 < x ) $= ? $.
+    pell1qrgap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ 1 < A ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ A ) $= ? $.
+    pell1qrgapw $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ 1 < A ) -> 2 < A ) $= ? $.
+
+    pellfundval $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) = sup ( { x e. ( Pell1QR ` x ) | 1 < z } , RR , `' < ) ) $= ? $.
+    pellfundex $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. ( Pell1QR ` D ) ) $= ? $.
+    pellfundge $p |- ( D e. ( NN \ []NN ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ ( PellFund ` D ) ) $= ? $.
+    pellfundgt1 $p |- ( D e. ( NN \ []NN ) -> 1 < ( PellFund ` D ) ) $= ? $.
+    pellfundspec $p |- ( A e. ( ZZ>= ` 2 ) -> ( PellFund ` ( ( A ^ 2 ) - 1 ) ) = ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ) $= ? $.
+    pellfund14gap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ ( 1 <_ A /\ A < ( PellFund ` D ) ) ) -> A = 1 ) $= ? $.
+    pellfund14 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) $= ? $.
+    pellfund14b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell14QR ` D ) <-> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) ) $= ? $.
+    pellfund1b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> E. x e. NN0 A = ( ( PellFund ` D ) ^ x ) ) ) $= ? $.
 $}
 
 $( ---- COMPUTABILITY ---- $)
@@ -3287,4 +3551,6 @@ $( TODO
     5. proof mangling?
     6. ;-commands.  control over prompting
     7. disjoint variables in PA would save me much time
+    8. vim highlighting
+    9. PA should collapse identical proof stages; possibly add an improve option to seek out commonality by using incomplete subtrees
 $)
