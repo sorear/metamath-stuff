@@ -1069,7 +1069,6 @@ ${
       KVUNUULLUVFUUCSXOYSUUDYSYSYTYSYS $.
       $( [14-Sep-2014] $)
 
-    $( NEED qgt0numnn $)
     $( To each good rational approximation of ` ( sqr `` D ) ` , there exists a near-solution $)
     ${
     $d D x y z $.
@@ -1664,6 +1663,8 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       UMXLXOWSRWBXAYIXQYBXBWBXCXDXEXFXG $.
       $( [18-Sep-2014] $)
 
+    pell14qrrp $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> A e. RR+ ) $= ? $.
+
     pell1234qrdich $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1234QR ` D ) ) -> ( A e. ( Pell14QR ` D ) \/ -u A e. ( Pell14QR ` D ) ) ) $=
       ( va vb vc wcel cneg cmul co caddc wceq c2 cexp cmin c1 wa cz wrex cn0 syl
       vd cn csquarenn cdif cpell1234qr cfv cpell14qr wo csqr elpell1234qr elznn0
@@ -1990,13 +1991,122 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
     $d x D $.  $d x A $.
     $( contrapositive of ~ infmrgelb $)
     pellfundglb $p |- ( ( D e. ( NN \ []NN ) /\ A e. RR /\ ( PellFund ` D ) < A ) -> E. x e. ( Pell1QR ` D ) ( ( PellFund ` D ) <_ x /\ x < A ) ) $=
-        ? $.
+      ( va wcel cr cfv clt wbr cle wn c1 wrex wa 3ad2ant1 wb syl2anc wss wi ex
+      cn csquarenn cdif cpellfund cv cpell14qr crab cpell1qr wral ccnv csup wceq
+      pellfundval simp3 eqbrtrrd pellfundre eqeltrrd simp2 ltnle mpbid c0 ssrab2
+      w3a wne pell14qrre ssrdv syl5ss pell1qrss14 pellqrex ssrexv sylc infmrgelb
+      rabn0 sylibr syl3anc mtod rexnal breq2 elrab simprl simprr 1re simpl1 ltle
+      a1i mpd jca elpell1qr2 syl mpbird sylan2b adantrr sseldi syl5bi pellfundlb
+      simpr imp adantr sseldd simpl2 reximdv2 ) CUAUBUCEZBFEZCUDGZBHIZVCZBAUEZJI
+      ZKZALDUEZHIZDCUFGZUGZMZXDXGJIZXGBHIZNZACUHGZMXFXHAXMUIZKXNXFXSBXMFHUJUKZJI
+      ZXFXTBHIZYAKZXFXDXTBHXBXCXDXTULXEDCUMOZXBXCXEUNUOXFXTFEXCYBYCPXFXDXTFYDXBX
+      CXDFEXECUPOUQXBXCXEURZXTBUSQUTXFXMFRZXMVAVDZXCXSYASXFXMXLFXKDXLVBZXBXCXLFR
+      ZXEXBDXLFXBXJXLEXJFEXJCVETVFOZVGXFXKDXLMZYGXFXRXLRZXKDXRMZYKXBXCYLXECVHOXB
+      XCYMXEDCVIOXKDXRXLVJVKXKDXLVMVNYEYFYGXCVCXSYAAXMBVLTVOVPXHAXMVQVNXFXIXQAXM
+      XRXFXGXMEZXINZXGXREZXQNXFYONZYPXQXFYNYPXIYNXFXGXLEZLXGHIZNZYPXKYSDXGXLXJXG
+      LHVRVSZXFYTNZYPYRLXGJIZNZUUBYRUUCXFYRYSVTZUUBYSUUCXFYRYSWAUUBLFEZXGFEZYSUU
+      CSUUFUUBWBWEUUBXBYRUUGXBXCXEYTWCZUUEXGCVEQLXGWDQWFWGUUBXBYPUUDPUUHXGCWHWIW
+      JWKWLYQXOXPYQXBYRYSXOXBXCXEYOWCYQXMXLXGYHXFYNXIVTWMZXFYNYSXIXFYNYSYNYTXFYS
+      UUAYTYSSXFYRYSWPWEWNWQWLXGCWOVOYQXPXIXFYNXIWAYQUUGXCXPXIPYQXLFXGXFYIYOYJWR
+      UUIWSXBXCXEYOWTXGBUSQWJWGWGTXAWF $.
+      $( [18-Sep-2014] $)
     $}
 
     $( use the infimum to find an element ge Fund and lt 2*Fund.  if = Fund we're done, otherwise use the infimum again to find another element which must be ge Fund and lt the first element; their ratio is a group element in (1,2), contradicting pell1qrgapw $)
-    pellfundex $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. ( Pell1QR ` D ) ) $= ? $.
+    pellfundex $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. ( Pell1QR ` D ) ) $=
+      ( va vb wcel cfv cle wbr c2 co clt wa 2re cc0 a1i syl2anc adantr ad3antrrr
+      cr c1 wb cn csquarenn cdif cpellfund cmul cpell1qr wrex pellfundre remulcl
+      cv sylancr caddc crp 0reALT 1re lt01 pellfundgt1 lttrd sylanbrc ltaddrp cc
+      elrp wceq recnd 2times syl breqtrrd pellfundglb mpd3an23 wo wi pell1qrss14
+      cpell14qr sselda pell14qrre syldan simpll syl3anc simplll anass1rs simpllr
+      leloe simprl simplr simprr wss sseldd simplrr 2pos syl112anc mpbid ltletrd
+      lemul2 w3a cdiv 3ad2ant1 simp2l simp2r pell14qrdivcl mulid2 simp3l eqbrtrd
+      simp1 pell14qrgt0 ltmuldiv simp3r ltdivmul2 mpbird pell14qrgapw ltnsym mpd
+      wn re2luk3 sylc syl22anc syl122anc ex rexlimdva exp32 simp2 simp1r eqeltrd
+      3exp jaod sylbid imp3a ) AUAUBUCDZAUDEZBUJZFGZYIHYHUEIZJGZKZBAUFEZUGZYHYND
+      ZYGYKRDZYHYKJGYOYGHRDZYHRDZYQLAUHZHYHUIUKZYGYHYHYHULIZYKJYGYSYHUMDZYHUUBJG
+      YTYGYSMYHJGUUCYTYGMSYHMRDYGUNNSRDZYGUONYTMSJGYGUPNAUQURYHVBUSYHYHUTOYGYHVA
+      DYKUUBVCYGYHYTVDYHVEVFVGBYKAVHVIYGYMYPBYNYGYIYNDZKZYJYLYPUUFYJYHYIJGZYHYIV
+      CZVJZYLYPVKZUUFYSYIRDZYJUUITYGYSUUEYTPZYGUUEYIAVMEZDZUUKYGYNUUMYIAVLZVNYIA
+      VOZVPZYHYIWBOUUFUUGUUJUUHUUFUUGYLYPUUFUUGYLKZKZYHCUJZFGZUUTYIJGZKZCYNUGZYP
+      UUSYGUUKUUGUVDYGUUEUURVQUUFUUKUURUUQPUUFUUGYLWCCYIAVHVRUUSUVCYPCYNUUSUUTYN
+      DZKZUVCYPUVFUVCKZYGUUEUVEUVBYIHUUTUEIZJGZYPUUSUVCUVEYGYGUUEUURUVCUVEKZVSVT
+      ZUUSUVCUVEUUEYGUUEUURUVJWAVTUUSUVEUVCWDZUVFUVAUVBWEUVGYIYKUVHUUFUUKUURUVEU
+      VCUUQQUUFYQUURUVEUVCYGYQUUEUUAPQUVGYRUUTRDZUVHRDLUVGYGUUTUUMDZUVMUVKUVGYNU
+      UMUUTUUFYNUUMWFZUURUVEUVCYGUVOUUEUUOPQUVLWGUUTAVOZOZHUUTUIUKUUSUVCUVEYLUUF
+      UUGYLUVJWHVTUVGUVAYKUVHFGZUVFUVAUVBWCUVGYSUVMYRMHJGZUVAUVRTUUFYSUURUVEUVCU
+      ULQUVQYRUVGLNUVSUVGWINYHUUTHWMWJWKWLYGUUEUVEKZUVBUVIKZWNZYGYIUUTWOIZUUMDZS
+      UWCJGZUWCHJGZYPYGUVTUWAXCZUWBYGUUNUVNUWDUWGUWBYNUUMYIYGUVTUVOUWAUUOWPZYGUU
+      EUVEUWAWQWGZUWBYNUUMUUTUWHYGUUEUVEUWAWRWGZYIUUTAWSVRUWBSUUTUEIZYIJGZUWEUWB
+      UWKUUTYIJUWBUUTVADUWKUUTVCUWBUUTUWBYGUVNUVMUWGUWJUVPOZVDUUTWTVFYGUVTUVBUVI
+      XAXBUWBUUDUUKUVMMUUTJGZUWLUWETUUDUWBUONUWBYGUUNUUKUWGUWIUUPOZUWMUWBYGUVNUW
+      NUWGUWJUUTAXDOZSYIUUTXEWJWKUWBUWFUVIYGUVTUVBUVIXFUWBUUKYRUVMUWNUWFUVITUWOY
+      RUWBLNUWMUWPYIHUUTXGWJXHYGUWDKZUWEUWFKZKZUWFUWFXLZYPUWQUWEUWFWEUWSHUWCJGZU
+      WTUWSYGUWDUWEUXAYGUWDUWRVQYGUWDUWRWDUWQUWEUWFWCUWCAXIVRUWSYRUWCRDZUXAUWTVK
+      LUWQUXBUWRUWCAVOPHUWCXJUKXKUWFYPXMXNXOXPXQXRXKXSUUFUUHYLYPUUFUUHYLWNYHYIYN
+      UUFUUHYLXTYGUUEUUHYLYAYBYCYDYEYFXRXK $.
+      $( [18-Sep-2014] $)
 
-    pellfund14gap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ ( 1 <_ A /\ A < ( PellFund ` D ) ) ) -> A = 1 ) $= ? $.
+    pellfund14gap $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ ( 1 <_ A /\ A < ( PellFund ` D ) ) ) -> A = 1 ) $=
+      ( cn csquarenn cdif wcel cpell14qr cfv c1 cle wbr cpellfund clt wa wn wceq
+      w3a cr wb mpbid simp3r pell14qrre 3adant3 pellfundre 3ad2ant1 ltnle simpl1
+      wo syl2anc simpl2 simpr pellfundlb syl3anc mtand simp3l leloe sylancr sylc
+      1re orel1 eqcomd ) BCDEFZABGHFZIAJKZABLHZMKZNZQZIAVHIAMKZOVIIAPZUHZVJVHVIV
+      EAJKZVHVFVLOZVBVCVDVFUAVHARFZVERFZVFVMSVBVCVNVGABUBUCZVBVCVOVGBUDUEAVEUFUI
+      TVHVINVBVCVIVLVBVCVGVIUGVBVCVGVIUJVHVIUKABULUMUNVHVDVKVBVCVDVFUOVHIRFVNVDV
+      KSUSVPIAUPUQTVIVJUTURVA $.
+      $( [18-Sep-2014] $)
+
+    pellfundrp $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. RR+ ) $= ? $.
+    pellfundne1 $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) =/= 1 ) $= ? $.
+
+    reglogcl $p |- ( ( A e. RR+ /\ B e. RR+ /\ B =/= 1 ) -> ( ( log ` A ) / ( log ` B ) ) e. RR ) $= ? $.
+    reglogltb $p |- ( ( ( A e. RR+ /\ B e. RR+ ) /\ ( C e. RR+ /\ 1 < C ) ) -> ( A < B <-> ( ( log ` A ) / ( log ` C ) ) < ( ( log ` B ) / ( log ` C ) ) ) ) $= ? $.
+    reglogleb $p |- ( ( ( A e. RR+ /\ B e. RR+ ) /\ ( C e. RR+ /\ 1 < C ) ) -> ( A <_ B <-> ( ( log ` A ) / ( log ` C ) ) <_ ( ( log ` B ) / ( log ` C ) ) ) ) $= ? $.
+    reglogmul $p |- ( ( A e. RR+ /\ B e. RR+ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( A x. B ) ) / ( log ` C ) ) = ( ( ( log ` A ) / ( log ` C ) ) + ( ( log ` B ) / ( log ` C ) ) ) ) $= ? $.
+    reglogexp $p |- ( ( A e. RR+ /\ N e. ZZ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( A ^ N ) ) / ( log ` C ) ) = ( N x. ( ( log ` A ) / ( log ` C ) ) ) ) $= ? $.
+    reglogexpbas $p |- ( ( N e. ZZ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( C ^ N ) ) / ( log ` C ) ) = N ) $= ? $.
+    reglogbas $p |- ( ( C e. RR+ /\ C =/= 1 ) -> ( ( log ` C ) / ( log ` C ) ) = 1 ) $= ? $.
+    reglog1 $p |- ( ( C e. RR+ /\ C =/= 1 ) -> ( ( log ` 1 ) / ( log ` C ) ) = 0 ) $= ? $.
+
+    ${
+    $d x D $.  $d x A $.
+    pellfund14 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) $=
+      ( wcel cfv clog cdiv co cz cexp wceq crp c1 syl cle wbr clt cc0 syl2anc cc
+      cn csquarenn cdif cpell14qr wa cpellfund cfl cv wrex pell14qrrp pellfundrp
+      cr adantr pellfundne1 reglogcl syl3anc flcl cneg cmul caddc simpl cpell1qr
+      wne pell1qrss14 pellfundex sseldd znegcl pell14qrexpcl mpd3an3 cmo 1rp a1i
+      pell14qrmulcl modge0 cmin recnd zcn negsub modfrac eqtr4d breqtrrd reglog1
+      rpexpcl reglogmul syl112anc reglogexpbas syl12anc eqtrd 3brtr4d wb rpmulcl
+      oveq2d pellfundgt1 reglogleb syl22anc mpbird modlt reglogbas pellfund14gap
+      eqbrtrd reglogltb negid rpcn exp0 eqtr2d expaddz 3eqtrd pell14qrre mulcan2
+      rpne0 mpbid oveq2 eqeq2d rcla4ev ) CUAUBUCDZBCUDEZDZUEZBFECUFEZFEZGHZUGEZI
+      DZBXSYBJHZKZBXSAUHZJHZKZAIUIXRYAULDZYCXRBLDZXSLDZXSMVCZYIBCUJZXOYKXQCUKUMZ
+      XOYLXQCUNUMZBXSUOUPZYAUQNZXRBXSYBURZJHZUSHZYDYSUSHZKZYEXRYTMXSYBYRUTHZJHZU
+      UAXRXOYTXPDZMYTOPZYTXSQPZYTMKXOXQVAZXOXQYSXPDZUUEXRXOXSXPDZYRIDZUUIUUHXOUU
+      JXQXOCVBEXPXSCVDCVEVFUMXRYCUUKYQYBVGNZXSYRCVHUPBYSCVMVIXRUUFMFEXTGHZYTFEXT
+      GHZOPZXRRYAYRUTHZUUMUUNOXRRYAMVJHZUUPOXRYIMLDZRUUQOPYPUURXRVKVLZYAMVNSXRUU
+      PYAYBVOHZUUQXRYATDYBTDZUUPUUTKXRYAYPVPXRYCUVAYQYBVQNZYAYBVRSXRYIUUQUUTKYPY
+      AVSNVTZWAXRYKYLUUMRKYNYOXSWBSXRUUNYAYSFEXTGHZUTHZUUPXRYJYSLDZYKYLUUNUVEKYM
+      XRYKUUKUVFYNUULXSYRWCSZYNYOBYSXSWDWEXRUVDYRYAUTXRUUKYKYLUVDYRKUULYNYOXSYRW
+      FWGWLWHZWIXRUURYTLDZYKMXSQPZUUFUUOWJUUSXRYJUVFUVIYMUVGBYSWKSZYNXOUVJXQCWMU
+      MZMYTXSWNWOWPXRUUGUUNXTXTGHZQPZXRUUPMUUNUVMQXRUUPUUQMQUVCXRYIUURUUQMQPYPUU
+      SYAMWQSWTUVHXRYKYLUVMMKYNYOXSWRSWIXRUVIYKYKUVJUUGUVNWJUVKYNYNUVLYTXSXSXAWO
+      WPYTCWSWEXRUUDXSRJHZMXRUUCRXSJXRUVAUUCRKUVBYBXBNWLXRXSTDZUVOMKXRYKUVPYNXSX
+      CNZXSXDNXEXRUVPXSRVCZYCUUKUUDUUAKUVQXRYKUVRYNXSXJNYQUULXSYBYRXFWOXGXRBTDYD
+      TDZYSTDZYSRVCZUUBYEWJXRBBCXHVPXRYDLDZUVSXRYKYCUWBYNYQXSYBWCSYDXCNXRUVFUVTU
+      VGYSXCNXRUVFUWAUVGYSXJNBYDYSXIWEXKYHYEAYBIYFYBKYGYDBYFYBXSJXLXMXNS $.
+      $( [19-Sep-2014] $)
+    $}
+
+    pellfund14b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell14QR ` D ) <-> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) ) $=
+      ( cn csquarenn cdif wcel cpell14qr cpellfund cv cexp co wceq cz pellfund14
+      cfv wrex wa simpll cpell1qr pell1qrss14 pellfundex sseldd ad2antrr syl3anc
+      simplr pell14qrexpcl wb eleq1 adantl mpbird ex rexlimdva imp impbida ) CDE
+      FGZBCHPZGZBCIPZAJZKLZMZANQZABCOUPVCURUPVBURANUPUTNGZRZVBURVEVBRZURVAUQGZVF
+      UPUSUQGZVDVGUPVDVBSUPVHVDVBUPCTPUQUSCUACUBUCUDUPVDVBUFUSUTCUGUEVBURVGUHVEB
+      VAUQUIUJUKULUMUNUO $.
+      $( [19-Sep-2014] $)
 
     $(
     qirropth $p |- ( ( E e. ( RR \ QQ ) /\ ( A e. QQ /\ B e. QQ ) /\ ( C e. QQ /\ D e. QQ ) ) -> ( ( A + ( E x. B ) ) = ( C + ( E x. D ) ) <-> ( A = C /\ B = D ) ) ) $=
@@ -2008,8 +2118,6 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
     pell1qrdivcl $p |- ( ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1QR ` D ) /\ B e. ( Pell1QR ` D ) ) /\ B <_ A ) -> ( A / B ) e. ( Pell1QR ` D ) ) $= ? $.
 
     pellfundspec $p |- ( A e. ( ZZ>= ` 2 ) -> ( PellFund ` ( ( A ^ 2 ) - 1 ) ) = ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ) $= ? $.
-    pellfund14 $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) $= ? $.
-    pellfund14b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell14QR ` D ) <-> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) ) $= ? $.
     pellfund1b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell1QR ` D ) <-> E. x e. NN0 A = ( ( PellFund ` D ) ^ x ) ) ) $= ? $.
 $}
 
