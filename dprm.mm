@@ -1663,7 +1663,11 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       UMXLXOWSRWBXAYIXQYBXBWBXCXDXEXFXG $.
       $( [18-Sep-2014] $)
 
-    pell14qrrp $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> A e. RR+ ) $= ? $.
+    pell14qrrp $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) ) -> A e. RR+ ) $=
+      ( cn csquarenn cdif cpell14qr cfv wa cr cc0 clt wbr pell14qrre pell14qrgt0
+      wcel crp elrp sylanbrc ) BCDEOABFGOHAIOJAKLAPOABMABNAQR $.
+      $( [19-Sep-2014] $)
+
 
     pell1234qrdich $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1234QR ` D ) ) -> ( A e. ( Pell14QR ` D ) \/ -u A e. ( Pell14QR ` D ) ) ) $=
       ( va vb vc wcel cneg cmul co caddc wceq c2 cexp cmin c1 wa cz wrex cn0 syl
@@ -1927,32 +1931,48 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       FWLWKWBVSVTWCWEABWDWC $.
       $( [18-Sep-2014] $)
 
-    $( TODO: reprove using pellqrexplicit $)
+    pellqrexplicit $p |- ( ( ( D e. ( NN \ []NN ) /\ A e. NN0 /\ B e. NN0 ) /\ ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) = 1 ) -> ( A + ( ( sqr ` D ) x. B ) ) e. ( Pell1QR ` D ) ) $=
+      ( va vb cn wcel cn0 c2 cexp co cmul cmin c1 wceq wa caddc cr oveq1 oveq2d
+      csquarenn cdif w3a csqr cfv cpell1qr cv wb elpell1qr 3ad2ant1 adantr nn0re
+      wrex 3ad2ant2 crp eldifi nnrp syl rpsqrcl 3ad2ant3 remulcl syl2anc readdcl
+      rpre simpl2 simpl3 eqidd simpr eqeq2d oveq1d eqeq1d anbi12d oveq2 rcla42ev
+      3syl syl112anc mpbir2and ) CFUAUBGZAHGZBHGZUCZAIJKZCBIJKZLKZMKZNOZPZACUDUE
+      ZBLKZQKZCUFUEGZWJRGZWJDUGZWHEUGZLKZQKZOZWMIJKZCWNIJKZLKZMKZNOZPZEHUMDHUMZW
+      AWKWLXDPUHZWFVRVSXEVTDEWJCUIUJUKWAWLWFWAARGZWIRGZWLVSVRXFVTAULUNWAWHRGZBRG
+      ZXGWACUOGZWHUOGXHWACFGZXJVRVSXKVTCFUAUPUJCUQURCUSWHVDVOVTVRXIVSBULUTWHBVAV
+      BAWIVCVBUKWGVSVTWJWJOZWFXDVRVSVTWFVEVRVSVTWFVFWGWJVGWAWFVHXCXLWFPWJAWOQKZO
+      ZWBWTMKZNOZPDEABHHWMAOZWQXNXBXPXQWPXMWJWMAWOQSVIXQXAXONXQWRWBWTMWMAIJSVJVK
+      VLWNBOZXNXLXPWFXRXMWJWJXRWOWIAQWNBWHLVMTVIXRXOWENXRWTWDWBMXRWSWCCLWNBIJSTT
+      VKVLVNVPVQ $.
+      $( [19-Sep-2014] $)
+
     $( the only place we directly use D's non-squareness $)
+    ${
+    $d D x $.
     pellqrex $p |- ( D e. ( NN \ []NN ) -> E. x e. ( Pell1QR ` D ) 1 < x ) $=
-      ( vc vd va cn csquarenn wcel co c1 wceq wrex wbr wa cn0 adantr 1re a1i cle
-      cr cdif cv c2 cexp cmul cmin clt cpell1qr cfv csqr cq eldifi eldifn anim1i
-      wn df-squarenn eleq2i fveq2 eleq1d elrab bitri sylibr mtand pellex syl2anc
-      crab nnre ad2antrl crp nnrp syl rpsqrcl rpre 3syl ad2antll remulcl readdcl
-      caddc nnnn0 eqidd simpr ra42e syl112anc jca wb elpell1qr ad2antrr readdcli
-      mpbird ltp1i nnge1 ax-1cn mulid2i sq1 cc nncn sqrth 3brtr4d cc0 1nn0 rpge0
-      nn0ge0i le2sq syl22anc wi lemul12a mp2and syl5eqbrr le2add ltletrd rcla4ev
-      breq2 ex rexlimdvva mpd ) BFGUAHZCUBZUCUDIBDUBZUCUDIUEIUFIJKZDFLCFLZJAUBZU
-      GMZABUHUIZLZXPBFHZBUJUIZUKHZUOXTBFGULZXPYGBGHZBFGUMXPYGNYEYGNZYIXPYEYGYHUN
-      YIBEUBZUJUIZUKHZEFVFZHYJGYNBEUPUQYMYGEBFYKBKYLYFUKYKBUJURUSUTVAVBVCCDBVDVE
-      XPXSYDCDFFXPXQFHZXRFHZNZNZXSYDYRXSNZXQYFXRUEIZVRIZYCHZJUUAUGMZYDYSUUBUUATH
-      ZUUAUUAKZXSNZDOLCOLZNZYSUUDUUGYRUUDXSYRXQTHZYTTHZUUDYOUUIXPYPXQVGVHZYRYFTH
-      ZXRTHZUUJYRBVIHZYFVIHZUULYRYEUUNXPYEYQYHPZBVJZVKBVLZYFVMZVNZYPUUMXPYOXRVGV
-      OZYFXRVPVEZXQYTVQVEZPYSXQOHZXROHZUUEXSUUGYRUVDXSYOUVDXPYPXQVSVHPYRUVEXSYPU
-      VEXPYOXRVSVOPYSUUAVTYRXSWAUUFCDOOWBWCWDXPUUBUUHWEYQXSCDUUABWFWGWIYRUUCXSYR
-      JJJVRIZUUAJTHZYRQRZUVFTHYRJJQQWHRUVCJUVFUGMYRJQWJRYRJXQSMZJYTSMZUVFUUASMZY
-      OUVIXPYPXQWKVHYRJJJUEIZYTSJWLWMYRJYFSMZJXRSMZUVLYTSMZYRYEUVMUUPYEUVMJUCUDI
-      ZYFUCUDIZSMZYEJBUVPUVQSBWKUVPJKYEWNRYEBWOHUVQBKBWPBWQVKWRYEUVGWSJSMZUULWSY
-      FSMZUVMUVRWEUVGYEQRUVSYEJWTXBZRYEUUNUUOUULUUQUURUUSVNYEUUNUUOUVTUUQUURYFXA
-      VNJYFXCXDWIVKYPUVNXPYOXRWKVOYRUVGUVSNZUULUWBUUMUVMUVNNUVOXEYRUVGUVSUVHUVSY
-      RUWARWDZUUTUWCUVAJYFJXRXFXDXGXHYRUVGUVGUUIUUJUVIUVJNUVKXEUVHUVHUUKUVBJJXQY
-      TXIXDXGXJPYBUUCAUUAYCYAUUAJUGXLXKVEXMXNXO $.
+      ( vc vd va cn csquarenn wcel cv c2 cexp co c1 wceq wbr wa cr 1re a1i cle
+      cdif cmul cmin wrex clt cpell1qr cfv csqr eldifi eldifn anim1i df-squarenn
+      cq wn crab eleq2i fveq2 eleq1d elrab bitri sylibr mtand pellex syl2anc cn0
+      caddc simpll nnnn0 adantr ad2antlr adantl pellqrexplicit syl31anc readdcli
+      simpr nnre ad2antrl crp nnrp syl rpsqrcl rpre ad2antll remulcl ltp1i nnge1
+      3syl readdcl ax-1cn mulid2i sq1 cc nncn sqrth 3brtr4d cc0 wb nn0ge0i rpge0
+      1nn0 le2sq syl22anc mpbird wi jca lemul12a mp2and syl5eqbrr le2add ltletrd
+      breq2 rcla4ev ex rexlimdvva mpd ) BFGUAHZCIZJKLBDIZJKLUBLUCLMNZDFUDCFUDZMA
+      IZUEOZABUFUGZUDZXPBFHZBUHUGZUMHZUNXTBFGUIZXPYGBGHZBFGUJXPYGPYEYGPZYIXPYEYG
+      YHUKYIBEIZUHUGZUMHZEFUOZHYJGYNBEULUPYMYGEBFYKBNYLYFUMYKBUHUQURUSUTVAVBCDBV
+      CVDXPXSYDCDFFXPXQFHZXRFHZPZPZXSYDYRXSPZXQYFXRUBLZVFLZYCHZMUUAUEOZYDYSXPXQV
+      EHZXRVEHZXSUUBXPYQXSVGYQUUDXPXSYOUUDYPXQVHVIVJYQUUEXPXSYPUUEYOXRVHVKVJYRXS
+      VOXQXRBVLVMYRUUCXSYRMMMVFLZUUAMQHZYRRSZUUFQHYRMMRRVNSYRXQQHZYTQHZUUAQHYOUU
+      IXPYPXQVPVQZYRYFQHZXRQHZUUJYRBVRHZYFVRHZUULYRYEUUNXPYEYQYHVIZBVSZVTBWAZYFW
+      BZWGZYPUUMXPYOXRVPWCZYFXRWDVDZXQYTWHVDMUUFUEOYRMRWESYRMXQTOZMYTTOZUUFUUATO
+      ZYOUVCXPYPXQWFVQYRMMMUBLZYTTMWIWJYRMYFTOZMXRTOZUVFYTTOZYRYEUVGUUPYEUVGMJKL
+      ZYFJKLZTOZYEMBUVJUVKTBWFUVJMNYEWKSYEBWLHUVKBNBWMBWNVTWOYEUUGWPMTOZUULWPYFT
+      OZUVGUVLWQUUGYERSUVMYEMWTWRZSYEUUNUUOUULUUQUURUUSWGYEUUNUUOUVNUUQUURYFWSWG
+      MYFXAXBXCVTYPUVHXPYOXRWFWCYRUUGUVMPZUULUVPUUMUVGUVHPUVIXDYRUUGUVMUUHUVMYRU
+      VOSXEZUUTUVQUVAMYFMXRXFXBXGXHYRUUGUUGUUIUUJUVCUVDPUVEXDUUHUUHUUKUVBMMXQYTX
+      IXBXGXJVIYBUUCAUUAYCYAUUAMUEXKXLVDXMXNXO $.
       $( [18-Sep-2014] $)
+    $}
 
     pellqrspec $p |- ( ( D e. ( NN \ []NN ) /\ ( sqr ` ( D + 1 ) ) e. ZZ ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) e. ( Pell1QR ` D ) ) $= ? $.
 
@@ -1981,11 +2001,46 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       $( [18-Sep-2014] $)
 
     $( use ~ infmrgelb $)
-    pellfundge $p |- ( D e. ( NN \ []NN ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ ( PellFund ` D ) ) $= ? $.
+    pellfundge $p |- ( D e. ( NN \ []NN ) -> ( ( sqr ` ( D + 1 ) ) + ( sqr ` D ) ) <_ ( PellFund ` D ) ) $=
+      ( va vb cn csquarenn wcel c1 caddc co csqr cfv cv clt wbr cle wss wrex crp
+      cr 3syl cdif cpell14qr crab ccnv csup cpellfund wne wral ssrab2 pell14qrre
+      c0 ex ssrdv syl5ss cpell1qr pell1qrss14 pellqrex ssrexv sylc sylibr eldifi
+      rabn0 peano2nn nnrp rpsqrcl syl readdcl syl2anc wa breq2 elrab pell14qrgap
+      rpre 3expib syl5bi ralrimiv infmrgelb syl31anc pellfundval breqtrrd ) ADEU
+      AFZAGHIZJKZAJKZHIZGBLZMNZBAUBKZUCZSMUDUEZAUFKOWAWISPWIUKUGZWESFZWECLZONZCW
+      IUHWEWJONWAWIWHSWGBWHUIWABWHSWAWFWHFWFSFWFAUJULUMUNWAWGBWHQZWKWAAUOKZWHPWG
+      BWPQWOAUPBAUQWGBWPWHURUSWGBWHVBUTWAWCSFZWDSFZWLWAWBRFZWCRFWQWAADFZWBDFWSAD
+      EVAZAVCWBVDTWBVEWCVMTWAARFZWDRFWRWAWTXBXAAVDVFAVEWDVMTWCWDVGVHWAWNCWIWMWIF
+      WMWHFZGWMMNZVIWAWNWGXDBWMWHWFWMGMVJVKWAXCXDWNWMAVLVNVOVPCWIWEVQVRBAVSVT $.
+      $( [19-Sep-2014] $)
 
-    pellfundgt1 $p |- ( D e. ( NN \ []NN ) -> 1 < ( PellFund ` D ) ) $= ? $.
+    pellfundgt1 $p |- ( D e. ( NN \ []NN ) -> 1 < ( PellFund ` D ) ) $=
+      ( cn csquarenn wcel c1 caddc co csqr cfv cr a1i crp syl nnrp 3syl sqr1 wbr
+      cle cc0 wa cdif cpellfund 1re eldifi peano2nn rpsqrcl rpre readdcl syl2anc
+      pellfundre wceq eqeltrd clt c2 1lt2 oveq12i 1p1e2apr1 eqtri breqtrri nnge1
+      wb nnre peano2re 1nn0 nn0ge0i cn0 nnnn0 nn0ge0 sqrle syl22anc mpbid le2add
+      3impia syl222anc ltletrd pellfundge ) ABCUADZEAEFGZHIZAHIZFGZAUBIEJDZVQUCK
+      ZVQVSJDZVTJDZWAJDVQVRLDZVSLDWDVQVRBDZWFVQABDZWGABCUDZAUEMZVRNMVRUFVSUGOZVQ
+      ALDZVTLDWEVQWHWLWIANMAUFVTUGOZVSVTUHUIZAUJVQEEHIZWOFGZWAWCVQWOJDZWQWPJDVQW
+      OEJWOEUKVQPKWCULZWRWOWOUHUIWNEWPUMQVQEUNWPUMUOWPEEFGUNWOEWOEFPPUPUQURUSKVQ
+      WQWQWDWEWOVSRQZWOVTRQZWPWARQZWRWRWKWMVQEVRRQZWSVQWGXBWJVRUTMVQWBVRJDZSERQZ
+      SVRRQZXBWSVAWCVQAJDZXCVQWHXFWIAVBMZAVCMXDVQEVDVEKZVQWGVRVFDXEWJVRVGVRVHOEV
+      RVIVJVKVQEARQZWTVQWHXIWIAUTMVQWBXFXDSARQZXIWTVAWCXGXHVQWHAVFDXJWIAVGAVHOEA
+      VIVJVKWQWQTWDWETWSWTTXAWOWOVSVTVLVMVNVOAVPVO $.
+      $( [19-Sep-2014] $)
 
-    pellfundlb $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ 1 < A ) -> ( PellFund ` D ) <_ A ) $= ? $.
+    pellfundlb $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell14QR ` D ) /\ 1 < A ) -> ( PellFund ` D ) <_ A ) $=
+      ( va vb vc vd wcel cfv c1 clt wbr cv cle wceq 3ad2ant1 wral pell14qrre 1re
+      cr wa cn csquarenn cdif cpell14qr w3a cpellfund crab ccnv csup pellfundval
+      wss wrex ssrab2 ex ssrdv syl5ss breq2 elrab wi ltle sylancr expimpd syl5bi
+      ralrimiv breq1 ralbidv rcla4ev simp2 sylanbrc infmrlb syl3anc eqbrtrd
+      simp3 ) BUAUBUCGZABUDHZGZIAJKZUEZBUFHZICLZJKZCVOUGZSJUHUIZAMVNVPVSWCNVQCBU
+      JOVRWBSUKZDLZELZMKZEWBPZDSULZAWBGZWCAMKVNVPWDVQVNWBVOSWACVOUMVNFVOSVNFLZVO
+      GWKSGWKBQUNUOUPOVRISGZIWFMKZEWBPZWIRVNVPWNVQVNWMEWBWFWBGWFVOGZIWFJKZTVNWMW
+      AWPCWFVOVTWFIJUQURVNWOWPWMVNWOTWLWFSGWPWMUSRWFBQIWFUTVAVBVCVDOWHWNDISWEINW
+      GWMEWBWEIWFMVEVFVGVAVRVPVQWJVNVPVQVHVNVPVQVMWAVQCAVOVTAIJUQURVIDEAWBVJVKVL
+      $.
+      $( [19-Sep-2014] $)
 
     ${
     $d x D $.  $d x A $.
@@ -2057,17 +2112,85 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       KSUSVPIAUPUQTVIVJUTURVA $.
       $( [18-Sep-2014] $)
 
-    pellfundrp $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. RR+ ) $= ? $.
-    pellfundne1 $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) =/= 1 ) $= ? $.
+    pellfundrp $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. RR+ ) $=
+      ( cn csquarenn cdif cpellfund cfv cr cc0 clt wbr crp pellfundre c1 0re a1i
+      wcel 1re lt01 pellfundgt1 lttrd elrp sylanbrc ) ABCDPZAEFZGPHUDIJUDKPALZUC
+      HMUDHGPUCNOMGPUCQOUEHMIJUCROASTUDUAUB $.
+      $( [19-Sep-2014] $)
 
-    reglogcl $p |- ( ( A e. RR+ /\ B e. RR+ /\ B =/= 1 ) -> ( ( log ` A ) / ( log ` B ) ) e. RR ) $= ? $.
-    reglogltb $p |- ( ( ( A e. RR+ /\ B e. RR+ ) /\ ( C e. RR+ /\ 1 < C ) ) -> ( A < B <-> ( ( log ` A ) / ( log ` C ) ) < ( ( log ` B ) / ( log ` C ) ) ) ) $= ? $.
-    reglogleb $p |- ( ( ( A e. RR+ /\ B e. RR+ ) /\ ( C e. RR+ /\ 1 < C ) ) -> ( A <_ B <-> ( ( log ` A ) / ( log ` C ) ) <_ ( ( log ` B ) / ( log ` C ) ) ) ) $= ? $.
-    reglogmul $p |- ( ( A e. RR+ /\ B e. RR+ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( A x. B ) ) / ( log ` C ) ) = ( ( ( log ` A ) / ( log ` C ) ) + ( ( log ` B ) / ( log ` C ) ) ) ) $= ? $.
-    reglogexp $p |- ( ( A e. RR+ /\ N e. ZZ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( A ^ N ) ) / ( log ` C ) ) = ( N x. ( ( log ` A ) / ( log ` C ) ) ) ) $= ? $.
-    reglogexpbas $p |- ( ( N e. ZZ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( C ^ N ) ) / ( log ` C ) ) = N ) $= ? $.
-    reglogbas $p |- ( ( C e. RR+ /\ C =/= 1 ) -> ( ( log ` C ) / ( log ` C ) ) = 1 ) $= ? $.
-    reglog1 $p |- ( ( C e. RR+ /\ C =/= 1 ) -> ( ( log ` 1 ) / ( log ` C ) ) = 0 ) $= ? $.
+    pellfundne1 $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) =/= 1 ) $=
+      ( cn csquarenn cdif c1 cr cpellfund cfv clt wbr wne pellfundre pellfundgt1
+      wcel 1re a1i ltne syl3anc ) ABCDNZEFNZAGHZFNEUAIJUAEKTSOPALAMEUAQR $.
+      $( [19-Sep-2014] $)
+
+    logne0 $p |- ( ( A e. RR+ /\ A =/= 1 ) -> ( log ` A ) =/= 0 ) $=
+      ( crp wcel c1 wne wa clog cfv cc0 ce simpr wceq ef0 a1i neeqtrrd necomd cr
+      wb 0re relogeftb syldan necon3bid mpbird ) ABCZADEZFZAGHZIEIJHZAEUFAUHUFAD
+      UHUDUEKUHDLUFMNOPUFUGIUHAUDUEIQCZUGILUHALRUIUFSNAITUAUBUC $.
+      $( [19-Sep-2014] $)
+
+    reglogcl $p |- ( ( A e. RR+ /\ B e. RR+ /\ B =/= 1 ) -> ( ( log ` A ) / ( log ` B ) ) e. RR ) $=
+      ( crp wcel c1 wne w3a clog cfv cr cdiv co relogcl 3ad2ant1 3ad2ant2 logne0
+      cc0 3adant1 redivcl syl3anc ) ACDZBCDZBEFZGAHIZJDZBHIZJDZUFQFZUDUFKLJDUAUB
+      UEUCAMNUBUAUGUCBMOUBUCUHUABPRUDUFST $.
+      $( [19-Sep-2014] $)
+
+    reglogltb $p |- ( ( ( A e. RR+ /\ B e. RR+ ) /\ ( C e. RR+ /\ 1 < C ) ) -> ( A < B <-> ( ( log ` A ) / ( log ` C ) ) < ( ( log ` B ) / ( log ` C ) ) ) ) $=
+      ( crp wcel wa c1 clt wbr clog cfv cdiv co wb logltb adantr cr cc0 ad2antrr
+      relogcl ad2antlr ad2antrl log1 1rp biimpa syl5eqbrr adantl syl112anc bitrd
+      mpan ltdiv1 ) ADEZBDEZFZCDEZGCHIZFZFZABHIZAJKZBJKZHIZUTCJKZLMVAVCLMHIZUNUS
+      VBNUQABOPURUTQEZVAQEZVCQEZRVCHIZVBVDNULVEUMUQATSUMVFULUQBTUAUOVGUNUPCTUBUQ
+      VHUNUQRGJKZVCHUCUOUPVIVCHIZGDEUOUPVJNUDGCOUJUEUFUGUTVAVCUKUHUI $.
+      $( [19-Sep-2014] $)
+
+    logleb $p |- ( ( A e. RR+ /\ B e. RR+ ) -> ( A <_ B <-> ( log ` A ) <_ ( log ` B ) ) ) $=
+      ( crp wcel wa clt wbr wn clog cfv cle wb logltb ancoms notbid lenlt syl2an
+      cr rpre relogcl 3bitr4d ) ACDZBCDZEZBAFGZHZBIJZAIJZFGZHZABKGZUHUGKGZUDUEUI
+      UCUBUEUILBAMNOUBARDBRDUKUFLUCASBSABPQUBUHRDUGRDULUJLUCATBTUHUGPQUA $.
+      $( [19-Sep-2014] $)
+
+    reglogleb $p |- ( ( ( A e. RR+ /\ B e. RR+ ) /\ ( C e. RR+ /\ 1 < C ) ) -> ( A <_ B <-> ( ( log ` A ) / ( log ` C ) ) <_ ( ( log ` B ) / ( log ` C ) ) ) ) $=
+      ( crp wcel wa c1 clt wbr cle clog cfv cdiv co wb logleb adantr cc0 relogcl
+      cr ad2antrr ad2antlr ad2antrl log1 1rp logltb mpan biimpa syl5eqbrr adantl
+      lediv1 syl112anc bitrd ) ADEZBDEZFZCDEZGCHIZFZFZABJIZAKLZBKLZJIZVBCKLZMNVC
+      VEMNJIZUPVAVDOUSABPQUTVBTEZVCTEZVETEZRVEHIZVDVFOUNVGUOUSASUAUOVHUNUSBSUBUQ
+      VIUPURCSUCUSVJUPUSRGKLZVEHUDUQURVKVEHIZGDEUQURVLOUEGCUFUGUHUIUJVBVCVEUKULU
+      M $.
+
+    reglogmul $p |- ( ( A e. RR+ /\ B e. RR+ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( A x. B ) ) / ( log ` C ) ) = ( ( ( log ` A ) / ( log ` C ) ) + ( ( log ` B ) / ( log ` C ) ) ) ) $=
+      ( crp wcel c1 wne wa w3a cmul co clog cfv cdiv caddc wceq cc relogcl recnd
+      3ad2ant3 relogmul 3adant3 oveq1d 3ad2ant1 3ad2ant2 adantr logne0 syl112anc
+      cc0 divdir eqtrd ) ADEZBDEZCDEZCFGZHZIZABJKLMZCLMZNKALMZBLMZOKZUSNKZUTUSNK
+      VAUSNKOKZUQURVBUSNULUMURVBPUPABUAUBUCUQUTQEZVAQEZUSQEZUSUIGZVCVDPULUMVEUPU
+      LUTARSUDUMULVFUPUMVABRSUEUPULVGUMUNVGUOUNUSCRSUFTUPULVHUMCUGTUTVAUSUJUHUK
+      $.
+      $( [19-Sep-2014] $)
+
+    reglogexp $p |- ( ( A e. RR+ /\ N e. ZZ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( A ^ N ) ) / ( log ` C ) ) = ( N x. ( ( log ` A ) / ( log ` C ) ) ) ) $=
+      ( crp wcel cz c1 wne wa w3a co clog cfv cdiv cmul wceq cc relogcl 3ad2ant3
+      recnd cexp relogexp 3adant3 oveq1d cc0 zcn 3ad2ant2 3ad2ant1 adantr logne0
+      divass syl112anc eqtrd ) ADEZCFEZBDEZBGHZIZJZACUAKLMZBLMZNKCALMZOKZVANKZCV
+      BVANKOKZUSUTVCVANUNUOUTVCPURACUBUCUDUSCQEZVBQEZVAQEZVAUEHZVDVEPUOUNVFURCUF
+      UGUNUOVGURUNVBARTUHURUNVHUOUPVHUQUPVABRTUISURUNVIUOBUJSCVBVAUKULUM $.
+      $( [19-Sep-2014] $)
+
+    reglogbas $p |- ( ( C e. RR+ /\ C =/= 1 ) -> ( ( log ` C ) / ( log ` C ) ) = 1 ) $=
+      ( crp wcel c1 wne wa clog cfv cc cc0 cdiv wceq relogcl recnd adantr logne0
+      co divid syl2anc ) ABCZADEZFAGHZICZUBJEUBUBKQDLTUCUATUBAMNOAPUBRS $.
+      $( [19-Sep-2014] $)
+
+    reglog1 $p |- ( ( C e. RR+ /\ C =/= 1 ) -> ( ( log ` 1 ) / ( log ` C ) ) = 0 ) $=
+      ( crp wcel c1 wne wa clog cfv cdiv co cc0 log1 oveq1i cc wceq recnd adantr
+      relogcl logne0 div0 syl2anc syl5eq ) ABCZADEZFZDGHZAGHZIJKUGIJZKUFKUGILMUE
+      UGNCZUGKEUHKOUCUIUDUCUGARPQASUGTUAUB $.
+      $( [19-Sep-2014] $)
+
+    reglogexpbas $p |- ( ( N e. ZZ /\ ( C e. RR+ /\ C =/= 1 ) ) -> ( ( log ` ( C ^ N ) ) / ( log ` C ) ) = N ) $=
+      ( cz wcel crp c1 wne wa cexp co clog cfv cdiv cmul wceq simprl simpl simpr
+      reglogexp syl3anc reglogbas adantl oveq2d cc zcn adantr mulid1 syl 3eqtrd
+      ) BCDZAEDZAFGZHZHZABIJKLAKLZMJZBUOUOMJZNJZBFNJZBUNUKUJUMUPUROUJUKULPUJUMQU
+      JUMRAABSTUNUQFBNUMUQFOUJAUAUBUCUNBUDDZUSBOUJUTUMBUEUFBUGUHUI $.
+      $( [19-Sep-2014] $)
 
     ${
     $d x D $.  $d x A $.
@@ -2097,7 +2220,6 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       TDZYSTDZYSRVCZUUBYEWJXRBBCXHVPXRYDLDZUVSXRYKYCUWBYNYQXSYBWCSYDXCNXRUVFUVTU
       VGYSXCNXRUVFUWAUVGYSXJNBYDYSXIWEXKYHYEAYBIYFYBKYGYDBYFYBXSJXLXMXNS $.
       $( [19-Sep-2014] $)
-    $}
 
     pellfund14b $p |- ( D e. ( NN \ []NN ) -> ( A e. ( Pell14QR ` D ) <-> E. x e. ZZ A = ( ( PellFund ` D ) ^ x ) ) ) $=
       ( cn csquarenn cdif wcel cpell14qr cpellfund cv cexp co wceq cz pellfund14
@@ -2107,6 +2229,7 @@ nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrat
       UPUSUQGZVDVGUPVDVBSUPVHVDVBUPCTPUQUSCUACUBUCUDUPVDVBUFUSUTCUGUEVBURVGUHVEB
       VAUQUIUJUKULUMUNUO $.
       $( [19-Sep-2014] $)
+    $}
 
     $(
     qirropth $p |- ( ( E e. ( RR \ QQ ) /\ ( A e. QQ /\ B e. QQ ) /\ ( C e. QQ /\ D e. QQ ) ) -> ( ( A + ( E x. B ) ) = ( C + ( E x. D ) ) <-> ( A = C /\ B = D ) ) ) $=
@@ -3979,6 +4102,18 @@ $( Semidecidable sets are decidable by Turing machines, which can be expressed a
 
 $( ---- MATIJASEVIC 3 ---- $)
 $( Diophantine <-> Semidecidable.  There exist non-decidable diophantine sets. $)
+
+$( Unrelated: Wiener pairs treat proper classes symmetrically $)
+
+wopprc $p |- ( ( A e. _V /\ B e. _V ) <-> -. 1o e. { { { A } , (/) } , { { B } } } ) $=
+  ( cvv wcel wa c0 csn cpr wn c1o wceq wo pm4.56 dfsn2 snex 0ex snprc notbii
+  con2bii bitr4i id syl5reqr preqr1 syl sylibr biimpi preq1d syl6reqr impbii
+  eqcom bitr2i wb sneqbg ax-mp anbi12i elpr 3bitr4i df1o2 eleq1i ) ACDZBCDZE
+  ZFGZAGZFHZBGZGZHZDZIZJVHDZIVCVEKZIZVCVGKZIZEVLVNLZIVBVJVLVNMUTVMVAVOVLUTVL
+  UTIZVLVDFKZVQVLVEFFHZKVRVLVSVCVEFNZVLUAUBVDFFAOPUCUDAQZUEVQVEVSVCVQVDFFVQV
+  RWAUFUGVTUHUISVAFVFKZIVOWBVAVAIVFFKWBBQVFFUJUKSVNWBFCDVNWBULPFVFCUMUNRTUOV
+  IVPVCVEVGFOUPRUQVKVIJVCVHURUSRT $.
+  $( [19-Sep-2014] $)
 
 $( TODO
     Things I've wanted.  If I still want them after I'm more familiar with the system, I'll implement/call for them
