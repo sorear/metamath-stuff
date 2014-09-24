@@ -2599,6 +2599,13 @@ $c rmX rmY $.
       VJWJVONSETOVIVJVRVPVSIEVKVLVM $.
       $( [22-Sep-2014] $)
 
+    rmxyp1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> (
+        ( A rmX ( N + 1 ) ) = ( ( ( A rmX N ) x. A ) + ( ( ( A ^ 2 ) - 1 ) x. ( A rmY N ) ) ) /\
+        ( A rmY ( N + 1 ) ) = ( ( ( A rmY N ) x. A ) + ( A rmX N ) ) ) ) $= ? $.
+
+    rmxypos $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( 0 < ( A rmX N ) /\ 0 <_ ( A rmY N ) ) ) $= ? $.
+
+
     $( the methodology of "equate rational and irrational parts" tends to give us two theorems at once.  split those apart here $)
 
     rmxneg $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX -u N ) = ( A rmX N ) ) $=
@@ -2652,6 +2659,127 @@ $c rmX rmY $.
       $( [22-Sep-2014] $)
 
     $( prove addition and recurrence relations using rmxyval $)
+
+    $( adding primes to either side of a GCD never reduces it, under the dvds-order $)
+    gcddvdiso1 $p |- ( ( A e. ZZ /\ B e. ZZ /\ C e. ZZ ) -> ( A || B -> ( A gcd C ) || ( B gcd C ) ) ) $=
+      ( cz wcel w3a cdivides wbr cgcd co wa cn0 simpl 3adantl2 nn0z 3syl simpl2
+      gcdcl imp syl32anc simpl3 simpl1 gcddvds syl2anc simpld dvdstr dvdsgcd ex
+      simpr simprd ) ADEZBDEZCDEZFZABGHZACIJZBCIJGHZUNUOKZUPDEZULUMUPBGHZUPCGHZ
+      UQURUKUMKZUPLEUSUKUMUOVBULVBUOMNACRUPOPZUKULUMUOQZUKULUMUOUAZURUSUKULUPAG
+      HZUOUTVCUKULUMUOUBZVDURVFVAURUKUMVFVAKVGVEACUCUDZUEUNUOUIUSUKULFVFUOKUTUP
+      ABUFSTURVFVAVHUJUSULUMFUTVAKUQUPBCUGSTUH $.
+      $( [23-Sep-2014] $)
+
+    gcddvdiso2 $p |- ( ( A e. ZZ /\ B e. ZZ /\ C e. ZZ ) -> ( A || B -> ( C gcd A ) || ( C gcd B ) ) ) $=
+      ( cz wcel w3a cdivides wbr cgcd co gcddvdiso1 wceq gcdcom 3adant2 3adant1
+      breq12d sylibd ) ADEZBDEZCDEZFZABGHACIJZBCIJZGHCAIJZCBIJZGHABCKUAUBUDUCUE
+      GRTUBUDLSACMNSTUCUELRBCMOPQ $.
+      $( [23-Sep-2014] $)
+
+    $( partial converse to ~ bezout .  existance of a linear combination does not set the GCD, but it does upper bound it $)
+
+    bezoutr $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( X e. ZZ /\ Y e. ZZ ) ) -> ( A gcd B ) || ( ( A x. X ) + ( B x. Y ) ) ) $=
+      ( cz wcel wa cgcd co cmul cdivides caddc adantr zmulcl syl2anc dvdsmultr1
+      wbr w3a imp syl31anc cn0 gcdcl simpll simprl simplr simprr gcddvds simpld
+      nn0z syl simprd dvds2add syl32anc ) AEFZBEFZGZCEFZDEFZGZGZABHIZEFZACJIZEF
+      ZBDJIZEFZVAVCKQZVAVEKQZVAVCVELIKQZUPVBUSUPVAUAFVBABUBVAUIUJMZUTUNUQVDUNUO
+      USUCZUPUQURUDZACNOUTUOURVFUNUOUSUEZUPUQURUFZBDNOUTVBUNUQVAAKQZVGVJVKVLUTV
+      OVABKQZUPVOVPGUSABUGMZUHVBUNUQRVOVGVAACPSTUTVBUOURVPVHVJVMVNUTVOVPVQUKVBU
+      OURRVPVHVABDPSTVBVDVFRVGVHGVIVAVCVEULSUM $.
+      $( [23-Sep-2014] $)
+
+    $( strengthening for relative primes $)
+    bezoutr1 $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( X e. ZZ /\ Y e. ZZ ) ) -> ( ( ( A x. X ) + ( B x. Y ) ) = 1 -> ( A gcd B ) = 1 ) ) $=
+      ( cz wcel wa cmul co caddc c1 wceq wbr cdivides syl a1i syl2anc cc0 wne
+      cn cgcd cle bezoutr adantr simpr breqtrd wi cn0 gcdcl ad2antrr 1nn dvdsle
+      nn0z mpd wb wn simpll oveq1 oveqan12d cc zcn mul02 sylan9eqr 00id adantll
+      syl6eq ax-1ne0 necomi eqnetrd ex necon2bd imp gcdn0cl nnle1eq1 mpbid ) AE
+      FBEFGZCEFZDEFZGZGZACHIZBDHIZJIZKLZABUAIZKLZVTWDGZWEKUBMZWFWGWEKNMZWHWGWEW
+      CKNVTWEWCNMWDABCDUCUDVTWDUEUFWGWEEFZKTFZWIWHUGVPWJVSWDVPWEUHFWJABUIWEUMOU
+      JWKWGUKPWEKULQUNWGWETFZWHWFUOWGVPARLZBRLZGZUPZWLVPVSWDUQVTWDWPVTWOWCKVTWO
+      WCKSVTWOGZWCRKVSWOWCRLVPVSWOGWCRRJIZRWOVSWCRCHIZRDHIZJIWRWMWNWAWSWBWTJARC
+      HURBRDHURUSVQVRWSRWTRJVQCUTFWSRLCVACVBOVRDUTFWTRLDVADVBOUSVCVDVFVERKSWQKR
+      VGVHPVIVJVKVLABVMQWEVNOVOVJ $.
+      $( [23-Sep-2014] $)
+
+    $( do something Bezouty with rmxynorm $)
+    jm2.19lem1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ ) -> ( ( A rmX M ) gcd ( A rmY M ) ) = 1 ) $=
+      ( c2 wcel cz crmx co cmul crmy cexp c1 cmin cneg caddc wceq cc cn0 syl cn
+      syl2anc cuz cfv wa cgcd frmx fovcl sqcl csquarenn cdif rmspecnonsq eldifi
+      nn0cn adantr nncn frmy zcn mulcl negsub sqval oveq2d mulneg1 nnnegz mul12
+      syl3anc 3eqtr3d oveq12d rmxynorm nn0ssz sseldi zmulcl bezoutr1 syl22anc
+      wi mpd ) ACUAUBZDZBEDZUCZABFGZVSHGZABIGZACJGKLGZMZWAHGZHGZNGZKOZVSWAUDGKO
+      ZVRVSCJGZWBWACJGZHGZMZNGZWIWKLGZWFKVRWIPDZWKPDZWMWNOVRVSPDZWOVRVSQDWQABQV
+      OEFUEUFZVSULRZVSUGRVRWBPDZWJPDZWPVRWBSDZWTVPXBVQVPWBSUHUIDXBAUJWBSUHUKRUM
+      ZWBUNRZVRWAPDZXAVRWAEDZXEABEVOEIUOUFZWAUPRZWAUGRZWBWJUQTWIWKURTVRWIVTWLWE
+      NVRWQWIVTOWSVSUSRVRWCWJHGZWCWAWAHGZHGZWLWEVRWJXKWCHVRXEWJXKOXHWAUSRUTVRWT
+      XAXJWLOXDXIWBWJVATVRWCPDZXEXEXLWEOVRWCEDZXMVRXBXNXCWBVBRZWCUPRXHXHWCWAWAV
+      CVDVEVFABVGVEVRVSEDZXFXPWDEDZWGWHVMVRQEVSVHWRVIZXGXRVRXNXFXQXOXGWCWAVJTVS
+      WAVSWDVKVLVN $.
+      $( [23-Sep-2014] $)
+
+    dvdsadd2b $p |- ( ( A e. ZZ /\ B e. ZZ /\ ( C e. ZZ /\ A || C ) ) -> ( A || B <-> A || ( C + B ) ) ) $=
+      ( cz wcel cdivides wbr wa w3a caddc simpl1 simpl3l simpl2 simpl3r syl2anc
+      co adantr wceq cc zcn simpr dvds2add imp syl32anc simp3l simp2 zaddcl syl
+      cneg znegcl dvdsnegb mpbid cmin ancoms adantl negsub pncan2 eqtrd breqtrd
+      wb impbida ) ADEZBDEZCDEZACFGZHZIZABFGZACBJPZFGZVGVHHVBVDVCVEVHVJVBVCVFVH
+      KVDVEVBVCVHLVBVCVFVHMVDVEVBVCVHNVGVHUAVBVDVCIVEVHHVJACBUBUCUDVGVJHZAVICUI
+      ZJPZBFVKVBVIDEZVLDEZVJAVLFGZAVMFGZVBVCVFVJKZVGVNVJVGVDVCVNVBVCVDVEUEZVBVC
+      VFUFCBUGZOQVGVOVJVGVDVOVSCUJUHQVGVJUAVKVEVPVDVEVBVCVJNVKVBVDVEVPUTVRVDVEV
+      BVCVJLZACUKOULVBVNVOIVJVPHVQAVIVLUBUCUDVKVCVDVMBRVBVCVFVJMWAVCVDHZVMVICUM
+      PZBWBVISEZCSEZVMWCRWBVNWDVDVCVNVTUNVITUHVDWEVCCTUOZVICUPOWBWEBSEZWCBRWFVC
+      WGVDBTQCBUQOUROUSVA $.
+      $( [23-Sep-2014] $)
+
+    coprmdvdsb $p |- ( ( K e. ZZ /\ N e. ZZ /\ ( M e. ZZ /\ ( K gcd M ) = 1 ) ) -> ( K || N <-> K || ( M x. N ) ) ) $=
+      ( cz wcel cgcd co c1 wceq wa w3a cdivides cmul wi simp1 simp3l dvdsmultr2
+      wbr simp2 syl3anc simp3r coprmdvds mpan2d impbid ) ADEZCDEZBDEZABFGHIZJZK
+      ZACLRZABCMGLRZUJUEUGUFUKULNUEUFUIOZUEUFUGUHPZUEUFUISZABCQTUJULUHUKUEUFUGU
+      HUAUJUEUGUFULUHJUKNUMUNUOABCUBTUCUD $.
+      $( [23-Sep-2014] $)
+
+    $( use addition formula and a bit of reduction $)
+    jm2.19lem2 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) -> ( ( A rmY M ) || ( A rmY N ) <-> ( A rmY M ) || ( A rmY ( N + M ) ) ) ) $=
+      ( wcel cz crmy co cdivides wbr crmx cmul caddc c1 wceq 3adant3 cn0 sseldi
+      fovcl syl2anc cc c2 cuz cfv cgcd wb frmy 3adant2 nn0ssz gcdcom jm2.19lem1
+      w3a eqtrd coprmdvdsb syl112anc nn0sscn zsscn mulcom breq2d bitrd dvdsmul2
+      frmx zmulcl dvdsadd2b rmyadd 3com23 mulcl addcom eqtr2d 3bitrd ) AUAUBUCZ
+      DZBEDZCEDZUKZABFGZACFGZHIZVOVPABJGZKGZHIZVOACJGZVOKGZVSLGZHIZVOACBLGFGZHI
+      VNVQVOVRVPKGZHIZVTVNVOEDZVPEDZVREDZVOVRUDGZMNVQWGUEVKVLWHVMABEVJEFUFROZVK
+      VMWIVLACEVJEFUFRUGZVNPEVRUHVKVLVRPDVMABPVJEJVAROZQZVNWKVRVOUDGZMVNWHWJWKW
+      PNWLWOVOVRUISVKVLWPMNVMABUJOULVOVRVPUMUNVNWFVSVOHVNVRTDZVPTDZWFVSNVNPTVRU
+      OWNQZVNETVPUPWMQZVRVPUQSURUSVNWHVSEDZWBEDZVOWBHIZVTWDUEWLVNWIWJXAWMWOVPVR
+      VBSVNWAEDZWHXBVNPEWAUHVKVMWAPDVLACPVJEJVARUGQZWLWAVOVBSVNXDWHXCXEWLWAVOUT
+      SVOVSWBVCUNVNWCWEVOHVNWEVSWBLGZWCVKVMVLWEXFNACBVDVEVNVSTDZWBTDZXFWCNVNWRW
+      QXGWTWSVPVRVFSVNWATDVOTDXHVNETWAUPXEQVNETVOUPWLQWAVOVFSVSWBVGSVHURVI $.
+      $( [23-Sep-2014] $)
+
+    $( NN0-induction $)
+    jm2.19lem3 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ ( M e. ZZ /\ N e. ZZ ) /\ I e. NN0 ) -> ( ( A rmY M ) || ( A rmY N ) <-> ( A rmY M ) || ( A rmY ( N + ( I x. M ) ) ) ) ) $=
+        ? $.
+
+    $( extend to ZZ by symmetry $)
+    jm2.19lem4 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ ( M e. ZZ /\ N e. ZZ ) /\ I e. ZZ ) -> ( ( A rmY M ) || ( A rmY N ) <-> ( A rmY M ) || ( A rmY ( N + ( I x. M ) ) ) ) ) $=
+        ? $.
+
+    dvdsleabs2 $p |- ( ( M e. ZZ /\ N e. ZZ /\ N =/= 0 ) -> ( M || N -> ( abs ` M ) <_ ( abs ` N ) ) ) $= ? $.
+    rmyeq0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( N = 0 <-> ( A rmY N ) = 0 ) ) $= ? $.
+
+    dvdsabsmod0 $p |- ( ( M e. ZZ /\ N e. ZZ /\ M =/= 0 ) -> ( M || N <-> ( N mod ( abs ` M ) ) = 0 ) ) $= ? $.
+
+    $( requires monotonicity properties $)
+    jm2.19 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) -> ( M || N <-> ( A rmY M ) || ( A rmY N ) ) ) $=
+      ( cfv wcel cz cdivides wbr crmy co wb cc0 wceq wa syl frmy 3bitr4d adantr
+      0dvds ex c2 cuz w3a 3adant2 simp3 simp1 fovcl syl2anc simpr breq1d oveq2d
+      simpl1 rmy0 eqtrd wne cmo wi 3adant3 dvds0 3ad2ant1 breqtrrd oveq2 breq2d
+      cabs adantl mpbird wn necon4ad impbid pm2.61dne ) AUAUBDZEZBFEZCFEZUCZBCG
+      HZABIJZACIJZGHZKZBLVOBLMZVTVOWANZLCGHZLVRGHZVPVSVOWCWDKWAVOCLMZVRLMZWCWDV
+      LVNWEWFKVM?UDVOVNWCWEKVLVMVNUEZCSOVOVRFEZWDWFKVOVLVNWHVLVMVNUFWGACFVKFIPU
+      GUHVRSOQRWBBLCGVOWAUIZUJWBVQLVRGWBVQALIJZLWBBLAIWIUKWBVLWJLMZVLVMVNWAULAU
+      MZOUNUJQTVOBLUOZVTVOWMNZCBVDDUPJZLMZVQAWOIJZGHZVPVSWNWPWRVOWPWRUQWMVOWPWR
+      VOWPNWRVQWJGHZVOWSWPVOVQLWJGVOVQFEZVQLGHVLVMWTVNABFVKFIPUGURVQUSOVLVMWKVN
+      WLUTVARWPWRWSKVOWPWQWJVQGWOLAIVBVCVEVFTRWNWRWOLWNWOLUOWRVG?TVHVI??QTVJ $.
+      $( [24-Sep-2014] $)
 
 $(
     [JonesMatijasevic] lemma 2.27; rmY is a diophantine relation.  Need to verify that "natural number" actually means NN0 when I start to formalize this.  The source proof uses both i and I; i has been changed to j to avoid collision.
