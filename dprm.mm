@@ -1,3 +1,9 @@
+$(
+                           ~~ PUBLIC DOMAIN ~~
+This work is waived of all rights, including copyright, according to the CC0
+Public Domain Dedication.  http://creativecommons.org/publicdomain/zero/1.0/
+$)
+
 $[ set.mm $]
 
 $( early warmup proofs.  I may find a use for Id ` x. later $)
