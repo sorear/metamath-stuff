@@ -3427,6 +3427,9 @@ $c rmX rmY $.
       $( [27-Sep-2014] $)
 
 
+    jm2.26 $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) /\ ( K e. ZZ /\ M e. ZZ ) ) -> ( ( ( A rmX N ) || ( ( A rmY K ) + ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) ) <-> ( ( 2 x. N ) || ( K + M ) \/ ( 2 x. N ) || ( K - M ) ) ) ) $=
+        ? $.
+
 $(
     [JonesMatijasevic] lemma 2.27; rmY is a diophantine relation.  Need to verify that "natural number" actually means NN0 when I start to formalize this.  The source proof uses both i and I; i has been changed to j to avoid collision.
     jm2.27 $p |- ( ( C e. ( ZZ>= ` 2 ) /\ A e. NN0 /\ B e. NN0 ) ->
