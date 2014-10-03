@@ -3460,20 +3460,6 @@ $c rmX rmY $.
       WFPAUUABVJQVOUVAVUCUWDUDVUDVUEUFYTYRVUBYSXBXCXDYJ $.
       $( [27-Sep-2014] $)
 
-    $( [JonesMatijasevic] uses "a \equiv \pm b (mod c)" for this construction.  The disjunction of divisibility constraints seems to adequately capture the concept, but it's rather verbose and somewhat inelegant $)
-
-    jm2.24 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmY ( N - 1 ) ) + ( A rmY N ) ) < ( A rmX N ) ) $=
-        ? $.
-
-    $( reverse direction is required to prove forward direction, so do it separatly.  induction on difference between K and M, together with the addition formula fact that adding 2N only inverts sign $)
-    jm2.26a $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) /\ ( K e. ZZ /\ M e. ZZ ) ) -> ( ( ( 2 x. N ) || ( K + M ) \/ ( 2 x. N ) || ( K - M ) ) -> ( ( A rmX N ) || ( ( A rmY K ) + ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) ) ) ) $=
-        ? $.
-
-    $( use a representation lemma to find K', M' ~ K, M in [0,N]. thus Y(K') ~~ Y(M') and both are small; K' = M' on pain of contradicting 2.24, so K ~~ M $)
-
-    jm2.26 $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) /\ ( K e. ZZ /\ M e. ZZ ) ) -> ( ( ( A rmX N ) || ( ( A rmY K ) + ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) ) <-> ( ( 2 x. N ) || ( K + M ) \/ ( 2 x. N ) || ( K - M ) ) ) ) $=
-        ? $.
-
     congtr $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( C e. ZZ /\ D e. ZZ ) /\ ( A || ( B - C ) /\ A || ( C - D ) ) ) -> A || ( B - D ) ) $=
       ( cz wcel wa cmin co cdivides wbr w3a caddc simp1l simp1r zsubcl 3ad2ant2
       cc zcn adantl simp2l syl2anc simp3 dvds2add syl31anc wceq 3ad2ant1 adantr
@@ -3562,6 +3548,92 @@ $c rmX rmY $.
       UMWJJVIUCYBYCJWDVBJTVMVNAHWMJUOUQWEWFWGAGHJUBSWHWI $.
       $( [1-Oct-2014] $)
     $}
+
+    ${
+    $d ph a b y $.  $d A a b x y $.  $d ps a b x $.  $d ch a b x $.  $d th a b x $.  $d ta a b x $.
+    zindbi.1 $e |- ( y e. ZZ -> ( ps <-> ch ) ) $.
+    zindbi.2 $e |- ( x = y -> ( ph <-> ps ) ) $.
+    zindbi.3 $e |- ( x = ( y + 1 ) -> ( ph <-> ch ) ) $.
+    zindbi.4 $e |- ( x = 0 -> ( ph <-> th ) ) $.
+    zindbi.5 $e |- ( x = A -> ( ph <-> ta ) ) $.
+
+    zindbi $p |- ( A e. ZZ -> ( th <-> ta ) ) $=
+      ( vb cz wcel cc0 cle wb dfsbcq va wbr wo cr 0re zre letric sylancr 0z w3a
+      wsbc wi cv wceq eleq1 breq1 3anbi13d bibi1d imbi12d breq2 3anbi23d bibi2d
+      wsb c1 caddc co weq biidd vex sbcie syl5bbr ovex bibi12d vtoclga 3ad2ant2
+      oveq1 biimpd uzind vtocl2g 3adant3 pm2.43i mp3an1 wa mp3an2 bicomd jaodan
+      syl mpdan elexi a1i sbcieg 3bitr3d ) HOPZAFQUKZAFHUKZDEWMQHRUBZHQRUBZUCZW
+      NWOSZWMQUDPHUDPWRUEHUFQHUGUHWMWPWSWQQOPZWMWPWSUIWTWMWPUJZWSWTWMXAWSULZWPG
+      UMZOPZNUMZOPZXCXERUBZUJZAFGVCZAFNVCZSZULZWTXFQXERUBZUJZWNXJSZULXBGNQHOOXC
+      QUNZXHXNXKXOXPXDWTXGXMXFXCQOUOXCQXERUPUQXPXIWNXJAFXCQTURUSXEHUNZXNXAXOWSX
+      QXFWMXMWPWTXEHOUOXEHQRUTVAXQXJWOWNAFXEHTVBUSXIAFUAVCZSXIXISXKXIAFXEVDVEVF
+      ZUKZSZXKUANXCXEUAGVGXRXIXIAFUAUMZXCTVBUANVGXRXJXIAFYBXETVBZYBXSUNXRXTXIAF
+      YBXSTVBYCXDXIVHXHXKYAXHXJXTXIXFXDXJXTSZXGBCSYDGXEOGNVGZBXJCXTBXIYEXJABFXC
+      GVIJVJAFXCXETVKCAFXCVDVEVFZUKZYEXTACFYFXCVDVEVLKVJYEYFXSUNYGXTSXCXEVDVEVP
+      AFYFXSTWGVKVMIVNVOVBVQVRZVSVTWAWBWMWQWCWOWNWMWTWQWOWNSZUIWMWTWQUJZYIWMWTY
+      JYIULZWQXLWMXFHXERUBZUJZWOXJSZULYKGNHQOOXCHUNZXHYMXKYNYOXDWMXGYLXFXCHOUOX
+      CHXERUPUQYOXIWOXJAFXCHTURUSXEQUNZYMYJYNYIYPXFWTYLWQWMXEQOUOXEQHRUTVAYPXJW
+      NWOAFXEQTVBUSYHVSVTWAWDWEWFWHWNDSWMADFQQOUIWILVJWJAEFHOMWKWL $.
+      $( [1-Oct-2014] $)
+    $}
+
+
+    $( [JonesMatijasevic] uses "a \equiv \pm b (mod c)" for this construction.  The disjunction of divisibility constraints seems to adequately capture the concept, but it's rather verbose and somewhat inelegant $)
+
+    jm2.24 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmY ( N - 1 ) ) + ( A rmY N ) ) < ( A rmX N ) ) $=
+        ? $.
+
+    acongid $p |- ( ( A e. ZZ /\ B e. ZZ ) -> ( A || ( B - B ) /\ A || ( B - -u B ) ) ) $=
+        ? $.
+
+    acongeu $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( C e. ZZ /\ D e. ZZ ) /\
+            ( ( A || ( B - C ) \/ A || ( B - -u C ) ) /\ ( A || ( B - D ) \/ A || ( B - -u D ) ) ) ) -> ( A || ( C - D ) \/ A || ( C - -u D ) ) ) $=
+        ? $.
+
+    jm2.25lem1 $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( C e. ZZ /\ D e. ZZ ) /\ ( A || ( C - D ) \/ A || ( C - -u D ) ) ) ->
+            ( ( A || ( D - B ) \/ A || ( D - -u B ) ) <-> ( A || ( C - B ) \/ A || ( C - -u B ) ) ) ) $=
+      ( cz wcel wa cmin cdivides wbr ad2antrr simpr simplr congtr syl112anc syl
+      co jaodan syl12anc wceq cneg wo wb an3 bnj232 orcd simprr znegcl jca olcd
+      an42s congsym w3a anim2i impbida anim12i cc zcn ad2antll ad2antlr neg2sub
+      syl2anc breqtrrd anim1i negneg oveq2d eqtr3d simplll oveq1d adantr eqcomd
+      simpl 3impa ) AEFZBEFZGZCEFZDEFZGZACDHQIJZACDUAZHQIJZUBADBHQZIJZADBUAZHQZ
+      IJZUBZACBHQIJZACWEHQIJZUBZUCZVPVSGZVTWLWBWMVTGZWHWKWNWDWKWGWNWDGZWIWJWOVN
+      VQGZVRVOGZVTWDWIWMWPVTWDVNVRVOVQWPVNVRVOVQUDUKZKWMWQVTWDVPVSVOVRVNVOLZVQV
+      RLUEZKWMVTWDMWNWDLACDBNOUFWNWGGZWJWIXAWPVRWEEFZGZVTWGWJWMWPVTWGWRKWMXCVTW
+      GWMVRXBVPVQVRUGZWMVOXBVNVOVSMZBUHZPZUIKWMVTWGMWNWGLACDWENOUJRWNWIWHWJWNWI
+      GZVNVRGZVQVOGZADCHQIJZWIWHWMXIVTWIVNVOVQVRUDZKWMXJVTWIVPVSVOVQWSVQVRVLUEZ
+      KXHWPVRVTXKWMWPVTWIWRKWMVRVTWIXDKWMVTWIMACDULZSWNWILXIXJXKWIGUMWDWGADCBNU
+      FOWNWJGZWGWDXOXIVQXBGZXKWJWGWMXIVTWJXLKWMXPVTWJWMXJXPXMVOXBVQXFUNPKXOWPVR
+      VTXKWMWPVTWJWRKWMVRVTWJXDKWMVTWJMXNSWNWJLADCWENOUJRUOWMWBGZWHWKXQWDWKWGXQ
+      WDGZWJWIXRWPWAEFZXBGZWBAWAWEHQZIJWJWMWPWBWDWRKWMXTWBWDWMWQXTWTVRXSVOXBDUH
+      ZXFUPPZKWMWBWDMXRABDHQZYAIXRXIVOWDAYDIJWMXIWBWDXLKWMVOWBWDXEKXQWDLADBULSW
+      MYAYDTZWBWDWMDUQFZBUQFZYEVRYFVPVQDURUSZVOYGVNVSBURUTZDBVAVBKVCACWAWENOUJX
+      QWGGZWIWJYJWPXSVOGZWBAWABHQZIJWIWMWPWBWGWRKWMYKWBWGWMWQYKWTVRXSVOYBVDPKWM
+      WBWGMYJAWEDHQZYLIYJXIXBWGAYMIJWMXIWBWGXLKWMXBWBWGXGKXQWGLADWEULSWMYLYMTWB
+      WGWMWAWEUAZHQZYLYMWMYNBWAHWMYGYNBTYIBVEPVFWMYFWEUQFZYOYMTYHWMXBYPXGWEURPD
+      WEVAVBVGKVCACWABNOUFRXQWIWHWJXQWIGZWGWDYQABWAHQZWFIYQVPVQXSGZABCHQIJZWBAY
+      RIJVPVSWBWIVHWMYSWBWIWMVSYSVPVSLVRXSVQYBUNPZKYQWPVOWIYTWMWPWBWIWRKWMVOWBW
+      IXEKXQWILACBULSWMWBWIMABCWANOWMWFYRTWBWIWMWAUAZWEHQZWFYRWMUUBDWEHWMYFUUBD
+      TYHDVEPVIWMWAUQFZYGUUCYRTWMXTUUDYCXSUUDXBWAURVJPYIWABVAVBVGKVCUJXQWJGZWDW
+      GUUEAWEWAHQZWCIUUEVNXBGZYSAWECHQIJZWBAUUFIJWMUUGWBWJVPUUGVSVOXBVNXFUNVJKW
+      MYSWBWJUUAKUUEWPXBWJUUHWMWPWBWJWRKWMXBWBWJXGKXQWJLACWEULSWMWBWJMAWECWANOW
+      MWCUUFTWBWJWMUUFWCWMYGYFUUFWCTYIYHBDVAVBVKKVCUFRUORVM $.
+      $( [2-Oct-2014] $)
+
+    ${
+    $d A a b $.  $d M a b $.  $d N a b $.  $d I a b $.
+    jm2.25 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ ( M e. ZZ /\ N e. ZZ ) /\ I e. ZZ ) -> ( A rmX N ) || ( ( A rmY ( M + ( I x. ( 2 x. N ) ) ) ) - ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY ( M + ( I x. ( 2 x. N ) ) ) ) - -u ( A rmY M ) ) ) $=
+        ? $.
+    $}
+
+    $( reverse direction is required to prove forward direction, so do it separatly.  induction on difference between K and M, together with the addition formula fact that adding 2N only inverts sign $)
+    jm2.26a $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) /\ ( K e. ZZ /\ M e. ZZ ) ) -> ( ( ( 2 x. N ) || ( K + M ) \/ ( 2 x. N ) || ( K - M ) ) -> ( ( A rmX N ) || ( ( A rmY K ) + ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) ) ) ) $=
+        ? $.
+
+    $( use a representation lemma to find K', M' ~ K, M in [0,N]. thus Y(K') ~~ Y(M') and both are small; K' = M' on pain of contradicting 2.24, so K ~~ M $)
+
+    jm2.26 $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) /\ ( K e. ZZ /\ M e. ZZ ) ) -> ( ( ( A rmX N ) || ( ( A rmY K ) + ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) ) <-> ( ( 2 x. N ) || ( K + M ) \/ ( 2 x. N ) || ( K - M ) ) ) ) $=
+        ? $.
 
     $( changes of plan: do use Lucas formula, explicit congruence lemmata $)
     ${
