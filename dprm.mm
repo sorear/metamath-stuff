@@ -3608,6 +3608,10 @@ $c rmX rmY $.
       UJTRUPUNVKUOCSUEVCCUFUGUHUIUKULUM $.
       $( [2-Oct-2014] $)
 
+    acongneg2 $p |- ( ( ( A e. ZZ /\ B e. ZZ /\ C e. ZZ ) /\
+            ( A || ( B - -u C ) \/ A || ( B - -u -u C ) ) ) -> ( A || ( B - C ) \/ A || ( B - -u C ) ) ) $=
+        ? $.
+
     acongtr $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( C e. ZZ /\ D e. ZZ ) /\
             ( ( A || ( B - C ) \/ A || ( B - -u C ) ) /\ ( A || ( C - D ) \/ A || ( C - -u D ) ) ) ) -> ( A || ( B - D ) \/ A || ( B - -u D ) ) ) $=
       ( cz wcel wa cmin co cdivides wbr cneg wo congtr ex simpll ad2antlr simpr
@@ -3637,10 +3641,12 @@ $c rmX rmY $.
       ZUFUGUKULUPQUQUFUIUJULURUSVAUTUHUKULUPRACDUCUDUMUPSADCBTUBUE $.
       $( [2-Oct-2014] $)
 
+    ${
     acongeq12d.1 $e |- ( ph -> B = C ) $.
     acongeq12d.2 $e |- ( ph -> D = E ) $.
     acongeq12d $p |- ( ph -> ( ( A || ( B - D ) \/ A || ( B - -u D ) ) <-> ( A || ( C - E ) \/ A || ( C - -u E ) ) ) ) $=
         ? $.
+    $}
 
     rmxdbl $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX ( 2 x. N ) ) = ( ( 2 x. ( ( A rmX N ) ^ 2 ) ) - 1 ) ) $=
       ( c2 wcel cz cmul co crmx caddc cexp cmin crmy wceq 2times syl oveq2d cn0
@@ -3727,8 +3733,30 @@ $c rmX rmY $.
     $}
 
     $( reverse direction is required to prove forward direction, so do it separatly.  induction on difference between K and M, together with the addition formula fact that adding 2N only inverts sign $)
+    ${
+    $d A a $.  $d N a $.  $d K a $.  $d M a $.
     jm2.26a $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) /\ ( K e. ZZ /\ M e. ZZ ) ) -> ( ( ( 2 x. N ) || ( K - M ) \/ ( 2 x. N ) || ( K - -u M ) ) -> ( ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) \/ ( A rmX N ) || ( ( A rmY K ) - -u ( A rmY M ) ) ) ) ) $=
-        ? $.
+      ( va c2 wcel cz wa co cmin cdivides wbr crmy cneg wo syl2anc caddc adantr
+      wceq cuz cfv cmul crmx cv wrex wb 2z simplr zmulcl sylancr zsubcl divides
+      adantl simplll simplrr simpllr simpr jm2.25 syl121anc oveq2 oveq2d cc zcn
+      pncan3 syl2anr ad2antlr sylan9eqr eqidd acongeq12d mpbid rexlimdva sylbid
+      simprl znegcl ad2antll w3a cn0 nn0ssz frmx fovcl sseldi simplrl frmy 3jca
+      ex negcl syl rmyneg acongneg2 jaod ) AFUAUBZGZDHGZIZBHGZCHGZIZIZFDUCJZBCK
+      JZLMZADUDJZABNJZACNJZKJLMXCXDXEOZKJLMZPZWTBCOZKJZLMZWSXBEUEZWTUCJZXATZEHU
+      FZXHWSWTHGZXAHGZXBXOUGWSFHGWNXPUHWMWNWRUIFDUJUKZWRXQWOBCULUNEWTXAUMQWSXNX
+      HEHWSXLHGZIZXNXHXTXNIZXCACXMRJZNJZXEKJLMXCYCXFKJLMPZXHXTYDXNXTWMWQWNXSYDW
+      MWNWRXSUOZWOWPWQXSUPZWMWNWRXSUQZWSXSURZAXLCDUSUTSYAXCYCXDXEXEXNXTYCACXARJ
+      ZNJXDXNYBYIANXMXACRVAVBXTYIBANWRYIBTZWOXSWQCVCGZBVCGZYJWPCVDZBVDZCBVEVFVG
+      VBVHYAXEVIVJVKWFVLVMWSXKXMXJTZEHUFZXHWSXPXJHGZXKYPUGXRWSWPXIHGZYQWOWPWQVN
+      WQYRWOWPCVOVPZBXIULQEWTXJUMQWSYOXHEHXTYOXHXTYOIZXCHGZXDHGZXEHGZVQZXGXCXDX
+      FOKJLMPZXHXTUUDYOXTUUAUUBUUCXTWMWNUUAYEYGWOVRHXCVSADVRWLHUDVTWAWBQXTWMWPU
+      UBYEWOWPWQXSWCABHWLHNWDWAQXTWMWQUUCYEYFACHWLHNWDWAQWESYTXCAXIXMRJZNJZAXIN
+      JZKJLMXCUUGUUHOKJLMPZUUEXTUUIYOXTWMYRWNXSUUIYEWSYRXSYSSYGYHAXLXIDUSUTSYTX
+      CUUGXDUUHXFYOXTUUGAXIXJRJZNJXDYOUUFUUJANXMXJXIRVAVBXTUUJBANWRUUJBTZWOXSWQ
+      XIVCGZYLUUKWPWQYKUULYMCWGWHYNXIBVEVFVGVBVHXTUUHXFTZYOXTWMWQUUMYEYFACWIQSV
+      JVKXCXDXEWJQWFVLVMWK $.
+      $( [2-Oct-2014] $)
+    $}
 
     $( use a representation lemma to find K', M' ~ K, M in [0,N]. thus Y(K') ~~ Y(M') and both are small; K' = M' on pain of contradicting 2.24, so K ~~ M $)
 
