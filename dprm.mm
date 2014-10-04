@@ -3063,9 +3063,44 @@ $c rmX rmY $.
       $( [24-Sep-2014] $)
     $}
 
-    $(
-    ltrmxnn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. NN0 /\ N e. NN0 ) -> ( M < N <-> ( A rmX M ) < ( A rmX N ) ) ) $= ? $.
-    $)
+    ${
+    $d A a b $.  $d M a b $.  $d N a b $.
+    ltrmxnn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. NN0 /\ N e. NN0 ) -> ( M < N <-> ( A rmX M ) < ( A rmX N ) ) ) $=
+      ( c2 wcel cn0 clt wbr crmx co wb cc0 cr cz fovcl sylan2 sseldi cle oveq2
+      cn va vb cuz cfv cv c1 caddc wa cmul nn0ssre nn0z eluzelre adantr remulcl
+      frmx syl2anc peano2zdi eluz2b2 simprbi crmy rmxypos simpld ltmulgt11 cexp
+      syl3anc mpbid cmin csquarenn cdif rmspecnonsq eldifi syl nnre nn0ge0 3syl
+      nnnn0 zssre frmy simprd mulge0 syl22anc addge01 wceq rmxp1 breqtrrd nn0uz
+      ltletrd monotuz 3impb ) ADUCUDZEZBFECFEBCGHABIJZACIJZGHKWKUAUBBCAUAUEZIJZ
+      WLWMAUBUEZIJZAWPUFUGJZIJZFLWKWPFEZUHZWQWQAUIJZWSXAFMWQUJWTWKWPNEZWQFEWPUK
+      ZAWPFWJNIUOOPQZXAWQMEZAMEZXBMEZXEWKXGWTDAULUMZWQAUNUPZXAFMWSUJWTWKWRNEWSF
+      EWTWPXDUQAWRFWJNIUOOPQXAUFAGHZWQXBGHZWKXKWTWKATEXKAURUSUMXAXFXGLWQGHZXKXL
+      KXEXIXAXMLAWPUTJZRHZAWPVAZVBWQAVCVEVFXAXBXBADVDJUFVGJZXNUIJZUGJZWSRXALXRR
+      HZXBXSRHZXAXQMEZLXQRHZXNMEZXOXTXAXQTEZYBWKYEWTWKXQTVHVIEYEAVJXQTVHVKVLUMZ
+      XQVMVLZXAYEXQFEYCYFXQVPXQVNVOXANMXNVQWTWKXCXNNEXDAWPNWJNUTVROPQZXAXMXOXPV
+      SXQXNVTWAXAXHXRMEZXTYAKXJXAYBYDYIYGYHXQXNUNUPXBXRWBUPVFWTWKXCWSXSWCXDAWPW
+      DPWEWGWKWNFEZUHFMWOUJYJWKWNNEWOFEWNUKAWNFWJNIUOOPQWFWNWRAISWNWPAISWNBAISW
+      NCAISWHWI $.
+      $( [4-Oct-2014] $)
+
+    lermxnn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. NN0 /\ N e. NN0 ) -> ( M <_ N <-> ( A rmX M ) <_ ( A rmX N ) ) ) $=
+      ( va vb c2 cuz cfv wcel cn0 cle wbr crmx co wb cv oveq2 nn0ssre cz clt wa
+      cr nn0z frmx fovcl sylan2 sseldi w3a ltrmxnn0 biimpd 3expb leord1 3impb
+      wi ) AFGHZIZBJICJIBCKLABMNZACMNZKLOUPDEADPZMNZAEPZMNZBCJUQURUSVAAMQUSBAMQ
+      USCAMQRUPUSJIZUAJUBUTRVCUPUSSIUTJIUSUCAUSJUOSMUDUEUFUGUPVCVAJIZUSVATLZUTV
+      BTLZUNUPVCVDUHVEVFAUSVAUIUJUKULUM $.
+      $( [4-Oct-2014] $)
+
+    rmxnn $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX N ) e. NN ) $=
+      ( wcel cz wa cn0 crmx co cn cc0 clt wbr nn0z frmx sylan2 crmy cle rmxypos
+      fovcl simpld c2 cuz cfv cneg wo cr elznn0 simprbi adantl elnnnn0b adantlr
+      sylanbrc wceq rmxneg adantr eqeltrrd jaodan mpdan ) AUAUBUCZCZBDCZEZBFCZB
+      UDZFCZUEZABGHZICZVAVFUTVABUFCVFBUGUHUIVBVCVHVEUTVCVHVAUTVCEZVGFCZJVGKLZVH
+      VCUTVAVJBMABFUSDGNSOVIVKJABPHQLABRTVGUJULUKVBVEEAVDGHZVGIVBVLVGUMVEABUNUO
+      UTVEVLICZVAUTVEEZVLFCZJVLKLZVMVEUTVDDCVOVDMAVDFUSDGNSOVNVPJAVDPHQLAVDRTVL
+      UJULUKUPUQUR $.
+      $( [4-Oct-2014] $)
+    $}
 
     ${
     $d M a b $.  $d N a b $.  $d A a b $.
@@ -4273,6 +4308,7 @@ $c rmX rmY $.
     jm2.27a1 $e |- ( ph -> A e. ( ZZ>= ` 2 ) ) $.
     jm2.27a2 $e |- ( ph -> B e. NN ) $.
     jm2.27a3 $e |- ( ph -> C e. NN ) $.
+    ${
     jm2.27a4 $e |- ( ph -> D e. NN0 ) $.
     jm2.27a5 $e |- ( ph -> E e. NN0 ) $.
     jm2.27a6 $e |- ( ph -> F e. NN0 ) $.
@@ -4380,6 +4416,74 @@ $c rmX rmY $.
       RUJWAACDWFWEXMYEYRUKWAXNXLYEYRAXLXAWGVTXNWSYEYRAXLWSWTWHVTXNWTYEYRAXLWSWT
       WIVTXNYDXRYRWJYEXPXNYRYDXPXQWGWMYEXQXNYRYDXPXQWKWMYFYQYJWGYFYQYHYIWHYFYQY
       HYIWIWLWNWOWPWQWNWOWPWQWNWOWPWQ $.
+      $( [4-Oct-2014] $)
+    $}
+    $}
+
+    ${
+    jm2.27c4 $e |- ( ph -> C = ( A rmY B ) ) $.
+    jm2.27c5 $e |- D = ( A rmX B ) $.
+    jm2.27c6 $e |- Q = ( B x. ( A rmY B ) ) $.
+    jm2.27c7 $e |- E = ( A rmY ( 2 x. Q ) ) $.
+    jm2.27c8 $e |- F = ( A rmX ( 2 x. Q ) ) $.
+    jm2.27c9 $e |- G = ( A + ( ( F ^ 2 ) x. ( ( F ^ 2 ) - A ) ) ) $.
+    jm2.27c10 $e |- H = ( G rmY B ) $.
+    jm2.27c11 $e |- I = ( G rmX B ) $.
+    jm2.27c12 $e |- J = ( ( E / ( 2 x. ( C ^ 2 ) ) ) - 1 ) $.
+
+
+    jm2.27c $p |- ( ph ->
+    (  (  (  D e. NN0
+          /\ E e. NN0
+          /\ F e. NN0 )
+       /\ (  G e. NN0
+          /\ H e. NN0
+          /\ I e. NN0 ) )
+    /\ (  J e. NN0
+       /\ (  (  (  ( ( D ^ 2 ) - ( ( ( A ^ 2 ) - 1 ) x. ( C ^ 2 ) ) ) = 1
+                /\ ( ( F ^ 2 ) - ( ( ( A ^ 2 ) - 1 ) x. ( E ^ 2 ) ) ) = 1
+                /\ G e. ( ZZ>= ` 2 ) )
+             /\ (  ( ( I ^ 2 ) - ( ( ( G ^ 2 ) - 1 ) x. ( H ^ 2 ) ) ) = 1
+                /\ E = ( ( J + 1 ) x. ( 2 x. ( C ^ 2 ) ) )
+                /\ F || ( G - A ) ) )
+          /\ (  (  ( 2 x. C ) || ( G - 1 )
+                /\ F || ( H - C ) )
+             /\ (  ( 2 x. C ) || ( H - B )
+                /\ B <_ C ) ) ) ) ) ) $=
+      ( cn0 wcel w3a wa c2 cexp co c1 cmin cmul wceq cuz cfv caddc cdivides wbr
+      cle crmx cz 2z crmy nnz syl eqeltrrd zmulcl syl2anc syl5eqel sylancr frmx
+      cn fovcl 3jca jca oveq1i a1i oveq1d oveq2d oveq12d rmxynorm eqtrd oveq12i
+      oveq2i syl5eq cdiv cc ax-1cn npcan sylancl cc0 wne divcan1 syl3anc eqtr2d
+      nnnn0 jm2.15nn0ALT breqtrrd wi nn0ssz idiVD sseldi jm2.16nn0ALT syl6breqr
+      wss dvdstr mp2and peano2zm nn0sscn sqval nn0mulcl eqeltrd nn0ssre eluz2b2
+      cr clt simplbi 3syl remulcl lemulge11 syl22anc letrd nn0sub mpbid uzaddcl
+      wb frmy zsubcl ) AEUEUFZGUEUFZHUEUFZUGZIUEUFZJUEUFZKUEUFZUGZUHLUEUFZEUIUJ
+      UKZBUIUJUKULUMUKZDUIUJUKZUNUKZUMUKZULUOZHUIUJUKZUUAGUIUJUKZUNUKZUMUKZULUO
+      ZIUIUPUQZUFZUGZKUIUJUKZIUIUJUKULUMUKZJUIUJUKZUNUKZUMUKZULUOZGLULURUKZUIUU
+      BUNUKZUNUKZUOZHIBUMUKZUSUTZUGZUHZUIDUNUKZIULUMUKZUSUTZHJDUMUKZUSUTZUHZUVH
+      JCUMUKZUSUTZCDVAUTZUHZUHZUHZUHAYNYRAYKYLYM??AHBUIFUNUKZVBUKZUETABUUKUFZUV
+      TVCUFZUWAUEUFMAUIVCUFZFVCUFUWCVDAFCBCVEUKZUNUKZVCRACVCUFZUWEVCUFUWFVCUFAC
+      VNUFZUWGNCVFVGZADUWEVCPADVNUFDVCUFZODVFVGZVHCUWEVIVJVKUIFVIVLZBUVTUEUUKVC
+      VBVMVOVJVKZVPAYOYPYQ???VPVQAYSUVS?AUVGUVRAUUMUVFAUUEUUJUULAUUDBCVBUKZUIUJ
+      UKZUUAUWEUIUJUKZUNUKZUMUKZULAYTUWOUUCUWQUMYTUWOUOAEUWNUIUJQVRVSAUUBUWPUUA
+      UNADUWEUIUJPVTWAWBAUWBUWGUWRULUOMUWIBCWCVJWDAUUIUWAUIUJUKZUUABUVTVEUKZUIU
+      JUKZUNUKZUMUKZULUUFUWSUUHUXBUMHUWAUIUJTVRUUGUXAUUAUNGUWTUIUJSVRWFWEAUWBUW
+      CUXCULUOMUWLBUVTWCVJWG?VPAUUSUVCUVEAUURICVBUKZUIUJUKZUUOICVEUKZUIUJUKZUNU
+      KZUMUKZULUUNUXEUUQUXHUMKUXDUIUJUCVRUUPUXGUUOUNJUXFUIUJUBVRWFWEAUULUWGUXIU
+      LUO?UWIICWCVJWGAUVBGUVAWHUKZUVAUNUKZGAUUTUXJUVAUNAUUTUXJULUMUKZULURUKZUXJ
+      ALUXLULURLUXLUOAUDVSVTAUXJWIUFULWIUFUXMUXJUO?WJUXJULWKWLWDVTAGWIUFUVAWIUF
+      UVAWMWNUXKGUO???GUVAWOWPWQ?VPVQAUVMUVQAUVJUVL?AUVEUVDUVKUSUTZUVL?AUVDUXFU
+      WEUMUKZUVKUSAUULUWBCUEUFZUVDUXOUSUT?MAUWHUXPNCWRVGZIBCWSWPAJUXFDUWEUMJUXF
+      UOAUBVSPWBWTAHVCUFUVDVCUFUVKVCUFUVEUXNUHUVLXAAUEVCHUEVCXGXBXCUWMXD??HUVDU
+      VKXHWPXIVQAUVOUVPAUVJUVIUVNUSUTZUVO?AUVIUXFCUMUKZUVNUSAUULUXPUVIUXSUSUT?U
+      XQICXEVJJUXFCUMUBVRXFAUVHVCUFZUVIVCUFZUVNVCUFZUVJUXRUHUVOXAAUWDUWJUXTVDUW
+      KUIDVIVLAIVCUFUYA?IXJVGAJVCUFUWGUYBAJUXFVCUBAUULUWGUXFVCUFAIBUUFUUFBUMUKZ
+      UNUKZURUKZUUKUAAUWBUYDUEUFZUYEUUKUFMAUUFUEUFZUYCUEUFZUYFAUUFHHUNUKZUEAHWI
+      UFUUFUYIUOAUEWIHUEWIXGXKXCUWMXDHXLVGZAYMYMUYIUEUFUWMUWMHHXMVJXNZABUUFVAUT
+      ZUYHABUYIUUFVAABHUYIAUEXQBXOAUWBBVNUFZBUEUFZMUWBUYMULBXRUTBXPXSBWRXTZXDAU
+      EXQHUEXQXGXOXCUWMXDZAHXQUFZUYQUYIXQUFUYPUYPHHYAVJ?AUYQUYQWMHVAUTULHVAUTHU
+      YIVAUTUYPUYP??HHYBYCYDUYJWTAUYNUYGUYLUYHYHUYOUYKBUUFYEVJYFUUFUYCXMVJUYDUI
+      BYGVJVKUWIICVCUUKVCVEYIVOVJVKUWIJCYJVJUVHUVIUVNXHWPXI?VQVQVQVQVQ $.
       $( [4-Oct-2014] $)
     $}
     $}
