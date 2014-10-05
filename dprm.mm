@@ -6801,6 +6801,35 @@ $}
     $}
 
     ${
+    $d B x $.  $d A x $.  $d C x $.
+    fcompt $p |- ( ( A : D --> E /\ B : C --> D ) -> ( A o. B ) = ( x e. C |-> ( A ` ( B ` x ) ) ) ) $=
+      ( wf wa ccom cv cfv cmpt wfn wceq crn wss ffn adantr adantl frn fnco wfun
+      syl3anc dffn5v sylib ffun wcel fvco2 3expa mpteq2dva syl2anc eqtrd ) EFBG
+      ZDECGZHZBCIZADAJZUPKZLZADUQCKBKZLZUOUPDMZUPUSNUOBEMZCDMZCOEPZVBUMVCUNEFBQ
+      RUNVDUMDECQSZUNVEUMDECTSEDBCUAUCADUPUDUEUOBUBZVDUSVANUMVGUNEFBUFRVFVGVDHA
+      DURUTVGVDUQDUGURUTNDUQBCUHUIUJUKUL $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    $d W x a b $.  $d F x a b $.  $d R x a b $.  $d V a x $.
+
+    mzprename $p |- ( ( W e. _V /\ F e. ( mzPoly ` V ) /\ R : V --> W ) ->
+        ( x e. ( ZZ ^m W ) |-> ( F ` ( x o. R ) ) ) e. ( mzPoly ` W ) ) $=
+      ( va vb cvv wcel cmzp cfv wf cz cv cmpt wceq wa simplr syl2anc mpteq2dva
+      w3a cmap co ccom simpr wb zex simpll elmapg sylancr mpbid fveq1 eqid fvex
+      fcompt fvmpt syl eqcomd eqtrd fveq2d 3adant2 simp1 simp2 simpl1 3ad2antl3
+      wral ffvelrn mzpproj ralrimiva mzpsubst syl3anc eqeltrd ) EHIZCDJKIZDEBLZ
+      UAZAMEUBUCZANZBUDZCKZOZAVQFDVRGVQFNZBKZGNZKZOZKZOZCKZOZEJKZVMVOWAWJPVNVMV
+      OQZAVQVTWIWLVRVQIZQZVSWHCWNVSFDWCVRKZOZWHWNEMVRLZVOVSWPPWNWMWQWLWMUEWNMHI
+      VMWMWQUFUGVMVOWMUHMEVRHHUIUJUKVMVOWMRFVRBDEMUOSWNFDWOWGWNWBDIZQZWGWOWSWMW
+      GWOPWLWMWRRGVRWEWOVQWFWCWDVRULWFUMWCVRUNUPUQURTUSUTTVAVPVMVNWFWKIZFDVFWJW
+      KIVMVNVOVBVMVNVOVCVPWTFDVPWRQVMWCEIZWTVMVNVOWRVDVOVMWRXAVNDEWBBVGVEGEWCVH
+      SVIAFCWFDEVJVKVL $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
     $d F a b c $.  $d X a b c k $.  $d V a b c k $.  $d Y a b c k $.  $d N a b c k $.
 
     $( Polynomials commute with congruences.  (Does this characterize them?) $)
@@ -6906,4 +6935,6 @@ $( TODO / IWBNI
     26. ASSIGN with $e does not work as described.  it would be much more useful if out of scope $e's were excluded
     27. /WIDTH to SHOW PROOF
     28. LET [VAR] $1 = $2 = ...
+    29. LET STEP seems possibly nonfunctional, need to investigate
+    30. V P {MY-MATHBOX}
 $)
