@@ -6597,48 +6597,88 @@ $}
       $( [4-Oct-2014] $)
     $}
 
+    mzpconst $p |- ( ( V e. _V /\ C e. ZZ ) -> ( ( ZZ ^m V ) X. { C } ) e. ( mzPoly ` V ) ) $=
+      ( cvv wcel cz wa cmzp cfv cmzpcl cmap csn cxp simpl mzpincl adantr mzpcl1
+      co simpr syl3anc ) BCDZAEDZFTBGHZBIHDZUAEBJQAKLUBDTUAMTUCUABNOTUARUBABPS
+      $.
+      $( [4-Oct-2014] $)
+
     ${
-    $d v p f g a b $.  $d v p i $.  $d v p j x $.
-    mzpex $p |- |^| { p | ( p C_ ( ZZ ^m ( ZZ ^m v ) ) /\
-        (  (  A. i e. ZZ ( ( ZZ ^m v ) X. { i } ) e. p
-           /\ A. j e. v ( x e. ( ZZ ^m v ) |-> ( x ` j ) ) e. p )
-        /\ A. f e. p A. g e. p ( ( f oF + g ) e. p /\ ( f oF x. g ) e. p ) ) ) } e. _V $=
-      ( cv cz cmap co wcel wral wa cvv zex wf elmap eleq2 anbi12d va vb wss csn
-      cxp cfv cmpt cof cmul wex cab cint ssid ovex vex constmap rgen wel biimpi
-      caddc id ffvelrn syl2anr eqid fmptd sylibr pm3.2i zaddcl adantl simpl a1i
-      simpr inidm off zmulcl jca anbi12i 3imtr4i rgen2a wceq ralbidv raleqbi1dv
-      sseq1 cla4ev mp2an intexab mpbi ) GHZIIBHZJKZJKZUCZWJEHZUDUEZWHLZEIMZAWJF
-      HZAHZUFZUGZWHLZFWIMZNZCHZDHZUTUHKZWHLZXDXEUIUHKZWHLZNZDWHMZCWHMZNZNZGUJZX
-      NGUKULOLWKWKUCZWNWKLZEIMZWTWKLZFWIMZNZXFWKLZXHWKLZNZDWKMZCWKMZNZXOWKUMYAY
-      FXRXTXQEIWJWMIIWIJUNZEUOPUPUQXSFWIFBURZWJIWTQXSYIAWJWSIWTWRWJLZWIIWRQZYIW
-      SILYIYJYKIWIWRPBUORUSYIVAWIIWQWRVBVCWTVDVEIWJWTPYHRVFUQVGYDCDWKWJIXDQZWJI
-      XEQZNZWJIXFQZWJIXHQZNXDWKLZXEWKLZNYDYNYOYPYNUAUBWJWJWJUTIIIXDXEOOUAHZILUB
-      HZILNZYSYTUTKILYNYSYTVHVIYLYMVJZYLYMVLZWJOLYNYHVKZUUDWJVMZVNYNUAUBWJWJWJU
-      IIIIXDXEOOUUAYSYTUIKILYNYSYTVOVIUUBUUCUUDUUDUUEVNVPYQYLYRYMIWJXDPYHRIWJXE
-      PYHRVQYBYOYCYPIWJXFPYHRIWJXHPYHRVQVRVSVGXNXPYGNGWKIWJJUNWHWKVTZWLXPXMYGWH
-      WKWKWCUUFXCYAXLYFUUFWPXRXBXTUUFWOXQEIWHWKWNSWAUUFXAXSFWIWHWKWTSWATXKYECWH
-      WKXJYDDWHWKUUFXGYBXIYCWHWKXFSWHWKXHSTWBWBTTWDWEXNGWFWG $.
+    $d X g $.  $d V g $.
+    mzpproj $p |- ( ( V e. _V /\ X e. V ) -> ( g e. ( ZZ ^m V ) |-> ( g ` X ) ) e. ( mzPoly ` V ) ) $=
+      ( cvv wcel wa cmzp cfv cmzpcl cz cmap co cmpt simpl mzpincl adantr mzpcl2
+      cv simpr syl3anc ) BDEZCBEZFUABGHZBIHEZUBAJBKLCARHMUCEUAUBNUAUDUBBOPUAUBS
+      UCACBQT $.
       $( [4-Oct-2014] $)
     $}
 
-    $(
-    $d v p f g $. $d v p i $.  $d v p j x $.
-    mzpval $p |- ( mzPoly = ( v e. _V |->s |^| { p | ( p C_ ( ZZ ^m ( ZZ ^m v ) ) /\
-        (  (  A. i e. ZZ ( ( ZZ ^m v ) X. { i } ) e. p
-           /\ A. j e. v ( x e. ( ZZ ^m v ) |-> ( x ` j ) ) e. p )
-        /\ A. f e. p A. g e. p ( ( f oF + g ) e. p /\ ( f oF x. g ) e. p ) ) ) } ) $.
-    $)
-
-    ${
-    $d a b c d $.
-    $}
-
-    ${
-    $d A a b c d $.
-    $d V a b c d $.
-    $d B a b c d $.
     mzpadd $p |- ( ( A e. ( mzPoly ` V ) /\ B e. ( mzPoly ` V ) ) -> ( A oF + B ) e. ( mzPoly ` V ) ) $=
-        ? $.
+      ( cmzp cfv wcel wa caddc cof co cmul cvv cmzpcl cdm elfvdm dmmzp syl6eleq
+      adantr mzpincl syl id mzpcl34 syl3anc simpld ) ACDEZFZBUEFZGZABHIJUEFZABK
+      IJUEFZUHCLFZUECMEFZUHUIUJGUFUKUGUFCDNLACDOPQRZUHUKULUMCSTUHUAUEABCUBUCUD
+      $.
+      $( [4-Oct-2014] $)
+
+    mzpmul $p |- ( ( A e. ( mzPoly ` V ) /\ B e. ( mzPoly ` V ) ) -> ( A oF x. B ) e. ( mzPoly ` V ) ) $=
+      ( cmzp cfv wcel wa caddc cof co cmul cvv cmzpcl cdm elfvdm dmmzp syl6eleq
+      adantr mzpincl syl id mzpcl34 syl3anc simprd ) ACDEZFZBUEFZGZABHIJUEFZABK
+      IJUEFZUHCLFZUECMEFZUHUIUJGUFUKUGUFCDNLACDOPQRZUHUKULUMCSTUHUAUEABCUBUCUD
+      $.
+      $( [4-Oct-2014] $)
+
+    ${
+    $d ph x f g $.
+    $d ps f g $.
+    $d ch x $.
+    $d th x $.
+    $d ta x $.
+    $d et x $.
+    $d ze x $.
+    $d si x $.
+    $d rh x $.
+    $d V x f g a b $.
+    $d A x $.
+
+    mzpindd.co $e |- ( ( ph /\ f e. ZZ ) -> ch ) $.
+    mzpindd.pr $e |- ( ( ph /\ f e. V ) -> th ) $.
+    mzpindd.ad $e |- ( ( ph /\ ( f : ( ZZ ^m V ) --> ZZ /\ ta ) /\ ( g : ( ZZ ^m V ) --> ZZ /\ et ) ) -> ze ) $.
+    mzpindd.mu $e |- ( ( ph /\ ( f : ( ZZ ^m V ) --> ZZ /\ ta ) /\ ( g : ( ZZ ^m V ) --> ZZ /\ et ) ) -> si ) $.
+
+    mzpindd.1 $e |- ( x = ( ( ZZ ^m V ) X. { f } ) -> ( ps <-> ch ) ) $.
+    mzpindd.2 $e |- ( x = ( g e. ( ZZ ^m V ) |-> ( g ` f ) ) -> ( ps <-> th ) ) $.
+    mzpindd.3 $e |- ( x = f -> ( ps <-> ta ) ) $.
+    mzpindd.4 $e |- ( x = g -> ( ps <-> et ) ) $.
+    mzpindd.5 $e |- ( x = ( f oF + g ) -> ( ps <-> ze ) ) $.
+    mzpindd.6 $e |- ( x = ( f oF x. g ) -> ( ps <-> si ) ) $.
+    mzpindd.7 $e |- ( x = A -> ( ps <-> rh ) ) $.
+
+    mzpindd $p |- ( ( ph /\ A e. ( mzPoly ` V ) ) -> rh ) $=
+      ( va vb cmzp cfv wcel wa cz cmap co crab cvv elfvdm dmmzp syl6eleq adantl
+      cdm cmzpcl cint wceq mzpval wss cv csn cxp wral cmpt caddc cof ssrab2 a1i
+      cmul ovex vex zex constmap elrab sylanbrc ralrimiva adantr simpllr elmapg
+      wf simpr biimpa syl21anc simplr ffvelrn syl2anc eqid fmptd sylibr adantlr
+      elmap jca zaddcl simpl inidm off ad2ant2r 3expb zmulcl ex anbi12i 3imtr4g
+      jca32 anbi1i ralrimivv wb rabex elmzpcl mpan2 mpbird intss1 eqsstrd an32s
+      syl sselda mpdan simprbi ) AKNUHUIZUJZUKZKBJULULNUMUNZUMUNZUOZUJZIYGNUPUJ
+      ZYKYFYLAYFNUHVAUPKNUHUQURUSUTAYLYFYKAYLUKZYEYJKYMYENVBUIZVCZYJYLYEYOVDANV
+      EUTYMYJYNUJZYOYJVFYMYPYJYIVFZYHLVGZVHVIZYJUJZLULVJZMYHYRMVGZUIZVKZYJUJZLN
+      VJZUKZYRUUBVLVMUNZYJUJZYRUUBVPVMUNZYJUJZUKZMYJVJLYJVJZUKUKZYMYQUUGUUMYQYM
+      BJYIVNVOYMUUAUUFAUUAYLAYTLULAYRULUJZUKYSYIUJZCYTUUOUUPAYHYRULULNUMVQZLVRV
+      SVTUTOBCJYSYISWAWBWCWDYMUUELNYMYRNUJZUKZUUDYIUJZDUUEUUSYHULUUDWGUUTUUSMYH
+      UUCULUUDUUSUUBYHUJZUKZNULUUBWGZUURUUCULUJUVBULUPUJZYLUVAUVCUVDUVBVSVOAYLU
+      URUVAWEUUSUVAWHUVDYLUKUVAUVCULNUUBUPUPWFWIWJYMUURUVAWKNULYRUUBWLWMUUDWNWO
+      ULYHUUDVSUUQWRWPAUURDYLPWQBDJUUDYITWAWBWCWSAUUMYLAUULLMYJYJAYRYIUJZEUKZUU
+      BYIUJZFUKZUKZUUHYIUJZGUKZUUJYIUJZHUKZUKZYRYJUJZUUBYJUJZUKUULAYHULYRWGZEUK
+      ZYHULUUBWGZFUKZUKZYHULUUHWGZGUKZYHULUUJWGZHUKZUKZUVIUVNAUWAUWFAUWAUKZUWCU
+      WDHUWGUWBGUWAUWBAUVQUVSUWBEFUVQUVSUKZUFUGYHYHYHVLULULULYRUUBUPUPUFVGZULUJ
+      UGVGZULUJUKZUWIUWJVLUNULUJUWHUWIUWJWTUTUVQUVSXAZUVQUVSWHZYHUPUJUWHUUQVOZU
+      WNYHXBZXCXDUTAUVRUVTGQXEWSUWAUWDAUVQUVSUWDEFUWHUFUGYHYHYHVPULULULYRUUBUPU
+      PUWKUWIUWJVPUNULUJUWHUWIUWJXFUTUWLUWMUWNUWNUWOXCXDUTAUVRUVTHRXEXJXGUVFUVR
+      UVHUVTUVEUVQEULYHYRVSUUQWRXKUVGUVSFULYHUUBVSUUQWRXKXHUVKUWCUVMUWEUVJUWBGU
+      LYHUUHVSUUQWRXKUVLUWDHULYHUUJVSUUQWRXKXHXIUVOUVFUVPUVHBEJYRYIUAWABFJUUBYI
+      UBWAXHUUIUVKUUKUVMBGJUUHYIUCWABHJUUJYIUDWAXHXIXLWDXJYLYPUUNXMZAYLYJUPUJUW
+      PBJYIULYHUMVQXNMYJLMLLNXOXPUTXQYJYNXRYAXSYBXTYCYKKYIUJIBIJKYIUEWAYDYA $.
+      $( [4-Oct-2014] $)
     $}
 
 
