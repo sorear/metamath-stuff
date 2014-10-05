@@ -6469,6 +6469,7 @@ $}
            /\ A. j e. v ( x e. ( ZZ ^m v ) |-> ( x ` j ) ) e. p )
         /\ A. f e. p A. g e. p ( ( f oF + g ) e. p /\ ( f oF x. g ) e. p ) ) ) } ) $.
 
+    $( Polynomials over ` ZZ ` with an arbitrary index set.  This is almost the most general reasonable definition; to reach full generality, we would need to be able to replace ZZ with an arbitrary (semi-)ring (and a coordinate subring), but rings have not been defined yet. $)
     df-mzp $a |- mzPoly = ( v e. _V |-> |^| ( mzPolyCld ` v ) ) $.
     $}
 
@@ -6650,7 +6651,7 @@ $}
       $( [4-Oct-2014] $)
 
     ${
-    $d V x $.  $d C x $.
+    $d V x a b $.  $d C x $.  $d D x a b $.  $d A a b $.
 
     mzpconstmpt $p |- ( ( V e. _V /\ C e. ZZ ) -> ( x e. ( ZZ ^m V ) |-> C ) e. ( mzPoly ` V ) ) $=
       ( cvv wcel cz wa cmap cmpt csn cxp cmzp cfv fconstmpt mzpconst syl5eqelr
@@ -6673,6 +6674,25 @@ $}
       ovex ofmpteq mp3an1 syl2an mzpmul eqeltrrd ) AEDFGZBHZDIJZKZAUHCHZUJKZLUI
       ULMNGZAUHBCMGHZUJUKUIUHOZULUHOZUNUOUAZUMUKUHEUIPUPUIDQUHEUIRSUMUHEULPUQUL
       DQUHEULRSUHTKUPUQUREDFUBAUHBCMTUCUDUEUIULDUFUG $.
+      $( [5-Oct-2014] $)
+
+    mzpexpmpt $p |- ( ( ( x e. ( ZZ ^m V ) |-> A ) e. ( mzPoly ` V ) /\ D e. NN0 ) ->
+        ( x e. ( ZZ ^m V ) |-> ( A ^ D ) ) e. ( mzPoly ` V ) ) $=
+      ( va vb wcel cz co cmpt cexp wi wceq oveq2 adantr mpteq2dva eleq1d imbi2d
+      c1 cc cn0 cmap cmzp cfv cv cc0 caddc weq wral wss mzpf zsscn sylancl eqid
+      wf fss fmpt sylibr hbra1 wa ra4 imp exp0 syl mpteq2da cvv elfvdm syl6eleq
+      cdm dmmzp 1z mzpconstmpt eqeltrd cmul 3ad2ant2 simp1 ax-17 adantlr simplr
+      w3a hban expp1 syl2anc simp3 simp2 mzpmulmpt 3exp a2d nn0ind impcom ) CUA
+      GAHDUBIZBJZDUCUDZGZAWKBCKIZJZWMGZWNAWKBEUEZKIZJZWMGZLWNAWKBUFKIZJZWMGZLWN
+      AWKBFUEZKIZJZWMGZLWNAWKBXESUGIZKIZJZWMGZLWNWQLEFCWRUFMZXAXDWNXMWTXCWMXMAW
+      KWSXBXMWSXBMAUEWKGZWRUFBKNOPQREFUHZXAXHWNXOWTXGWMXOAWKWSXFXOWSXFMXNWRXEBK
+      NOPQRWRXIMZXAXLWNXPWTXKWMXPAWKWSXJXPWSXJMXNWRXIBKNOPQRWRCMZXAWQWNXQWTWPWM
+      XQAWKWSWOXQWSWOMXNWRCBKNOPQRWNXCAWKSJZWMWNBTGZAWKUIZXCXRMWNWKTWLUOZXTWNWK
+      HWLUOHTUJYAWLDUKULWKHTWLUPUMAWKTBWLWLUNUQURZXTAWKXBSXSAWKUSZXTXNUTXSXBSMX
+      TXNXSXSAWKVAVBZBVCVDVEVDWNDVFGSHGXRWMGWNDUCVIVFWLDUCVGVJVHVKASDVLUMVMXEUA
+      GZWNXHXLYEWNXHXLYEWNXHVTZXKAWKXFBVNIZJZWMYFXTYEXKYHMWNYEXTXHYBVOYEWNXHVPX
+      TYEUTZAWKXJYGXTYEAYCYEAVQWAYIXNUTXSYEXJYGMXTXNXSYEYDVRXTYEXNVSBXEWBWCVEWC
+      YFXHWNYHWMGYEWNXHWDYEWNXHWEAXFBDWFWCVMWGWHWIWJ $.
       $( [5-Oct-2014] $)
 
     $}
@@ -6735,6 +6755,8 @@ $}
 
     ${
     $d F a b c $.  $d A a b c $.  $d G a b c $.  $d V a b c $.  $d X a b c $.  $d R a b c $.
+
+    $( Function value of a pointwise composition. $)
     fnfvof $p |- ( ( ( F Fn A /\ G Fn A ) /\ ( A e. V /\ X e. A ) ) ->
         ( ( F oF R G ) ` X ) = ( ( F ` X ) R ( G ` X ) ) ) $=
       ( vc va vb wfn wa wcel co cfv cdm cin cv cmpt cvv wceq cof fnex ad2ant2lr
@@ -6814,6 +6836,7 @@ $}
     ${
     $d W x a b $.  $d F x a b $.  $d R x a b $.  $d V a x $.
 
+    $( Relabel variables in a polynomial. $)
     mzprename $p |- ( ( W e. _V /\ F e. ( mzPoly ` V ) /\ R : V --> W ) ->
         ( x e. ( ZZ ^m W ) |-> ( F ` ( x o. R ) ) ) e. ( mzPoly ` W ) ) $=
       ( va vb cvv wcel cmzp cfv wf cz cv cmpt wceq wa simplr syl2anc mpteq2dva
@@ -6866,6 +6889,20 @@ $}
     $}
 
 
+    ${
+    $d W x $.  $d F x $.  $d V x $.
+    mzpresrename $p |- ( ( W e. _V /\ V C_ W /\ F e. ( mzPoly ` V ) ) -> ( x e. ( ZZ ^m W ) |-> ( F ` ( x |` V ) ) ) e. ( mzPoly ` W ) ) $=
+      ( cvv wcel wss cmzp cfv w3a cz cmap co cv cres cmpt cid ccom wf mpan wrel
+      wa wceq wb zex elmapg biimpa 3ad2antl1 frel coires1 3syl eqcomd mpteq2dva
+      fveq2d simp1 simp3 wf1o f1oi ax-mp fss 3ad2ant2 mzprename syl3anc eqeltrd
+      f1of ) DEFZCDGZBCHIFZJZAKDLMZANZCOZBIZPAVJVKQCOZRZBIZPZDHIZVIAVJVMVPVIVKV
+      JFZUBZVLVOBVTVOVLVTDKVKSZVKUAVOVLUCVFVGVSWAVHVFVSWAKEFVFVSWAUDUEKDVKEEUFT
+      UGUHDKVKUIVKCUJUKULUNUMVIVFVHCDVNSZVQVRFVFVGVHUOVFVGVHUPVGVFWBVHCCVNSZVGW
+      BCCVNUQWCCURCCVNVEUSCCDVNUTTVAAVNBCDVBVCVD $.
+      $( [5-Oct-2014] $)
+    $}
+
+
 $( ---- DIOPHANTINE ---- $)
 $( Define Diophantine sets and relations.  Prove composition laws and important cases like the exponential relation. $)
 
@@ -6875,12 +6912,152 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
     ${
     $d n d k p t u $.
     $( A Diophantine set is a set of natural numbers which is a projection of the zero set of some polynomial.  This definition somewhat awkwardly mixes ` ZZ ` (via ` mzPoly ` ) and ` NN0 ` (to define the zero sets); the former could be avoided by considering coincidence sets of ` NN0 ` polynomials at the cost of requiring two, and the second is driven by consistency with our mu-recursive functions and the requirements of the DPRM proof.  Both are avoidable at a complexity cost. $)
-    df-dioph $a Dioph = ( n e. NN0 |-> { d | E. k e. ( ZZ>= ` n ) E. p e. (
+    df-dioph $a |- Dioph = ( n e. NN0 |-> { d | E. k e. ( ZZ>= ` n ) E. p e. (
         mzPoly ` ( 1 ... k ) ) d = { t | E. u e. ( NN0 ^m ( 1 ... k ) ) ( t =
         ( u |` ( 1 ... n ) ) /\ ( p ` u ) = 0 ) } } ) $.
     $}
 
-    $( Substitution theorem for Diophantine sets. $)
+    ${
+    $d D n d k p $.  $d N n d k p t u $.
+    $( Substitution definition for Diophantine sets. $)
+    eldiophb $p |- ( D e. ( Dioph ` N ) <-> ( N e. NN0 /\ E. k e. ( ZZ>= ` N ) E. p e. (
+        mzPoly ` ( 1 ... k ) ) D = { t | E. u e. ( NN0 ^m ( 1 ... k ) ) ( t =
+        ( u |` ( 1 ... N ) ) /\ ( p ` u ) = 0 ) } ) ) $=
+      ( vn vd cdioph cfv wcel cn0 cv c1 cfz co wceq wrex cab cuz cres cmap cmzp
+      cc0 cdm df-dioph dmmptss elfvdm sseldi fveq2 oveq2 reseq2d eqeq2d rexbidv
+      wa anbi1d abbidv rexeqbidv fvex ab2rexex fvmpt eleq2d cvv wi ovex abrexex
+      simpl reximi ss2abi ssexi eleq1a ax-mp rexlimivw 2rexbidv syl6bb biadan2
+      eqeq1 elab3 ) CEIJZKZELKZCBMZAMZNEOPZUAZQZWCFMJUDQZUOZALNDMOPZUBPZRZBSZQZ
+      FWIUCJZRZDETJZRZVTIUELEGLHMZWBWCNGMZOPZUAZQZWGUOZAWJRZBSZQZFWNRZDWSTJZRZH
+      SZIABDGFHUFZUGCEIUHUIWAVTCWRWLQZFWNRZDWPRZHSZKWQWAVSXOCGEXJXOLIWSEQZXIXNH
+      XPXGXMDXHWPWSETUJXPXFXLFWNXPXEWLWRXPXDWKBXPXCWHAWJXPXBWFWGXPXAWEWBXPWTWDW
+      CWSENOUKULUMUPUNUQUMUNURUQXKDFHWPWNWLETUSWIUCUSUTVAVBXNWQHCWOCVCKZDWPWMXQ
+      FWNWLVCKWMXQVDWLWFAWJRZBSABWJWELWIUBVEVFWKXRBWHWFAWJWFWGVGVHVIVJWLVCCVKVL
+      VMVMWRCQXLWMDFWPWNWRCWLVQVNVRVOVP $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    $d N k p t u $.  $d K k p t u $.  $d P k p t u $.
+    $( Condition for a set to be Diophantine (unpacking existential quantifier) $)
+    eldioph $p |- ( ( N e. NN0 /\ K e. ( ZZ>= ` N ) /\ P e. ( mzPoly ` ( 1 ... K ) ) ) ->
+        { t | E. u e. ( NN0 ^m ( 1 ... K ) ) ( t = ( u |` ( 1 ... N ) ) /\ ( P ` u ) = 0 ) } e. ( Dioph ` N ) ) $=
+      ( vp vk cn0 wcel cfv c1 cfz co cmzp cv wceq cc0 cmap wrex cab cuz cres wa
+      cdioph simp1 simp2 simp3 eqidd fveq1 eqeq1d anbi2d rexbidv abbidv rcla4ev
+      eqeq2d syl2anc oveq2 fveq2d oveq2d rexeqdv rexeqbidv eldiophb sylanbrc
+      w3a ) EHIZDEUAJZIZCKDLMZNJZIZVDZVEBOAOZKELMUBPZVLCJZQPZUCZAHVHRMZSZBTZVMV
+      LFOZJZQPZUCZAHKGOZLMZRMZSZBTZPZFWENJZSZGVFSZVSEUDJIVEVGVJUEVKVGVSWCAVQSZB
+      TZPZFVISZWLVEVGVJUFVKVJVSVSPZWPVEVGVJUGVKVSUHWOWQFCVIVTCPZWNVSVSWRWMVRBWR
+      WCVPAVQWRWBVOVMWRWAVNQVLVTCUIUJUKULUMUOUNUPWKWPGDVFWDDPZWIWOFWJVIWSWEVHNW
+      DDKLUQZURWSWHWNVSWSWGWMBWSWCAWFVQWSWEVHHRWTUSUTUMUOVAUNUPABVSGEFVBVC $.
+      $( [5-Oct-2014] $)
+    $}
+
+    uzsubnn0 $p |- ( A e. ( ZZ>= ` B ) -> ( A - B ) e. NN0 ) $=
+      ( cuz cfv wcel cmin co cc0 cn0 cz caddc 0z a1i eluzel2 id wceq zcn addid2
+      cc 3syl fveq2d eleqtrrd eluzsub syl3anc nn0uz syl6eleqr ) ABCDZEZABFGZHCD
+      ZIUHHJEZBJEZAHBKGZCDZEUIUJEUKUHLMBANZUHAUGUNUHOUHUMBCUHULBSEUMBPUOBQBRTUA
+      UBBHAUCUDUEUF $.
+      $( [5-Oct-2014] $)
+
+    ${
+    $d x y A $.  $d x y B $.  $d x y $.
+    n0reeor.1 $e |- ( ph -> A. y ph ) $.
+    n0reeor.2 $e |- ( ps -> A. x ps ) $.
+    n0reeor $p |- ( ( A =/= (/) /\ B =/= (/) ) -> ( E. x e. A E. y e. B ( ph \/ ps ) <-> ( E. x e. A ph \/ E. y e. B ps ) ) ) $=
+      ( wo wrex c0 wne r19.43 wb cv wcel idd rexlimi wral wal rexbii syl r19.2z
+      wa bitri alral syl5 impbid2 rexbidv adantl rexcom syl5bb adantr orbi12d
+      ex ) ABIDFJZCEJZADFJZCEJZBDFJZCEJZIZEKLZFKLZUDZACEJZUTIUQURUTIZCEJVBUPVGC
+      EABDFMUAURUTCEMUEVEUSVFVAUTVDUSVFNVCVDURACEVDURAAADFGDOFPAQRAADFSZVDURAAD
+      TVHGADFUFUBVDVHURADFUCUOUGUHUIUJVCVAUTNVDVABCEJZDFJVCUTBCDEFUKVCVIBDFVCVI
+      BBBCEHCOEPBQRBBCESZVCVIBBCTVJHBCEUFUBVCVJVIBCEUCUOUGUHUIULUMUNUL $.
+      $( [5-Oct-2014] $)
+    $}
+    ${
+    $d ph y $.  $d ps x $.  $d x y A $.  $d x y B $.
+    n0reeorv $p |- ( ( A =/= (/) /\ B =/= (/) ) -> ( E. x e. A E. y e. B ( ph \/ ps ) <-> ( E. x e. A ph \/ E. y e. B ps ) ) ) $=
+      ( ax-17 n0reeor ) ABCDEFADGBCGH $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    $d A a b c d e f g h i j k l $.  $d B a b c d e f g h i j k l $.  $d N a b c d e f g h i j k l $.
+
+    diophinun $p |- ( ( A e. ( Dioph ` N ) /\ B e. ( Dioph ` N ) ) -> ( ( A i^i B ) e. ( Dioph ` N ) /\ ( A u. B ) e. ( Dioph ` N ) ) ) $=
+      ( va vb vg vi vj cfv wcel wa cn0 c1 co wceq cc0 wrex cz syl syl2anc vd vc
+      vf ve vh vk cdioph cin cun cv cfz cres cmap cab cmzp cuz wi eldiophb cmin
+      caddc c2 cexp cle wbr cmpt ccom simplrr simprr ineq12d inab reseq1 eqeq2d
+      cif weq fveq2 eqeq1d anbi12d cbvrexv anbi12i reeanv c1st c2nd cxp cop vex
+      wb op1st syl6eq op2nd rexxp wf wss nn0ex ovex elmap biimpi adantl simpllr
+      eluzelz uzid simprl uzsubnn0 uzaddcl fzss2 adantr fssres sylibr cc sseldi
+      zsscn nn0sscn simplll addsub12 syl3anc eqcomd eqeltrd sselda cvv 1z ax-mp
+      a1i rexxfrd syl5bbr syl5bb abbidv syl5eq adantlrr adantrr eqtrd mzpexpmpt
+      eldioph wo c0 wne 0nn0 constmap ne0i mp2b rexlimdva imp fzss1 simpr idiVD
+      sylancl elfzelz nn0ssz zsubcl fzaddel syl22anc sseldd oveq2d eleqtrd ifcl
+      mpbid eqid fmptd fco mptex coex opelxp sylanbrc nn0z simprll nn0cn addid2
+      fveq2d eleqtrrd eluzsub syl6eleqr simplr mzpresrename mzprename mzpaddmpt
+      nn0uz 2nn0 cmul uneq12d unab orbi12i csn elexi n0reeorv orbi12d mzpmulmpt
+      0z mp2an jca exp44 imp31 adantld syl5bi expr sylbi ) ACUGIZJZBUWNJZABUHZU
+      WNJZABUIZUWNJZKZUWOCLJZADUJZEUJZMCUKNZULZOZUXDUAUJZIZPOZKZELMUBUJZUKNZUMN
+      ZQZDUNZOZUAUXMUOIZQZUBCUPIZQZKUWPUXAUQZEDAUBCUAURUXBUYAUYBUXBUXSUYBUBUXTU
+      XBUXLUXTJZKZUXQUYBUAUXRUYDUXHUXRJZUXQUYBUWPUXBBUXGUXDUCUJZIZPOZKZELMUDUJZ
+      UKNZUMNZQZDUNZOZUCUYKUOIZQZUDUXTQZKUYDUYEUXQKZKZUXAEDBUDCUCURUYTUYRUXAUXB
+      UYTUYQUXAUDUXTUYTUYJUXTJZKUYOUXAUCUYPUYTVUAUYFUYPJZUYOUXAUQUYTVUAVUBUYOUX
+      AUYTVUAVUBKZUYOKZKZUWRUWTVUEUWQUXGUXDFRMUXLUYJCUSNZUTNZUKNZUMNZFUJZUXMULU
+      XHIZVAVBNZVUJUEUYKUEUJZCVCVDZVUMVUMUXLCUSNZUTNZVMZVEZVFUYFIZVAVBNZUTNVEZI
+      POKZELVUHUMNZQZDUNZUWNVUEUWQUXPUYNUHZVVEVUEAUXPBUYNUYDUYEUXQVUDVGZUYTVUCU
+      YOVHZVIUYTVUCVVFVVEOZUYOUYDUYEVUCVVIUXQUYDUYEKZVUCKZVVFUXOUYMKZDUNVVEUXOU
+      YMDVJVVKVVLVVDDVVLUXCGUJZUXEULZOZVVMUXHIZPOZKZGUXNQZUXCHUJZUXEULZOZVVTUYF
+      IZPOZKZHUYLQZKZVVKVVDUXOVVSUYMVWFUXKVVREGUXNEGVNZUXGVVOUXJVVQVWHUXFVVNUXC
+      UXDVVMUXEVKVLVWHUXIVVPPUXDVVMUXHVOVPVQVRZUYIVWEEHUYLEHVNZUXGVWBUYHVWDVWJU
+      XFVWAUXCUXDVVTUXEVKVLVWJUYGVWCPUXDVVTUYFVOVPVQVRZVSVWGVVRVWEKZHUYLQGUXNQZ
+      VVKVVDVVRVWEGHUXNUYLVTVWMUXCUFUJZWAIZUXEULZOZVWOUXHIZPOZKZUXCVWNWBIZUXEUL
+      ZOZVXAUYFIZPOZKZKZUFUXNUYLWCZQVVKVVDVXGVWLUFGHUXNUYLVWNVVMVVTWDZOZVWTVVRV
+      XFVWEVXJVWOVVMOZVWTVVRWFVXJVWOVXIWAIVVMVWNVXIWAVOVVMVVTGWEZWGWHVXKVWQVVOV
+      WSVVQVXKVWPVVNUXCVWOVVMUXEVKVLVXKVWRVVPPVWOVVMUXHVOVPVQSZVXJVXAVVTOZVXFVW
+      EWFVXJVXAVXIWBIVVTVWNVXIWBVOVVMVVTVXLHWEWIWHVXNVXCVWBVXEVWDVXNVXBVWAUXCVX
+      AVVTUXEVKVLVXNVXDVWCPVXAVVTUYFVOVPVQSZVQWJVVKVXGVVBUFEUXDUXMULZUXDVURVFZW
+      DZVXHVVCVVKUXDVVCJZKZVXPUXNJZVXQUYLJZVXRVXHJVXTUXMLVXPWKZVYAVXTVUHLUXDWKZ
+      UXMVUHWLZVYCVXSVYDVVKVXSVYDLVUHUXDWMMVUGUKWNZWOWPWQZVVKVYEVXSVVKVUGUXLUPI
+      ZJZVYEVVKUXLVYHJZVUFLJZVYIVVKUXLRJZVYJVVKUYCVYLUXBUYCUYEVUCWRZCUXLWSSZUXL
+      WTSVVKVUAVYKVVJVUAVUBXAZUYJCXBSVUFUXLUXLXCTUXLMVUGXDSZXEVUHLUXMUXDXFTLUXM
+      VXPWMMUXLUKWNZWOXGVXTUYKLVXQWKZVYBVXTVYDUYKVUHVURWKZVYRVYGVVKVYSVXSVVKUEU
+      YKVUQVUHVURVVKVUMUYKJZKZVUMVUHJVUPVUHJVUQVUHJVVKUYKVUHVUMVVKVUGUYJUPIZJUY
+      KVUHWLVVKVUGUYJVUOUTNZWUBVVKWUCVUGVVKUYJXHJUXLXHJCXHJZWUCVUGOVVKRXHUYJXJV
+      VKVUAUYJRJZVYOCUYJWSSZXIVVKRXHUXLXJVYNXIVVKLXHCXKUXBUYCUYEVUCXLZXIUYJUXLC
+      XMXNZXOVVKUYJWUBJZVUOLJZWUCWUBJVVKWUEWUIWUFUYJWTSVVKUYCWUJVYMUXLCXBSZVUOU
+      YJUYJXCTXPUYJMVUGXDSXQWUAVUPMWUCUKNZVUHWUAMVUOUTNZWUCUKNZWULVUPVVKWUNWULW
+      LZVYTVVKWUMMUPIZJZWUCXRJWUOVVKMWUPJZWUJWUQWURVVKMRJZWURXSMWTXTYAWUKVUOMMX
+      CTUYJVUOUTWNWUMMWUCXRUUAUUDXEWUAVYTVUPWUNJZVVKVYTUUBWUAWUSWUEVUMRJZVUORJZ
+      VYTWUTWFWUSWUAXSYAVVKWUEVYTWUFXEVYTWVAVVKVUMMUYJUUEWQVVKWVBVYTVVKVYLCRJZW
+      VBVYNVVKLRCLRWLUUFUUCWUGXIUXLCUUGTXEVUMVUOMUYJUUHUUIUUNUUJVVKWULVUHOVYTVV
+      KWUCVUGMUKWUHUUKXEUULVUNVUMVUPVUHUUMTVURUUOUUPZXEUYKVUHLUXDVURUUQTLUYKVXQ
+      WMMUYJUKWNZWOXGVXPVXQUXNUYLUXDVUREWEUEUYKVUQWVEUURUUSUUTUVAZ??YBYCYCYDYEY
+      FYGYHYIVUEUXBVUGUXTJZVVAVUHUOIZJZVVEUWNJUXBUYCUYSVUDXLZVUEUYCVYKWVGUXBUYC
+      UYSVUDWRVUEVUFPUPIZLVUEPRJZWVCUYJPCUTNZUPIZJVUFWVKJWVLVUEUWEYAVUEUXBWVCWV
+      JCUVBSVUEUYJUXTWVNUYTVUAVUBUYOUVCVUEWVMCUPVUEWUDWVMCOVUEUXBWUDWVJCUVDSCUV
+      ESUVFUVGCPUYJUVHXNUVNUVIVUFCUXLXCTZUYTVUCWVIUYOUYDUYEVUCWVIUXQVVKFVUIVULV
+      EWVHJZFVUIVUTVEWVHJZWVIVVKFVUIVUKVEWVHJZVALJZWVPVVKVUHXRJZVYEUYEWVRWVTVVK
+      VYFYAZVYPUYDUYEVUCUVJFUXHUXMVUHUVKXNZWVSVVKUVOYAZFVUKVAVUHYJTVVKFVUIVUSVE
+      WVHJZWVSWVQVVKWVTVUBVYSWWDWWAVVJVUAVUBVHWVDFVURUYFUYKVUHUVLXNZWWCFVUSVAVU
+      HYJTFVULVUTVUHUVMTYGYHEDVVAVUGCYKXNXPVUEUWSUXGUXDFVUIVUKVUSUVPNVEZIPOKZEV
+      VCQZDUNZUWNVUEUWSUXPUYNUIZWWIVUEAUXPBUYNVVGVVHUVQUYTVUCWWJWWIOZUYOUYDUYEV
+      UCWWKUXQVVKWWJUXOUYMYLZDUNWWIUXOUYMDUVRVVKWWLWWHDWWLVVSVWFYLZVVKWWHUXOVVS
+      UYMVWFVWIVWKUVSWWMVVRVWEYLZHUYLQGUXNQZVVKWWHUXNYMYNZUYLYMYNZWWOWWMWFPLJZU
+      XMPUVTZWCZUXNJWWPYOUXMPLVYQPLYOUWAZWMYPUXNWWTYQYRWWRUYKWWSWCZUYLJWWQYOUYK
+      PLWVEWXAWMYPUYLWXBYQYRVVRVWEGHUXNUYLUWBUWFWWOVWTVXFYLZUFVXHQVVKWWHWXCWWNU
+      FGHUXNUYLVXJVWTVVRVXFVWEVXMVXOUWCWJVVKWXCWWGUFEVXRVXHVVCWVF??YBYCYCYDYEYF
+      YGYHYIVUEUXBWVGWWFWVHJZWWIUWNJWVJWVOUYTVUCWXDUYOUYDUYEVUCWXDUXQVVKWVRWWDW
+      XDWWBWWEFVUKVUSVUHUWDTYGYHEDWWFVUGCYKXNXPUWGUWHUWIYSYSUWJUWKUWLYSYSYTUWMY
+      T $.
+      $( [5-Oct-2014] $)
+
+    diophin $p |- ( ( A e. ( Dioph ` N ) /\ B e. ( Dioph ` N ) ) -> ( A i^i B ) e. ( Dioph ` N ) ) $=
+        ? $.
+
+    diophun $p |- ( ( A e. ( Dioph ` N ) /\ B e. ( Dioph ` N ) ) -> ( A u. B ) e. ( Dioph ` N ) ) $=
+        ? $.
+    $}
 
 $( ---- MATIJASEVI&#268; 1 ---- $)
 $( Diophantine sets are semidecidable because polynomial functions are computable. $)
