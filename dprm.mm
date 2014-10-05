@@ -6603,6 +6603,29 @@ $}
       $.
       $( [4-Oct-2014] $)
 
+    mzpf $p |- ( F e. ( mzPoly ` V ) -> F : ( ZZ ^m V ) --> ZZ ) $=
+      ( cmzp cfv wcel cz cmap co wf cvv wss elfvdm dmmzp syl6eleq cmzpcl mzpval
+      cdm cint mzpclall syl intss1 eqsstrd sselda anidms zex ovex elmap sylib )
+      ABCDZEZAFFBGHZGHZEZUKFAIUJUMUJUIULAUJBJEZUIULKUJBCQJABCLMNUNUIBODZRZULBPU
+      NULUOEUPULKBSULUOUATUBTUCUDFUKAUEFBGUFUGUH $.
+      $( [5-Oct-2014] $)
+
+    ${
+    $d A x a b $.  $d V a b $.  $d B a b $.  $d C a b $.  $d R a b x $.
+    ofmpteq $p |- ( ( A e. V /\ ( x e. A |-> B ) Fn A /\ ( x e. A |-> C ) Fn A ) ->
+        ( ( x e. A |-> B ) oF R ( x e. A |-> C ) ) = ( x e. A |-> ( B R C ) ) ) $=
+      ( va vb wcel cmpt wfn co cv csb cvv wral eqid mptfng ax-17 cbvmpt w3a cof
+      simp1 simpr simpl2 sylibr vex ax17el hbcsb1 hbel weq csbeq1a eleq1d rcla4
+      wa sylc simpl3 wceq a1i offval2 hbov oveq12d syl6eqr ) BFIZABCJZBKZABDJZB
+      KZUAZVEVGEUBLGBAGMZCNZAVJDNZELZJABCDELZJVIGBVKVLEVEVGFOOVDVFVHUCVIVJBIZUO
+      ZVOCOIZABPZVKOIZVIVOUDZVPVFVRVDVFVHVOUEABCVEVEQRUFVQVSAVJBAHHVKOAHVJCGUGZ
+      HGAUHZUIZHMZOIASZUJAGUKZCVKOAVJCULZUMUNUPVPVODOIZABPZVLOIZVTVPVHWIVDVFVHV
+      OUQABDVGVGQRUFWHWJAVJBAHHVLOAHVJDWAWBUIZWEUJWFDVLOAVJDULZUMUNUPVEGBVKJURV
+      IAGHBCVKWDCIGSWCWGTUSVGGBVLJURVIAGHBDVLWDDIGSWKWLTUSUTAGHBVNVMWDVNIGSAHVK
+      VLEWCWDEIASWKVAWFCVKDVLEWGWLVBTVC $.
+      $( [5-Oct-2014] $)
+    $}
+
     ${
     $d X g $.  $d V g $.
     mzpproj $p |- ( ( V e. _V /\ X e. V ) -> ( g e. ( ZZ ^m V ) |-> ( g ` X ) ) e. ( mzPoly ` V ) ) $=
@@ -6625,6 +6648,34 @@ $}
       IJUEFZUHCLFZUECMEFZUHUIUJGUFUKUGUFCDNLACDOPQRZUHUKULUMCSTUHUAUEABCUBUCUD
       $.
       $( [4-Oct-2014] $)
+
+    ${
+    $d V x $.  $d C x $.
+
+    mzpconstmpt $p |- ( ( V e. _V /\ C e. ZZ ) -> ( x e. ( ZZ ^m V ) |-> C ) e. ( mzPoly ` V ) ) $=
+      ( cvv wcel cz wa cmap cmpt csn cxp cmzp cfv fconstmpt mzpconst syl5eqelr
+      co ) CDEBFEGAFCHQZBIRBJKCLMARBNBCOP $.
+      $( [5-Oct-2014] $)
+
+    $( proj is already mpt-ish $)
+
+    mzpaddmpt $p |- ( ( ( x e. ( ZZ ^m V ) |-> A ) e. ( mzPoly ` V ) /\ ( x e. ( ZZ ^m V ) |-> B ) e. ( mzPoly ` V ) ) ->
+        ( x e. ( ZZ ^m V ) |-> ( A + B ) ) e. ( mzPoly ` V ) ) $=
+      ( cz cmap co cmpt cmzp cfv wcel wa caddc cof wfn wf mzpf ffn syl cvv wceq
+      ovex ofmpteq mp3an1 syl2an mzpadd eqeltrrd ) AEDFGZBHZDIJZKZAUHCHZUJKZLUI
+      ULMNGZAUHBCMGHZUJUKUIUHOZULUHOZUNUOUAZUMUKUHEUIPUPUIDQUHEUIRSUMUHEULPUQUL
+      DQUHEULRSUHTKUPUQUREDFUBAUHBCMTUCUDUEUIULDUFUG $.
+      $( [5-Oct-2014] $)
+
+    mzpmulmpt $p |- ( ( ( x e. ( ZZ ^m V ) |-> A ) e. ( mzPoly ` V ) /\ ( x e. ( ZZ ^m V ) |-> B ) e. ( mzPoly ` V ) ) ->
+        ( x e. ( ZZ ^m V ) |-> ( A x. B ) ) e. ( mzPoly ` V ) ) $=
+      ( cz cmap co cmpt cmzp cfv wcel wa cmul cof wfn wf mzpf ffn syl cvv wceq
+      ovex ofmpteq mp3an1 syl2an mzpmul eqeltrrd ) AEDFGZBHZDIJZKZAUHCHZUJKZLUI
+      ULMNGZAUHBCMGHZUJUKUIUHOZULUHOZUNUOUAZUMUKUHEUIPUPUIDQUHEUIRSUMUHEULPUQUL
+      DQUHEULRSUHTKUPUQUREDFUBAUHBCMTUCUDUEUIULDUFUG $.
+      $( [5-Oct-2014] $)
+
+    $}
 
     ${
     $d ph x f g $.
@@ -6652,6 +6703,7 @@ $}
     mzpindd.6 $e |- ( x = ( f oF x. g ) -> ( ps <-> si ) ) $.
     mzpindd.7 $e |- ( x = A -> ( ps <-> rh ) ) $.
 
+    $( "Structural" induction for polynomials. $)
     mzpindd $p |- ( ( ph /\ A e. ( mzPoly ` V ) ) -> rh ) $=
       ( va vb cmzp cfv wcel wa cz cmap co crab cvv elfvdm dmmzp syl6eleq adantl
       cdm cmzpcl cint wceq mzpval wss cv csn cxp wral cmpt caddc cof ssrab2 a1i
@@ -6681,9 +6733,125 @@ $}
       $( [4-Oct-2014] $)
     $}
 
+    ${
+    $d F a b c $.  $d A a b c $.  $d G a b c $.  $d V a b c $.  $d X a b c $.  $d R a b c $.
+    fnfvof $p |- ( ( ( F Fn A /\ G Fn A ) /\ ( A e. V /\ X e. A ) ) ->
+        ( ( F oF R G ) ` X ) = ( ( F ` X ) R ( G ` X ) ) ) $=
+      ( vc va vb wfn wa wcel co cfv cdm cin cv cmpt cvv wceq cof fnex ad2ant2lr
+      ad2ant2r fndm ineqan12d adantr inidm syl6eq simprl mptexg syl dmeq ineq1d
+      eqeltrd fveq1 oveq1d mpteq12dv ineq2d oveq2d df-of ovmpt2g syl3anc fveq1d
+      simprr eleqtrrd fveq2 oveq12d eqid ovex fvmpt eqtrd ) CAJZDAJZKZAELZFALZK
+      ZKZFCDBUAZMZNFGCOZDOZPZGQZCNZWEDNZBMZRZNZFCNZFDNZBMZVSFWAWIVSCSLZDSLZWISL
+      ZWAWITVMVPWNVNVQAECUBUDVNVPWOVMVQAEDUBUCVSWDELWPVSWDAEVSWDAAPZAVOWDWQTVRV
+      MVNWBAWCAACUEADUEUFUGAUHUIZVOVPVQUJUOGWDWHEUKULHICDSSGHQZOZIQZOZPZWEWSNZW
+      EXANZBMZRWIVTGWBXBPZWFXEBMZRSWSCTZGXCXFXGXHXIWTWBXBWSCUMUNXIXDWFXEBWEWSCU
+      PUQURXADTZGXGXHWDWHXJXBWCWBXADUMUSXJXEWGWFBWEXADUPUTURGBHIVAVBVCVDVSFWDLW
+      JWMTVSFAWDVOVPVQVEWRVFGFWHWMWDWIWEFTWFWKWGWLBWEFCVGWEFDVGVHWIVIWKWLBVJVKU
+      LVL $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    $d W a b c x y $.
+    $d F a b c x $.
+    $d V a b c x y $.
+    $d G a b c x $.
+
+    $( Substituting polynomials for the variables of a polynomial results in a polynomial.  G is expected to depend on y. $)
+    mzpsubst $p |- ( ( W e. _V /\ F e. ( mzPoly ` V ) /\ A. y e. V G e. ( mzPoly ` W ) ) ->
+        ( x e. ( ZZ ^m W ) |-> ( F ` ( y e. V |-> ( G ` x ) ) ) ) e. ( mzPoly ` W ) ) $=
+      ( va vb cvv wcel cfv cz co cmpt wa wceq adantr mpteq2dva fveq1 eleq1d w3a
+      vc cmzp wral cmap cv simp1 cdm elfvdm dmmzp syl6eleq 3ad2ant2 simp3 simp2
+      csn cxp caddc cof cmul simpr simpll3 simpll2 wf mzpf ffvelrn sylan expcom
+      ralimdv imp eqid sylib wb zex elmapg sylancr mpbird syl21anc vex fvconst2
+      fmpt syl mzpconstmpt 3ad2antl1 eqeltrd csb fvex simplr ax17el hbcsb1 hbfv
+      fvmpt weq csbeq1a fveq1d fvmptgf sylancl eqtrd wfn simpl3 ax-17 hbel sylc
+      rcla4 3syl dffn5v eqtr4d simp2l simp3l simp13 simp12 simplll simpllr ovex
+      ffn a1i simplrl simplrr fnfvof syl22anc simp2r simp3r mzpaddmpt mzpmulmpt
+      syl2anc mzpindd syl31anc ) FIJZCEUCKJZDFUCKZJZBEUDZUAYGEIJZYKYHALFUEMZBEA
+      UFZDKZNZCKZNZYIJZYGYHYKUGYHYGYLYKYHEUCUHICEUCUIUJUKULYGYHYKUMYGYHYKUNYGYL
+      YKUAZAYMYPGUFZKZNZYIJAYMYPLEUEMZHUFZUOUPZKZNZYIJAYMYPUBUUDUUEUBUFZKZNZKZN
+      ZYIJAYMYPUUEKZNZYIJZAYMYPUUIKZNZYIJZAYMYPUUEUUIUQURMZKZNZYIJAYMYPUUEUUIUS
+      URMZKZNZYIJYSGCHUBEYTUUELJZOZUUHAYMUUENZYIUVGAYMUUGUUEUVGYNYMJZOZYPUUDJZU
+      UGUUEPUVJUVIYKYLUVKUVGUVIUTYGYLYKUVFUVIVAYGYLYKUVFUVIVBUVIYKOZYLOZUVKELYP
+      VCZUVLUVNYLUVLYOLJZBEUDZUVNUVIYKUVPUVIYJUVOBEYJUVIUVOYJYMLDVCUVIUVODFVDYM
+      LYNDVEVFVGVHZVIBELYOYPYPVJZVTZVKQUVMLIJZYLUVKUVNVLZVMUVLYLUTLEYPIIVNZVOVP
+      ZVQUUDUUEYPHVRZVSWARYGYLUVFUVHYIJYKAUUEFWBWCWDYTUUEEJZOZUUMBUUEDWEZYIUWFU
+      UMAYMYNUWGKZNZUWGUWFAYMUULUWHUWFUVIOZUULUUEYPKZUWHUWJUVKUULUWKPUWJUVIYKYL
+      UVKUWFUVIUTYGYLYKUWEUVIVAYGYLYKUWEUVIVBUWCVQUBYPUUJUWKUUDUUKUUEUUIYPSUUKV
+      JUUEYPWFWKWAUWJUWEUWHIJUWKUWHPYTUWEUVIWGYNUWGWFBGUUEYOUWHEIYPGHBWHZBGYNUW
+      GBGUUEDUWDUWLWIZGABWHWJBHWLZYNDUWGBUUEDWMZWNUVRWOWPWQRUWFUWGYMWRZUWGUWIPU
+      WFUWGYIJZYMLUWGVCUWPUWFUWEYKUWQYTUWEUTYGYLYKUWEWSYJUWQBUUEEBGGUWGYIUWMUUA
+      YIJBWTXAUWNDUWGYIUWOTXCXBZUWGFVDYMLUWGXNXDAYMUWGXEVKXFUWRWDYTUUDLUUEVCZUU
+      POZUUDLUUIVCZUUSOZUAZUVBAYMUUNUUQUQMZNZYIUXCUUEUUDWRZUUIUUDWRZYKYLUVBUXEP
+      UXCUWSUXFYTUWSUUPUXBXGUUDLUUEXNWAZUXCUXAUXGYTUWTUXAUUSXHUUDLUUIXNWAZYGYLY
+      KUWTUXBXIZYGYLYKUWTUXBXJZUXFUXGOZYKYLOZOZAYMUVAUXDUXNUVIOZUXFUXGUUDIJZUVK
+      UVAUXDPUXFUXGUXMUVIXKZUXFUXGUXMUVIXLZUXPUXOLEUEXMXOZUXOUVKUVNUXOUVPUVNUXO
+      UVIYKUVPUXNUVIUTUXLYKYLUVIXPUVQXBUVSVKUXOUVTYLUWAVMUXLYKYLUVIXQUWBVOVPZUU
+      DUQUUEUUIIYPXRXSRXSUXCUUPUUSUXEYIJYTUWSUUPUXBXTZYTUWTUXAUUSYAZAUUNUUQFYBY
+      DWDUXCUVEAYMUUNUUQUSMZNZYIUXCUXFUXGYKYLUVEUYDPUXHUXIUXJUXKUXNAYMUVDUYCUXO
+      UXFUXGUXPUVKUVDUYCPUXQUXRUXSUXTUUDUSUUEUUIIYPXRXSRXSUXCUUPUUSUYDYIJUYAUYB
+      AUUNUUQFYCYDWDUUAUUFPZUUCUUHYIUYEAYMUUBUUGUYEUUBUUGPUVIYPUUAUUFSQRTUUAUUK
+      PZUUCUUMYIUYFAYMUUBUULUYFUUBUULPUVIYPUUAUUKSQRTGHWLZUUCUUOYIUYGAYMUUBUUNU
+      YGUUBUUNPUVIYPUUAUUESQRTGUBWLZUUCUURYIUYHAYMUUBUUQUYHUUBUUQPUVIYPUUAUUISQ
+      RTUUAUUTPZUUCUVBYIUYIAYMUUBUVAUYIUUBUVAPUVIYPUUAUUTSQRTUUAUVCPZUUCUVEYIUY
+      JAYMUUBUVDUYJUUBUVDPUVIYPUUAUVCSQRTUUACPZUUCYRYIUYKAYMUUBYQUYKUUBYQPUVIYP
+      UUACSQRTYEYF $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    $d F a b c $.  $d X a b c k $.  $d V a b c k $.  $d Y a b c k $.  $d N a b c k $.
+
+    $( Polynomials commute with congruences.  (Does this characterize them?) $)
+    mzpcong $p |- ( ( F e. ( mzPoly ` V ) /\ ( X e. ( ZZ ^m V ) /\ Y e. ( ZZ ^m V ) ) /\ ( N e. ZZ /\ A. k e. V N || ( ( X ` k ) - ( Y ` k ) ) ) ) -> N || ( ( F ` X ) - ( F ` Y ) ) ) $=
+      ( vc cfv wcel cz cmin cdivides wbr cvv syl2anc wceq oveq12d breq2d fveq1
+      co va vb cmzp cmap wa cv wral w3a cdm elfvdm dmmzp syl6eleq 3anim1i simp1
+      csn cxp cmpt caddc cof cmul simpl3l simpr congid simpl2l vex fvconst2 syl
+      simpl2r breqtrrd simpl3r weq fveq2 rcla4va eqid fvex fvmpt simp13l simp2l
+      wf simp12l ffvelrn simp12r simp3l simp2r simp3r congadd syl322anc wfn ffn
+      ovex a1i fnfvof syl22anc congmul mzpindd ) BDUCHIZEJDUDTZIZFWQIZUEZCJIZCA
+      UFZEHZXBFHZKTZLMZADUGZUEZUHDNIZWTXHUHZWPCEBHZFBHZKTZLMZWPXIWTXHWPDUCUINBD
+      UCUJUKULUMWPWTXHUNXJCEUAUFZHZFXOHZKTZLMCEWQUBUFZUOUPZHZFXTHZKTZLMCEGWQXSG
+      UFZHZUQZHZFYFHZKTZLMCEXSHZFXSHZKTZLMZCEYDHZFYDHZKTZLMZCEXSYDURUSTZHZFYRHZ
+      KTZLMCEXSYDUTUSTZHZFUUBHZKTZLMXNUABUBGDXJXSJIZUEZCXSXSKTZYCLUUGXAUUFCUUHL
+      MXAXGXIWTUUFVAXJUUFVBCXSVCOUUGYAXSYBXSKUUGWRYAXSPWRWSXIXHUUFVDWQXSEUBVEZV
+      FVGUUGWSYBXSPWRWSXIXHUUFVHWQXSFUUIVFVGQVIXJXSDIZUEZCXSEHZXSFHZKTZYILUUKUU
+      JXGCUUNLMZXJUUJVBXAXGXIWTUUJVJXFUUOAXSDAUBVKZXEUUNCLUUPXCUULXDUUMKXBXSEVL
+      XBXSFVLQRVMOUUKYGUULYHUUMKUUKWRYGUULPWRWSXIXHUUJVDGEYEUULWQYFXSYDESYFVNZX
+      SEVOVPVGUUKWSYHUUMPWRWSXIXHUUJVHGFYEUUMWQYFXSYDFSUUQXSFVOVPVGQVIXJWQJXSVS
+      ZYMUEZWQJYDVSZYQUEZUHZCYJYNURTZYKYOURTZKTZUUALUVBXAYJJIZYKJIZYNJIZYOJIZYM
+      YQCUVELMXAXGXIWTUUSUVAVQZUVBUURWRUVFXJUURYMUVAVRZWRWSXIXHUUSUVAVTZWQJEXSW
+      AOZUVBUURWSUVGUVKWRWSXIXHUUSUVAWBZWQJFXSWAOZUVBUUTWRUVHXJUUSUUTYQWCZUVLWQ
+      JEYDWAOZUVBUUTWSUVIUVPUVNWQJFYDWAOZXJUURYMUVAWDZXJUUSUUTYQWEZCYJYKYNYOWFW
+      GUVBYSUVCYTUVDKUVBXSWQWHZYDWQWHZWQNIZWRYSUVCPUVBUURUWAUVKWQJXSWIVGZUVBUUT
+      UWBUVPWQJYDWIVGZUWCUVBJDUDWJWKZUVLWQURXSYDNEWLWMUVBUWAUWBUWCWSYTUVDPUWDUW
+      EUWFUVNWQURXSYDNFWLWMQVIUVBCYJYNUTTZYKYOUTTZKTZUUELUVBXAUVFUVGUVHUVIYMYQC
+      UWILMUVJUVMUVOUVQUVRUVSUVTCYJYKYNYOWNWGUVBUUCUWGUUDUWHKUVBUWAUWBUWCWRUUCU
+      WGPUWDUWEUWFUVLWQUTXSYDNEWLWMUVBUWAUWBUWCWSUUDUWHPUWDUWEUWFUVNWQUTXSYDNFW
+      LWMQVIXOXTPZXRYCCLUWJXPYAXQYBKEXOXTSFXOXTSQRXOYFPZXRYICLUWKXPYGXQYHKEXOYF
+      SFXOYFSQRUAUBVKZXRYLCLUWLXPYJXQYKKEXOXSSFXOXSSQRUAGVKZXRYPCLUWMXPYNXQYOKE
+      XOYDSFXOYDSQRXOYRPZXRUUACLUWNXPYSXQYTKEXOYRSFXOYRSQRXOUUBPZXRUUECLUWOXPUU
+      CXQUUDKEXOUUBSFXOUUBSQRXOBPZXRXMCLUWPXPXKXQXLKEXOBSFXOBSQRWOO $.
+      $( [5-Oct-2014] $)
+    $}
+
 
 $( ---- DIOPHANTINE ---- $)
 $( Define Diophantine sets and relations.  Prove composition laws and important cases like the exponential relation. $)
+
+    $c Dioph $.
+    cdioph $a class Dioph $.
+
+    ${
+    $d n d k p t u $.
+    $( A Diophantine set is a set of natural numbers which is a projection of the zero set of some polynomial.  This definition somewhat awkwardly mixes ` ZZ ` (via ` mzPoly ` ) and ` NN0 ` (to define the zero sets); the former could be avoided by considering coincidence sets of ` NN0 ` polynomials at the cost of requiring two, and the second is driven by consistency with our mu-recursive functions and the requirements of the DPRM proof.  Both are avoidable at a complexity cost. $)
+    df-dioph $a Dioph = ( n e. NN0 |-> { d | E. k e. ( ZZ>= ` n ) E. p e. (
+        mzPoly ` ( 1 ... k ) ) d = { t | E. u e. ( NN0 ^m ( 1 ... k ) ) ( t =
+        ( u |` ( 1 ... n ) ) /\ ( p ` u ) = 0 ) } } ) $.
+    $}
+
+    $( Substitution theorem for Diophantine sets. $)
 
 $( ---- MATIJASEVI&#268; 1 ---- $)
 $( Diophantine sets are semidecidable because polynomial functions are computable. $)
@@ -6706,7 +6874,7 @@ wopprc $p |- ( ( A e. _V /\ B e. _V ) <-> -. 1o e. { { { A } , (/) } , { { B } }
   IVPVCVEVGFOUPRUQVKVIJVCVHURUSRT $.
   $( [19-Sep-2014] $)
 
-$( TODO
+$( TODO / IWBNI
     Things I've wanted.  If I still want them after I'm more familiar with the system, I'll implement/call for them
     1. Cheat sheet of "do you want to do this -> use these theorems".  tell people to take advantage of min *
     2. WRITE SOURCE with $[ $] would make my life much easier
@@ -6719,8 +6887,23 @@ $( TODO
     8. vim highlighting
     9. PA should collapse identical proof stages; possibly add an improve option to seek out commonality by using incomplete subtrees
     10. experiment with the proof shrinking potential of deduction versions of the algebra theorems
+        10b. <. A , B >. = if ( B e. _V , { A , { A , B } } , 1o )
     11. PA should display [-NN] in sh n/u listing
     12. automatic improve and loud warning when a ground wff cannot be proved?
     13. command to list changed proofs
     14. I just reproved 19.26 because I had no way of finding it :x
+    15. Last command in HELP DEMO is wrong ( (_ is C_ )
+    16. Some kind of macro/repeat command.  Needs much more though
+    17. Pony: PA working directly on compressed proofs
+    18. Pony: Pluggable decision procedures
+    19. MATCH would be much more awesome if it took a name wildcard
+    20. Blank lines before/after SHOW PROOF would help
+    21. backrefs in SEARCH
+    22. how can the PA (in particular SHOW PROOF) be made more usable with very large proofs?  common syntax-subtree mining / abbrevification?  reduce indent without going all the way to LEMMON?  better control over the proof tree fragment to display?
+    23. Pony: catch SIGINT, make MINIMIZE_WITH and IMPROVE interruptable, suppress output
+    24. IMPROVE LHF: switch to iterated deepening to avoid idiVD, use the first of a set of equivalent theorems to avoid grothomex syndrome ( but prefer axioms if later )
+    25. SHOW STATEMENT NEW would be cool
+    26. ASSIGN with $e does not work as described.  it would be much more useful if out of scope $e's were excluded
+    27. /WIDTH to SHOW PROOF
+    28. LET [VAR] $1 = $2 = ...
 $)
