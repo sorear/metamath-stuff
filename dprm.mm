@@ -6980,10 +6980,120 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
       $( [5-Oct-2014] $)
     $}
 
+    sumsqeq0 $p |- ( ( A e. RR /\ B e. RR ) -> ( ( A = 0 /\ B = 0 ) <-> ( ( A ^ 2 ) + ( B ^ 2 ) ) = 0 ) ) $=
+      ( cr wcel wa cc0 wceq c2 cexp co caddc wne wo wb cif neeq1 neeq1d bibi12d
+      oveq1 0re wn neorian orbi1d oveq1d orbi2d oveq2d elimel sumsqne0i dedth2h
+      syl5bbr necon4bbid ) ACDZBCDZEZAFGBFGEZAHIJZBHIJZKJZFUOUAAFLZBFLZMZUNURFL
+      ZAFBFUBULUMVAVBNULAFOZFLZUTMZVCHIJZUQKJZFLZNVDUMBFOZFLZMZVFVIHIJZKJZFLZNA
+      BFFAVCGZVAVEVBVHVOUSVDUTAVCFPUCVOURVGFVOUPVFUQKAVCHISUDQRBVIGZVEVKVHVNVPU
+      TVJVDBVIFPUEVPVGVMFVPUQVLVFKBVIHISUFQRVCVIAFCTUGBFCTUGUHUIUJUK $.
+      $( [5-Oct-2014] $)
+
+    ${
+    mapco2.1 $e |- B e. _V $.
+    mapco2.2 $e |- C e. _V $.
+    mapco2.3 $e |- E e. _V $.
+
+    mapco2 $p |- ( ( A e. ( B ^m C ) /\ D : E --> C ) -> ( A o. D ) e. ( B ^m E ) ) $=
+      ( cmap co wcel wf wa ccom elmap biimpi fco sylan sylibr ) ABCIJKZECDLZMEB
+      ADNZLZUBBEIJKTCBALZUAUCTUDBCAFGOPECBADQRBEUBFHOS $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    $d ph a b c h i $.
+    $d G b c h i j k l $. $d F b c h i j k l $.  $d L b c h i k l j $.  $d N b c h i k j $.  $d a b c d e f g h i j k l $.
+    diophinunlem2.1 $e |- A = { a | E. b e. ( NN0 ^m ( 1 ... d ) ) ( a = ( b |` ( 1 ... N ) ) /\ ( f ` b ) = 0 ) } $.
+    diophinunlem2.2 $e |- B = { a | E. c e. ( NN0 ^m ( 1 ... e ) ) ( a = ( c |` ( 1 ... N ) ) /\ ( g ` c ) = 0 ) } $.
+    diophinunlem2.3 $e |- ( ph -> f : ( NN0 ^m ( 1 ... d ) ) --> ZZ ) $.
+    diophinunlem2.4 $e |- ( ph -> g : ( NN0 ^m ( 1 ... e ) ) --> ZZ ) $.
+    diophinunlem2.5 $e |- ( ph -> F : ( 1 ... d ) --> ( 1 ... L ) ) $.
+    diophinunlem2.6 $e |- ( ph -> G : ( 1 ... e ) --> ( 1 ... L ) ) $.
+    diophinunlem2.7 $e |- ( ph -> A. j e. ( NN0 ^m ( 1 ... d ) ) A. k e. ( NN0 ^m ( 1 ... e ) ) ( ( j |` ( 1 ... N ) ) = ( k |` ( 1 ... N ) ) ->
+        E. l e. ( NN0 ^m ( 1 ... L ) ) ( ( l o. F ) = j /\ ( l o. G ) = k ) ) ) $.
+    diophinunlem2.8 $e |- ( ph -> ( F |` ( 1 ... N ) ) = ( _I |` ( 1 ... N ) ) ) $.
+    diophinunlem2.9 $e |- ( ph -> ( G |` ( 1 ... N ) ) = ( _I |` ( 1 ... N ) ) ) $.
+
+    diophinunlem2 $p |- ( ph -> ( A i^i B ) = { a | E. h e. ( NN0 ^m ( 1 ... L ) ) ( a = ( h |` ( 1 ... N ) ) /\
+        ( ( i e. ( NN0 ^m ( 1 ... L ) ) |-> ( ( ( f ` ( i o. F ) ) ^ 2 ) + ( ( g ` ( i o. G ) ) ^ 2 ) ) ) ` h ) = 0 ) } ) $=
+      ( cin cv c1 cfz co cres wceq cfv cc0 wa cn0 cmap wrex cab ccom cexp caddc
+      c2 cmpt ineq12i inab eqtri reeanv wcel wi wral reseq1 eqeq1d eqeq2 anbi1d
+      rexbidv imbi12d eqeq2d anbi2d coeq1 anbi12d cbvrexv rcla42v mpan9 anassrs
+      weq syl6bb simprll simprrl eqtr3d simplr simprl eqcomd ad2antrr ad3antrrr
+      syl simpll cid resco a1i coeq2d adantr wrel nn0ex ovex elmap sylbi adantl
+      wf frel coires1 3eqtrrd syl2anc 3eqtr4d fveq2d simprlr eqtrd simprr jca32
+      simprrr rcla4ev ex rexlimdva embantd mpid simpr mapco2 jca fveq2 rcla42ev
+      syl3anc cr cz zssre ffvelrn sseldi oveq1d impbid wb sumsqeq0 oveq12d eqid
+      fvmpt bitr4d rexbidva bitrd syl5bbr abbidv syl5eq ) ABCUIZOUJZPUJZUKNULUM
+      ZUNZUOZUUOEUJZUPZUQUOZURZPUSUKRUJZULUMZUTUMZVAZUUNQUJZUUPUNZUOZUVGFUJZUPZ
+      UQUOZURZQUSUKDUJZULUMZUTUMZVAZURZOVBZUUNGUJZUUPUNZUOZUVTHUSUKMULUMZUTUMZH
+      UJZKVCZUUSUPZVFVDUMZUWELVCZUVJUPZVFVDUMZVEUMZVGZUPZUQUOZURZGUWDVAZOVBUUMU
+      VFOVBZUVQOVBZUIUVSBUWRCUWSTUAVHUVFUVQOVIVJAUVRUWQOUVRUVBUVMURZQUVPVAZPUVE
+      VAZAUWQUVBUVMPQUVEUVPVKAUXBUWBUVTKVCZUUSUPZUQUOZUVTLVCZUVJUPZUQUOZURZURZG
+      UWDVAZUWQAUXBUXKAUXAUXKPUVEAUUOUVEVLZURZUWTUXKQUVPUXMUVGUVPVLZURZUWTUUQUV
+      HUOZUWFUUOUOZUWIUVGUOZURZHUWDVAZVMZUXKAUXLUXNUYAAIUJZUUPUNZJUJZUUPUNZUOZS
+      UJZKVCZUYBUOZUYGLVCZUYDUOZURZSUWDVAZVMZJUVPVNIUVEVNUXLUXNURUYAUFUYNUYAUUQ
+      UYEUOZUYHUUOUOZUYKURZSUWDVAZVMIJUUOUVGUVEUVPIPWIZUYFUYOUYMUYRUYSUYCUUQUYE
+      UYBUUOUUPVOVPUYSUYLUYQSUWDUYSUYIUYPUYKUYBUUOUYHVQVRVSVTJQWIZUYOUXPUYRUXTU
+      YTUYEUVHUUQUYDUVGUUPVOWAUYTUYRUYPUYJUVGUOZURZSUWDVAUXTUYTUYQVUBSUWDUYTUYK
+      VUAUYPUYDUVGUYJVQWBVSVUBUXSSHUWDSHWIZUYPUXQVUAUXRVUCUYHUWFUUOUYGUWEKWCVPV
+      UCUYJUWIUVGUYGUWELWCVPWDWEWJVTWFWGWHUXOUWTUYAUXKVMUXOUWTURZUXPUXTUXKVUDUU
+      NUUQUVHUXOUURUVAUVMWKZUXOUVBUVIUVLWLWMVUDUXSUXKHUWDVUDUWEUWDVLZURZUXSUXKV
+      UGUXSURZVUFUUNUWEUUPUNZUOZUWGUQUOZUWJUQUOZURZURZUXKVUDVUFUXSWNZVUHVUJVUKV
+      ULVUHUUQUWFUUPUNZUUNVUIVUHUUOUWFUOUUQVUPUOVUHUWFUUOVUGUXQUXRWOZWPUUOUWFUU
+      PVOWSVUDUURVUFUXSVUEWQVUHAVUFVUIVUPUOUXOAUWTVUFUXSAUXLUXNWTWRVUOAVUFURZVU
+      PUWEKUUPUNZVCZUWEXAUUPUNZVCZVUIVUPVUTUOVURUWEKUUPXBXCAVUTVVBUOVUFAVUSVVAU
+      WEUGXDXEVURUWEXFZVVBVUIUOVUFVVCAVUFUWCUSUWEXLVVCUSUWCUWEXGUKMULXHZXIUWCUS
+      UWEXMXJXKUWEUUPXNWSXOXPXQVUHUWGUUTUQVUHUWFUUOUUSVUQXRVUDUVAVUFUXSUXOUURUV
+      AUVMXSWQXTVUHUWJUVKUQVUHUWIUVGUVJVUGUXQUXRYAXRVUDUVLVUFUXSUXOUVBUVIUVLYCW
+      QXTYBUXJVUNGUWEUWDGHWIZUWBVUJUXIVUMVVEUWAVUIUUNUVTUWEUUPVOWAVVEUXEVUKUXHV
+      ULVVEUXDUWGUQVVEUXCUWFUUSUVTUWEKWCXRVPVVEUXGUWJUQVVEUXFUWIUVJUVTUWELWCXRV
+      PWDWDYDXPYEYFYGYEYHYFYFAUXJUXBGUWDAUVTUWDVLZURZUXJUXBVVGUXJURZUXCUVEVLZUX
+      FUVPVLZUUNUXCUUPUNZUOZUXEURZUUNUXFUUPUNZUOZUXHURZURZUXBVVGVVIUXJVVGVVFUVD
+      UWCKXLZVVIAVVFYIZAVVRVVFUDXEUVTUSUWCKUVDXGVVDUKUVCULXHYJXPZXEVVGVVJUXJVVG
+      VVFUVOUWCLXLZVVJVVSAVWAVVFUEXEUVTUSUWCLUVOXGVVDUKUVNULXHYJXPZXEVVHVVMVVOU
+      XHVVHVVLUXEVVHUUNUWAVVKVVGUWBUXIWOZVVGUWAVVKUOUXJVVGVVKUVTVUSVCZUVTVVAVCZ
+      UWAVVKVWDUOVVGUVTKUUPXBXCAVWDVWEUOVVFAVUSVVAUVTUGXDXEVVGUVTXFZVWEUWAUOVVF
+      VWFAVVFUWCUSUVTXLVWFUSUWCUVTXGVVDXIUWCUSUVTXMXJXKUVTUUPXNWSZXOXEXTVVGUWBU
+      XEUXHWLYKVVHUUNUWAVVNVWCVVGUWAVVNUOUXJVVGVVNUVTLUUPUNZVCZVWEUWAVVNVWIUOVV
+      GUVTLUUPXBXCAVWIVWEUOVVFAVWHVVAUVTUHXDXEVWGXOXEXTVVGUWBUXEUXHYCYBUWTVVQVV
+      MUVMURPQUXCUXFUVEUVPUUOUXCUOZUVBVVMUVMVWJUURVVLUVAUXEVWJUUQVVKUUNUUOUXCUU
+      PVOWAVWJUUTUXDUQUUOUXCUUSYLVPWDVRUVGUXFUOZUVMVVPVVMVWKUVIVVOUVLUXHVWKUVHV
+      VNUUNUVGUXFUUPVOWAVWKUVKUXGUQUVGUXFUVJYLVPWDWBYMYNYEYFUUAAUXJUWPGUWDVVGUX
+      IUWOUWBVVGUXIUXDVFVDUMZUXGVFVDUMZVEUMZUQUOZUWOVVGUXDYOVLUXGYOVLUXIVWOUUBV
+      VGYPYOUXDYQVVGUVEYPUUSXLZVVIUXDYPVLAVWPVVFUBXEVVTUVEYPUXCUUSYRXPYSVVGYPYO
+      UXGYQVVGUVPYPUVJXLZVVJUXGYPVLAVWQVVFUCXEVWBUVPYPUXFUVJYRXPYSUXDUXGUUCXPVV
+      GUWNVWNUQVVFUWNVWNUOAHUVTUWLVWNUWDUWMHGWIZUWHVWLUWKVWMVEVWRUWGUXDVFVDVWRU
+      WFUXCUUSUWEUVTKWCXRYTVWRUWJUXGVFVDVWRUWIUXFUVJUWEUVTLWCXRYTUUDUWMUUEVWLVW
+      MVEXHUUFXKVPUUGWBUUHUUIUUJUUKUUL $.
+      $( [5-Oct-2014] $)
+    $}
+
+    ${
+    diophinunlem1.1 $e |- ( ph -> N e. NN0 ) $.
+    diophinunlem1.2 $e |- ( ph -> b e. ( ZZ>= ` N ) ) $.
+    diophinunlem1.3 $e |- ( ph -> c e. ( mzPoly ` ( 1 ... b ) ) ) $.
+    diophinunlem1.4 $e |- ( ph -> A = { a | E. d e. ( NN0 ^m ( 1 ... b ) ) ( a = ( d |` ( 1 ... N ) ) /\ ( c ` d ) = 0 ) } ) $.
+    diophinunlem1.5 $e |- ( ph -> e e. ( ZZ>= ` N ) ) $.
+    diophinunlem1.6 $e |- ( ph -> f e. ( mzPoly ` ( 1 ... e ) ) ) $.
+    diophinunlem1.7 $e |- ( ph -> B = { a | E. g e. ( NN0 ^m ( 1 ... e ) ) ( a = ( g |` ( 1 ... N ) ) /\ ( f ` g ) = 0 ) } ) $.
+    diophinunlem1.8 $e |- ( ph -> L e. NN0 ) $.
+    diophinunlem1.9 $e |- ( ph -> F : ( 1 ... b ) --> ( 1 ... L ) ) $.
+    diophinunlem1.10 $e |- ( ph -> G : ( 1 ... e ) --> ( 1 ... L ) ) $.
+
+    diophinunlem1 $p |- ( ph -> ( ( A i^i B ) e. ( Dioph ` N ) /\ ( A u. B ) e. ( Dioph ` N ) ) ) $=
+        ? $.
+    $}
+
     ${
     $d A a b c d e f g h i j k l $.  $d B a b c d e f g h i j k l $.  $d N a b c d e f g h i j k l $.
 
+    $( If two sets are Diophantine, so are their intersection and union. $)
     diophinun $p |- ( ( A e. ( Dioph ` N ) /\ B e. ( Dioph ` N ) ) -> ( ( A i^i B ) e. ( Dioph ` N ) /\ ( A u. B ) e. ( Dioph ` N ) ) ) $=
+        ? $.
+
+
+    diophinunOLD $p |- ( ( A e. ( Dioph ` N ) /\ B e. ( Dioph ` N ) ) -> ( ( A i^i B ) e. ( Dioph ` N ) /\ ( A u. B ) e. ( Dioph ` N ) ) ) $=
       ( va vb vg vi vj cfv wcel wa cn0 c1 co wceq cc0 wrex cz syl syl2anc vd vc
       vf ve vh vk cdioph cin cun cv cfz cres cmap cab cmzp cuz wi eldiophb cmin
       caddc c2 cexp cle wbr cmpt ccom simplrr simprr ineq12d inab reseq1 eqeq2d
