@@ -5964,123 +5964,125 @@ ${
       mp2an ) ABCBAADEFEBGHGAIJCKLAGMN $.
       $( [5-Sep-2014] $)
 
-    prj-value $p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) = ( a e. ( NN0 ^m ( 1 ... B ) ) |-> if ( A <_ B , ( a ` A ) , 0 ) ) ) $= ? $.
-    prj-val2  $p |- ( ( A e. NN /\ B e. NN /\ A <_ B ) -> ( A RecPrj B ) = ( z e. ( NN0 ^m ( 1 ... B ) ) |-> ( z ` A ) ) ) $= ? $.
-    prj-val3  $p |- ( ( ( A e. NN /\ B e. NN /\ A <_ B ) /\ C e. ( NN0 ^m ( 1 ... B ) ) ) -> ( ( A RecPrj B ) ` C ) = ( C ` A ) ) $= ? $.
-    prj-fun   $p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) Fun ( NN0 ^m ( 1 ... B ) ) ) $= ? $.
-    prj-fn    $p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) : ( NN0 ^m ( 1 ... B ) ) --> NN0 ) $= ? $.
-    prj-totfa $p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) e. ( RecTotFa ` B ) ) $= ? $.
-    sub-totfa $p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecTotFa ` A ) /\ D e. ( ( RecTotFa ` B ) ^m ( 1 ... A ) ) ) ) -> ( C ( A RecSub B ) D ) e. ( RecTotFa ` B ) ) $= ? $.
-    sub-parfa $p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecParFa ` A ) /\ D e. ( ( RecParFa ` B ) ^m ( 1 ... A ) ) ) ) -> ( C ( A RecSub B ) D ) e. ( RecParFa ` B ) ) $= ? $.
-    prc-totfa $p |- ( ( A e. NN /\ B e. ( RecTotFa ` A ) /\ C e. ( RecTotFa ` ( A + 1 ) ) ) -> ( B ( RecPrc ` A ) C ) e. ( RecTotFa ` ( A + 1 ) ) ) $= ? $.
-    prc-parfa $p |- ( ( A e. NN /\ B e. ( RecParFa ` A ) /\ C e. ( RecParFa ` ( A + 1 ) ) ) -> ( B ( RecPrc ` A ) C ) e. ( RecParFa ` ( A + 1 ) ) ) $= ? $.
-    sea-parfa $p |- ( ( A e. NN /\ B e. ( RecParFa ` ( A + 1 ) ) ) -> ( ( RecSea ` A ) ` B ) e. ( RecParFa ` A ) ) $= ? $.
-$}
+$} $(
 
-${
-    $d a b c d e f g $.
+    prj-value @p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) = ( a e. ( NN0 ^m ( 1 ... B ) ) |-> if ( A <_ B , ( a ` A ) , 0 ) ) ) @= ? @.
+    prj-val2  @p |- ( ( A e. NN /\ B e. NN /\ A <_ B ) -> ( A RecPrj B ) = ( z e. ( NN0 ^m ( 1 ... B ) ) |-> ( z ` A ) ) ) @= ? @.
+    prj-val3  @p |- ( ( ( A e. NN /\ B e. NN /\ A <_ B ) /\ C e. ( NN0 ^m ( 1 ... B ) ) ) -> ( ( A RecPrj B ) ` C ) = ( C ` A ) ) @= ? @.
+    prj-fun   @p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) Fun ( NN0 ^m ( 1 ... B ) ) ) @= ? @.
+    prj-fn    @p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) : ( NN0 ^m ( 1 ... B ) ) --> NN0 ) @= ? @.
+    prj-totfa @p |- ( ( A e. NN /\ B e. NN ) -> ( A RecPrj B ) e. ( RecTotFa ` B ) ) @= ? @.
+    sub-totfa @p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecTotFa ` A ) /\ D e. ( ( RecTotFa ` B ) ^m ( 1 ... A ) ) ) ) -> ( C ( A RecSub B ) D ) e. ( RecTotFa ` B ) ) @= ? @.
+    sub-parfa @p |- ( ( ( A e. NN /\ B e. NN ) /\ ( C e. ( RecParFa ` A ) /\ D e. ( ( RecParFa ` B ) ^m ( 1 ... A ) ) ) ) -> ( C ( A RecSub B ) D ) e. ( RecParFa ` B ) ) @= ? @.
+    prc-totfa @p |- ( ( A e. NN /\ B e. ( RecTotFa ` A ) /\ C e. ( RecTotFa ` ( A + 1 ) ) ) -> ( B ( RecPrc ` A ) C ) e. ( RecTotFa ` ( A + 1 ) ) ) @= ? @.
+    prc-parfa @p |- ( ( A e. NN /\ B e. ( RecParFa ` A ) /\ C e. ( RecParFa ` ( A + 1 ) ) ) -> ( B ( RecPrc ` A ) C ) e. ( RecParFa ` ( A + 1 ) ) ) @= ? @.
+    sea-parfa @p |- ( ( A e. NN /\ B e. ( RecParFa ` ( A + 1 ) ) ) -> ( ( RecSea ` A ) ` B ) e. ( RecParFa ` A ) ) @= ? @.
+@}
 
-    $( we probably need to go finer grained than this $)
+@{
+    @d a b c d e f g @.
 
-    prim-is-gen-lem0 $p |- ( ( B C_ ( NN0 X. RecParF ) /\ A C_ B ) -> ( RecArithPrimitiveStep ` A ) C_ ( RecArithPrimitiveStep ` B ) ) $= ? $.
-    prim-is-gen-lem1 $p |- ( ( B C_ ( NN0 X. RecParF ) /\ A C_ B ) -> ( RecArithGeneralStep ` A ) C_ ( RecArithGeneralStep ` B ) ) $= ? $.
-    prim-is-gen-lem2 $p |- ( A C_ ( NN0 X. RecParF ) -> ( RecArithPrimitiveStep ` A ) C_ ( RecArithGeneralStep ` A ) ) $= ? $.
-    prim-is-gen-lem3 $p |- ( X e. On -> ( RecArithPrimitiveL ` X ) C_ ( RecArithGeneralL ` X ) ) $= ? $.
-    prim-is-gen-arith $p |- RecArithPrimitive C_ RecArithGeneral $= ? $.
-    prim-is-gen $p |- RecPrimitive C_ RecGeneral $= ? $.
+    @( we probably need to go finer grained than this @)
 
-    $( not super sure how to prove these $)
+    prim-is-gen-lem0 @p |- ( ( B C_ ( NN0 X. RecParF ) /\ A C_ B ) -> ( RecArithPrimitiveStep ` A ) C_ ( RecArithPrimitiveStep ` B ) ) @= ? @.
+    prim-is-gen-lem1 @p |- ( ( B C_ ( NN0 X. RecParF ) /\ A C_ B ) -> ( RecArithGeneralStep ` A ) C_ ( RecArithGeneralStep ` B ) ) @= ? @.
+    prim-is-gen-lem2 @p |- ( A C_ ( NN0 X. RecParF ) -> ( RecArithPrimitiveStep ` A ) C_ ( RecArithGeneralStep ` A ) ) @= ? @.
+    prim-is-gen-lem3 @p |- ( X e. On -> ( RecArithPrimitiveL ` X ) C_ ( RecArithGeneralL ` X ) ) @= ? @.
+    prim-is-gen-arith @p |- RecArithPrimitive C_ RecArithGeneral @= ? @.
+    prim-is-gen @p |- RecPrimitive C_ RecGeneral @= ? @.
 
-    gen-arith-isfun $p |- Fun RecArithGeneral $= ? $.
-    gen-arith-dom $p |- dom RecArithGeneral C_ NN $= ? $.
-    gen-are-parf $p |- RecGeneral C_ RecParF $= ? $.
+    @( not super sure how to prove these @)
 
-    $( easy consequences of the above, except for prim-are-totf $)
-    prim-arith-isfun $p |- Fun RecArithPrimitive $= ? $.
-    prim-arith-dom $p |- dom RecArithPrimitive C_ NN $= ? $.
-    prim-are-totf $p |- RecPrimitive C_ RecTotF $= ? $.
+    gen-arith-isfun @p |- Fun RecArithGeneral @= ? @.
+    gen-arith-dom @p |- dom RecArithGeneral C_ NN @= ? @.
+    gen-are-parf @p |- RecGeneral C_ RecParF @= ? @.
 
-    $( nonconstructive cardinality proof.  we will see the explicit diagonalization construction later $)
-    ex-nongen-totf-card-lem0 $p |- RecGeneral ~< NN $= ? $.
-    ex-nongen-totf-card-lem1 $p |- RecParF ~~ ~P NN $= ? $.
-    ex-nongen-totf-card $p |- RecGeneral C. RecParF $= ? $.
-$}
+    @( easy consequences of the above, except for prim-are-totf @)
+    prim-arith-isfun @p |- Fun RecArithPrimitive @= ? @.
+    prim-arith-dom @p |- dom RecArithPrimitive C_ NN @= ? @.
+    prim-are-totf @p |- RecPrimitive C_ RecTotF @= ? @.
 
-${
-    $( construction and induction principles $)
+    @( nonconstructive cardinality proof.  we will see the explicit diagonalization construction later @)
+    ex-nongen-totf-card-lem0 @p |- RecGeneral ~< NN @= ? @.
+    ex-nongen-totf-card-lem1 @p |- RecParF ~~ ~P NN @= ? @.
+    ex-nongen-totf-card @p |- RecGeneral C. RecParF @= ? @.
+@}
 
-    zer-arith-prim $p |- <. ( 1 ,n 0 ) , RecZer >. e. RecPrimitive $= ? $.
-    suc-arith-prim $p |- <. ( 1 ,n 1 ) , RecSuc >. e. RecPrimitive $= ? $.
-    prj-arith-prim $p |- ( ( A e. NN /\ B e. NN /\ A <_ B ) -> <. ( 2 ,n ( A ,n B ) ) , ( A RecPrj B ) >. e. RecPrimitive ) $= ? $.
+@{
+    @( construction and induction principles @)
 
-    zer-prim $p |- RecZer e. RecPrimitive $= ? $.
-    suc-prim $p |- RecSuc e. RecPrimitive $= ? $.
+    zer-arith-prim @p |- <. ( 1 ,n 0 ) , RecZer >. e. RecPrimitive @= ? @.
+    suc-arith-prim @p |- <. ( 1 ,n 1 ) , RecSuc >. e. RecPrimitive @= ? @.
+    prj-arith-prim @p |- ( ( A e. NN /\ B e. NN /\ A <_ B ) -> <. ( 2 ,n ( A ,n B ) ) , ( A RecPrj B ) >. e. RecPrimitive ) @= ? @.
 
-    prim-en-nn $p |- RecPrimitive ~~ NN $= ? $.
-    gen-en-nn $p |- RecGeneral ~~ NN $= ? $.
+    zer-prim @p |- RecZer e. RecPrimitive @= ? @.
+    suc-prim @p |- RecSuc e. RecPrimitive @= ? @.
 
-    $( We may not need a full induction schema; coinduction + cantor pair comparison lemmata implies that ordinary induction on NN0 can be lifted to induction here $)
-    $( generally have +, -, *, /, 1st_n, 2nd_n, ,n, all constants, bounded looping, bounded iota, composition (normal subsititute-y), anything else we might need $)
-$}
+    prim-en-nn @p |- RecPrimitive ~~ NN @= ? @.
+    gen-en-nn @p |- RecGeneral ~~ NN @= ? @.
 
-${
-    $( tree recursion lemma: reifies the stacks, takes p.r. f, g, fc, gc, h and builds F:
-       F(x) = h( x, fc(x) ? F(f(x)) : 0, gc(x) ? F(g(x)) : 0 )  details TBD $)
-    $( F is general recursive $)
-    $( F is total if there exists T : NN --> On which is decreased by f and g $)
-    $( F is primitive recursive if there exists T : NN -> NN which is primitve recursive and T(f(x)) + T(g(x)) < T(x) $)
-$}
+    @( We may not need a full induction schema; coinduction + cantor pair comparison lemmata implies that ordinary induction on NN0 can be lifted to induction here @)
+    @( generally have +, -, *, /, 1st_n, 2nd_n, ,n, all constants, bounded looping, bounded iota, composition (normal subsititute-y), anything else we might need @)
+@}
 
-${
-    $( succinct encodings $)
-    $( ( x -> 2*x ) has some number < A = A ^ ( k ^ 0 ) $)
-    $( ( x -> 2*x + 1 ) has some number < A ^ ( k ^ 0 ) $)
-    $( if A >= A_base and f# < A and g# < A, (f o. g)# < A ^ k $)
-    $( for i = 0, all N < 2 ^ ( 2 ^ i ), ( x -> (2^(2^i))*x + N )# < A ^ ( k ^ 0 ) $)
-    $( for i >= 0, N < 2 ^ ( 2 ^ ( i + 1 ) ), ( x -> (2^(2^(i+1)))*x + N ) = ( x -> (2^(2^i))*x + A ) o. ( x -> (2^(2^i))*x + B ) for A,B determined by the division theorem $)
-    $( for i >= 0, N < 2 ^ ( 2 ^ i ), ( x -> (2^(2^i))*x + N )# < A ^ ( k ^ i ) by induction $)
-    $( for x >= 0, exists i such that x <_ ( 2 ^ ( 2 ^ i ) ) <_ ( x ^ 2 ) $)
-    $( for x >= 0, ( () -> x )# < ( A ^ ( k ^ i ) ) -> log( () -> x ) <
+@{
+    @( tree recursion lemma: reifies the stacks, takes p.r. f, g, fc, gc, h and builds F:
+       F(x) = h( x, fc(x) ? F(f(x)) : 0, gc(x) ? F(g(x)) : 0 )  details TBD @)
+    @( F is general recursive @)
+    @( F is total if there exists T : NN --> On which is decreased by f and g @)
+    @( F is primitive recursive if there exists T : NN -> NN which is primitve recursive and T(f(x)) + T(g(x)) < T(x) @)
+@}
+
+@{
+    @( succinct encodings @)
+    @( ( x -> 2*x ) has some number < A = A ^ ( k ^ 0 ) @)
+    @( ( x -> 2*x + 1 ) has some number < A ^ ( k ^ 0 ) @)
+    @( if A >= A_base and f# < A and g# < A, (f o. g)# < A ^ k @)
+    @( for i = 0, all N < 2 ^ ( 2 ^ i ), ( x -> (2^(2^i))*x + N )# < A ^ ( k ^ 0 ) @)
+    @( for i >= 0, N < 2 ^ ( 2 ^ ( i + 1 ) ), ( x -> (2^(2^(i+1)))*x + N ) = ( x -> (2^(2^i))*x + A ) o. ( x -> (2^(2^i))*x + B ) for A,B determined by the division theorem @)
+    @( for i >= 0, N < 2 ^ ( 2 ^ i ), ( x -> (2^(2^i))*x + N )# < A ^ ( k ^ i ) by induction @)
+    @( for x >= 0, exists i such that x <_ ( 2 ^ ( 2 ^ i ) ) <_ ( x ^ 2 ) @)
+    @( for x >= 0, ( () -> x )# < ( A ^ ( k ^ i ) ) -> log( () -> x ) <
        log( A ^ ( k ^ i ) ) = (k^i).log(A) = (2^i)^(log(k)/log(2))*log(A) <
        log(A)/log(2)*log(2^2^i)^(log(k)/log(2)) <
-       log(A)/log(2) * log(x^2) ^ (log(k)/log(2)) = K * log(x) ^ L $)
+       log(A)/log(2) * log(x^2) ^ (log(k)/log(2)) = K * log(x) ^ L @)
 
-$}
+@}
 
-${
-    $( Raphael Robinson's inductive intrinsic characterization of the one-argument p.r. functions.  use ( ( ( x ,n b ) - a ) ,n a ) as an increment-friendly pair that works with our lemmas $)
-$}
+@{
+    @( Raphael Robinson's inductive intrinsic characterization of the one-argument p.r. functions.  use ( ( ( x ,n b ) - a ) ,n a ) as an increment-friendly pair that works with our lemmas @)
+@}
 
-${
-    $( Peter-Ackermann function $)
-    $( A(0)   = Suc $)
-    $( A(i+1) = Prc(A(i),A(i)) $)
-    $( A(i,_) is primitive recursive at level i $)
-    $( let P(i) = for all p.r. F at level i and all [x...], F(x...) <_ A(max(x...)) $)
-    $( P(0) : F at 0 is Zer, Suc, or Prj $)
-    $( P(i+1) : zer/suc/prj handled.  either Sub or Prc remains $)
-    $( Prj(f,g)(const,N) : note g(const) <_ A(const), for all v >= max(const) (f(const,i) <_ partial ackerman) $)
-    $( requires A_i(i) is monotonic $)
-    $( requires definition of iterates of A $)
-    $( Sub(f,g...) : note all g values are less than A_i(in), so the result is less than A_i(A_i(in)) $)
-    $( requires: A(i,A(i,x)) <_ A(i+1,x) $)
-    $( requires: A(i,j) is strictly monotonic in i,j $)
-    $( A(j,j) is not dominated by A(i,j) for any fixed i $)
-    $( A(j,j) is not primitive recursive $)
-    $( suppose phi(f#, x) were primitive recursive.  then f(x) <_ A(i,max(f#,x)) for some i and all pr f $)
-    $( let f = A(i+1,_), y = f#.  A(i+1,y) = f(y) <_ A(i,max(f#,y)) = A(i,y), contradicting A(i+1,y) > A(i,j) $)
-    $( thus phi is not pr.  it will be shown gr in the next section $)
-    $( todo: this does not seem to quite be the standard Peter-Ackerman function, which has A(i+1) = Prc(A(i),1).  I like how much sharper my version is, the fastest-growing PR function of a given rank.  OTOH it's a little harder to calculate $)
-$}
+@{
+    @( Peter-Ackermann function @)
+    @( A(0)   = Suc @)
+    @( A(i+1) = Prc(A(i),A(i)) @)
+    @( A(i,_) is primitive recursive at level i @)
+    @( let P(i) = for all p.r. F at level i and all [x...], F(x...) <_ A(max(x...)) @)
+    @( P(0) : F at 0 is Zer, Suc, or Prj @)
+    @( P(i+1) : zer/suc/prj handled.  either Sub or Prc remains @)
+    @( Prj(f,g)(const,N) : note g(const) <_ A(const), for all v >= max(const) (f(const,i) <_ partial ackerman) @)
+    @( requires A_i(i) is monotonic @)
+    @( requires definition of iterates of A @)
+    @( Sub(f,g...) : note all g values are less than A_i(in), so the result is less than A_i(A_i(in)) @)
+    @( requires: A(i,A(i,x)) <_ A(i+1,x) @)
+    @( requires: A(i,j) is strictly monotonic in i,j @)
+    @( A(j,j) is not dominated by A(i,j) for any fixed i @)
+    @( A(j,j) is not primitive recursive @)
+    @( suppose phi(f#, x) were primitive recursive.  then f(x) <_ A(i,max(f#,x)) for some i and all pr f @)
+    @( let f = A(i+1,_), y = f#.  A(i+1,y) = f(y) <_ A(i,max(f#,y)) = A(i,y), contradicting A(i+1,y) > A(i,j) @)
+    @( thus phi is not pr.  it will be shown gr in the next section @)
+    @( todo: this does not seem to quite be the standard Peter-Ackerman function, which has A(i+1) = Prc(A(i),1).  I like how much sharper my version is, the fastest-growing PR function of a given rank.  OTOH it's a little harder to calculate @)
+@}
 
-${
-    $( Relativization and the Turing Degrees? $)
-$}
+@{
+    @( Relativization and the Turing Degrees? @)
+@}
 
-$( ---- HALTING ---- $)
-$( Prove the existance of a Universal Turing Machine (i.o.w. the Turing evaluation function is a partial computable function) and formalize the existance of semidecidable predicates that are not decidable. $)
+@( ---- HALTING ---- @)
+@( Prove the existance of a Universal Turing Machine (i.o.w. the Turing evaluation function is a partial computable function) and formalize the existance of semidecidable predicates that are not decidable. @)
 
-$( doing this by recursion theory now.
+@( doing this by recursion theory now.
    define [] = 0, (x:y) = ( x ,n y ) + 1
    define a primitive-recursive step function on stacks of frames:
    step ( [_,[1,0]] : (_:x) : y ) = (0:x) : y
@@ -6092,9 +6094,11 @@ $( doing this by recursion theory now.
    prove that the transitive closure includes ( EVAL f x1 x2 x3 ... ) : C --> ( RET v ) : C iff f(x1,x2,x3,...) = v and v e. NN0
    use a single RecSea to build a general recursive function which searches for ( RET v ) in the closure of ( EVAL f x ), and returns it
    thus:
-$)
+@)
 
-eval-recursive $p |- ( x e. ( NN0 ^m ( 1 ... 2 ) ) |-> if ( ( x ` 1 ) e. dom RecArithGeneral , ( ( RecArithGeneral ` ( x ` 1 ) ) ` ( { 1 } X. { ( x ` 2 ) } ) ) , ( Undef ` NN0 ) ) ) e. RecArithGeneral $= ? $.
+eval-recursive @p |- ( x e. ( NN0 ^m ( 1 ... 2 ) ) |-> if ( ( x ` 1 ) e. dom RecArithGeneral , ( ( RecArithGeneral ` ( x ` 1 ) ) ` ( { 1 } X. { ( x ` 2 ) } ) ) , ( Undef ` NN0 ) ) ) e. RecArithGeneral @= ? @.
+
+$)
 
 $( ---- MULTIVARIATE POLYNOMIALS ---- $)
 $( Define multivariate polynomials and prove that they include constants and projections and are closed under addition, multiplication, and renaming of variables. Later we will also need the property that polynomial functions are computable. $)
