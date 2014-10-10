@@ -7442,6 +7442,22 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
       $( [10-Oct-2014] $)
     $}
 
+    $( could maybe shorten a LOT of these with a canned substitution huh? $)
+    ${
+    $d A a b p t u $.  $d N a b p t u $.  $d P a b p t u $.
+    eldioph3 $p |- ( ( N e. NN0 /\ P e. ( mzPoly ` NN ) ) -> { t | E. u e. ( NN0 ^m NN ) ( t = ( u |` ( 1 ... N ) ) /\ ( P ` u ) = 0 ) } e. ( Dioph ` N ) ) $=
+      ( va vb vp cn0 wcel cn cfv wa cv co cres wceq cc0 wrex cab eqeq1d cmzp c1
+      cfz cdioph simpl simpr eqidd fveq1 anbi2d rexbidv abbidv weq eqeq1 anbi1d
+      cmap reseq1 eqeq2d anbi12d cbvrexv syl6bb cbvabv syl6eq rcla4ev eldioph3b
+      fveq2 syl2anc sylanbrc ) DHIZCJUAKZIZLZVHBMZAMZUBDUCNZOZPZVMCKZQPZLZAHJUO
+      NZRZBSZEMZFMZVNOZPZWDGMZKZQPZLZFVTRZESZPZGVIRZWBDUDKIVHVJUEVKVJWBWBPZWNVH
+      VJUFVKWBUGWMWOGCVIWGCPZWLWBWBWPWLWFWDCKZQPZLZFVTRZESWBWPWKWTEWPWJWSFVTWPW
+      IWRWFWPWHWQQWDWGCUHTUIUJUKWTWAEBEBULZWTVLWEPZWRLZFVTRWAXAWSXCFVTXAWFXBWRW
+      CVLWEUMUNUJXCVSFAVTFAULZXBVPWRVRXDWEVOVLWDVMVNUPUQXDWQVQQWDVMCVETURUSUTVA
+      VBUQVCVFFEWBDGVDVG $.
+      $( [10-Oct-2014] $)
+    $}
+
     resasplit $p |- ( ( F Fn A /\ G Fn B /\ ( F |` ( A i^i B ) ) = ( G |` ( A i^i B ) ) ) -> ( F u. G ) = ( ( F |` ( A i^i B ) ) u. ( ( F |` ( A \ B ) ) u. ( G |` ( B \ A ) ) ) ) ) $=
       ( wfn cin cres wceq w3a cun fnresdm uneq12 syl2an inundif reseq2i resundi
       cdif eqtr3i uneq1i syl6eq 3adant3 simp3 uneq1d uneq2d incom eqtri uneq12i
@@ -7677,6 +7693,28 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
       ZVRWJDVSWMVOWIVQVKWHVNUKULUMUNWGWJWLDVSWGVLVSHZMZWIWLVQWOWIWLWOWIMWHVNWEW
       OWIRWNVNWEHZWGWIWNVMNQNVDHWPEVMNVPBUOUPUQVLINVMURUSUTVATVBSVCVEVFVGTSVHVI
       $.
+      $( [10-Oct-2014] $)
+    $}
+
+    ${
+    $d N t u a b c d e f g h $.  $d M a b c d e f g h $.  $d S t u a b c d e f g h $.
+    diophrex $p |- ( ( N e. NN0 /\ M e. ( ZZ>= ` N ) /\ S e. ( Dioph ` M ) ) -> { t | E. u e. S t = ( u |` ( 1 ... N ) ) } e. ( Dioph ` N ) ) $=
+      ( va vb vd ve vc cn0 wcel cfv cv cres wceq wrex cab wa wex cuz cdioph w3a
+      c1 cfz co weq eqeq1 rexbidv reseq1 eqeq2d cbvrexv syl6bb cbvabv cmap cmzp
+      cc0 cn eldioph3b simprbi 3ad2ant3 rexeq abbidv adantl rexab r19.41v exbii
+      anbi1d rexcom4 anass vex resex anbi2d ceqsexv bitri ancom wss simpl2 3syl
+      resabs1 syl5bb syl5bbr eldioph3 3ad2antl1 eqeltrd adantr ex rexlimdva mpd
+      fzss2 syl5eqelr ) EKLZDEUAMLZCDUBMLZUCZBNZANZUDEUEUFZOZPZACQZBRFNZGNZWROZ
+      PZGCQZFRZEUBMZXFXAFBFBUGZXFWPXDPZGCQXAXIXEXJGCXBWPXDUHUIXJWTGACGAUGXDWSWP
+      XCWQWRUJUKULUMUNWOCHNZINZUDDUEUFZOZPZXLJNZMUQPZSZIKURUOUFZQZHRZPZJURUPMZQ
+      ZXGXHLZWNWLYDWMWNDKLYDIHCDJUSUTVAWOYBYEJYCWOXPYCLZSZYBYEYGYBSXGXEGYAQZFRZ
+      XHYBXGYIPYGYBXFYHFXEGCYAVBVCVDYGYIXHLYBYGYIXBXLWROZPZXQSZIXSQZFRZXHYGYHYM
+      FYHXCXNPZXQSZIXSQZXESZGTZYGYMXTYQXEHGHGUGZXRYPIXSYTXOYOXQXKXCXNUHVHUIVEYS
+      YPXESZIXSQZGTZYGYMUUBYRGYPXEIXSVFVGUUCUUAGTZIXSQYGYMUUAIGXSVIYGUUDYLIXSUU
+      DXQXBXNWROZPZSZYGYLUUDYOXQXESZSZGTUUGUUAUUIGYOXQXEVJVGUUHUUGGXNXLXMIVKVLY
+      OXEUUFXQYOXDUUEXBXCXNWRUJUKVMVNVOUUGUUFXQSYGYLXQUUFVPYGUUFYKXQYGUUEYJXBYG
+      WMWRXMVQUUEYJPWLWMWNYFVREUDDWJXLWRXMVTVSUKVHWAWAUIWBWBWAVCWLWMYFYNXHLWNIF
+      XPEWCWDWEWFWEWGWHWIWK $.
       $( [10-Oct-2014] $)
     $}
 
