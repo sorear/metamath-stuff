@@ -6705,6 +6705,13 @@ $}
       $( [10-Oct-2014] $)
     $}
 
+    mzpnegmpt $p |- ( ( x e. ( ZZ ^m V ) |-> A ) e. ( mzPoly ` V ) -> ( x e. ( ZZ ^m V ) |-> -u A ) e. ( mzPoly ` V ) ) $=
+      ( cz cmap co cmpt cmzp cfv wcel cneg cc0 cmin df-neg mpteq2i elfvdm dmmzp
+      cvv cdm syl6eleq 0z mzpconstmpt sylancl id1 mzpsubmpt syl2anc syl5eqel )
+      ADCEFZBGZCHIZJZAUHBKZGAUHLBMFZGZUJAUHULUMBNOUKAUHLGUJJZUKUNUJJUKCRJLDJUOU
+      KCHSRUICHPQTUAALCUBUCUKUDALBCUEUFUG $.
+      $( [11-Oct-2014] $)
+
     mzpexpmpt $p |- ( ( ( x e. ( ZZ ^m V ) |-> A ) e. ( mzPoly ` V ) /\ D e. NN0 ) ->
         ( x e. ( ZZ ^m V ) |-> ( A ^ D ) ) e. ( mzPoly ` V ) ) $=
       ( va vb wcel cz co cmpt cexp wi wceq oveq2 adantr mpteq2dva eleq1d imbi2d
@@ -7953,6 +7960,24 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
     $}
 
     ${
+    $d ph y a b c $.  $d ps x a b c $.  $d ch x a b c $.  $d x y $.
+    rexzrexnn0.1 $e |- ( x = y -> ( ph <-> ps ) ) $.
+    rexzrexnn0.2 $e |- ( x = -u y -> ( ph <-> ch ) ) $.
+
+    rexzrexnn0 $p |- ( E. x e. ZZ ph <-> E. y e. NN0 ( ps \/ ch ) ) $=
+      ( cz wrex wo cn0 cv wcel wa cneg weq wb rcla4ev wceq rexlimiva cr simprbi
+      elznn0 adantr simpr simplr equcom bicom 3imtr4i syl2anc ex zcn negneg syl
+      cc eqcomd eqeq2d syl5ibrcom imp bicom1 3syl rcla4edv impancom orim12d mpd
+      negeq r19.43 sylibr nn0z sylan nn0negz jaodan impbii ) ADHIZBCJZEKIZAVPDH
+      DLZHMZANZBEKIZCEKIZJZVPVSVQKMZVQOZKMZJZWBVRWFAVRVQUAMWFVQUCUBUDVSWCVTWEWA
+      VSWCVTVSWCNWCAVTVSWCUEVRAWCUFBAEVQKDEPABQEDPBAQFEDUGBAUHUIRUJUKVRWEAWAVRC
+      AEWDKVRELZWDSZNVQWGOZSZACQCAQVRWHWJVRWJWHVQWDOZSVRWKVQVRVQUOMWKVQSVQULVQU
+      MUNUPWHWIWKVQWGWDVFUQURUSGACUTVAVBVCVDVEBCEKVGVHTVOVNEKWGKMZBVNCWLWGHMBVN
+      WGVIABDWGHFRVJWLWIHMCVNWGVKACDWIHGRVJVLTVM $.
+      $( [11-Oct-2014] $)
+    $}
+
+    ${
     $d N t $.
     lerabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A <_ B } e. ( Dioph ` N ) ) $=
       ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab wral rabdiophlem1 3adant1
@@ -7995,20 +8020,35 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
     $}
 
     ${
-    $d ph y a b c $.  $d ps x a b c $.  $d ch x a b c $.  $d x y $.
-    rexzrexnn0.1 $e |- ( x = y -> ( ph <-> ps ) ) $.
-    rexzrexnn0.2 $e |- ( x = -u y -> ( ph <-> ch ) ) $.
+    $d N a b c d t $.  $d A a b c d $.  $d B a b c d $.
 
-    rexzrexnn0 $p |- ( E. x e. ZZ ph <-> E. y e. NN0 ( ps \/ ch ) ) $=
-      ( cz wrex wo cn0 cv wcel wa cneg weq wb rcla4ev wceq rexlimiva cr simprbi
-      elznn0 adantr simpr simplr equcom bicom 3imtr4i syl2anc ex zcn negneg syl
-      cc eqcomd eqeq2d syl5ibrcom imp bicom1 3syl rcla4edv impancom orim12d mpd
-      negeq r19.43 sylibr nn0z sylan nn0negz jaodan impbii ) ADHIZBCJZEKIZAVPDH
-      DLZHMZANZBEKIZCEKIZJZVPVSVQKMZVQOZKMZJZWBVRWFAVRVQUAMWFVQUCUBUDVSWCVTWEWA
-      VSWCVTVSWCNWCAVTVSWCUEVRAWCUFBAEVQKDEPABQEDPBAQFEDUGBAUHUIRUJUKVRWEAWAVRC
-      AEWDKVRELZWDSZNVQWGOZSZACQCAQVRWHWJVRWJWHVQWDOZSVRWKVQVRVQUOMWKVQSVQULVQU
-      MUNUPWHWIWKVQWGWDVFUQURUSGACUTVAVBVCVDVEBCEKVGVHTVOVNEKWGKMZBVNCWLWGHMBVN
-      WGVIABDWGHFRVJWLWIHMCVNWGVKACDWIHGRVJVLTVM $.
+    dvdsrabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A || B } e. ( Dioph ` N ) ) $=
+      ( vb va vc cn0 wcel cz c1 co cmap cmpt cfv crab cmul wceq wo ax-17 cfz cv
+      cmzp w3a cdivides wbr cneg wrex cdioph wral rabdiophlem1 wa divides oveq1
+      weq eqeq1d rexzrexnn0 syl6bb ralimi r19.26 3imtr3i syl2an 3adant1 csb wel
+      wb rabbi vex hbcsb1 hbov hbeq hbor csbeq1a oveq2d eqeq12d orbi12d rexbidv
+      hbrex cbvrab caddc cres simp1 peano2nn0 3ad2ant1 ovex cn nn0p1nn elfz1end
+      cvv mzpproj sylancr adantr rabdiophlem2 mzpmulmpt syl2anc 3adant3 3adant2
+      sylib eqid eqrabdioph syl3anc mzpnegmpt syl orrabdioph oveq1d rexrabdioph
+      negeq csbeq1 syl5eqel eqeltrd ) DHIZAJKDUALZMLZBNXLUCOZIZAXMCNXNIZUDZBCUE
+      UFZAHXLMLZPZEUBZBQLZCRZYAUGZBQLZCRZSZEHUHZAXSPZDUIOZXOXPXTYIRZXKXOBJIZAXS
+      UJZCJIZAXSUJZYKXPABDUKACDUKYLYNULZAXSUJXRYHVFZAXSUJYMYOULYKYPYQAXSYPXRFUB
+      ZBQLZCRZFJUHYHFBCUMYTYCYFFEFEUOYSYBCYRYABQUNUPYRYDRYSYECYRYDBQUNUPUQURUSY
+      LYNAXSUTXRYHAXSVGVAVBVCXQYIYAAYRBVDZQLZAYRCVDZRZYDUUAQLZUUCRZSZEHUHZFXSPZ
+      YJYHUUHAFGXSGUBZXSIZATUUKFTYHFTUUGAEHYAHIATUUDUUFAAGGUUBUUCAGYAUUAQGEVEAT
+      UUJQIATZAGYRBFVHZGFVEATZVIZVJAGYRCUUMUUNVIZVKAGGUUEUUCAGYDUUAQUUJYDIATUUL
+      UUOVJUUPVKVLVRAFUOZYGUUGEHUUQYCUUDYFUUFUUQYBUUBCUUCUUQBUUAYAQAYRBVMZVNAYR
+      CVMZVOUUQYEUUECUUCUUQBUUAYDQUURVNUUSVOVPVQVSXQXKDKVTLZUUJOZAUUJXLWAZBVDZQ
+      LZAUVBCVDZRZUVAUGZUVCQLZUVERZSZGHKUUTUALZMLZPUUTUIOZIZUUIYJIXKXOXPWBXQUVF
+      GUVLPUVMIZUVIGUVLPUVMIZUVNXQUUTHIZGJUVKMLZUVDNUVKUCOZIZGUVRUVENUVSIZUVOXK
+      XOUVQXPDWCWDZXKXOUVTXPXKXOULZGUVRUVANUVSIZGUVRUVCNUVSIZUVTXKUWDXOXKUVKWII
+      UUTUVKIZUWDKUUTUAWEXKUUTWFIUWFDWGUUTWHWRGUVKUUTWJWKWLZAGBUUTDUUTWSZWMZGUV
+      AUVCUVKWNWOWPXKXPUWAXOAGCUUTDUWHWMWQZGUVDUVEUUTWTXAXQUVQGUVRUVHNUVSIZUWAU
+      VPUWBXKXOUWKXPUWCGUVRUVGNUVSIZUWEUWKUWCUWDUWLUWGGUVAUVKXBXCUWIGUVGUVCUVKW
+      NWOWPUWJGUVHUVEUUTWTXAUVFUVIGUUTXDWOUVJUUGUVAUUAQLZUUCRZUVGUUAQLZUUCRZSEF
+      GUUTDUWHYAUVARZUUDUWNUUFUWPUWQUUBUWMUUCYAUVAUUAQUNUPUWQUUEUWOUUCUWQYDUVGU
+      UAQYAUVAXGXEUPVPYRUVBRZUWNUVFUWPUVIUWRUWMUVDUUCUVEUWRUUAUVCUVAQAYRUVBBXHZ
+      VNAYRUVBCXHZVOUWRUWOUVHUUCUVEUWRUUAUVCUVGQUWSVNUWTVOVPXFWOXIXJ $.
       $( [11-Oct-2014] $)
     $}
 
