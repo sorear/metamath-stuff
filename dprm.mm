@@ -7768,7 +7768,169 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
       AQDZUNUODUKUBDISDUPEAFUCUDBIUKUEUFBIAUGUIUH $.
       $( [10-Oct-2014] $)
 
+    anrabdioph $p |- ( ( { t e. ( NN0 ^m ( 1 ... N ) ) | ph } e. ( Dioph ` N ) /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ps } e. ( Dioph ` N ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | ( ph /\ ps ) } e. ( Dioph ` N ) ) $=
+      ( cn0 c1 cfz co cmap crab cdioph cfv wcel wa cin inrab diophin syl5eqelr
+      ) ACEFDGHIHZJZDKLZMBCSJZUAMNABNCSJTUBOUAABCSPTUBDQR $.
+      $( [10-Oct-2014] $)
 
+    orrabdioph $p |- ( ( { t e. ( NN0 ^m ( 1 ... N ) ) | ph } e. ( Dioph ` N ) /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ps } e. ( Dioph ` N ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | ( ph \/ ps ) } e. ( Dioph ` N ) ) $=
+      ( cn0 c1 cfz co cmap crab cdioph cfv wcel wa cun unrab diophun syl5eqelr
+      wo ) ACEFDGHIHZJZDKLZMBCTJZUBMNABSCTJUAUCOUBABCTPUAUCDQR $.
+      $( [10-Oct-2014] $)
+
+    3anrabdioph $p |- ( ( { t e. ( NN0 ^m ( 1 ... N ) ) | ph } e. ( Dioph ` N ) /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ps } e. ( Dioph ` N ) /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ch } e. ( Dioph ` N ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | ( ph /\ ps /\ ch ) } e. ( Dioph ` N ) ) $=
+      ( cn0 c1 cfz co cmap crab cdioph cfv wcel w3a wa wb cv df-3an anrabdioph
+      a1i rabbiia sylan syl5eqel 3impa ) ADFGEHIJIZKELMZNZBDUFKUGNZCDUFKUGNZABC
+      OZDUFKZUGNUHUIPZUJPULABPZCPZDUFKZUGUKUODUFUKUOQDRUFNABCSUAUBUMUNDUFKUGNUJ
+      UPUGNABDETUNCDETUCUDUE $.
+      $( [10-Oct-2014] $)
+
+    3orrabdioph $p |- ( ( { t e. ( NN0 ^m ( 1 ... N ) ) | ph } e. ( Dioph ` N ) /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ps } e. ( Dioph ` N ) /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ch } e. ( Dioph ` N ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | ( ph \/ ps \/ ch ) } e. ( Dioph ` N ) ) $=
+      ( cn0 c1 cfz co cmap crab cdioph cfv wcel w3o wa wo wb cv orrabdioph a1i
+      df-3or rabbiia sylan syl5eqel 3impa ) ADFGEHIJIZKELMZNZBDUGKUHNZCDUGKUHNZ
+      ABCOZDUGKZUHNUIUJPZUKPUMABQZCQZDUGKZUHULUPDUGULUPRDSUGNABCUBUAUCUNUODUGKU
+      HNUKUQUHNABDETUOCDETUDUEUF $.
+      $( [10-Oct-2014] $)
+
+    $}
+
+    elmapi $p |- ( ( C e. _V /\ A e. ( B ^m C ) ) -> A : C --> B ) $=
+      ( cvv wcel cmap co wa wf simpr elmapex1 adantl simpl elmapg syl2anc mpbid
+      wb ) CDEZABCFGEZHZSCBAIZRSJTBDEZRSUAQSUBRABCKLRSMBCADDNOP $.
+      $( [10-Oct-2014] $)
+
+    ${
+    $d N a b c x $.  $d A a b c x $.  $d B a b c x $.  $d C a b c x $.  $d D a b c x $.  $d M a b c x $.
+    mapfzcons.1 $e |- M = ( N + 1 ) $.
+
+    mapfzcons $p |- ( ( N e. NN0 /\ A e. ( B ^m ( 1 ... N ) ) /\ C e. B ) -> ( A u. { <. M , C >. } ) e. ( B ^m ( 1 ... M ) ) ) $=
+      ( cn0 wcel c1 cfz co cmap caddc csn cun wf wceq cvv ovex cuz w3a c0 simp2
+      cop cin wb elmapex1 3ad2ant2 elmapg sylancl mpbid wss wf1o f1osng sylancr
+      simp3 syl snssiALT 3ad2ant3 fss syl2anc fzp1disj 3ad2ant1 fun syl21anc cz
+      f1of cmin cfv cc0 ax-1cn subidi fveq2i eqtr4i eleq2i biimpi fzsuc2 eqcomd
+      nn0uz unidm a1i feq23d mpbird opeq1i sneqi uneq2i oveq2i eleq12i sylibr
+      1z ) EGHZABIEJKZLKHZCBHZUAZAEIMKZCUDZNZOZBIWPJKZLKZHZADCUDZNZOZBIDJKZLKZH
+      WOXBWTBWSPZWOWLWPNZOZBBOZWSPZXHWOWLBAPZXIBWRPZWLXIUEUBQZXLWOWMXMWKWMWNUCW
+      OBRHZWLRHWMXMUFWMWKXPWNABWLUGUHZIEJSBWLARRUIUJUKWOXICNZWRPZXRBULZXNWOXIXR
+      WRUMZXSWOWPRHWNYAEIMSWKWMWNUPWPCRBUNUOXIXRWRVGUQWNWKXTWMCBURUSXIXRBWRUTVA
+      WKWMXOWNIEGVBVCWLXIBBAWRVDVEWOXJXKWTBWSWOWTXJWOIVFHEIIVHKZTVIZHZWTXJQWJWK
+      WMYDWNWKYDGYCEGVJTVIYCVSYBVJTIVKVLVMVNVOVPVCIEVQUOVRXKBQWOBVTWAWBUKWOXPWT
+      RHXBXHUFXQIWPJSBWTWSRRUIUJWCXEWSXGXAXDWRAXCWQDWPCFWDWEWFXFWTBLDWPIJFWGWGW
+      HWI $.
+      $( [10-Oct-2014] $)
+
+    mapfzcons1 $p |- ( ( N e. NN0 /\ A e. ( B ^m ( 1 ... N ) ) /\ C e. B ) -> ( ( A u. { <. M , C >. } ) |` ( 1 ... N ) ) = A ) $=
+      ( cn0 wcel c1 cfz co csn cun cres c0 wceq cdm cin eqtri syl5eq w3a cop wf
+      cmap resundir wfn cvv ovex elmapi mpan fnresdm 3syl 3ad2ant2 caddc dmsnop
+      ffn dmres sneqi ineq2i fzp1disj 3ad2ant1 wrel relres reldm0 ax-mp uneq12d
+      wb sylibr un0 syl6eq ) EGHZABIEJKZUDKHZCBHZUAZADCUBLZMVLNAVLNZVPVLNZMZAAV
+      PVLUEVOVSAOMAVOVQAVROVMVKVQAPZVNVMVLBAUCZAVLUFVTVLUGHVMWAIEJUHABVLUIUJVLB
+      AUPVLAUKULUMVOVRQZOPZVROPZVOWBVLEIUNKZLZRZOWBVLVPQZRWGVPVLUQWHWFVLWHDLWFD
+      CUODWEFURSUSSVKVMWGOPVNIEGUTVATVRVBWDWCVGVPVLVCVRVDVEVHVFAVIVJT $.
+      $( [10-Oct-2014] $)
+
+    mapfzcons1cl $p |- ( ( N e. NN0 /\ A e. ( B ^m ( 1 ... M ) ) ) -> ( A |` ( 1 ... N ) ) e. ( B ^m ( 1 ... N ) ) ) $=
+      ( cn0 wcel c1 cfz co cmap wa wss cres simpr caddc fzssp1 oveq2i syl6sseqr
+      cvv adantr ovex a1i elmapssres syl3anc ) DFGZABHCIJZKJGZLZUHHDIJZUGMZUGTG
+      ZAUJNBUJKJGUFUHOUFUKUHUFUJHDHPJZIJUGHDFQCUMHIERSUAULUIHCIUBUCABUGUJUDUE
+      $.
+      $( [10-Oct-2014] $)
+
+    mapfzcons2 $p |- ( ( N e. NN0 /\ A e. ( B ^m ( 1 ... N ) ) /\ C e. B ) -> ( ( A u. { <. M , C >. } ) ` M ) = C ) $=
+      ( cn0 wcel c1 cfz co csn cfv wfn cin c0 wceq cvv ovex caddc w3a wf elmapi
+      cmap cop cun mpan ffn syl 3ad2ant2 eqeltri fnsn a1i sneqi ineq2i fzp1disj
+      syl5eq 3ad2ant1 snid fvun2 syl112anc simp3 fvsng sylancr eqtrd ) EGHZABIE
+      JKZUDKHZCBHZUAZDADCUELZUFMZDVKMZCVJAVGNZVKDLZNZVGVOOZPQZDVOHZVLVMQVHVFVNV
+      IVHVGBAUBZVNVGRHVHVTIEJSABVGUCUGVGBAUHUIUJVPVJDCDEITKZRFEITSUKZULUMVFVHVR
+      VIVFVQVGWALZOPVOWCVGDWAFUNUOIEGUPUQURVSVJDWBUSUMVGVOAVKDUTVAVJDRHVIVMCQWB
+      VFVHVIVBDCRBVCVDVE $.
+      $( [10-Oct-2014] $)
+
+    $(
+    mapfzcons1eq $p |- ( ( N e. NN0 /\ D e. ( B ^m ( 1 ... N ) ) ) -> ( ( A |` ( 1 ... N ) ) = D <-> E. x e. B A = ( D u. { <. M , x >. } ) ) ) $=
+        ? $.
+    $)
+
+    $}
+
+    elfz1end $p |- ( A e. NN <-> A e. ( 1 ... A ) ) $=
+      ( cn wcel c1 cfz cuz cfv elnnuz biimpi nnz uzid syl eluzfz syl2anc elfznn
+      co cz impbii ) ABCZADAEPCZSADFGCZAAFGCZTSUAAHISAQCUBAJAKLADAMNAAOR $.
+      $( [10-Oct-2014] $)
+
+    ${
+    $d N t u v a b c d e $.  $d M t u v a b c d e $.
+    $d ph u v a b c d e $.  $d ps t a b c d e $.  $d ch v a b c d e $.
+    rexrabdioph.1 $e |- M = ( N + 1 ) $.
+    rexrabdioph.2 $e |- ( v = ( t ` M ) -> ( ps <-> ch ) ) $.
+    rexrabdioph.3 $e |- ( u = ( t |` ( 1 ... N ) ) -> ( ch <-> ph ) ) $.
+
+    $( The special sauce of Diophantine sets: they are closed under existential quantification. $)
+    rexrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... M ) ) | ph } e. ( Dioph ` M ) ) -> { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 ps } e. ( Dioph ` N ) ) $=
+      ( va vb vc cn0 wcel wa wceq wsbc wb c1 cfz cmap crab cdioph cfv wrex cres
+      co cv cab wsb df-rab sbequ cbvrexv anbi2i r19.42v bitr4i cop simpll simpr
+      csn cun simplr mapfzcons syl3anc adantrr mapfzcons2 eqcomd dfsbcq syl cvv
+      mapfzcons1 sbcbidv mpan2 bitrd biimpd fveq1 reseq1 eqeq2d anbi12d rcla4ev
+      fvex impr syl12anc ex rexlimdva wf ovex elmapi cn caddc syl5eqel elfz1end
+      nn0p1nn sylib ffvelrn syl2anr adantr simprr mapfzcons1cl eqeltrd ad2antll
+      mpan simprl mpbird anbi2d impbid syl5bb abbidv syl5eq ax-17 hbs1 hbsb weq
+      hbrex sbequ12 rexbidv cbvrexsv syl6bb cbvrab abbii 3eqtr4g resex sylan9bb
+      rexrab vex sbc2ie a1i rabbiia rexeq ax-mp syl6eq simpl nn0z uzid peano2uz
+      cuz cz 3syl diophrex ) HOPZAFOUAGUBUIZUCUIZUDZGUEUFPZQZBDOUGZEOUAHUBUIZUC
+      UIZUDZLUJZMUJZUUIUHZRZMUUEUGZLUKZHUEUFZUUBUUKUUQRUUFUUBUUKUUOMBEFUJZUUIUH
+      ZSZDGUUSUFZSZFUUDUDZUGZLUKZUUQUUBBELULZDMULZMOUGZLUUJUDZBEUUNSZDGUUMUFZSZ
+      UUOQZMUUDUGZLUKZUUKUVFUUBUVJUULUUJPZUVIQZLUKUVPUVILUUJUMUUBUVRUVOLUVRUVQU
+      VGDNULZQZNOUGZUUBUVOUVRUVQUVSNOUGZQUWAUVIUWBUVQUVHUVSMNOUVGMNDUNUOUPUVQUV
+      SNOUQURUUBUWAUVOUUBUVTUVONOUUBNUJZOPZQZUVTUVOUWEUVTQUULGUWCUSVBVCZUUDPZBE
+      UWFUUIUHZSZDGUWFUFZSZUULUWHRZUVOUWEUVQUWGUVSUWEUVQQZUUBUVQUWDUWGUUBUWDUVQ
+      UTZUWEUVQVAZUUBUWDUVQVDZUULOUWCGHIVEVFVGUWEUVQUVSUWKUWMUVSUWKUWMUVSUVGDUW
+      JSZUWKUWMUWCUWJRUVSUWQTUWMUWJUWCUWMUUBUVQUWDUWJUWCRUWNUWOUWPUULOUWCGHIVHV
+      FVIUVGDUWCUWJVJVKUWMUWJVLPZUWQUWKTGUWFWCZUWMUVGUWIDUWJVLUWMUWLUVGUWITUWMU
+      WHUULUWMUUBUVQUWDUWHUULRUWNUWOUWPUULOUWCGHIVMVFVIZBEUULUWHVJVKVNVOVPVQWDU
+      WEUVQUWLUVSUWTVGUVNUWKUWLQMUWFUUDUUMUWFRZUVMUWKUUOUWLUXAUVMUVKDUWJSZUWKUX
+      AUVLUWJRUVMUXBTGUUMUWFVRUVKDUVLUWJVJVKUXAUWRUXBUWKTUWSUXAUVKUWIDUWJVLUXAU
+      UNUWHRUVKUWITUUMUWFUUIVSZBEUUNUWHVJVKVNVOVPUXAUUNUWHUULUXCVTWAWBWEWFWGUUB
+      UVNUWAMUUDUUBUUMUUDPZQZUVNUWAUXEUVNQZUVLOPZUVQUVGDUVLSZUWAUXEUXGUVNUXDUUC
+      OUUMWHZGUUCPZUXGUUBUUCVLPUXDUXIUAGUBWIUUMOUUCWJXDUUBGWKPUXJUUBGHUAWLUIZWK
+      IHWOWMGWNWPUUCOGUUMWQWRWSUXFUULUUNUUJUXEUVMUUOWTUXEUUNUUJPUVNUUMOGHIXAWSX
+      BUXFUXHUVMUXEUVMUUOXEUUOUXHUVMTZUXEUVMUUOUVLVLPZUXLGUUMWCZUUOUVGUVKDUVLVL
+      BEUULUUNVJVNVOXCXFUVTUVQUXHQNUVLOUWCUVLRUVSUXHUVQUVGDUWCUVLVJXGWBWEWFWGXH
+      XIXJXKUUHUVIELMUUJUUMUUJPZEXLUXOLXLUUHLXLUVHEMOUUMOPEXLUVGDMEBELXMXNXPELX
+      OZUUHUVGDOUGUVIUXPBUVGDOBELXQXRUVGDMOXSXTYAUVEUVOLUVCUVMUUOFMUUDFMXOZUVCU
+      VADUVLSZUVMUXQUVBUVLRUVCUXRTGUUSUUMVRUVADUVBUVLVJVKUXQUXMUXRUVMTUXNUXQUVA
+      UVKDUVLVLUXQUUTUUNRUVAUVKTUUSUUMUUIVSBEUUTUUNVJVKVNVOVPYFYBYCUVEUUPLUVDUU
+      ERUVEUUPTUVCAFUUDUVCATUUSUUDPBADEUVBUUTGUUSWCUUSUUIFYGYDDUJUVBRBCEUJUUTRA
+      JKYEYHYIYJUUOMUVDUUEYKYLYBYMWSUUGUUBGHYRUFZPZUUFUUQUURPUUBUUFYNUUBUXTUUFU
+      UBGUXKUXSIUUBHYSPHUXSPUXKUXSPHYOHYPHHYQYTWMWSUUBUUFVAMLUUEGHUUAVFXB $.
+      $( [10-Oct-2014] $)
+    $}
+
+    ${
+    $d N t $.
+    rabdiophlem1 $p |- ( ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) -> A. t e. ( NN0 ^m ( 1 ... N ) ) A e. ZZ ) $=
+      ( cz c1 cfz co cmap cmpt cmzp cfv wcel wf wral cn0 mzpf eqid fmpt biimpri
+      wss wi nn0ssz zex ovex mapss ssralv mp2b 3syl ) ADECFGZHGZBIZUIJKLUJDUKMZ
+      BDLZAUJNZUMAOUIHGZNZUKUIPUNULAUJDBUKUKQRSODTUOUJTUNUPUAUBODUIUCECFUDUEUMA
+      UOUJUFUGUH $.
+      $( [10-Oct-2014] $)
+    $}
+
+    ${
+    $d N a b c u t $.  $d M a b c u t $.  $d A a b c t $.
+    rabdiophlem2.1 $e |- M = ( N + 1 ) $.
+    rabdiophlem2 $p |- ( ( N e. NN0 /\ ( u e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> ( t e. ( ZZ ^m ( 1 ... M ) ) |-> [_ ( t |` ( 1 ... N ) ) / u ]_ A ) e. ( mzPoly ` ( 1 ... M ) ) ) $=
+      ( va vb cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv cv ax-17 wa cres csb vex
+      wel hbcsb1 csbeq1a cbvmpt fveq1i wceq mapfzcons1cl adantlr wral mzpf eqid
+      fmpt sylibr ad2antlr resex hbel eleq1d sylc csbeq1 fvmptg syl2anc syl5req
+      wf rcla4 mpteq2dva cvv wss a1i caddc fzssp1 oveq2i syl6sseqr adantr simpr
+      ovex mzpresrename syl3anc eqeltrd ) EIJZAKLEMNZONZCPZWDQRJZUAZBKLDMNZONZA
+      BSZWDUBZCUCZPBWJWLWFRZPZWIQRZWHBWJWMWNWHWKWJJZUAZWNWLGWEAGSZCUCZPZRZWMWLW
+      FXAAGHWECWTHSCJGTAHWSCGUDHGUEATUFAWSCUGUHUIWRWLWEJZWMKJZXBWMUJWCWQXCWGWKK
+      DEFUKULZWRXCCKJZAWEUMZXDXEWGXGWCWQWGWEKWFVGXGWFWDUNAWEKCWFWFUOUPUQURXFXDA
+      WLWEAGGWMKAGWLCWKWDBUDUSWSWLJATUFWSKJATUTASWLUJCWMKAWLCUGVAVHVBGWLWTWMWEK
+      XAAWSWLCVCXAUOVDVEVFVIWHWIVJJZWDWIVKZWGWOWPJXHWHLDMVSVLWCXIWGWCWDLELVMNZM
+      NWILEIVNDXJLMFVOVPVQWCWGVRBWFWDWIVTWAWB $.
+      $( [10-Oct-2014] $)
     $}
 
 
