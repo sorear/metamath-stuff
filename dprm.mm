@@ -7865,6 +7865,7 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
     rexrabdioph.2 $e |- ( v = ( t ` M ) -> ( ps <-> ch ) ) $.
     rexrabdioph.3 $e |- ( u = ( t |` ( 1 ... N ) ) -> ( ch <-> ph ) ) $.
 
+    $( TODO: something very wrong with this proof, should be a trivial definition check? $)
     $( The special sauce of Diophantine sets: they are closed under existential quantification. $)
     rexrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... M ) ) | ph } e. ( Dioph ` M ) ) -> { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 ps } e. ( Dioph ` N ) ) $=
       ( va vb vc cn0 wcel wa wceq wsbc wb c1 cfz cmap crab cdioph cfv wrex cres
@@ -7933,6 +7934,83 @@ $( Define Diophantine sets and relations.  Prove composition laws and important 
       $( [10-Oct-2014] $)
     $}
 
+
+    ${
+    $d A a b c $.  $d N a b c t $.
+    elnn0rabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A e. NN0 } e. ( Dioph ` N ) ) $=
+      ( vb va vc cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab cv wceq ax-17 wa
+      csb wrex cdioph wb risset a1i rabbiia vex wel hbcsb1 hbeleq hbrex csbeq1a
+      weq eqeq2d rexbidv cbvrab syl6eq caddc cres peano2nn0 adantr ovex nn0p1nn
+      elfz1end sylib mzpproj sylancr eqid rabdiophlem2 eqrabdioph syl3anc eqeq1
+      cvv cn csbeq1 rexrabdioph syldan eqeltrd ) CGHZAIJCKLZMLBNWBOPHZUAZBGHZAG
+      WBMLZQZDRZAERZBUBZSZDGUCZEWFQZCUDPZWDWGWHBSZDGUCZAWFQZWMWGWQSWDWEWPAWFWEW
+      PUEARWFHDBGUFUGUHUGWPWLAEDWFWHWFHZATWRETWPETWKADGWHGHATADWJADWIBEUIDEUJAT
+      UKULUMAEUOZWOWKDGWSBWJWHAWIBUNUPUQURUSWAWCCJUTLZFRZPZAXAWBVAZBUBZSZFGJWTK
+      LZMLQWTUDPHZWMWNHWDWTGHZFIXFMLZXBNXFOPZHZFXIXDNXJHXGWAXHWCCVBVCWDXFVOHWTX
+      FHZXKJWTKVDWAXLWCWAWTVPHXLCVEWTVFVGVCFXFWTVHVIAFBWTCWTVJZVKFXBXDWTVLVMXEW
+      KXBWJSDEFWTCXMWHXBWJVNWIXCSWJXDXBAWIXCBVQUPVRVSVT $.
+      $( [11-Oct-2014] $)
+    $}
+
+    ${
+    $d N t $.
+    lerabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A <_ B } e. ( Dioph ` N ) ) $=
+      ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab wral rabdiophlem1 3adant1
+      w3a wa cle cmin cdioph wceq wb znn0sub ralimi r19.26 rabbi 3imtr3i syl2an
+      wbr simp1 mzpsubmpt ancoms elnn0rabdioph syl2anc eqeltrd ) DEFZAGHDIJZKJZ
+      BLUTMNZFZAVACLVBFZSZBCUAULZAEUTKJZOZCBUBJZEFZAVGOZDUCNZVCVDVHVKUDZUSVCBGF
+      ZAVGPZCGFZAVGPZVMVDABDQACDQVNVPTZAVGPVFVJUEZAVGPVOVQTVMVRVSAVGBCUFUGVNVPA
+      VGUHVFVJAVGUIUJUKRVEUSAVAVILVBFZVKVLFUSVCVDUMVCVDVTUSVDVCVTACBUTUNUORAVID
+      UPUQUR $.
+      $( [11-Oct-2014] $)
+
+    elnnrabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A e. NN } e. ( Dioph ` N ) ) $=
+      ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv wa cn crab cle wbr cdioph wral
+      wceq wb rabdiophlem1 elnnz1 baib ralimi rabbi biimpi 3syl adantl cvv ovex
+      1z mzpconstmpt mp2an lerabdioph mp3an2 eqeltrd ) CDEZAFGCHIZJIZBKUTLMZEZN
+      BOEZADUTJIZPZGBQRZAVEPZCSMZVCVFVHUAZUSVCBFEZAVETVDVGUBZAVETZVJABCUCVKVLAV
+      EVDVKVGBUDUEUFVMVJVDVGAVEUGUHUIUJUSAVAGKVBEZVCVHVIEUTUKEGFEVNGCHULUMAGUTU
+      NUOAGBCUPUQUR $.
+      $( [11-Oct-2014] $)
+
+    ltrabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A < B } e. ( Dioph ` N ) ) $=
+      ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab wral rabdiophlem1 3adant1
+      w3a wa clt wbr cmin cn cdioph wceq wb znnsub ralimi r19.26 3imtr3i syl2an
+      rabbi simp1 mzpsubmpt ancoms elnnrabdioph syl2anc eqeltrd ) DEFZAGHDIJZKJ
+      ZBLVAMNZFZAVBCLVCFZSZBCUAUBZAEVAKJZOZCBUCJZUDFZAVHOZDUENZVDVEVIVLUFZUTVDB
+      GFZAVHPZCGFZAVHPZVNVEABDQACDQVOVQTZAVHPVGVKUGZAVHPVPVRTVNVSVTAVHBCUHUIVOV
+      QAVHUJVGVKAVHUMUKULRVFUTAVBVJLVCFZVLVMFUTVDVEUNVDVEWAUTVEVDWAACBVAUOUPRAV
+      JDUQURUS $.
+      $( [11-Oct-2014] $)
+
+    nerabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A =/= B } e. ( Dioph ` N ) ) $=
+      ( cn0 wcel cz co cmap cmpt cfv crab clt wbr rabdiophlem1 wa cr zre syl2an
+      wral c1 cfz cmzp w3a wo cdioph wceq wb lttri2 ralimi r19.26 rabbi 3imtr3i
+      wne 3adant1 ltrabdioph 3com23 orrabdioph syl2anc eqeltrd ) DEFZAGUADUBHZI
+      HZBJVBUCKZFZAVCCJVDFZUDZBCUNZAEVBIHZLZBCMNZCBMNZUEZAVILZDUFKZVEVFVJVNUGZV
+      AVEBGFZAVITZCGFZAVITZVPVFABDOACDOVQVSPZAVITVHVMUHZAVITVRVTPVPWAWBAVIVQBQF
+      CQFWBVSBRCRBCUISUJVQVSAVIUKVHVMAVIULUMSUOVGVKAVILVOFVLAVILVOFZVNVOFABCDUP
+      VAVFVEWCACBDUPUQVKVLADURUSUT $.
+      $( [11-Oct-2014] $)
+    $}
+
+    ${
+    $d ph y a b c $.  $d ps x a b c $.  $d ch x a b c $.  $d x y $.
+    rexzrexnn0.1 $e |- ( x = y -> ( ph <-> ps ) ) $.
+    rexzrexnn0.2 $e |- ( x = -u y -> ( ph <-> ch ) ) $.
+
+    rexzrexnn0 $p |- ( E. x e. ZZ ph <-> E. y e. NN0 ( ps \/ ch ) ) $=
+      ( cz wrex wo cn0 cv wcel wa cneg weq wb rcla4ev wceq rexlimiva cr simprbi
+      elznn0 adantr simpr simplr equcom bicom 3imtr4i syl2anc ex zcn negneg syl
+      cc eqcomd eqeq2d syl5ibrcom imp bicom1 3syl rcla4edv impancom orim12d mpd
+      negeq r19.43 sylibr nn0z sylan nn0negz jaodan impbii ) ADHIZBCJZEKIZAVPDH
+      DLZHMZANZBEKIZCEKIZJZVPVSVQKMZVQOZKMZJZWBVRWFAVRVQUAMWFVQUCUBUDVSWCVTWEWA
+      VSWCVTVSWCNWCAVTVSWCUEVRAWCUFBAEVQKDEPABQEDPBAQFEDUGBAUHUIRUJUKVRWEAWAVRC
+      AEWDKVRELZWDSZNVQWGOZSZACQCAQVRWHWJVRWJWHVQWDOZSVRWKVQVRVQUOMWKVQSVQULVQU
+      MUNUPWHWIWKVQWGWDVFUQURUSGACUTVAVBVCVDVEBCEKVGVHTVOVNEKWGKMZBVNCWLWGHMBVN
+      WGVIABDWGHFRVJWLWIHMCVNWGVKACDWIHGRVJVLTVM $.
+      $( [11-Oct-2014] $)
+    $}
 
 $( ---- MATIJASEVI&#268; 1 ---- $)
 $( Diophantine sets are semidecidable because polynomial functions are computable. $)
