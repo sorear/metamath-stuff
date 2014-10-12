@@ -4449,23 +4449,30 @@ $)
 
   $}
 
-$( Goal for the next section is to define and study the Robertson-Matiyasevich; X and Y sequences $)
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    X and Y sequences 1: Definition and recurrence laws
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
-$c rmX rmY $.
+  $c rmX rmY $.
 
-    crmx $a class rmX $.
-    crmy $a class rmY $.
+  $( Extend class notation to include the Robertson-Matiyasevich X sequence. $)
+  crmx $a class rmX $.
+  $( Extend class notation to include the Robertson-Matiyasevich Y sequence. $)
+  crmy $a class rmY $.
 
-    ${
+  ${
     $d a n b c $.
+    $( Define the X sequence as the rational part of some solution of a special Pell equation.  See ~ frmx and ~ rmxyval for a more useful but non-eliminable definition. $)
     df-rmx $a |- rmX = ( a e. ( ZZ>= ` 2 ) , n e. ZZ |-> ( 1st ` ( `' ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( a ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) ` ( ( a + ( sqr ` ( ( a ^ 2 ) - 1 ) ) ) ^ n ) ) ) ) $.
+    $( Define the X sequence as the irrational part of some solution of a special Pell equation.  See ~ frmy and ~ rmxyval for a more useful but non-eliminable definition. $)
     df-rmy $a |- rmY = ( a e. ( ZZ>= ` 2 ) , n e. ZZ |-> ( 2nd ` ( `' ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( a ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) ` ( ( a + ( sqr ` ( ( a ^ 2 ) - 1 ) ) ) ^ n ) ) ) ) $.
-    $}
+  $}
 
-    $( establish coherence of the definitions $)
-
-    ${
+  ${
     $d a n b A $.  $d a n b N $.
+    $( Value of the X sequence.  Not used after ~ rmxyval is proved. $)
     rmxfval $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX N ) = ( 1st ` ( `' ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) ` ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) ) ) ) $=
       ( va vn c2 cfv cz cv cexp co c1 cmin csqr caddc c1st cmul cmpt ccnv wceq
       cuz cn0 cxp c2nd eqidd oveq1 oveq1d fveq2d oveq2d mpteq12dv cnveqd adantr
@@ -4476,6 +4483,7 @@ $c rmX rmY $.
       IVFWAVGBJWHVBAVEVTOWHUOWKUPWIUOUQURUHEDCUSWGPUTVA $.
       $( [21-Sep-2014] $)
 
+    $( Value of the Y sequence.  Not used after ~ rmxyval is proved. $)
     rmyfval $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmY N ) = ( 2nd ` ( `' ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) ` ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) ) ) ) $=
       ( va vn c2 cfv cz cv cexp co c1 cmin csqr caddc c2nd cmul cmpt ccnv wceq
       cuz cn0 cxp c1st eqidd oveq1 oveq1d fveq2d oveq2d mpteq12dv cnveqd adantr
@@ -4487,6 +4495,7 @@ $c rmX rmY $.
       $( [21-Sep-2014] $)
     $}
 
+    $( The discriminant used to define the X and Y sequences has an irrational square root. $)
     rmspecsqrnq $p |- ( A e. ( ZZ>= ` 2 ) -> ( sqr ` ( ( A ^ 2 ) - 1 ) ) e. ( CC \ QQ ) ) $=
       ( c2 wcel cexp co c1 cmin cc 3syl a1i syl2anc syl clt wbr caddc cmul wceq
       cq cr remulcl cuz cfv csqr wn cdif cz uzssz sseli sqcl ax-1cn subcl sqrcl
@@ -4509,23 +4518,24 @@ $c rmX rmY $.
       $( [21-Sep-2014] $)
 
     ${
-    $d a A $.
-    rmspecnonsq $p |- ( A e. ( ZZ>= ` 2 ) -> ( ( A ^ 2 ) - 1 ) e. ( NN \ []NN ) ) $=
-      ( va c2 cfv wcel cexp co c1 cn csquarenn wn cdif cz cc0 clt wbr a1i cr cq
-      csqr cuz cmin cn0 2nn0 eluznn0 mpan nn0z zsqcl 3syl 1z zsubcl syl2anc sq1
-      eluz2b2 simprbi cle 1re 1nn0 nn0ge0i eluzelre nn0ge0 lt2sq syl22anc mpbid
-      wb syl syl5eqbrr nn0re resqcl posdif elnnz sylanbrc wa rmspecsqrnq eldifn
-      cc intnand crab df-squarenn eleq2i fveq2 eleq1d elrab bitr2i sylnib eldif
-      cv wceq ) ACUADEZACFGZHUBGZIEZWKJEZKWKIJLEWIWKMEZNWKOPZWLWIWJMEZHMEZWNWIA
-      UCEZAMEWPCUCEWIWRUDACUEUFZAUGAUHUIWQWIUJQWJHUKULWIHWJOPZWOWIHHCFGZWJOUMWI
-      HAOPZXAWJOPZWIAIEXBAUNUOWIHREZNHUPPZAREZNAUPPZXBXCVEXDWIUQQZXEWIHURUSQCAU
-      TWIWRXGWSAVAVFHAVBVCVDVGWIXDWJREZWTWOVEXHWIWRXFXIWSAVHAVIUIHWJVJULVDWKVKV
-      LWIWLWKTDZSEZVMZWMWIXKWLWIXJVPSLEXKKAVNXJVPSVOVFVQWMWKBWGZTDZSEZBIVRZEXLJ
-      XPWKBVSVTXOXKBWKIXMWKWHXNXJSXMWKTWAWBWCWDWEWKIJWFVL $.
-      $( [21-Sep-2014] $)
+      $d a A $.
+      $( The discriminant used to define the X and Y sequences is a nonsquare positive integer and thus a valid Pell equation discriminant. $)
+      rmspecnonsq $p |- ( A e. ( ZZ>= ` 2 ) -> ( ( A ^ 2 ) - 1 ) e. ( NN \ []NN ) ) $=
+        ( va c2 cfv wcel cexp co c1 cn csquarenn wn cdif cz cc0 clt wbr a1i cr cq
+        csqr cuz cmin cn0 2nn0 eluznn0 mpan nn0z zsqcl 3syl 1z zsubcl syl2anc sq1
+        eluz2b2 simprbi cle 1re 1nn0 nn0ge0i eluzelre nn0ge0 lt2sq syl22anc mpbid
+        wb syl syl5eqbrr nn0re resqcl posdif elnnz sylanbrc wa rmspecsqrnq eldifn
+        cc intnand crab df-squarenn eleq2i fveq2 eleq1d elrab bitr2i sylnib eldif
+        cv wceq ) ACUADEZACFGZHUBGZIEZWKJEZKWKIJLEWIWKMEZNWKOPZWLWIWJMEZHMEZWNWIA
+        UCEZAMEWPCUCEWIWRUDACUEUFZAUGAUHUIWQWIUJQWJHUKULWIHWJOPZWOWIHHCFGZWJOUMWI
+        HAOPZXAWJOPZWIAIEXBAUNUOWIHREZNHUPPZAREZNAUPPZXBXCVEXDWIUQQZXEWIHURUSQCAU
+        TWIWRXGWSAVAVFHAVBVCVDVGWIXDWJREZWTWOVEXHWIWRXFXIWSAVHAVIUIHWJVJULVDWKVKV
+        LWIWLWKTDZSEZVMZWMWIXKWLWIXJVPSLEXKKAVNXJVPSVOVFVQWMWKBWGZTDZSEZBIVRZEXLJ
+        XPWKBVSVTXOXKBWKIXMWKWHXNXJSXMWKTWAWBWCWDWEWKIJWFVL $.
+        $( [21-Sep-2014] $)
     $}
 
-    $( [JonesMatijasevic] frequently refers to "taking rational and irrational parts" $)
+    $( This lemma implements the concept of "equate rational and irrational parts", used to prove many arithmetical properties of the X and Y sequences.  $)
     qirropth $p |- ( ( A e. ( CC \ QQ ) /\ ( B e. QQ /\ C e. QQ ) /\ ( D e. QQ /\ E e. QQ ) ) -> ( ( B + ( A x. C ) ) = ( D + ( A x. E ) ) <-> ( B = D /\ C = E ) ) ) $=
       ( cc cq wcel wa cmul co caddc wceq adantr cmin syl anass1rs qcn syl2anc
       wb cdif w3a wn eldifn 3ad2ant1 cdiv simpll1 simpl2r simpl3r subdi syl3anc
@@ -4547,6 +4557,7 @@ $c rmX rmY $.
       KWFWIWRUIYDPYSSNBDWPVSUKUTVMVTWDVMWSWTBDWNWPLWSWACEAJWBWCWE $.
       $( [21-Sep-2014] $)
 
+    $( The base of exponent used to define the X and Y sequences is the fundamental solution of the corresponding Pell equation. $)
     rmspecfund $p |- ( A e. ( ZZ>= ` 2 ) -> ( PellFund ` ( ( A ^ 2 ) - 1 ) ) = ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ) $=
       ( c2 cfv wcel co c1 cmin csqr caddc wceq cle wbr syl clt a1i syl2anc cmul
       cr wb cc cexp cpellfund wa csquarenn cdif rmspecnonsq pellfundre eluzelre
@@ -4572,91 +4583,96 @@ $c rmX rmY $.
       $( [21-Sep-2014] $)
 
     ${
-    $d A a c d $.  $d N a $.
-    rmxyelqirr $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) e. { a | E. c e. NN0 E. d e. ZZ a = ( c + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. d ) ) } ) $=
-      ( c2 cfv wcel cz wa cexp co cv wceq wrex cn0 cr crab cvv wss c1 cpell14qr
-      cuz cmin csqr cmul caddc cn csquarenn cdif rmspecnonsq adantr pell14qrval
-      cab syl wral simpl reximi rgenw a1i ss2rab sylibr ssv rabss2 ax-mp syl6ss
-      wi rabab syl6sseq eqsstrd cpellfund simpr rmspecfund eqcomd oveq1d eqeq2d
-      oveq2 rcla4ev syl2anc wb pellfund14b mpbird sseldd ) AFUCGHZBIHZJZAFKLUAU
-      DLZUBGZCMZDMZWGUEGZEMZUFLUGLNZEIOZDPOZCUNZAWKUGLZBKLZWFWHWMWJFKLWGWLFKLUF
-      LUDLUANZJZEIOZDPOZCQRZWPWFWGUHUIUJHZWHXCNWDXDWEAUKULZCDEWGUMUOWFXCWOCSRZW
-      PWFXCWOCQRZXFWFXBWOVGZCQUPZXCXGTXIWFXHCQXAWNDPWTWMEIWMWSUQURURUSUTXBWOCQV
-      AVBQSTXGXFTQVCWOCQSVDVEVFWOCVHVIVJWFWRWHHZWRWGVKGZWIKLZNZCIOZWFWEWRXKBKLZ
-      NZXNWDWEVLWFWQXKBKWFXKWQWDXKWQNWEAVMULVNVOXMXPCBIWIBNXLXOWRWIBXKKVQVPVRVS
-      WFXDXJXNVTXECWRWGWAUOWBWC $.
-      $( [21-Sep-2014] $)
+      $d A a c d $.  $d N a $.
+      $( The solutions used to construct the X and Y sequences are quadratic irrationals. $)
+      rmxyelqirr $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) e. { a | E. c e. NN0 E. d e. ZZ a = ( c + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. d ) ) } ) $=
+        ( c2 cfv wcel cz wa cexp co cv wceq wrex cn0 cr crab cvv wss c1 cpell14qr
+        cuz cmin csqr cmul caddc cn csquarenn cdif rmspecnonsq adantr pell14qrval
+        cab syl wral simpl reximi rgenw a1i ss2rab sylibr ssv rabss2 ax-mp syl6ss
+        wi rabab syl6sseq eqsstrd cpellfund simpr rmspecfund eqcomd oveq1d eqeq2d
+        oveq2 rcla4ev syl2anc wb pellfund14b mpbird sseldd ) AFUCGHZBIHZJZAFKLUAU
+        DLZUBGZCMZDMZWGUEGZEMZUFLUGLNZEIOZDPOZCUNZAWKUGLZBKLZWFWHWMWJFKLWGWLFKLUF
+        LUDLUANZJZEIOZDPOZCQRZWPWFWGUHUIUJHZWHXCNWDXDWEAUKULZCDEWGUMUOWFXCWOCSRZW
+        PWFXCWOCQRZXFWFXBWOVGZCQUPZXCXGTXIWFXHCQXAWNDPWTWMEIWMWSUQURURUSUTXBWOCQV
+        AVBQSTXGXFTQVCWOCQSVDVEVFWOCVHVIVJWFWRWHHZWRWGVKGZWIKLZNZCIOZWFWEWRXKBKLZ
+        NZXNWDWEVLWFWQXKBKWFXKWQWDXKWQNWEAVMULVNVOXMXPCBIWIBNXLXOWRWIBXKKVQVPVRVS
+        WFXDXJXNVTXECWRWGWAUOWBWC $.
+        $( [21-Sep-2014] $)
     $}
 
     ${
-    $d b c d a A $.
-    rmxypairf1o $p |- ( A e. ( ZZ>= ` 2 ) -> ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) : ( NN0 X. ZZ ) -1-1-onto-> { a | E. c e. NN0 E. d e. ZZ a = ( c + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. d ) ) } ) $=
-      ( cfv wcel cn0 cz cv c1st co c2nd cmul caddc wceq a1i fveq2 cq 3syl c2 c1
-      cuz cxp cexp cmin csqr cmpt wfn crn wrex cab weq wral wf1o cvv eqid fnmpt
-      wi ovex mprg rnmpt cop vex op1st syl6eq op2nd oveq2d oveq12d eqeq2d rexxp
-      wb bicomi abbidv eqtr4d wa fvmpt ad2antrl ad2antll eqeq12d cc rmspecsqrnq
-      cdif adantr simprl xp1st nn0ssq sseli zq simprr qirropth syl122anc biimpd
-      xp2nd xpopth adantl sylibd sylbid ralrimivva w3a dff1o6 biimpri syl3anc )
-      AUAUCFGZCHIUDZCJZKFZAUAUELUBUFLUGFZXFMFZNLZOLZUHZXEUIZXLUJZBJZDJZXHEJZNLZ
-      OLZPZEIUKDHUKZBULZPZXPXLFZXQXLFZPZDEUMZUSZEXEUNDXEUNZXEYBXLUOZXMXDXKUPGZX
-      MCXECXEXKXLUPXLUQZURYKXFXEGXGXJOUTQVAQXDXNXOXKPZCXEUKZBULZYBXNYOPXDCBXEXK
-      XLYLVBQXDYAYNBYAYNVLXDYNYAYMXTCDEHIXFXPXQVCZPZXKXSXOYQXGXPXJXROYQXGYPKFXP
-      XFYPKRXPXQDVDZVEVFYQXIXQXHNYQXIYPMFXQXFYPMRXPXQYREVDVGVFVHVIVJVKVMQVNVOXD
-      YHDEXEXEXDXPXEGZXQXEGZVPZVPZYFXPKFZXHXPMFZNLZOLZXQKFZXHXQMFZNLZOLZPZYGUUB
-      YDUUFYEUUJYSYDUUFPXDYTCXPXKUUFXEXLCDUMZXGUUCXJUUEOXFXPKRUULXIUUDXHNXFXPMR
-      VHVIYLUUCUUEOUTVQVRYTYEUUJPXDYSCXQXKUUJXEXLCEUMZXGUUGXJUUIOXFXQKRUUMXIUUH
-      XHNXFXQMRVHVIYLUUGUUIOUTVQVSVTUUBUUKUUCUUGPUUDUUHPVPZYGUUBUUKUUNUUBXHWASW
-      CGZUUCSGZUUDSGZUUGSGZUUHSGZUUKUUNVLXDUUOUUAAWBWDUUBYSUUCHGUUPXDYSYTWEZXPH
-      IWFHSUUCWGWHTUUBYSUUDIGUUQUUTXPHIWNUUDWITUUBYTUUGHGUURXDYSYTWJZXQHIWFHSUU
-      GWGWHTUUBYTUUHIGUUSUVAXQHIWNUUHWITXHUUCUUDUUGUUHWKWLWMUUAUUNYGVLXDXPXQHIH
-      IWOWPWQWRWSYJXMYCYIWTDEXEYBXLXAXBXC $.
-      $( [21-Sep-2014] $)
+      $d b c d a A $.
+      $( The function used to extract rational and irrational parts in ~ df-rmx and ~ df-rmy in fact achieves a one-to-one mapping from the quadratic irrationals to pairs of integers. $)
+      rmxypairf1o $p |- ( A e. ( ZZ>= ` 2 ) -> ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) : ( NN0 X. ZZ ) -1-1-onto-> { a | E. c e. NN0 E. d e. ZZ a = ( c + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. d ) ) } ) $=
+        ( cfv wcel cn0 cz cv c1st co c2nd cmul caddc wceq a1i fveq2 cq 3syl c2 c1
+        cuz cxp cexp cmin csqr cmpt wfn crn wrex cab weq wral wf1o cvv eqid fnmpt
+        wi ovex mprg rnmpt cop vex op1st syl6eq op2nd oveq2d oveq12d eqeq2d rexxp
+        wb bicomi abbidv eqtr4d wa fvmpt ad2antrl ad2antll eqeq12d cc rmspecsqrnq
+        cdif adantr simprl xp1st nn0ssq sseli zq simprr qirropth syl122anc biimpd
+        xp2nd xpopth adantl sylibd sylbid ralrimivva w3a dff1o6 biimpri syl3anc )
+        AUAUCFGZCHIUDZCJZKFZAUAUELUBUFLUGFZXFMFZNLZOLZUHZXEUIZXLUJZBJZDJZXHEJZNLZ
+        OLZPZEIUKDHUKZBULZPZXPXLFZXQXLFZPZDEUMZUSZEXEUNDXEUNZXEYBXLUOZXMXDXKUPGZX
+        MCXECXEXKXLUPXLUQZURYKXFXEGXGXJOUTQVAQXDXNXOXKPZCXEUKZBULZYBXNYOPXDCBXEXK
+        XLYLVBQXDYAYNBYAYNVLXDYNYAYMXTCDEHIXFXPXQVCZPZXKXSXOYQXGXPXJXROYQXGYPKFXP
+        XFYPKRXPXQDVDZVEVFYQXIXQXHNYQXIYPMFXQXFYPMRXPXQYREVDVGVFVHVIVJVKVMQVNVOXD
+        YHDEXEXEXDXPXEGZXQXEGZVPZVPZYFXPKFZXHXPMFZNLZOLZXQKFZXHXQMFZNLZOLZPZYGUUB
+        YDUUFYEUUJYSYDUUFPXDYTCXPXKUUFXEXLCDUMZXGUUCXJUUEOXFXPKRUULXIUUDXHNXFXPMR
+        VHVIYLUUCUUEOUTVQVRYTYEUUJPXDYSCXQXKUUJXEXLCEUMZXGUUGXJUUIOXFXQKRUUMXIUUH
+        XHNXFXQMRVHVIYLUUGUUIOUTVQVSVTUUBUUKUUCUUGPUUDUUHPVPZYGUUBUUKUUNUUBXHWASW
+        CGZUUCSGZUUDSGZUUGSGZUUHSGZUUKUUNVLXDUUOUUAAWBWDUUBYSUUCHGUUPXDYSYTWEZXPH
+        IWFHSUUCWGWHTUUBYSUUDIGUUQUUTXPHIWNUUDWITUUBYTUUGHGUURXDYSYTWJZXQHIWFHSUU
+        GWGWHTUUBYTUUHIGUUSUVAXQHIWNUUHWITXHUUCUUDUUGUUHWKWLWMUUAUUNYGVLXDXPXQHIH
+        IWOWPWQWRWSYJXMYCYIWTDEXEYBXLXAXBXC $.
+        $( [21-Sep-2014] $)
     $}
 
     ${
-    $d a b c d A $.  $d a N $.
-    $( use f1ocnvdm $)
-    rmxyelxp $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( `' ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) ` ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) ) e. ( NN0 X. ZZ ) ) $=
-      ( va vc vd c2 cuz cfv wcel cz wa cn0 cxp cv cexp co cmul caddc wrex cmin
-      c1 csqr wceq cab c1st c2nd cmpt wf1o ccnv rmxypairf1o rmxyelqirr f1ocnvdm
-      adantr syl2anc ) AGHIJZBKJZLMKNZDOEOAGPQUBUAQUCIZFORQSQUDFKTEMTDUEZCURCOZ
-      UFIUSVAUGIRQSQUHZUIZAUSSQBPQZUTJVDVBUJIURJUPVCUQADCEFUKUNABDEFULURUTVDVBU
-      MUO $.
-      $( [22-Sep-2014] $)
+      $d a b c d A $.  $d a N $.
+      $( Lemma for ~ frmx and ~ frmy . $)
+      rmxyelxp $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( `' ( b e. ( NN0 X. ZZ ) |-> ( ( 1st ` b ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( 2nd ` b ) ) ) ) ` ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) ) e. ( NN0 X. ZZ ) ) $=
+        ( va vc vd c2 cuz cfv wcel cz wa cn0 cxp cv cexp co cmul caddc wrex cmin
+        c1 csqr wceq cab c1st c2nd cmpt wf1o ccnv rmxypairf1o rmxyelqirr f1ocnvdm
+        adantr syl2anc ) AGHIJZBKJZLMKNZDOEOAGPQUBUAQUCIZFORQSQUDFKTEMTDUEZCURCOZ
+        UFIUSVAUGIRQSQUHZUIZAUSSQBPQZUTJVDVBUJIURJUPVCUQADCEFUKUNABDEFULURUTVDVBU
+        MUO $.
+        $( [22-Sep-2014] $)
     $}
 
     ${
-    $d a b c $.
-    frmx $p |- rmX : ( ( ZZ>= ` 2 ) X. ZZ ) --> NN0 $=
-      ( va vb vc cv c2 cexp co c1 cmin csqr cfv caddc cn0 cz cxp c1st c2nd wcel
-      wral crmx cmul cmpt ccnv cuz wf wa rmxyelxp xp1st rgen2 df-rmx fmpt2 mpbi
-      syl ) ADZUNEFGHIGJKZLGBDZFGCMNOZCDZPKUOURQKUAGLGUBUCKZPKZMRZBNSAEUDKZSVBN
-      OMTUEVAABVBNUNVBRUPNRUFUSUQRVAUNUPCUGUSMNUHUMUIABVBNUTMTBACUJUKUL $.
-      $( [22-Sep-2014] $)
+      $d a b c $.
+      $( The X sequence is a nonnegative integer.  See ~ rmxnn for a strengthening. $)
+      frmx $p |- rmX : ( ( ZZ>= ` 2 ) X. ZZ ) --> NN0 $=
+        ( va vb vc cv c2 cexp co c1 cmin csqr cfv caddc cn0 cz cxp c1st c2nd wcel
+        wral crmx cmul cmpt ccnv cuz wf wa rmxyelxp xp1st rgen2 df-rmx fmpt2 mpbi
+        syl ) ADZUNEFGHIGJKZLGBDZFGCMNOZCDZPKUOURQKUAGLGUBUCKZPKZMRZBNSAEUDKZSVBN
+        OMTUEVAABVBNUNVBRUPNRUFUSUQRVAUNUPCUGUSMNUHUMUIABVBNUTMTBACUJUKUL $.
+        $( [22-Sep-2014] $)
 
-    frmy $p |- rmY : ( ( ZZ>= ` 2 ) X. ZZ ) --> ZZ $=
-      ( va vb vc cv c2 cexp co c1 cmin csqr cfv caddc cn0 cz cxp c1st c2nd wcel
-      wral crmy cmul cmpt ccnv cuz wf wa rmxyelxp xp2nd rgen2 df-rmy fmpt2 mpbi
-      syl ) ADZUNEFGHIGJKZLGBDZFGCMNOZCDZPKUOURQKUAGLGUBUCKZQKZNRZBNSAEUDKZSVBN
-      ONTUEVAABVBNUNVBRUPNRUFUSUQRVAUNUPCUGUSMNUHUMUIABVBNUTNTBACUJUKUL $.
-      $( [22-Sep-2014] $)
+      $( The Y sequence is an integer. $)
+      frmy $p |- rmY : ( ( ZZ>= ` 2 ) X. ZZ ) --> ZZ $=
+        ( va vb vc cv c2 cexp co c1 cmin csqr cfv caddc cn0 cz cxp c1st c2nd wcel
+        wral crmy cmul cmpt ccnv cuz wf wa rmxyelxp xp2nd rgen2 df-rmy fmpt2 mpbi
+        syl ) ADZUNEFGHIGJKZLGBDZFGCMNOZCDZPKUOURQKUAGLGUBUCKZQKZNRZBNSAEUDKZSVBN
+        ONTUEVAABVBNUNVBRUPNRUFUSUQRVAUNUPCUGUSMNUHUMUIABVBNUTNTBACUJUKUL $.
+        $( [22-Sep-2014] $)
     $}
 
-    $( [JonesMatijasevic] 2.3; they view this as the initial definition, but proving that it *is* a definition is not quite trivial $)
     ${
-    $d a b c d A $.  $d a b c N $.
-    rmxyval $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmX N ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( A rmY N ) ) ) = ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) ) $=
-      ( vb va vc vd c2 cfv wcel cz co cmul caddc c1st c2nd oveq2d oveq12d fveq2
-      cv wceq cuz wa crmx cexp cmin csqr crmy cn0 cxp cmpt ccnv rmxfval rmyfval
-      c1 rmxyelxp weq cbvmptv ovex fvmpt syl wrex rmxypairf1o adantr rmxyelqirr
-      cab wf1o f1ocnvfv2 syl2anc 3eqtr2d ) AGUAHIZBJIZUBZABUCKZAGUDKUNUEKUFHZAB
-      UGKZLKZMKAVNMKBUDKZCUHJUIZCSZNHZVNVSOHZLKZMKZUJZUKHZNHZVNWEOHZLKZMKZWEWDH
-      ZVQVLVMWFVPWHMABCULVLVOWGVNLABCUMPQVLWEVRIWJWITABCUODWEDSZNHZVNWKOHZLKZMK
-      ZWIVRWDWKWETZWLWFWNWHMWKWENRWPWMWGVNLWKWEORPQCDVRWCWOCDUPZVTWLWBWNMVSWKNR
-      WQWAWMVNLVSWKORPQUQWFWHMURUSUTVLVRWKESVNFSLKMKTFJVAEUHVADVEZWDVFZVQWRIWJV
-      QTVJWSVKADCEFVBVCABDEFVDVRWRVQWDVGVHVI $.
+      $d a b c d A $.  $d a b c N $.
+      $( Main definition of the X and Y sequences, for instance [JonesMatijasevic] 2.3. $)
+      rmxyval $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmX N ) + ( ( sqr ` ( ( A ^ 2 ) - 1 ) ) x. ( A rmY N ) ) ) = ( ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) ^ N ) ) $=
+        ( vb va vc vd c2 cfv wcel cz co cmul caddc c1st c2nd oveq2d oveq12d fveq2
+        cv wceq cuz wa crmx cexp cmin csqr crmy cn0 cxp cmpt ccnv rmxfval rmyfval
+        c1 rmxyelxp weq cbvmptv ovex fvmpt syl wrex rmxypairf1o adantr rmxyelqirr
+        cab wf1o f1ocnvfv2 syl2anc 3eqtr2d ) AGUAHIZBJIZUBZABUCKZAGUDKUNUEKUFHZAB
+        UGKZLKZMKAVNMKBUDKZCUHJUIZCSZNHZVNVSOHZLKZMKZUJZUKHZNHZVNWEOHZLKZMKZWEWDH
+        ZVQVLVMWFVPWHMABCULVLVOWGVNLABCUMPQVLWEVRIWJWITABCUODWEDSZNHZVNWKOHZLKZMK
+        ZWIVRWDWKWETZWLWFWNWHMWKWENRWPWMWGVNLWKWEORPQCDVRWCWOCDUPZVTWLWBWNMVSWKNR
+        WQWAWMVNLVSWKORPQUQWFWHMURUSUTVLVRWKESVNFSLKMKTFJVAEUHVADVEZWDVFZVQWRIWJV
+        QTVJWSVKADCEFVBVCABDEFVDVRWRVQWDVGVHVI $.
     $}
 
+    $( The discriminant used to define the X and Y sequences is a positive real. $)
     rmspecpos $p |- ( A e. ( ZZ>= ` 2 ) -> ( ( A ^ 2 ) - 1 ) e. RR+ ) $=
       ( c2 cuz cfv wcel cexp co c1 cr cc0 clt wbr crp cn0 a1i syl2anc cle mpbid
       cmin wb 2nn0 eluznn0 mpan nn0re resqcl 1re resubcl sq1 cz eluz2b1 simprbi
@@ -4668,57 +4684,61 @@ $c rmX rmY $.
       $( [22-Sep-2014] $)
 
     ${
-    $d A n $.  $d X n $.  $d Y n $.   $d X x y $. $d Y x y $.  $d A x y $.
-    rmxycomplete $p |- ( ( A e. ( ZZ>= ` 2 ) /\ X e. NN0 /\ Y e. ZZ ) -> ( ( ( X ^ 2 ) - ( ( ( A ^ 2 ) - 1 ) x. ( Y ^ 2 ) ) ) = 1 <-> E. n e. ZZ ( X = ( A rmX n ) /\ Y = ( A rmY n ) ) ) ) $=
-      ( vx vy c2 wcel cn0 cz cexp co c1 cmin cmul caddc wceq wa cq adantr cv cn
-      cuz cfv w3a csqr cpell14qr cpellfund wrex crmx crmy csquarenn rmspecnonsq
-      cdif wb 3ad2ant1 pellfund14b syl cr nn0re 3ad2ant2 rmspecpos rpsqrcl rpre
-      crp 3syl zre 3ad2ant3 remulcl syl2anc biantrurd simpl2 simpl3 eqidd simpr
-      readdcl oveq1 eqeq2d oveq1d eqeq1d anbi12d oveq2 rcla42ev syl112anc ex cc
-      oveq2d rmspecsqrnq nn0ssq simp2 sseldi zq sseli ad2antrl syl122anc biimpd
-      ad2antll anim1d oveqan12d eqcomd biimpa syl6 rexlimdvva impbid elpell14qr
-      qirropth 3bitr4d cxp wf frmx a1i simpl1 fovrn syl3anc zssq frmy 3ad2antl1
-      rmxyval rmspecfund eqtr4d bitr3d rexbidva ) AGUCUDZHZCIHZDJHZUEZCAGKLMNLZ
-      UFUDZDOLZPLZYHUGUDHZYKYHUHUDZBUAZKLZQZBJUIZCGKLZYHDGKLZOLZNLZMQZCAYNUJLZQ
-      DAYNUKLZQRZBJUIYGYHUBULUNHZYLYQUOYDYEUUFYFAUMUPZBYKYHUQURYGYKEUAZYIFUAZOL
-      ZPLZQZUUHGKLZYHUUIGKLZOLZNLZMQZRZFJUIEIUIZYKUSHZUUSRZUUBYLYGUUTUUSYGCUSHZ
-      YJUSHZUUTYEYDUVBYFCUTVAYGYIUSHZDUSHZUVCYDYEUVDYFYDYHVEHYIVEHUVDAVBYHVCYIV
-      DVFUPYFYDUVEYEDVGVHYIDVIVJCYJVPVJVKYGUUBUUSYGUUBUUSYGUUBRZYEYFYKYKQZUUBUU
-      SYDYEYFUUBVLYDYEYFUUBVMUVFYKVNYGUUBVOUURUVGUUBRYKCUUJPLZQZYRUUONLZMQZREFC
-      DIJUUHCQZUULUVIUUQUVKUVLUUKUVHYKUUHCUUJPVQVRUVLUUPUVJMUVLUUMYRUUONUUHCGKV
-      QVSVTWAUUIDQZUVIUVGUVKUUBUVMUVHYKYKUVMUUJYJCPUUIDYIOWBWGVRUVMUVJUUAMUVMUU
-      OYTYRNUVMUUNYSYHOUUIDGKVQWGWGVTWAWCWDWEYGUURUUBEFIJYGUUHIHZUUIJHZRZRZUURC
-      UUHQZDUUIQZRZUUQRUUBUVQUULUVTUUQUVQUULUVTUVQYIWFSUNHZCSHZDSHZUUHSHZUUISHZ
-      UULUVTUOYGUWAUVPYDYEUWAYFAWHUPZTYGUWBUVPYGISCWIYDYEYFWJWKZTYGUWCUVPYFYDUW
-      CYEDWLVHZTUVNUWDYGUVOISUUHWIWMWNUVOUWEYGUVNUUIWLWQYICDUUHUUIXFWOWPWRUVTUU
-      QUUBUVTUUPUUAMUVTUUAUUPUVRUVSYRUUMYTUUONCUUHGKVQUVSYSUUNYHODUUIGKVQWGWSWT
-      VTXAXBXCXDYGUUFYLUVAUOUUGEFYKYHXEURXGYGUUEYPBJYGYNJHZRZYKUUCYIUUDOLPLZQZU
-      UEYPUWJUWAUWBUWCUUCSHUUDSHUWLUUEUOYGUWAUWIUWFTYGUWBUWIUWGTYGUWCUWIUWHTUWJ
-      ISUUCWIUWJYCJXHZIUJXIZYDUWIUUCIHUWNUWJXJXKYDYEYFUWIXLZYGUWIVOZAYNIYCJUJXM
-      XNWKUWJJSUUDXOUWJUWMJUKXIZYDUWIUUDJHUWQUWJXPXKUWOUWPAYNJYCJUKXMXNWKYICDUU
-      CUUDXFWOUWJUWKYOYKUWJUWKAYIPLZYNKLZYOYDYEUWIUWKUWSQYFAYNXRXQUWJYMUWRYNKYG
-      YMUWRQZUWIYDYEUWTYFAXSUPTVSXTVRYAYBXG $.
-      $( [22-Sep-2014] $)
+      $d A n $.  $d X n $.  $d Y n $.   $d X x y $. $d Y x y $.  $d A x y $.
+      $( The X and Y sequences taken together enumerate all solutions to the corresponding Pell equation in the right half-plane. $)
+      rmxycomplete $p |- ( ( A e. ( ZZ>= ` 2 ) /\ X e. NN0 /\ Y e. ZZ ) -> ( ( ( X ^ 2 ) - ( ( ( A ^ 2 ) - 1 ) x. ( Y ^ 2 ) ) ) = 1 <-> E. n e. ZZ ( X = ( A rmX n ) /\ Y = ( A rmY n ) ) ) ) $=
+        ( vx vy c2 wcel cn0 cz cexp co c1 cmin cmul caddc wceq wa cq adantr cv cn
+        cuz cfv w3a csqr cpell14qr cpellfund wrex crmx crmy csquarenn rmspecnonsq
+        cdif wb 3ad2ant1 pellfund14b syl cr nn0re 3ad2ant2 rmspecpos rpsqrcl rpre
+        crp 3syl zre 3ad2ant3 remulcl syl2anc biantrurd simpl2 simpl3 eqidd simpr
+        readdcl oveq1 eqeq2d oveq1d eqeq1d anbi12d oveq2 rcla42ev syl112anc ex cc
+        oveq2d rmspecsqrnq nn0ssq simp2 sseldi zq sseli ad2antrl syl122anc biimpd
+        ad2antll anim1d oveqan12d eqcomd biimpa syl6 rexlimdvva impbid elpell14qr
+        qirropth 3bitr4d cxp wf frmx a1i simpl1 fovrn syl3anc zssq frmy 3ad2antl1
+        rmxyval rmspecfund eqtr4d bitr3d rexbidva ) AGUCUDZHZCIHZDJHZUEZCAGKLMNLZ
+        UFUDZDOLZPLZYHUGUDHZYKYHUHUDZBUAZKLZQZBJUIZCGKLZYHDGKLZOLZNLZMQZCAYNUJLZQ
+        DAYNUKLZQRZBJUIYGYHUBULUNHZYLYQUOYDYEUUFYFAUMUPZBYKYHUQURYGYKEUAZYIFUAZOL
+        ZPLZQZUUHGKLZYHUUIGKLZOLZNLZMQZRZFJUIEIUIZYKUSHZUUSRZUUBYLYGUUTUUSYGCUSHZ
+        YJUSHZUUTYEYDUVBYFCUTVAYGYIUSHZDUSHZUVCYDYEUVDYFYDYHVEHYIVEHUVDAVBYHVCYIV
+        DVFUPYFYDUVEYEDVGVHYIDVIVJCYJVPVJVKYGUUBUUSYGUUBUUSYGUUBRZYEYFYKYKQZUUBUU
+        SYDYEYFUUBVLYDYEYFUUBVMUVFYKVNYGUUBVOUURUVGUUBRYKCUUJPLZQZYRUUONLZMQZREFC
+        DIJUUHCQZUULUVIUUQUVKUVLUUKUVHYKUUHCUUJPVQVRUVLUUPUVJMUVLUUMYRUUONUUHCGKV
+        QVSVTWAUUIDQZUVIUVGUVKUUBUVMUVHYKYKUVMUUJYJCPUUIDYIOWBWGVRUVMUVJUUAMUVMUU
+        OYTYRNUVMUUNYSYHOUUIDGKVQWGWGVTWAWCWDWEYGUURUUBEFIJYGUUHIHZUUIJHZRZRZUURC
+        UUHQZDUUIQZRZUUQRUUBUVQUULUVTUUQUVQUULUVTUVQYIWFSUNHZCSHZDSHZUUHSHZUUISHZ
+        UULUVTUOYGUWAUVPYDYEUWAYFAWHUPZTYGUWBUVPYGISCWIYDYEYFWJWKZTYGUWCUVPYFYDUW
+        CYEDWLVHZTUVNUWDYGUVOISUUHWIWMWNUVOUWEYGUVNUUIWLWQYICDUUHUUIXFWOWPWRUVTUU
+        QUUBUVTUUPUUAMUVTUUAUUPUVRUVSYRUUMYTUUONCUUHGKVQUVSYSUUNYHODUUIGKVQWGWSWT
+        VTXAXBXCXDYGUUFYLUVAUOUUGEFYKYHXEURXGYGUUEYPBJYGYNJHZRZYKUUCYIUUDOLPLZQZU
+        UEYPUWJUWAUWBUWCUUCSHUUDSHUWLUUEUOYGUWAUWIUWFTYGUWBUWIUWGTYGUWCUWIUWHTUWJ
+        ISUUCWIUWJYCJXHZIUJXIZYDUWIUUCIHUWNUWJXJXKYDYEYFUWIXLZYGUWIVOZAYNIYCJUJXM
+        XNWKUWJJSUUDXOUWJUWMJUKXIZYDUWIUUDJHUWQUWJXPXKUWOUWPAYNJYCJUKXMXNWKYICDUU
+        CUUDXFWOUWJUWKYOYKUWJUWKAYIPLZYNKLZYOYDYEUWIUWKUWSQYFAYNXRXQUWJYMUWRYNKYG
+        YMUWRQZUWIYDYEUWTYFAXSUPTVSXTVRYAYBXG $.
+        $( [22-Sep-2014] $)
     $}
 
     ${
-    $d A a $.  $d N a $.
-    rmxynorm $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( ( A rmX N ) ^ 2 ) - ( ( ( A ^ 2 ) - 1 ) x. ( ( A rmY N ) ^ 2 ) ) ) = 1 ) $=
-      ( va c2 cuz wcel cz wa crmx co cexp cmin crmy wceq eqidd oveq2 eqeq2d cn0
-      c1 fovcl cfv cmul cv wrex simpr bnj232 anbi12d rcla4ev syl2anc simpl frmx
-      wb frmy rmxycomplete syl3anc mpbird ) ADEUAZFZBGFZHZABIJZDKJADKJSLJABMJZD
-      KJUBJLJSNZVAACUCZIJZNZVBAVDMJZNZHZCGUDZUTUSVAVANZVBVBNZHZVJURUSUEURUSVLVK
-      URVBOUSVAOUFVIVMCBGVDBNZVFVKVHVLVNVEVAVAVDBAIPQVNVGVBVBVDBAMPQUGUHUIUTURV
-      ARFVBGFVCVJULURUSUJABRUQGIUKTABGUQGMUMTACVAVBUNUOUP $.
-      $( [22-Sep-2014] $)
+      $d A a $.  $d N a $.
+      $( The X and Y sequences define a solution to the corresponding Pell equation. $)
+      rmxynorm $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( ( A rmX N ) ^ 2 ) - ( ( ( A ^ 2 ) - 1 ) x. ( ( A rmY N ) ^ 2 ) ) ) = 1 ) $=
+        ( va c2 cuz wcel cz wa crmx co cexp cmin crmy wceq eqidd oveq2 eqeq2d cn0
+        c1 fovcl cfv cmul cv wrex simpr bnj232 anbi12d rcla4ev syl2anc simpl frmx
+        wb frmy rmxycomplete syl3anc mpbird ) ADEUAZFZBGFZHZABIJZDKJADKJSLJABMJZD
+        KJUBJLJSNZVAACUCZIJZNZVBAVDMJZNZHZCGUDZUTUSVAVANZVBVBNZHZVJURUSUEURUSVLVK
+        URVBOUSVAOUFVIVMCBGVDBNZVFVKVHVLVNVEVAVAVDBAIPQVNVGVBVBVDBAMPQUGUHUIUTURV
+        ARFVBGFVCVJULURUSUJABRUQGIUKTABGUQGMUMTACVAVBUNUOUP $.
+        $( [22-Sep-2014] $)
     $}
 
+    $( The base of exponentiation for the X and Y sequences is a positive real. $)
     rmbaserp $p |- ( A e. ( ZZ>= ` 2 ) -> ( A + ( sqr ` ( ( A ^ 2 ) - 1 ) ) ) e. RR+ ) $=
       ( c2 cuz cfv wcel cexp co c1 cmin cpellfund csqr crp rmspecfund csquarenn
       caddc cn cdif rmspecnonsq pellfundrp syl eqeltrrd ) ABCDEZABFGHIGZJDZAUCK
       DOGLAMUBUCPNQEUDLEARUCSTUA $.
       $( [22-Sep-2014] $)
 
+    $( Negation law for X and Y sequences.  [JonesMatijasevic] is inconsistent on whether the X and Y sequences have domain ` NN0 ` or ` ZZ ` ; we use ` ZZ ` consistently to avoid the need for a separate subtraction law. $)
     rmxyneg $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmX -u N ) = ( A rmX N ) /\ ( A rmY -u N ) = -u ( A rmY N ) ) ) $=
       ( c2 wcel cz crmx co cexp c1 cmin crmy cmul caddc wceq syl sseldi syl2anc
       cc cn0 cq cuz cfv wa cneg csqr znegcl rmxyval sylan2 cc0 wne crp rmbaserp
@@ -4745,6 +4765,7 @@ $c rmX rmY $.
       O $.
       $( [22-Sep-2014] $)
 
+    $( Addition formula for X and Y sequences.  See ~ rmxadd and ~ rmyadd for most uses. $)
     rmxyadd $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) -> (
         ( A rmX ( M + N ) ) = ( ( ( A rmX M ) x. ( A rmX N ) ) + ( ( ( A ^ 2 ) - 1 ) x. ( ( A rmY M ) x. ( A rmY N ) ) ) ) /\
         ( A rmY ( M + N ) ) = ( ( ( A rmY M ) x. ( A rmX N ) ) + ( ( A rmX M ) x. ( A rmY N ) ) ) ) ) $=
@@ -4781,6 +4802,7 @@ $c rmX rmY $.
       UVPUWFYAYETMYIYJXEMXRXOXSYHYKXFXGXH $.
       $( [22-Sep-2014] $)
 
+    $( Value of the X and Y sequences at 1. $)
     rmxy1 $p |- ( A e. ( ZZ>= ` 2 ) -> ( ( A rmX 1 ) = A /\ ( A rmY 1 ) = 1 ) ) $=
       ( c2 cfv wcel c1 crmx co cexp crmy cmul caddc wceq cz 1z mpan2 cc rpcn cq
       crp cn0 cuz cmin csqr wa rmxyval rmbaserp exp1 rmspecpos sqrcl mulid1 syl
@@ -4793,6 +4815,7 @@ $c rmX rmY $.
       VPVNVQAEVIVJVK $.
       $( [22-Sep-2014] $)
 
+    $( Value of the X and Y sequences at 0. $)
     rmxy0 $p |- ( A e. ( ZZ>= ` 2 ) -> ( ( A rmX 0 ) = 1 /\ ( A rmY 0 ) = 0 ) ) $=
       ( c2 cfv wcel cc0 crmx co cexp c1 crmy cmul caddc wceq cz 0z mpan2 cc cn0
       cq zssq cuz cmin csqr rmxyval crp rmbaserp rpcn exp0 3syl rmspecpos sqrcl
@@ -4805,26 +4828,25 @@ $c rmX rmY $.
       VJWJVONSETOVIVJVRVPVSIEVKVLVM $.
       $( [22-Sep-2014] $)
 
-    $( the methodology of "equate rational and irrational parts" tends to give us two theorems at once.  split those apart here $)
-
+    $( Negation law (even function) for the X sequence.  The method of proof used for the previous four theorems ~ rmxyneg , ~ rmxyadd , ~ rmxy0 , and ~ rmxy1 via ~ qirropth results in two theorems at once, but typical use requires only one, so this group of theorems serves to separate the cases. $)
     rmxneg $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX -u N ) = ( A rmX N ) ) $=
       ( c2 cuz cfv wcel cz wa cneg crmx co wceq crmy rmxyneg simpld ) ACDEFBGFH
       ABIZJKABJKLAPMKABMKILABNO $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.11 #1 $)
+    $( Value of X sequence at 0.  [JonesMatijasevic] 2.11 #1 $)
     rmx0 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmX 0 ) = 1 ) $=
       ( c2 cuz cfv wcel cc0 crmx co c1 wceq crmy rmxy0 simpld ) ABCDEAFGHIJAFKH
       FJALM $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.11 #2 $)
+    $( Value of X sequence at 1.  [JonesMatijasevic] 2.11 #2 $)
     rmx1 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmX 1 ) = A ) $=
       ( c2 cuz cfv wcel c1 crmx co wceq crmy rmxy1 simpld ) ABCDEAFGHAIAFJHFIAK
       L $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.7 $)
+    $( Addition formula for X sequence.  [JonesMatijasevic] 2.7 $)
     rmxadd $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) ->
         ( A rmX ( M + N ) ) = ( ( ( A rmX M ) x. ( A rmX N ) ) + ( ( ( A ^ 2 ) - 1 ) x. ( ( A rmY M ) x. ( A rmY N ) ) ) ) ) $=
       ( c2 cuz cfv wcel cz w3a caddc co crmx cmul cexp c1 cmin crmy wceq simpld
@@ -4832,24 +4854,25 @@ $c rmX rmY $.
       UCMKUBUEMKJKRABCTS $.
       $( [22-Sep-2014] $)
 
+    $( Negation formula for Y sequence (odd function). $)
     rmyneg $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmY -u N ) = -u ( A rmY N ) ) $=
       ( c2 cuz cfv wcel cz wa cneg crmx co wceq crmy rmxyneg simprd ) ACDEFBGFH
       ABIZJKABJKLAPMKABMKILABNO $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.12 #1 $)
+    $( Value of Y sequence at 0.  [JonesMatijasevic] 2.12 #1 $)
     rmy0 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmY 0 ) = 0 ) $=
       ( c2 cuz cfv wcel cc0 crmx co c1 wceq crmy rmxy0 simprd ) ABCDEAFGHIJAFKH
       FJALM $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.12 #2 $)
+    $( Value of Y sequence at 1.  [JonesMatijasevic] 2.12 #2 $)
     rmy1 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmY 1 ) = 1 ) $=
       ( c2 cuz cfv wcel c1 crmx co wceq crmy rmxy1 simprd ) ABCDEAFGHAIAFJHFIAK
       L $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.8 $)
+    $( Addition formula for Y sequence.  [JonesMatijasevic] 2.8 $)
     rmyadd $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) ->
         ( A rmY ( M + N ) ) = ( ( ( A rmY M ) x. ( A rmX N ) ) + ( ( A rmX M ) x. ( A rmY N ) ) ) ) $=
       ( c2 cuz cfv wcel cz w3a caddc co crmx cmul cexp c1 cmin crmy wceq simprd
@@ -4857,7 +4880,7 @@ $c rmX rmY $.
       UCMKUBUEMKJKRABCTS $.
       $( [22-Sep-2014] $)
 
-    $( [JonesMatijasevic] 2.9 #1 $)
+    $( Special addition-of-1 formula for X sequence. [JonesMatijasevic] 2.9 #1 $)
     rmxp1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmX ( N + 1 ) ) = ( ( ( A rmX N ) x. A ) + ( ( ( A ^ 2 ) - 1 ) x. ( A rmY N ) ) ) ) $=
       ( c2 cuz cfv wcel cz wa caddc crmx cmul cexp cmin crmy wceq adantr oveq2d
@@ -4867,7 +4890,7 @@ $c rmX rmY $.
       DVBRKSZVBUNVDVIOUOUNVCRVBKAUEQPUPVBGFVBULFVIVBOABGUMGNUFUGVBUHVBUIUJTQUKT
       $.
 
-    $( [JonesMatijasevic] 2.9 #2 $)
+    $( Special addition of 1 formula for Y sequence.  [JonesMatijasevic] 2.9 #2 $)
     rmyp1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmY ( N + 1 ) ) = ( ( ( A rmY N ) x. A ) + ( A rmX N ) ) ) $=
       ( c2 cuz cfv wcel cz wa c1 caddc co crmy crmx cmul wceq oveq2d adantr cn0
@@ -4877,6 +4900,7 @@ $c rmX rmY $.
       DPQUOUTRFUTUEFVEUTOABRULGMUFUGUTUHUTUIUJTUKT $.
       $( [24-Sep-2014] $)
 
+    $( Subtraction of 1 formula for Y sequence. $)
     rmym1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmY ( N - 1 ) ) = ( ( ( A rmY N ) x. A ) - ( A rmX N ) ) ) $=
       ( c2 wcel cz c1 cmin co crmy cneg caddc crmx cmul cc ax-1cn negsub oveq2d
@@ -4891,7 +4915,7 @@ $c rmX rmY $.
       WGWAVEUFVSXBWSWNRXCWGVFVNVGVHVSWKNDZXBWOWLRVSWDNDANDZXDVSENWDVIABEVPEIVJV
       AVBVQXEVRVQACAVKVLTWDAVOVMXCWKWGPVMSVG $.
 
-    $( [JonesMatijasevic] 2.12 #3 $)
+    $( The Y sequence is a Lucas sequence, definable via this second-order recurrence with ~ rmy0 and ~ rmy1 . [JonesMatijasevic] 2.12 #3 ; they use this theorem to redefine the X and Y sequences to have domain ` ( ZZ X. ZZ ) ` , which simplifies some later theorems.  It may shorten the derivation to use this as our initial definition.  Incidentally, the X sequence satisfies the exact same recurrence. $)
     rmyluc $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmY ( N + 1 ) ) = ( ( 2 x. ( ( A rmY N ) x. A ) ) - ( A rmY ( N - 1 ) ) ) ) $=
       ( c2 wcel cz c1 caddc co crmy cmin cmul wceq crmx zsscn frmy fovcl sseldi
       cc mulcl syl2anc cuz cfv wa rmyp1 rmym1 oveq12d eluzelre recnd adantr cn0
@@ -4906,31 +4930,32 @@ $c rmX rmY $.
       $( [1-Oct-2014] $)
 
     ${
-    $d a b A $.  $d a b N $.
-    rmxypos $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( 0 < ( A rmX N ) /\ 0 <_ ( A rmY N ) ) ) $=
-      ( cn0 wcel c2 cc0 crmx co clt wbr crmy wa wi wceq oveq2 breq2d cr syl2anc
-      cle syl va vb cuz cfv cv c1 caddc anbi12d imbi2d lt01 rmx0 syl5breqr 0nn0
-      weq nn0ge0i rmy0 jca w3a cmul cexp cmin cz simp2 nn0z 3ad2ant1 frmx fovcl
-      nn0re eluzelre 3ad2ant2 remulcl crp rmspecpos rpre frmy zre simp3l cn wss
-      uznnssnn ax-mp sseli nngt0 mulgt0 syl22anc rpge0 simp3r addgtge0 breqtrrd
-      2nn mulge0 rmxp1 2nn0 eluznn0 mpan nn0ge0 addge0 rmyp1 3exp nn0ind impcom
-      a2d ) BCDAEUCUDZDZFABGHZIJZFABKHZSJZLZXDFAUAUEZGHZIJZFAXJKHZSJZLZMXDFAFGH
-      ZIJZFAFKHZSJZLZMXDFAUBUEZGHZIJZFAYAKHZSJZLZMXDFAYAUFUGHZGHZIJZFAYGKHZSJZL
-      ZMXDXIMUAUBBXJFNZXOXTXDYMXLXQXNXSYMXKXPFIXJFAGOPYMXMXRFSXJFAKOPUHUIUAUBUN
-      ZXOYFXDYNXLYCXNYEYNXKYBFIXJYAAGOPYNXMYDFSXJYAAKOPUHUIXJYGNZXOYLXDYOXLYIXN
-      YKYOXKYHFIXJYGAGOPYOXMYJFSXJYGAKOPUHUIXJBNZXOXIXDYPXLXFXNXHYPXKXEFIXJBAGO
-      PYPXMXGFSXJBAKOPUHUIXDXQXSXDFUFXPIUJAUKULXDFFXRSFUMUOAUPULUQYACDZXDYFYLYQ
-      XDYFYLYQXDYFURZYIYKYRFYBAUSHZAEUTHUFVAHZYDUSHZUGHZYHIYRYSQDZUUAQDZFYSIJZF
-      UUASJZFUUBIJYRYBQDZAQDZUUCYRYBCDZUUGYRXDYAVBDZUUIYQXDYFVCZYQXDUUJYFYAVDVE
-      ZAYACXCVBGVFVGRZYBVHTZXDYQUUHYFEAVIVJZYBAVKRYRYTQDZYDQDZUUDXDYQUUPYFXDYTV
-      LDZUUPAVMZYTVNTVJZYRYDVBDZUUQYRXDUUJUVAUUKUULAYAVBXCVBKVOVGRYDVPTZYTYDVKR
-      YRUUGYCUUHFAIJZUUEUUNYQXDYCYEVQUUOXDYQUVCYFXDAVRDUVCXCVRAEVRDXCVRVSWJEVTW
-      AWBAWCTVJYBAWDWEYRUUPFYTSJZUUQYEUUFUUTXDYQUVDYFXDUURUVDUUSYTWFTVJUVBYQXDY
-      CYEWGZYTYDWKWEYSUUAWHWEYRXDUUJYHUUBNUUKUULAYAWLRWIYRFYDAUSHZYBUGHZYJSYRUV
-      FQDZUUGFUVFSJZFYBSJZFUVGSJYRUUQUUHUVHUVBUUOYDAVKRUUNYRUUQYEUUHFASJZUVIUVB
-      UVEUUOXDYQUVKYFXDACDZUVKECDXDUVLWMAEWNWOAWPTVJYDAWKWEYRUUIUVJUUMYBWPTUVFY
-      BWQWEYRXDUUJYJUVGNUUKUULAYAWRRWIUQWSXBWTXA $.
-      $( [24-Sep-2014] $)
+      $d a b A $.  $d a b N $.
+      $( For all nonnegative indices, X is positive and Y is nonnegative. $)
+      rmxypos $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( 0 < ( A rmX N ) /\ 0 <_ ( A rmY N ) ) ) $=
+        ( cn0 wcel c2 cc0 crmx co clt wbr crmy wa wi wceq oveq2 breq2d cr syl2anc
+        cle syl va vb cuz cfv cv c1 caddc anbi12d imbi2d lt01 rmx0 syl5breqr 0nn0
+        weq nn0ge0i rmy0 jca w3a cmul cexp cmin cz simp2 nn0z 3ad2ant1 frmx fovcl
+        nn0re eluzelre 3ad2ant2 remulcl crp rmspecpos rpre frmy zre simp3l cn wss
+        uznnssnn ax-mp sseli nngt0 mulgt0 syl22anc rpge0 simp3r addgtge0 breqtrrd
+        2nn mulge0 rmxp1 2nn0 eluznn0 mpan nn0ge0 addge0 rmyp1 3exp nn0ind impcom
+        a2d ) BCDAEUCUDZDZFABGHZIJZFABKHZSJZLZXDFAUAUEZGHZIJZFAXJKHZSJZLZMXDFAFGH
+        ZIJZFAFKHZSJZLZMXDFAUBUEZGHZIJZFAYAKHZSJZLZMXDFAYAUFUGHZGHZIJZFAYGKHZSJZL
+        ZMXDXIMUAUBBXJFNZXOXTXDYMXLXQXNXSYMXKXPFIXJFAGOPYMXMXRFSXJFAKOPUHUIUAUBUN
+        ZXOYFXDYNXLYCXNYEYNXKYBFIXJYAAGOPYNXMYDFSXJYAAKOPUHUIXJYGNZXOYLXDYOXLYIXN
+        YKYOXKYHFIXJYGAGOPYOXMYJFSXJYGAKOPUHUIXJBNZXOXIXDYPXLXFXNXHYPXKXEFIXJBAGO
+        PYPXMXGFSXJBAKOPUHUIXDXQXSXDFUFXPIUJAUKULXDFFXRSFUMUOAUPULUQYACDZXDYFYLYQ
+        XDYFYLYQXDYFURZYIYKYRFYBAUSHZAEUTHUFVAHZYDUSHZUGHZYHIYRYSQDZUUAQDZFYSIJZF
+        UUASJZFUUBIJYRYBQDZAQDZUUCYRYBCDZUUGYRXDYAVBDZUUIYQXDYFVCZYQXDUUJYFYAVDVE
+        ZAYACXCVBGVFVGRZYBVHTZXDYQUUHYFEAVIVJZYBAVKRYRYTQDZYDQDZUUDXDYQUUPYFXDYTV
+        LDZUUPAVMZYTVNTVJZYRYDVBDZUUQYRXDUUJUVAUUKUULAYAVBXCVBKVOVGRYDVPTZYTYDVKR
+        YRUUGYCUUHFAIJZUUEUUNYQXDYCYEVQUUOXDYQUVCYFXDAVRDUVCXCVRAEVRDXCVRVSWJEVTW
+        AWBAWCTVJYBAWDWEYRUUPFYTSJZUUQYEUUFUUTXDYQUVDYFXDUURUVDUUSYTWFTVJUVBYQXDY
+        CYEWGZYTYDWKWEYSUUAWHWEYRXDUUJYHUUBNUUKUULAYAWLRWIYRFYDAUSHZYBUGHZYJSYRUV
+        FQDZUUGFUVFSJZFYBSJZFUVGSJYRUUQUUHUVHUVBUUOYDAVKRUUNYRUUQYEUUHFASJZUVIUVB
+        UVEUUOXDYQUVKYFXDACDZUVKECDXDUVLWMAEWNWOAWPTVJYDAWKWEYRUUIUVJUUMYBWPTUVFY
+        BWQWEYRXDUUJYJUVGNUUKUULAYAWRRWIUQWSXBWTXA $.
+        $( [24-Sep-2014] $)
     $}
 
     $( prove addition and recurrence relations using rmxyval $)
