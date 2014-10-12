@@ -1593,7 +1593,96 @@ $)
     co cz impbii ) ABCZADAEPCZSADFGCZAAFGCZTSUAAHISAQCUBAJAKLADAMNAAOR $.
     $( [10-Oct-2014] $)
 
-    ${
+  ${
+    $d A c $.  $d B c $.  $d C b $.  $d a c $.  $d b c $.  $d C a $.
+    2sbcrex.1 $e |- A e. _V $.
+    2sbcrex.2 $e |- B e. _V $.
+    $( Exchange an existential quantifier with two substitutions. $)
+    2sbcrex $p |- ( [ A / a ] [ B / b ] E. c e. C ph <-> E. c e. C [ A / a ] [ B / b ] ph ) $=
+      ( wrex wsbc cvv wcel wb sbcrexg ax-mp sbcbii bitri ) AGDJFCKZEBKZAFCKZGDJ
+      ZEBKZUAEBKGDJZBLMZTUCNHSUBEBLCLMSUBNIAFGCDLOPQPUEUCUDNHUAEGBDLOPR $.
+      $( [11-Oct-2014] $)
+  $}
+
+  ${
+    $d A b $.  $d A c $.  $d B a $.  $d C a $.  $d a b $.  $d a c $.
+    $( Exchange a substitution with two existentials. $)
+    sbc2rexg $p |- ( A e. V -> ( [ A / a ] E. b e. B E. c e. C ph <-> E. b e. B E. c e. C [ A / a ] ph ) ) $=
+      ( wcel cvv wrex wsbc wb elex sbcrexg rexbidv bitrd syl ) BEIBJIZAHDKZGCKF
+      BLZAFBLHDKZGCKZMBENSUATFBLZGCKUCTFGBCJOSUDUBGCAFHBDJOPQR $.
+      $( [11-Oct-2014] $)
+
+    $d A d $.  $d A e $.  $d D a $.  $d E a $.  $d a d $.  $d a e $.
+    $( Exchange a substitution with 4 existentials. $)
+    sbc4rexg $p |- ( A e. V -> ( [ A / a ] E. b e. B E. c e. C E. d e. D E. e e. E ph <-> E. b e. B E. c e. C E. d e. D E. e e. E [ A / a ] ph ) ) $=
+      ( wcel cvv wrex wsbc wb elex sbc2rexg 2rexbidv bitrd syl ) BHMBNMZAFGOLEO
+      ZKDOJCOIBPZAIBPFGOLEOZKDOJCOZQBHRUCUEUDIBPZKDOJCOUGUDBCDNIJKSUCUHUFJKCDAB
+      EGNILFSTUAUB $.
+      $( [11-Oct-2014] $)
+  $}
+
+  ${
+    sbcbiii.1 $e |- A e. _V $.
+    sbcbiii.2 $e |- ( ph <-> ps ) $.
+    $( Fully inferenced rewriting under an explicit substitution. $)
+    sbcbiii $p |- ( [ A / a ] ph <-> [ A / a ] ps ) $=
+      ( cvv wcel wsbc wb sbcbii ax-mp ) CGHADCIBDCIJEABDCGFKL $.
+      $( [11-Oct-2014] $)
+  $}
+
+  ${
+    $d A b $.  $d A c $.  $d B a $.  $d C a $.   $d a c $.  $d a b $.
+    $( also my first direct use of ax-4 $)
+    $( Rotate a sequence of three explicit substitutions, closed theorem. $)
+    sbcrot3g $p |- ( ( A e. D /\ B e. E /\ A. b C e. F ) -> ( [ A / a ] [ B / b ] [ C / c ] ph <-> [ B / b ] [ C / c ] [ A / a ] ph ) ) $=
+      ( wcel cvv wal wsbc wb elex alimi w3a sbccomg 3adant3 wa simp2 ax-17 hba1
+      3simpb hban ax-4 sylan2 sbcbid syl2anc bitrd syl3an ) BEKBLKZCFKCLKZDGKZI
+      MDLKZIMZAJDNZICNHBNZAHBNJDNZICNZOBEPCFPUOUPIDGPQUMUNUQRZUSURHBNZICNZVAUMU
+      NUSVDOUQURHIBCLLSTVBUMUQUAZUNVDVAOUMUNUQUEUMUNUQUBVEVCUTICLUMUQIUMIUCUPIU
+      DUFUQUMUPVCUTOUPIUGAHJBDLLSUHUIUJUKUL $.
+      $( [11-Oct-2014] $)
+
+    sbcrot3.1 $e |- A e. _V $.
+    sbcrot3.2 $e |- B e. _V $.
+    sbcrot3.3 $e |- C e. _V $.
+    $( Rotate a sequence of three explicit substitutions.  Substituted values must be manifest sets. $)
+    sbcrot3 $p |- ( [ A / a ] [ B / b ] [ C / c ] ph <-> [ B / b ] [ C / c ] [ A / a ] ph ) $=
+      ( cvv wcel wal wsbc wb ax-gen sbcrot3g mp3an ) BKLCKLDKLZFMAGDNFCNEBNAEBN
+      GDNFCNOHISFJPABCDKKKEFGQR $.
+      $( [11-Oct-2014] $)
+
+    $d A d $.  $d A e $.  $d D a $.  $d E a $.   $d a e $.  $d a d $.
+    sbcrot5.4 $e |- D e. _V $.
+    sbcrot5.5 $e |- E e. _V $.
+    $( Rotate a sequence of five explicit substitutions.  Substituted values must be manifest sets. $)
+    sbcrot5 $p |- ( [ A / a ] [ B / b ] [ C / c ] [ D / d ] [ E / e ] ph <-> [ B / b ] [ C / c ] [ D / d ] [ E / e ] [ A / a ] ph ) $=
+      ( wsbc sbcrot3 sbcbiii bitri ) AFGQKEQZJDQICQHBQUAHBQZJDQZICQAHBQFGQKEQZJ
+      DQZICQUABCDHIJLMNRUCUECIMUBUDDJNABEGHKFLOPRSST $.
+      $( [11-Oct-2014] $)
+  $}
+
+  ${
+    $d A a c $.  $d A a b $.  $d C a c $.
+    sbccomieg.1 $e |- ( a = A -> B = C ) $.
+
+    $( Commute two explicit substitutions, using an implicit substitution to rewrite the exiting substitution. $)
+    sbccomieg $p |- ( ( A e. V /\ C e. W ) -> ( [ A / a ] [ B / b ] ph <-> [ C / b ] [ A / a ] ph ) ) $=
+      ( vc wcel wa cvv wsbc wal wi cv wceq wb ax-17 elex adantr hbsbc1g hbsbcgd
+      adantl a17d alrimiv syl2anc dfsbcq syl sbceq1a sbcbidv ancoms ex sbciegft
+      bitrd syl3anc ) BEKZDFKZLZBMKZAGBNZHDNZVCGOPZGOZGQBRZAHCNZVCSZPZGOZVGGBNV
+      CSURVAUSBEUAUBZUTVADMKZVEVKUSVLURDFUAUEZVAVLLVDGVAVBGHJDMVAGTVAHTVAJQZDKG
+      UFAGJBMVNBKGTUCUDUGUHUTVLVJVMVLVIGVLVFVHVLVFLZVGAHDNZVCVOCDRZVGVPSVFVQVLI
+      UEAHCDUIUJVFVLVPVCSVFAVBHDMAGBUKULUMUPUNUGUJVGVCGBMUOUQ $.
+      $( [11-Oct-2014] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Diophantine sets 4: Quantification
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
     $d N t u v a b c d e $.  $d M t u v a b c d e $.
     $d ph u v a b c d e $.  $d ps t a b c d e $.  $d ch v a b c d e $.
     rexrabdioph.1 $e |- M = ( N + 1 ) $.
@@ -1601,7 +1690,7 @@ $)
     rexrabdioph.3 $e |- ( u = ( t |` ( 1 ... N ) ) -> ( ch <-> ph ) ) $.
 
     $( TODO: something very wrong with this proof, should be a trivial definition check? $)
-    $( The special sauce of Diophantine sets: they are closed under existential quantification. $)
+    $( Diophantine set builder for existential quantification. $)
     rexrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... M ) ) | ph } e. ( Dioph ` M ) ) -> { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 ps } e. ( Dioph ` N ) ) $=
       ( va vb vc cn0 wcel wa wceq wsbc wb c1 cfz cmap crab cdioph cfv wrex cres
       co cv cab wsb df-rab sbequ cbvrexv anbi2i r19.42v bitr4i cop simpll simpr
@@ -1639,83 +1728,9 @@ $)
       JKYEYHYIYJUUOMUVDUUEYKYLYBYMWSUUGUUBGHYRUFZPZUUFUUQUURPUUBUUFYNUUBUXTUUFU
       UBGUXKUXSIUUBHYSPHUXSPUXKUXSPHYOHYPHHYQYTWMWSUUBUUFVAMLUUEGHUUAVFXB $.
       $( [10-Oct-2014] $)
-    $}
+  $}
 
-    ${
-    $d A c $.  $d B c $.  $d C b $.  $d a c $.  $d b c $.  $d C a $.
-    2sbcrex.1 $e |- A e. _V $.
-    2sbcrex.2 $e |- B e. _V $.
-    2sbcrex $p |- ( [ A / a ] [ B / b ] E. c e. C ph <-> E. c e. C [ A / a ] [ B / b ] ph ) $=
-      ( wrex wsbc cvv wcel wb sbcrexg ax-mp sbcbii bitri ) AGDJFCKZEBKZAFCKZGDJ
-      ZEBKZUAEBKGDJZBLMZTUCNHSUBEBLCLMSUBNIAFGCDLOPQPUEUCUDNHUAEGBDLOPR $.
-      $( [11-Oct-2014] $)
-    $}
-
-    ${
-    $d A b $.  $d A c $.  $d B a $.  $d C a $.  $d a b $.  $d a c $.
-    sbc2rexg $p |- ( A e. V -> ( [ A / a ] E. b e. B E. c e. C ph <-> E. b e. B E. c e. C [ A / a ] ph ) ) $=
-      ( wcel cvv wrex wsbc wb elex sbcrexg rexbidv bitrd syl ) BEIBJIZAHDKZGCKF
-      BLZAFBLHDKZGCKZMBENSUATFBLZGCKUCTFGBCJOSUDUBGCAFHBDJOPQR $.
-      $( [11-Oct-2014] $)
-
-    $d A d $.  $d A e $.  $d D a $.  $d E a $.  $d a d $.  $d a e $.
-    sbc4rexg $p |- ( A e. V -> ( [ A / a ] E. b e. B E. c e. C E. d e. D E. e e. E ph <-> E. b e. B E. c e. C E. d e. D E. e e. E [ A / a ] ph ) ) $=
-      ( wcel cvv wrex wsbc wb elex sbc2rexg 2rexbidv bitrd syl ) BHMBNMZAFGOLEO
-      ZKDOJCOIBPZAIBPFGOLEOZKDOJCOZQBHRUCUEUDIBPZKDOJCOUGUDBCDNIJKSUCUHUFJKCDAB
-      EGNILFSTUAUB $.
-      $( [11-Oct-2014] $)
-    $}
-
-    ${
-    sbcbiii.1 $e |- A e. _V $.
-    sbcbiii.2 $e |- ( ph <-> ps ) $.
-    sbcbiii $p |- ( [ A / a ] ph <-> [ A / a ] ps ) $=
-      ( cvv wcel wsbc wb sbcbii ax-mp ) CGHADCIBDCIJEABDCGFKL $.
-      $( [11-Oct-2014] $)
-    $}
-
-    ${
-    $d A b $.  $d A c $.  $d B a $.  $d C a $.   $d a c $.  $d a b $.
-    sbcrot3g $p |- ( ( A e. D /\ B e. E /\ A. b C e. F ) -> ( [ A / a ] [ B / b ] [ C / c ] ph <-> [ B / b ] [ C / c ] [ A / a ] ph ) ) $=
-      ( wcel cvv wal wsbc wb elex alimi w3a sbccomg 3adant3 wa simp2 ax-17 hba1
-      3simpb hban ax-4 sylan2 sbcbid syl2anc bitrd syl3an ) BEKBLKZCFKCLKZDGKZI
-      MDLKZIMZAJDNZICNHBNZAHBNJDNZICNZOBEPCFPUOUPIDGPQUMUNUQRZUSURHBNZICNZVAUMU
-      NUSVDOUQURHIBCLLSTVBUMUQUAZUNVDVAOUMUNUQUEUMUNUQUBVEVCUTICLUMUQIUMIUCUPIU
-      DUFUQUMUPVCUTOUPIUGAHJBDLLSUHUIUJUKUL $.
-      $( [11-Oct-2014] $)
-
-    sbcrot3.1 $e |- A e. _V $.
-    sbcrot3.2 $e |- B e. _V $.
-    sbcrot3.3 $e |- C e. _V $.
-    sbcrot3 $p |- ( [ A / a ] [ B / b ] [ C / c ] ph <-> [ B / b ] [ C / c ] [ A / a ] ph ) $=
-      ( cvv wcel wal wsbc wb ax-gen sbcrot3g mp3an ) BKLCKLDKLZFMAGDNFCNEBNAEBN
-      GDNFCNOHISFJPABCDKKKEFGQR $.
-      $( [11-Oct-2014] $)
-
-    $d A d $.  $d A e $.  $d D a $.  $d E a $.   $d a e $.  $d a d $.
-    sbcrot5.4 $e |- D e. _V $.
-    sbcrot5.5 $e |- E e. _V $.
-    sbcrot5 $p |- ( [ A / a ] [ B / b ] [ C / c ] [ D / d ] [ E / e ] ph <-> [ B / b ] [ C / c ] [ D / d ] [ E / e ] [ A / a ] ph ) $=
-      ( wsbc sbcrot3 sbcbiii bitri ) AFGQKEQZJDQICQHBQUAHBQZJDQZICQAHBQFGQKEQZJ
-      DQZICQUABCDHIJLMNRUCUECIMUBUDDJNABEGHKFLOPRSST $.
-      $( [11-Oct-2014] $)
-    $}
-
-    ${
-    $d A a c $.  $d A a b $.  $d C a c $.
-    sbccomieg.1 $e |- ( a = A -> B = C ) $.
-
-    sbccomieg $p |- ( ( A e. V /\ C e. W ) -> ( [ A / a ] [ B / b ] ph <-> [ C / b ] [ A / a ] ph ) ) $=
-      ( vc wcel wa cvv wsbc wal wi cv wceq wb ax-17 elex adantr hbsbc1g hbsbcgd
-      adantl a17d alrimiv syl2anc dfsbcq syl sbceq1a sbcbidv ancoms ex sbciegft
-      bitrd syl3anc ) BEKZDFKZLZBMKZAGBNZHDNZVCGOPZGOZGQBRZAHCNZVCSZPZGOZVGGBNV
-      CSURVAUSBEUAUBZUTVADMKZVEVKUSVLURDFUAUEZVAVLLVDGVAVBGHJDMVAGTVAHTVAJQZDKG
-      UFAGJBMVNBKGTUCUDUGUHUTVLVJVMVLVIGVLVFVHVLVFLZVGAHDNZVCVOCDRZVGVPSVFVQVLI
-      UEAHCDUIUJVFVLVPVCSVFAVBHDMAGBUKULUMUPUNUGUJVGVCGBMUOUQ $.
-      $( [11-Oct-2014] $)
-    $}
-
-    ${
+  ${
     $d G a b c d e f t u v w x y z p q $.
     $d H a b c d e f t u v w x y z p q $.
     $d I a b c d e f t u v w x y z p q $.
@@ -1727,6 +1742,7 @@ $)
     $d ph a b c d e f t $.
 
     rexfrabdioph.1 $e |- M = ( N + 1 ) $.
+    $( Diophantine set builder for existential quantifier, explicit substitution. $)
     rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... M ) ) | [ ( t |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] ph } e. ( Dioph ` M ) ) -> { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 ph } e. ( Dioph ` N ) ) $=
       ( vb va vc cn0 wcel cv cfv wsbc co crab wrex wsb ax-17 c1 cfz cres cdioph
       cmap wa hbsb3 hbrex weq sbceq1a cbvrex rexbidv syl5bb cbvrab wceq cvv vex
@@ -1738,6 +1754,7 @@ $)
       $( [11-Oct-2014] $)
 
     rexfrabdioph.2 $e |- L = ( M + 1 ) $.
+    $( Diophantine set builder for existential quantifier, explicit substitution, two variables. $)
     2rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... L ) ) | [ ( t |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] ph } e. ( Dioph ` L ) ) -> { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 E. w e. NN0 ph } e. ( Dioph ` N ) ) $=
       ( va cn0 wcel cfv wsbc c1 cfz co wb cvv cv cres cmap crab cdioph wrex vex
       wa resex fvex 2sbcrex a1i rabbiia caddc peano2nn0 syl5eqel adantr sbcrot3
@@ -1758,6 +1775,7 @@ $)
 
     rexfrabdioph.3 $e |- K = ( L + 1 ) $.
     rexfrabdioph.4 $e |- J = ( K + 1 ) $.
+    $( Diophantine set builder for existential quantifier, explicit substitution, 4 variables. $)
     4rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... J ) ) | [ ( t |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] [ ( t ` K ) / x ] [ ( t ` J ) / y ] ph } e. ( Dioph ` J ) ) ->
         { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 E. w e. NN0 E. x e. NN0 E. y e. NN0 ph } e. ( Dioph ` N ) ) $=
       ( cn0 wcel wsbc cvv va cv cfv c1 cfz co cres cmap crab cdioph wrex wa vex
@@ -1792,6 +1810,7 @@ $)
 
     rexfrabdioph.5 $e |- I = ( J + 1 ) $.
     rexfrabdioph.6 $e |- H = ( I + 1 ) $.
+    $( Diophantine set builder for existential quantifier, explicit substitution, 6 variables. $)
     6rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... H ) ) | [ ( t |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] [ ( t ` K ) / x ] [ ( t ` J ) / y ] [ ( t ` I ) / z ] [ ( t ` H ) / p ] ph } e. ( Dioph ` H ) ) ->
         { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 E. w e. NN0 E. x e. NN0 E. y e. NN0 E. z e. NN0 E. p e. NN0 ph } e. ( Dioph ` N ) ) $=
       ( va cn0 wcel cv cfv wsbc c1 cfz co cres cmap crab cdioph wa wb vex resex
@@ -1826,8 +1845,8 @@ $)
       PCBUCHIJKLMSTUAUBXHXIVJYJEFGUCMNOQRXJXK $.
       $( [11-Oct-2014] $)
 
-
     rexfrabdioph.7 $e |- G = ( H + 1 ) $.
+    $( Diophantine set builder for existential quantifier, explicit substitution, 7 variables. $)
     7rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... G ) ) | [ ( t |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] [ ( t ` K ) / x ] [ ( t ` J ) / y ] [ ( t ` I ) / z ] [ ( t ` H ) / p ] [ ( t ` G ) / q ] ph } e. ( Dioph ` G ) ) ->
         { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 E. w e. NN0 E. x e. NN0 E. y e. NN0 E. z e. NN0 E. p e. NN0 E. q e. NN0 ph } e. ( Dioph ` N ) ) $=
       ( va cn0 wcel cv cfv wsbc c1 cfz co cres cmap crab cdioph wa wb vex resex
@@ -1860,21 +1879,29 @@ $)
       $.
       $( [11-Oct-2014] $)
 
-    $}
+  $}
 
-    ${
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Diophantine sets 5: Arithmetic sets
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
     $d N t $.
+    $( Lemma for arithmetic diophantine sets.  Convert polynomial-ness of an expression into a constraint suitable for ~ ralimi . $)
     rabdiophlem1 $p |- ( ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) -> A. t e. ( NN0 ^m ( 1 ... N ) ) A e. ZZ ) $=
       ( cz c1 cfz co cmap cmpt cmzp cfv wcel wf wral cn0 mzpf eqid fmpt biimpri
       wss wi nn0ssz zex ovex mapss ssralv mp2b 3syl ) ADECFGZHGZBIZUIJKLUJDUKMZ
       BDLZAUJNZUMAOUIHGZNZUKUIPUNULAUJDBUKUKQRSODTUOUJTUNUPUAUBODUIUCECFUDUEUMA
       UOUJUFUGUH $.
       $( [10-Oct-2014] $)
-    $}
+  $}
 
-    ${
+  ${
     $d N a b c u t $.  $d M a b c u t $.  $d A a b c t $.
     rabdiophlem2.1 $e |- M = ( N + 1 ) $.
+    $( Lemma for arithmetic diophantine sets.  Reuse a polynomial expression under a new quantifier. $)
     rabdiophlem2 $p |- ( ( N e. NN0 /\ ( u e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> ( t e. ( ZZ ^m ( 1 ... M ) ) |-> [_ ( t |` ( 1 ... N ) ) / u ]_ A ) e. ( mzPoly ` ( 1 ... M ) ) ) $=
       ( va vb cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv cv ax-17 wa cres csb vex
       wel hbcsb1 csbeq1a cbvmpt fveq1i wceq mapfzcons1cl adantlr wral mzpf eqid
@@ -1888,11 +1915,11 @@ $)
       XAAWSWLCVCXAUOVDVEVFVIWHWIVJJZWDWIVKZWGWOWPJXHWHLDMVSVLWCXIWGWCWDLELVMNZM
       NWILEIVNDXJLMFVOVPVQWCWGVRBWFWDWIVTWAWB $.
       $( [10-Oct-2014] $)
-    $}
+  $}
 
-
-    ${
+  ${
     $d A a b c $.  $d N a b c t $.
+    $( Diophantine set builder for nonnegativity constraints.  The first builder which uses a witness variable internally; an expression is nonnegative if there is a nonnegative integer equal to it. $)
     elnn0rabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A e. NN0 } e. ( Dioph ` N ) ) $=
       ( vb va vc cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab cv wceq ax-17 wa
       csb wrex cdioph wb risset a1i rabbiia vex wel hbcsb1 hbeleq hbrex csbeq1a
@@ -1906,13 +1933,14 @@ $)
       FHZXKJWTKVDWAXLWCWAWTVPHXLCVEWTVFVGVCFXFWTVHVIAFBWTCWTVJZVKFXBXDWTVLVMXEW
       KXBWJSDEFWTCXMWHXBWJVNWIXCSWJXDXBAWIXCBVQUPVRVSVT $.
       $( [11-Oct-2014] $)
-    $}
+  $}
 
-    ${
+  ${
     $d ph y a b c $.  $d ps x a b c $.  $d ch x a b c $.  $d x y $.
     rexzrexnn0.1 $e |- ( x = y -> ( ph <-> ps ) ) $.
     rexzrexnn0.2 $e |- ( x = -u y -> ( ph <-> ch ) ) $.
 
+    $( Rewrite a quantification over integers into a quantification over naturals. $)
     rexzrexnn0 $p |- ( E. x e. ZZ ph <-> E. y e. NN0 ( ps \/ ch ) ) $=
       ( cz wrex wo cn0 cv wcel wa cneg weq wb rcla4ev wceq rexlimiva cr simprbi
       elznn0 adantr simpr simplr equcom bicom 3imtr4i syl2anc ex zcn negneg syl
@@ -1924,10 +1952,11 @@ $)
       MUNUPWHWIWKVQWGWDVFUQURUSGACUTVAVBVCVDVEBCEKVGVHTVOVNEKWGKMZBVNCWLWGHMBVN
       WGVIABDWGHFRVJWLWIHMCVNWGVKACDWIHGRVJVLTVM $.
       $( [11-Oct-2014] $)
-    $}
+  $}
 
-    ${
+  ${
     $d N t $.  $d M t $.
+    $( Diophantine set builder for the less or equals relation. $)
     lerabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A <_ B } e. ( Dioph ` N ) ) $=
       ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab wral rabdiophlem1 3adant1
       w3a wa cle cmin cdioph wceq wb znn0sub ralimi r19.26 rabbi 3imtr3i syl2an
@@ -1938,6 +1967,7 @@ $)
       UPUQUR $.
       $( [11-Oct-2014] $)
 
+    $( Diophantine set builder for membership in a fixed set of upper integers. $)
     eluzrabdioph $p |- ( ( N e. NN0 /\ M e. ZZ /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A e. ( ZZ>= ` M ) } e. ( Dioph ` N ) ) $=
       ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv w3a cuz crab wa wb wral cdioph
       cle wbr wceq rabdiophlem1 eluz1 adantr bicomd adantl bitrd ex ralimdv imp
@@ -1949,6 +1979,7 @@ $)
       IVAACVKVBVEVCVIVJVNVDACBDVFVGVH $.
       $( [11-Oct-2014] $)
 
+    $( Diophantine set builder for positivity. $)
     elnnrabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A e. NN } e. ( Dioph ` N ) ) $=
       ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv wa cn crab cuz cdioph wb cv 1z
       elnnuz a1i rabbiia eluzrabdioph mp3an2 syl5eqel ) CDEZAFGCHIZJIBKUILMEZNB
@@ -1956,6 +1987,7 @@ $)
       G $.
       $( [11-Oct-2014] $)
 
+    $( Diophantine set builder for the strict less than relation. $)
     ltrabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A < B } e. ( Dioph ` N ) ) $=
       ( cn0 wcel cz c1 cfz co cmap cmpt cmzp cfv crab wral rabdiophlem1 3adant1
       w3a wa clt wbr cmin cn cdioph wceq wb znnsub ralimi r19.26 3imtr3i syl2an
@@ -1966,6 +1998,7 @@ $)
       JDUQURUS $.
       $( [11-Oct-2014] $)
 
+    $( Diophantine set builder for inequality.  This not quite trivial theorem touches on something important; Diophantine sets are not closed under negation, but they contain an important subclass that is, namely the recursive sets.  With this theorem and De Morgan's laws, all quantifier-free formulae can be negated. $)
     nerabdioph $p |- ( ( N e. NN0 /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> A ) e. ( mzPoly ` ( 1 ... N ) ) /\ ( t e. ( ZZ ^m ( 1 ... N ) ) |-> B ) e. ( mzPoly ` ( 1 ... N ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | A =/= B } e. ( Dioph ` N ) ) $=
       ( cn0 wcel cz co cmap cmpt cfv crab clt wbr rabdiophlem1 wa cr zre syl2an
       wral c1 cfz cmzp w3a wo cdioph wceq wb lttri2 ralimi r19.26 rabbi 3imtr3i
@@ -1975,7 +2008,7 @@ $)
       CQFWBVSBRCRBCUISUJVQVSAVIUKVHVMAVIULUMSUOVGVKAVILVOFVLAVILVOFZVNVOFABCDUP
       VAVFVEWCACBDUPUQVKVLADURUSUT $.
       $( [11-Oct-2014] $)
-    $}
+  $}
 
 
 $( early warmup proofs.  I may find a use for Id ` x. later $)
