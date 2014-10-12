@@ -2010,28 +2010,15 @@ $)
       $( [11-Oct-2014] $)
   $}
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Pigeonhole Principle and cardinality helpers
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
-$( early warmup proofs.  I may find a use for Id ` x. later $)
-
-wu0 $p |- ( ( ZZ ^m ( 1 ... 0 ) ) X. { 0 } ) e. ( ZZ ^m ( ZZ ^m ( 1 ... 0 ) ) ) $= ( cc0 csn cz c1 cfz co cmap cxp wss wcel 0z snssi ax-mp zex ovex mapss wf elexi fconst snex elmap mpbir sselii ) ABZCDAEFZGFZGFZCUFGFZUFUDHZUDCIZUGUHIACJUJKACLMUDCUFNCUEGOZPMUIUGJUFUDUIQUFAACKRSUDUFUIATUKUAUBUC $.
-${
-    $d u x $.
-    $d a b $.
-    wu8 $p |- ( u e. CC -> ( A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) -> u = 1 ) ) $= ( cv cc wcel cmul co wceq wa wral c1 wi ax-1cn ax-17 oveq2 id eqeq12d a1i simpl syld oveq1 anbi12d rcla4 ax-mp mulid1 syl simpr eqtr3d ex ) BCZDEZUJACZFGZULHZULUJFGZULHZIZADJZUJKFGZKHZKUJFGZKHZIZUJKHZURVCLZUKKDEVEMUQVCAKDVCANULKHZUNUTUPVBVFUMUSULKULKUJFOVFPZQVFUOVAULKULKUJFUAVGQUBUCUDRUKVCUTVDVCUTLUKUTVBSRUKUTVDUKUTIZUSUJKVHUKUSUJHUKUTSUJUEUFUKUTUGUHUITT $.  $( [30-Aug-2014] $)
-    wu7 $p |- ( u e. CC -> ( u = 1 -> A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) ) ) $= ( cv c1 wceq cmul co wa cc wral wi wcel mulid2 mulid1 jca a1i ralrimiv ax-17 eqcom eqeq1d biimpi oveq1d oveq2d anbi12d ralbid mpbid ) BCZDEZUGACZFGZUIEZUIUGFGZUIEZHZAIJZKUGILUHDUIFGZUIEZUIDFGZUIEZHZAIJUOUHUTAIUIILZUTKUHVAUQUSUIMUINOPQUHUTUNAIUHARUHUQUKUSUMUHUPUJUIUHDUGUIFUHDUGEUGDSUAZUBTUHURULUIUHDUGUIFVBUCTUDUEUFP $. $( [30-Aug-2014] $)
-    wu6 $p |- ( ( T. /\ 1 e. C /\ u e. CC ) -> ( A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) <-> u = 1 ) ) $= ( wtru c1 wcel cv cc w3a cmul co wceq wa wral wb simp3 wu8 wu7 impbid syl ) DECFZBGZHFZIUCUBAGZJKUDLUDUBJKUDLMAHNZUBELZODUAUCPUCUEUFABQABRST $.  $( [30-Aug-2014] $)
-    wu5 $p |- ( iota_ u e. CC A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) ) = 1 $= ( wtru c1 cc wcel wa cv cmul co wceq wral crio tru ax-1cn pm3.2i wu6 riota5 ax-mp ) CDEFZGBHZAHZIJUBKUBUAIJUBKGAELZBEMDKCTNOPCUCBEDABEQRS $.  $( [30-Aug-2014] $)
-    wu10 $p |- x. : ( CC X. CC ) -onto-> CC $= ( vb va cc cxp cmul wfo wf cv cfv wceq wrex wral dffo3 ax-mulopr wcel c1 wa a1i jca syl cop ax-1cn id opelxpi co mulid2 eqcomd df-ov eqtrd fveq2 eqeq2d rcla4ev rgen mpbir2an ) CCDZCEFUOCEGAHZBHZEIZJZBUOKZACLBAUOCEMNUTACUPCOZPUPUAZUOOZUPVBEIZJZQUTVAVCVEVAPCOZVAQVCVAVFVAVFVAUBRVAUCSPUPCCUDTVAUPPUPEUEZVDVAVGUPUPUFUGVGVDJVAPUPEUHRUISUSVEBVBUOUQVBJURVDUPUQVBEUJUKULTUMUN $.  $( [30-Aug-2014] $)
-    wu9 $p |- ( Id ` x. ) = 1 $= ( va vb cmul cgi cfv cv co wceq wa cc wral crio c1 cvv wcel mulex crn cxp wfo ax-mp wu10 forn eqcomi gidval wu5 eqtri ) CDEZAFZBFZCGUIHUIUHCGUIHIBJKAJLZMCNOUGUJHPBACNJCQZJJJRZJCSUKJHUAULJCUBTUCUDTBAUEUF $.  $( [30-Aug-2014] $)
-$}
-
-$( ---- NUMBER THEORY ---- $)
-$( Special Pell equations and Kummer's theorem.  Prove that certain polynomial identities are equivalent to exponential and bitwise ones. $)
-
-$( Another form of the pigeonhole principle. $)
-
-${
+  ${
     $d x y F $.  $d x y A $.
+    $( Pigeonhole principle in terms of functions: if the range is smaller than the domain, two inputs must be mapped to the same output. $)
     fphp $p |- ( ( ( A e. _V /\ B e. _V /\ B ~< A ) /\ F : A --> B ) -> E. x e. A E. y e. A ( x =/= y /\ ( F ` x ) = ( F ` y ) ) ) $=
       ( cvv wcel csdm wbr w3a wf wa cv cfv wral wn wrex 3bitri rexbii rexnal weq
       wceq wi wne cdom domnsym con2i 3ad2ant3 adantr wf1 simpll1 biimpri adantll
@@ -2041,10 +2028,9 @@ ${
       MCDFEUOUPUQVTVMPZBCQZACQVNPZACQVPVSWEACVRWDBCVRVKVQLVKVLPZLWDVQVKURVQWGVKV
       IVJUSUTVKVLVARSSWEWFACVMBCTSVNACTRVB $.
       $( [11-Sep-2014] $)
-$}
+  $}
 
-$( Pigeonhole principle expressed with implicit substitution.  Can this be done without the extra variable? $)
-${
+  ${
     $d ph x y z $.  $d A x y z $.  $d B z $.  $d C x y $.  $d D y z $.  $d E x z $.
     fphpd.1 $e |- ( ph -> A e. _V ) $.
     fphpd.2 $e |- ( ph -> B e. _V ) $.
@@ -2053,6 +2039,7 @@ ${
     fphpd.5 $e |- ( z = x -> C = D ) $.
     fphpd.6 $e |- ( z = y -> C = E ) $.
 
+    $( Pigeonhole principle expressed with implicit substitution.  The last hypothesis is the result of a clumsy proof. $)
     fphpd $p |- ( ph -> E. x e. A E. y e. A ( x =/= y /\ D = E ) ) $=
       ( cv wceq wa wrex wcel wne cmpt cfv cvv csdm wbr eqid fmptd syl31anc simpr
       wf wi weq eleq1 anbi2d eleq1d imbi12d chvarv fvmptg syl2anc adantr adantlr
@@ -2063,10 +2050,9 @@ ${
       WAAWCRZWCIFTZWMAWCUJWKWNWOULDCDCUMZWIWNWJWOWPWHWCAWGVHEUNUOWPGIFOUPUQMURDV
       HGIEFVJOVTUSUTVBVDUOVEVEVF $.
       $( [11-Sep-2014] $)
-$}
+  $}
 
-$( Pigeonhole principle for sets of real numbers with an ordering constraint wlog. $)
-${
+  ${
     $d ph x y z a b c $.  $d A x y z a b c $.  $d B z a b c $.  $d C x y a b c $.  $d D y z a b c $.  $d E x z a b c $.
     fphpdo.1 $e |- ( ph -> A C_ RR ) $.
     fphpdo.2 $e |- ( ph -> B e. _V ) $.
@@ -2075,6 +2061,7 @@ ${
     fphpdo.5 $e |- ( z = x -> C = D ) $.
     fphpdo.6 $e |- ( z = y -> C = E ) $.
 
+    $( Pigeonhole principle for sets of real numbers with implicit output reordering. $)
     fphpdo $p |- ( ph -> E. x e. A E. y e. A ( x < y /\ D = E ) ) $=
       ( vb wceq wa clt wcel vc va cv wne cmpt cfv wrex wbr wss cvv reex ssex syl
       cr wf eqid fmptd ffvelrn sylan fveq2 fphpd wo sselda adantrr adantr lttri2
@@ -2098,14 +2085,14 @@ ${
       MVMAUUMUVBUUKUUTAUUMRZUVBWIDCDCVOZUURUVCUUSUVBUVDUUQUUMAUUPXMEWFWGUVDGIFOW
       JWHMWKWMDXMGIEFXGOYAWLVIWNWOWPWQWQVEVEWRWSWTXAXBXC $.
       $( [12-Sep-2014] $)
-$}
+  $}
 
-${
-    $( ~ cfslb2n transfered to arbitrary sets by cardinality. $)
+  ${
     $( a direct proof might be much shorter? $)
     $d a b c d e f x A $.
     $d a b c d e f x B $.
     encfslb2n.1 $e |- A e. _V $.
+    $( ~ cfslb2n transfered to arbitrary sets by cardinality: a "small" union of "small" sets cannot create a "large" set, as established by cofinality.  AC snuck in here; need to restate/reprove to get it out. $)
     encfslb2n $p |- ( ( Lim ( card ` A ) /\ A. x e. B ( x C_ A /\ x ~< ( cf ` ( card ` A ) ) ) /\ B ~< ( cf ` ( card ` A ) ) ) -> U. B =/= A ) $=
       ( vb vc vd ve vf cv wss csdm wbr wa cvv cima wcel wceq ex ax-mp va cfv ccf
       ccrd wlim wral w3a wf1o wex cuni wne cen cardid ensymi fvex bren mpbi cmpt
@@ -2155,12 +2142,13 @@ ${
       VRUVAVDUYJUVSUXMUXLVVAUXNUXOUVCYRYRUVDSUVEUVFSYSUVG $.
       $( [11-Sep-2014] $)
 
-$}
+  $}
 
-${
+  ${
     $d A a b c d e y $.
     $d B a b c d e y $.
     $d C a b c d e y $.
+    $( Infinite pigeonhole principle using cofinality: a function from a large domain to a small range must have some output with a large preimage. $)
     fiphp1 $p |- ( ( ( A e. _V /\ Lim ( card ` A ) /\ B ~< ( cf ` ( card `
         A ) ) ) /\ C : A --> B ) -> E. y e. B ( cf ` ( card ` A ) ) ~<_ ( `'
         C " { y } ) ) $=
@@ -2213,10 +2201,9 @@ ${
       VCXIUVMUXTUVSUWBRUVMUVLUVFUXTUWOUWMUYCSUXTUVRUWAACUXTUVIIJZUVQIJZUVRUWARVW
       SUXTUVGUAXOTUXTUYAVWTUYDUVNUVPIVHVNUVIUVQIIUVDSXRVNUVE $.
       $( [12-Sep-2014] $)
-$}
+  $}
 
-$( Infinite pigeonhole principle in its most general setting using cofinality. $)
-${
+  ${
     $d ph a x y z b c d e $.
     $d A x y z a b c d e $.
     $d B x y z a b c d e $.
@@ -2228,6 +2215,7 @@ ${
     fiphp1d.4 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
     fiphp1d.5 $e |- ( x = z -> D = E ) $.
 
+    $( Infinite pigeonhole principle using implicit substitution.  Again uses AC probably unnecessarily. $)
     fiphp1d $p |- ( ph -> E. y e. B ( cf ` ( card ` A ) ) ~<_ { x e. A | D = y } ) $=
       ( cfv cv cdom wbr wceq wcel wa ccrd ccf cmpt ccnv cima wrex crab wlim csdm
       csn cvv wf eqid fmptd fiphp1 syl31anc wb wal simpr weq eleq1 anbi2d eleq1d
@@ -2241,9 +2229,9 @@ ${
       VLVMVPAWLEVNZXBXEXKUQAWTYCXAEFWLVOVQEWMXDWLFVRVSXFXMUQXCWQXLBXDEYBGHWMMVMV
       TWAWBWCDWNWRWDWEWFWGWHWI $.
       $( [12-Sep-2014] $)
-$}
+  $}
 
-${
+  ${
     $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
 
     fiphp2d.1 $e |- ( ph -> A e. _V ) $.
@@ -2253,6 +2241,7 @@ ${
     fiphp2d.5 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
     fiphp2d.6 $e |- ( x = z -> D = E ) $.
 
+    $( Infinite pigeonhole principle for sets of regular cardinality. $)
     fiphp2d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ A ) $=
       ( cfv cdom wbr cvv wcel wa ccrd ccf cv wceq crab wrex cen csdm fvex cardcf
       a1i syl5req wb carden syl2anc mpbid jca sdomentr sylc fiphp1d wss ad2antrr
@@ -2262,15 +2251,16 @@ ${
       MNUTAVQVRCFAVNFSZTZVQVRWHVQTZVPEPQZEVPPQZVRWIWEVPEVAWJAWEWGVQIVBVOBEVCVPER
       VDVEWHVQWAWKAWAWGVQWFVBEVMVPVFVGVPEVHUOVIVJVK $.
       $( [12-Sep-2014] $)
-$}
+  $}
 
-${
+  ${
     $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
     fiphp3d.1 $e |- ( ph -> A ~~ NN ) $.
     fiphp3d.2 $e |- ( ph -> B e. Fin ) $.
     fiphp3d.3 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
     fiphp3d.4 $e |- ( x = z -> D = E ) $.
 
+    $( Infinite pigeonhole principle for partitioning an infinite set between finitely many buckets.  This one can definitely be proven without AC.  TODO $)
     fiphp3d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
       ( wceq cen wbr cn cvv wcel syl com crab wrex relen brrelexi ccrd cfv limom
       cv wlim wb omex jctir nnenom entr mpan2 carden biimprd sylc cardom syl6req
@@ -2284,9 +2274,10 @@ ${
       WEIVSWDEPUNVOVTWAWB $.
       $( [12-Sep-2014] $)
 
-$}
+  $}
 
-${
+  ${
+    $( Value of the numeric cardinality of a nonempty integer range. $)
     hashfz $p |- ( ( A e. ZZ /\ B e. ZZ /\ A <_ B ) -> ( # ` ( A ... B ) ) = ( ( B - A ) + 1 ) ) $=
       ( cz wcel cle wbr cfz co chash cfv c1 caddc wceq a1i syl2anc syl3anc wb cc
       cr cc0 w3a cmin cen simp1 simp2 1z zsubcl fzen cfn hashen mp2an sylibr zre
@@ -2306,6 +2297,7 @@ ${
       APWBWNTKEFZYHXCEFZKWGWCWNYIXSYKUUAUUBQYJXTYNTKXBWAPWDWHXCWIWEXCWFVMWJ $.
       $( [12-Sep-2014] $)
 
+    $( Inequality of numeric cardinality implies dominance. $)
     hashsdom $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( # ` A ) < ( # ` B ) <-> A ~< B ) ) $=
       ( cfn wcel wa chash cfv cle wbr wn cdom clt csdm wb ancoms cr hashcl nn0re
       cn0 3syl hashdom notbid simpl simpr ltnle syl2anc domtri con2bid 3bitr4d )
@@ -2314,6 +2306,7 @@ ${
       BACCUGOUHUI $.
       $( [12-Sep-2014] $)
 
+    $( Condition for finite ranges to have a strict dominance relation. $)
     fzsdom2 $p |- ( ( A e. ZZ /\ B e. ZZ /\ C e. ZZ ) -> ( A <_ B -> ( B < C -> ( A ... B ) ~< ( A ... C ) ) ) ) $=
       ( cz wcel w3a cle wbr clt cfz co chash cfv cmin c1 cr zre 3ad2ant1 syl3anc
       wb csdm caddc simp3 3ad2ant2 3ad2ant3 ltsub1 mpbid resubcl syl2anc 1re a1i
@@ -2326,35 +2319,17 @@ ${
       VOVPUPZABUQSVTVKVMACGHWBWGUMWTVKVLVMVOVPURVTABCWPWNWOXAVTWKWLVPBCGHZWNWOWJ
       WKWLUSVPXBBCUTVAVBVDACUQSVCVQVEEVRVEEWCVSTABVFACVFVQVRVGVHVIVJ $.
       $( [12-Sep-2014] $)
-$}
+  $}
 
-${
-    icodiamlt $p |- ( ( ( A e. RR /\ B e. RR ) /\ ( C e. ( A [,) B ) /\ D e. ( A [,) B ) ) ) -> ( abs ` ( C - D ) ) < ( B - A ) ) $=
-      ( cr wcel wa co clt wbr cle w3a elico2 wb resubcl syl2anc cc syl3anc mpbid
-      cmin cico cabs cfv cxr wi rexr anbi12d biimpd sylan2 simprl1 simplr simpll
-      cneg simprr1 abslt negsubdi2 simprl2 lesub1 simprr3 ltsub2 lelttrd eqbrtrd
-      wceq recnd simprl3 ltsub1 simprr2 lesub2 ltletrd mpbir2and ex syld imp ) A
-      EFZBEFZGZCABUAHZFZDVQFZGZCDTHZUBUCBATHZIJZVPVTCEFZACKJZCBIJZLZDEFZADKJZDBI
-      JZLZGZWCVOVNBUDFZVTWLUEBUFVNWMGZVTWLWNVRWGVSWKABCMABDMUGUHUIVPWLWCVPWLGZWC
-      WBUMZWAIJZWAWBIJZWOWAEFZWBEFZWCWQWRGNWOWDWHWSWDWEWFWKVPUJZWHWIWJWGVPUNZCDO
-      PZWOVOVNWTVNVOWLUKZVNVOWLULZBAOPZWAWBUOPWOWPABTHZWAIWOBQFAQFWPXGVCWOBXDVDW
-      OAXEVDBAUPPWOXGCBTHZWAWOVNVOXGEFXEXDABOPWOWDVOXHEFXAXDCBOPXCWOWEXGXHKJZWDW
-      EWFWKVPUQWOVNWDVOWEXINXEXAXDACBURRSWOWJXHWAIJZWHWIWJWGVPUSWOWHVOWDWJXJNXBX
-      DXADBCUTRSVAVBWOWABDTHZWBXCWOVOWHXKEFXDXBBDOPXFWOWFWAXKIJZWDWEWFWKVPVEWOWD
-      VOWHWFXLNXAXDXBCBDVFRSWOWIXKWBKJZWHWIWJWGVPVGWOVNWHVOWIXMNXEXBXDADBVHRSVIV
-      JVKVLVM $.
-      $( [12-Sep-2014] $)
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    A non-closed set of reals is infinite
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
-    modelico $p |- ( ( A e. RR /\ B e. RR+ ) -> ( A mod B ) e. ( 0 [,) B ) ) $=
-      ( cr wcel crp wa cmo co cc0 cico cle wbr clt cxr w3a 0reALT rpre rexr syl
-      wb adantl elico2 sylancr modcl modge0 modlt mpbir3and ) ACDZBEDZFZABGHZIBJ
-      HDZUKCDZIUKKLZUKBMLZUJICDBNDZULUMUNUOOTPUIUPUHUIBCDUPBQBRSUAIBUKUBUCABUDAB
-      UEABUFUG $.
-      $( [12-Sep-2014] $)
-$}
-
-${
+  ${
     $d a b c $.
+    $( Floor defines a function. $)
     ffl $p |- |_ : RR --> ZZ $=
       ( vb va cv cle wbr c1 caddc co clt wa cz crio wcel cr wral cfl wf cfv flcl
       flval eqeltrrd rgen df-fl fmpt mpbi ) ACZBCZDEUGUFFGHIEJAKLZKMZBNONKPQUIBN
@@ -2362,7 +2337,7 @@ ${
       $( [13-Sep-2014] $)
 
     $d A a b c x y $.   $d B x y a b c $.
-    $( ` RR ` - version of ~ unben .  Only guarantees infinity, not equinumerosity, of course. $)
+    $( ` RR ` - version of ~ unben ; a set of reals with no upper bound is at least countably infinite. $)
     reunbdom $p |- ( ( A C_ RR /\ A. x e. RR E. y e. A x < y ) -> om ~<_ A ) $=
       ( va vb cr wss cv clt wbr wa com cfl cn cen cdom wcel syl2anc cz syl inss2
       wrex wral cima cin a1i c1 caddc simpr peano2nn nnre 3syl simplr wceq breq1
@@ -2389,133 +2364,146 @@ ${
       $( [13-Sep-2014] $)
 
     ${
-        $d a b c d e f x y z A $.
-        $d a b c d e f x y z B $.
-        $d a b c d e f x y z C $.
-        $d a b c d e f x y z D $.
-        $d a b c d e f x y F $.
-        $d a b c d e f ph z $.
+      $d a b c d e f x y z A $.
+      $d a b c d e f x y z B $.
+      $d a b c d e f x y z C $.
+      $d a b c d e f x y z D $.
+      $d a b c d e f x y F $.
+      $d a b c d e f ph z $.
 
-        ${
-            renclddomlem.0 $e |- ( ph -> A C_ RR ) $.
-            renclddomlem.1 $e |- ( ph -> B e. RR ) $.
-            renclddomlem.2 $e |- ( ph -> -. B e. A ) $.
-            renclddomlem.3 $e |- ( ph -> A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) $.
-            renclddomlem.4 $e |- F = ( z e. ( RR \ { B } ) |-> ( abs ` ( 1 / ( z - B ) ) ) ) $.
+      ${
+        renclddomlem.0 $e |- ( ph -> A C_ RR ) $.
+        renclddomlem.1 $e |- ( ph -> B e. RR ) $.
+        renclddomlem.2 $e |- ( ph -> -. B e. A ) $.
+        renclddomlem.3 $e |- ( ph -> A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) $.
+        renclddomlem.4 $e |- F = ( z e. ( RR \ { B } ) |-> ( abs ` ( 1 / ( z - B ) ) ) ) $.
 
-            $( our mapping is a function $)
-            renclddomlem1 $p |- ( ph -> F : ( RR \ { B } ) --> RR+ ) $=
-              ( cr co crp wcel wa cc cc0 wne csn cdif c1 cv cmin cdiv cabs difss
-              ax-resscn sstri simpr sseldi adantr syl2anc eldifsn simprbi adantl
-              cfv subcl wceq wb subeq0 necon3bid mpbird jca reccl recne0 absrpcl
-              3syl fmptd ) ADMFUAZUBZUCDUDZFUENZUFNZUGURZOGAVMVLPZQZVNRPZVNSTZQZ
-              VORPZVOSTZQVPOPVRVSVTVRVMRPZFRPZVSVRVLRVMVLMRMVKUHUIUJAVQUKULZVRMR
-              FUIAFMPVQIUMULZVMFUSUNVRVTVMFTZVQWHAVQVMMPWHVMMFUOUPUQVRVNSVMFVRWD
-              WEVNSUTVMFUTVAWFWGVMFVBUNVCVDVEWAWBWCVNVFVNVGVEVOVHVILVJ $.
-              $( [14-Sep-2014] $)
-
-            renclddomlem2 $p |- ( ( ph /\ C e. A ) -> ( F ` C ) = ( abs ` ( 1 / ( C - B ) ) ) ) $=
-              ( wcel cr cfv c1 cmin co cabs wa csn cdif cdiv wne sselda wn simpr
-              wceq adantr nelne2 syl2anc eldifsn sylanbrc cv oveq1 oveq2d fveq2d
-              fvex fvmpt syl ) AGENZUAZGOFUBUCZNZGHPQGFRSZUDSZTPZUIVCGONGFUEZVEA
-              EOGIUFVCVBFENUGZVIAVBUHAVJVBKUJGFEUKULGOFUMUNDGQDUOZFRSZUDSZTPVHVD
-              HVKGUIZVMVGTVNVLVFQUDVKGFRUPUQURMVGTUSUTVA $.
-              $( [14-Sep-2014] $)
-
-            $( given a challenge ` C ` , we can produce a response ` F `` D ` which is in the image and large enough $)
-            renclddomlem3 $p |- ( ( ( ph /\ C e. RR /\ D e. A ) /\ ( abs ` ( D - B ) ) < ( 1 / if ( C <_ 1 , 1 , C ) ) ) -> C < ( F ` D ) ) $=
-              ( cr wcel c1 wbr syl2anc cc0 w3a cmin co cabs cfv cle cif cdiv clt
-              simpl2 1re a1i ifcl crp wne wss 3ad2ant1 adantr simpl3 sseldd recn
-              wa cc syl subcl wn nelne2 wb subeq0 necon3bid mpbird reccl absrpcl
-              recne0 rpre max1 ax-1cn absdiv syl3anc eqcomd nn0ge0i absid oveq1d
-              wceq 1nn0 mp2an recrec fveq2d 3eqtr3d simpr eqbrtrd 0reALT ltletrd
-              lt01 rpgt0 ltrec syl22anc lelttrd simpl1 renclddomlem2 breqtrrd
-              max2 ) AGOPZHEPZUAZHFUBUCZUDUEZQGQUFRZQGUGZUHUCZUIRZVBZGQXFUHUCZUD
-              UEZHIUEZUIXLGXIXNAXCXDXKUJZXLQOPZXCXIOPZXQXLUKULZXPXHQGOUMSZXLXNUN
-              PZXNOPZXLXMVCPZXMTUOZYAXLXFVCPZXFTUOZYCXLHVCPZFVCPZYEXLHOPYGXLEOHX
-              EEOUPZXKAXCYIXDJUQURAXCXDXKUSZUTHVAVDZXLFOPZYHXEYLXKAXCYLXDKUQURFV
-              AVDZHFVESZXLYFHFUOZXLXDFEPVFZYOYJXEYPXKAXCYPXDLUQURHFEVGSXLYGYHYFY
-              OVHYKYMYGYHVBXFTHFHFVIVJSVKZXFVLSZXLYEYFYDYNYQXFVNSZXMVMSZXNVOVDZX
-              LXCXQGXIUFRXPXSGQVPSXLXIXNUIRZQXNUHUCZXJUIRZXLUUCXGXJUIXLQUDUEZXNU
-              HUCZQXMUHUCZUDUEZUUCXGXLUUHUUFXLQVCPZYCYDUUHUUFWDUUIXLVQULYRYSQXMV
-              RVSVTXLUUEQXNUHUUEQWDZXLXQTQUFRUUJUKQWEWAQWBWFULWCXLUUGXFUDXLYEYFU
-              UGXFWDYNYQXFWGSWHWIXEXKWJWKXLXRTXIUIRYBTXNUIRZUUBUUDVHXTXLTQXITOPX
-              LWLULXSXTTQUIRXLWNULXLXCXQQXIUFRXPXSGQXBSWMUUAXLYAUUKYTXNWOVDXIXNW
-              PWQVKWRXLAXDXOXNWDAXCXDXKWSYJABCDEFHIJKLMNWTSXA $.
-              $( [14-Sep-2014] $)
-
-            renclddomlem4 $p |- ( ph -> om ~<_ A ) $=
-              ( vc wbr cr clt crp wcel c1 syl2anc va com cima cdom wss wrex wral
-              vb cv crn imassrn a1i csn wf renclddomlem1 frn syl rpssre sstrd wa
-              cdif cmin co cabs cfv cle cif cdiv cc0 simpr ifcl 0reALT lt01 max2
-              1re ltletrd elrp sylanbrc rpreccl adantr wceq breq2 rexbidv fveq2d
-              weq oveq1 breq1d cbvrexv syl6bb rcla4va wfun cdm ffun ad2antrr wne
-              sseldd wn nelne2 eldifsn fdm eleqtrrd funfvima imp simplll simpllr
-              syl21anc simplr renclddomlem3 syl31anc rcla4ev rexlimdva ralrimiva
-              ex mpd reunbdom cvv reex ssex imadomg domtr ) AUBGEUCZUDNZYAEUDNZU
-              BEUDNAYAOUEUAUIZUHUIZPNZUHYAUFZUAOUGYBAYAGUJZOYAYHUEAGEUKULAYHQOAO
-              FUMVAZQGUNZYHQUEABCDEFGHIJKLUOZYIQGUPUQQOUEAURULUSUSAYGUAOAYDORZUT
-              ZMUIZFVBVCZVDVEZSYDSVFNZSYDVGZVHVCZPNZMEUFZYGYMYSQRZCUIZFVBVCZVDVE
-              ZBUIZPNZCEUFZBQUGZUUAYMYRQRZUUBYMYRORZVIYRPNUUJYMSORZYLUUKUULYMVOU
-              LZAYLVJZYQSYDOVKTZYMVISYRVIORYMVLULUUMUUOVISPNYMVMULYMYLUULSYRVFNU
-              UNUUMYDSVNTVPYRVQVRYRVSUQAUUIYLKVTUUHUUABYSQUUFYSWAZUUHUUEYSPNZCEU
-              FUUAUUPUUGUUQCEUUFYSUUEPWBWCUUQYTCMECMWEZUUEYPYSPUURUUDYOVDUUCYNFV
-              BWFWDWGWHWIWJTYMYTYGMEYMYNERZUTZYTYGUUTYTUTZYNGVEZYARZYDUVBPNZYGUU
-              TUVCYTUUTGWKZYNGWLZRZUUSUVCAUVEYLUUSAYJUVEYKYIQGWMUQZWNUUTYNYIUVFU
-              UTYNORYNFWOZYNYIRUUTEOYNAEOUEZYLUUSHWNYMUUSVJZWPUUTUUSFERWQZUVIUVK
-              AUVLYLUUSJWNYNFEWRTYNOFWSVRAUVFYIWAZYLUUSAYJUVMYKYIQGWTUQWNXAUVKUV
-              EUVGUTUUSUVCEYNGXBXCXFVTUVAAYLUUSYTUVDAYLUUSYTXDAYLUUSYTXEYMUUSYTX
-              GUUTYTVJABCDEFYDYNGHIJKLXHXIYFUVDUHUVBYAYEUVBYDPWBXJTXMXKXNXLUAUHY
-              AXOTAEXPRZUVEYCAUVJUVNHEOXQXRUQUVHUVNUVEYCEXPGXSXCTUBYAEXTT $.
-              $( [14-Sep-2014] $)
-        $}
-
-        renclddom $p |- ( ( ( A C_ RR /\ B e. RR /\ -. B e. A ) /\ A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) -> om ~<_ A ) $=
-          ( va cr wss wcel wn w3a cv cmin co cabs cfv clt wbr wrex crp wral cdif
-          wa csn c1 cdiv cmpt simpl1 simpl2 simpl3 simpr eqid renclddomlem4 ) CF
-          GZDFHZDCHIZJZBKDLMNOAKPQBCRASTZUBABECDEFDUCUAUDEKDLMUEMNOUFZUMUNUOUQUG
-          UMUNUOUQUHUMUNUOUQUIUPUQUJURUKUL $.
+        $( Lemma for ~ renclddom . $)
+        renclddomlem1 $p |- ( ph -> F : ( RR \ { B } ) --> RR+ ) $=
+          ( cr co crp wcel wa cc cc0 wne csn cdif c1 cv cmin cdiv cabs difss
+          ax-resscn sstri simpr sseldi adantr syl2anc eldifsn simprbi adantl
+          cfv subcl wceq wb subeq0 necon3bid mpbird jca reccl recne0 absrpcl
+          3syl fmptd ) ADMFUAZUBZUCDUDZFUENZUFNZUGURZOGAVMVLPZQZVNRPZVNSTZQZ
+          VORPZVOSTZQVPOPVRVSVTVRVMRPZFRPZVSVRVLRVMVLMRMVKUHUIUJAVQUKULZVRMR
+          FUIAFMPVQIUMULZVMFUSUNVRVTVMFTZVQWHAVQVMMPWHVMMFUOUPUQVRVNSVMFVRWD
+          WEVNSUTVMFUTVAWFWGVMFVBUNVCVDVEWAWBWCVNVFVNVGVEVOVHVILVJ $.
           $( [14-Sep-2014] $)
+
+        $( Lemma for ~ renclddom . $)
+        renclddomlem2 $p |- ( ( ph /\ C e. A ) -> ( F ` C ) = ( abs ` ( 1 / ( C - B ) ) ) ) $=
+          ( wcel cr cfv c1 cmin co cabs wa csn cdif cdiv wne sselda wn simpr
+          wceq adantr nelne2 syl2anc eldifsn sylanbrc cv oveq1 oveq2d fveq2d
+          fvex fvmpt syl ) AGENZUAZGOFUBUCZNZGHPQGFRSZUDSZTPZUIVCGONGFUEZVEA
+          EOGIUFVCVBFENUGZVIAVBUHAVJVBKUJGFEUKULGOFUMUNDGQDUOZFRSZUDSZTPVHVD
+          HVKGUIZVMVGTVNVLVFQUDVKGFRUPUQURMVGTUSUTVA $.
+          $( [14-Sep-2014] $)
+
+        $( Lemma for ~ renclddom . $)
+        renclddomlem3 $p |- ( ( ( ph /\ C e. RR /\ D e. A ) /\ ( abs ` ( D - B ) ) < ( 1 / if ( C <_ 1 , 1 , C ) ) ) -> C < ( F ` D ) ) $=
+          ( cr wcel c1 wbr syl2anc cc0 w3a cmin co cabs cfv cle cif cdiv clt
+          simpl2 1re a1i ifcl crp wne wss 3ad2ant1 adantr simpl3 sseldd recn
+          wa cc syl subcl wn nelne2 wb subeq0 necon3bid mpbird reccl absrpcl
+          recne0 rpre max1 ax-1cn absdiv syl3anc eqcomd nn0ge0i absid oveq1d
+          wceq 1nn0 mp2an recrec fveq2d 3eqtr3d simpr eqbrtrd 0reALT ltletrd
+          lt01 rpgt0 ltrec syl22anc lelttrd simpl1 renclddomlem2 breqtrrd
+          max2 ) AGOPZHEPZUAZHFUBUCZUDUEZQGQUFRZQGUGZUHUCZUIRZVBZGQXFUHUCZUD
+          UEZHIUEZUIXLGXIXNAXCXDXKUJZXLQOPZXCXIOPZXQXLUKULZXPXHQGOUMSZXLXNUN
+          PZXNOPZXLXMVCPZXMTUOZYAXLXFVCPZXFTUOZYCXLHVCPZFVCPZYEXLHOPYGXLEOHX
+          EEOUPZXKAXCYIXDJUQURAXCXDXKUSZUTHVAVDZXLFOPZYHXEYLXKAXCYLXDKUQURFV
+          AVDZHFVESZXLYFHFUOZXLXDFEPVFZYOYJXEYPXKAXCYPXDLUQURHFEVGSXLYGYHYFY
+          OVHYKYMYGYHVBXFTHFHFVIVJSVKZXFVLSZXLYEYFYDYNYQXFVNSZXMVMSZXNVOVDZX
+          LXCXQGXIUFRXPXSGQVPSXLXIXNUIRZQXNUHUCZXJUIRZXLUUCXGXJUIXLQUDUEZXNU
+          HUCZQXMUHUCZUDUEZUUCXGXLUUHUUFXLQVCPZYCYDUUHUUFWDUUIXLVQULYRYSQXMV
+          RVSVTXLUUEQXNUHUUEQWDZXLXQTQUFRUUJUKQWEWAQWBWFULWCXLUUGXFUDXLYEYFU
+          UGXFWDYNYQXFWGSWHWIXEXKWJWKXLXRTXIUIRYBTXNUIRZUUBUUDVHXTXLTQXITOPX
+          LWLULXSXTTQUIRXLWNULXLXCXQQXIUFRXPXSGQXBSWMUUAXLYAUUKYTXNWOVDXIXNW
+          PWQVKWRXLAXDXOXNWDAXCXDXKWSYJABCDEFHIJKLMNWTSXA $.
+          $( [14-Sep-2014] $)
+
+        $( Lemma for ~ renclddom . $)
+        renclddomlem4 $p |- ( ph -> om ~<_ A ) $=
+          ( vc wbr cr clt crp wcel c1 syl2anc va com cima cdom wss wrex wral
+          vb cv crn imassrn a1i csn wf renclddomlem1 frn syl rpssre sstrd wa
+          cdif cmin co cabs cfv cle cif cdiv cc0 simpr ifcl 0reALT lt01 max2
+          1re ltletrd elrp sylanbrc rpreccl adantr wceq breq2 rexbidv fveq2d
+          weq oveq1 breq1d cbvrexv syl6bb rcla4va wfun cdm ffun ad2antrr wne
+          sseldd wn nelne2 eldifsn fdm eleqtrrd funfvima imp simplll simpllr
+          syl21anc simplr renclddomlem3 syl31anc rcla4ev rexlimdva ralrimiva
+          ex mpd reunbdom cvv reex ssex imadomg domtr ) AUBGEUCZUDNZYAEUDNZU
+          BEUDNAYAOUEUAUIZUHUIZPNZUHYAUFZUAOUGYBAYAGUJZOYAYHUEAGEUKULAYHQOAO
+          FUMVAZQGUNZYHQUEABCDEFGHIJKLUOZYIQGUPUQQOUEAURULUSUSAYGUAOAYDORZUT
+          ZMUIZFVBVCZVDVEZSYDSVFNZSYDVGZVHVCZPNZMEUFZYGYMYSQRZCUIZFVBVCZVDVE
+          ZBUIZPNZCEUFZBQUGZUUAYMYRQRZUUBYMYRORZVIYRPNUUJYMSORZYLUUKUULYMVOU
+          LZAYLVJZYQSYDOVKTZYMVISYRVIORYMVLULUUMUUOVISPNYMVMULYMYLUULSYRVFNU
+          UNUUMYDSVNTVPYRVQVRYRVSUQAUUIYLKVTUUHUUABYSQUUFYSWAZUUHUUEYSPNZCEU
+          FUUAUUPUUGUUQCEUUFYSUUEPWBWCUUQYTCMECMWEZUUEYPYSPUURUUDYOVDUUCYNFV
+          BWFWDWGWHWIWJTYMYTYGMEYMYNERZUTZYTYGUUTYTUTZYNGVEZYARZYDUVBPNZYGUU
+          TUVCYTUUTGWKZYNGWLZRZUUSUVCAUVEYLUUSAYJUVEYKYIQGWMUQZWNUUTYNYIUVFU
+          UTYNORYNFWOZYNYIRUUTEOYNAEOUEZYLUUSHWNYMUUSVJZWPUUTUUSFERWQZUVIUVK
+          AUVLYLUUSJWNYNFEWRTYNOFWSVRAUVFYIWAZYLUUSAYJUVMYKYIQGWTUQWNXAUVKUV
+          EUVGUTUUSUVCEYNGXBXCXFVTUVAAYLUUSYTUVDAYLUUSYTXDAYLUUSYTXEYMUUSYTX
+          GUUTYTVJABCDEFYDYNGHIJKLXHXIYFUVDUHUVBYAYEUVBYDPWBXJTXMXKXNXLUAUHY
+          AXOTAEXPRZUVEYCAUVJUVNHEOXQXRUQUVHUVNUVEYCEXPGXSXCTUBYAEXTT $.
+          $( [14-Sep-2014] $)
+      $}
+
+      $( A set of real numbers which comes arbitrarily close to some target yet excludes it is infinite. $)
+      renclddom $p |- ( ( ( A C_ RR /\ B e. RR /\ -. B e. A ) /\ A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) -> om ~<_ A ) $=
+        ( va cr wss wcel wn w3a cv cmin co cabs cfv clt wbr wrex crp wral cdif
+        wa csn c1 cdiv cmpt simpl1 simpl2 simpl3 simpr eqid renclddomlem4 ) CF
+        GZDFHZDCHIZJZBKDLMNOAKPQBCRASTZUBABECDEFDUCUAUDEKDLMUEMNOUFZUMUNUOUQUG
+        UMUNUOUQUHUMUNUOUQUIUPUQUJURUKUL $.
+        $( [14-Sep-2014] $)
     $}
+  $}
 
-$}
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Properties of the canonical representation of a rational
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
-$c numer denom $.
-$( define canonical numerator/denominator, any necessary theorems $)
+  $c numer denom $.
 
-${
-    cnumer $a class numer $.
-    cdenom $a class denom $.
+  $( Extend class notation to include canonical numerator function. $)
+  cnumer $a class numer $.
+  $( Extend class notation to include canonical denominator function. $)
+  cdenom $a class denom $.
 
-    ${
+  ${
     $d x y $.
+    $( The canonical numerator of a rational is the numerator of the rational's reduced fraction representation (no common factors, denominator positive). $)
     df-numer $a |- numer = ( y e. QQ |-> ( 1st ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ y = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $.
+    $( The canonical denominator of a rational is the denominator of the rational's reduced fraction representation (no common factors, denominator positive). $)
     df-denom $a |- denom = ( y e. QQ |-> ( 2nd ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ y = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $.
-    $}
+  $}
 
-    ${
+  ${
     $d A a b c d $.
     $d B a b c d $.
     $d C a b c d $.
     $d x y a b c d $.
 
     ${
-    $d A x $.
-    qnumval $p |- ( A e. QQ -> ( numer ` A ) = ( 1st ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
-      ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cnumer eqeq1
-      cq anbi2d riotabidv fveq2d df-numer fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
-      LIZKZMZANOPZQZEFUJBULKZMZAUOQZEFTRUKBKZUPUSEUTUNURAUOUTUMUQUJUKBULSUAUBUCA
-      CUDUSEUEUF $.
-      $( [13-Sep-2014] $)
+      $d A x $.
+      $( Value of the canonical numerator function. $)
+      qnumval $p |- ( A e. QQ -> ( numer ` A ) = ( 1st ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
+        ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cnumer eqeq1
+        cq anbi2d riotabidv fveq2d df-numer fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
+        LIZKZMZANOPZQZEFUJBULKZMZAUOQZEFTRUKBKZUPUSEUTUNURAUOUTUMUQUJUKBULSUAUBUCA
+        CUDUSEUEUF $.
+        $( [13-Sep-2014] $)
 
-    qdenval $p |- ( A e. QQ -> ( denom ` A ) = ( 2nd ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
-      ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cdenom eqeq1
-      cq anbi2d riotabidv fveq2d df-denom fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
-      LIZKZMZANOPZQZGFUJBULKZMZAUOQZGFTRUKBKZUPUSGUTUNURAUOUTUMUQUJUKBULSUAUBUCA
-      CUDUSGUEUF $.
-      $( [13-Sep-2014] $)
+      $( Value of the canonical denominator function. $)
+      qdenval $p |- ( A e. QQ -> ( denom ` A ) = ( 2nd ` ( iota_ x e. ( ZZ X. NN ) ( ( ( 1st ` x ) gcd ( 2nd ` x ) ) = 1 /\ A = ( ( 1st ` x ) / ( 2nd ` x ) ) ) ) ) ) $=
+        ( va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn cxp crio cdenom eqeq1
+        cq anbi2d riotabidv fveq2d df-denom fvex fvmpt ) CBADZEFZUGGFZHIJKZCDZUHUI
+        LIZKZMZANOPZQZGFUJBULKZMZAUOQZGFTRUKBKZUPUSGUTUNURAUOUTUMUQUJUKBULSUAUBUCA
+        CUDUSGUEUF $.
+        $( [13-Sep-2014] $)
     $}
 
+    $( Lemma for ~ qnumcl and ~ qdencl . $)
     qnumdencl $p |- ( A e. QQ -> ( ( numer ` A ) e. ZZ /\ ( denom ` A ) e. NN ) ) $=
       ( va cq wcel cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cxp cnumer eleq1d
       cn crio cdenom wreu qredeu riotacl syl cop qnumval qdenval anbi12d biimprd
@@ -2524,14 +2512,17 @@ ${
       KUOVMVGVJUOVGVMUOVDVKVFVLUOVCVHOBAUGRUOVEVISBAUHRUIUJULUMUN $.
       $( [13-Sep-2014] $)
 
+    $( The canonical numerator of a rational is an integer. $)
     qnumcl $p |- ( A e. QQ -> ( numer ` A ) e. ZZ ) $=
       ( cq wcel cnumer cfv cz cdenom cn qnumdencl simpld ) ABCADEFCAGEHCAIJ $.
       $( [13-Sep-2014] $)
 
+    $( The canonical denominator is a positive integer. $)
     qdencl $p |- ( A e. QQ -> ( denom ` A ) e. NN ) $=
       ( cq wcel cnumer cfv cz cdenom cn qnumdencl simprd ) ABCADEFCAGEHCAIJ $.
       $( [13-Sep-2014] $)
 
+    $( Canonical numerator defines a function. $)
     fnum $p |- numer : QQ --> ZZ $=
       ( vb va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn crio wcel cq cnumer
       cxp wf wral df-numer fmpt biimpi qnumval qnumcl eqeltrrd mprg ) ACZDEZUIFE
@@ -2539,6 +2530,7 @@ ${
       UFUGUH $.
       $( [13-Sep-2014] $)
 
+    $( Canonical denominator defines a function. $)
     fden $p |- denom : QQ --> NN $=
       ( vb va cv c1st cfv c2nd cgcd co c1 wceq cdiv wa cz cn crio wcel cq cdenom
       cxp wf wral df-denom fmpt biimpi qdenval qdencl eqeltrrd mprg ) ACZDEZUIFE
@@ -2546,6 +2538,7 @@ ${
       UFUGUH $.
       $( [13-Sep-2014] $)
 
+    $( Two numbers are the canonical representation of a rational iff they are coprime and have the right quotient. $)
     qnumdenbi $p |- ( ( A e. QQ /\ B e. ZZ /\ C e. NN ) -> ( ( ( B gcd C ) = 1 /\ A = ( B / C ) ) <-> ( ( numer ` A ) = B /\ ( denom ` A ) = C ) ) ) $=
       ( va wcel cz cn cfv wceq wa c1st c2nd cgcd co c1 cdiv cop eqeq1d oveq12d
       wb vb cq w3a cnumer cdenom cv cxp crio wreu qredeu riotacl 1st2nd2 qnumval
@@ -2561,6 +2554,7 @@ ${
       PXQXRSVFVGVM $.
       $( [13-Sep-2014] $)
 
+    $( The canonical representation of a rational is fully reduced. $)
     qnumdencoprm $p |- ( A e. QQ -> ( ( numer ` A ) gcd ( denom ` A ) ) = 1 ) $=
       ( cq wcel cnumer cdenom cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
       cfv qnumcl qdencl qnumdenbi mpd3an23 mpbird simpld ) ABCZADRZAERZFGHIZAUFU
@@ -2568,6 +2562,7 @@ ${
       $.
       $( [13-Sep-2014] $)
 
+    $( Recover a rational number from its canonical representation. $)
     qeqnumdivden $p |- ( A e. QQ -> A = ( ( numer ` A ) / ( denom ` A ) ) ) $=
       ( cq wcel cnumer cdenom cgcd co c1 wceq cdiv wa eqidd eqid1 jctir cz cn wb
       cfv qnumcl qdencl qnumdenbi mpd3an23 mpbird simprd ) ABCZADRZAERZFGHIZAUFU
@@ -2575,6 +2570,7 @@ ${
       $.
       $( [13-Sep-2014] $)
 
+    $( Multiplying a rational by its denominator results in an integer. $)
     qmuldeneqnum $p |- ( A e. QQ -> ( A x. ( denom ` A ) ) = ( numer ` A ) ) $=
       ( cq wcel cdenom cfv cmul co cnumer cdiv qeqnumdivden oveq1d cc cc0 wne cz
       wceq qnumcl zcn syl cn qdencl nncn nnne0 divcan1 syl3anc eqtrd ) ABCZAADEZ
@@ -2582,7 +2578,7 @@ ${
       AUAZUHUBSUGUOUNUPUHUCSUIUHUDUEUF $.
       $( [13-Sep-2014] $)
 
-    $( redundant with divides2 $)
+    $( Accidental reproof of ~ divides2 . $)
     zdivnndivides $p |- ( ( A e. ZZ /\ B e. NN ) -> ( B || A <-> ( A / B ) e. ZZ ) ) $=
       ( va cz wcel cn wa cdivides wbr cv cmul co wceq wrex wb nnz adantl syl2anc
       cdiv cc simpl divides zcn nncn ad2antlr mulcom eqeq1d rexbidva zdiv ancoms
@@ -2591,16 +2587,19 @@ ${
       EBUDUEUPBUFRUGUHUMULVBVCOCBAUIUJUK $.
       $( [13-Sep-2014] $)
 
+    $( A number is an integer iff its negative is. $)
     znegclb $p |- ( A e. CC -> ( A e. ZZ <-> -u A e. ZZ ) ) $=
       ( cc wcel cz cneg znegcl negneg eleq1d syl5ib impbid2 ) ABCZADCZAEZDCZAFNM
       EZDCKLMFKOADAGHIJ $.
       $( [13-Sep-2014] $)
 
+    $( A number which is less than zero is not zero. $)
     lt0ne0 $p |- ( ( A e. RR /\ A < 0 ) -> A =/= 0 ) $=
       ( cr wcel cc0 clt wbr wa wne 0re ltne mp3an2 necomd ) ABCZADEFZGDAMDBCNDAH
       IADJKL $.
       $( [13-Sep-2014] $)
 
+    $( Move negation into the denominator of a division. $)
     divneg2 $p |- ( ( A e. CC /\ B e. CC /\ B =/= 0 ) -> -u ( A / B ) = ( A / -u B ) ) $=
       ( cc wcel cc0 wne w3a cdiv cneg divneg negneg 3ad2ant2 eqcomd oveq2d simp1
       co wceq negcl negeq0 biimprd necon3d imp 3adant1 div2neg syl3anc 3eqtrd )
@@ -2609,7 +2608,7 @@ ${
       AULUDUEUF $.
       $( [13-Sep-2014] $)
 
-    $( redundant with divides2 $)
+    $( Accidental reproof of ~ divides2 . $)
     zdivzne0divides $p |- ( ( A e. ZZ /\ B e. ZZ /\ B =/= 0 ) -> ( B || A <-> ( A / B ) e. ZZ ) ) $=
       ( cz wcel cc0 cdivides wbr cdiv co wb wa clt cneg simpll ad2antlr sylancom
       cr cn syl2anc cc wne wo zre adantl 0re lttri2 sylancl znegcl lt0neg1 elnnz
@@ -2623,6 +2622,7 @@ ${
       VQWRWKVDXCXDXEABVEVBVFVGVHVIWBWDWAWBWDKVOBRDZWAVOVPWDNVPWDXFVOXFVPWDKBUJUL
       VJABUMSVIVKVMVN $.
 
+    $( Strong form of ~ divides2 for natural numbers. $)
     nndivdivides $p |- ( ( A e. NN /\ B e. NN ) -> ( B || A <-> ( A / B ) e. NN ) ) $=
       ( cn wcel wa cdivides wbr cc0 cdiv co clt cz nnz zdivnndivides nnre adantr
       wb cr nngt0 adantl sylan anbi1d divgt0 syl22anc biantrud elnnz a1i 3bitr4d
@@ -2631,6 +2631,7 @@ ${
       QUKUMUFUGUH $.
       $( [13-Sep-2014] $)
 
+    $( Calculate the reduced form of a quotient using ` gcd ` . $)
     divnumden $p |- ( ( A e. ZZ /\ B e. NN ) -> ( ( numer ` ( A / B ) ) = ( A / ( A gcd B ) ) /\ ( denom ` ( A / B ) ) = ( B / ( A gcd B ) ) ) ) $=
       ( cz wcel cn wa cgcd co cdiv c1 cfv wb cdivides wbr adantl syl2anc cc0 wne
       wceq cc cnumer cdenom cq znq simpl gcddvds simpld wn nnne0 bnj1540 intnand
@@ -2644,6 +2645,7 @@ ${
       QWPXCXAVRVDVEZVQWPXDXAVRUIVEZVRVLPVFVQATDZBTDZWSXCXDWEVOXGVPAVGVHVPXHVOBVD
       OWTXEXFXGXHWSFXCXDFVIWDWCABVRVJVMVKVN $.
 
+    $( Reducing a quotient never increases the denominator. $)
     divdenle $p |- ( ( A e. ZZ /\ B e. NN ) -> ( denom ` ( A / B ) ) <_ B ) $=
       ( cz wcel cn wa cdiv co cfv cle wceq c1 wbr cc0 wn adantl syl cr clt a1i
       cdenom cgcd cnumer divnumden simprd simpl bnj1540 intnand gcdn0cl syl21anc
@@ -2655,6 +2657,7 @@ ${
       NBKVHWHVGBVCPBVDQVEVF $.
       $( [13-Sep-2014] $)
 
+    $( A rational is positive iff its canonical numerator is. $)
     qnumgt0 $p |- ( A e. QQ -> ( 0 < A <-> 0 < ( numer ` A ) ) ) $=
       ( cq wcel cc0 clt wbr cdenom cfv cmul co cnumer cr wb 0reALT a1i cn qdencl
       qre nnre syl nngt0 ltmul1 syl112anc cc wceq nncn 3syl qmuldeneqnum breq12d
@@ -2663,16 +2666,19 @@ ${
       NUJUGAUHUIUK $.
       $( [15-Sep-2014] $)
 
+    $( A rational is positive iff its canonical numerator is a natural number. $)
     qgt0numnn $p |- ( ( A e. QQ /\ 0 < A ) -> ( numer ` A ) e. NN ) $=
       ( cq cc0 clt wbr wa cnumer cfv cz cn qnumcl adantr qnumgt0 biimpa sylanbrc
       wcel elnnz ) ABPZCADEZFAGHZIPZCTDEZTJPRUASAKLRSUBAMNTQO $.
       $( [15-Sep-2014] $)
 
+    $( The square of a rational is rational. $)
     qsqcl $p |- ( A e. QQ -> ( A ^ 2 ) e. QQ ) $=
       ( cq wcel c2 cexp co cmul cc wceq qcn sqval syl qmulcl anidms eqeltrd ) AB
       CZADEFZAAGFZBPAHCQRIAJAKLPRBCAAMNO $.
       $( [15-Sep-2014] $)
 
+    $( Squaring commutes with GCD, in particular two coprime numbers have coprime squares. $)
     nn0gcdsq $p |- ( ( A e. NN0 /\ B e. NN0 ) -> ( ( A gcd B ) ^ 2 ) = ( ( A ^ 2 ) gcd ( B ^ 2 ) ) ) $=
       ( cn0 wcel cn cc0 wceq wo cgcd co c2 cexp wa cabs cfv syl oveq1d sq0 oveq1
       cz elnn0 sqgcd cc nncn abssq nnz gcd0id zsqcl 3syl eqtrd 3eqtr4d adantl wb
@@ -2688,6 +2694,7 @@ ${
       FFWCFWCFIRRVCVAVDVEXEVOXFKLAFBFIVFQVLVNVQWCVRWCIWMXDVGVHVIVJ $.
       $( [15-Sep-2014] $)
 
+    $( ~ nn0gcdsq extended to integers by symmetry. $)
     zgcdsq $p |- ( ( A e. ZZ /\ B e. ZZ ) -> ( ( A gcd B ) ^ 2 ) = ( ( A ^ 2 ) gcd ( B ^ 2 ) ) ) $=
       ( cz wcel wa cgcd co cexp cabs cfv gcdabs eqcomd cn0 wceq nn0abscl absresq
       c2 cr zre syl oveq1d nn0gcdsq syl2an adantr adantl oveq12d 3eqtrd ) ACDZBC
@@ -2696,6 +2703,7 @@ ${
       NUIVBUHBSUEBPTUFUG $.
       $( [15-Sep-2014] $)
 
+    $( Squaring a rational squares its canonical components. $)
     numdensq $p |- ( A e. QQ -> ( ( numer ` ( A ^ 2 ) ) = ( ( numer ` A ) ^ 2 ) /\ ( denom ` ( A ^ 2 ) ) = ( ( denom ` A ) ^ 2 ) ) ) $=
       ( cq wcel cnumer cfv c2 cexp co cdenom cgcd c1 wceq cdiv wa cz syl syl3anc
       cn oveq1d cc qsqcl qnumcl qdencl nnsqcl qnumdenbi qnumdencoprm nnz syl2anc
@@ -2707,16 +2715,19 @@ ${
       HVTVGVBPVDVSWIVTVGUSPVEVGUTQVAVC $.
       $( [15-Sep-2014] $)
 
+    $( Square commutes with canonical numerator. $)
     numsq $p |- ( A e. QQ -> ( numer ` ( A ^ 2 ) ) = ( ( numer ` A ) ^ 2 ) ) $=
       ( cq wcel c2 cexp co cnumer cfv wceq cdenom numdensq simpld ) ABCADEFZGHAG
       HDEFIMJHAJHDEFIAKL $.
       $( [15-Sep-2014] $)
 
+    $( Square commutes with canonical denominator. $)
     densq $p |- ( A e. QQ -> ( denom ` ( A ^ 2 ) ) = ( ( denom ` A ) ^ 2 ) ) $=
       ( cq wcel c2 cexp co cnumer cfv wceq cdenom numdensq simprd ) ABCADEFZGHAG
       HDEFIMJHAJHDEFIAKL $.
       $( [15-Sep-2014] $)
 
+    $( A rational is an integer iff it has denominator 1. $)
     qden1elz $p |- ( A e. QQ -> ( ( denom ` A ) = 1 <-> A e. ZZ ) ) $=
       ( cq wcel cdenom cfv c1 wceq cz wa cnumer cdiv co adantr zcn div1 3syl cle
       cc wbr cn qeqnumdivden oveq2 adantl qnumcl 3eqtrd eqeltrd simpr fveq2d 1nn
@@ -2727,6 +2738,7 @@ ${
       R $.
       $( [15-Sep-2014] $)
 
+    $( If an integer has a rational square root, that root is must be an integer. $)
     zsqrelqelz $p |- ( ( A e. ZZ /\ ( sqr ` A ) e. QQ ) -> ( sqr ` A ) e. ZZ ) $=
       ( cz wcel cfv cq cdenom c1 wceq c2 co a1i syl adantr wb qden1elz adantl cr
       cexp cc0 cle csqr wa sq1 cc zcn sqrth fveq2d simpl zq eqtrd densq 3eqtr2rd
@@ -2738,7 +2750,7 @@ ${
       HVIOPVG $.
       $( [15-Sep-2014] $)
 
-    $( trap ( sqr ` A ) with sqrlt, then use btwnnz and zsqrelqelz $)
+    $( Any integer strictly between two adjacent squares has an irrational square root. $)
     nonsq $p |- ( ( ( A e. NN0 /\ B e. NN0 ) /\ ( ( B ^ 2 ) < A /\ A < ( ( B + 1 ) ^ 2 ) ) ) -> -. ( sqr ` A ) e. QQ ) $=
       ( cn0 wcel wa c2 cexp co clt wbr cz ad2antlr cr nn0re ad2antrr syl cc0 cle
       nn0z nn0ge0 c1 caddc csqr cfv cq wn simprl cc wceq recnd sqrth breqtrrd wb
@@ -2751,14 +2763,50 @@ ${
       AWOBVDPVKXBVJVRVKVOCDXBBVEVOTPLVTVOUQURUSBVTVBVCVSAKDZWAWBVFVJXCVKVRASOXCW
       AWBAVGVHPVI $.
       $( [15-Sep-2014] $)
+  $}
 
-    $}
-$}
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Miscellanea for Lagrange's theorem
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
-$( Lagrange's diophantine approximation theorem, lemma 62 in [vandenDries] $)
+  ${
+    $( Two elements in a half-open interval have separation _strictly_ less than the difference between the endpoints. $)
+    icodiamlt $p |- ( ( ( A e. RR /\ B e. RR ) /\ ( C e. ( A [,) B ) /\ D e. ( A [,) B ) ) ) -> ( abs ` ( C - D ) ) < ( B - A ) ) $=
+      ( cr wcel wa co clt wbr cle w3a elico2 wb resubcl syl2anc cc syl3anc mpbid
+      cmin cico cabs cfv cxr wi rexr anbi12d biimpd sylan2 simprl1 simplr simpll
+      cneg simprr1 abslt negsubdi2 simprl2 lesub1 simprr3 ltsub2 lelttrd eqbrtrd
+      wceq recnd simprl3 ltsub1 simprr2 lesub2 ltletrd mpbir2and ex syld imp ) A
+      EFZBEFZGZCABUAHZFZDVQFZGZCDTHZUBUCBATHZIJZVPVTCEFZACKJZCBIJZLZDEFZADKJZDBI
+      JZLZGZWCVOVNBUDFZVTWLUEBUFVNWMGZVTWLWNVRWGVSWKABCMABDMUGUHUIVPWLWCVPWLGZWC
+      WBUMZWAIJZWAWBIJZWOWAEFZWBEFZWCWQWRGNWOWDWHWSWDWEWFWKVPUJZWHWIWJWGVPUNZCDO
+      PZWOVOVNWTVNVOWLUKZVNVOWLULZBAOPZWAWBUOPWOWPABTHZWAIWOBQFAQFWPXGVCWOBXDVDW
+      OAXEVDBAUPPWOXGCBTHZWAWOVNVOXGEFXEXDABOPWOWDVOXHEFXAXDCBOPXCWOWEXGXHKJZWDW
+      EWFWKVPUQWOVNWDVOWEXINXEXAXDACBURRSWOWJXHWAIJZWHWIWJWGVPUSWOWHVOWDWJXJNXBX
+      DXADBCUTRSVAVBWOWABDTHZWBXCWOVOWHXKEFXDXBBDOPXFWOWFWAXKIJZWDWEWFWKVPVEWOWD
+      VOWHWFXLNXAXDXBCBDVFRSWOWIXKWBKJZWHWIWJWGVPVGWOVNWHVOWIXMNXEXBXDADBVHRSVIV
+      JVKVLVM $.
+      $( [12-Sep-2014] $)
 
-${
+    $( Modular reduction produces a half-open interval. $)
+    modelico $p |- ( ( A e. RR /\ B e. RR+ ) -> ( A mod B ) e. ( 0 [,) B ) ) $=
+      ( cr wcel crp wa cmo co cc0 cico cle wbr clt cxr w3a 0reALT rpre rexr syl
+      wb adantl elico2 sylancr modcl modge0 modlt mpbir3and ) ACDZBEDZFZABGHZIBJ
+      HDZUKCDZIUKKLZUKBMLZUJICDBNDZULUMUNUOOTPUIUPUHUIBCDUPBQBRSUAIBUKUBUCABUDAB
+      UEABUFUG $.
+      $( [12-Sep-2014] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Lagrange's rational approximation theorem
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
     $d x a b c $.  $d A a b c d x y z w $.  $d B a b c d x y z w $.
+    $( Lemma for ~ irrapx1 .  Divides the unit interval into ` A ` half-open sections and using the pigeonhole principle ~ fphpdo finds two multiples of ` A ` in the same section mod 1. $)
     irrapxlem1 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 0 ... B ) E. y e. ( 0 ... B ) ( x < y /\ ( |_ ` ( B x. ( ( A x. x ) mod 1 ) ) ) = ( |_ ` ( B x. ( ( A x. y ) mod 1 ) ) ) ) ) $=
       ( wcel cc0 co c1 cmul cmo cfl cr cz a1i cle wbr clt sylancl syl wb crp cfz
       va cn wa cmin cv cfv wss cuz fzssuz uzssz zssre sstri cvv ovex csdm 0z nnz
@@ -2787,6 +2835,7 @@ ${
       LUUADIUWTYKYTHJYJYSCIXSXTYAYBYC $.
       $( [12-Sep-2014] $)
 
+    $( Lemma for ~ irrapx1 .  Two multiples in the same bucket means they are very close mod 1. $)
     irrapxlem2 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 0 ... B ) E. y e. ( 0 ... B ) ( x < y /\ ( abs ` ( ( ( A x. x ) mod 1 ) - ( ( A x. y ) mod 1 ) ) ) < ( 1 / B ) ) ) $=
       ( wcel wa clt wbr cmul co c1 cfv wceq cc0 cmin cabs cr syl2anc cc recnd cn
       crp cv cmo cfl cfz wrex cdiv irrapxlem1 caddc nnre ad2antrr rpre ad3antrrr
@@ -2816,6 +2865,7 @@ ${
       TYDXDVOVEXEYTKSEUWSUWKUWCKMYTKUWATUWTUWMKDXFVOXGXHXIXJXKXKXL $.
       $( [12-Sep-2014] $)
 
+    $( Lemma for ~ irrapx1 .  By subtraction, there is a multiple very close to an integer. $)
     irrapxlem3 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 1 ... B ) E. y e. NN0 ( abs ` ( ( A x. x ) - y ) ) < ( 1 / B ) ) $=
       ( wcel wa clt wbr co c1 cmin cabs cc0 cle syl syl2anc wceq cr cc recnd crp
       va vb cn cv cmul cmo cfv cdiv cfz cn0 irrapxlem2 cfl cz wb simplrr elfzelz
@@ -2853,8 +2903,7 @@ ${
       UTYPGUYEUYBUUSLUUBUUPUURKXTXMXRYAVFYCYBYD $.
       $( [13-Sep-2014] $)
 
-
-    $( elimanate ranges, use positivity of the input to force positivity of the output by increasing B as needed $)
+    $( Lemma for ~ irrapx1 . Eliminate ranges, use positivity of the input to force positivity of the output by increasing ` B ` as needed. $)
     irrapxlem4 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. NN E. y e. NN ( abs ` ( ( A x. x ) - y ) ) < ( 1 / if ( x <_ B , B , x ) ) ) $=
       ( va wcel cn wa co cmin c1 cdiv cle wbr clt cr cc0 syl2anc syl wb crp cmul
       vb cabs cfv cfl caddc cif cn0 wrex cfz simpl rpreccl rprege0 3syl flge0nn0
@@ -2897,7 +2946,7 @@ ${
       OVVGUURVVEUDVVGUUPUUAUUQJUUOYTCUBYEYFYHVVGUVAUVTKLVVGUUTUVSUUOYTDUUOYTDMYG
       VVGYIYJYKYLBUCYDZVVFUUDUWAOVVHVVEUUCUDUUQUUBUUAJYEYHYMYNXOYOYPYPXE $.
 
-    $( switching to real intervals and fraction syntax $)
+    $( Lemma for ~ irrapx1 . Switching to real intervals and fraction syntax. $)
     irrapxlem5 $p |- ( ( A e. RR+ /\ B e. RR+ ) -> E. x e. QQ ( 0 < x /\ ( abs ` ( x - A ) ) < B /\ ( abs ` ( x - A ) ) < ( ( denom ` x ) ^ -u 2 ) ) ) $=
       ( crp wcel cmul co cabs cfv c1 cdiv cle wbr clt cc0 cr syl syl2anc wceq cc
       va vb wa cv cmin cfl caddc cif cn wrex cdenom c2 cneg cexp w3a simpl simpr
@@ -2960,7 +3009,7 @@ ${
       UUR $.
       $( [13-Sep-2014] $)
 
-    $( explicit description of a non-closed set $)
+    $( Lemma for ~ irrapx1 .  Explicit description of a non-closed set. $)
     irrapxlem6 $p |- ( ( A e. RR+ /\ B e. RR+ ) -> E. x e. { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ( abs ` ( x - A ) ) < B ) $=
       ( va crp wcel wa cc0 cv clt wbr cmin co cabs cfv cdenom cexp cq wrex breq2
       c2 cneg w3a crab irrapxlem5 simplr simpr1 simpr3 oveq1 fveq2d fveq2 oveq1d
@@ -2972,7 +3021,7 @@ ${
       URWMVIVLVPUSWAVLAVHWJAEUOZVTVKDKWRVSVJOVRVHCMUJUKUTVAVBVFVCVD $.
       $( [13-Sep-2014] $)
 
-    $( every irrational number has an infinite number of good rational approximations $)
+    $( Lagrange's rational approximation theorem.  Every positive irrational number has infinitely many rational approximations which are closer than the inverse squares of their reduced denominators.  Lemma 62 in [vandenDries]. $)
     irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ~~ NN ) $=
       ( vb va crp cq wcel cv clt wbr cmin co cabs cfv cn cdom cen cvv com cr cc0
       cdif cdenom c2 cneg cexp wa crab wss qex rabex ssrab2 ssdomg mp2 qnnen a1i
@@ -2984,7 +3033,13 @@ ${
       FGWKBEFVJWBFBWGVHVIVSWMDEVSWNWLEGWMWOCABWLVKVLVMDCWBBVNVOOSWBVPURWBOVQVR
       $.
       $( [14-Sep-2014] $)
-$}
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Lagrange's rational approximation theorem
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
 $c Pell1QR Pell14QR Pell1234QR PellFund []NN $.
 
@@ -8596,7 +8651,7 @@ wopprc $p |- ( ( A e. _V /\ B e. _V ) <-> -. 1o e. { { { A } , (/) } , { { B } }
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Crypt
+    Attic
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
@@ -8628,6 +8683,22 @@ $)
     ( ax-17 n0reeor ) ABCDEFADGBCGH $.
     $( [5-Oct-2014] $)
   $}
+
+
+$( early warmup proofs.  I may find a use for Id ` x. later $)
+
+wu0 $p |- ( ( ZZ ^m ( 1 ... 0 ) ) X. { 0 } ) e. ( ZZ ^m ( ZZ ^m ( 1 ... 0 ) ) ) $= ( cc0 csn cz c1 cfz co cmap cxp wss wcel 0z snssi ax-mp zex ovex mapss wf elexi fconst snex elmap mpbir sselii ) ABZCDAEFZGFZGFZCUFGFZUFUDHZUDCIZUGUHIACJUJKACLMUDCUFNCUEGOZPMUIUGJUFUDUIQUFAACKRSUDUFUIATUKUAUBUC $.
+${
+    $d u x $.
+    $d a b $.
+    wu8 $p |- ( u e. CC -> ( A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) -> u = 1 ) ) $= ( cv cc wcel cmul co wceq wa wral c1 wi ax-1cn ax-17 oveq2 id eqeq12d a1i simpl syld oveq1 anbi12d rcla4 ax-mp mulid1 syl simpr eqtr3d ex ) BCZDEZUJACZFGZULHZULUJFGZULHZIZADJZUJKFGZKHZKUJFGZKHZIZUJKHZURVCLZUKKDEVEMUQVCAKDVCANULKHZUNUTUPVBVFUMUSULKULKUJFOVFPZQVFUOVAULKULKUJFUAVGQUBUCUDRUKVCUTVDVCUTLUKUTVBSRUKUTVDUKUTIZUSUJKVHUKUSUJHUKUTSUJUEUFUKUTUGUHUITT $.  $( [30-Aug-2014] $)
+    wu7 $p |- ( u e. CC -> ( u = 1 -> A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) ) ) $= ( cv c1 wceq cmul co wa cc wral wi wcel mulid2 mulid1 jca a1i ralrimiv ax-17 eqcom eqeq1d biimpi oveq1d oveq2d anbi12d ralbid mpbid ) BCZDEZUGACZFGZUIEZUIUGFGZUIEZHZAIJZKUGILUHDUIFGZUIEZUIDFGZUIEZHZAIJUOUHUTAIUIILZUTKUHVAUQUSUIMUINOPQUHUTUNAIUHARUHUQUKUSUMUHUPUJUIUHDUGUIFUHDUGEUGDSUAZUBTUHURULUIUHDUGUIFVBUCTUDUEUFP $. $( [30-Aug-2014] $)
+    wu6 $p |- ( ( T. /\ 1 e. C /\ u e. CC ) -> ( A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) <-> u = 1 ) ) $= ( wtru c1 wcel cv cc w3a cmul co wceq wa wral wb simp3 wu8 wu7 impbid syl ) DECFZBGZHFZIUCUBAGZJKUDLUDUBJKUDLMAHNZUBELZODUAUCPUCUEUFABQABRST $.  $( [30-Aug-2014] $)
+    wu5 $p |- ( iota_ u e. CC A. x e. CC ( ( u x. x ) = x /\ ( x x. u ) = x ) ) = 1 $= ( wtru c1 cc wcel wa cv cmul co wceq wral crio tru ax-1cn pm3.2i wu6 riota5 ax-mp ) CDEFZGBHZAHZIJUBKUBUAIJUBKGAELZBEMDKCTNOPCUCBEDABEQRS $.  $( [30-Aug-2014] $)
+    wu10 $p |- x. : ( CC X. CC ) -onto-> CC $= ( vb va cc cxp cmul wfo wf cv cfv wceq wrex wral dffo3 ax-mulopr wcel c1 wa a1i jca syl cop ax-1cn id opelxpi co mulid2 eqcomd df-ov eqtrd fveq2 eqeq2d rcla4ev rgen mpbir2an ) CCDZCEFUOCEGAHZBHZEIZJZBUOKZACLBAUOCEMNUTACUPCOZPUPUAZUOOZUPVBEIZJZQUTVAVCVEVAPCOZVAQVCVAVFVAVFVAUBRVAUCSPUPCCUDTVAUPPUPEUEZVDVAVGUPUPUFUGVGVDJVAPUPEUHRUISUSVEBVBUOUQVBJURVDUPUQVBEUJUKULTUMUN $.  $( [30-Aug-2014] $)
+    wu9 $p |- ( Id ` x. ) = 1 $= ( va vb cmul cgi cfv cv co wceq wa cc wral crio c1 cvv wcel mulex crn cxp wfo ax-mp wu10 forn eqcomi gidval wu5 eqtri ) CDEZAFZBFZCGUIHUIUHCGUIHIBJKAJLZMCNOUGUJHPBACNJCQZJJJRZJCSUKJHUAULJCUBTUCUDTBAUEUF $.  $( [30-Aug-2014] $)
+$}
+
 
 
 $( TODO / IWBNI
