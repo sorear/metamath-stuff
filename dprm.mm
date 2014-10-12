@@ -4449,7 +4449,7 @@ $)
 
   $}
 
-$( Goal for the next section is to define and study the Robertson-Matijasevi&#269; X and Y sequences $)
+$( Goal for the next section is to define and study the Robertson-Matiyasevich; X and Y sequences $)
 
 $c rmX rmY $.
 
@@ -8766,13 +8766,13 @@ $}
 
     $}
 
-$( ---- MATIJASEVI&#268; 1 ---- $)
+$( ---- MATIYASEVICH 1 ---- $)
 $( Diophantine sets are semidecidable because polynomial functions are computable. $)
 
-$( ---- MATIJASEVI&#268; 2 ---- $)
+$( ---- MATIYASEVICH 2 ---- $)
 $( Semidecidable sets are decidable by Turing machines, which can be expressed as vectorial and thus exponential satisfaction problems and are Diophantine. $)
 
-$( ---- MATIJASEVI&#268; 3 ---- $)
+$( ---- MATIYASEVICH 3 ---- $)
 $( Diophantine <-> Semidecidable.  There exist non-decidable diophantine sets. $)
 
 $( Unrelated: Wiener pairs treat proper classes symmetrically $)
