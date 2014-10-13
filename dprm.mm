@@ -6391,7 +6391,7 @@ $)
   ${
     $d a b A $.  $d a b B $.  $d a b N $.
     $( Lemma 2.15 of [JonesMatijasevic].  ` rmY ` is a polynomial for fixed N, so has the expected congruence property. $)
-    jm2.15nn0ALT $p |- ( ( A e. ( ZZ>= ` 2 ) /\ B e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A - B ) || ( ( A rmY N ) - ( B rmY N ) ) ) $=
+    jm2.15nn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ B e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A - B ) || ( ( A rmY N ) - ( B rmY N ) ) ) $=
       ( c2 wcel cmin co crmy cdivides wbr wi cc0 c1 syl2anc wceq oveq12d breq2d
       cz oveq2 imbi2d va vb cuz cfv wa cv caddc eluzelz zsubcl syl2an 0z congid
       cn0 sylancl rmy0 oveqan12d breqtrrd 1z rmy1 cn pm3.43 w3a 3ad2ant2 2z a1i
@@ -6426,7 +6426,7 @@ $)
   ${
     $d a b A $.  $d a b N $.
     $( Lemma 2.16 of [JonesMatijasevic].  This may be regarded as a special case of ~ jm2.15nn0 if ` rmY ` is redefined as described in ~ rmyluc . $)
-    jm2.16nn0ALT $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A - 1 ) || ( ( A rmY N ) - N ) ) $=
+    jm2.16nn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A - 1 ) || ( ( A rmY N ) - N ) ) $=
       ( wcel c2 c1 cmin co crmy cdivides wbr wi cc0 cz syl cmul syl2anc 3adant3
       wa wceq oveq12d va vb cn0 cuz cv caddc eluzelz peano2zm 0z congid sylancl
       cfv rmy0 oveq1d breqtrrd 1z cn pm3.43 w3a adantl eluzel2 simpr nnz adantr
@@ -6501,12 +6501,12 @@ $)
     jm2.27a $p |- ( ph -> C = ( A rmY B ) ) $=
       ( crmy co wceq c2 cmul cmin cdivides wbr cneg wo cz wcel 2z cn nnz zmulcl
       syl sylancr cn0 nn0z congsym syl22anc cuz cfv cc0 cle nn0ge0 rmy0 3brtr4d
-      c1 eqcomd wb 0z lermy syl3anc mpbird elnn0z sylanbrc jm2.16nn0ALT syl2anc
+      c1 eqcomd wb 0z lermy syl3anc mpbird elnn0z sylanbrc jm2.16nn0 syl2anc
       oveq1d breqtrrd wa wi peano2zm zsubcl dvdstr mp2and congtr syl222anc orcd
       a1i cexp caddc zsqcl dvdsmul2 peano2zdi dvdsmultr2 mpd eqtr3d 3brtr3d clt
       cr zssre sseldi nn0p1nn nngt0 2nn ltrmy elnnz mpbid eqeltrrd w3a elfz2nn0
       3syl nnnn0 mpbir3and nnsqcl nnmulcl mulgt0 jm2.20nn muldvds2 eqbrtrd crmx
-      dvdscmul eluzelz eqbrtrrd jm2.15nn0ALT oveq12d jm2.26 dvdsacongtr acongtr
+      dvdscmul eluzelz eqbrtrrd jm2.15nn0 oveq12d jm2.26 dvdsacongtr acongtr
       frmy fovcl cfz rmygeid acongeq oveq2d eqtr4d ) ADBFVDVEZBCVDVEUQACFBVDACF
       VFZVGDVHVEZCFVIVEVJVKUVECFVLZVIVEVJVKVMZAUVEVNVOZCVNVOZHVNVOZFVNVOZUVECHV
       IVEVJVKZUVECHVLVIVEVJVKZVMUVEHFVIVEZVJVKUVEHUVFVIVEZVJVKVMZUVGAVGVNVOZDVN
@@ -6622,7 +6622,7 @@ $)
       lemulge11 mpbird dvdscmul rmydbl 2cn mul32 nngt0 ltrmy elnnz nndivdivides
       eqcomd nnsqcl nnm1nn0 nncn nnne0 divcl npcan divcan1 pncan2 3eqtrd congid
       nnsscn eqbrtrd muldvds1 dvdsmultr2 subcl subsub23 congsub congmul congadd
-      wne mulcl mulid2 pncan3 jm2.15nn0ALT jm2.16nn0ALT rmygeid ) AEUEUFZGUEUFZ
+      wne mulcl mulid2 pncan3 jm2.15nn0 jm2.16nn0 rmygeid ) AEUEUFZGUEUFZ
       HUEUFZUGIUEUFZJUEUFZKUEUFZUGLUEUFZEUHUIUJZBUHUIUJZUKULUJZDUHUIUJZUMUJZULU
       JZUKUNZHUHUIUJZUWSGUHUIUJZUMUJZULUJZUKUNZIUHUOUPZUFZUGZKUHUIUJZIUHUIUJUKU
       LUJZJUHUIUJZUMUJZULUJZUKUNZGLUKUQUJZUHUWTUMUJZUMUJZUNZHIBULUJZURUSZUGZUTU
@@ -6929,7 +6929,7 @@ $)
 
   ${
   $d a b A $.  $d a b N $.
-  jm2.16nn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( ( A - 1 ) || ( ( A rmX N ) - 1 ) /\ ( A - 1 ) || ( ( A rmY N ) - N ) ) ) $=
+  jm2.16nn0OLD $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( ( A - 1 ) || ( ( A rmX N ) - 1 ) /\ ( A - 1 ) || ( ( A rmY N ) - N ) ) ) $=
     ( wcel c1 cmin crmx cdivides wbr crmy cc0 caddc wceq oveq2 oveq1d oveq12d
     co breq2d cz cmul syl2anc va vb cn0 c2 cuz cfv wa cv wi id anbi12d imbi2d
     weq eluzelz peano2zm syl 1z congid sylancl rmx0 breqtrrd 0z rmy0 jca cexp
@@ -6971,7 +6971,7 @@ $)
   $( changes of plan: do use Lucas formula, explicit congruence lemmata $)
   ${
   $d a b A $.  $d a b B $.  $d a b N $.
-  jm2.15nn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ B e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( ( A - B ) || ( ( A rmX N ) - ( B rmX N ) ) /\ ( A - B ) || ( ( A rmY N ) - ( B rmY N ) ) ) ) $=
+  jm2.15nn0OLD $p |- ( ( A e. ( ZZ>= ` 2 ) /\ B e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( ( A - B ) || ( ( A rmX N ) - ( B rmX N ) ) /\ ( A - B ) || ( ( A rmY N ) - ( B rmY N ) ) ) ) $=
     ( wcel cmin co crmx cdivides wbr crmy wa cc0 c1 wceq oveq2 oveq12d breq2d
     cz cmul syl2anc va vb c2 cuz cfv cn0 cv anbi12d imbi2d weq eluzelz zsubcl
     wi caddc syl2an 1z congid sylancl rmx0 oveqan12d breqtrrd 0z rmy0 jca w3a
