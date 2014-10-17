@@ -1975,6 +1975,29 @@ $)
     FDSFGRSPFOSPDQABCIJOQKLSMN $.
     $( [16-Oct-2014] $)
 
+  ${
+    ftp.a $e |- A e. _V $.
+    ftp.b $e |- B e. _V $.
+    ftp.c $e |- C e. _V $.
+    ftp.d $e |- X e. _V $.
+    ftp.e $e |- Y e. _V $.
+    ftp.f $e |- Z e. _V $.
+    ftp.g $e |- A =/= B $.
+    ftp.h $e |- A =/= C $.
+    ftp.i $e |- B =/= C $.
+
+    $( A function with a domain of three elements. $)
+    ftp $p |- { <. A , X >. , <. B , Y >. , <. C , Z >. } : { A , B , C } -->
+        { X , Y , Z } $=
+      ( ctp cop wf cpr wceq csn cun wa cin wne fpr ax-mp eqid1 fsn mpbir pm3.2i
+      c0 wcel wn wo necomi df-ne mpbi pm3.2ni elpr mtbir disjsn fun mp2an df-tp
+      feq1i feq23i bitri ) ABCPZDEFPZADQZBEQZCFQZPZRZABSZCUAZUBZDESZFUAZUBZVKVL
+      SZVMUAZUBZRZVPVSWBRZVQVTWCRZUCVPVQUDULTZWEWFWGABUEWFMABDEGHJKUFUGWGWCWCTW
+      CUHCFWCILUIUJUKWHCVPUMZUNWICATZCBTZUOWJWKCAUEWJUNACNUPCAUQURCBUEWKUNBCOUP
+      CBUQURUSCABIUTVAVPCVBUJVPVQVSVTWBWCVCVDVOVIVJWDRWEVIVJVNWDVKVLVMVEVFVIVJV
+      RWAWDABCVEDEFVEVGVHUJ $.
+      $( [17-Oct-2014] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -2088,6 +2111,57 @@ $)
       URWQUCUYAUWIUWRUXQUUSXKFEUYDCUWLUXAUXGUXJUUTWJUVAUWQUWAUXOUWBUWQUVSUXNEUV
       TAUWPUVRUVCUVDUVEUVFUVGUVHUVIUVJUVK $.
       $( [16-Oct-2014] $)
+  $}
+
+  ${
+    $d ph b $.  $d A a b $.  $d B a b $.  $d F a b $.
+
+    rabrenfdioph $p |- ( ( B e. NN0 /\ F : ( 1 ... A ) --> ( 1 ... B ) /\
+          { a e. ( NN0 ^m ( 1 ... A ) ) | ph } e. ( Dioph ` A ) ) ->
+        { b e. ( NN0 ^m ( 1 ... B ) ) | [ ( b o. F ) / a ] ph } e.
+          ( Dioph ` B ) ) $=
+      ( cn0 wcel c1 cfz co wf cmap crab cdioph cfv w3a cv wa ovex simplr mapco2
+      ccom wsbc wceq simpr nn0ex syl2anc ax-17 elrabsf syl6bbr rabbidva 3adant3
+      biantrurd diophren 3coml eqeltrd ) CGHZIBJKZICJKZDLZAEGUSMKZNZBOPHZQAEFRZ
+      DUCZUDZFGUTMKZNZVFVCHZFVHNZCOPZURVAVIVKUEVDURVASZVGVJFVHVMVEVHHZSZVGVFVBH
+      ZVGSVJVOVPVGVOVNVAVPVMVNUFURVAVNUAVEGUTDUSUGICJTIBJTUBUHUNAEFVFVBVEVBHEUI
+      UJUKULUMVDURVAVKVLHVCDCBFUOUPUQ $.
+      $( [17-Oct-2014] $)
+  $}
+
+
+  ${
+    $d ps a $.  $d ph b $.  $d X a b $.  $d Y a b $.  $d Z a b $.  $d N a b $.
+    rabren3dioph.a $e |- ( ( ( a ` 1 ) = ( b ` X ) /\ ( a ` 2 ) = ( b ` Y ) /\
+      ( a ` 3 ) = ( b ` Z ) ) -> ( ph <-> ps ) ) $.
+    rabren3dioph.b $e |- X e. ( 1 ... N ) $.
+    rabren3dioph.c $e |- Y e. ( 1 ... N ) $.
+    rabren3dioph.d $e |- Z e. ( 1 ... N ) $.
+
+    rabren3dioph $p |- ( ( N e. NN0 /\ { a e. ( NN0 ^m ( 1 ... 3 ) ) | ph } e.
+        ( Dioph ` 3 ) ) -> { b e. ( NN0 ^m ( 1 ... N ) ) | ps } e.
+        ( Dioph ` N ) ) $=
+      ( wcel c1 c3 co cfv c2 wceq mp2an cn0 cfz cmap crab cdioph wa cv cop ccom
+      ctp wsbc wb vex tpex coex w3a wfn wne 1ne2 1re 3re 1lt3 ltneii necomi 2re
+      2lt3 cn 1nn elexi 2nn 3nn fntp mp3an tpid1 fvco4 fvtp1 fveq2i eqtri tpid2
+      fvtp2 tpid3 fvtp3 3pm3.2i fveq1 eqeq1d 3anbi123d mpbiri syl sbcie rabbiia
+      a1i wf wss ftp caddc cz fztp ax-mp addcomgi eqtr4i oveq2i eqidd 1p1e2apr1
+      1z df-3 tpeq123d 3eqtr3i feq2i mpbir tpss mpbi fss rabrenfdioph syl5eqelr
+      mp3an2 ) CUAMZAGUANOUBPZUCPUDOUEQMZUFBHUANCUBPZUCPZUDAGHUGZNDUHZREUHZOFUH
+      ZUJZUIZUKZHXTUDZCUEQZYGBHXTYGBULYAXTMABGYFYAYEHUMYBYCYDUNUOGUGZYFSZNYJQZD
+      YAQZSZRYJQZEYAQZSZOYJQZFYAQZSZUPZABULYKUUANYFQZYMSZRYFQZYPSZOYFQZYSSZUPUU
+      CUUEUUGUUBNYEQZYAQZYMYENROUJZUQZNUUJMUUBUUISNRURZNOURZROURZUUKUSONNOUTVAV
+      BVCVDZORROVEVAVFVCVDZNRODEFNVGVHVIZRVGVJVIZOVGVKVIZVLVMZNROUUQVNUUJYAYENV
+      OTUUHDYAUULUUMUUHDSUSUUONRODEFUUQDXSJVIZVPTVQVRUUDRYEQZYAQZYPUUKRUUJMUUDU
+      VCSUUTNROUURVSUUJYAYERVOTUVBEYAUULUUNUVBESUSUUPNRODEFUUREXSKVIZVTTVQVRUUF
+      OYEQZYAQZYSUUKOUUJMUUFUVFSUUTNROUUSWAUUJYAYEOVOTUVEFYAUUMUUNUVEFSUUOUUPNR
+      ODEFUUSFXSLVIZWBTVQVRWCYKYNUUCYQUUEYTUUGYKYLUUBYMNYJYFWDWEYKYOUUDYPRYJYFW
+      DWEYKYRUUFYSOYJYFWDWEWFWGIWHWIWKWJXPXQXSYEWLZXRYHYIMXQDEFUJZYEWLZUVIXSWMZ
+      UVHUVJUUJUVIYEWLNRODEFUUQUURUUSUVAUVDUVGUSUUOUUPWNXQUUJUVIYENNRWOPZUBPZNN
+      NWOPZUVLUJZXQUUJNWPMZUVMUVOSXDNWQWRUVLONUBUVLRNWOPONRUUQUURWSXEWTZXAUVPUV
+      OUUJSXDUVPNNUVNRUVLOUVPNXBUVNRSUVPXCWKUVLOSUVPUVQWKXFWRXGXHXIDXSMZEXSMZFX
+      SMZUPUVKUVRUVSUVTJKLWCDEFXSUVAUVDUVGXJXKXQUVIXSYEXLTAOCYEGHXMXOXN $.
+      $( [17-Oct-2014] $)
   $}
 
 
@@ -7216,7 +7290,7 @@ $)
   ${
     $d A a b $.  $d B a b $.
     jm2.27dlem1.1 $e |- A e. ( 1 ... B ) $.
-    $( Lemma for ~ jm2.27dioph .  Subsitution of a tuple restriction into a projection that doesn't care. $)
+    $( Lemma for ~ rmydioph .  Subsitution of a tuple restriction into a projection that doesn't care. $)
     jm2.27dlem1 $p |- ( a = ( b |` ( 1 ... B ) ) -> ( a ` A ) = ( b ` A ) ) $=
       ( cv c1 cfz co cres wceq cfv fveq1 wcel fvres ax-mp syl6eq ) CFZDFZGBHIZJ
       ZKARLAUALZASLZARUAMATNUBUCKEATSOPQ $.
@@ -7227,7 +7301,7 @@ $)
     jm2.27dlem2.1 $e |- A e. ( 1 ... B ) $.
     jm2.27dlem2.2 $e |- C = ( B + 1 ) $.
     jm2.27dlem2.3 $e |- B e. NN $.
-    $( Lemma for ~ jm2.27dioph .  This theorem is used along with the next three to efficiently infer steps like ` 7 e. ( 1 ... 10 ) ` .  $)
+    $( Lemma for ~ rmydioph .  This theorem is used along with the next three to efficiently infer steps like ` 7 e. ( 1 ... 10 ) ` .  $)
     jm2.27dlem2 $p |- A e. ( 1 ... C ) $=
       ( c1 cfz co wcel cz cle wbr w3a wb 1z caddc cn ax-mp cr nnz peano2z elfz1
       mp2b eqeltri mp2an elfzelz elfzle1 nnrei elfzle2 letrp1 breqtrri mpbir3an
@@ -7239,13 +7313,13 @@ $)
 
   ${
     jm2.27dlem3.1 $e |- A e. NN $.
-    $( Lemma for ~ jm2.27dioph .  Infer membership of the endpoint of a range. $)
+    $( Lemma for ~ rmydioph .  Infer membership of the endpoint of a range. $)
     jm2.27dlem3 $p |- A e. ( 1 ... A ) $=
       ( cn wcel c1 cfz co elfz1end mpbi ) ACDAEAFGDBAHI $.
       $( [11-Oct-2014] $)
 
     jm2.27dlem4.2 $e |- B = ( A + 1 ) $.
-    $( Lemma for ~ jm2.27dioph .  Infer ` NN ` -hood of large numbers. $)
+    $( Lemma for ~ rmydioph .  Infer ` NN ` -hood of large numbers. $)
     jm2.27dlem4 $p |- B e. NN $=
       ( c1 caddc co cn wcel peano2nn ax-mp eqeltri ) BAEFGZHDAHIMHICAJKL $.
       $( [11-Oct-2014] $)
@@ -7255,7 +7329,7 @@ $)
     jm2.27dlem5.1 $e |- A e. NN $.
     jm2.27dlem5.2 $e |- B = ( A + 1 ) $.
     jm2.27dlem5.3 $e |- ( 1 ... B ) C_ ( 1 ... C ) $.
-    $( Lemma for ~ jm2.27dioph .  Used with ~ sselii to infer membership of midpoints of range; ~ jm2.27dlem2 is deprecated. $)
+    $( Lemma for ~ rmydioph .  Used with ~ sselii to infer membership of midpoints of range; ~ jm2.27dlem2 is deprecated. $)
     jm2.27dlem5 $p |- ( 1 ... A ) C_ ( 1 ... C ) $=
       ( c1 cfz co cn wcel wss caddc fzssp1 oveq2i syl6sseqr ax-mp sstri ) GAHIZ
       GBHIZGCHIAJKZSTLDUASGAGMIZHITGAJNBUBGHEOPQFR $.
@@ -7266,7 +7340,7 @@ $)
     $d a b c d e f g h i j k l $.
 
     $( Lemma 2.27 of [JonesMatijasevic] restated in terms of Diophantine sets. $)
-    jm2.27dioph $p |- { a e. ( NN0 ^m ( 1 ... 3 ) ) | ( ( a ` 1 ) e. ( ZZ>= ` 2 ) /\ ( a ` 3 ) = ( ( a ` 1 ) rmY ( a ` 2 ) ) ) } e. ( Dioph ` 3 ) $=
+    rmydioph $p |- { a e. ( NN0 ^m ( 1 ... 3 ) ) | ( ( a ` 1 ) e. ( ZZ>= ` 2 ) /\ ( a ` 3 ) = ( ( a ` 1 ) rmY ( a ` 2 ) ) ) } e. ( Dioph ` 3 ) $=
       ( vi c1 cfv c2 wcel c3 co wceq cn0 crab cexp cmin cmul cdivides wbr mp2an
       wa cmpt c10 vb vd vc ve vg vf vh cv crmy cfz cmap cn w3a caddc cle cc0 wo
       wrex cdioph wb cvv ovex 2nn jm2.27dlem3 df-3 jm2.27dlem2 anbi2d cz simplr
@@ -7395,6 +7469,44 @@ $)
       BYCWJVQWJVOVPSDWJVRRVSWIXQXEWRTXRXDWRAWNGWTXCWQKWTXBWPWLLWTXAWOWMMWSWNEJV
       TWAWAWBWCSWD $.
       $( [15-Oct-2014] $)
+  $}
+
+  ${
+    $d a b c d $.
+    $( X is a Diophantine function. $)
+    rmxdioph $p |- { a e. ( NN0 ^m ( 1 ... 3 ) ) | ( ( a ` 1 ) e. ( ZZ>= ` 2 )
+        /\ ( a ` 3 ) = ( ( a ` 1 ) rmX ( a ` 2 ) ) ) } e. ( Dioph ` 3 ) $=
+      ( vb vc c1 cfv c2 wcel c3 co wceq wa cn0 cfz crab crmy cexp cmin c4 mp2an
+      cmpt cv cuz crmx cmap cmul wrex cdioph wb simpr wf nn0ex elmap biimpi 2nn
+      ovex df-3 ssid jm2.27dlem5 jm2.27dlem3 sselii ffvelrn sylancl rmxdiophlem
+      adantr 3nn syl3anc pm5.32da anass rexbii r19.42v bitr2i rabbiia wsbc cres
+      syl6bb 3nn0 vex resex fvex 1nn jm2.27dlem1 eleq1d oveq12d eqeq12d anbi12d
+      df-2 oveq1d oveq1 oveqan12d eqeq1d sbc2ie 4nn0 rmydioph simp1 simp3 simp2
+      a1i w3a df-4 4nn rabren3dioph cmzp cvv mzpproj 2nn0 mzpexpmpt mzpconstmpt
+      cz mzpsubmpt mzpmulmpt eqrabdioph mp3an anrabdioph eqeltri rexfrabdioph
+      1z ) DAUAZEZFUBEZGZHXQEZXRFXQEZUCIJZKZALDHMIZUDIZNXTBUAZXRYBOIZJZKZYAFPIZ
+      XRFPIZDQIZYGFPIZUEIZQIZDJZKZBLUFZAYFNZHUGEZYDYSAYFXQYFGZYDXTYIYQKZBLUFZKZ
+      YSUUBXTYCUUDUUBXTKXTYBLGZYALGZYCUUDUHUUBXTUIUUBUUFXTUUBYELXQUJZFYEGUUFUUB
+      UUHLYEXQUKDHMUOULUMZDFMIZYEFFHHUNUPYEUQURZFUNUSZUTZYELFXQVAVBVDUUBUUGXTUU
+      BUUHHYEGUUGUUIHVEUSZYELHXQVAVBVDBXRYBYAVCVFVGYSXTUUCKZBLUFUUEYRUUOBLXTYIY
+      QVHVIXTUUCBLVJVKVOVLHLGYRBRCUAZEZVMAUUPYEVNZVMZCLDRMIZUDIZNZRUGEZGYTUUAGV
+      PUVBDUUPEZXSGZUUQUVDFUUPEZOIZJZKZHUUPEZFPIZUVDFPIZDQIZUUQFPIZUEIZQIZDJZKZ
+      CUVANZUVCUUSUVRCUVAUUSUVRUHUUPUVAGYRUVRABUURUUQUUPYECVQVRRUUPVSXQUURJZYGU
+      UQJZKZYJUVIYQUVQUWBXTUVEYIUVHUVTXTUVEUHUWAUVTXRUVDXSDHACDDMIZYEDDFHVTWFUU
+      KURDVTUSZUTWAZWBVDUWBYGUUQYHUVGUVTUWAUIUVTYHUVGJUWAUVTXRUVDYBUVFOUWEFHACU
+      UMWAWCVDWDWEUWBYPUVPDUWBYKUVKYOUVOQUVTYKUVKJUWAUVTYAUVJFPHHACUUNWAWGVDUVT
+      UWAYMUVMYNUVNUEUVTYLUVLDQUVTXRUVDFPUWEWGWGYGUUQFPWHWIWCWJWEWKWQVLUVICUVAN
+      UVCGZUVQCUVANUVCGZUVSUVCGRLGZDYGEZXSGZHYGEZUWIFYGEZOIZJZKZBYFNUUAGUWFWLBW
+      MUWOUVIRDFRBCUWIUVDJZUWLUVFJZUWKUUQJZWRZUWJUVEUWNUVHUWSUWIUVDXSUWPUWQUWRW
+      NZWBUWSUWKUUQUWMUVGUWPUWQUWRWOUWSUWIUVDUWLUVFOUWTUWPUWQUWRWPWCWDWEUWCUUTD
+      DFRVTWFFHRUNUPHRRVEWSUUTUQURZURZURUWDUTZUUJUUTFUXBUULUTRWTUSZXASUWHCXHUUT
+      UDIZUVPTUUTXBEZGZCUXEDTUXFGZUWGWLCUXEUVKTUXFGZCUXEUVOTUXFGZUXGCUXEUVJTUXF
+      GZFLGZUXIUUTXCGZHUUTGUXKDRMUOZYEUUTHUXAUUNUTCUUTHXDSXECUVJFUUTXFSCUXEUVMT
+      UXFGZCUXEUVNTUXFGZUXJCUXEUVLTUXFGZUXHUXOCUXEUVDTUXFGZUXLUXQUXMDUUTGUXRUXN
+      UXCCUUTDXDSXECUVDFUUTXFSUXMDXHGUXHUXNXPCDUUTXGSZCUVLDUUTXISCUXEUUQTUXFGZU
+      XLUXPUXMRUUTGUXTUXNUXDCUUTRXDSXECUUQFUUTXFSCUVMUVNUUTXJSCUVKUVOUUTXISUXSC
+      UVPDRXKXLUVIUVQCRXMSXNYRBACRHWSXOSXN $.
+      $( [17-Oct-2014] $)
   $}
 
   ${
