@@ -757,6 +757,15 @@ $)
     USUILMUPUMDUPUHULQUMAUHSUHULTUAOUBUC $.
     $( [8-Oct-2014] $)
 
+  $( ~ coeq0 but without explicitly introducing domain and range symbols. $)
+  coeq0i $p |- ( ( A : C --> D /\ B : E --> F /\ ( C i^i F ) = (/) ) ->
+      ( A o. B ) = (/) ) $=
+    ( wf cin c0 wceq w3a cdm crn ccom wss frn 3ad2ant2 sslin syl fdm ineq1d ss0
+    3ad2ant1 simp3 eqtrd sseqtrd coeq0 sylibr ) CDAGZEFBGZCFHZIJZKZALZBMZHZIJZA
+    BNIJUMUPIOUQUMUPUNFHZIUMUOFOZUPUROUJUIUSULEFBPQUOFUNRSUMURUKIUMUNCFUIUJUNCJ
+    ULCDATUCUAUIUJULUDUEUFUPUBSABUGUH $.
+    $( [16-Oct-2014] $)
+
   $( Split a finite 1-based set of integers in the middle, allowing either end to be empty ( ` ( 1 ... 0 ) ` ). $)
   fzsplit1nn0 $p |- ( ( A e. NN0 /\ B e. NN0 /\ A <_ B ) -> ( 1 ... B ) = ( ( 1 ... A ) u. ( ( A + 1 ) ... B ) ) ) $=
     ( cn0 wcel cle wbr c1 cfz co caddc cun wceq cn cc0 wo wa cz adantr syl6eq
@@ -1930,6 +1939,155 @@ $)
       UAQYAUVAXGXEUPVPYRUVBRZUWNUVFUWPUVIUWRUWMUVDUUCUVEUWRUUAUVCUVAQAYRUVBBXHZ
       VNAYRUVBCXHZVOUWRUWOUVHUUCUVEUWRUUAUVCUVGQUWSVNUWTVOVPXFWOXIXJ $.
       $( [11-Oct-2014] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Diophantine sets 6 miscellanea
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d G a $.  $d F a $.  $d X a $.  $d A a $.
+    $( Function value of a composition.  Like ~ fvco2 but with no restrictions
+       on ` F ` .  Possibly a replacement for ~ fvco2 ? $)
+    fvco4 $p |- ( ( G Fn A /\ X e. A ) -> ( ( F o. G ) ` X ) =
+        ( F ` ( G ` X ) ) ) $=
+      ( va wfn wcel wa ccom csn cima cv wceq cab cuni imaco fnsnfv eqcomd df-fv
+      cfv imaeq2d syl5eq eqeq1d abbidv unieqd 3eqtr4g ) CAFDAGHZBCIZDJZKZELJZMZ
+      ENZOBDCTZJZKZUKMZENZODUHTUNBTUGUMURUGULUQEUGUJUPUKUGUJBCUIKZKUPBCUIPUGUSU
+      OBUGUOUSADCQRUAUBUCUDUEEDUHSEUNBSUF $.
+      $( [16-Oct-2014] $)
+  $}
+
+  ${
+    $d A a $.
+
+    $( A finite set of positive integers is a set of positive integers. $)
+    fz1ssnn $p |- ( 1 ... A ) C_ NN $=
+      ( va c1 cfz co cn cv elfznn ssriv ) BCADEFBGAHI $.
+      $( [16-Oct-2014] $)
+  $}
+
+  $( Disjoint classes have disjoint subsets. $)
+  disjss1 $p |- ( ( A C_ B /\ ( B i^i C ) = (/) ) -> ( A i^i C ) = (/) ) $=
+    ( wss cin c0 wceq wa ssrin adantr simpr sseqtrd ss0 syl ) ABDZBCEZFGZHZACEZ
+    FDSFGRSPFOSPDQABCIJOQKLSMN $.
+    $( [16-Oct-2014] $)
+
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Diophantine sets 6: reusability.  renumbering of variables
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d W a b c p u t w $.
+    $d S a b c p u t w $.
+    $d N a b c p u t w $.
+    $d P a b c p u t w $.
+    eldioph4b.a $e |- W e. _V $.
+    eldioph4b.b $e |- -. W e. Fin $.
+    eldioph4b.c $e |- ( W i^i NN ) = (/) $.
+
+    eldioph4b $p |- ( S e. ( Dioph ` N ) <-> ( N e. NN0 /\ E. p e. ( mzPoly ` ( W u. ( 1 ... N ) ) ) S = { t e. ( NN0 ^m ( 1 ... N ) ) | E. w e. ( NN0 ^m W ) ( p ` ( t u. w ) ) = 0 } ) ) $=
+      ( vu cfv wcel cn0 cun cc0 wceq wrex cres wa c0 cdioph cv cmap co cfz crab
+      c1 cmzp eldiophelnn0 cab cvv cfn wn wb ovex unex jctr intnanr unfir ssun2
+      wss pm3.2i eldioph2b sylancl elmapssres mp3an23 adantr ssun1 uncom eqtr4i
+      mto resundi wfn nn0ex elmap biimpi ffn fnresdm 3syl syl5eq fveq2d biimpar
+      eqeq1d uneq2 rcla4ev syl2anc jca eleq1 rexbidv anbi12d syl5ibrcom expimpd
+      wf uneq1 ancomsd rexlimiv cin cn elfznn ssriv sslin ax-mp sseqtri reseq2i
+      ss0 res0 eqtri elmapresaun mp3an3 ancoms syl5eqel elmapresaunres2 syl5req
+      reseq1 simpr eqeq2d syl12anc ex rexlimdva imp impbii df-rab eqeq2i rexbii
+      fveq2 abbii syl6bb biadan2 ) CDUAKLZDMLZCBUBZAUBZNZFUBZKZOPZAMEUCUDZQZBMU
+      GDUEUDZUCUDZUFZPZFEYSNZUHKZQZCDUIYJYICYKJUBZYSRZPZUUFYNKZOPZSZJMUUCUCUDZQ
+      ZBUJZPZFUUDQZUUEYJYJUUCUKLZSUUCULLZUMZYSUUCVAZSYIUUPUNYJUUQEYSGUGDUEUOZUP
+      ZUQUUSUUTUUREULLZYSULLZSUVCUVDHUREYSUSVKYSEUTZVBJBCUUCDFVCVDUUOUUBFUUDUUN
+      UUACUUNYKYTLZYRSZBUJUUAUUMUVGBUUMUVGUUKUVGJUULUUFUULLZUUJUUHUVGUVHUUJUUHU
+      VGUVHUUJSZUVGUUHUUGYTLZUUGYLNZYNKZOPZAYQQZSUVIUVJUVNUVHUVJUUJUVHUUTUUQUVJ
+      UVEUVBUUFMUUCYSVEVFVGUVIUUFERZYQLZUUGUVONZYNKZOPZUVNUVHUVPUUJUVHEUUCVAUUQ
+      UVPEYSVHUVBUUFMUUCEVEVFVGUVHUVSUUJUVHUVRUUIOUVHUVQUUFYNUVHUVQUUFUUCRZUUFU
+      VQUVOUUGNUVTUUGUVOVIUUFEYSVLVJUVHUUCMUUFWMZUUFUUCVMUVTUUFPUVHUWAMUUCUUFVN
+      UVBVOVPUUCMUUFVQUUCUUFVRVSVTWAWCWBUVMUVSAUVOYQYLUVOPZUVLUVROUWBUVKUVQYNYL
+      UVOUUGWDWAWCWEWFWGUUHUVFUVJYRUVNYKUUGYTWHUUHYPUVMAYQUUHYOUVLOUUHYMUVKYNYK
+      UUGYLWNWAWCWIWJWKWLWOWPUVFYRUUMUVFYPUUMAYQUVFYLYQLZSZYPUUMUWDYPSYMUULLZYK
+      YMYSRZPZYPUUMUWDUWEYPUWDYMYLYKNZUULYKYLVIZUWCUVFUWHUULLZUWCUVFYLEYSWQZRZY
+      KUWKRZPZUWJUWLTUWMUWLYLTRTUWKTYLUWKTVAUWKTPUWKEWRWQZTYSWRVAUWKUWOVAJYSWRU
+      UFDWSWTYSWREXAXBIXCUWKXEXBZXDYLXFXGUWMYKTRTUWKTYKUWPXDYKXFXGVJZEYSMYLYKGU
+      VAXHXIXJXKVGUWDUWGYPUWDUWFUWHYSRZYKYMUWHPUWFUWRPUWIYMUWHYSXNXBUWCUVFUWRYK
+      PZUWCUVFUWNUWSUWQEYSMYLYKGUVAXLXIXJXMVGUWDYPXOUUKUWGYPSJYMUULUUFYMPZUUHUW
+      GUUJYPUWTUUGUWFYKUUFYMYSXNXPUWTUUIYOOUUFYMYNYEWCWJWEXQXRXSXTYAYFYRBYTYBVJ
+      YCYDYGYH $.
+      $( [16-Oct-2014] $)
+
+    eldioph4i $p |- ( ( N e. NN0 /\ P e. ( mzPoly ` ( W u. ( 1 ... N ) ) ) ) -> { t e. ( NN0 ^m ( 1 ... N ) ) | E. w e. ( NN0 ^m W ) ( P ` ( t u. w ) ) = 0 } e. ( Dioph ` N ) ) $=
+      ( va vb vp cn0 wcel co cun cfv cv cc0 wceq wrex cfz cmzp cmap crab cdioph
+      c1 wa weq uneq1 fveq2d eqeq1d rexbidv uneq2 cbvrexv cbvrabv fveq1 rabbidv
+      syl6bb eqeq2d rcla4ev mpan2 anim2i eldioph4b sylibr ) DLMZCEUFDUANZOUBPZM
+      ZUGVEBQZAQZOZCPZRSZALEUCNZTZBLVFUCNZUDZIQZJQZOZKQZPZRSZJVNTZIVPUDZSZKVGTZ
+      UGVQDUEPMVHWGVEVHVQVTCPZRSZJVNTZIVPUDZSZWGVOWJBIVPBIUHZVOVRVJOZCPZRSZAVNT
+      WJWMVMWPAVNWMVLWORWMVKWNCVIVRVJUIUJUKULWPWIAJVNAJUHZWOWHRWQWNVTCVJVSVRUMU
+      JUKUNURUOWFWLKCVGWACSZWEWKVQWRWDWJIVPWRWCWIJVNWRWBWHRVTWACUPUKULUQUSUTVAV
+      BJIVQDEKFGHVCVD $.
+      $( [16-Oct-2014] $)
+  $}
+
+  ${
+    $d S a b c d e f g h i $.
+    $d M a b c d e f g h i $.
+    $d N a b c d e f g h i $.
+    $d F a b c d e f g h i $.
+    $( Change variables in a Diophantine set, using class notation.  This
+       allows already proved Diophantine sets to be reused in contexts with
+       more variables. $)
+    diophren $p |- ( ( S e. ( Dioph ` N ) /\ M e. NN0 /\
+          F : ( 1 ... N ) --> ( 1 ... M ) ) ->
+        { a e. ( NN0 ^m ( 1 ... M ) ) | ( a o. F ) e. S } e. ( Dioph ` M ) ) $=
+      ( vd cfv wcel cn0 c1 co ccom cmap wa cun cc0 wceq cz cn c0 vc vb ve wf cv
+      cdioph cfz crab cdif wrex cmzp cvv zex difexg ax-mp cfn com ominf cen wbr
+      wb omex caddc nnuz ax-1cn addid2i fveq2i eqtr4i difeq2i 0z lzenom eqbrtri
+      cuz enfi mp2an mtbir incom disjdif eqtri eldioph4b cres cmpt simpr simplr
+      cin ad2antrr nn0ex ovex mapco2 syl2anc uneq1 fveq2d eqeq1d rexbidv elrab3
+      cid syl ad3antrrr w3a coundi coundir elmap 3ad2ant3 simp1 fz1ssnn disjss1
+      biimpi wss a1i coeq0i syl3anc uneq2d syl5eq un0 syl6eq 3ad2ant2 wf1o f1oi
+      f1of mp3an23 wfun wrel elmapfun funrel coires1 3syl wfn ffn fnresdm eqtrd
+      uneq12d uncom syl5req nn0ssz unex mapss reseq2i res0 elmapresaun oveq2i
+      syl6eleq mp3an3 sseldi adantll coeq1 fvmpt eqtr4d rexbidva bitrd rabbidva
+      eqid fvex simplll simpllr id1 fun feq1i sylib mzprename eldioph4i eqeltrd
+      syl21anc eleq2 rabbidv eleq1d syl5ibrcom rexlimdva expimpd syl5bi impcom
+      3impb ) ADUFGHZCIHZJDUGKZJCUGKZBUDZEUEZBLZAHZEIUVOMKZUHZCUFGZHZUVMUVPNZUV
+      LUWCUVLDIHZAUAUEZFUEZOZUBUEZGZPQZFIRSUIZMKZUJZUAIUVNMKZUHZQZUBUWLUVNOZUKG
+      ZUJZNUWDUWCFUAADUWLUBRULHUWLULHUMRSULUNUOZUWLUPHZUQUPHZURUQULHUWLUQUSUTUX
+      BUXCVAVBUWLRPJVCKZVMGZUIZUQUSSUXERSJVMGUXEVDUXDJVMJVEVFVGVHVIPRHUXFUQUSUT
+      VJPVKUOVLUWLUQULVNVOVPZUWLSWESUWLWEZTUWLSVQSRVRZVSZVTUWDUWEUWTUWCUWDUWENZ
+      UWQUWCUBUWSUXKUWIUWSHZNZUWCUWQUVRUWPHZEUVTUHZUWBHUXMUXOUVQUWGOZUCRUWLUVOO
+      ZMKZUCUEZBWPUWLWAZOZLZUWIGZWBZGZPQZFUWMUJZEUVTUHZUWBUXMUXNUYGEUVTUXMUVQUV
+      THZNZUXNUVRUWGOZUWIGZPQZFUWMUJZUYGUYJUVRUWOHZUXNUYNVAUYJUYIUVPUYOUXMUYIWC
+      UXKUVPUXLUYIUVMUVPUWEWDZWFUVQIUVOBUVNWGJCUGWHZJDUGWHWIWJUWNUYNUAUVRUWOUWF
+      UVRQZUWKUYMFUWMUYRUWJUYLPUYRUWHUYKUWIUWFUVRUWGWKWLWMWNWOWQUYJUYMUYFFUWMUY
+      JUWGUWMHZNZUYLUYEPUYTUYLUXPUYALZUWIGZUYEUYTUYKVUAUWIUYTUVPUYIUYSUYKVUAQUX
+      KUVPUXLUYIUYSUYPWRUXMUYIUYSWDUYJUYSWCUVPUYIUYSWSZVUAUXPBLZUXPUXTLZOUYKUXP
+      BUXTWTVUCVUDUVRVUEUWGVUCVUDUVRTOZUVRVUCVUDUVRUWGBLZOVUFUVQUWGBXAVUCVUGTUV
+      RVUCUWLIUWGUDZUVPUWLUVOWEZTQZVUGTQUYSUVPVUHUYIUYSVUHIUWLUWGWGUXAXBXGZXCUV
+      PUYIUYSXDVUJVUCVUIUVOUWLWEZTUWLUVOVQUVOSXHUXHTQZVULTQZCXEUXIUVOSUWLXFVOZV
+      SXIUWGBUWLIUVNUVOXJXKXLXMUVRXNXOVUCVUETUWGOZUWGVUCVUEUVQUXTLZUWGUXTLZOVUP
+      UVQUWGUXTXAVUCVUQTVURUWGVUCUVOIUVQUDZVUQTQZUYIUVPVUSUYSUYIVUSIUVOUVQWGUYQ
+      XBXGXPVUSUWLUWLUXTUDZVUNVUTUWLUWLUXTXQVVAUWLXRUWLUWLUXTXSUOZVUOUVQUXTUVOI
+      UWLUWLXJXTWQUYSUVPVURUWGQUYIUYSVURUWGUWLWAZUWGUYSUWGYAUWGYBVURVVCQUWGIUWL
+      YCUWGYDUWGUWLYEYFUYSVUHUWGUWLYGVVCUWGQVUKUWLIUWGYHUWLUWGYIYFYJXCYKXMVUPUW
+      GTOUWGTUWGYLUWGXNVSXOYKYMXKWLUYTUXPUXRHZUYEVUBQUYIUYSVVDUXMUYIUYSNIUXQMKZ
+      UXRUXPIRXHVVEUXRXHYNIRUXQUMUWLUVOUXAUYQYOZYPUOUYIUYSUVQVULWAZUWGVULWAZQZU
+      XPVVEHVVGTVVHVVGUVQTWATVULTUVQVUOYQUVQYRVSVVHUWGTWATVULTUWGVUOYQUWGYRVSVH
+      UYIUYSVVIWSUXPIUVOUWLOZMKVVEUVOUWLIUVQUWGUYQUXAYSVVJUXQIMUVOUWLYLYTUUAUUB
+      UUCUUDUCUXPUYCVUBUXRUYDUXSUXPQUYBVUAUWIUXSUXPUYAUUEWLUYDUUKVUAUWIUULUUFWQ
+      UUGWMUUHUUIUUJUXMUVMUYDUXQUKGHZUYHUWBHUVMUVPUWEUXLUUMUXMUXQULHZUXLUWRUXQU
+      YAUDZVVKVVLUXMVVFXIUXKUXLWCUXMUVPVVMUVMUVPUWEUXLUUNUVPUWRUXQUXTBOZUDZVVMU
+      VPVVAUVPUWLUVNWEZTQZVVOVVAUVPVVBXIUVPUUOVVQUVPVVPUVNUWLWEZTUWLUVNVQUVNSXH
+      VUMVVRTQDXEUXIUVNSUWLXFVOVSXIUWLUVNUWLUVOUXTBUUPUVBUWRUXQVVNUYAUXTBYLUUQU
+      URWQUCUYAUWIUWRUXQUUSXKFEUYDCUWLUXAUXGUXJUUTWJUVAUWQUWAUXOUWBUWQUVSUXNEUV
+      TAUWPUVRUVCUVDUVEUVFUVGUVHUVIUVJUVK $.
+      $( [16-Oct-2014] $)
   $}
 
 
