@@ -8,6 +8,38 @@ $[ set.mm $]
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Stuff copied from other mathboxen XXX
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d x y z w v u t A $.  $d x y z B $.
+    $( Any lower bound of a nonempty set of real numbers is less than or equal
+       to its infimum.  (Contributed by Jeff Hankins, 1-Sep-2013.) $)
+    infmrgelbOLD $p |- ( ( ( A C_ RR /\ A =/= (/) /\ B e. RR ) /\
+                      A. x e. A B <_ x ) -> B <_ sup ( A , RR , `' < ) ) $=
+      ( vy vz vw cr wcel cv cle wbr wral wa clt wn wrex 3ad2antl3 brcnvg notbid
+      wb wss c0 wne ccnv csup wi simpl1 simpl2 wceq breq1 ralbidv rcla4ev breq2
+      cbvralv rexbii sylib infm3 syl3anc ralbidva adantl ancoms adantll cbvrexv
+      w3a rexbidva syl5bb imbi12d anbi12d mpbird simpl3 ssel2 3ad2antl1 syl2anc
+      lenlt bitr4d biimpd ralimdva imp jca ltso cnvso mpbi supnub sylc infmrcl
+      wor ) BGUAZBUBUCZCGHZVDZCAIZJKZABLZMZCBGNUDZUEZJKZCWPWOKZOZWNDIZEIZWOKZOZ
+      EBLZXAWTWOKZXAWKWOKZABPZUFZEGLZMZDGPZWICWKWOKZOZABLZMWSWNXKXAWTNKZOZEBLZW
+      TXANKZFIZXANKZFBPZUFZEGLZMZDGPZWNWGWHWTXAJKZEBLZDGPZYEWGWHWIWMUGZWGWHWIWM
+      UHZWIWGWMYHWHWIWMMWTWKJKZABLZDGPZYHYLWMDCGWTCUIYKWLABWTCWKJUJUKULZYLYGDGY
+      KYFAEBWKXAWTJUMUNUOUPQDEFBUQURWNXJYDDGWNWTGHZMZXDXQXIYCYOXDXQTWNYOXCXPEBY
+      OXABHMXBXOWTXAGBNRSUSUTYPXHYBEGYPXAGHZMZXEXRXGYAYOYQXEXRTZWNYQYOYSXAWTGGN
+      RVAVBXGXAXSWOKZFBPZYRYAXFYTAFBWKXSXAWOUMVCYQUUAYATYPYQYTXTFBXAXSGBNRVEUTV
+      FVGUSVHVEVIWNWIXNWGWHWIWMVJZWJWMXNWJWLXMABWJWKBHZMZWLXMUUDWLWKCNKZOZXMUUD
+      WIWKGHZWLUUFTWGWHWIUUCVJWGWHUUCUUGWIBGWKVKVLCWKVNVMUUDXLUUEWIWGUUCXLUUETW
+      HCWKGBNRQSVOVPVQVRVSDEAGBCWOGNWFGWOWFVTGNWAWBWCWDWNWQWPCNKZOZWSWNWIWPGHZW
+      QUUITUUBWNWGWHYMUUJYIYJWIWGWMYMWHYNQDABWEURZCWPVNVMWNWRUUHWNWIUUJWRUUHTUU
+      BUUKCWPGGNRVMSVOVI $.
+      $( [1-Sep-2013] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Miscellanea 1. Map utilities
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -2479,7 +2511,7 @@ $)
       $( [12-Sep-2014] $)
 
     $( Inequality of numeric cardinality implies dominance. $)
-    hashsdom $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( # ` A ) < ( # ` B ) <-> A ~< B ) ) $=
+    hashsdomALT $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( # ` A ) < ( # ` B ) <-> A ~< B ) ) $=
       ( cfn wcel wa chash cfv cle wbr wn cdom clt csdm wb ancoms cr hashcl nn0re
       cn0 3syl hashdom notbid simpl simpr ltnle syl2anc domtri con2bid 3bitr4d )
       ACDZBCDZEZBFGZAFGZHIZJZBAKIZJUNUMLIZABMIZULUOUQUKUJUOUQNBAUAOUBULUNPDZUMPD
@@ -2781,7 +2813,7 @@ $)
       $( [13-Sep-2014] $)
 
     $( Move negation into the denominator of a division. $)
-    divneg2 $p |- ( ( A e. CC /\ B e. CC /\ B =/= 0 ) -> -u ( A / B ) = ( A / -u B ) ) $=
+    divneg2ALT $p |- ( ( A e. CC /\ B e. CC /\ B =/= 0 ) -> -u ( A / B ) = ( A / -u B ) ) $=
       ( cc wcel cc0 wne w3a cdiv cneg divneg negneg 3ad2ant2 eqcomd oveq2d simp1
       co wceq negcl negeq0 biimprd necon3d imp 3adant1 div2neg syl3anc 3eqtrd )
       ACDZBCDZBEFZGZABHPIAIZBHPUKBIZIZHPZAULHPZABJUJBUMUKHUJUMBUHUGUMBQUIBKLMNUJ
@@ -3356,7 +3388,7 @@ $)
       pellexlem4 $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> { <. y , z >. | ( ( y e. NN /\ z e. NN ) /\ ( ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) =/= 0 /\ ( abs ` ( ( y ^ 2 ) - ( D x. ( z ^ 2 ) ) ) ) < ( 1 + ( 2 x. ( sqr ` D ) ) ) ) ) } ~~ NN ) $=
         ( vb cn wcel cfv cq wa cv c2 cexp co cmul clt wbr cdom cen nnex crp wn cc0
         csqr cmin wne cabs caddc copab cxp cvv wss opabssxp ssexi ssdomg xpnnen
-        c1 xpex mp2 domentr mp2an a1i cdenom cneg crab cdif nnrp sqrrpcl syl eldif
+        c1 xpex mp2 domentr mp2an a1i cdenom cneg crab cdif nnrp rpsqrcl syl eldif
         anim1i sylibr irrapx1 ensym 3syl pellexlem3 endomtr syl2anc sbth ) CEFZCUC
         GZHFUAZIZAJZEFBJZEFIWCKLMCWDKLMNMUDMZUBUEWEUFGUPKVTNMUGMOPIZIABUHZEQPZEWGQ
         PZWGERPWHWBWGEEUIZQPZWJERPWHWGUJFWGWJUKWKWGWJEESSUQWFABEEULZUMWLWGWJUJUNUR
@@ -4342,7 +4374,7 @@ $)
       cr 3syl cdif cpell14qr crab ccnv csup cpellfund wne wral ssrab2 pell14qrre
       c0 ex ssrdv syl5ss cpell1qr pell1qrss14 pellqrex ssrexv sylc sylibr eldifi
       rabn0 peano2nn nnrp rpsqrcl syl readdcl syl2anc wa breq2 elrab pell14qrgap
-      rpre 3expib syl5bi ralrimiv infmrgelb syl31anc pellfundval breqtrrd ) ADEU
+      rpre 3expib syl5bi ralrimiv infmrgelbOLD syl31anc pellfundval breqtrrd ) ADEU
       AFZAGHIZJKZAJKZHIZGBLZMNZBAUBKZUCZSMUDUEZAUFKOWAWISPWIUKUGZWESFZWECLZONZCW
       IUHWEWJONWAWIWHSWGBWHUIWABWHSWAWFWHFWFSFWFAUJULUMUNWAWGBWHQZWKWAAUOKZWHPWG
       BWPQWOAUPBAUQWGBWPWHURUSWGBWHVBUTWAWCSFZWDSFZWLWAWBRFZWCRFWQWAADFZWBDFWSAD
@@ -4387,7 +4419,7 @@ $)
         ( va wcel cr cfv clt wbr cle wn c1 wrex wa 3ad2ant1 wb syl2anc wss wi ex
         cn csquarenn cdif cpellfund cv cpell14qr crab cpell1qr wral ccnv csup wceq
         pellfundval simp3 eqbrtrrd pellfundre eqeltrrd simp2 ltnle mpbid c0 ssrab2
-        w3a wne pell14qrre ssrdv syl5ss pell1qrss14 pellqrex ssrexv sylc infmrgelb
+        w3a wne pell14qrre ssrdv syl5ss pell1qrss14 pellqrex ssrexv sylc infmrgelbOLD
         rabn0 sylibr syl3anc mtod rexnal breq2 elrab simprl simprr 1re simpl1 ltle
         a1i mpd jca elpell1qr2 syl mpbird sylan2b adantrr sseldi syl5bi pellfundlb
         simpr imp adantr sseldd simpl2 reximdv2 ) CUAUBUCEZBFEZCUDGZBHIZVCZBAUEZJI
