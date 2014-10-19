@@ -2421,6 +2421,17 @@ $)
       $( [12-Sep-2014] $)
   $}
 
+  $( An infinite subset of a countable set is countable, without using choice. $)
+  ctbnfien $p |- ( ( ( X ~~ om /\ Y ~~ om ) /\
+        ( A C_ X /\ -. A e. Fin ) ) -> A ~~ Y ) $=
+    ( com cen wbr wa wss cfn wcel wn csdm isfinite3 notbii wo cdom cvv wi relen
+    syl2anc brrelexi ssdom2g syl simpl domentr brdom2 sylib adantlr syl5bi impr
+    imp ord omex ensym ad2antlr entr ) BDEFZCDEFZGZABHZAIJZKZGZGADEFZDCEFZACEFU
+    SUTVBVDVBADLFZKUSUTGZVDVAVFAMNVGVFVDUQUTVFVDOZURUQUTGZADPFZVHVIABPFZUQVJUQU
+    TVKUQBQJUTVKRBDESUAABQUBUCUKUQUTUDABDUETADUFUGUHULUIUJURVEUQVCCDUMUNUOADCUP
+    T $.
+    $( [19-Oct-2014] $)
+
   ${
     $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
     fiphp3d.a $e |- ( ph -> A ~~ NN ) $.
@@ -2429,17 +2440,15 @@ $)
 
     $( Infinite pigeonhole principle for partitioning an infinite set between finitely many buckets. $)
     fiphp3d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
-      ( cv wceq cfn wcel wrex cn cen wbr com cvv syl crab wn wral ciun ominf wa
-      risset eqcom rexbii bitri sylib rabid2 sylibr iunrab syl6reqr eleq1d omex
-      ralrimiva nnenom entr sylancl enfi sylancr bitrd mtbiri iunfi sylan mtand
-      wb rexnal csdm wo cdom relen brrelexi ssrab2 ssdom2g ee10 domentr syl2anc
-      wss brdom2 wi sdomentr ax-mp mpan2 isfinite2 orim1i ord reximdv mpd ) AFC
-      JZKZBDUAZLMZUBZCENZWNOPQZCENAWOCEUCZUBWQAWSCEWNUDZLMZAXARLMZUEAXADLMZXBAW
-      TDLADWMCENZBDUAZWTAXDBDUCDXEKAXDBDABJDMUFFEMZXDIXFWLFKZCENXDCFEUGXGWMCEWL
-      FUHUIUJUKURXDBDULUMWMCBEDUNUOUPARSMZDRPQZXCXBVIUQADOPQZORPQZXIGUSDORUTVAD
-      RSVBVCVDVEAELMWSXAHCEWNVFVGVHWOCEVJUMAWPWRCEAWOWRAWNOVKQZWRVLZWOWRVLAWNOV
-      MQZXMAWNDVMQZXJXNADSMZWNDWAXOAXJXPGDOPVNVOTWMBDVPWNDSVQVRGWNDOVSVTWNOWBUK
-      XLWOWRXLWNRVKQZWOXLXKXQUSXHXLXKUFXQWCUQWNORSWDWEWFWNWGTWHTWIWJWK $.
+      ( cv wceq crab cfn wcel wrex cn cen wbr com wa wn wral ominf risset eqcom
+      ciun rexbii bitri sylib ralrimiva rabid2 sylibr iunrab syl6reqr eleq1d wb
+      cvv omex nnenom entr sylancl enfi sylancr bitrd mtbiri iunfi sylan rexnal
+      mtand wss jctir ssrab2 jctl ctbnfien syl2an ex reximdv mpd ) AFCJZKZBDLZM
+      NZUAZCEOZWAPQRZCEOAWBCEUBZUAWDAWFCEWAUFZMNZAWHSMNZUCAWHDMNZWIAWGDMADVTCEO
+      ZBDLZWGAWKBDUBDWLKAWKBDABJDNTFENZWKIWMVSFKZCEOWKCFEUDWNVTCEVSFUEUGUHUIUJW
+      KBDUKULVTCBEDUMUNUOASUQNDSQRZWJWIUPURADPQRPSQRZWOGUSDPSUTVAZDSUQVBVCVDVEA
+      EMNWFWHHCEWAVFVGVIWBCEVHULAWCWECEAWCWEAWOWPTWADVJZWCTWEWCAWOWPWQUSVKWCWRV
+      TBDVLVMWADPVNVOVPVQVR $.
       $( [18-Oct-2014] $)
   $}
 
@@ -2477,15 +2486,6 @@ $)
       APWBWNTKEFZYHXCEFZKWGWCWNYIXSYKUUAUUBQYJXTYNTKXBWAPWDWHXCWIWEXCWFVMWJ $.
       $( [12-Sep-2014] $)
 
-    $( Inequality of numeric cardinality implies dominance. $)
-    hashsdomALT $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( # ` A ) < ( # ` B ) <-> A ~< B ) ) $=
-      ( cfn wcel wa chash cfv cle wbr wn cdom clt csdm wb ancoms cr hashcl nn0re
-      cn0 3syl hashdom notbid simpl simpr ltnle syl2anc domtri con2bid 3bitr4d )
-      ACDZBCDZEZBFGZAFGZHIZJZBAKIZJUNUMLIZABMIZULUOUQUKUJUOUQNBAUAOUBULUNPDZUMPD
-      ZURUPNULUJUNSDUTUJUKUCAQUNRTULUKUMSDVAUJUKUDBQUMRTUNUMUEUFULUQUSUKUJUQUSJN
-      BACCUGOUHUI $.
-      $( [12-Sep-2014] $)
-
     $( Condition for finite ranges to have a strict dominance relation. $)
     fzsdom2 $p |- ( ( A e. ZZ /\ B e. ZZ /\ C e. ZZ ) -> ( A <_ B -> ( B < C -> ( A ... B ) ~< ( A ... C ) ) ) ) $=
       ( cz wcel w3a cle wbr clt cfz co chash cfv cmin c1 cr zre 3ad2ant1 syl3anc
@@ -2508,133 +2508,54 @@ $(
 $)
 
   ${
-    $d a b c $.
-    $( Floor defines a function. $)
-    ffl $p |- |_ : RR --> ZZ $=
-      ( vb va cv cle wbr c1 caddc co clt wa cz crio wcel cr wral cfl wf cfv flcl
-      flval eqeltrrd rgen df-fl fmpt mpbi ) ACZBCZDEUGUFFGHIEJAKLZKMZBNONKPQUIBN
-      UGNMUGPRUHKAUGTUGSUAUBBNKUHPBAUCUDUE $.
-      $( [13-Sep-2014] $)
+    $d A a b c d x y $.  $d B a b c d x y $.
+    $( Lemma for ~ rencldnfilem . $)
+    rencldnfilem $p |- ( ( ( A C_ RR /\ B e. RR /\ ( A =/= (/) /\ -. B e. A ) ) /\ A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) -> -. A e. Fin ) $=
+      ( va vb vc vd cr wcel wn wa cv clt wbr wrex crp wral wceq syl2anc wss wne
+      c0 w3a cmin co cabs cfv cfn wi crab ccnv csup weq eqeq1 rexbidv elrab cc0
+      cc simpl ad3antrrr simpr sseldd recnd subcl simprr ad2antrr nelneq subeq0
+      necon3abid mpbird absrpcl eleq1 syl5ibrcom rexlimdva expimpd syl5bi ssrdv
+      wb adantr cab abrexfi df-rab ss2abi eqsstri sylancl adantl wex simplrl n0
+      ssfi sylib simpll simplr abscl syl eqid oveq1 fveq2d eqeq2d rcla4ev mpan2
+      sylanbrc ne0i exlimdv mpd ssrab2 a1i ltso cnvso mpbi fisup2g mpan syl3anc
+      ex wor cle mp2 fisupg sseli vex brcnv notbii lenlt biimprd adantll sylan2
+      soss ralimdva adantrd reximdva lbinfmle sseldi mpbid breq2 notbid ralbidv
+      ralrimiva ralnex rexbii rexnal bitri 3impa con2d imp ) CIUAZDIJZCUCUBZDCJ
+      KZLZUDZBMZDUEUFZUGUHZAMZNOZBCPZAQRZCUIJZKUUKUUSUURUUFUUGUUJUUSUURKZUJUUFU
+      UGLZUUJLZUUSUUTUVBUUSLZUUPKZBCRZAQPZUUTUVCEMZFMZDUEUFZUGUHZSZFCPZEIUKZINU
+      LZUMZQJUUNUVONOZKZBCRZUVFUVCUVMQUVOUVBUVMQUAUUSUVBGUVMQGMZUVMJZUVSIJZUVSU
+      VJSZFCPZLUVBUVSQJZUVLUWCEUVSIEGUNUVKUWBFCUVGUVSUVJUOUPUQUVBUWAUWCUWDUVBUW
+      ALZUWBUWDFCUWEUVHCJZLZUWDUWBUVJQJZUWGUVIUSJZUVIURUBZUWHUWGUVHUSJZDUSJZUWI
+      UWGUVHUWGCIUVHUVAUUFUUJUWAUWFUUFUUGUTVAUWEUWFVBZVCVDZUWGDUVAUUGUUJUWAUWFU
+      UFUUGVBVAVDZUVHDVETUWGUWJUVHDSZKZUWGUWFUUIUWQUWMUVBUUIUWAUWFUVAUUHUUIVFVG
+      UVHDCVHTUWGUWKUWLUWJUWQVSUWNUWOUWKUWLLUWPUVIURUVHDVIVJTVKUVIVLTUVSUVJQVMV
+      NVOVPVQVRVTUVCUVMUIJZUVMUCUBZUVMIUAZUVOUVMJZUUSUWRUVBUUSUVLEWAZUIJUVMUXBU
+      AUWRFECUVJWBUVMUVGIJZUVLLZEWAUXBUVLEIWCUXDUVLEUXCUVLVBWDWEUXBUVMWKWFWGZUV
+      CUULCJZBWHZUWSUVCUUHUXGUVAUUHUUIUUSWIBCWJWLUVCUXFUWSBUVCUXFUWSUVCUXFLZUUN
+      UVMJZUWSUXHUUNIJZUUNUVJSZFCPZUXIUXHUUMUSJZUXJUXHUULUSJUWLUXMUXHUULUXHCIUU
+      LUVBUUFUUSUXFUUFUUGUUJWMVGUVCUXFVBVCVDUXHDUVBUUGUUSUXFUUFUUGUUJWNVGVDUULD
+      VETUUMWOWPZUXFUXLUVCUXFUUNUUNSZUXLUUNWQUXKUXOFUULCFBUNZUVJUUNUUNUXPUVIUUM
+      UGUVHUULDUEWRWSWTXAXBWGUVLUXLEUUNIUVGUUNSUVKUXKFCUVGUUNUVJUOUPUQXCZUVMUUN
+      XDWPXOXEXFZUWTUVCUVLEIXGZXHIUVNXPZUWRUWSUWTUDUXAINXPUXTXIINXJXKZIUVMUVNXL
+      XMXNZVCUVCUVQBCUXHUVOUUNXQOZUVQUXHUWTUVSHMZXQOZHUVMRZGUVMPZUXIUYCUWTUXHUX
+      SXHUVCUYGUXFUVCUVSUYDUVNOZKZHUVMRZUYDUVSUVNOUYDUUOUVNOAUVMPUJHUVMRZLZGUVM
+      PZUYGUVCUVMUVNXPZUWRUWSUYMUYNUVCUWTUXTUYNUXSUYAUVMIUVNYHXRXHUXEUXRGHAUVMU
+      VNXSXNUVCUYLUYFGUVMUVTUVCUWAUYLUYFUJUVMIUVSUXSXTUVCUWALZUYJUYFUYKUYOUYIUY
+      EHUVMUYDUVMJUYOUYDIJZUYIUYEUJZUVMIUYDUXSXTUWAUYPUYQUVCUYIUYDUVSNOZKZUWAUY
+      PLZUYEUYHUYRUVSUYDNGYAHYAYBYCUYTUYEUYSUVSUYDYDYEVQYFYGYIYJYGYKXFVTUXQGHUU
+      NUVMYLXNUXHUVOIJZUXJUYCUVQVSUVCVUAUXFUVCUVMIUVOUXSUYBYMVTUXNUVOUUNYDTYNYR
+      UVEUVRAUVOQUUOUVOSZUVDUVQBCVUBUUPUVPUUOUVOUUNNYOYPYQXATUVFUUQKZAQPUUTUVEV
+      UCAQUUPBCYSYTUUQAQUUAUUBWLXOUUCUUDUUE $.
+      $( [18-Oct-2014] $)
 
-    $d A a b c x y $.   $d B x y a b c $.
-    $( ` RR ` - version of ~ unben ; a set of reals with no upper bound is at least countably infinite. $)
-    reunbdom $p |- ( ( A C_ RR /\ A. x e. RR E. y e. A x < y ) -> om ~<_ A ) $=
-      ( va vb cr wss cv clt wbr wa com cfl cn cen cdom wcel syl2anc cz syl inss2
-      wrex wral cima cin a1i c1 caddc simpr peano2nn nnre 3syl simplr wceq breq1
-      co rexbidv rcla4va wi cfv wfun cdm wf ffl ffun simplll syl6sseqr funfvima2
-      ax-mp fdmi imp syl21anc cc0 sseldd flcl 0re simpllr zre adantl ad2antrr
-      nngt0 peano2re flltp1 cle fladdz sylancl ltle mpd flwordi syl3anc eqbrtrrd
-      1z ltletrd lttrd elnnz sylanbrc elin breq2 rcla4ev rexlimdva adantlr unben
-      ex ralrimiva nnenom entr omex ensym nnex inex2 inss1 ssdomg ee10 reex ssex
-      cvv adantr imadomg domtr endomtr ) CFGZAHZBHZIJZBCUBZAFUCZKZLMCUDZNUEZOJZY
-      ICPJZLCPJYGYILOJZYJYGYINOJZNLOJYLYGYINGZDHZEHZIJZEYIUBZDNUCYMYNYGYHNUAUFYG
-      YRDNYGYONQZKZYOUGUHUPZYCIJZBCUBZYRYTUUAFQZYFUUCYTYSUUANQUUDYGYSUIYOUJUUAUK
-      ULYAYFYSUMYEUUCAUUAFYBUUAUNYDUUBBCYBUUAYCIUOUQURRYAYSUUCYRUSYFYAYSKZUUBYRB
-      CUUEYCCQZKZUUBYRUUGUUBKZYCMUTZYIQZYOUUIIJZYRUUHUUIYHQZUUINQZUUJUUHMVAZCMVB
-      ZGZUUFUULUUNUUHFSMVCUUNVDFSMVEVIZUFUUHCFUUOYAYSUUFUUBVFZFSMVDVJVGUUEUUFUUB
-      UMZUUNUUPKUUFUULCYCMVHVKVLUUHUUISQZVMUUIIJUUMUUHYCFQZUUTUUHCFYCUURUUSVNZYC
-      VOTZUUHVMYOUUIVMFQUUHVPUFUUHYSYOFQZYAYSUUFUUBVQYOUKTZUUHUUTUUIFQUVCUUIVRTZ
-      UUEVMYOIJZUUFUUBYSUVGYAYOWAVSVTUUHYOYOMUTZUGUHUPZUUIUVEUUHUVHSQZUVHFQUVIFQ
-      UUHUVDUVJUVEYOVOTUVHVRUVHWBULUVFUUHUVDYOUVIIJUVEYOWCTUUHUUAMUTZUVIUUIWDUUH
-      UVDUGSQUVKUVIUNUVEWLYOUGWEWFUUHUUDUVAUUAYCWDJZUVKUUIWDJUUHUVDUUDUVEYOWBTZU
-      VBUUHUUBUVLUUGUUBUIUUHUUDUVAUUBUVLUSUVMUVBUUAYCWGRWHUUAYCWIWJWKWMZWNUUIWOW
-      PUUIYHNWQWPUVNYQUUKEUUIYIYPUUIYOIWRWSRXCWTXAWHXDYIDEXBRXEYINLXFWFYILXGXHTY
-      GYIYHPJZYHCPJZYKYGYIXPQZYIYHGUVOUVQYGNYHXIXJUFYHNXKYIYHXPXLXMYGCXPQZUUNUVP
-      YAUVRYFCFXNXOXQUUQCXPMXRXMYIYHCXSRLYICXTR $.
-      $( [13-Sep-2014] $)
-
-    ${
-      $d a b c d e f x y z A $.
-      $d a b c d e f x y z B $.
-      $d a b c d e f x y z C $.
-      $d a b c d e f x y z D $.
-      $d a b c d e f x y F $.
-      $d a b c d e f ph z $.
-
-      ${
-        renclddomlem.0 $e |- ( ph -> A C_ RR ) $.
-        renclddomlem.1 $e |- ( ph -> B e. RR ) $.
-        renclddomlem.2 $e |- ( ph -> -. B e. A ) $.
-        renclddomlem.3 $e |- ( ph -> A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) $.
-        renclddomlem.4 $e |- F = ( z e. ( RR \ { B } ) |-> ( abs ` ( 1 / ( z - B ) ) ) ) $.
-
-        $( Lemma for ~ renclddom . $)
-        renclddomlem1 $p |- ( ph -> F : ( RR \ { B } ) --> RR+ ) $=
-          ( cr co crp wcel wa cc cc0 wne csn cdif c1 cv cmin cdiv cabs difss
-          ax-resscn sstri simpr sseldi adantr syl2anc eldifsn simprbi adantl
-          cfv subcl wceq wb subeq0 necon3bid mpbird jca reccl recne0 absrpcl
-          3syl fmptd ) ADMFUAZUBZUCDUDZFUENZUFNZUGURZOGAVMVLPZQZVNRPZVNSTZQZ
-          VORPZVOSTZQVPOPVRVSVTVRVMRPZFRPZVSVRVLRVMVLMRMVKUHUIUJAVQUKULZVRMR
-          FUIAFMPVQIUMULZVMFUSUNVRVTVMFTZVQWHAVQVMMPWHVMMFUOUPUQVRVNSVMFVRWD
-          WEVNSUTVMFUTVAWFWGVMFVBUNVCVDVEWAWBWCVNVFVNVGVEVOVHVILVJ $.
-          $( [14-Sep-2014] $)
-
-        $( Lemma for ~ renclddom . $)
-        renclddomlem2 $p |- ( ( ph /\ C e. A ) -> ( F ` C ) = ( abs ` ( 1 / ( C - B ) ) ) ) $=
-          ( wcel cr cfv c1 cmin co cabs wa csn cdif cdiv wne sselda wn simpr
-          wceq adantr nelne2 syl2anc eldifsn sylanbrc cv oveq1 oveq2d fveq2d
-          fvex fvmpt syl ) AGENZUAZGOFUBUCZNZGHPQGFRSZUDSZTPZUIVCGONGFUEZVEA
-          EOGIUFVCVBFENUGZVIAVBUHAVJVBKUJGFEUKULGOFUMUNDGQDUOZFRSZUDSZTPVHVD
-          HVKGUIZVMVGTVNVLVFQUDVKGFRUPUQURMVGTUSUTVA $.
-          $( [14-Sep-2014] $)
-
-        $( Lemma for ~ renclddom . $)
-        renclddomlem3 $p |- ( ( ( ph /\ C e. RR /\ D e. A ) /\ ( abs ` ( D - B ) ) < ( 1 / if ( C <_ 1 , 1 , C ) ) ) -> C < ( F ` D ) ) $=
-          ( cr wcel c1 wbr syl2anc cc0 w3a cmin co cabs cfv cle cif cdiv clt
-          simpl2 1re a1i ifcl crp wne wss 3ad2ant1 adantr simpl3 sseldd recn
-          wa cc syl subcl wn nelne2 wb subeq0 necon3bid mpbird reccl absrpcl
-          recne0 rpre max1 ax-1cn absdiv syl3anc eqcomd nn0ge0i absid oveq1d
-          wceq 1nn0 mp2an recrec fveq2d 3eqtr3d simpr eqbrtrd 0re ltletrd
-          lt01 rpgt0 ltrec syl22anc lelttrd simpl1 renclddomlem2 breqtrrd
-          max2 ) AGOPZHEPZUAZHFUBUCZUDUEZQGQUFRZQGUGZUHUCZUIRZVBZGQXFUHUCZUD
-          UEZHIUEZUIXLGXIXNAXCXDXKUJZXLQOPZXCXIOPZXQXLUKULZXPXHQGOUMSZXLXNUN
-          PZXNOPZXLXMVCPZXMTUOZYAXLXFVCPZXFTUOZYCXLHVCPZFVCPZYEXLHOPYGXLEOHX
-          EEOUPZXKAXCYIXDJUQURAXCXDXKUSZUTHVAVDZXLFOPZYHXEYLXKAXCYLXDKUQURFV
-          AVDZHFVESZXLYFHFUOZXLXDFEPVFZYOYJXEYPXKAXCYPXDLUQURHFEVGSXLYGYHYFY
-          OVHYKYMYGYHVBXFTHFHFVIVJSVKZXFVLSZXLYEYFYDYNYQXFVNSZXMVMSZXNVOVDZX
-          LXCXQGXIUFRXPXSGQVPSXLXIXNUIRZQXNUHUCZXJUIRZXLUUCXGXJUIXLQUDUEZXNU
-          HUCZQXMUHUCZUDUEZUUCXGXLUUHUUFXLQVCPZYCYDUUHUUFWDUUIXLVQULYRYSQXMV
-          RVSVTXLUUEQXNUHUUEQWDZXLXQTQUFRUUJUKQWEWAQWBWFULWCXLUUGXFUDXLYEYFU
-          UGXFWDYNYQXFWGSWHWIXEXKWJWKXLXRTXIUIRYBTXNUIRZUUBUUDVHXTXLTQXITOPX
-          LWLULXSXTTQUIRXLWNULXLXCXQQXIUFRXPXSGQXBSWMUUAXLYAUUKYTXNWOVDXIXNW
-          PWQVKWRXLAXDXOXNWDAXCXDXKWSYJABCDEFHIJKLMNWTSXA $.
-          $( [14-Sep-2014] $)
-
-        $( Lemma for ~ renclddom . $)
-        renclddomlem4 $p |- ( ph -> om ~<_ A ) $=
-          ( vc wbr cr clt crp wcel c1 syl2anc va com cima cdom wss wrex wral
-          vb cv crn imassrn a1i csn wf renclddomlem1 frn syl rpssre sstrd wa
-          cdif cmin co cabs cfv cle cif cdiv cc0 simpr ifcl 0re lt01 max2
-          1re ltletrd elrp sylanbrc rpreccl adantr wceq breq2 rexbidv fveq2d
-          weq oveq1 breq1d cbvrexv syl6bb rcla4va wfun cdm ffun ad2antrr wne
-          sseldd wn nelne2 eldifsn fdm eleqtrrd funfvima imp simplll simpllr
-          syl21anc simplr renclddomlem3 syl31anc rcla4ev rexlimdva ralrimiva
-          ex mpd reunbdom cvv reex ssex imadomg domtr ) AUBGEUCZUDNZYAEUDNZU
-          BEUDNAYAOUEUAUIZUHUIZPNZUHYAUFZUAOUGYBAYAGUJZOYAYHUEAGEUKULAYHQOAO
-          FUMVAZQGUNZYHQUEABCDEFGHIJKLUOZYIQGUPUQQOUEAURULUSUSAYGUAOAYDORZUT
-          ZMUIZFVBVCZVDVEZSYDSVFNZSYDVGZVHVCZPNZMEUFZYGYMYSQRZCUIZFVBVCZVDVE
-          ZBUIZPNZCEUFZBQUGZUUAYMYRQRZUUBYMYRORZVIYRPNUUJYMSORZYLUUKUULYMVOU
-          LZAYLVJZYQSYDOVKTZYMVISYRVIORYMVLULUUMUUOVISPNYMVMULYMYLUULSYRVFNU
-          UNUUMYDSVNTVPYRVQVRYRVSUQAUUIYLKVTUUHUUABYSQUUFYSWAZUUHUUEYSPNZCEU
-          FUUAUUPUUGUUQCEUUFYSUUEPWBWCUUQYTCMECMWEZUUEYPYSPUURUUDYOVDUUCYNFV
-          BWFWDWGWHWIWJTYMYTYGMEYMYNERZUTZYTYGUUTYTUTZYNGVEZYARZYDUVBPNZYGUU
-          TUVCYTUUTGWKZYNGWLZRZUUSUVCAUVEYLUUSAYJUVEYKYIQGWMUQZWNUUTYNYIUVFU
-          UTYNORYNFWOZYNYIRUUTEOYNAEOUEZYLUUSHWNYMUUSVJZWPUUTUUSFERWQZUVIUVK
-          AUVLYLUUSJWNYNFEWRTYNOFWSVRAUVFYIWAZYLUUSAYJUVMYKYIQGWTUQWNXAUVKUV
-          EUVGUTUUSUVCEYNGXBXCXFVTUVAAYLUUSYTUVDAYLUUSYTXDAYLUUSYTXEYMUUSYTX
-          GUUTYTVJABCDEFYDYNGHIJKLXHXIYFUVDUHUVBYAYEUVBYDPWBXJTXMXKXNXLUAUHY
-          AXOTAEXPRZUVEYCAUVJUVNHEOXQXRUQUVHUVNUVEYCEXPGXSXCTUBYAEXTT $.
-          $( [14-Sep-2014] $)
-      $}
-
-      $( A set of real numbers which comes arbitrarily close to some target yet excludes it is infinite. $)
-      renclddom $p |- ( ( ( A C_ RR /\ B e. RR /\ -. B e. A ) /\ A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) -> om ~<_ A ) $=
-        ( va cr wss wcel wn w3a cv cmin co cabs cfv clt wbr wrex crp wral cdif
-        wa csn c1 cdiv cmpt simpl1 simpl2 simpl3 simpr eqid renclddomlem4 ) CF
-        GZDFHZDCHIZJZBKDLMNOAKPQBCRASTZUBABECDEFDUCUAUDEKDLMUEMNOUFZUMUNUOUQUG
-        UMUNUOUQUHUMUNUOUQUIUPUQUJURUKUL $.
-        $( [14-Sep-2014] $)
-    $}
+    $( A set of real numbers which comes arbitrarily close to some target yet excludes it is infinite.  The work is done in ~ rencldnfilem using infima; this theorem removes the requirement that A be non-empty. $)
+    rencldnfi $p |- ( ( ( A C_ RR /\ B e. RR /\ -. B e. A ) /\ A. x e. RR+ E. y e. A ( abs ` ( y - B ) ) < x ) -> -. A e. Fin ) $=
+      ( cr wss wcel wn w3a cv cmin co cabs cfv crp wral wa c0 wne c1 clt simpl1
+      wbr wrex cfn simpl2 ralimi wb 1rp ne0i r19.3rzv mp2b sylibr adantl simpl3
+      rexn0 jca simpr rencldnfilem syl31anc ) CEFZDEGZDCGHZIZBJDKLMNAJUAUCZBCUD
+      ZAOPZQZVAVBCRSZVCQVGCUEGHVAVBVCVGUBVAVBVCVGUFVHVIVCVGVIVDVGVIAOPZVIVFVIAO
+      VEBCUPUGTOGORSVIVJUHUIOTUJVIAOUKULUMUNVAVBVCVGUOUQVDVGURABCDUSUT $.
+      $( [19-Oct-2014] $)
   $}
 
 $(
@@ -2777,15 +2698,6 @@ $)
     lt0ne0 $p |- ( ( A e. RR /\ A < 0 ) -> A =/= 0 ) $=
       ( cr wcel cc0 clt wbr wa wne 0re ltne mp3an2 necomd ) ABCZADEFZGDAMDBCNDAH
       IADJKL $.
-      $( [13-Sep-2014] $)
-
-    $( Move negation into the denominator of a division. $)
-    divneg2ALT $p |- ( ( A e. CC /\ B e. CC /\ B =/= 0 ) -> -u ( A / B ) = ( A / -u B ) ) $=
-      ( cc wcel cc0 wne w3a cdiv cneg divneg negneg 3ad2ant2 eqcomd oveq2d simp1
-      co wceq negcl negeq0 biimprd necon3d imp 3adant1 div2neg syl3anc 3eqtrd )
-      ACDZBCDZBEFZGZABHPIAIZBHPUKBIZIZHPZAULHPZABJUJBUMUKHUJUMBUHUGUMBQUIBKLMNUJ
-      UGULCDZULEFZUNUOQUGUHUIOUHUGUPUIBRLUHUIUQUGUHUIUQUHULEBEUHBEQULEQBSTUAUBUC
-      AULUDUEUF $.
       $( [13-Sep-2014] $)
 
     $( Accidental reproof of ~ divides2 . $)
@@ -3205,15 +3117,14 @@ $)
 
     $( Lagrange's rational approximation theorem.  Every positive irrational number has infinitely many rational approximations which are closer than the inverse squares of their reduced denominators.  Lemma 62 in [vandenDries]. $)
     irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { y e. QQ | ( 0 < y /\ ( abs ` ( y - A ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ~~ NN ) $=
-      ( vb va crp cq wcel cv clt wbr cmin co cabs cfv cn cdom cen cvv com cr cc0
-      cdif cdenom c2 cneg cexp wa crab wss qex rabex ssrab2 ssdomg mp2 qnnen a1i
-      domentr sylancr nnenom wn wrex wral qssre sstri eldifi rpre syl sseli nsyl
-      eldifn irrapxlem6 sylan ralrimiva renclddom syl31anc endomtr sbth syl2anc
-      ) BEFUBGZUAAHZIJVTBKLMNVTUCNUDUEUFLIJUGZAFUHZOPJZOWBPJZWBOQJVSWBFPJZFOQJZW
-      CWBRGWBFUIWEWAAFUJUKWAAFULZWBFRUMUNWFVSUOUPWBFOUQURVSOSQJSWBPJZWDUSVSWBTUI
-      ZBTGZBWBGZUTCHBKLMNDHZIJCWBVAZDEVBWHWIVSWBFTWGVCVDUPVSBEGZWJBEFVEZBVFVGVSB
-      FGWKBEFVJWBFBWGVHVIVSWMDEVSWNWLEGWMWOCABWLVKVLVMDCWBBVNVOOSWBVPURWBOVQVR
-      $.
+      ( vb va crp cq wcel com cen wbr cn wa cv clt cmin co cabs cfv wss cr cdif
+      cc0 cdenom c2 cneg cexp crab cfn wn qnnen nnenom entri pm3.2i wrex ssrab2
+      wral qssre sstri eldifi rpre eldifn sseli nsyl irrapxlem6 sylan ralrimiva
+      a1i syl rencldnfi syl31anc jctil ctbnfien sylancr ) BEFUAGZFHIJZKHIJZLUBA
+      MZNJVQBOPQRVQUCRUDUEUFPNJLZAFUGZFSZVSUHGUIZLVSKIJVOVPFKHUJUKULUKUMVNWAVTV
+      NVSTSZBTGZBVSGZUICMBOPQRDMZNJCVSUNZDEUPWAWBVNVSFTVRAFUOZUQURVGVNBEGZWCBEF
+      USZBUTVHVNBFGWDBEFVAVSFBWGVBVCVNWFDEVNWHWEEGWFWICABWEVDVEVFDCVSBVIVJWGVKV
+      SFKVLVM $.
       $( [14-Sep-2014] $)
   $}
 
