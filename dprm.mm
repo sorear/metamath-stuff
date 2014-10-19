@@ -38,43 +38,15 @@ $)
       $( [1-Sep-2013] $)
   $}
 
-  ${
-    $d x y z $.
-    $( Two ways to state the domain of an operation.  (Contributed by FL,
-       24-Jan-2010.) $)
-    twsvbdop $p |-
-      { <. <. x , y >. , z >. | ( <. x , y >. e. ( A X. B ) /\ ph ) } =
-        { <. <. x , y >. , z >. | ( ( x e. A /\ y e. B ) /\ ph ) } $=
-      ( cv cop cxp wcel wa vex opelxp anbi1i oprabbii ) BGZCGZHEFIJZAKPEJQFJKZA
-      KBCDRSAPQEFCLMNO $.
-      $( [24-Jan-2010] $)
-  $}
 
-  ${
-    $d A x $.  $d B x $.  $d X x $.
-    $( The value of a union when the argument is in the first domain.
-       (Contributed by Scott Fenton, 29-Jun-2013.) $)
-    fvun1 $p |- ( ( F Fn A /\ G Fn B /\ ( ( A i^i B ) = (/) /\ X e. A ) ) ->
-    ( ( F u. G ) ` X ) = ( F ` X ) ) $=
-      ( vx wfn cin c0 wceq wcel wa w3a cun cfv wfun cdm fnfun fndm wn ineqan12d
-      3ad2ant1 3ad2ant2 eqeq1d biimprd adantrd 3impia fvun syl21anc cv wi eleq1
-      wral disj notbid rcla4cv sylbi imp adantl wb eleq2d adantr mtbird 3adant1
-      ndmfv syl uneq2d un0 syl6eq eqtrd ) CAGZDBGZABHZIJZEAKZLZMZECDNOZECOZEDOZ
-      NZVSVQCPZDPZCQZDQZHZIJZVRWAJVKVLWBVPACRUBVLVKWCVPBDRUCVKVLVPWGVKVLLZVNWGV
-      OWHWGVNWHWFVMIVKVLWDAWEBACSBDSZUAUDUEUFUGECDUHUIVQWAVSINVSVQVTIVSVQEWEKZT
-      ZVTIJVLVPWKVKVLVPLWJEBKZVPWLTZVLVNVOWMVNFUJZBKZTZFAUMVOWMUKFABUNWPWMFEAWN
-      EJWOWLWNEBULUOUPUQURUSVLWJWLUTVPVLWEBEWIVAVBVCVDEDVEVFVGVSVHVIVJ $.
-      $( [29-Jun-2013] $)
-  $}
 
-  $( The value of a union when the argument is in the second domain.
-     (Contributed by Scott Fenton, 29-Jun-2013.) $)
-  fvun2 $p |- ( ( F Fn A /\ G Fn B /\ ( ( A i^i B ) = (/) /\ X e. B ) ) ->
-    ( ( F u. G ) ` X ) = ( G ` X ) ) $=
-    ( wfn cin c0 wceq wcel w3a cun cfv uncom fveq1i incom eqeq1i anbi1i fvun1
-    wa syl3an3b 3com12 syl5eq ) CAFZDBFZABGZHIZEBJZTZKECDLZMEDCLZMZEDMZEUJUKCDN
-    OUEUDUIULUMIZUIUEUDBAGZHIZUHTUNUGUPUHUFUOHABPQRBADCESUAUBUC $.
-    $( [29-Jun-2013] $)
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Stuff copied from other mathboxen XXX - KEEP
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $( the next two are needed at least until pellex is rewritten to use || $)
 
   $( ` A ` is divisible by ` B ` iff its negative is.  (Contributed by Jeff
      Madsen, 2-Sep-2009.) $)
@@ -97,13 +69,6 @@ $)
     ZIZKZABLMZNIZUKBLMZNIZOZUHUOUIAPQUJULUTUNULUTRUJULUPURNUPURIAUKAUKBLTUASUBU
     JUTUNUQUMBLMZNIZOABUCUNUSVBUQUNURVANUKUMBLTSUDUEUFUG $.
     $( [2-Sep-2009] $)
-
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Stuff copied from other mathboxen XXX - KEEP
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
 
 $( JUSTIFICATION: used to prove ZZ-hood in modabsdifz by showing that the number differs at most in sign from an integer $)
 
@@ -155,6 +120,43 @@ $( JUSTIFICATION: split a set in two by definable predicate, easily show that th
     BFDGZCFEGZAHZSACEIZJZBKZUBBDIUASUBUDSTALTAUBSACEMNUCBOPUBBDQR $.
     $( [4-Jun-2012] $)
 
+  ${
+    $d x y z $.
+    $( Two ways to state the domain of an operation.  (Contributed by FL,
+       24-Jan-2010.) $)
+    twsvbdop $p |-
+      { <. <. x , y >. , z >. | ( <. x , y >. e. ( A X. B ) /\ ph ) } =
+        { <. <. x , y >. , z >. | ( ( x e. A /\ y e. B ) /\ ph ) } $=
+      ( cv cop cxp wcel wa vex opelxp anbi1i oprabbii ) BGZCGZHEFIJZAKPEJQFJKZA
+      KBCDRSAPQEFCLMNO $.
+      $( [24-Jan-2010] $)
+  $}
+
+  ${
+    $d A x $.  $d B x $.  $d X x $.
+    $( The value of a union when the argument is in the first domain.
+       (Contributed by Scott Fenton, 29-Jun-2013.) $)
+    fvun1 $p |- ( ( F Fn A /\ G Fn B /\ ( ( A i^i B ) = (/) /\ X e. A ) ) ->
+    ( ( F u. G ) ` X ) = ( F ` X ) ) $=
+      ( vx wfn cin c0 wceq wcel wa w3a cun cfv wfun cdm fnfun fndm wn ineqan12d
+      3ad2ant1 3ad2ant2 eqeq1d biimprd adantrd 3impia fvun syl21anc cv wi eleq1
+      wral disj notbid rcla4cv sylbi imp adantl wb eleq2d adantr mtbird 3adant1
+      ndmfv syl uneq2d un0 syl6eq eqtrd ) CAGZDBGZABHZIJZEAKZLZMZECDNOZECOZEDOZ
+      NZVSVQCPZDPZCQZDQZHZIJZVRWAJVKVLWBVPACRUBVLVKWCVPBDRUCVKVLVPWGVKVLLZVNWGV
+      OWHWGVNWHWFVMIVKVLWDAWEBACSBDSZUAUDUEUFUGECDUHUIVQWAVSINVSVQVTIVSVQEWEKZT
+      ZVTIJVLVPWKVKVLVPLWJEBKZVPWLTZVLVNVOWMVNFUJZBKZTZFAUMVOWMUKFABUNWPWMFEAWN
+      EJWOWLWNEBULUOUPUQURUSVLWJWLUTVPVLWEBEWIVAVBVCVDEDVEVFVGVSVHVIVJ $.
+      $( [29-Jun-2013] $)
+  $}
+
+  $( The value of a union when the argument is in the second domain.
+     (Contributed by Scott Fenton, 29-Jun-2013.) $)
+  fvun2 $p |- ( ( F Fn A /\ G Fn B /\ ( ( A i^i B ) = (/) /\ X e. B ) ) ->
+    ( ( F u. G ) ` X ) = ( G ` X ) ) $=
+    ( wfn cin c0 wceq wcel w3a cun cfv uncom fveq1i incom eqeq1i anbi1i fvun1
+    wa syl3an3b 3com12 syl5eq ) CAFZDBFZABGZHIZEBJZTZKECDLZMEDCLZMZEDMZEUJUKCDN
+    OUEUDUIULUMIZUIUEUDBAGZHIZUHTUNUGUPUHUFUOHABPQRBADCESUAUBUC $.
+    $( [29-Jun-2013] $)
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Miscellanea 1. Map utilities
