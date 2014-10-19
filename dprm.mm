@@ -2422,193 +2422,38 @@ $)
   $}
 
   ${
-    $( a direct proof might be much shorter? $)
-    $d a b c d e f x A $.
-    $d a b c d e f x B $.
-    encfslb2n.1 $e |- A e. _V $.
-    $( ~ cfslb2n transfered to arbitrary sets by cardinality: a "small" union of "small" sets cannot create a "large" set, as established by cofinality.  AC snuck in here; need to restate/reprove to get it out. $)
-    encfslb2n $p |- ( ( Lim ( card ` A ) /\ A. x e. B ( x C_ A /\ x ~< ( cf ` ( card ` A ) ) ) /\ B ~< ( cf ` ( card ` A ) ) ) -> U. B =/= A ) $=
-      ( vb vc vd ve vf cv wss csdm wbr wa cvv cima wcel wceq ex ax-mp va cfv ccf
-      ccrd wlim wral w3a wf1o wex cuni wne cen cardid ensymi fvex bren mpbi cmpt
-      simpl1 wrex wfun wi funmpt a1i fvelima syl crn imassrn f1ofo adantl adantr
-      wfo forn syl5sseq cdom imadomg mpan9 simpr simpll2 weq sseq1 breq1 anbi12d
-      f1ofun rcla4v sylc simprd domsdomtr syl2anc jca wb vex imaeq2 imaexg fvmpt
-      eqeq1i sylbi syl5ibcom rexlimdva ralrimiv relsdom brrelexi 3ad2ant3 simpl3
-      eqid syld cfslb2n imp syl21anc simplr ad2antrr ciun wel ccnv wf1 ad3antrrr
-      mpan simp1 f1of1 elssuni simpll3 sseqtrd f1imacnv eqeltrd id eqtr3d eleq1d
-      imaeq2d mpbid syl5 impr simpllr eleqtrd eqcomd eleq2d rcla4ev fveq2 3eqtrd
-      exlimdv sylancl eqeq1d wfn rgenw fnmpt fvelimab mpbird eleq2 cla4ev impbid
-      ssv eleq1 eluni eliun 3bitr4g eqrdv imauni syl6eqr simp3 cdm f1odm imadmrn
-      3ad2ant1 3syl syl3anc necon3d mpd mpi ) BUDUBZUEZAJZBKZUVJUVHUCUBZLMZNZACU
-      FZCUVLLMZUGZBUVHUAJZUHZUAUIZCUJZBUKZBUVHULMUVTUVHBDBUMUNBUVHUABUDUOZUPUQUV
-      QUVSUWBUAUVQUVSUWBUVQUVSNZEOUVREJZPZURZCPZUJZUVHUKZUWBUWDUVIFJZUVHKZUWKUVL
-      LMZNZFUWHUFZUWHUVLLMZUWJUVIUVOUVPUVSUSUWDUWNFUWHUWDUWKUWHQZGJZUWGUBZUWKRZG
-      CUTZUWNUWDUWGVAZUWQUXAVBUXBUWDEOUWFVCZVDZUXBUWQUXAGUWKCUWGVESVFUWDUWTUWNGC
-      UWDUWRCQZNZUVRUWRPZUVHKZUXGUVLLMZNZUWTUWNUXFUXHUXIUXFUVRVGZUXGUVHUVRUWRVHU
-      WDUXKUVHRZUXEUVSUXLUVQUVSBUVHUVRVLZUXLBUVHUVRVIZBUVHUVRVMZVFVJVKVNUXFUXGUW
-      RVOMZUWRUVLLMZUXIUWDUVRVAZUXEUXPUVSUXRUVQBUVHUVRWDVJUWRCUVRVPVQUXFUWRBKZUX
-      QUXFUXEUVOUXSUXQNZUWDUXEVRUVIUVOUVPUVSUXEVSUVNUXTAUWRCAGVTUVKUXSUVMUXQUVJU
-      WRBWAUVJUWRUVLLWBWCWEWFWGUXGUWRUVLWHWIWJUWTUXGUWKRZUXJUWNWKUWSUXGUWKUWROQU
-      WSUXGRGWLEUWRUWFUXGOUWGUWEUWRUVRWMUWGXEZUVROQZUXGOQUAWLZUVRUWROWNTWOTWPUYA
-      UXHUWLUXIUWMUXGUWKUVHWAUXGUWKUVLLWBWCWQWRWSXFWTUWDUWHCVOMZUVPUWPUWDCOQZUXB
-      UYEUVQUYFUVSUVPUVIUYFUVOCUVLLXAXBXCZVKUXDCOUWGVPWFUVIUVOUVPUVSXDUWHCUVLWHW
-      IUVIUWONUWPUWJFUVHUWHUWCXGXHXIUWDUWABUWIUVHUWDUWABRZUWIUVHRZUWDUYHNUVSUYFU
-      YHUYIUVQUVSUYHXJUVQUYFUVSUYHUYGXKUWDUYHVRUVSUYFUYHUGZUWIUVRUWAPZUVRBPZUVHU
-      YJUWIFCUVRUWKPZXLZUYKUYJGUWIUYNUYJGHXMZHJZUWHQZNZHUIZUWRUYMQZFCUTZUWRUWIQU
-      WRUYNQUYJUYSVUAUYJUYRVUAHUYJUYRVUAUYJUYRNUVRXNZUYPPZCQZUWRUVRVUCPZQZVUAUYJ
-      UYOUYQVUDUYQIJZUWGUBZUYPRZICUTZUYJUYONZVUDUXBUYQVUJUXCIUYPCUWGVEXQZVUKVUIV
-      UDICVUKVUGCQZNZVUIVUDVUNVUINZVUBUVRVUGPZPZCQZVUDVUOVUQVUGCVUOBUVHUVRXOZVUG
-      BKZVUQVUGRVUOUVSVUSUYJUVSUYOVUMVUIUVSUYFUYHXRZXPBUVHUVRXSVFVUNVUTVUIVUNVUG
-      UWABVUMVUGUWAKVUKVUGCXTVJUVSUYFUYHUYOVUMYAYBVKBUVHVUGUVRYCWIZVUKVUMVUIXJYD
-      VUIVURVUDWKVUNVUIVUQVUCCVUIVUPUYPVUBVUIVUHVUPUYPVUHVUPRZVUIVUGOQVVCIWLEVUG
-      UWFVUPOUWGUWEVUGUVRWMUYBUYCVUPOQUYDUVRVUGOWNTWOTZVDVUIYEYFYHZYGVJYISWSYJYK
-      UYJUYOUYQVUFUYQVUJVUKVUFVULVUKVUIVUFICVUNVUIVUFVUOUWRUVRVUQPZQZVUFVUOUWRVU
-      PVVFVUOUWRUYPVUPUYJUYOVUMVUIYLVUOVUHUYPVUPVUNVUIVRVVCVUOVVDVDYFYMVUOVUGVUQ
-      UVRVUOVUQVUGVVBYNYHYMVUIVVGVUFWKVUNVUIVVFVUEUWRVUIVUQVUCUVRVVEYHYOVJYISWSY
-      JYKUYTVUFFVUCCUWKVUCRUYMVUEUWRUWKVUCUVRWMYOYPWISYSUYJUYTUYSFCUYJUWKCQZNZUY
-      TUYSVVIUYTNZUYTUYMUWHQZUYSVVIUYTVRVVJVVKVUHUYMRZICUTZVVJVVHUWKUWGUBZUYMRZV
-      VMUYJVVHUYTXJUWKOQVVOFWLEUWKUWFUYMOUWGUWEUWKUVRWMUYBUYCUYMOQUYDUVRUWKOWNTZ
-      WOTVVLVVOIUWKCIFVTVUHVVNUYMVUGUWKUWGYQUUAYPYTVVJUWGOUUBZCOKVVKVVMWKVVQVVJU
-      WFOQZEOUFVVQVVREOUYCVVRUYDUVRUWEOWNTUUCEOUWFUWGOUYBUUDTVDCUUJIOCUYMUWGUUEY
-      TUUFUYRUYTVVKNHUYMVVPUYPUYMRUYOUYTUYQVVKUYPUYMUWRUUGUYPUYMUWHUUKWCUUHWISWS
-      UUIHUWRUWHUULFUWRCUYMUUMUUNUUOFUVRCUUPUUQUYJUWABUVRUVSUYFUYHUURYHUYJUYLUVR
-      UVRUUSZPZUXKUVHUYJBVVSUVRUVSUYFBVVSRUYHUVSVVSBBUVHUVRUUTYNUVBYHVVTUXKRUYJU
-      VRUVAVDUYJUVSUXMUXLVVAUXNUXOUVCYRYRUVDSUVEUVFSYSUVG $.
-      $( [11-Sep-2014] $)
+    $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
+    fiphp3d.a $e |- ( ph -> A ~~ NN ) $.
+    fiphp3d.b $e |- ( ph -> B e. Fin ) $.
+    fiphp3d.c $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
 
-  $}
-
-  ${
-    $d A a b c d e y $.
-    $d B a b c d e y $.
-    $d C a b c d e y $.
-    $( Infinite pigeonhole principle using cofinality: a function from a large domain to a small range must have some output with a large preimage. $)
-    fiphp1 $p |- ( ( ( A e. _V /\ Lim ( card ` A ) /\ B ~< ( cf ` ( card `
-        A ) ) ) /\ C : A --> B ) -> E. y e. B ( cf ` ( card ` A ) ) ~<_ ( `'
-        C " { y } ) ) $=
-      ( vb va vc vd cvv wcel cfv csdm wbr wa cima wceq adantr wb syl2anc a1i wf
-      ccrd wlim ccf w3a ccnv cv csn cdom wrex wral cmpt cuni wne simp1 brrelexi
-      wn relsdom 3ad2ant3 simpr wel wex eluni wfn wss simpl3 cnvexg imaexg 3syl
-      fex ralrimiva eqid fnmpt syl ssid fvelimab anbi2d exbidv weq sneq imaeq2d
-      simp3 fvmptg eqeq1d rexbidva crn imassrn cdm df-rn dmcnvcnv fdm ad3antrrr
-      3eqtrd 3sstr3d simpllr sseldd rexlimdva expimpd exlimdv eleqtrrd funfvbrb
-      ex wfun ffun mpbid fvex vex eliniseg ax-mp sylibr ffvelrn 3ad2antl3 eqidd
-      rcla4ev jca eleq2 eqeq2 rexbidv anbi12d cla4egv sylc impbid 3bitrd syl5bb
-      syl3anc simpll1 simpll2 funmpt fvelima mpan adantl syl5sseq simplr breq1d
-      eqrdv nne rcla4v eqtr3d wi breq2d sseq1 breq1 syl5 ralrimiv ad2antrr ee10
-      imadomg simpll3 domsdomtr 3jca fveq2 limeq sseq2 fveq2d ralbidv 3anbi123d
-      neeq2 imbi12d encfslb2n vtoclg mtand rexnal domtri mpbird ) BIJZBUBKZUCZC
-      UVFUDKZLMZUEZBCDUAZNZUVHDUFZAUGZUHZOZUIMZACUJZUVPUVHLMZUQZACUJZUVLUVSACUK
-      ZUQUWAUVLUWBECUVMEUGZUHZOZULZCOZUMZBUNZUVLUWHBPZUWIUQUVLUVECIJZUVKUWJUVJU
-      VEUVKUVEUVGUVIUOZQZUVJUWKUVKUVIUVEUWKUVGCUVHLURUPUSZQUVJUVKUTZUVEUWKUVKUE
-      ZFUWHBFUGZUWHJFGVAZGUGZUWGJZNZGVBZUWPUWQBJZGUWQUWGVCUWPUXBUWRHUGZUWFKZUWS
-      PZHCUJZNZGVBUWRUVMUXDUHZOZUWSPZHCUJZNZGVBZUXCUWPUXAUXHGUWPUWTUXGUWRUWPUWF
-      CVDZCCVEZUWTUXGRUWPUWEIJZECUKUXOUWPUXQECUWPUWCCJZNZDIJZUVMIJZUXQUXSUVKUVE
-      UXTUVEUWKUVKUXRVFUWPUVEUXRUVEUWKUVKUOZQBCIDVJZSDIVGZUVMUWDIVHVIVKECUWEUWF
-      IUWFVLZVMVNUXPUWPCVOTHCCUWSUWFVPSVQVRUWPUXHUXMGUWPUXGUXLUWRUWPUXFUXKHCUWP
-      UXDCJZNZUXEUXJUWSUYGUYFUXJIJZUXEUXJPUWPUYFUTUWPUYHUYFUWPUXTUYAUYHUWPUVKUV
-      EUXTUVEUWKUVKWBUYBUYCSZUYDUVMUXIIVHVIQEUXDUWEUXJCIUWFEHVSUWDUXIUVMUWCUXDV
-      TWAUYEWCSWDWEVQVRUWPUXNUXCUWPUXMUXCGUWPUWRUXLUXCUWPUWRNZUXKUXCHCUYJUYFNZU
-      XKUXCUYKUXKNZUWSBUWQUYLUXJUVMWFZUWSBUXJUYMVEUYLUVMUXIWGTUYKUXKUTUWPUYMBPZ
-      UWRUYFUXKUWPUYMUVMUFWHZDWHZBUYMUYOPZUWPUVMWIZTUYOUYPPZUWPDWJZTUVKUVEUYPBP
-      ZUWKBCDWKZUSZWMWLWNUWPUWRUYFUXKWOWPXBWQWRWSUWPUXCUXNUWPUXCNZUVMUWQDKZUHZO
-      ZIJZUWQVUGJZUXJVUGPZHCUJZNZUXNUWPVUHUXCUWPUXTUYAVUHUYIUYDUVMVUFIVHVIQVUDV
-      UIVUKVUDUWQVUEDMZVUIVUDUWQUYPJZVUMVUDUWQBUYPUWPUXCUTUWPVUAUXCVUCQWTVUDDXC
-      ZVUNVUMRUWPVUOUXCUVKUVEVUOUWKBCDXDUSQUWQDXAVNXEVUEIJVUIVUMRUWQDXFDVUEUWQI
-      FXGZXHXIXJVUDVUECJZVUGVUGPZVUKUVKUVEUXCVUQUWKBCUWQDXKXLVUDVUGXMVUJVURHVUE
-      CUXDVUEPZUXJVUGVUGVUSUXIVUFUVMUXDVUEVTWAWDXNSXOUXMVULGVUGIUWSVUGPZUWRVUIU
-      XLVUKUWSVUGUWQXPVUTUXKVUJHCUWSVUGUXJXQXRXSXTYAXBYBYCYDYOYEUWHBYPXJUVLUWBN
-      ZUVEUVGUWSBVEZUWSUVHLMZNZGUWGUKZUWGUVHLMZUEZUWIUVEUVGUVIUVKUWBYFVVAUVGVVE
-      VVFUVEUVGUVIUVKUWBYGVVAVVDGUWGUWTUWQUWFKZUWSPZFCUJZVVAVVDUWFXCZUWTVVJECUW
-      EYHZFUWSCUWFYIYJVVAVVIVVDFCVVAUWQCJZNZVVIVVDVVNVVINZUVMUWQUHZOZBVEZVVQUVH
-      LMZNZVVDVVOVVRVVSVVOUYMVVQBUVMVVPWGUVLUYNUWBVVMVVIUVLUYMUYOUYPBUYQUVLUYRT
-      UYSUVLUYTTUVKVUAUVJVUBYKWMWLYLVVOVVMUWBVVSVVAVVMVVIYMZUVLUWBVVMVVIWOUVSVV
-      SAUWQCAFVSZUVPVVQUVHLVWBUVOVVPUVMUVNUWQVTWAYNYQYAXOVVOVVQUWSPZVVTVVDRVVOV
-      VHVVQUWSVVOVVMVVQIJZVVHVVQPVWAVVNVWDVVIVVNUXTUYAVWDVVNUVKUVEUXTUVJUVKUWBV
-      VMWOUVJUVEUVKUWBVVMUWLWLUYCSUYDUVMVVPIVHVIQEUWQUWEVVQCIUWFEFVSUWDVVPUVMUW
-      CUWQVTWAUYEWCSVVNVVIUTYRVWCVVRVVBVVSVVCVVQUWSBUUAVVQUWSUVHLUUBXSVNXEXBWQU
-      UCUUDVVAUWGCUIMZUVIVVFVVAUWKVVKVWEUVJUWKUVKUWBUWNUUEVVLCIUWFUUGUUFUVEUVGU
-      VIUVKUWBUUHUWGCUVHUUISUUJUWQUBKZUCZUWSUWQVEZUWSVWFUDKZLMZNZGUWGUKZUWGVWIL
-      MZUEZUWHUWQUNZYSVVGUWIYSFBIUWQBPZVWNVVGVWOUWIVWPVWGUVGVWLVVEVWMVVFVWPVWFU
-      VFPVWGUVGRUWQBUBUUKZVWFUVFUULVNVWPVWKVVDGUWGVWPVWHVVBVWJVVCUWQBUWSUUMVWPV
-      WIUVHUWSLVWPVWFUVFUDVWQUUNZYTXSUUOVWPVWIUVHUWGLVWRYTUUPUWQBUWHUUQUURGUWQU
-      WGVUPUUSUUTYAUVAUVSACUVBXJUVLUXTUVRUWARUVLUVKUVEUXTUWOUWMUYCSUXTUVQUVTACU
-      XTUVHIJZUVPIJZUVQUVTRVWSUXTUVFUDXFTUXTUYAVWTUYDUVMUVOIVHVNUVHUVPIIUVCSXRV
-      NUVD $.
-      $( [12-Sep-2014] $)
-  $}
-
-  ${
-    $d ph a x y z b c d e $.
-    $d A x y z a b c d e $.
-    $d B x y z a b c d e $.
-    $d D y z a b c d e $.
-    $d E x $.
-    fiphp1d.1 $e |- ( ph -> A e. _V ) $.
-    fiphp1d.2 $e |- ( ph -> Lim ( card ` A ) ) $.
-    fiphp1d.3 $e |- ( ph -> B ~< ( cf ` ( card ` A ) ) ) $.
-    fiphp1d.4 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
-    fiphp1d.5 $e |- ( x = z -> D = E ) $.
-
-    $( Infinite pigeonhole principle using implicit substitution.  Again uses AC probably unnecessarily. $)
-    fiphp1d $p |- ( ph -> E. y e. B ( cf ` ( card ` A ) ) ~<_ { x e. A | D = y } ) $=
-      ( cfv cv cdom wbr wceq wcel wa ccrd ccf cmpt ccnv cima wrex crab wlim csdm
-      csn cvv wf eqid fmptd fiphp1 syl31anc wb wal simpr weq eleq1 anbi2d eleq1d
-      wi imbi12d chvarv adantlr ax-17 adantl eqidd fvmptd syl3anc eqeq1d wfn ffn
-      pm5.32da syl fniniseg sylan elrab a1i 3bitr4d alrimiv dfcleq sylibr breq2d
-      biimpd reximdva mpd ) AEUANZUBNZBEGUCZUDCOZUJUEZPQZCFUFZWKGWMRZBEUGZPQZCFU
-      FAEUKSWJUHFWKUIQEFWLULZWPIJKABEGFWLLWLUMUNZCEFWLUOUPAWOWSCFAWMFSZTZWOWSXCW
-      NWRWKPXCDOZWNSZXDWRSZUQZDURWNWRRXCXGDXCXDESZXDWLNZWMRZTZXHHWMRZTZXEXFXCXHX
-      JXLXCXHTZXIHWMXNXHXHHFSZXIHRXCXHUSZXPAXHXOXBABOZESZTZGFSZVDAXHTZXOVDBDBDUT
-      ZXSYAXTXOYBXRXHAXQXDEVAVBYBGHFMVCVELVFVGXHBXDGHEWLFXHBVHYBGHRXHMVIXHWLVJVK
-      VLVMVPAWLEVNZXBXEXKUQAWTYCXAEFWLVOVQEWMXDWLFVRVSXFXMUQXCWQXLBXDEYBGHWMMVMV
-      TWAWBWCDWNWRWDWEWFWGWHWI $.
-      $( [12-Sep-2014] $)
+    $( Infinite pigeonhole principle for partitioning an infinite set between finitely many buckets. $)
+    fiphp3d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
+      ( cv wceq cfn wcel wrex cn cen wbr com cvv syl crab wn wral ciun ominf wa
+      risset eqcom rexbii bitri sylib rabid2 sylibr iunrab syl6reqr eleq1d omex
+      ralrimiva nnenom entr sylancl enfi sylancr bitrd mtbiri iunfi sylan mtand
+      wb rexnal csdm wo cdom relen brrelexi ssrab2 ssdom2g ee10 domentr syl2anc
+      wss brdom2 wi sdomentr ax-mp mpan2 isfinite2 orim1i ord reximdv mpd ) AFC
+      JZKZBDUAZLMZUBZCENZWNOPQZCENAWOCEUCZUBWQAWSCEWNUDZLMZAXARLMZUEAXADLMZXBAW
+      TDLADWMCENZBDUAZWTAXDBDUCDXEKAXDBDABJDMUFFEMZXDIXFWLFKZCENXDCFEUGXGWMCEWL
+      FUHUIUJUKURXDBDULUMWMCBEDUNUOUPARSMZDRPQZXCXBVIUQADOPQZORPQZXIGUSDORUTVAD
+      RSVBVCVDVEAELMWSXAHCEWNVFVGVHWOCEVJUMAWPWRCEAWOWRAWNOVKQZWRVLZWOWRVLAWNOV
+      MQZXMAWNDVMQZXJXNADSMZWNDWAXOAXJXPGDOPVNVOTWMBDVPWNDSVQVRGWNDOVSVTWNOWBUK
+      XLWOWRXLWNRVKQZWOXLXKXQUSXHXLXKUFXQWCUQWNORSWDWEWFWNWGTWHTWIWJWK $.
+      $( [18-Oct-2014] $)
   $}
 
   ${
     $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
-
-    fiphp2d.1 $e |- ( ph -> A e. _V ) $.
-    fiphp2d.2 $e |- ( ph -> Lim ( card ` A ) ) $.
-    fiphp2d.3 $e |- ( ph -> ( cf ` ( card ` A ) ) = ( card ` A ) ) $.
-    fiphp2d.4 $e |- ( ph -> B ~< A ) $.
-    fiphp2d.5 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
-    fiphp2d.6 $e |- ( x = z -> D = E ) $.
-
-    $( Infinite pigeonhole principle for sets of regular cardinality. $)
-    fiphp2d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ A ) $=
-      ( cfv cdom wbr cvv wcel wa ccrd ccf cv wceq crab wrex cen csdm fvex cardcf
-      a1i syl5req wb carden syl2anc mpbid jca sdomentr sylc fiphp1d wss ad2antrr
-      ssrab2 ssdom2g ee10 endomtr sylancom sbth ex reximdva mpd ) AEUAOZUBOZGCUC
-      ZUDZBEUEZPQZCFUFVPEUGQZCFUFABCDEFGHIJAVMRSZFEUHQZEVMUGQZTFVMUHQVSAVLUBUIUK
-      ZAVTWALAVLVMUAOZUDZWAAWCVMVLVLUJKULAERSZVSWDWAUMIWBEVMRRUNUOUPZUQFEVMRURUS
-      MNUTAVQVRCFAVNFSZTZVQVRWHVQTZVPEPQZEVPPQZVRWIWEVPEVAWJAWEWGVQIVBVOBEVCVPER
-      VDVEWHVQWAWKAWAWGVQWFVBEVMVPVFVGVPEVHUOVIVJVK $.
-      $( [12-Sep-2014] $)
-  $}
-
-  ${
-    $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
-    fiphp3d.1 $e |- ( ph -> A ~~ NN ) $.
-    fiphp3d.2 $e |- ( ph -> B e. Fin ) $.
-    fiphp3d.3 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
-    fiphp3d.4 $e |- ( x = z -> D = E ) $.
+    fiphp3dOLD.1 $e |- ( ph -> A ~~ NN ) $.
+    fiphp3dOLD.2 $e |- ( ph -> B e. Fin ) $.
+    fiphp3dOLD.3 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
+    fiphp3dOLD.4 $e |- ( x = z -> D = E ) $.
 
     $( Infinite pigeonhole principle for partitioning an infinite set between finitely many buckets.  This one can definitely be proven without AC.  TODO $)
-    fiphp3d $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
-      ( wceq cen wbr cn cvv wcel syl com crab wrex relen brrelexi ccrd cfv limom
-      cv wlim wb omex jctir nnenom entr mpan2 carden biimprd sylc cardom syl6req
-      limeq mpbii ccf cfom fveq2 eqeq12d csdm cfn ficard biimpd eleqtrd cardsdom
-      wa id syl2anc mpbid fiphp2d simpr ad2antrr ex reximdva mpd ) AGCUHZMBEUAZE
-      NOZCFUBWDPNOZCFUBABCDEFGHAEPNOZEQRZIEPNUCUDZSZAWGEUEUFZUIZIWGTUIZWLUGWGTWK
-      MZWMWLUJWGWKTUEUFZTWGWHTQRZVMZETNOZWKWOMZWGWHWPWIUKULWGPTNOWRUMEPTUNUOWQWS
-      WRETQQUPUQURUSUTZTWKVASVBSATVCUFZTMZWKVCUFZWKMZVDAWNXBXDUJAWGWNIWTSZWNXAXC
-      TWKTWKVCVEWNVNVFSVBAFUEUFZWKRZFEVGOZAXFTWKAFVHRZXIXFTRZJJXIXIXJFVHVIVJURXE
-      VKAXIWHXGXHUJJWJFEVHQVLVOVPKLVQAWEWFCFAWCFRZVMZWEWFXLWEVMWEWGWFXLWEVRAWGXK
-      WEIVSWDEPUNVOVTWAWB $.
-      $( [12-Sep-2014] $)
-
+    fiphp3dOLD $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
+      ( fiphp3d ) ABCEFGIJKM $.
+      $( [18-Oct-2014] $)
   $}
 
   ${
@@ -3536,7 +3381,7 @@ $)
         flcl znegcl zre nn0abscl nn0z 3syl peano2re flltp1 lttrd zleltp1 mpbird
         absle biimpa syl21anc w3a elfz biimpar syl31anc syl12anc adantlr simprl
         wb ex syl5bi wi 3ad2ant3 3exp imp3a cdom cvv nnex opabssxp ssexi ssdomg
-        wss jca32 eldifsn sylanbrc eqeltrd exlimdvv imp weq fiphp3d eldif simp2
+        wss jca32 eldifsn sylanbrc eqeltrd exlimdvv imp weq fiphp3dOLD eldif simp2
         elfzelz elsn biimpri necon3bi jca syl5 simp2l simp2r cxp xpex xpnnen
         domentr mp2an ensym rabex elrab syl6req 2eximdv 3imtr4g expimpd ancomsd
         mp2 eqeq1d eqtrd ssrdv 3adant3 mpsyl endomtr sbth syld reximdv2 mpd ) D
