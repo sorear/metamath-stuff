@@ -7714,6 +7714,33 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
+
+  ${
+    $d A x y a b c d $.  $d B x y a b c d $.  $d C y a b c d $.
+    $d D x a b c d $.  $d ph x y a b c d $.
+
+    fphpdALT.a $e |- ( ph -> B ~< A ) $.
+    fphpdALT.b $e |- ( ( ph /\ x e. A ) -> C e. B ) $.
+    fphpdALT.c $e |- ( x = y -> C = D ) $.
+
+    fphpdALT $p |- ( ph -> E. x e. A E. y e. A ( x =/= y /\ C = D ) ) $=
+      ( va vb wceq weq wi wral wn wa wcel ax-17 cv wne wrex cdom wbr csdm con2i
+      domnsym syl cvv sdomex simprd adantr csb vex wel hbcsb1 hbel eleq1 anbi2d
+      id csbeq1a eleq1d imbi12d chvar ex wb csbid csbief eqeq12i imbi1i 2ralbii
+      hbim hbeq csbeq1 eqeq1d eqeq1 eqeq2d eqeq2 rcla42 com12 sylbir syl6 dom2d
+      impbid1 adantl sylc mtand ancom df-ne anbi1i pm4.61 3bitr4i rexbii rexnal
+      bitri sylibr ) AFGMZBCNZOZCDPZBDPZQZBUAZCUAZUBZWRRZCDUCZBDUCZAXBDEUDUEZAE
+      DUFUEZXJQHXJXKDEUHUGUIAXBRZXLDUJSZXJXLVAAXMXBAXKXMHXKEUJSXMEDUKULUIUMXLKL
+      DEBKUAZFUNZBLUAZFUNZUJAXNDSZXOESZOXBAXRXSAXDDSZRZFESZOAXRRZXSOBKYCXSBYCBT
+      BLLXOEBLXNFKUOLKUPBTUQZXPESBTURVMBKNZYAYCYBXSYEXTXRAXDXNDUSUTYEFXOEBXNFVB
+      VCVDIVEVFUMXBXRXPDSRZXOXQMZKLNZVGZOAXBYFYGYHOZYIXBBXDFUNZBXEFUNZMZWSOZCDP
+      BDPZYFYJOYNWTBCDDYMWRWSYKFYLGBFVHBKXEFGCUOZXNGSBTJVIVJVKVLYFYOYJYNYJXOYLM
+      ZKCNZOBCXNXPDDYQYRBBLLXOYLYDBLXEFYPLCUPBTUQVNYRBTVMYJCTYEYMYQWSYRYEYKXOYL
+      BXDXNFVOVPXDXNXEVQVDCLNZYQYGYRYHYSYLXQXOBXEXPFVOVRXEXPXNVSVDVTWAWBYJYGYHY
+      JVABXNXPFVOWEWCWFWDWGWHXIXAQZBDUCXCXHYTBDXHWTQZCDUCYTXGUUACDWSQZWRRWRUUBR
+      XGUUAUUBWRWIXFUUBWRXDXEWJWKWRWSWLWMWNWTCDWOWPWNXABDWOWPWQ $.
+      $( [19-Oct-2014] $)
+  $}
   ${
   $d a b A $.  $d a b N $.
   jm2.16nn0OLD $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( ( A - 1 ) || ( ( A rmX N ) - 1 ) /\ ( A - 1 ) || ( ( A rmY N ) - N ) ) ) $=
