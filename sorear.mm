@@ -9099,6 +9099,53 @@ $)
   $}
 
   ${
+    $d R x y a b $.  $d S x y a b $.  $d H x y a b $.  $d A x y a b $.
+    $d B x y a b $.
+    $( Infer isomorphism from one direction of an order proof for isomorphisms
+       between strict orders. $)
+    soisoi $p |- ( ( ( R Or A /\ S Po B ) /\ ( H : A -onto-> B /\
+          A. x e. A A. y e. A ( x R y -> ( H ` x ) S ( H ` y ) ) ) ) ->
+        H Isom R , S ( A , B ) ) $=
+      ( va vb wa cv wbr cfv wi wral weq wcel wn fveq2 syl2anc wor wpo wf1o wiso
+      wfo wb wf1 wf simprl fof syl wo simpll sotrieq con2bid sylan simprr breq1
+      breq1d imbi12d breq2 breq2d rcla42va ancoms simpllr simplrl ffvelrn poirr
+      wceq syl5ibrcom con2d syld ancom2s jaod sylbird con4d ralrimivva sylanbrc
+      notbid dff13 df-f1o sotric po2nr imnan sylibr syl12anc impcon4bid df-iso
+      ) CEUAZDFUBZJZCDGUEZAKZBKZELZWMGMZWNGMZFLZNZBCOACOZJZJZCDGUCZHKZIKZELZXDG
+      MZXEGMZFLZUFZICOHCOCDEFGUDXBCDGUGZWLXCXBCDGUHZXGXHVIZHIPZNZICOHCOXKXBWLXL
+      WKWLWTUIZCDGUJZUKXBXOHICCXBXDCQZXECQZJZJZXNXMYAXNRZXFXEXDELZULZXMRZXBWIXT
+      YDYBUFWIWJXAUMZWIXTJZXNYDCXDXEEUNUOUPYAXFYEYCYAXFXIYEXBWTXTXFXINZWKWLWTUQ
+      ZXTWTYHWSYHXDWNELZXGWQFLZNABXDXECCAHPZWOYJWRYKWMXDWNEURYLWPXGWQFWMXDGSUSU
+      TBIPZYJXFYKXIWNXEXDEVAYMWQXHXGFWNXEGSVBUTVCVDUPZYAXMXIYAWJXHDQZXMXIRZNWIW
+      JXAXTVEZYAXLXSYOYAWLXLWKWLWTXTVFXQUKZXBXRXSUQCDXEGVGTZWJYOJZYPXMXHXHFLZRZ
+      DXHFVHZXMXIUUAXGXHXHFURVSVJTVKVLYAYCXHXGFLZYEXBWTXTYCUUDNZYIWTXSXRUUEXSXR
+      JWTUUEWSUUEXEWNELZXHWQFLZNABXEXDCCAIPZWOUUFWRUUGWMXEWNEURUUHWPXHWQFWMXEGS
+      USUTBHPZUUFYCUUGUUDWNXDXEEVAUUIWQXGXHFWNXDGSVBUTVCVDVMUPZYAXMUUDYAWJYOXMU
+      UDRZNYQYSYTUUKXMUUBUUCXMUUDUUAXGXHXHFVAVSVJTVKVLVNVOVPVQHICDGVTVRXPCDGWAV
+      RXBXJHICCYAXFXIYNYAXFRZXNYCULZYPXBWIXTUUMUULUFYFYGXFUUMCXDXEEWBUOUPYAXNYP
+      YCYAWJYOXNYPNYQYSYTYPXNUUBUUCXNXIUUAXNXGXHXHFXDXEGSUSVSVJTYAYCUUDYPUUJYAW
+      JYOXGDQZUUDYPNZYQYSYAXLXRUUNYRXBXRXSUICDXDGVGTWJYOUUNJJUUDXIJRUUODXHXGFWC
+      UUDXIWDWEWFVLVNVOWGVQHICDEFGWHVR $.
+      $( [2-Nov-2014] $)
+  $}
+
+  $( Strict dominance and elementhood are the same for finite ordinals. $)
+  nnsdomel $p |- ( ( A e. om /\ B e. om ) -> ( A e. B <-> A ~< B ) ) $=
+    ( com wcel wa ccrd cfv csdm wbr wceq wb cardnn eleq12 syl2an cfn cin onfin2
+    con0 inss2 sseli eqsstri ficardsdom bitr3d ) ACDZBCDZEAFGZBFGZDZABDZABHIZUD
+    UFAJUGBJUHUIKUEALBLUFAUGBMNUDAODBODUHUJKUECOACROPOQROSUAZTCOBUKTABUBNUC $.
+    $( [2-Nov-2014] $)
+
+  $( An ordinal with more elements of some type is larger. $)
+  onsdominel $p |- ( ( A e. On /\ B e. On /\ ( A i^i C ) ~< ( B i^i C ) ) ->
+      A e. B ) $=
+    ( con0 wcel cin csdm wbr wa wn wb ontri1 ancoms wi cdom inex1g ssrin ssdomg
+    wss cvv syl2im domnsym syl6 adantl sylbird con4d 3impia ) ADEZBDEZACFZBCFZG
+    HZABEZUHUIIZUMULUNUMJZBASZULJZUIUHUPUOKBALMUIUPUQNUHUIUPUKUJOHZUQUIUKTEUPUK
+    UJSURBCDPBACQUKUJTRUAUKUJUBUCUDUEUFUG $.
+    $( [2-Nov-2014] $)
+
+  ${
     $d i j a b c $.  $d S i j a b c $.  $d C a b c $.
 
     $( Lemma for ~ fin23lem22 . $)
@@ -9176,6 +9223,34 @@ $)
       EWFWBVHVIXCXGWDWESZXHXCWKWIXGXKTXJVSWHWIWKWJVJWCXGDBWEDFVPWAWFWBNVTWEBVKV
       LVMVIWDWEVCVDVNVO $.
       $( [1-Nov-2014] $)
+
+    $( The mapping constructed in ~ fin23lem22 is in fact an isomorphism. $)
+    fin23lem27 $p |- ( ( S C_ om /\ -. S e. Fin ) ->
+        C Isom _E , _E ( om , S ) ) $=
+      ( va vb com wcel wa cep cv wbr syl cin cen wreu adantrr breq1d wceq wn wi
+      wss cfn wor wpo wfo cfv wral wiso word wwe ordom ordwe weso mp2b a1i sopo
+      ax-mp poss mpi adantr wf1o fin23lem22 f1ofo wel crab cuni nnsdomel adantl
+      csdm biimpd fin23lem23 weq ineq1 cbvreuv sylibr reuuni3 cvv adantrl reucl
+      wb inex1g simprr vex ensym sdomentr syl12anc ensdomtr syl2anc expr omsson
+      imp con0 simpll sseldd sseldi onsdominel 3expia 3syld simprl breq2 unieqd
+      rabbidv fvmptg eleq12d sylibrd epel fvex epelc ralrimivva soisoi syl22anc
+      3imtr4g ) BHUCZBUDIUAZJZHKUEZBKUFZHBAUGZFLZGLZKMZYAAUHZYBAUHZKMZUBZGHUIFH
+      UIHBKKAUJXRXQHUKHKULXRUMHUNHKUOUPZUQXOXSXPXOHKUFZXSXRYIYHHKURUSBHKUTVAVBX
+      QHBAVCXTABCDEVDHBAVENXQYGFGHHXQYAHIZYBHIZJZJZFGVFZYDYEIZYCYFYMYNDLZBOZYAP
+      MZDBVGZVHZYQYBPMZDBVGZVHZIZYOYMYNYAYBVKMZYTBOZUUCBOZVKMZUUDYMYNUUEYLYNUUE
+      WBXQYAYBVIVJVLXQYLUUEUUHXQYLUUEJJZUUFYAPMZYAUUGVKMZUUHXQYLUUJUUEYMCLZBOZY
+      APMZCBQZUUJYMYRDBQZUUOXQYJUUPYKBFDVMRZUUNYRCDBCDVNZUUMYQYAPUULYPBVOZSZVPV
+      QUUNYRUUJCDBUUTUULYTTUUMUUFYAPUULYTBVOSVRNRUUIUUGVSIZUUEYBUUGPMZUUKXQYLUV
+      AUUEYMUUCBIZUVAYMUUADBQZUVCXQYKUVDYJBGDVMVTZUUADBWANZUUCBBWCNRXQYLUUEWDXQ
+      YLUVBUUEYMUUGYBPMZUVBYMUUMYBPMZCBQZUVGYMUVDUVIUVEUVHUUACDBUURUUMYQYBPUUSS
+      ZVPVQUVHUUAUVGCDBUVJUULUUCTUUMUUGYBPUULUUCBVOSVRNUUGYBGWEWFNRUVAUUEUVBJUU
+      KYAYBUUGVSWGWMWHUUFYAUUGWIWJWKYMYTWNIZUUCWNIZUUHUUDUBYMHWNYTWLYMBHYTXOXPY
+      LWOZYMUUPYTBIZUUQYRDBWANZWPWQYMHWNUUCWLYMBHUUCUVMUVFWPWQUVKUVLUUHUUDYTUUC
+      BWRWSWJWTYMYDYTYEUUCYMYJUVNYDYTTXQYJYKXAUVOCYAYQUULPMZDBVGZVHZYTHBACFVNZU
+      VQYSUVSUVPYRDBUULYAYQPXBXDXCEXEWJYMYKUVCYEUUCTXQYJYKWDUVFCYBUVRUUCHBACGVN
+      ZUVQUUBUVTUVPUUADBUULYBYQPXBXDXCEXEWJXFXGFGXHYDYEYAAXIYBAXIXJXNXKFGHBKKAX
+      LXM $.
+      $( [2-Nov-2014] $)
   $}
 
 
@@ -9363,6 +9438,12 @@ $)
       WBYIXNFYIXFWSIZXFLMZQXNXFWSLWCYJXFWTWDYKXNXFWSWEXFWTWFWGWHWIWHWLABXFCDEWJ
       WKXGXBLWMWNWOWPWQ $.
       $( [1-Nov-2014] $)
+
+
+    fin23lem.b $e |- P = { v e. om | ( t ` v ) C_ |^| ran U } $.
+    fin23lem.c $e |- Q = ( w e. om |-> U. { x e. P | ( x i^i P ) ~~ w ) $.
+    fin23lem.d $e |- R = ( w e. om |-> U. { x e. ( om \ P ) |
+        ( x i^i ( om \ P ) ) ~~ w ) $.
   $}
 
   ${

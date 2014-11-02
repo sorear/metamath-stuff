@@ -4,11 +4,6 @@ use File::Slurp 'read_file', 'write_file';
 
 my @status = grep { length } split /\0/, scalar qx{ git status -z };
 
-if (grep { /sorear\.mm/ } @status) {
-    print STDERR "Mathbox appears to be dirty.  Not overwriting.\n";
-    exit 1;
-}
-
 my @lines = read_file $ARGV[0];
 
 shift(@lines) while @lines >= 3 && $lines[2] !~ /Mathbox for Stefan O'Rear/;
@@ -19,4 +14,5 @@ unshift(@lines, "\$[ set_clean.mm \$]\n\n");
 push(@lines, "\n");
 push(@lines, "\$( vim: set sw=2 sts=2 et: \$)\n");
 
+rename('sorear.mm','sorear.mm~'.time()) or die "cannot save mathbox backup: $!\n";
 write_file('sorear.mm', \@lines);
