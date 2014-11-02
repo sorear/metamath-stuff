@@ -8402,18 +8402,61 @@ $)
   $( Eight inequivalent definitions of finite sets from http://consequences.emich.edu/note-94.pdf . $)
 
   $c Fin1a Fin2 Fin3 Fin4 Fin5 Fin6 Fin7 $.
+
+  $( Extend class notation to include the class of Ia-finite sets. $)
   cfin1a $a class Fin1a $.
+
+  $( Extend class notation to include the class of II-finite sets. $)
   cfin2 $a class Fin2 $.
+
+  $( Extend class notation to include the class of III-finite sets. $)
   cfin3 $a class Fin3 $.
+
+  $( Extend class notation to include the class of IV-finite sets. $)
   cfin4 $a class Fin4 $.
+
+  $( Extend class notation to include the class of V-finite sets. $)
   cfin5 $a class Fin5 $.
+
+  $( Extend class notation to include the class of VI-finite sets. $)
   cfin6 $a class Fin6 $.
+
+  $( Extend class notation to include the class of VII-finite sets. $)
   cfin7 $a class Fin7 $.
 
-  $( why are the arguments to ficarddom backward $)
+  ${
+    $d x y z a b c d $.
+    $( A set is Ia-finite iff it is not the union of two I-infinite sets.  This is the second of eight definitions of finite set attributed to Tarski; see http://consequences.emich.edu/note-94.pdf .  I-finite is equivalent to our ~ df-fin and not repeated here.  These eight definitions are equivalent with Choice but strictly decreasing in strength in models where Choice fails; conversely, they provide a series of increasingly stronger notions of infiniteness. $)
+    df-fin1a $a |- Fin1a = { x | -. E. y E. z ( ( x = ( y u. z ) /\
+      ( y i^i z ) = (/) ) /\ ( -. y e. Fin /\ -. z e. Fin ) ) } $.
+
+    $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
+       contains a maximum element. $)
+    df-fin2 $a |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
+      A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) ->
+        E. z e. y A. w e. y -. z C. w ) } $.
+
+    $( A set is IV-finite (Dedekind finite) iff it has no equinumerous proper
+       subset. $)
+    df-fin4 $a |- Fin4 = { x | -. E. y ( y C. x /\ y ~~ x ) } $.
+
+    $( A set is III-finite (weakly Dedekind finite) iff its power set is Dedekind finite. $)
+    df-fin3 $a |- Fin3 = { x | ~P x e. Fin4 } $.
+
+    $( A set is V-finite iff it behaves finitely under ` +c ` . $)
+    df-fin5 $a |- Fin5 = { x | ( x ~~ (/) \/ x ~< ( x +c x ) ) } $.
+
+    $( A set is VI-finite iff it behaves finitely under ` X. ` . $)
+    df-fin6 $a |- Fin6 = { x | ( x ~~ (/) \/ x ~~ 1o \/ x ~< ( x X. x ) ) } $.
+
+    $( A set is VII-finite iff it cannot be infinitely well ordered. $)
+    df-fin7 $a |- Fin7 = { x | -. E. y e. ( On \ om ) x ~~ y } $.
+  $}
 
   ${
     $d A a $.  $d B a $.
+
+    $( A finite set is strictly dominated by another iff their cardinalities are strictly ordered.  TODO: ~ ficarddom has a statement which is not consistent with related theorems. $)
     ficardsdom $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( card ` A ) e.
       ( card ` B ) <-> A ~< B ) ) $=
       ( cfn wcel wa ccrd cfv wss wne cdom wbr wn csdm ficarddom bicomd ficarden
@@ -8422,6 +8465,7 @@ $)
       ABPRUAUHSDUISDUPULUBATBTUHUIUCUDABUEUF $.
       $( [30-Oct-2014] $)
 
+    $( Trichotomy of dominance without AC when one set is finite. $)
     fidomtri $p |- ( A e. Fin -> ( A ~<_ B <-> -. B ~< A ) ) $=
       ( va cfn wcel cdom wbr csdm wn domnsym wi ccrd cfv wss con0 cardon ancoms
       wa wb cvv ficarddom ontri1 mp2an ficardsdom notbid syl5bb biimprd wf1 wex
@@ -8435,6 +8479,7 @@ $)
 
   ${
     fidomtri2.a $e |- A e. _V $.
+    $( Trichotomy of dominance without AC when one set is finite. $)
     fidomtri2 $p |- ( B e. Fin -> ( A ~<_ B <-> -. B ~< A ) ) $=
       ( cfn wcel cdom wbr csdm wn domnsym cen wa sdomdom con3i fidomtri syl5ibr
       wi ensym endom syl a1i jcad brsdom syl6ibr con1d impbid2 ) BDEZABFGZBAHGZ
@@ -8442,6 +8487,7 @@ $)
       HULABKGUHBACRABSTNUAUBBAUCUDUEUF $.
       $( [30-Oct-2014] $)
 
+    $( A set with less than two elements has 0 or 1. $)
     sdom2en01 $p |- ( A ~< 2o <-> ( A ~~ (/) \/ A ~~ 1o ) ) $=
       ( c2o wbr cfn wcel c0 cen c1o wo com con0 0fin ccrd cfv wceq eqeq2i mpan2
       wb syl5bbr csdm cdom cin onfin2 inss2 eqsstri 2onn sselii sdomdom sylancr
@@ -8464,16 +8510,19 @@ $)
     infpssrlem.d $e |- ( ph -> y e. ( a \ x ) ) $.
     infpssrlem.e $e |- G = ( rec ( `' f , y ) |` om ) $.
 
+    $( Lemma for ~ infpssr . $)
     infpssrlem1 $p |- ( G ` (/) ) = y $=
       ( c0 cfv cv ccnv crdg com cres fveq1i cvv wcel wceq vex fr0g ax-mp eqtri
       ) KELKDMNZCMZOPQZLZUGKEUHJRUGSTUIUGUACUBUGSUFUCUDUE $.
       $( [30-Oct-2014] $)
 
+    $( Lemma for ~ infpssr . $)
     infpssrlem2 $p |- ( B e. om -> ( G ` suc B ) = ( `' f ` ( G ` B ) ) ) $=
       ( com wcel csuc cv ccnv crdg cres cfv fveq1i frsuc fveq2i 3eqtr4g ) DLMDN
       ZEOPZCOZQLRZSDUGSZUESUDFSDFSZUESUFDUEUAUDFUGKTUIUHUEDFUGKTUBUC $.
       $( [30-Oct-2014] $)
 
+    $( Lemma for ~ infpssr . $)
     infpssrlem3 $p |- ( ph -> G : om --> a ) $=
       ( vc vb com wfn cv cfv wcel c0 fveq2 eleq1d wral wf ccnv crdg cres frfnom
       fneq1i mpbir a1i csuc wceq weq infpssrlem1 wel eldifi syl syl5eqel wa wss
@@ -8487,6 +8536,7 @@ $)
       $( [30-Oct-2014] $)
 
     $d B b c $.  $d C b c $.
+    $( Lemma for ~ infpssr . $)
     infpssrlem4 $p |- ( ( ph /\ B e. om /\ C e. B ) -> ( G ` B ) =/= ( G ` C ) ) $=
       ( vb com wcel cfv wne wa wi wceq vc vd cv wral c0 fveq2 neeq1d raleqbi1dv
       csuc imbi2d weq ral0 a1i w3a ccnv infpssrlem2 adantr wel wf1o f1ocnv f1of
@@ -8523,6 +8573,7 @@ $)
       UDYTUUOUUCYSGUFVRYEYGYHYIYJYKUUAYRMEDYSETYTYQYPYSEGUFVRYLVKYM $.
       $( [30-Oct-2014] $)
 
+    $( Lemma for ~ infpssr . $)
     infpssrlem5 $p |- ( ph -> om ~<_ a ) $=
       ( vb vc com cv cfv wi wral wcel wa wel wf1 cdom wbr wf weq infpssrlem3 wo
       wceq wn simpll simplrr simpr infpssrlem4 syl3anc necomd simplrl jaodan ex
@@ -8560,6 +8611,7 @@ $)
   ${
     $d F a b $.  $d A a b $.  $d B a b $.  $d C a b $.  $d D a b $.
 
+    $( Taking images under a one-to-one function preserves subsets. $)
     f1imass $p |- ( ( F : A -1-1-> B /\ ( C C_ A /\ D C_ A ) ) ->
       ( ( F " C ) C_ ( F " D ) <-> C C_ D ) ) $=
       ( va wf1 wss wa cima cv wcel wi simplrl sseld wb 3expa f1elima syl3anc ex
@@ -8570,6 +8622,7 @@ $)
       KVEPVLVMUQUTVFUOUNUOUMUTVFUEQABEVCDRSUFTULUGUHTCDEUIUJ $.
       $( [30-Oct-2014] $)
 
+    $( Taking images under a one-to-one function preserves equality. $)
     f1imaeq $p |- ( ( F : A -1-1-> B /\ ( C C_ A /\ D C_ A ) ) ->
       ( ( F " C ) = ( F " D ) <-> C = D ) ) $=
       ( wf1 wss wa cima wceq f1imass wb ancom2s anbi12d eqss 3bitr4g ) ABEFZCAG
@@ -8577,6 +8630,7 @@ $)
       UAUBOCDOP $.
       $( [30-Oct-2014] $)
 
+    $( Taking images under a one-to-one function preserves proper subsets. $)
     f1imapss $p |- ( ( F : A -1-1-> B /\ ( C C_ A /\ D C_ A ) ) ->
       ( ( F " C ) C. ( F " D ) <-> C C. D ) ) $=
       ( wf1 wss wa cima wceq wpss f1imass f1imaeq notbid anbi12d dfpss2 3bitr4g
@@ -8588,6 +8642,7 @@ $)
   ${
     $d A x y f a b c $.  $d B x y f a b c $.
 
+    $( Lemma for ~ infpssALT .  Dedekind infinite is a cardinal property. $)
     infpssen1 $p |- ( ( A ~~ B /\ B e. _V ) -> ( E. x ( x C. A /\ x ~~ A ) ->
       E. y ( y C. B /\ y ~~ B ) ) ) $=
       ( vb vf cen wbr cvv wcel wa cv wpss wex wi wceq breq2 anbi12d vex cima va
@@ -8609,6 +8664,7 @@ $)
       RWDVSWHWEWFWIWJWKWLWM $.
       $( [30-Oct-2014] $)
 
+    $( Lemma for ~ infpssALT .  Dedekind finite sets have Dedekind finite subsets. $)
     infpssss $p |- ( ( A C_ B /\ B e. _V ) -> ( E. x ( x C. A /\ x ~~ A ) ->
       E. y ( y C. B /\ y ~~ B ) ) ) $=
       ( va vb vc wss cvv wcel wa cv wpss cen wbr wex wi wceq anbi12d wn imbi12d
@@ -8633,6 +8689,7 @@ $)
       UVBWRXOYTRYIUUAYJUUBXOYTYCWSXOYTYCNXASXBVMVPVQXCXDXEXF $.
       $( [30-Oct-2014] $)
 
+    $( Lemma for ~ infpssALT .  ` om ` is Dedekind infinite. $)
     infpssom $p |- ( om e. _V -> E. x ( x C. om /\ x ~~ om ) ) $=
       ( va vb com cvv wcel c0 wpss cen wbr wa cv csuc wi word syl con0 a1i wceq
       syl5ibrcom csn cdif wex difexg cuni eldifi wss peano2 ordom ordelss nnord
@@ -8653,6 +8710,7 @@ $)
       $( [30-Oct-2014] $)
 
     infpssALT.a $e |- A e. _V $.
+    $( A set with a denumerable subset has a proper subset equinumerous to it, proved without AC or Infinity. $)
     infpssALT $p |- ( om ~<_ A -> E. x ( x C. A /\ x ~~ A ) ) $=
       ( va vb vc com cdom wbr cv cen wss wa wex wpss domen cvv wcel wi mpd syl
       relen brrelexi infpssom vex infpssen1 mpan2 adantr simpr infpssss sylancl
@@ -8663,37 +8721,9 @@ $)
   $}
 
   ${
-    $d x y z a b c d $.
-    $( A set is Ia-finite iff it is not the union of two I-infinite sets. $)
-    df-fin1a $a |- Fin1a = { x | -. E. y E. z ( ( x = ( y u. z ) /\
-      ( y i^i z ) = (/) ) /\ ( -. y e. Fin /\ -. z e. Fin ) ) } $.
-
-    $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
-       contains a maximum element. $)
-    df-fin2 $a |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
-      A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) ->
-        E. z e. y A. w e. y -. z C. w ) } $.
-
-    $( A set is IV-finite (Dedekind finite) iff it has no equinumerous proper
-       subset. $)
-    df-fin4 $a |- Fin4 = { x | -. E. y ( y C. x /\ y ~~ x ) } $.
-
-    $( A set is III-finite iff its power set is Dedekind finite. $)
-    df-fin3 $a |- Fin3 = { x | ~P x e. Fin4 } $.
-
-    $( A set is V-finite iff it behaves finitely under ` +c ` . $)
-    df-fin5 $a |- Fin5 = { x | ( x ~~ (/) \/ x ~< ( x +c x ) ) } $.
-
-    $( A set is VI-finite iff it behaves finitely under ` X. ` . $)
-    df-fin6 $a |- Fin6 = { x | ( x ~~ (/) \/ x ~~ 1o \/ x ~< ( x X. x ) ) } $.
-
-    $( A set is VII-finite iff it cannot be infinitely well ordered. $)
-    df-fin7 $a |- Fin7 = { x | -. E. y e. ( On \ om ) x ~~ y } $.
-  $}
-
-  ${
     $d Y z w u v $.
 
+    $( Lemma for ~ dffin2-3 .  In a chain of sets, a maximal element is the union of the chain. $)
     fin23lem4 $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
       ( E. u e. Y A. v e. Y -. u C. v <-> U. Y e. Y ) ) $=
       ( cv wss wo wral wpss wn wrex wcel wa weq sseq1 sseq2 orbi12d syl elssuni
@@ -8708,6 +8738,7 @@ $)
       EWLVTWEGXAVTETVTWEVDSVEWCXBDWEEVSWEVFZWBXACEXCWAWTVSWEVTVGVHVIVJVKVL $.
       $( [31-Oct-2014] $)
 
+    $( Lemma for ~ dffin2-4 .  In a chain of sets, a minimal element is the intersection of the chain. $)
     fin23lem5 $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
       ( E. u e. Y A. v e. Y -. v C. u <-> |^| Y e. Y ) ) $=
       ( cv wss wo wral wpss wn wrex wcel intss1 wa weq sseq1 sseq2 orbi12d syl
@@ -8726,6 +8757,8 @@ $)
   ${
     $d Y z w b c $.  $d Y x y $.  $d Y d $.  $d d A b c $.  $d A x y b c $.
     $d Y u $.  $d A u $.  $d d u x y $.
+
+    $( Lemma for ~ dffin2-2 .  The componentwise complement of a chain of sets is also a chain of sets. $)
     fin23lem6 $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
       A. x e. { u e. ~P A | ( A \ u ) e. Y }
         A. y e. { u e. ~P A | ( A \ u ) e. Y } ( x C_ y \/ y C_ x ) ) $=
@@ -8749,6 +8782,7 @@ $)
   ${
     $d a b c d e v u w x y z $.
 
+    $( Lemma for ~ dffin2-2 .  The componentwise complement of a nonempty collection of sets is nonempty. $)
     fin23lem7 $p |- ( ( b e. ~P ~P a /\ b =/= (/) ) ->
       { c e. ~P a | ( a \ c ) e. b } =/= (/) ) $=
       ( vx cv cpw wcel c0 wne cdif crab wel wex n0 wss difss elpw2 wceq sylib
@@ -8759,14 +8793,16 @@ $)
       TVQQSVKUTUESVBVIUFUGVFVPCVLVAVDVLRVEVOUSVDVLUTUHUIUMUJVGVLUKUNUOUPUQUR $.
       $( [31-Oct-2014] $)
 
-    fin23lem8 $p |- ( ( A C_ C /\ B C_ C ) ->
+    $( Two ways to express overlapping subsets. $)
+    pssdifcom1 $p |- ( ( A C_ C /\ B C_ C ) ->
       ( ( C \ A ) C. B <-> ( C \ B ) C. A ) ) $=
       ( wss wa cdif wpss difcom a1i ssconb ancoms notbid anbi12d dfpss3 3bitr4g
       wn wb ) ACDZBCDZEZCAFZBDZBUADZPZECBFZADZAUEDZPZEUABGUEAGTUBUFUDUHUBUFQTCA
       BHITUCUGSRUCUGQBACJKLMUABNUEANO $.
       $( [31-Oct-2014] $)
 
-    fin23lem9 $p |- ( ( A C_ C /\ B C_ C ) ->
+    $( Two ways to express non-covering pairs of subsets. $)
+    pssdifcom2 $p |- ( ( A C_ C /\ B C_ C ) ->
       ( B C. ( C \ A ) <-> A C. ( C \ B ) ) ) $=
       ( wss wa cdif wpss ssconb ancoms difcom a1i notbid anbi12d dfpss3 3bitr4g
       wn wb ) ACDZBCDZEZBCAFZDZUABDZPZEACBFZDZUEADZPZEBUAGAUEGTUBUFUDUHSRUBUFQB
@@ -8779,6 +8815,7 @@ $)
       fin23lem11.a $e |- ( ( x C_ a /\ v C_ a ) -> ( [ ( a \ x ) / z ]
         [ v / w ] ps -> [ x / z ] [ ( a \ v ) / w ] ph ) ) $.
 
+      $( Lemma for ~ dffin2-2 . $)
       fin23lem11 $p |- ( b e. ~P ~P a -> ( E. z e. { c e. ~P a | ( a \ c ) e. b }
         A. w e. { c e. ~P a | ( a \ c ) e. b } -. ph ->
           E. z e. b A. w e. b -. ps ) ) $=
@@ -8815,8 +8852,8 @@ $)
       ( va vb vc cv c0 wne wss wral wa wpss wrex wi cpw wcel wceq cvv cfin2 cab
       wo wn w3a cdif crab simp2 ssrab2 vex pwex elpw2 mpbir a1i simp1 fin23lem7
       simp3l syl2anc fin23lem6 adantl neeq1 raleq raleqbi1dv anbi12d rexeqbi1dv
-      3ad2ant3 imbi12d rcla4va imp syl22anc wsb wsbc fin23lem9 biimpd ax-mp weq
-      difexg simpr simpl psseq12d sbc2ie 3imtr4g fin23lem11 sylc 3exp fin23lem8
+      3ad2ant3 imbi12d rcla4va imp syl22anc wsb wsbc pssdifcom2 biimpd ax-mp weq
+      difexg simpr simpl psseq12d sbc2ie 3imtr4g fin23lem11 sylc 3exp pssdifcom1
       ralrimiv impbii df-fin2 abeq2i pweq pweqd raleqdv elab 3bitr4i eqriv ) EU
       ABHZIJZCHZDHZKWTWSKUCZDWQLZCWQLZMZWTWSNZUDZDWQLZCWQOZPZBAHZQZQZLZAUBZFHZI
       JZXADXOLZCXOLZMZWSWTNZUDZDXOLZCXOOZPZFEHZQZQZLZXIBYGLZYEUARYEXNRYHYIYHXIB
@@ -8839,6 +8876,7 @@ $)
       XJYEWKWLWMWNWOWP $.
       $( [31-Oct-2014] $)
 
+    $( ` Fin2 ` sets contain unions for all nonempty chains. $)
     dffin2-3 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) -> U. y e. y ) } $=
       ( va vb cfin2 cv c0 wne wss wo wral wcel wi cpw weq sseq1 sseq2 orbi12d
@@ -8851,6 +8889,7 @@ $)
       VAVB $.
       $( [1-Nov-2014] $)
 
+    $( ` Fin2 ` sets contain intersections for all nonempty chains. $)
     dffin2-4 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) -> |^| y e. y ) } $=
       ( va vb cfin2 cv c0 wne wss wo wral wcel wi cpw weq sseq1 sseq2 orbi12d
@@ -8868,10 +8907,12 @@ $)
   $c seqom $.
 
   ${
+    $( Extend class notation to include index-aware recursive definitions. $)
     cseqom $a class seqom ( F , I ) $.
 
     $d F i v $.  $d I i v $.
 
+    $( Index-aware recursive definitions over ` om ` .  A mashup of ~ df-rdg and ~ df-seq , this allows for recursive definitions that use an index in the recursion in cases where Infinity is not admitted. $)
     df-seqom $a |- seqom ( F , I ) = ( rec ( ( i e. om , v e. _V |->
         <. suc i , ( i F v ) >. ) , <. (/) , ( _I ` I ) >. ) " om ) $.
   $}
@@ -8879,6 +8920,7 @@ $)
   ${
     $d F a b c d $.  $d I a b c d $.
 
+    $( Lemma for ` seqom ` .  Change bound variables. $)
     seqomlem0 $p |- rec ( ( a e. om , b e. _V |-> <. suc a , ( a F b ) >. ) ,
       <. (/) , ( _I ` I ) >. ) = rec ( ( c e. om , d e. _V |->
       <. suc c , ( c F d ) >. ) , <. (/) , ( _I ` I ) >. ) $=
@@ -8894,6 +8936,7 @@ $)
     seqomlem.a $e |- Q = rec ( ( i e. om , v e. _V |->
         <. suc i , ( i F v ) >. ) , <. (/) , ( _I ` I ) >. ) $.
 
+    $( Lemma for ` seqom ` .  The underlying recursion generates a sequence of pairs with the expected first values. $)
     seqomlem1 $p |- ( A e. om -> ( Q ` A ) =
       <. A , ( 2nd ` ( Q ` A ) ) >. ) $=
       ( vb cv cfv c2nd cop wceq c0 fveq2 id fveq2d opeq12d eqeq12d opeq2d va co
@@ -8914,6 +8957,7 @@ $)
       BWMCYCGUJVSVTZYEWTYGWRYEWSYFKUUAQTSWCWD $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ` seqom ` . $)
     seqomlem2 $p |- ( Q " om ) Fn om $=
       ( va vb vc com wfn cvv cv wcel cfv wceq con0 wb cop c2nd cima cxp wss wbr
       wf weu wral dff3 wrex csuc co cmpt2 c0 crdg rdgfnon fneq1i mpbir fvelimab
@@ -8935,6 +8979,7 @@ $)
       $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ` seqom ` . $)
     seqomlem3 $p |- ( ( Q " om ) ` (/) ) = ( _I ` I ) $=
       ( va c0 com cfv cid wceq cop wcel cv peano1 mp2an con0 wfn mpbir cima wbr
       wrex cvv csuc co cmpt2 crdg fveq1i opex eqtri fveq2 eqeq1d rcla4ev wss wb
@@ -8945,6 +8990,7 @@ $)
       EKVDVEQT $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ` seqom ` . $)
     seqomlem4 $p |- ( A e. om -> ( ( Q " om ) ` suc A ) =
       ( A F ( ( Q " om ) ` A ) ) ) $=
       ( va com wcel cfv co wceq cop cv cvv con0 wfn wb sylibr csuc peano2 cmpt2
@@ -8967,6 +9013,8 @@ $)
 
   ${
     $d A a b $.  $d B a b $.  $d C a b $.  $d D a b $.
+
+    $( Equality theorem for ` seqom ` . $)
     seqomeq12 $p |- ( ( A = B /\ C = D ) -> seqom ( A , C ) =
       seqom ( B , D ) ) $=
       ( va vb wceq com cvv cv co cop cmpt2 c0 cid cfv crdg cima cseqom wcel wa
@@ -8981,12 +9029,14 @@ $)
     $d F a b c d $.  $d I a b c d $.  $d G a b c d $.  $d A a b c d $.
     seqom.a $e |- G = seqom ( F , I ) $.
 
+    $( An index-aware recursive definition defines a function on the natural numbers. $)
     fnseqom $p |- G Fn om $=
       ( va vb vd vc com wfn cvv cv csuc co cop cmpt2 c0 cid cfv crdg cima eqtri
       seqomlem0 seqomlem2 cseqom df-seqom fneq1i mpbir ) BIJEFIKELZMUIFLANOPQCR
       SOTZIUAZIJGUJHACACEFHGUCUDIBUKBACUEUKDFEACUFUBUGUH $.
       $( [1-Nov-2014] $)
 
+    $( Value of an index-aware recursive definition at 0. $)
     seqom0g $p |- ( I e. _V -> ( G ` (/) ) = I ) $=
       ( va vb vd vc cvv wcel c0 cfv cid com cv csuc co cop cmpt2 eqtri df-seqom
       crdg cima cseqom fveq1i seqomlem0 seqomlem3 fvi syl5eq ) CIJKBLZCMLZCUJKE
@@ -8994,6 +9044,7 @@ $)
       $.
       $( [1-Nov-2014] $)
 
+    $( Value of an index-aware recursive definition at a successor. $)
     seqomsuc $p |- ( A e. om -> ( G ` suc A ) = ( A F ( G ` A ) ) ) $=
       ( va vb vd vc com wcel csuc cvv cv co cop cmpt2 cfv wceq fveq1i crdg cima
       c0 cid seqomlem0 seqomlem4 cseqom df-seqom eqtri oveq2i eqeq12i sylibr )
@@ -9004,6 +9055,8 @@ $)
 
   ${
     $d A x y $.  $d B x y $.  $d C x y $.  $d D x y $.
+
+    $( Lemma for ~ fin23 .  In a class of ordinals, each element is fully identified by those of its predecessors which also belong to the class. $)
     fin23lem24 $p |- ( ( ( Ord A /\ B C_ A ) /\ ( C e. B /\ D e. B ) ) ->
       ( ( C i^i B ) = ( D i^i B ) <-> C = D ) ) $=
       ( word wa wcel cin wceq wne sseldd ordelord syl2anc simpr sylanbrc adantr
@@ -9017,6 +9070,7 @@ $)
       GVRWJQVIVRVNWBPDSTVKDDDBUKULUMDVJVKUNMVAUQURUSCDBUTVB $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  In a chain of finite sets, equinumerousity is equivalent to equality. $)
     fin23lem25 $p |- ( ( A e. Fin /\ B e. Fin /\ ( A C_ B \/ B C_ A ) ) ->
       ( A ~~ B <-> A = B ) ) $=
       ( cfn wcel wss cen wbr wceq wn wi wa wpss dfpss2 csdm php3 sdomnen syl ex
@@ -9032,6 +9086,7 @@ $)
   ${
     $d i j a b c $.  $d S i j a b c $.  $d C a b c $.
 
+    $( Lemma for ~ fin23lem22 . $)
     fin23lem26 $p |- ( ( ( S C_ om /\ -. S e. Fin ) /\ i e. om ) ->
       E. j e. S ( j i^i S ) ~~ i ) $=
       ( va vb cv com wcel wss cfn wn wa cin cen wbr wrex c0 wceq con0 syl breq2
@@ -9072,6 +9127,7 @@ $)
       UWFAYSYTUUGWGYKUUHUVSUVHECAECUDUVRUUSUVGNUVQUURAYSYTUUIUUJVTUUKUUL $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23lem22 . $)
     fin23lem23 $p |- ( ( ( S C_ om /\ -. S e. Fin ) /\ i e. om ) ->
       E! j e. S ( j i^i S ) ~~ i ) $=
       ( va com wss cfn wcel wa cv cin cen wbr wral wo wb sseldd con0 syl word
@@ -9090,6 +9146,7 @@ $)
 
     fin23lem22.b $e |- C = ( i e. om |-> U. { j e. S | ( j i^i S ) ~~ i } ) $.
 
+    $( Lemma for ~ fin23 but could be used elsewhere if we find a good name for it.  Explicit construction of a bijection (actually an isomorphism, TODO prove this) between an infinite subset of ` om ` and ` om ` itself. $)
     fin23lem22 $p |- ( ( S C_ om /\ -. S e. Fin ) -> C : om -1-1-onto-> S ) $=
       ( va com wss cfn wcel wa cv cin cen wbr ccrd cfv syl wceq wb wn crab cuni
       wreu fin23lem23 reucl simpll simpr sseldd con0 onfin2 inss2 eqsstri sseli
@@ -9158,8 +9215,10 @@ $)
 
        This ` B ` sequence is strictly decreasing, thus it has no minimum,
        contradicting the first assumption.
-    $)
 
+       This first section is sedicated to the construction of ` U ` and its
+       intersection.  First, the value of ` U ` at a successor.
+    $)
     fin23lem12 $p |- ( A e. om -> ( U ` suc A ) = if ( ( ( t ` A ) i^i
         ( U ` A ) ) = (/) , ( U ` A ) , ( ( t ` A ) i^i ( U ` A ) ) ) ) $=
       ( com wcel csuc cfv cvv cv cin c0 wceq cif cmpt2 co eqeq1d ifbieq12d cuni
@@ -9170,12 +9229,14 @@ $)
       QTVEUHVIUQVHVKUQVGVKUIUJUKULUM $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  Each step of ` U ` is a decrease. $)
     fin23lem13 $p |- ( A e. om -> ( U ` suc A ) C_ ( U ` A ) ) $=
       ( com wcel csuc cfv cv cin c0 wceq cif fin23lem12 wss ssid inss2 sseq1
       ifboth mp2an a1i eqsstrd ) CGHZCIDJCBKJZCDJZLZMNZUGUHOZUGABCDEFPUJUGQZUEU
       GUGQZUHUGQZUKUGRUFUGSUIULUMUKUGUHUGUJUGTUHUJUGTUAUBUCUD $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23.  ` U ` will never evolve to an empty set if it did not start with one. $)
     fin23lem14 $p |- ( ( A e. om /\ U. ran t =/= (/) ) ->
         ( U ` A ) =/= (/) ) $=
       ( va vb com cv c0 wne cfv wi wceq fveq2 neeq1d imbi2d eqnetrd adantr wcel
@@ -9190,6 +9251,7 @@ $)
       EVFVGVI $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  ` U ` is a monotone function. $)
     fin23lem15 $p |- ( ( ( A e. om /\ B e. om ) /\ B C_ A ) ->
         ( U ` A ) C_ ( U ` B ) ) $=
       ( vb va cv cfv wss csuc wceq fveq2 sseq1d weq com wcel wa ssid fin23lem13
@@ -9199,6 +9261,7 @@ $)
       ULUFUGUHUI $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  ` U ` ranges over the original set; in particular ` ran U ` is a set, although we do not assume here that ` U ` is. $)
     fin23lem16 $p |- U. ran U = U. ran t $=
       ( va vb crn cuni cv wss wcel cfv wceq com cvv c0 ax-mp peano1 mpan2 cmpt2
       unissb wrex wfn wb cin cif fnseqom fvelrnb wa 0ss fin23lem15 rnex seqom0g
@@ -9210,6 +9273,7 @@ $)
       LVHVFRVG $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  By ` Fin2 ` , ` U ` achieves its minimum ( ` X ` in the synopsis above, but we will not be assigning a symbol here). $)
     fin23lem17 $p |- ( U. ran t e. Fin2 -> |^| ran U e. ran U ) $=
       ( vb vc vd va cv wcel c0 wne wss wo wral wa wi wceq com crn cuni cint cpw
       cfin2 vex rnex uniex pweq pweqd raleqdv dffin2-4 elab2 fin23lem16 eqimssi
@@ -9232,6 +9296,7 @@ $)
       LWRYAYTGXNYJXTHXNYJWSWTXBUVKYDYKXNYJXNYJXCUVKXDXEXFXGXHXIXJ $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 and the start of the "API" which will be carried into the next section .  ` X ` is a set. $)
     fin23lem18 $p |- |^| ran U e. _V $=
       ( crn c0 wne cint cvv wcel cdm com wfn wceq cv cfv cin ax-mp mpbi fnseqom
       cif cmpt2 cuni fndm peano1 ne0i eqnetri dm0rn0 necon3bii intex ) CFZGHZUL
@@ -9239,6 +9304,7 @@ $)
       UHUNGULGCUIUJTULUKT $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  The first set in ` U ` to see an input set is either contained in it or disjoint from it. $)
     fin23lem19 $p |- ( A e. om -> ( ( U ` suc A ) C_ ( t ` A ) \/
       ( ( U ` suc A ) i^i ( t ` A ) ) = (/) ) ) $=
       ( com wcel csuc cfv cv cin c0 wceq wss cif wa wn wo fin23lem12 eqif incom
@@ -9249,6 +9315,7 @@ $)
       $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  ` X ` is either contained in or disjoint from all input sets. $)
     fin23lem20 $p |- ( A e. om -> ( |^| ran U C_ ( t ` A ) \/ ( |^| ran U i^i
         ( t ` A ) ) = (/) ) ) $=
       ( com wcel crn cint csuc cfv wss cv cin c0 wceq wo wfn cvv cif cmpt2 cuni
@@ -9258,6 +9325,7 @@ $)
       DVFVEVGURUTVCUJVAVEVGURUTVCUKULUMUO $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  ` X ` is not empty.  We only need here that ` t ` has at least one set in its range besides ` (/) ` ; the much stronger hypothesis here will serve as our induction hypothesis though. $)
     fin23lem21 $p |- ( ( U. ran t e. Fin2 /\ t : om -1-1-> _V ) ->
       |^| ran U =/= (/) ) $=
       ( va cv crn wcel com cvv c0 wne cfv wceq ax-mp wa cen wbr csdm cuni cfin2
@@ -9278,6 +9346,8 @@ $)
 
   ${
     $d x y z a b c d $.
+
+    $( Every I-finite set is Ia-finite. $)
     fin11a $p |- Fin C_ Fin1a $=
       ( va vb vc cfn cfin1a cv wcel cun wceq cin c0 wa wn wex unfir con3i eleq1
       simpld notbid syl5ibr imp ad2ant2r exlimivv con2i df-fin1a abeq2i sylibr
@@ -9286,9 +9356,11 @@ $)
       BAEABCUEUFUGUH $.
       $( [30-Oct-2014] $)
 
+    $( Every Ia-finite set is II-finite. $)
     fin1a2 $p |- Fin1a C_ Fin2 $=
       ? $.
 
+    $( Alternate definition of IV-finite sets: they lack a denumerable subset. $)
     dffin4-2 $p |- Fin4 = { x | -. om ~<_ x } $=
       ( va vb cfin4 com cv cdom wbr wn cab wpss cen wa wex wcel infpssr exlimiv
       vex infpssALT impbii notbii df-fin4 abeq2i weq breq2 notbid 3bitr4i eqriv
@@ -9296,9 +9368,11 @@ $)
       UNBRZPQCUOVASTUAURBDBCUBUCULUTAUOVAABUDUKUSUJUOEGUEUFUIUGUH $.
       $( [30-Oct-2014] $)
 
+    $( Every II-finite set is III-finite. $)
     fin23 $p |- Fin2 C_ Fin3 $=
       ? $.
 
+    $( Every III-finite set is IV-finite. $)
     fin34 $p |- Fin3 C_ Fin4 $=
       ( va vb cfin3 cfin4 cv cpw wcel com cdom wbr vex pwex wceq breq2 dffin4-2
       wn notbid elab2 csdm abeq2i domsdomtr mpan2 sdomdom con3i df-fin3 3imtr4i
@@ -9307,6 +9381,7 @@ $)
       UCUHUDUIUMACAUETUOADAOTUFUJ $.
       $( [30-Oct-2014] $)
 
+    $( Alternate definition of V-finite which emphasizes the idempotent behavior of V-infinite sets. $)
     dffin5-2 $p |- Fin5 = { x | -. ( x =/= (/) /\ x ~~ ( x +c x ) ) } $=
       ( va cfin5 cv c0 wne ccda co cen wbr wa wn cab csdm wo wcel wceq en0 biid
       necon2bbii bitri cdom brsdom cdadom3 mpbiran orbi12i ianor bitr4i df-fin5
@@ -9317,6 +9392,7 @@ $)
       IWBUNWBVEVLQVCVJVCVJGUOUPUQURUSUTVAVB $.
       $( [30-Oct-2014] $)
 
+    $( Every IV-finite set is V-finite: if we can pack two copies of the set into itself, we can certainly leave space. $)
     fin45 $p |- Fin4 C_ Fin5 $=
       ( va vb vc cfin4 cfin5 cv wpss cen wbr wa wex wn wne ccda c1o cxp c2o wss
       wcel ax-mp c0 co csuc sssucid df-2o sseqtr4i xpss2 a1i wel cop 1onn elexi
@@ -9334,6 +9410,7 @@ $)
       WQWR $.
       $( [30-Oct-2014] $)
 
+    $( Every V-finite set is VI-finite because multiplication dominates addition for cardinals. $)
     fin56 $p |- Fin5 C_ Fin6 $=
       ( va cfin5 cfin6 cv cen wbr csdm wo cxp wcel wn cdom wi c2o cfn com ax-mp
       con0 cvv abeq2i c0 ccda co c1o w3o 3mix1 vex xp2cda wb cin onfin2 eqsstri
@@ -9346,6 +9423,7 @@ $)
       AVKTWDACAVLTVMVO $.
       $( [29-Oct-2014] $)
 
+    $( Every VI-finite set is VII-finite.  Uses Infinity inessentially; I have a modified version of ~ infxpen which allows this to be Infinity-free like the others, if there is interest. $)
     fin67 $p |- Fin6 C_ Fin7 $=
       ( va vb cfin6 cfin7 cv c0 cen wbr c1o csdm con0 com wn wcel cfn notbid wb
       cvv enfi mpan cxp w3o cdif wrex wa eldif onfin biimpar vex syl5ibrcom imp
@@ -9362,6 +9440,7 @@ $)
       JXIXIWCVLWGXNWJRVGVHVMPUJUKWEWFWHVNVOVPVQWIACAVRVSWNADABVTVSWAWB $.
       $( [29-Oct-2014] $)
 
+    $( Once we allow AC, the "strongest" definition becomes equivalent to the "weakest" and the entire hierarchy collapses. $)
     fin71ac $p |- Fin7 C_ Fin $=
       ( va vb cfin7 cfn cv cen wbr con0 com cdif wrex wn wcel numth2 vex reximi
       wo ensym cun wceq wb uncom wss omsson undif mpbi eqtri rexeq ax-mp bitr3i
