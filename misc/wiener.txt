@@ -1,0 +1,161 @@
+statements invalid:
+
+df-op $a |- <. A , B >. = { { A } , { A , B } } $.  ==>  <. A , B >. = { { { A } , (/) } , { { B } } }
+dmsnsnsn $p |- dom { { { A } } } = { A } $= ... $.
+funopg $p |- ( ( B e. V /\ Fun <. A , B >. ) -> A = B ) $= ... $.  # used only by nvex, may be completely redesigned
+relop $p |- ( Rel <. A , B >. <-> E. x E. y ( A = { x } /\ B = { x , y } ) ) $= ... $.  # nvex
+opeqpr $p |- ( <. A , B >. = { C , D } <-> ( ( C = { A } /\ D = { A , B } ) \/ ( C = { A , B } /\ D = { A } ) ) ) $= ... $.  # nvex
+opeqsn $p |- ( <. A , B >. = { C } <-> ( A = B /\ C = { A } ) ) $= ... $.  # nvex
+xpsspwOLD $p |- ( A X. B ) C_ ~P ~P ( A u. B ) $= ... $.
+rankop $p |- ( rank ` <. A , B >. ) = suc suc ( ( rank ` A ) u. ( rank ` B ) ) $= ... $.  ==>  one more suc
+rankopb $p |- ( ( A e. U. ( R1 " On ) /\ B e. U. ( R1 " On ) ) -> ( rank ` <. A , B >. ) = suc suc ( ( rank ` A ) u. ( rank ` B ) ) ) $= ... $.  ==> one more suc
+elop $p |- ( A e. <. B , C >. <-> ( A = { B } \/ A = { B , C } ) ) $= ... $.
+opid $p |- <. A , A >. = { { A } } $= ... $.
+opprc1 $p |- ( -. A e. _V -> <. A , B >. = { (/) , { B } } ) $= ... $.
+opprc2 $p |- ( -. B e. _V -> <. A , B >. = <. A , A >. ) $= ... $.
+op1stb $p |- |^| |^| <. A , B >. = A $= ... $.
+opi1 $p |- { A } e. <. A , B >. $= ... $.
+opi2 $p |- { A , B } e. <. A , B >. $= ... $.
+uniop $p |- U. <. A , B >. = { A , B } $= ... $.  ==>  U. U. <. A , B >. = { A , B }
+xpsspw $p |- ( A X. B ) C_ ~P ~P ( A u. B ) $= ... $.  ==>  ( A X. B ) C_ ~P ~P ~P ( A u. B )
+elvvuni $p |- ( A e. ( _V X. _V ) -> U. A e. A ) $= ... $.
+1stval2 $p |- ( A e. ( _V X. _V ) -> ( 1st ` A ) = |^| |^| A ) $= ... $.
+brprc $p |- ( -. B e. _V -> ( A R B <-> A R A ) ) $= ... $.
+dffv2 $p |- ( F ` A ) = U. ( ( F " { A } ) \ U. U. ( ( ( F |` { A } ) o. `' ( F |` { A } ) ) \ _I ) ) $= ... $.
+dmrnssfld $p |- ( dom A u. ran A ) C_ U. U. A $= ... $.
+elreldm $p |- ( ( Rel A /\ B e. A ) -> |^| |^| B e. dom A ) $= ... $.
+elxp5 $p |- ( A e. ( B X. C ) <-> ( A = <. |^| |^| A , U. ran { A } >. /\ ( |^| |^| A e. B /\ U. ran { A } e. C ) ) ) $= ... $.
+op2ndb $p |- |^| |^| |^| `' { <. A , B >. } = B $= ... $.
+opeluu $p |- ( <. x , y >. e. A -> ( x e. U. U. A /\ y e. U. U. A ) ) $= ... $.
+opprc1b $p |- ( -. A e. _V <-> (/) e. <. A , B >. ) $= ... $.
+opprc3 $p |- ( ( -. A e. _V /\ -. B e. _V ) <-> <. A , B >. = { (/) } ) $= ... $.
+ovprc2 $p |- ( -. B e. _V -> ( A F B ) = ( A F A ) ) $= ... $.
+rankxpu $p |- ( rank ` ( A X. B ) ) C_ suc suc ( rank ` ( A u. B ) ) $= ... $.
+uniopel $p |- ( <. A , B >. e. C -> U. <. A , B >. e. U. C ) $= ... $.
+unixpss $p |- U. U. ( A X. B ) C_ ( A u. B ) $= ... $.
+2ndval2 $p |- ( A e. ( _V X. _V ) -> ( 2nd ` A ) = |^| |^| |^| `' { A } ) $= ... $.
+asymref $p |- ( ( R i^i `' R ) = ( _I |` U. U. R ) <-> A. x e. U. U. R A. y ( ( x R y /\ y R x ) <-> x = y ) ) $= ... $.
+asymref2 $p |- ( ( R i^i `' R ) = ( _I |` U. U. R ) <-> ( A. x e. U. U. R x R x /\ A. x A. y ( ( x R y /\ y R x ) -> x = y ) ) ) $= ... $.
+dfdir2 $p |- DirRel = ( Preset i^i { r | A. x e. U. U. r A. y e. U. U. r E. z e. U. U. r z e. ( r ub { x , y } ) } ) $= ... $.
+dirdm $p |- ( R e. DirRel -> dom R = U. U. R ) $= ... $.
+ducidu $p |- U. U. `' A C_ U. U. A $= ... $.
+filnetlem2 $p |- ( H = U. U. D /\ H = dom D ) $= ... $.
+numth2 $p |- E. x e. On x ~~ A $= ... $. # needs sethood antecedent
+onssnum $p |- ( A C_ On -> E. x e. On x ~~ A ) $= ... $. # needs sethood
+psdmrn $p |- ( R e. PosetRel -> ( dom R = U. U. R /\ ran R = U. U. R ) ) $= ... $.
+rankxplim3 $p |- ( Lim ( rank ` ( A X. B ) ) <-> Lim U. ( rank ` ( A X. B ) ) ) $= ... $.
+relcoi2 $p |- ( Rel R -> ( ( _I |` U. U. R ) o. R ) = R ) $= ... $.
+relfld $p |- ( Rel R -> U. U. R = ( dom R u. ran R ) ) $= ... $.
+tskwe $p |- ( { x e. ~P A | x ~< A } C_ A -> E. y e. On y ~~ A ) $= ... $. # sethood?
+unielrel $p |- ( ( Rel R /\ A e. R ) -> U. A e. U. R ) $= ... $.
+unielxp $p |- ( A e. ( B X. C ) -> U. A e. U. ( B X. C ) ) $= ... $.
+
+
+evaluate:
+
+cardf $p |- card : _V --> On $= ... $.
+cardval $p |- ( card ` A ) = |^| { x e. On | x ~~ A } $= ... $.
+cfeq0 $p |- ( A e. On -> ( ( cf ` A ) = (/) <-> A = (/) ) ) $= ... $.
+cff1 $p |- ( A e. On -> E. f ( f : ( cf ` A ) -1-1-> A /\ A. z e. A E. w e. ( cf ` A ) z C_ ( f ` w ) ) ) $= ... $.
+cfflb $p |- ( ( A e. On /\ B e. On ) -> ( E. f ( f : B --> A /\ A. z e. A E. w e. B z C_ ( f ` w ) ) -> ( cf ` A ) C_ B ) ) $= ... $.
+cflim2 $p |- ( Lim A <-> Lim ( cf ` A ) ) $= ... $.
+cfslb $p |- ( ( Lim A /\ B C_ A /\ U. B = A ) -> ( cf ` A ) ~<_ B ) $= ... $.
+cfss $p |- ( Lim A -> E. x ( x C_ A /\ x ~~ ( cf ` A ) /\ U. x = A ) ) $= ... $.
+cfsuc $p |- ( A e. On -> ( cf ` suc A ) = 1o ) $= ... $.
+cnvref $p |- ( A. x e. ( dom R u. ran R ) x R x <-> A. x e. ( dom `' R u. ran `' R ) x `' R x ) $= ... $.
+cnvref2 $p |- ( Rel R -> ( A. x e. U. U. R x R x <-> A. x e. U. U. `' R x `' R x ) ) $= ... $.
+dirref $p |- ( ( R e. DirRel /\ A e. X ) -> A R A ) $= ... $.
+dispos $p |- ( A e. V -> ( _I |` A ) e. PosetRel ) $= ... $.
+domfldref $p |- ( ( Rel R /\ A. x e. U. U. R x R x ) -> dom R = U. U. R ) $= ... $.
+domrngref $p |- ( ( Rel R /\ A. x e. U. U. R x R x ) -> dom R = ran R ) $= ... $.
+dutos2 $p |- ( Rel R -> ( R e. TosetRel <-> `' R e. TosetRel ) ) $= ... $.
+filnetlem3 $p |- ( H C_ ( X X. F ) /\ ( F e. Fil -> D e. DirRel ) ) $= ... $.
+fldleqt $p |- U. U. <_ = RR* $= ... $.
+grothac $p |- E. x e. On x ~~ y $= ... $.
+isdir2 $p |- ( D e. DirRel <-> ( D e. Preset /\ A. x e. X A. y e. X E. z e. X z e. ( D ub { x , y } ) ) ) $= ... $.
+istoset2 $p |- ( R e. TosetRel <-> ( R e. PosetRel /\ A. x e. X A. y e. X ( x R y \/ y R x ) ) ) $= ... $.
+lteqtpos $p |- <_ e. PosetRel $= ... $.
+numthcor $p |- ( A e. V -> E. x e. On A ~< x ) $= ... $.
+pospos $p |- ( R e. PosetRel -> ( R i^i ( A X. A ) ) e. PosetRel ) $= ... $.
+pslem $p |- ( R e. PosetRel -> ( ( A e. S /\ B e. T /\ C e. U ) -> ( ( ( A R B /\ B R C ) -> A R C ) /\ ( ( A e. U. U. R -> A R A ) /\ ( ( A R B /\ B R A ) -> A = B ) ) ) ) ) $= ... $.
+psref $p |- ( ( R e. PosetRel /\ A e. X ) -> A R A ) $= ... $.
+psrn $p |- ( R e. PosetRel -> X = ran R ) $= ... $.
+rankxpsuc $p |- ( ( ( rank ` ( A u. B ) ) = suc C /\ ( A X. B ) =/= (/) ) -> ( rank ` ( A X. B ) ) = suc suc ( rank ` ( A u. B ) ) ) $= ... $.
+reflincror $p |- ( ( Rel R /\ ( _I |` U. U. R ) C_ R ) -> R C_ ( R o. R ) ) $= ... $.
+relcnvfld $p |- ( Rel R -> U. U. R = U. U. `' R ) $= ... $.
+relcoi1 $p |- ( Rel R -> ( R o. ( _I |` U. U. R ) ) = R ) $= ... $.
+relresfld $p |- ( Rel R -> ( R |` U. U. R ) = R ) $= ... $.
+spwval $p |- ( ( R e. PosetRel /\ A e. V ) -> ( R supw A ) = ( iota_ x e. X ( A. y e. A y R x /\ A. y e. X ( A. z e. A z R y -> x R y ) ) ) ) $= ... $.
+tailfval $p |- ( D e. DirRel -> ( tail ` D ) = ( x e. X |-> ( D " { x } ) ) ) $= ... $.
+tosdir $p |- ( A e. TosetRel -> A e. DirRel ) $= ... $.
+tskcard $p |- ( ( T e. Tarski /\ T =/= (/) ) -> ( card ` T ) e. Inacc ) $= ... $.
+tskwe2 $p |- ( T e. Tarski -> E. x e. On x ~~ T ) $= ... $.
+unidmrn $p |- U. U. `' A = ( dom A u. ran A ) $= ... $.
+unixp $p |- ( ( A X. B ) =/= (/) -> U. U. ( A X. B ) = ( A u. B ) ) $= ... $.
+
+proofs invalid:
+
+opeq1 $p |- ( A = B -> <. A , C >. = <. B , C >. ) $= ... $.
+opeq2 $p |- ( A = B -> <. C , A >. = <. C , B >. ) $= ... $.
+hbop $p |- ( y e. <. A , B >. -> A. x y e. <. A , B >. ) $= ... $.
+opex $p |- <. A , B >. e. _V $= ... $.
+opth $p |- ( <. A , B >. = <. C , D >. <-> ( A = C /\ B = D ) ) $= ... $.   { antecedent 3 becomes unnecessary }
+opwf $p |- ( ( A e. U. ( R1 " On ) /\ B e. U. ( R1 " On ) ) -> <. A , B >. e. U. ( R1 " On ) ) $= ... $.
+tskop $p |- ( ( T e. Tarski /\ A e. T /\ B e. T ) -> <. A , B >. e. T ) $= ... $.
+gruop $p |- ( ( U e. Univ /\ A e. U /\ B e. U ) -> <. A , B >. e. U ) $= ... $.
+nvex $p |- ( <. <. G , S >. , N >. e. NrmCVec -> ( G e. _V /\ S e. _V /\ N e. _V ) ) $= ... $.
+rankelop $p |- ( ( ( rank ` A ) e. ( rank ` C ) /\ ( rank ` B ) e. ( rank ` D ) ) -> ( rank ` <. A , B >. ) e. ( rank ` <. C , D >. ) ) $= ... $.
+0nelxp $p |- -. (/) e. ( A X. B ) $= ... $.
+dmsnop $p |- dom { <. A , B >. } = { A } $= ... $.
+fundmen $p |- ( Fun F -> dom F ~~ F ) $= ... $.
+funsn $p |- Fun { <. A , B >. } $= ... $.
+gruxp $p |- ( ( U e. Univ /\ A e. U /\ B e. U ) -> ( A X. B ) e. U ) $= ... $.
+mapunen $p |- ( ( A i^i B ) = (/) -> ( C ^m ( A u. B ) ) ~~ ( ( C ^m A ) X. ( C ^m B ) ) ) $= ... $.
+nvex $p |- ( <. <. G , S >. , N >. e. NrmCVec -> ( G e. _V /\ S e. _V /\ N e. _V ) ) $= ... $.
+tpsexOLD $p |- ( <. A , J >. e. TopSpOLD -> ( A e. _V /\ J e. _V ) ) $= ... $.
+xpnnenOLD $p |- ( NN X. NN ) ~~ NN $= ... $.
+vcex $p |- ( <. G , S >. e. CVec -> ( G e. _V /\ S e. _V ) ) $= ... $.
+rankxplim $p |- ( ( Lim ( rank ` ( A u. B ) ) /\ ( A X. B ) =/= (/) ) -> ( rank ` ( A X. B ) ) = ( rank ` ( A u. B ) ) ) $= ... $.
+opnz $p |- -. <. A , B >. = (/) $= ... $.
+opeldm $p |- ( <. A , B >. e. C -> A e. dom C ) $= ... $.
+opelxpv $p |- ( A e. C <-> <. A , B >. e. ( C X. _V ) ) $= ... $.
+opth1 $p |- ( <. A , B >. = <. C , D >. -> A = C ) $= ... $.
+opth2 $p |- ( <. A , B >. = <. C , D >. -> B = D ) $= ... $.
+xpsnen $p |- ( A X. { B } ) ~~ A $= ... $.
+strss $p |- ( E ` T ) = ( E ` S ) $= ... $.
+xpexg $p |- ( ( A e. V /\ B e. W ) -> ( A X. B ) e. _V ) $= ... $.
+0nelelxp $p |- ( C e. ( A X. B ) -> -. (/) e. C ) $= ... $.
+1stdm $p |- ( ( Rel R /\ A e. R ) -> ( 1st ` A ) e. dom R ) $= ... $.
+card2inf $p |- ( -. E. y e. On y ~~ A -> om C_ { x e. On | x ~< A } ) $= ... $.
+cardval3 $p |- ( card ` A ) = if ( E. w e. On w ~~ A , |^| { x e. On | x ~~ A } , (/) ) $= ... $.
+climge0 $p |- ( ph -> 0 <_ A ) $= ... $.
+climle $p |- ( ph -> A <_ B ) $= ... $.
+dirge $p |- ( ( R e. DirRel /\ A e. X /\ B e. X ) -> E. x e. X ( A R x /\ B R x ) ) $= ... $.
+elfzlem $p |- ( K e. ( M ... N ) -> ( ( M e. ZZ /\ K e. ZZ ) /\ ( M <_ K /\ K <_ N ) ) ) $= ... $.
+filnetlem4 $p |- ( F e. Fil -> E. z e. DirRel E. w ( w : dom z --> X /\ F = ( ( X FilMap ran ( tail ` z ) ) ` w ) ) ) $= ... $.
+rnexg $p |- ( A e. V -> ran A e. _V ) $= ... $.
+sdomex $p |- ( A ~< B -> ( A e. _V /\ B e. _V ) ) $= ... $.
+tailf $p |- ( D e. DirRel -> ( tail ` D ) : X --> ~P X ) $= ... $.
+pstr $p |- ( ( R e. PosetRel /\ A R B /\ B R C ) -> A R C ) $= ... $.
+opelxpex2 $p |- ( <. A , B >. e. ( ( C X. D ) \ _I ) -> B e. _V ) $= ... $.
+opeqex $p |- ( <. A , B >. = <. C , D >. -> ( A e. _V <-> C e. _V ) ) $= ... $.
+pmfun $p |- ( F e. ( A ^pm B ) -> Fun F ) $= ... $.
+pmresg $p |- ( ( A e. V /\ B e. W /\ F e. ( A ^pm C ) ) -> ( F |` B ) e. ( A ^pm B ) ) $= ... $.
+fz2ex $p |- E. n e. ZZ ( M ... N ) = ( M ... n ) $= ... $.
+inposet $p |- ( A e. B -> ( C i^i ( A X. A ) ) e. PosetRel ) $= ... $.
+irrexi $p |- ( A R B -> ( A e. S /\ B e. S ) ) $= ... $.
+issetid $p |- ( A e. _V <-> A _I _V ) $= ... $.
+ixxssixx $p |- ( A O B ) C_ ( A P B ) $= ... $.
+ltrnq $p |- ( A <Q B <-> ( *Q ` B ) <Q ( *Q ` A ) ) $= ... $.
+mapsnen $p |- ( A ^m { B } ) ~~ A $= ... $.
+ndmioo $p |- ( -. ( A e. RR* /\ B e. RR* ) -> ( A (,) B ) = (/) ) $= ... $.
+ndmovcl $p |- ( A F B ) e. S $= ... $.
+elioore $p |- ( A e. ( B (,) C ) -> A e. RR ) $= ... $.
+errtr $p |- ( ph -> ( ( A R B /\ B R C ) -> A R C ) ) $= ... $.
+f1domg $p |- ( A e. C -> ( F : A -1-1-> B -> A ~<_ B ) ) $= ... $.
+f1oen2g $p |- ( ( F e. C /\ F : A -1-1-onto-> B ) -> A ~~ B ) $= ... $.
+dmexg $p |- ( A e. V -> dom A e. _V ) $= ... $.
+unen $p |- ( ( ( A ~~ B /\ C ~~ D ) /\ ( ( A i^i C ) = (/) /\ ( B i^i D ) = (/) ) ) -> ( A u. C ) ~~ ( B u. D ) ) $= ... $.
+vtoclibr $p |- ( ( A R B /\ B R C ) -> A R C ) $= ... $.
+vtoclrbr $p |- ( ( A R B /\ B R C ) -> A R C ) $= ... $.
+xpnum $p |- ( ( E. x e. On x ~~ A /\ E. x e. On x ~~ B ) -> E. x e. On x ~~ ( A X. B ) ) $= ... $.

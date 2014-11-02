@@ -1,0 +1,1 @@
+perl -ne 'next if 1../O.Rear/; ($s,$t)=($.,$1) if /(\S+)\s+\$p/; next unless /\$\./ && $s; print $.-$s," ",$t,"\n";$s=0;'
