@@ -11,8 +11,5 @@ pop(@lines) while @lines && $lines[-1] !~ /\$\( \(End of Stefan O'Rear's mathbox
 
 unshift(@lines, "\$[ set_clean.mm \$]\n\n");
 
-push(@lines, "\n");
-push(@lines, "\$( vim: set sw=2 sts=2 et: \$)\n");
-
 rename('sorear.mm','sorear.mm~'.time()) or die "cannot save mathbox backup: $!\n";
 write_file('sorear.mm', \@lines);

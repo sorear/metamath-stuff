@@ -9146,6 +9146,29 @@ $)
     $( [2-Nov-2014] $)
 
   ${
+    $d F a $.  $d X a $.
+
+    $( Two possibilities for the behavior of a function value. $)
+    fvbr0 $p |- ( X F ( F ` X ) \/ ( F ` X ) = (/) ) $=
+      ( va cv csn cima wcel weu cfv wbr c0 wceq wo cio wsbc iota4 eqcomi dfsbcq
+      wb dffv3 ax-mp fvex eleq1 sbcie bitri biimpi elimasni 3syl orcd wn syl5eq
+      iotanul olcd pm2.61i ) CDZABEFZGZCHZBBAIZAJZUSKLZMURUTVAURUQCUQCNZOZUSUPG
+      ZUTUQCPVCVDVCUQCUSOZVDVBUSLVCVESUSVBCBATZQUQCVBUSRUAUQVDCUSBAUBUOUSUPUCUD
+      UEUFABUSUGUHUIURUJZVAUTVGUSVBKVFUQCULUKUMUN $.
+      $( [2-Nov-2014] $)
+
+    $( The result of a function value is always a subset of the union of the
+       range, even if it is invalid and thus empty. $)
+    fvssunirn $p |- ( F ` X ) C_ U. ran F $=
+      ( va cvv wcel cfv crn cuni wss cv wceq fveq2 sseq1d wbr c0 fvbr0 vex fvex
+      wo mpbiri brelrn elssuni syl 0ss sseq1 jaoi ax-mp vtoclg wn fvprc pm2.61i
+      ) BDEZBAFZAGZHZIZCJZAFZUOIZUPCBDUQBKURUMUOUQBALMUQURANZUROKZSUSAUQPUTUSVA
+      UTURUNEUSUQURACQUQARUAURUNUBUCVAUSOUOIZUOUDZUROUOUETUFUGUHULUIZUPVBVCVDUM
+      OUOBAUJMTUK $.
+      $( [2-Nov-2014] $)
+  $}
+
+  ${
     $d i j a b c $.  $d S i j a b c $.  $d C a b c $.
 
     $( Lemma for ~ fin23lem22 . $)
@@ -9440,10 +9463,55 @@ $)
       $( [1-Nov-2014] $)
 
 
-    fin23lem.b $e |- P = { v e. om | ( t ` v ) C_ |^| ran U } $.
-    fin23lem.c $e |- Q = ( w e. om |-> U. { x e. P | ( x i^i P ) ~~ w ) $.
+    $d P w z a b x $.  $d U v z $.  $d a b t v z $.
+    fin23lem.b $e |- P = { v e. om | |^| ran U C_ ( t ` v ) } $.
+    fin23lem.c $e |- Q = ( w e. om |-> U. { x e. P | ( x i^i P ) ~~ w } ) $.
     fin23lem.d $e |- R = ( w e. om |-> U. { x e. ( om \ P ) |
-        ( x i^i ( om \ P ) ) ~~ w ) $.
+        ( x i^i ( om \ P ) ) ~~ w } ) $.
+    fin23lem.e $e |- Z = if ( P e. Fin , ( t o. R ) ,
+        ( ( z e. P |-> ( ( t ` z ) \ |^| ran U ) ) o. Q ) ) $.
+    $( Lemma for ~ fin23 .  The residual is also one-to-one.  This preserves
+       the induction invariant. $)
+    fin23lem28 $p |- ( t : om -1-1-> _V -> Z : om -1-1-> _V ) $=
+      ( com cvv wcel va vb cv wf1 cfn ccom wceq wa wn cfv crn cint cdif cmpt wo
+      cif eqif mpbi wf1o wss difss ominf cun crab ssrab2 eqsstri unfi syl5eqelr
+      undif ex mtoi fin23lem22 sylancr adantl f1of1 f1ss mpan2 3syl f1co syldan
+      f1eq1 syl5ibrcom impr wf weq wral fvex difexg ax-mp rgenw eqid fmpt fveq2
+      wi a1i difeq1d fvmpt ad2antrl ad2antll eqeq12d uneq2 sseq2d simprbi sylib
+      elrab2 syl5ib wb sseli anim12i f1fveq sylan2 sylibd sylbid dff13 sylanbrc
+      ralrimivva syl mpan syl2an jaodan ) RSFUCZUDZGUETZLYAIUFZUGZUHZYCUIZLBGBU
+      CZYAUJZJUKULZUMZUNZHUFZUGZUHZUOZRSLUDZLYCYDYMUPUGYPQYCLYDYMUQURYBYFYQYOYB
+      YCYEYQYBYCUHZYQYERSYDUDZYBYCRRIUDZYSYRRRGUMZIUSZRUUAIUDZYTYCUUBYBYCUUARUT
+      ZUUAUETZUIUUBRGVAZYCUUERUETZVBYCUUEUUGYCUUEUHRGUUAVCZUEGRUTZUUHRUGGYJDUCZ
+      YAUJZUTZDRVDRNUULDRVEVFZGRVIURGUUAVGVHVJVKIUUACAPVLVMVNRUUAIVOUUCUUDYTUUF
+      RUUARIVPVQVRRRSYAIVSVTRSLYDWAWBWCYBYGYNYQYBYGUHYQYNRSYMUDZYBGSYLUDZRGHUDZ
+      UUNYGYBGSYLWDZUAUCZYLUJZUBUCZYLUJZUGZUAUBWEZWNZUBGWFUAGWFUUOUUQYBYKSTZBGW
+      FUUQUVEBGYISTUVEYHYAWGYIYJSWHWIWJBGSYKYLYLWKZWLURWOYBUVDUAUBGGYBUURGTZUUT
+      GTZUHZUHZUVBUURYAUJZYJUMZUUTYAUJZYJUMZUGZUVCUVJUUSUVLUVAUVNUVGUUSUVLUGYBU
+      VHBUURYKUVLGYLBUAWEYIUVKYJYHUURYAWMWPUVFUVKSTUVLSTUURYAWGUVKYJSWHWIWQWRUV
+      HUVAUVNUGYBUVGBUUTYKUVNGYLBUBWEYIUVMYJYHUUTYAWMWPUVFUVMSTUVNSTUUTYAWGUVMY
+      JSWHWIWQWSWTUVJUVOUVKUVMUGZUVCUVOYJUVLVCZYJUVNVCZUGUVJUVPUVLUVNYJXAUVJUVQ
+      UVKUVRUVMUVJYJUVKUTZUVQUVKUGUVGUVSYBUVHUVGUURRTZUVSUULUVSDUURRGDUAWEUUKUV
+      KYJUUJUURYAWMXBNXEXCWRYJUVKVIXDUVJYJUVMUTZUVRUVMUGUVHUWAYBUVGUVHUUTRTZUWA
+      UULUWADUUTRGDUBWEUUKUVMYJUUJUUTYAWMXBNXEXCWSYJUVMVIXDWTXFUVIYBUVTUWBUHUVP
+      UVCXGUVGUVTUVHUWBGRUURUUMXHGRUUTUUMXHXIRSUURUUTYAXJXKXLXMXPUAUBGSYLXNXOUU
+      IYGUUPUUMUUIYGUHRGHUSUUPHGCAOVLRGHVOXQXRRGSYLHVSXSRSLYMWAWBWCXTVQ $.
+      $( [2-Nov-2014] $)
+
+    $( Lemma for ~ fin23 .  The residual is built from the same elements as the
+       previous sequence. $)
+    fin23lem29 $p |- U. ran Z C_ U. ran t $=
+      ( va crn wss cfn wcel cv ccom cfv cint cdif cmpt cif wceq wa wn cuni eqif
+      wo biimpi rncoss uniss ax-mp rneq unieqd sseq1d mpbiri adantl unissb wrex
+      cab abid difss fvssunirn a1i syl5ss sseq1 syl5ibrcom rexlimiv sylbi rnmpt
+      eqid eleq2s mprgbir sstri jaoi mp2b ) LGUAUBZFUCZIUDZBGBUCZWEUEZJSUFZUGZU
+      HZHUDZUIUJZWDLWFUJZUKZWDULZLWLUJZUKZUOZLSZUMZWESZUMZTZQWMWSWDLWFWLUNUPWOX
+      DWRWNXDWDWNXDWFSZUMZXCTZXEXBTXGWEIUQXEXBURUSWNXAXFXCWNWTXELWFUTVAVBVCVDWQ
+      XDWPWQXDWLSZUMZXCTXIWKSZUMZXCXHXJTXIXKTWKHUQXHXJURUSXKXCTRUCZXCTZRXJRXJXC
+      VEXMXLXLWJUJZBGVFZRVGZXJXLXPUBXOXMXORVHXNXMBGWGGUBZXMXNWJXCTXQWJWHXCWHWIV
+      IWHXCTXQWEWGVJVKVLXLWJXCVMVNVOVPBRGWJWKWKVRVQVSVTWAWQXAXIXCWQWTXHLWLUTVAV
+      BVCVDWBWC $.
+      $( [2-Nov-2014] $)
   $}
 
   ${
@@ -11092,5 +11160,3 @@ $( TODO / IWBNI
 $)
 
 $( (End of Stefan O'Rear's mathbox.) $)
-
-$( vim: set sw=2 sts=2 et: $)
