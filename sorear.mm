@@ -8915,29 +8915,29 @@ $)
     dffin2-2 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
         E. z e. y A. w e. y -. w C. z ) } $=
       ( va vb vc cv c0 wne crpss wor wa wpss wral wrex wcel wss wceq cvv wn cpw
-      cfin2 wi cab w3a cdif simp2 ssrab2 grothpwex elpw2 mpbir a1i simp1 simp3l
-      crab fin23lem7 syl2anc fin23lem6 adantl 3ad2ant3 neeq1 anbi12d rexeqbi1dv
-      soeq2 raleq imbi12d rcla4va imp syl22anc wsb pssdifcom2 biimpd vex difexg
-      wsbc ax-mp weq simpr simpl psseq12d 3imtr4g fin23lem11 sylc 3exp ralrimiv
-      sbc2ie pssdifcom1 impbii df-fin2 abeq2i pweq pweqd raleqdv 3bitr4i eqriv
-      elab ) EUCBHZIJZWRKLZMZDHZCHZNZUAZDWROZCWRPZUDZBAHZUBZUBZOZAUEZFHZIJZXNKL
-      ZMZXCXBNZUAZDXNOZCXNPZUDZFEHZUBZUBZOZXHBYEOZYCUCQYCXMQYFYGYFXHBYEYFWRYEQZ
-      XAXGYFYHXAUFZYHXSDYCGHUGZWRQZGYDUPZOZCYLPZXGYFYHXAUHZYIYLYEQZYFYLIJZYLKLZ
-      YNYPYIYPYLYDRYKGYDUIYLYDEUJZUKULUMYFYHXAUNYIYHWSYQYOYFYHWSWTUOEBGUQURXAYF
-      YRYHWTYRWSGYCWRUSUTVAYPYFMYQYRMZYNYBYTYNUDFYLYEXNYLSZXQYTYAYNUUAXOYQXPYRX
-      NYLIVBXNYLKVEVCXTYMCXNYLXSDXNYLVFVDVGVHVIVJXRXDACDFEBGXIYCRZXNYCRMZXNYCXI
-      UGZNZXIYCXNUGZNZXDDFVKCUUDVPXRDUUFVPCAVKUUCUUEUUGXIXNYCVLVMXDUUECDUUDXNYC
-      TQZUUDTQEVNZYCXITVOVQZFVNXCUUDSZDFVRZMXBXNXCUUDUUKUULVSUUKUULVTWAWGXRUUGC
-      DXIUUFAVNZUUHUUFTQUUIYCXNTVOVQCAVRZXBUUFSZMXCXIXBUUFUUNUUOVTUUNUUOVSWAWGW
-      BWCWDWEWFYGYBFYEYGXNYEQZXQYAYGUUPXQUFZUUPXEDYJXNQZGYDUPZOZCUUSPZYAYGUUPXQ
-      UHZUUQUUSYEQZYGUUSIJZUUSKLZUVAUVCUUQUVCUUSYDRUURGYDUIUUSYDYSUKULUMYGUUPXQ
-      UNUUQUUPXOUVDUVBYGUUPXOXPUOEFGUQURXQYGUVEUUPXPUVEXOGYCXNUSUTVAUVCYGMUVDUV
-      EMZUVAXHUVFUVAUDBUUSYEWRUUSSZXAUVFXGUVAUVGWSUVDWTUVEWRUUSIVBWRUUSKVEVCXFU
-      UTCWRUUSXEDWRUUSVFVDVGVHVIVJXDXRACDBEFGUUBWRYCRMZUUDWRNZYCWRUGZXINZXRDBVK
-      CUUDVPXDDUVJVPCAVKUVHUVIUVKXIWRYCWHVMXRUVICDUUDWRUUJBVNUUKDBVRZMXCUUDXBWR
-      UUKUVLVTUUKUVLVSWAWGXDUVKCDXIUVJUUMUUHUVJTQUUIYCWRTVOVQUUNXBUVJSZMXBUVJXC
-      XIUUNUVMVSUUNUVMVTWAWGWBWCWDWEWFWIYFEUCEFCDWJWKXLYGAYCUUIAEVRZXHBXKYEUVNX
-      JYDXIYCWLWMWNWQWOWP $.
+      cfin2 wi cab w3a cdif crab simp2 ssrab2 vex pwex elpw2 mpbir simp1 simp3l
+      a1i fin23lem7 syl2anc fin23lem6 adantl 3ad2ant3 neeq1 soeq2 anbi12d raleq
+      rexeqbi1dv imbi12d rcla4va imp syl22anc wsb wsbc pssdifcom2 biimpd difexg
+      ax-mp simpr simpl psseq12d sbc2ie 3imtr4g fin23lem11 sylc 3exp pssdifcom1
+      weq ralrimiv impbii df-fin2 abeq2i pweq pweqd raleqdv elab 3bitr4i eqriv
+      ) EUCBHZIJZWRKLZMZDHZCHZNZUAZDWROZCWRPZUDZBAHZUBZUBZOZAUEZFHZIJZXNKLZMZXC
+      XBNZUAZDXNOZCXNPZUDZFEHZUBZUBZOZXHBYEOZYCUCQYCXMQYFYGYFXHBYEYFWRYEQZXAXGY
+      FYHXAUFZYHXSDYCGHUGZWRQZGYDUHZOZCYLPZXGYFYHXAUIZYIYLYEQZYFYLIJZYLKLZYNYPY
+      IYPYLYDRYKGYDUJYLYDYCEUKZULZUMUNUQYFYHXAUOYIYHWSYQYOYFYHWSWTUPEBGURUSXAYF
+      YRYHWTYRWSGYCWRUTVAVBYPYFMYQYRMZYNYBUUAYNUDFYLYEXNYLSZXQUUAYAYNUUBXOYQXPY
+      RXNYLIVCXNYLKVDVEXTYMCXNYLXSDXNYLVFVGVHVIVJVKXRXDACDFEBGXIYCRZXNYCRMZXNYC
+      XIUGZNZXIYCXNUGZNZXDDFVLCUUEVMXRDUUGVMCAVLUUDUUFUUHXIXNYCVNVOXDUUFCDUUEXN
+      YCTQZUUETQYSYCXITVPVQZFUKXCUUESZDFWGZMXBXNXCUUEUUKUULVRUUKUULVSVTWAXRUUHC
+      DXIUUGAUKZUUIUUGTQYSYCXNTVPVQCAWGZXBUUGSZMXCXIXBUUGUUNUUOVSUUNUUOVRVTWAWB
+      WCWDWEWHYGYBFYEYGXNYEQZXQYAYGUUPXQUFZUUPXEDYJXNQZGYDUHZOZCUUSPZYAYGUUPXQU
+      IZUUQUUSYEQZYGUUSIJZUUSKLZUVAUVCUUQUVCUUSYDRUURGYDUJUUSYDYTUMUNUQYGUUPXQU
+      OUUQUUPXOUVDUVBYGUUPXOXPUPEFGURUSXQYGUVEUUPXPUVEXOGYCXNUTVAVBUVCYGMUVDUVE
+      MZUVAXHUVFUVAUDBUUSYEWRUUSSZXAUVFXGUVAUVGWSUVDWTUVEWRUUSIVCWRUUSKVDVEXFUU
+      TCWRUUSXEDWRUUSVFVGVHVIVJVKXDXRACDBEFGUUCWRYCRMZUUEWRNZYCWRUGZXINZXRDBVLC
+      UUEVMXDDUVJVMCAVLUVHUVIUVKXIWRYCWFVOXRUVICDUUEWRUUJBUKUUKDBWGZMXCUUEXBWRU
+      UKUVLVSUUKUVLVRVTWAXDUVKCDXIUVJUUMUUIUVJTQYSYCWRTVPVQUUNXBUVJSZMXBUVJXCXI
+      UUNUVMVRUUNUVMVSVTWAWBWCWDWEWHWIYFEUCEFCDWJWKXLYGAYCYSAEWGZXHBXKYEUVNXJYD
+      XIYCWLWMWNWOWPWQ $.
       $( [2-Nov-2014] $)
 
     $( ` Fin2 ` sets contain unions for all nonempty chains. $)
@@ -8958,6 +8958,18 @@ $)
       wb pweqd elab 3bitr4i eqriv ) CFBGZHIZUQJKZLZUQMUQNZOZBAGZPZPZQZARZUTDGEG
       STDUQQEUQUAZOZBCGZPZPZQZVBBVLQZVJFNVJVGNVIVBBVLUTVHVAUSVHVAULURDEUQUBUCUD
       UEVMCFCBEDUFUGVFVNAVJCUHACUIZVBBVEVLVOVDVKVCVJUJUMUKUNUOUP $.
+      $( [2-Nov-2014] $)
+
+    $d a b c A $.  $d a b c B $.
+    $( A subset of a II-finite set is II-finite. $)
+    ssfin2 $p |- ( ( A e. Fin2 /\ B C_ A ) -> B e. Fin2 ) $=
+      ( va vb vc cfin2 wcel cvv wa wss simpl cv wi wceq eleq1 cpw wral dffin2-3
+      sspwb abeq2i ssexg ancoms sseq2 anbi12d imbi1d sseq1 anbi2d imbi12d crpss
+      jca c0 wne wor cuni bitri ssralv sylbi 3imtr4g impcom vtocl2g mpcom ) AFG
+      ZBHGZIVBBAJZIZBFGZVEVBVCVBVDKVDVBVCBAFUAUBUJCLZFGZDLZVGJZIZVIFGZMVBVIAJZI
+      ZVLMVEVFMCDABFHVGANZVKVNVLVOVHVBVJVMVGAFOVGAVIUCUDUEVIBNZVNVEVLVFVPVMVDVB
+      VIBAUFUGVIBFOUHVJVHVLVJELZUKULVQUIUMIVQUNVQGMZEVGPZPZQZVREVIPZPZQZVHVLVJW
+      CVTJZWAWDMVJWBVSJWEVIVGSWBVSSUOVREWCVTUPUQWACFCERTWDDFDERTURUSUTVA $.
       $( [2-Nov-2014] $)
 
   $}
@@ -9512,7 +9524,7 @@ $)
       $( [1-Nov-2014] $)
 
 
-    $d P w z a b x $.  $d U v z $.  $d a b t v z $.
+    $d P w z a b x $.  $d U v z $.  $d a b t v z $.  $d R b v i u a $.
     fin23lem.b $e |- P = { v e. om | |^| ran U C_ ( t ` v ) } $.
     fin23lem.c $e |- Q = ( w e. om |-> U. { x e. P | ( x i^i P ) ~~ w } ) $.
     fin23lem.d $e |- R = ( w e. om |-> U. { x e. ( om \ P ) |
@@ -9561,10 +9573,150 @@ $)
       IWHXCTXQWEWGVJVKVLXLWJXCVMVNVOVPBRGWJWKWKVRVQVSVTWAWQXAXIXCWQWTXHLWLUTVAV
       BVCVDWBWC $.
       $( [2-Nov-2014] $)
+
+    $( Lemma for ~ fin23 .  The residual is disjoint from the common set. $)
+    fin23lem30 $p |- ( Fun t -> ( U. ran Z i^i |^| ran U ) = (/) ) $=
+      ( wcel wceq com va vb cfn cv ccom cfv crn cint cdif cmpt cif wa wfun cuni
+      wn wo cin c0 wi eqif biimpi wral cdm wrex wb simpr cen crab funmpt funeqi
+      wbr mpbir funco sylancl elunirn syl dmcoss simplr a1i fvco syl3anc eleq2d
+      sseli incom wss wf wf1o difss ominf cun eqsstri undif mpbi unfi syl5eqelr
+      ssrab2 ex mtoi ad2antrr fin23lem22 sylancr eleqtrd ffvelrn syl2anc eldifn
+      f1of eleq2i sylnib sseldi fveq2 sseq2d elrab3 mtbid fin23lem20 orel1 sylc
+      fdm syl5eq disj ra4 3syl sylbid syl5 rexlimdv ralrimiv sylibr rneq unieqd
+      ineq1d eqeq1d syl5ibr exp3a impcom rncoss uniss ax-mp cab wel wex eluniab
+      eleq2 syl6bi exlimiv sylbi eqid rnmpt unieqi eleq2s mprgbir ssdisj syl6eq
+      rexlimivw mp2an a1d adantl jaoi mp2b ) LGUCRZFUDZIUEZBGBUDUUSUFZJUGUHZUIZ
+      UJZHUEZUKSZUURLUUTSZULZUURUOZLUVESZULZUPZUUSUMZLUGZUNZUVBUQZURSZUSZQUVFUV
+      LUURLUUTUVEUTVAUVHUVRUVKUVGUURUVRUVGUURUVMUVQUURUVMULZUVQUVGUUTUGZUNZUVBU
+      QZURSZUVSUAUDZUVBRUOZUAUWAVBUWCUVSUWEUAUWAUVSUWDUWARZUWDUBUDZUUTUFZRZUBUU
+      TVCZVDZUWEUVSUUTUMZUWFUWKVEUVSUVMIUMZUWLUURUVMVFUWMCTAUDTGUIZUQCUDVGVKAUW
+      NVHUNZUJZUMCTUWOVIIUWPPVJVLZUUSIVMVNUBUWDUUTVOVPUVSUWIUWEUBUWJUWGUWJRUWGI
+      VCZRZUVSUWIUWEUSZUWJUWRUWGUUSIVQWCUVSUWSUWTUVSUWSULZUWIUWDUWGIUFZUUSUFZRZ
+      UWEUXAUWHUXCUWDUXAUVMUWMUWSUWHUXCSUURUVMUWSVRUWMUXAUWQVSUVSUWSVFZUWGUUSIV
+      TWAWBUXAUXCUVBUQZURSZUWEUAUXCVBZUXDUWEUSUXAUXFUVBUXCUQZURUXCUVBWDUXAUVBUX
+      CWEZUOUXJUXIURSZUPZUXKUXAUXBUVBDUDZUUSUFZWEZDTVHZRZUXJUXAUXBGRZUXQUXAUXBU
+      WNRZUXRUOUXATUWNIWFZUWGTRUXSUXATUWNIWGZUXTUXAUWNTWEUWNUCRZUOZUYATGWHZUURU
+      YCUVMUWSUURUYBTUCRZWIUURUYBUYEUURUYBULTGUWNWJZUCGTWEUYFTSGUXPTNUXODTWPWKG
+      TWLWMGUWNWNWOWQWRWSIUWNCAPWTXATUWNIXFVPZUXAUWGUWRTUXEUXAUXTUWRTSUYGTUWNIX
+      QVPXBTUWNUWGIXCXDZUXBTGXEVPGUXPUXBNXGXHUXAUXBTRZUXQUXJVEUXAUWNTUXBUYDUYHX
+      IZUXOUXJDUXBTUXMUXBSUXNUXCUVBUXMUXBUUSXJXKXLVPXMUXAUYIUXLUYJEFUXBJKMXNVPU
+      XJUXKXOXPXRUXGUXHUAUXCUVBXSVAUWEUAUXCXTYAYBWQYCYDYBYEUAUWAUVBXSYFUVGUVPUW
+      BURUVGUVOUWAUVBUVGUVNUVTLUUTYGYHYIYJYKYLYMUVJUVRUVIUVJUVQUVMUVJUVPUVEUGZU
+      NZUVBUQZURUVJUVOUYLUVBUVJUVNUYKLUVEYGYHYIUYLUVDUGZUNZWEZUYOUVBUQURSZUYMUR
+      SUYKUYNWEUYPUVDHYNUYKUYNYOYPUYQUWEUAUYOUAUYOUVBXSUWEUWDUWGUVCSZBGVDZUBYQZ
+      UNZUYOUWDVUARUAUBYRZUYSULZUBYSUWEUYSUBUWDYTVUCUWEUBUYSVUBUWEUYRVUBUWEUSBG
+      UYRVUBUWDUVCRUWEUWGUVCUWDUUAUWDUVAUVBXEUUBUULYMUUCUUDUYNUYTBUBGUVCUVDUVDU
+      UEUUFUUGUUHUUIUYLUYOUVBUUJUUMUUKUUNUUOUUPUUQ $.
+      $( [2-Nov-2014] $)
+
+    $d Z a b c $.  $d U a b c $.  $d G a b c t $.
+
+    $( Lemma for ~ fin23 .  The residual is has a strictly smaller range than
+       the previous sequence.  This will be iterated to build an unbounded
+       chain. $)
+    fin23lem31 $p |- ( ( t : om -1-1-> _V /\ G e. Fin2 /\ U. ran t C_ G ) ->
+        U. ran Z C. U. ran t ) $=
+      ( com c0 va cvv cv wf1 cfin2 wcel crn cuni wss wpss ssfin2 wne fin23lem29
+      wa a1i cint wex fin23lem21 ancoms n0 sylib cdm wfn wceq cfv cin cif cmpt2
+      wn fnseqom fndm ax-mp peano1 eqnetri dm0rn0 necon3bii intssuni fin23lem16
+      ne0i mpbi sseqtri sseli adantl wral wfun f1fun adantr fin23lem30 syl disj
+      wi biimpi ra4 3syl con2d nelne1 syl2anc necomd ex exlimdv df-pss sylanbrc
+      imp mpd sylan2 3impb ) SUBFUCZUDZLUEUFZXGUGUHZLUIZMUGUHZXJUJZXIXKUNXHXJUE
+      UFZXMLXJUKXHXNUNZXLXJUIZXLXJULZXMXPXOABCDEFGHIJKMNOPQRUMUOXOUAUCZJUGZUPZU
+      FZUAUQZXQXOXTTULZYBXNXHYCEFJKNURUSUAXTUTVAXOYAXQUAXOYAXQXOYAUNZXJXLYDXRXJ
+      UFZXRXLUFZVIZXJXLULYAYEXOXTXJXRXTXSUHZXJXSTULZXTYHUIJVBZTULYIYJSTJSVCYJSV
+      DKESUBKUCXGVEEUCZVFZTVDYKYLVGVHJXJNVJSJVKVLTSUFSTULVMSTVSVLVNYJTXSTJVOVPV
+      TXSVQVLEFJKNVRWAWBWCXOYAYGXOYFYAXOXLXTVFTVDZYAVIZUAXLWDZYFYNWKXOXGWEZYMXH
+      YPXNSUBXGWFWGABCDEFGHIJKMNOPQRWHWIYMYOUAXLXTWJWLYNUAXLWMWNWOXCXRXJXLWPWQW
+      RWSWTXDXLXJXAXBXEXF $.
+      $( [2-Nov-2014] $)
+
+    $( Lemma for ~ fin23 .  Wrap the previous construction into a function to
+       hide the hypotheses. $)
+    fin23lem32 $p |- ( G e. Fin2 -> E. a A. b
+        ( ( b : om -1-1-> _V /\ U. ran b C_ G ) ->
+        ( ( a ` b ) : om -1-1-> _V /\ U. ran ( a ` b ) C. U. ran b ) ) ) $=
+      ( cfin2 wcel com cvv cv wf1 crn cuni wss wa cfv wpss wi wal wex cmap cmpt
+      cpw co wceq wb wfn f1fn dffn3 sylib ad2antrl sspwuni biimpri ad2antll fss
+      wf syl2anc pwexg adantr vex f1f sylancr elmapg mpbird fin23lem28 syl eqid
+      dmfex fex fvmpt2 f1eq1 rneq unieqd psseq1d simprl simpl simprr fin23lem31
+      anbi12d syl3anc mpbir2and ex alrimiv ovex mptex ax17el hbmpt1 fveq1 rneqd
+      imbi2d albid cla4ev weq sseq1d fveq2 psseq12d imbi12d cbvalv exbii sylibr
+      hbeq ) LUAUBZUCUDFUEZUFZXRUGZUHZLUIZUJZUCUDXRNUEZUKZUFZYEUGZUHZYAULZUJZUM
+      ZFUNZNUOZUCUDOUEZUFZYNUGZUHZLUIZUJZUCUDYNYDUKZUFZYTUGZUHZYQULZUJZUMZOUNZN
+      UOXQYCUCUDXRFLURZUCUPUSZMUQZUKZUFZUUKUGZUHZYAULZUJZUMZFUNZYMXQUUQFXQYCUUP
+      XQYCUJZUUPUCUDMUFZMUGZUHZYAULZUUSUUKMUTZUUPUUTUVCUJVAUUSXRUUIUBZMUDUBZUVD
+      UUSUVEUCUUHXRVKZUUSUCXTXRVKZXTUUHUIZUVGXSUVHXQYBXSXRUCVBUVHUCUDXRVCUCXRVD
+      VEVFYBUVIXQXSUVIYBXTLVGVHVIUCXTUUHXRVJVLUUSUUHUDUBZUCUDUBZUVEUVGVAXQUVJYC
+      LUAVMVNXSUVKXQYBXSXRUDUBUCUDXRVKUVKFVOUCUDXRVPUCUDUDXRWCVQVFZUUHUCXRUDUDV
+      RVLVSUUSUCUDMVKZUVKUVFUUSUUTUVMXSUUTXQYBABCDEFGHIJKMPQRSTVTVFZUCUDMVPWAUV
+      LUCUDUDMWDVLFUUIMUDUUJUUJWBWEVLUVDUULUUTUUOUVCUCUDUUKMWFUVDUUNUVBYAUVDUUM
+      UVAUUKMWGWHWIWNWAUVNUUSXSXQYBUVCXQXSYBWJXQYCWKXQXSYBWLABCDEFGHIJKLMPQRSTW
+      MWOWPWQWRYLUURNUUJFUUIMUUHUCUPWSWTYDUUJUTZYKUUQFFOOYDUUJONFXAFOUUIMXBXPUV
+      OYJUUPYCUVOYFUULYIUUOUVOYEUUKUTYFUULVAXRYDUUJXCZUCUDYEUUKWFWAUVOYHUUNYAUV
+      OYGUUMUVOYEUUKUVPXDWHWIWNXEXFXGWAUUGYLNUUFYKOFOFXHZYSYCUUEYJUVQYOXSYRYBUC
+      UDYNXRWFUVQYQYALUVQYPXTYNXRWGWHZXIWNUVQUUAYFUUDYIUVQYTYEUTUUAYFVAYNXRYDXJ
+      ZUCUDYTYEWFWAUVQUUCYHYQYAUVQUUBYGUVQYTYEUVSXDWHUVRXKWNXLXMXNXO $.
+      $( [2-Nov-2014] $)
   $}
 
   ${
-    $d x y z a b c d $.
+    $d G a b c d e f g h i j k l m $.
+    $( Lemma for ~ fin23 .  Discharge hypotheses. $)
+    fin23lem33 $p |- ( G e. Fin2 -> E. a A. b
+        ( ( b : om -1-1-> _V /\ U. ran b C_ G ) ->
+        ( ( a ` b ) : om -1-1-> _V /\ U. ran ( a ` b ) C. U. ran b ) ) ) $=
+      ( vh vi vg vf vd vj vk vl vc com cv cfv cin c0 wceq cif eqid ve cvv cmpt2
+      crn cuni cseqom cint wss crab cen wbr cmpt cdif cfn wcel weq fveq2 ineq1d
+      ccom eqeq1d eqidd ifbieq12d ineq2 cbvmpt2v seqomeq12 mp2an sseq2d cbvrabv
+      id fin23lem32 ) DEFGHUAIJMUBINZUANZOZJNZPZQRZVNVOSZUCZVLUDUEZUFZUDUGZKNZV
+      LOZUHZKMUIZFMDNZWEPFNZUJUKDWEUIUEULZFMWFMWEUMZPWGUJUKDWIUIUEULZVTLAWEUNUO
+      VLWJUSEWEENVLOWAUMULWHUSSZBCVRLHMUBLNZVLOZHNZPZQRZWNWOSZUCZRVSVSRVTWRVSUF
+      RIJLHMUBVQWQWMVNPZQRZVNWSSILUPZVPWTVNVOVNWSXAVOWSQXAVMWMVNVKWLVLUQURZUTXA
+      VNVAXBVBJHUPZWTWPVNWSWNWOXCWSWOQVNWNWMVCZUTXCVIXDVBVDVSTVRWRVSVSVEVFWDWAG
+      NZVLOZUHKGMKGUPWCXFWAWBXEVLUQVGVHWHTWJTWKTVJ $.
+      $( [2-Nov-2014] $)
+
+    $d ph j a b c $.  $d A a b c $.  $d B a b c $.  $d Y a b c $.  $d Z a b c $.
+
+    fin23lem.f $e |- ( ph -> h : om -1-1-> _V ) $.
+    fin23lem.g $e |- ( ph -> U. ran h C_ g ) $.
+    fin23lem.h $e |- ( ph -> A. j ( ( j : om -1-1-> _V /\ U. ran j C_ g ) ->
+        ( ( i ` j ) : om -1-1-> _V /\ U. ran ( i ` j ) C. U. ran j ) ) ) $.
+    fin23lem.i $e |- Y = ( rec ( j , h ) |` om ) $.
+
+    $( Lemma for ~ fin23 .  Establish induction invariants on ` Y ` which parameterizes our contradictory chain of subsets.  In this section, ` h ` is the hypothetically assumed family of subsets, ` g ` is the ground set, and ` i ` is the induction function constructed in the previous section. $)
+    fin23lem34 $p |- ( ( ph /\ A e. om ) -> ( ( Y ` A ) : om -1-1-> _V /\
+        U. ran ( Y ` A ) C_ g ) ) $=
+      ? $.
+
+    $( Lemma for ~ fin23 .  Strict order property of ` Y ` . $)
+    fin23lem35 $p |- ( ( ph /\ A e. om ) -> U. ran ( Y ` suc A ) C.
+        U. ran ( Y ` A ) ) $=
+      ? $.
+
+    $( Lemma for ~ fin23 .  Weak order property of ` Y ` . $)
+    fin23lem36 $p |- ( ( ( A e. om /\ B e. om ) /\ ( B C_ A /\ ph ) ) ->
+        U. ran ( Y ` A ) C_ U. ran ( Y ` B ) ) $=
+      ? $.
+
+    $( Lemma for ~ fin23 .  The contradictory chain is a chain. $)
+    fin23lem37 $p |- ( ph -> {C.} Or { a | E. b e. om a =
+        U. ran ( Y ` b ) } ) $=
+      ? $.
+
+    $( Lemma for ~ fin23 .  The contradictory chain has no minimum. $)
+    fin23lem38 $p |- ( ph -> -. |^| { a | E. b e. om a =
+          U. ran ( Y ` b ) } e. { a | E. b e. om a = U. ran ( Y ` b ) } ) $=
+      ? $.
+
+    $( Lemma for ~ fin23 .  Thus we have that ` g ` could not have been ` Fin2 ` after all. $)
+    fin23lem39 $p |- ( ph -> -. g e. Fin2 ) $=
+      ? $.
+  $}
+
+  ${
+    $d x y z a b c d e f g $.
 
     $( Every I-finite set is Ia-finite. $)
     fin11a $p |- Fin C_ Fin1a $=
