@@ -8396,7 +8396,72 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $( Eight inequivalent definitions of finite sets from http://consequences.emich.edu/note-94.pdf . $)
+  $c {C.} $.
+
+  $( Extend class notation to include the reified proper subset relation. $)
+  crpss $a class {C.} $.
+
+  ${
+    $d a b $.
+    $( Define a relation which corresponds to proper subsethood ~ df-pss on
+       sets.  This allows us to use proper subsethood with general concepts
+       that require relations, such as strict ordering, see ~ sorpss . $)
+    df-rpss $a |- {C.} = { <. a , b >. | a C. b } $.
+
+    $d A a b c x y $.  $d B a b $.  $d C a b $.
+
+    $( The proper subset relation is a relation. $)
+    relrpss $p |- Rel {C.} $=
+      ( va vb cv wpss crpss df-rpss relopabi ) ACBCDABEABFG $.
+      $( [2-Nov-2014] $)
+
+    ${
+      $( The proper subset relation on sets is the same as class proper
+         subsethood. $)
+      brrpssg $p |- ( B e. _V -> ( A {C.} B <-> A C. B ) ) $=
+        ( va vb cvv wcel crpss wbr wpss relrpss brrelexi adantl simpl jca pssss
+        wa wss id ssexg cv syl2anr psseq1 psseq2 df-rpss brabg pm5.21nd ) BEFZA
+        BGHZABIZAEFZUGPUGUHPUJUGUHUJUGABGJKLUGUHMNUGUIPUJUGUIABQUGUJUGABOUGRABE
+        SUAUGUIMNCTZDTZIAULIUICDABEEGUKAULUBULBAUCCDUDUEUF $.
+        $( [2-Nov-2014] $)
+
+      brrpss.a $e |- B e. _V $.
+      $( The proper subset relation on sets is the same as class proper
+         subsethood. $)
+      brrpss $p |- ( A {C.} B <-> A C. B ) $=
+        ( cvv wcel crpss wbr wpss wb brrpssg ax-mp ) BDEABFGABHICABJK $.
+        $( [2-Nov-2014] $)
+    $}
+
+    $( Every class is partially ordered by proper subsets. $)
+    porpss $p |- {C.} Po A $=
+      ( va vb vc crpss wpo cv wbr wn wa wi wral wpss vex brrpss anbi12i imbi12i
+      notbii pssirr psstr mpbir2an rgenw rgen2w df-po mpbir ) AEFBGZUFEHZIZUFCG
+      ZEHZUIDGZEHZJZUFUKEHZKZJZDALZCALBALUQBCAAUPDAUPUFUFMZIZUFUIMZUIUKMZJZUFUK
+      MZKZUHUSUOVDUGURUFUFBNORUMVBUNVCUJUTULVAUFUICNOUIUKDNZOPUFUKVEOQPUFSUFUIU
+      KTUAUBUCBCDAEUDUE $.
+      $( [2-Nov-2014] $)
+
+    $( Express strict ordering under proper subsets, i.e. the notion of a chain
+       of sets. $)
+    sorpss $p |- ( {C.} Or A <-> A. x e. A A. y e. A ( x C_ y \/
+        y C_ x ) ) $=
+      ( cv crpss wbr weq w3o wral wpo wss wor porpss biantrur wpss sspsstri vex
+      wa wo brrpss biid 3orbi123i bitr4i 2ralbii df-so 3bitr4ri ) ADZBDZEFZABGZ
+      UHUGEFZHZBCIACIZCEJZUMRUGUHKUHUGKSZBCIACICELUNUMCMNUOULABCCUOUGUHOZUJUHUG
+      OZHULUGUHPUIUPUJUJUKUQUGUHBQTUJUAUHUGAQTUBUCUDABCEUEUF $.
+      $( [2-Nov-2014] $)
+
+    $( Property of a chain of sets. $)
+    sorpssi $p |- ( ( {C.} Or A /\ ( B e. A /\ C e. A ) ) ->
+        ( B C_ C \/ C C_ B ) ) $=
+      ( crpss wor wcel wa wpss wceq w3o wss wbr solin cvv elex ad2antll brrpssg
+      wo wb syl biidd ad2antrl 3orbi123d mpbid sspsstri sylibr ) ADEZBAFZCAFZGG
+      ZBCHZBCIZCBHZJZBCKCBKRUJBCDLZULCBDLZJUNABCDMUJUOUKULULUPUMUJCNFZUOUKSUIUQ
+      UGUHCAOPBCQTUJULUAUJBNFZUPUMSUHURUGUIBAOUBCBQTUCUDBCUEUF $.
+      $( [2-Nov-2014] $)
+  $}
+
 
   $c Fin1a Fin2 Fin3 Fin4 Fin5 Fin6 Fin7 $.
 
@@ -8422,7 +8487,7 @@ $)
   cfin7 $a class Fin7 $.
 
   ${
-    $d x y z a b c d $.
+    $d x y z w a b c d $.
     $( A set is Ia-finite iff it is not the union of two I-infinite sets.  This
        is the second of eight definitions of finite set attributed to Tarski;
        see http://consequences.emich.edu/note-94.pdf .  I-finite is equivalent
@@ -8436,8 +8501,18 @@ $)
     $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
        contains a maximum element. $)
     df-fin2 $a |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
+      {C.} Or y ) -> E. z e. y A. w e. y -. z C. w ) } $.
+
+    $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
+       contains a maximum element. $)
+    df-fin2OLD $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) ->
-        E. z e. y A. w e. y -. z C. w ) } $.
+        E. z e. y A. w e. y -. z C. w ) } $=
+      ( cfin2 cv c0 wne crpss wor wa wpss wn wral wrex wi cpw cab wss wo sorpss
+      df-fin2 anbi2i imbi1i ralbii abbii eqtri ) EBFZGHZUHIJZKZCFZDFZLMDUHNCUHO
+      ZPZBAFQQZNZARUIULUMSUMULSTDUHNCUHNZKZUNPZBUPNZARABCDUBUQVAAUOUTBUPUKUSUNU
+      JURUICDUHUAUCUDUEUFUG $.
+      $( [2-Nov-2014] $)
 
     $( A set is IV-finite (Dedekind finite) iff it has no equinumerous proper
        subset. $)
@@ -8732,7 +8807,7 @@ $)
 
     $( Lemma for ~ dffin2-3 .  In a chain of sets, a maximal element is the
        union of the chain. $)
-    fin23lem4 $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
+    fin23lem4OLD $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
       ( E. u e. Y A. v e. Y -. u C. v <-> U. Y e. Y ) ) $=
       ( cv wss wo wral wpss wn wrex wcel wa weq sseq1 sseq2 orbi12d syl elssuni
       cuni w3a wi rcla42va ancoms anassrs sspss orel1 eqimss2 syl6com ax-1 jaoi
@@ -8748,7 +8823,7 @@ $)
 
     $( Lemma for ~ dffin2-4 .  In a chain of sets, a minimal element is the
        intersection of the chain. $)
-    fin23lem5 $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
+    fin23lem5OLD $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
       ( E. u e. Y A. v e. Y -. v C. u <-> |^| Y e. Y ) ) $=
       ( cv wss wo wral wpss wn wrex wcel intss1 wa weq sseq1 sseq2 orbi12d syl
       cint 3ad2ant2 wi rcla42va ancoms anassrs ax-1 sspss orel1 eqimss2 syl6com
@@ -8761,6 +8836,18 @@ $)
       WSWRWIWAWRUIVTVSUJUKULUMTUNUOCVTEUPUQURVRWGWCUSUTVAVBWFVSWEJZKZCEIZWDXACE
       WLWEVSGXAVSENWEVSVDTVEWCXBDWEEVTWEVFZWBXACEXCWAWTVTWEVSVGVHVIVJVKVL $.
       $( [31-Oct-2014] $)
+
+    $( Lemma for ~ dffin2-3 .  In a chain of sets, a maximal element is the
+       union of the chain. $)
+    fin23lem4 $p |- ( {C.} Or Y -> ( E. u e. Y A. v e. Y -. u C. v <->
+        U. Y e. Y ) ) $=
+      ? $.
+
+    $( Lemma for ~ dffin2-4 .  In a chain of sets, a minimal element is the
+       intersection of the chain. $)
+    fin23lem5 $p |- ( {C.} Or Y -> ( E. u e. Y A. v e. Y -. v C. u <->
+        |^| Y e. Y ) ) $=
+      ? $.
   $}
 
   ${
@@ -8769,7 +8856,7 @@ $)
 
     $( Lemma for ~ dffin2-2 .  The componentwise complement of a chain of sets
        is also a chain of sets. $)
-    fin23lem6 $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
+    fin23lem6OLD $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
       A. x e. { u e. ~P A | ( A \ u ) e. Y }
         A. y e. { u e. ~P A | ( A \ u ) e. Y } ( x C_ y \/ y C_ x ) ) $=
       ( vb vc vd cv wss wo wral cdif wcel wa weq wceq sseq1 difeq2 eleq1d elrab
@@ -8787,6 +8874,11 @@ $)
       LZWOVPLZMCDHIGGCHRWPYKWQYLWNVPWOTWNVPWOUJUKDIRYKVRYLVSWOVQVPUJWOVQVPTUKVJ
       XBWKSXDWMVHXAWIEJWJEJRWTWHGWSWGFUAUBVKXCWLAXBWKWFBXBWKVLVMVNVO $.
       $( [31-Oct-2014] $)
+
+    $( Lemma for ~ dffin2-2 .  The componentwise complement of a chain of sets
+       is also a chain of sets. $)
+    fin23lem6 $p |- ( {C.} Or Y -> {C.} Or { u e. ~P A | ( A \ u ) e. Y } ) $=
+      ? $.
   $}
 
   ${
@@ -8861,55 +8953,55 @@ $)
         E. z e. y A. w e. y -. w C. z ) } $=
       ( va vb vc cv c0 wne wss wral wa wpss wrex wi cpw wcel wceq cvv cfin2 cab
       wo wn w3a cdif crab simp2 ssrab2 vex pwex elpw2 mpbir a1i simp1 fin23lem7
-      simp3l syl2anc fin23lem6 adantl neeq1 raleq raleqbi1dv anbi12d rexeqbi1dv
-      3ad2ant3 imbi12d rcla4va imp syl22anc wsbc pssdifcom2 biimpd difexg ax-mp
-      wsb weq simpr simpl psseq12d sbc2ie 3imtr4g fin23lem11 sylc 3exp ralrimiv
-      pssdifcom1 impbii df-fin2 abeq2i pweq pweqd raleqdv elab 3bitr4i eqriv )
-      EUABHZIJZCHZDHZKWTWSKUCZDWQLZCWQLZMZWTWSNZUDZDWQLZCWQOZPZBAHZQZQZLZAUBZFH
-      ZIJZXADXOLZCXOLZMZWSWTNZUDZDXOLZCXOOZPZFEHZQZQZLZXIBYGLZYEUARYEXNRYHYIYHX
-      IBYGYHWQYGRZXDXHYHYJXDUEZYJYADYEGHUFZWQRZGYFUGZLZCYNOZXHYHYJXDUHZYKYNYGRZ
-      YHYNIJZXADYNLZCYNLZYPYRYKYRYNYFKYMGYFUIYNYFYEEUJZUKZULUMUNYHYJXDUOYKYJWRY
-      SYQYHYJWRXCUQEBGUPURXDYHUUAYJXCUUAWRCDCDGYEWQUSUTVFYRYHMYSUUAMZYPYDUUDYPP
-      FYNYGXOYNSZXSUUDYCYPUUEXPYSXRUUAXOYNIVAXQYTCXOYNXADXOYNVBVCVDYBYOCXOYNYAD
-      XOYNVBVEVGVHVIVJXTXEACDFEBGXJYEKZXOYEKMZXOYEXJUFZNZXJYEXOUFZNZXEDFVPCUUHV
-      KXTDUUJVKCAVPUUGUUIUUKXJXOYEVLVMXEUUICDUUHXOYETRZUUHTRUUBYEXJTVNVOZFUJWSU
-      UHSZDFVQZMWTXOWSUUHUUNUUOVRUUNUUOVSVTWAXTUUKCDXJUUJAUJZUULUUJTRUUBYEXOTVN
-      VOCAVQZWTUUJSZMWSXJWTUUJUUQUURVSUUQUURVRVTWAWBWCWDWEWFYIYDFYGYIXOYGRZXSYC
-      YIUUSXSUEZUUSXFDYLXORZGYFUGZLZCUVBOZYCYIUUSXSUHZUUTUVBYGRZYIUVBIJZXADUVBL
-      ZCUVBLZUVDUVFUUTUVFUVBYFKUVAGYFUIUVBYFUUCULUMUNYIUUSXSUOUUTUUSXPUVGUVEYIU
-      USXPXRUQEFGUPURXSYIUVIUUSXRUVIXPCDCDGYEXOUSUTVFUVFYIMUVGUVIMZUVDXIUVJUVDP
-      BUVBYGWQUVBSZXDUVJXHUVDUVKWRUVGXCUVIWQUVBIVAXBUVHCWQUVBXADWQUVBVBVCVDXGUV
-      CCWQUVBXFDWQUVBVBVEVGVHVIVJXEXTACDBEFGUUFWQYEKMZUUHWQNZYEWQUFZXJNZXTDBVPC
-      UUHVKXEDUVNVKCAVPUVLUVMUVOXJWQYEWGVMXTUVMCDUUHWQUUMBUJUUNDBVQZMWSUUHWTWQU
-      UNUVPVSUUNUVPVRVTWAXEUVOCDXJUVNUUPUULUVNTRUUBYEWQTVNVOUUQWTUVNSZMWTUVNWSX
-      JUUQUVQVRUUQUVQVSVTWAWBWCWDWEWFWHYHEUAEFCDWIWJXMYIAYEUUBAEVQZXIBXLYGUVRXK
-      YFXJYEWKWLWMWNWOWP $.
+      simp3l syl2anc fin23lem6OLD adantl 3ad2ant3 raleqbi1dv anbi12d rexeqbi1dv
+      neeq1 raleq imbi12d rcla4va imp syl22anc wsb wsbc pssdifcom2 biimpd ax-mp
+      difexg weq simpr simpl psseq12d sbc2ie 3imtr4g fin23lem11 sylc pssdifcom1
+      3exp ralrimiv impbii df-fin2OLD abeq2i pweq pweqd raleqdv 3bitr4i eqriv
+      elab ) EUABHZIJZCHZDHZKWTWSKUCZDWQLZCWQLZMZWTWSNZUDZDWQLZCWQOZPZBAHZQZQZL
+      ZAUBZFHZIJZXADXOLZCXOLZMZWSWTNZUDZDXOLZCXOOZPZFEHZQZQZLZXIBYGLZYEUARYEXNR
+      YHYIYHXIBYGYHWQYGRZXDXHYHYJXDUEZYJYADYEGHUFZWQRZGYFUGZLZCYNOZXHYHYJXDUHZY
+      KYNYGRZYHYNIJZXADYNLZCYNLZYPYRYKYRYNYFKYMGYFUIYNYFYEEUJZUKZULUMUNYHYJXDUO
+      YKYJWRYSYQYHYJWRXCUQEBGUPURXDYHUUAYJXCUUAWRCDCDGYEWQUSUTVAYRYHMYSUUAMZYPY
+      DUUDYPPFYNYGXOYNSZXSUUDYCYPUUEXPYSXRUUAXOYNIVEXQYTCXOYNXADXOYNVFVBVCYBYOC
+      XOYNYADXOYNVFVDVGVHVIVJXTXEACDFEBGXJYEKZXOYEKMZXOYEXJUFZNZXJYEXOUFZNZXEDF
+      VKCUUHVLXTDUUJVLCAVKUUGUUIUUKXJXOYEVMVNXEUUICDUUHXOYETRZUUHTRUUBYEXJTVPVO
+      ZFUJWSUUHSZDFVQZMWTXOWSUUHUUNUUOVRUUNUUOVSVTWAXTUUKCDXJUUJAUJZUULUUJTRUUB
+      YEXOTVPVOCAVQZWTUUJSZMWSXJWTUUJUUQUURVSUUQUURVRVTWAWBWCWDWFWGYIYDFYGYIXOY
+      GRZXSYCYIUUSXSUEZUUSXFDYLXORZGYFUGZLZCUVBOZYCYIUUSXSUHZUUTUVBYGRZYIUVBIJZ
+      XADUVBLZCUVBLZUVDUVFUUTUVFUVBYFKUVAGYFUIUVBYFUUCULUMUNYIUUSXSUOUUTUUSXPUV
+      GUVEYIUUSXPXRUQEFGUPURXSYIUVIUUSXRUVIXPCDCDGYEXOUSUTVAUVFYIMUVGUVIMZUVDXI
+      UVJUVDPBUVBYGWQUVBSZXDUVJXHUVDUVKWRUVGXCUVIWQUVBIVEXBUVHCWQUVBXADWQUVBVFV
+      BVCXGUVCCWQUVBXFDWQUVBVFVDVGVHVIVJXEXTACDBEFGUUFWQYEKMZUUHWQNZYEWQUFZXJNZ
+      XTDBVKCUUHVLXEDUVNVLCAVKUVLUVMUVOXJWQYEWEVNXTUVMCDUUHWQUUMBUJUUNDBVQZMWSU
+      UHWTWQUUNUVPVSUUNUVPVRVTWAXEUVOCDXJUVNUUPUULUVNTRUUBYEWQTVPVOUUQWTUVNSZMW
+      TUVNWSXJUUQUVQVRUUQUVQVSVTWAWBWCWDWFWGWHYHEUAEFCDWIWJXMYIAYEUUBAEVQZXIBXL
+      YGUVRXKYFXJYEWKWLWMWPWNWO $.
       $( [31-Oct-2014] $)
 
     $( ` Fin2 ` sets contain unions for all nonempty chains. $)
     dffin2-3 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) -> U. y e. y ) } $=
       ( va vb cfin2 cv c0 wne wss wo wral wcel wi cpw weq sseq1 sseq2 orbi12d
-      wa cuni cab wpss wn wrex cbvral2v fin23lem4 adantl pm5.74i ralbii df-fin2
-      wb sylbi abeq2i vex pweq pweqd raleqdv elab 3bitr4i eqriv ) EGBHZIJZCHZDH
-      ZKZVFVEKZLZDVCMCVCMZUAZVCUBVCNZOZBAHZPZPZMZAUCZVKVEVFUDUEDVCMCVCUFZOZBEHZ
-      PZPZMZVMBWCMZWAGNWAVRNVTVMBWCVKVSVLVJVSVLUMZVDVJWAFHZKZWGWAKZLZFVCMEVCMWF
-      VIWJWAVFKZVFWAKZLCDEFVCVCCEQVGWKVHWLVEWAVFRVEWAVFSTDFQWKWHWLWIVFWGWASVFWG
-      WARTUGEFDCVCUHUNUIUJUKWDEGEBCDULUOVQWEAWAEUPAEQZVMBVPWCWMVOWBVNWAUQURUSUT
-      VAVB $.
+      wa cuni wpss wn wrex wb cbvral2v fin23lem4OLD sylbi adantl pm5.74i ralbii
+      cab df-fin2OLD abeq2i vex pweq pweqd raleqdv elab 3bitr4i eqriv ) EGBHZIJ
+      ZCHZDHZKZVFVEKZLZDVCMCVCMZUAZVCUBVCNZOZBAHZPZPZMZAUMZVKVEVFUCUDDVCMCVCUEZ
+      OZBEHZPZPZMZVMBWCMZWAGNWAVRNVTVMBWCVKVSVLVJVSVLUFZVDVJWAFHZKZWGWAKZLZFVCM
+      EVCMWFVIWJWAVFKZVFWAKZLCDEFVCVCCEQVGWKVHWLVEWAVFRVEWAVFSTDFQWKWHWLWIVFWGW
+      ASVFWGWARTUGEFDCVCUHUIUJUKULWDEGEBCDUNUOVQWEAWAEUPAEQZVMBVPWCWMVOWBVNWAUQ
+      URUSUTVAVB $.
       $( [1-Nov-2014] $)
 
     $( ` Fin2 ` sets contain intersections for all nonempty chains. $)
     dffin2-4 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) -> |^| y e. y ) } $=
       ( va vb cfin2 cv c0 wne wss wo wral wcel wi cpw weq sseq1 sseq2 orbi12d
-      wa cint cab wpss wn wrex cbvral2v fin23lem5 sylbi adantl pm5.74i dffin2-2
-      wb ralbii abeq2i vex pweq pweqd raleqdv elab 3bitr4i eqriv ) EGBHZIJZCHZD
-      HZKZVFVEKZLZDVCMCVCMZUAZVCUBVCNZOZBAHZPZPZMZAUCZVKVFVEUDUEDVCMCVCUFZOZBEH
-      ZPZPZMZVMBWCMZWAGNWAVRNVTVMBWCVKVSVLVJVSVLUMZVDVJWAFHZKZWGWAKZLZFVCMEVCMW
-      FVIWJWAVFKZVFWAKZLCDEFVCVCCEQVGWKVHWLVEWAVFRVEWAVFSTDFQWKWHWLWIVFWGWASVFW
-      GWARTUGEFDCVCUHUIUJUKUNWDEGEBCDULUOVQWEAWAEUPAEQZVMBVPWCWMVOWBVNWAUQURUSU
-      TVAVB $.
+      wa cint wpss wn wrex wb cbvral2v fin23lem5OLD sylbi adantl pm5.74i ralbii
+      cab dffin2-2 abeq2i vex pweq pweqd raleqdv elab 3bitr4i eqriv ) EGBHZIJZC
+      HZDHZKZVFVEKZLZDVCMCVCMZUAZVCUBVCNZOZBAHZPZPZMZAUMZVKVFVEUCUDDVCMCVCUEZOZ
+      BEHZPZPZMZVMBWCMZWAGNWAVRNVTVMBWCVKVSVLVJVSVLUFZVDVJWAFHZKZWGWAKZLZFVCMEV
+      CMWFVIWJWAVFKZVFWAKZLCDEFVCVCCEQVGWKVHWLVEWAVFRVEWAVFSTDFQWKWHWLWIVFWGWAS
+      VFWGWARTUGEFDCVCUHUIUJUKULWDEGEBCDUNUOVQWEAWAEUPAEQZVMBVPWCWMVOWBVNWAUQUR
+      USUTVAVB $.
       $( [1-Nov-2014] $)
 
   $}
