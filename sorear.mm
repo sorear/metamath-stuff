@@ -9677,42 +9677,126 @@ $)
       NZVLOZUHKGMKGUPWCXFWAWBXEVLUQVGVHWHTWJTWKTVJ $.
       $( [2-Nov-2014] $)
 
-    $d ph j a b c $.  $d A a b c $.  $d B a b c $.  $d Y a b c $.  $d Z a b c $.
-
+    $d ph j a b c $.  $d A a b c j $.  $d B a b c j $.  $d Y a b c j $.
     fin23lem.f $e |- ( ph -> h : om -1-1-> _V ) $.
     fin23lem.g $e |- ( ph -> U. ran h C_ g ) $.
     fin23lem.h $e |- ( ph -> A. j ( ( j : om -1-1-> _V /\ U. ran j C_ g ) ->
         ( ( i ` j ) : om -1-1-> _V /\ U. ran ( i ` j ) C. U. ran j ) ) ) $.
-    fin23lem.i $e |- Y = ( rec ( j , h ) |` om ) $.
-
-    $( Lemma for ~ fin23 .  Establish induction invariants on ` Y ` which parameterizes our contradictory chain of subsets.  In this section, ` h ` is the hypothetically assumed family of subsets, ` g ` is the ground set, and ` i ` is the induction function constructed in the previous section. $)
+    fin23lem.i $e |- Y = ( rec ( i , h ) |` om ) $.
+    $( Lemma for ~ fin23 .  Establish induction invariants on ` Y ` which
+       parameterizes our contradictory chain of subsets.  In this section,
+       ` h ` is the hypothetically assumed family of subsets, ` g ` is the
+       ground set, and ` i ` is the induction function constructed in the
+       previous section. $)
     fin23lem34 $p |- ( ( ph /\ A e. om ) -> ( ( Y ` A ) : om -1-1-> _V /\
         U. ran ( Y ` A ) C_ g ) ) $=
-      ? $.
+      ( com cvv cfv wf1 crn cuni wss wa wceq va vb wcel cv wi c0 wb fveq2 f1eq1
+      csuc syl rneqd unieqd sseq1d anbi12d imbi2d weq crdg cres fveq1i vex fr0g
+      ax-mp eqtri rneqi unieqi anbi12i sylanbrc w3a wpss wal fvex rneq psseq12d
+      sseq1i imbi12d cla4v imp pssss sylan expcom anim2d ad2antll 3adant1 frsuc
+      sstr mpd fveq2i 3eqtr4g 3ad2ant1 mpbird 3exp a2d finds impcom ) BLUCALMBG
+      NZOZWPPZQZCUDZRZSZALMUAUDZGNZOZXDPZQZWTRZSZUEALMUFGNZOZXJPZQZWTRZSZUEALMU
+      BUDZGNZOZXQPZQZWTRZSZUEALMXPUJZGNZOZYDPZQZWTRZSZUEAXBUEUAUBBXCUFTZXIXOAYJ
+      XEXKXHXNYJXDXJTXEXKUGXCUFGUHZLMXDXJUIUKYJXGXMWTYJXFXLYJXDXJYKULUMUNUOUPUA
+      UBUQZXIYBAYLXEXRXHYAYLXDXQTXEXRUGXCXPGUHZLMXDXQUIUKYLXGXTWTYLXFXSYLXDXQYM
+      ULUMUNUOUPXCYCTZXIYIAYNXEYEXHYHYNXDYDTXEYEUGXCYCGUHZLMXDYDUIUKYNXGYGWTYNX
+      FYFYNXDYDYOULUMUNUOUPXCBTZXIXBAYPXEWQXHXAYPXDWPTXEWQUGXCBGUHZLMXDWPUIUKYP
+      XGWSWTYPXFWRYPXDWPYQULUMUNUOUPALMDUDZOZYRPZQZWTRZXOHIXKYSXNUUBXJYRTXKYSUG
+      XJUFEUDZYRURLUSZNZYRUFGUUDKUTYRMUCUUEYRTDVAYRMUUCVBVCVDZLMXJYRUIVCXMUUAWT
+      XLYTXJYRUUFVEVFVOVGVHXPLUCZAYBYIUUGAYBYIUUGAYBVIYILMXQUUCNZOZUUHPZQZWTRZS
+      ZAYBUUMUUGAYBSUUIUUKXTVJZSZUUMAYBUUOALMFUDZOZUUPPZQZWTRZSZLMUUPUUCNZOZUVB
+      PZQZUUSVJZSZUEZFVKYBUUOUEZJUVHUVIFXQXPGVLUUPXQTZUVAYBUVGUUOUVJUUQXRUUTYAL
+      MUUPXQUIUVJUUSXTWTUVJUURXSUUPXQVMUMZUNUOUVJUVCUUIUVFUUNUVJUVBUUHTUVCUUIUG
+      UUPXQUUCUHZLMUVBUUHUIUKUVJUVEUUKUUSXTUVJUVDUUJUVJUVBUUHUVLULUMUVKVNUOVPVQ
+      UKVRYAUUOUUMUEAXRYAUUNUULUUIUUNYAUULUUNUUKXTRYAUULUUKXTVSUUKXTWTWFVTWAWBW
+      CWGWDUUGAYIUUMUGZYBUUGYDUUHTZUVMUUGYCUUDNXPUUDNZUUCNYDUUHYRXPUUCWEYCGUUDK
+      UTXQUVOUUCXPGUUDKUTWHWIUVNYEUUIYHUULLMYDUUHUIUVNYGUUKWTUVNYFUUJYDUUHVMUMU
+      NUOUKWJWKWLWMWNWO $.
+      $( [2-Nov-2014] $)
 
     $( Lemma for ~ fin23 .  Strict order property of ` Y ` . $)
     fin23lem35 $p |- ( ( ph /\ A e. om ) -> U. ran ( Y ` suc A ) C.
         U. ran ( Y ` A ) ) $=
-      ? $.
+      ( com wa cfv crn cuni wpss cv cvv wf1 wcel csuc wss fin23lem34 fvex f1eq1
+      wi wal wceq rneq unieqd sseq1d anbi12d fveq2 rneqd psseq12d imbi12d cla4v
+      wb syl adantr simprd crdg cres frsuc adantl fveq1i fveq2i 3eqtr4g psseq1d
+      mpd mpbird ) ABLUAZMZBUBZGNZOZPZBGNZOZPZQVSERZNZOZPZWAQZVNLSWCTZWFVNLSVST
+      ZWACRZUCZMZWGWFMZABCDEFGHIJKUDAWKWLUGZVMALSFRZTZWNOZPZWIUCZMZLSWNWBNZTZWT
+      OZPZWQQZMZUGZFUHWMJXFWMFVSBGUEWNVSUIZWSWKXEWLXGWOWHWRWJLSWNVSUFXGWQWAWIXG
+      WPVTWNVSUJUKZULUMXGXAWGXDWFXGWTWCUIXAWGUSWNVSWBUNZLSWTWCUFUTXGXCWEWQWAXGX
+      BWDXGWTWCXIUOUKXHUPUMUQURUTVAVKVBVNVRWEWAVNVQWDVNVPWCVNVOWBDRZVCLVDZNZBXK
+      NZWBNZVPWCVMXLXNUIAXJBWBVEVFVOGXKKVGVSXMWBBGXKKVGVHVIUOUKVJVL $.
+      $( [2-Nov-2014] $)
 
     $( Lemma for ~ fin23 .  Weak order property of ` Y ` . $)
     fin23lem36 $p |- ( ( ( A e. om /\ B e. om ) /\ ( B C_ A /\ ph ) ) ->
         U. ran ( Y ` A ) C_ U. ran ( Y ` B ) ) $=
-      ? $.
+      ( wa wss cfv crn cuni wi fveq2 rneqd va vb com wcel cv csuc unieqd sseq1d
+      wceq imbi2d weq ssid a1i12 wpss simprr simpll fin23lem35 syl2anc syl sstr
+      pssss ex expr a2d findsg impr ) BUCUDCUCUDZMCBNABHOZPZQZCHOZPZQZNZAUAUEZH
+      OZPZQZVMNZRAVMVMNZRAUBUEZHOZPZQZVMNZRAWAUFZHOZPZQZVMNZRAVNRUAUBBCVOCUIZVS
+      VTAWKVRVMVMWKVQVLWKVPVKVOCHSTUGUHUJUAUBUKZVSWEAWLVRWDVMWLVQWCWLVPWBVOWAHS
+      TUGUHUJVOWFUIZVSWJAWMVRWIVMWMVQWHWMVPWGVOWFHSTUGUHUJVOBUIZVSVNAWNVRVJVMWN
+      VQVIWNVPVHVOBHSTUGUHUJVGAVTVMULUMWAUCUDZVGMZCWANZMAWEWJWPWQAWEWJRZWPWQAMZ
+      MZWIWDNZWRWTWIWDUNZXAWTAWOXBWPWQAUOWOVGWSUPAWADEFGHIJKLUQURWIWDVAUSXAWEWJ
+      WIWDVMUTVBUSVCVDVEVF $.
+      $( [2-Nov-2014] $)
+
+    $d Y a b c d $.  $d ph a b c d $.
 
     $( Lemma for ~ fin23 .  The contradictory chain is a chain. $)
     fin23lem37 $p |- ( ph -> {C.} Or { a | E. b e. om a =
         U. ran ( Y ` b ) } ) $=
-      ? $.
+      ( vc vd cv wss wo wceq com wa cfv crn cuni wrex cab wral wor wcel vex weq
+      crpss eqeq1 rexbidv elab fveq2 rneqd unieqd cbvrexv bitri anbi12i wi word
+      eqeq2d nnord ordtri2or2 syl2anr simplrl simplrr simpr fin23lem36 syl22anc
+      adantl simpll ex orim12d mpd sseq2 sseq1 orbi12d syl5ibrcom expr rexlimdv
+      imbi2d rexlimdva imp3a syl5bi ralrimivv sorpss sylibr ) AMOZNOZPZWKWJPZQZ
+      NGOZHOZFUAZUBZUCZRZHSUDZGUEZUFMXBUFXBUKUGAWNMNXBXBWJXBUHZWKXBUHZTWJWOFUAZ
+      UBZUCZRZGSUDZWKWSRZHSUDZTAWNXCXIXDXKXCWJWSRZHSUDZXIXAXMGWJMUIGMUJWTXLHSWO
+      WJWSULUMUNXLXHHGSHGUJZWSXGWJXNWRXFXNWQXEWPWOFUOUPUQVCURUSXAXKGWKNUIGNUJWT
+      XJHSWOWKWSULUMUNUTAXIXKWNAXHXKWNVAZGSAWOSUHZTZXOXHXKXGWKPZWKXGPZQZVAXQXJX
+      THSAXPWPSUHZXJXTVAAXPYATZTZXTXJXGWSPZWSXGPZQZYCWPWOPZWOWPPZQZYFYBYIAYAWPV
+      BWOVBYIXPWPVDWOVDWPWOVEVFVLYCYGYDYHYEYCYGYDYCYGTXPYAYGAYDAXPYAYGVGAXPYAYG
+      VHYCYGVIAYBYGVMAWOWPBCDEFIJKLVJVKVNYCYHYEYCYHTYAXPYHAYEAXPYAYHVHAXPYAYHVG
+      YCYHVIAYBYHVMAWPWOBCDEFIJKLVJVKVNVOVPXJXRYDXSYEWKWSXGVQWKWSXGVRVSVTWAWBXH
+      WNXTXKXHWLXRWMXSWJXGWKVRWJXGWKVQVSWCVTWDWEWFWGMNXBWHWI $.
+      $( [2-Nov-2014] $)
 
     $( Lemma for ~ fin23 .  The contradictory chain has no minimum. $)
     fin23lem38 $p |- ( ph -> -. |^| { a | E. b e. om a =
           U. ran ( Y ` b ) } e. { a | E. b e. om a = U. ran ( Y ` b ) } ) $=
-      ? $.
+      ( vd vc cv cfv wceq com wrex wcel crn cuni cab cint cvv wa wpss wn peano2
+      csuc eqid fveq2 rneqd unieqd eqeq2d rcla4ev mpan2 fvex rnex uniex rexbidv
+      wss eqeq1 elab sylibr syl adantl intss1 fin23lem35 sspsstr syl2anc dfpss2
+      simprbi nrexdv intnand weq cbvrexv syl6bb cbvabv elab4g sylnibr ) AGOZHOZ
+      FPZUAZUBZQZHRSZGUCZUDZUETZWJMOZFPZUAZUBZQZMRSZUFWJWITAWQWKAWPMRAWLRTZUFZW
+      JWOUGZWPUHZWSWJWLUJZFPZUAZUBZVBZXEWOUGWTWSXEWITZXFWRXGAWRXBRTZXGWLUIXHXEW
+      FQZHRSZXGXHXEXEQZXJXEUKXIXKHXBRWCXBQZWFXEXEXLWEXDXLWDXCWCXBFULUMUNUOUPUQW
+      HXJGXEXDXCXBFURUSUTWBXEQWGXIHRWBXEWFVCVAVDVEVFVGXEWIVHVFAWLBCDEFIJKLVIWJX
+      EWOVJVKWTWJWOVBXAWJWOVLVMVFVNVONOZWOQZMRSZWQNWJWIXMWJQXNWPMRXMWJWOVCVAWHX
+      OGNGNVPZWHXMWFQZHRSXOXPWGXQHRWBXMWFVCVAXQXNHMRHMVPZWFWOXMXRWEWNXRWDWMWCWL
+      FULUMUNUOVQVRVSVTWA $.
+      $( [2-Nov-2014] $)
 
-    $( Lemma for ~ fin23 .  Thus we have that ` g ` could not have been ` Fin2 ` after all. $)
+    $( Lemma for ~ fin23 .  Thus we have that ` g ` could not have been
+       ` Fin2 ` after all. $)
     fin23lem39 $p |- ( ph -> -. g e. Fin2 ) $=
-      ? $.
+      ( vb vc va cv wcel wceq com wrex c0 wa cfin2 cfv crn cuni cint fin23lem38
+      cab wne crpss wor wi cpw wral dffin2-4 abeq2i wss fin23lem34 simprd sseq1
+      cvv wf1 syl5ibrcom rexlimdva vex eqeq1 rexbidv elpw2 3imtr4g ssrdv sylibr
+      weq elab pwex peano1 eqid fveq2 rneqd unieqd eqeq2d mp2an fvex rnex uniex
+      rcla4ev mpbir ne0i ax-mp a1i fin23lem37 jca32 neeq1 soeq2 anbi12d eleq12d
+      inteq id imbi12d rcla4cv imp3a syl5com syl5bi mtod ) ABNZUAOZKNZLNZFUBZUC
+      ZUDZPZLQRZKUGZUEZXLOZABCDEFKLGHIJUFXDMNZSUHZXOUIUJZTZXOUEZXOOZUKZMXCULZUL
+      ZUMZAXNYDBUABMUNUOAXLYCOZXLSUHZXLUIUJZTZTYDXNAYEYFYGAXLYBUPYEAMXLYBAXOXIP
+      ZLQRZXOXCUPZXOXLOXOYBOAYIYKLQAXFQOTZYKYIXIXCUPZYLQUTXGVAYMAXFBCDEFGHIJUQU
+      RXOXIXCUSVBVCXKYJKXOMVDKMVKXJYILQXEXOXIVEVFVLXOXCBVDZVGVHVIXLYBXCYNVMVGVJ
+      YFASFUBZUCZUDZXLOZYFYRYQXIPZLQRZSQOYQYQPZYTVNYQVOYSUUALSQXFSPZXIYQYQUUBXH
+      YPUUBXGYOXFSFVPVQVRVSWDVTXKYTKYQYPYOSFWAWBWCXEYQPXJYSLQXEYQXIVEVFVLWEXLYQ
+      WFWGWHABCDEFKLGHIJWIWJYDYEYHXNYAYHXNUKMXLYCXOXLPZXRYHXTXNUUCXPYFXQYGXOXLS
+      WKXOXLUIWLWMUUCXSXMXOXLXOXLWOUUCWPWNWQWRWSWTXAXB $.
+      $( [2-Nov-2014] $)
   $}
 
   ${
@@ -9743,7 +9827,20 @@ $)
 
     $( Every II-finite set is III-finite. $)
     fin23 $p |- Fin2 C_ Fin3 $=
-      (  ) ? $.
+      ( va vb vd vc ve cfin2 cfin3 cv wcel cfin4 com cdom wbr wn wf1 wa cvv crn
+      cuni wss cpw wex vex pwex cfv wpss wi wal fin23lem33 adantl crdg cres ssv
+      brdom f1ss mpan2 ad2antrr wf f1f frn uniss 3syl unipw syl6sseq f1eq1 rneq
+      weq unieqd sseq1d anbi12d wceq wb fveq2 syl rneqd psseq12d imbi12d cbvalv
+      biimpi fin23lem39 ex exlimdv mpd pm2.01d exlimiv sylbi con2i breq2 notbid
+      eqid dffin4-2 elab2 sylibr df-fin3 abeq2i ssriv ) AFGAHZFIZWQUAZJIZWQGIWR
+      KWSLMZNZWTXAWRXAKWSBHZOZBUBWRNZKWSBWQAUCUDZUNXDXEBXDWRXDWRXEXDWRPZKQCHZOZ
+      XHRZSZWQTZPZKQXHDHZUEZOZXORZSZXKUFZPZUGZCUHZDUBZXEWRYCXDWQDCUIUJXGYBXEDXG
+      YBXEXGYBPABDEXNXCUKKULZXDKQXCOZWRYBXDWSQTYEWSUMKWSQXCUOUPUQXDXCRZSZWQTWRY
+      BXDYGWSSZWQXDKWSXCURYFWSTYGYHTKWSXCUSKWSXCUTYFWSVAVBWQVCVDUQYBKQEHZOZYIRZ
+      SZWQTZPZKQYIXNUEZOZYORZSZYLUFZPZUGZEUHZXGYBUUBYAUUACECEVGZXMYNXTYTUUCXIYJ
+      XLYMKQXHYIVEUUCXKYLWQUUCXJYKXHYIVFVHZVIVJUUCXPYPXSYSUUCXOYOVKXPYPVLXHYIXN
+      VMZKQXOYOVEVNUUCXRYRXKYLUUCXQYQUUCXOYOUUEVOVHUUDVPVJVQVRVSUJYDWJVTWAWBWCW
+      AWDWEWFWGKXCLMZNXBBWSJXFXCWSVKUUFXAXCWSKLWHWIBWKWLWMWTAGAWNWOWMWP $.
       $( [2-Nov-2014] $)
 
     $( Every III-finite set is IV-finite. $)
