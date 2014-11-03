@@ -8503,17 +8503,6 @@ $)
     df-fin2 $a |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       {C.} Or y ) -> E. z e. y A. w e. y -. z C. w ) } $.
 
-    $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
-       contains a maximum element. $)
-    df-fin2OLD $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
-      A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) ->
-        E. z e. y A. w e. y -. z C. w ) } $=
-      ( cfin2 cv c0 wne crpss wor wa wpss wn wral wrex wi cpw cab wss wo sorpss
-      df-fin2 anbi2i imbi1i ralbii abbii eqtri ) EBFZGHZUHIJZKZCFZDFZLMDUHNCUHO
-      ZPZBAFQQZNZARUIULUMSUMULSTDUHNCUHNZKZUNPZBUPNZARABCDUBUQVAAUOUTBUPUKUSUNU
-      JURUICDUHUAUCUDUEUFUG $.
-      $( [2-Nov-2014] $)
-
     $( A set is IV-finite (Dedekind finite) iff it has no equinumerous proper
        subset. $)
     df-fin4 $a |- Fin4 = { x | -. E. y ( y C. x /\ y ~~ x ) } $.
@@ -8807,47 +8796,33 @@ $)
 
     $( Lemma for ~ dffin2-3 .  In a chain of sets, a maximal element is the
        union of the chain. $)
-    fin23lem4OLD $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
-      ( E. u e. Y A. v e. Y -. u C. v <-> U. Y e. Y ) ) $=
-      ( cv wss wo wral wpss wn wrex wcel wa weq sseq1 sseq2 orbi12d syl elssuni
-      cuni w3a wi rcla42va ancoms anassrs sspss orel1 eqimss2 syl6com ax-1 jaoi
-      sylbi ralimdva 3impia unissb sylibr 3ad2ant2 eqssd simp2 eqeltrd rexlimdv
-      3exp ssnpss rgen wceq psseq1 notbid ralbidv rcla4ev mpan2 impbid1 ) AFZBF
-      ZGZVNVMGZHZBEIAEIZDFZCFZJZKZCEIZDELZEUAZEMZVRWCWFDEVRVSEMZWCWFVRWGWCUBZWE
-      VSEWHWEVSWHVTVSGZCEIZWEVSGVRWGWCWJVRWGNZWBWICEWKVTEMZNVSVTGZWIHZWBWIUCZVR
-      WGWLWNWGWLNVRWNVQWNVSVNGZVNVSGZHABVSVTEEADOVOWPVPWQVMVSVNPVMVSVNQRBCOWPWM
-      WQWIVNVTVSQVNVTVSPRUDUEUFWMWOWIWMWADCOZHZWOVSVTUGWBWSWRWIWAWRUHVTVSUIUJUM
-      WIWBUKULSUNUOCEVSUPUQWGVRVSWEGWCVSETURUSVRWGWCUTVAVCVBWFWEVTJZKZCEIZWDXAC
-      EWLVTWEGXAVTETVTWEVDSVEWCXBDWEEVSWEVFZWBXACEXCWAWTVSWEVTVGVHVIVJVKVL $.
-      $( [31-Oct-2014] $)
-
-    $( Lemma for ~ dffin2-4 .  In a chain of sets, a minimal element is the
-       intersection of the chain. $)
-    fin23lem5OLD $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
-      ( E. u e. Y A. v e. Y -. v C. u <-> |^| Y e. Y ) ) $=
-      ( cv wss wo wral wpss wn wrex wcel intss1 wa weq sseq1 sseq2 orbi12d syl
-      cint 3ad2ant2 wi rcla42va ancoms anassrs ax-1 sspss orel1 eqimss2 syl6com
-      sylbi jaoi ralimdva 3impia ssint sylibr eqssd simp2 eqeltrd 3exp rexlimdv
-      w3a ssnpss rgen wceq psseq2 notbid ralbidv rcla4ev mpan2 impbid1 ) AFZBFZ
-      GZVNVMGZHZBEIAEIZCFZDFZJZKZCEIZDELZEUAZEMZVRWCWFDEVRVTEMZWCWFVRWGWCVCZWEV
-      TEWHWEVTWGVRWEVTGWCVTENUBWHVTVSGZCEIZVTWEGVRWGWCWJVRWGOZWBWICEWKVSEMZOWIV
-      SVTGZHZWBWIUCZVRWGWLWNWGWLOVRWNVQWNVTVNGZVNVTGZHABVTVSEEADPVOWPVPWQVMVTVN
-      QVMVTVNRSBCPWPWIWQWMVNVSVTRVNVSVTQSUDUEUFWIWOWMWIWBUGWMWACDPZHZWOVSVTUHWB
-      WSWRWIWAWRUIVTVSUJUKULUMTUNUOCVTEUPUQURVRWGWCUSUTVAVBWFVSWEJZKZCEIZWDXACE
-      WLWEVSGXAVSENWEVSVDTVEWCXBDWEEVTWEVFZWBXACEXCWAWTVTWEVSVGVHVIVJVKVL $.
-      $( [31-Oct-2014] $)
-
-    $( Lemma for ~ dffin2-3 .  In a chain of sets, a maximal element is the
-       union of the chain. $)
     fin23lem4 $p |- ( {C.} Or Y -> ( E. u e. Y A. v e. Y -. u C. v <->
         U. Y e. Y ) ) $=
-      ? $.
+      ( crpss wor cv wpss wn wral wrex cuni wcel w3a wss wa sorpssi syl elssuni
+      wo wi anassrs sspss orel1 eqimss2 syl6com sylbi ax-1 jaoi ralimdva 3impia
+      unissb sylibr 3ad2ant2 eqssd simp2 eqeltrd 3exp rexlimdv ssnpss rgen wceq
+      weq psseq1 notbid ralbidv rcla4ev mpan2 impbid1 ) CDEZBFZAFZGZHZACIZBCJZC
+      KZCLZVIVNVQBCVIVJCLZVNVQVIVRVNMZVPVJCVSVPVJVSVKVJNZACIZVPVJNVIVRVNWAVIVRO
+      ZVMVTACWBVKCLZOVJVKNZVTSZVMVTTZVIVRWCWECVJVKPUAWDWFVTWDVLBAVBZSZWFVJVKUBV
+      MWHWGVTVLWGUCVKVJUDUEUFVTVMUGUHQUIUJACVJUKULVRVIVJVPNVNVJCRUMUNVIVRVNUOUP
+      UQURVQVPVKGZHZACIZVOWJACWCVKVPNWJVKCRVKVPUSQUTVNWKBVPCVJVPVAZVMWJACWLVLWI
+      VJVPVKVCVDVEVFVGVH $.
+      $( [2-Nov-2014] $)
 
     $( Lemma for ~ dffin2-4 .  In a chain of sets, a minimal element is the
        intersection of the chain. $)
     fin23lem5 $p |- ( {C.} Or Y -> ( E. u e. Y A. v e. Y -. v C. u <->
         |^| Y e. Y ) ) $=
-      ? $.
+      ( crpss wor cv wpss wn wral wrex cint wcel w3a wss intss1 3ad2ant2 wa syl
+      wo wi sorpssi anassrs ax-1 weq sspss orel1 eqimss2 syl6com sylbi ralimdva
+      jaoi 3impia ssint sylibr eqssd simp2 eqeltrd 3exp ssnpss rgen wceq psseq2
+      rexlimdv notbid ralbidv rcla4ev mpan2 impbid1 ) CDEZAFZBFZGZHZACIZBCJZCKZ
+      CLZVIVNVQBCVIVKCLZVNVQVIVRVNMZVPVKCVSVPVKVRVIVPVKNVNVKCOPVSVKVJNZACIZVKVP
+      NVIVRVNWAVIVRQZVMVTACWBVJCLZQVTVJVKNZSZVMVTTZVIVRWCWECVKVJUAUBVTWFWDVTVMU
+      CWDVLABUDZSZWFVJVKUEVMWHWGVTVLWGUFVKVJUGUHUIUKRUJULAVKCUMUNUOVIVRVNUPUQUR
+      VCVQVJVPGZHZACIZVOWJACWCVPVJNWJVJCOVPVJUSRUTVNWKBVPCVKVPVAZVMWJACWLVLWIVK
+      VPVJVBVDVEVFVGVH $.
+      $( [2-Nov-2014] $)
   $}
 
   ${
@@ -8856,29 +8831,18 @@ $)
 
     $( Lemma for ~ dffin2-2 .  The componentwise complement of a chain of sets
        is also a chain of sets. $)
-    fin23lem6OLD $p |- ( A. z e. Y A. w e. Y ( z C_ w \/ w C_ z ) ->
-      A. x e. { u e. ~P A | ( A \ u ) e. Y }
-        A. y e. { u e. ~P A | ( A \ u ) e. Y } ( x C_ y \/ y C_ x ) ) $=
-      ( vb vc vd cv wss wo wral cdif wcel wa weq wceq sseq1 difeq2 eleq1d elrab
-      cpw crab an4 biimpi syl2anb wi sseq2 orbi12d rcla42v vex elpw dfss4 bitri
-      sscon sseq12 syl5ib ancoms orim12d com12 orcoms syl6 com3l syl5 ralrimivv
-      wb imp3a cbvral2v cbvrabv raleq raleqbi1dv ax-mp 3imtr4i ) HKZIKZLZVQVPLZ
-      MZIGNHGNZAKZBKZLZWCWBLZMZBFJKZOZGPZJFUDZUEZNZAWKNZCKZDKZLZWOWNLZMZDGNCGNW
-      FBFEKZOZGPZEWJUEZNZAXBNZWAWFABWKWKWBWKPZWCWKPZQWBWJPZWCWJPZQZFWBOZGPZFWCO
-      ZGPZQZQZWAWFXEXGXKQZXHXMQZXOXFWIXKJWBWJJARWHXJGWGWBFUAUBUCWIXMJWCWJJBRWHX
-      LGWGWCFUAUBUCXPXQQXOXGXKXHXMUFUGUHWAXIXNWFXNWAXIWFXNWAXJXLLZXLXJLZMZXIWFU
-      IZVTXTXJVQLZVQXJLZMHIXJXLGGVPXJSVRYBVSYCVPXJVQTVPXJVQUJUKVQXLSYBXRYCXSVQX
-      LXJUJVQXLXJTUKULXSXRYAXIXSXRMZWFXGFXJOZWBSZFXLOZWCSZYDWFUIXHXGWBFLYFWBFAU
-      MUNWBFUOUPXHWCFLYHWCFBUMUNWCFUOUPYFYHQZXSWDXRWEXSYEYGLYIWDXLXJFUQYEWBYGWC
-      URUSXRYGYELZYIWEXJXLFUQYHYFYJWEVHYGWCYEWBURUTUSVAUHVBVCVDVEVIVFVGWRVTVPWO
-      LZWOVPLZMCDHIGGCHRWPYKWQYLWNVPWOTWNVPWOUJUKDIRYKVRYLVSWOVQVPUJWOVQVPTUKVJ
-      XBWKSXDWMVHXAWIEJWJEJRWTWHGWSWGFUAUBVKXCWLAXBWKWFBXBWKVLVMVNVO $.
-      $( [31-Oct-2014] $)
-
-    $( Lemma for ~ dffin2-2 .  The componentwise complement of a chain of sets
-       is also a chain of sets. $)
     fin23lem6 $p |- ( {C.} Or Y -> {C.} Or { u e. ~P A | ( A \ u ) e. Y } ) $=
-      ? $.
+      ( vx vy crpss wor cv wss wo cdif wcel wral wa difeq2 eleq1d elrab syl2anb
+      weq wi cpw crab an4 biimpi sorpssi expcom wceq vex elpw dfss4 bitri sscon
+      sseq12 syl5ib ancoms orim12d com12 orcoms syl6 com3l imp3a syl5 ralrimivv
+      wb sorpss sylibr ) CFGZDHZEHZIZVIVHIZJZEBAHZKZCLZABUAZUBZMDVQMVQFGVGVLDEV
+      QVQVHVQLZVIVQLZNVHVPLZVIVPLZNZBVHKZCLZBVIKZCLZNZNZVGVLVRVTWDNZWAWFNZWHVSV
+      OWDAVHVPADSVNWCCVMVHBOPQVOWFAVIVPAESVNWECVMVIBOPQWIWJNWHVTWDWAWFUCUDRVGWB
+      WGVLWGVGWBVLWGVGWCWEIZWEWCIZJZWBVLTZVGWGWMCWCWEUEUFWLWKWNWBWLWKJZVLVTBWCK
+      ZVHUGZBWEKZVIUGZWOVLTWAVTVHBIWQVHBDUHUIVHBUJUKWAVIBIWSVIBEUHUIVIBUJUKWQWS
+      NZWLVJWKVKWLWPWRIWTVJWEWCBULWPVHWRVIUMUNWKWRWPIZWTVKWCWEBULWSWQXAVKVDWRVI
+      WPVHUMUOUNUPRUQURUSUTVAVBVCDEVQVEVF $.
+      $( [2-Nov-2014] $)
   $}
 
   ${
@@ -8948,61 +8912,53 @@ $)
     $d x y z w a b c d $.
 
     $( ` Fin2 ` expressed in terms of minimal elements. $)
-    dffin2-2 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
-      A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) ->
+    dffin2-2 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
         E. z e. y A. w e. y -. w C. z ) } $=
-      ( va vb vc cv c0 wne wss wral wa wpss wrex wi cpw wcel wceq cvv cfin2 cab
-      wo wn w3a cdif crab simp2 ssrab2 vex pwex elpw2 mpbir a1i simp1 fin23lem7
-      simp3l syl2anc fin23lem6OLD adantl 3ad2ant3 raleqbi1dv anbi12d rexeqbi1dv
-      neeq1 raleq imbi12d rcla4va imp syl22anc wsb wsbc pssdifcom2 biimpd ax-mp
-      difexg weq simpr simpl psseq12d sbc2ie 3imtr4g fin23lem11 sylc pssdifcom1
-      3exp ralrimiv impbii df-fin2OLD abeq2i pweq pweqd raleqdv 3bitr4i eqriv
-      elab ) EUABHZIJZCHZDHZKWTWSKUCZDWQLZCWQLZMZWTWSNZUDZDWQLZCWQOZPZBAHZQZQZL
-      ZAUBZFHZIJZXADXOLZCXOLZMZWSWTNZUDZDXOLZCXOOZPZFEHZQZQZLZXIBYGLZYEUARYEXNR
-      YHYIYHXIBYGYHWQYGRZXDXHYHYJXDUEZYJYADYEGHUFZWQRZGYFUGZLZCYNOZXHYHYJXDUHZY
-      KYNYGRZYHYNIJZXADYNLZCYNLZYPYRYKYRYNYFKYMGYFUIYNYFYEEUJZUKZULUMUNYHYJXDUO
-      YKYJWRYSYQYHYJWRXCUQEBGUPURXDYHUUAYJXCUUAWRCDCDGYEWQUSUTVAYRYHMYSUUAMZYPY
-      DUUDYPPFYNYGXOYNSZXSUUDYCYPUUEXPYSXRUUAXOYNIVEXQYTCXOYNXADXOYNVFVBVCYBYOC
-      XOYNYADXOYNVFVDVGVHVIVJXTXEACDFEBGXJYEKZXOYEKMZXOYEXJUFZNZXJYEXOUFZNZXEDF
-      VKCUUHVLXTDUUJVLCAVKUUGUUIUUKXJXOYEVMVNXEUUICDUUHXOYETRZUUHTRUUBYEXJTVPVO
-      ZFUJWSUUHSZDFVQZMWTXOWSUUHUUNUUOVRUUNUUOVSVTWAXTUUKCDXJUUJAUJZUULUUJTRUUB
-      YEXOTVPVOCAVQZWTUUJSZMWSXJWTUUJUUQUURVSUUQUURVRVTWAWBWCWDWFWGYIYDFYGYIXOY
-      GRZXSYCYIUUSXSUEZUUSXFDYLXORZGYFUGZLZCUVBOZYCYIUUSXSUHZUUTUVBYGRZYIUVBIJZ
-      XADUVBLZCUVBLZUVDUVFUUTUVFUVBYFKUVAGYFUIUVBYFUUCULUMUNYIUUSXSUOUUTUUSXPUV
-      GUVEYIUUSXPXRUQEFGUPURXSYIUVIUUSXRUVIXPCDCDGYEXOUSUTVAUVFYIMUVGUVIMZUVDXI
-      UVJUVDPBUVBYGWQUVBSZXDUVJXHUVDUVKWRUVGXCUVIWQUVBIVEXBUVHCWQUVBXADWQUVBVFV
-      BVCXGUVCCWQUVBXFDWQUVBVFVDVGVHVIVJXEXTACDBEFGUUFWQYEKMZUUHWQNZYEWQUFZXJNZ
-      XTDBVKCUUHVLXEDUVNVLCAVKUVLUVMUVOXJWQYEWEVNXTUVMCDUUHWQUUMBUJUUNDBVQZMWSU
-      UHWTWQUUNUVPVSUUNUVPVRVTWAXEUVOCDXJUVNUUPUULUVNTRUUBYEWQTVPVOUUQWTUVNSZMW
-      TUVNWSXJUUQUVQVRUUQUVQVSVTWAWBWCWDWFWGWHYHEUAEFCDWIWJXMYIAYEUUBAEVQZXIBXL
-      YGUVRXKYFXJYEWKWLWMWPWNWO $.
-      $( [31-Oct-2014] $)
+      ( va vb vc cv c0 wne crpss wor wa wpss wral wrex wcel wss wceq cvv wn cpw
+      cfin2 wi cab w3a cdif simp2 ssrab2 grothpwex elpw2 mpbir a1i simp1 simp3l
+      crab fin23lem7 syl2anc fin23lem6 adantl 3ad2ant3 neeq1 anbi12d rexeqbi1dv
+      soeq2 raleq imbi12d rcla4va imp syl22anc wsb pssdifcom2 biimpd vex difexg
+      wsbc ax-mp weq simpr simpl psseq12d 3imtr4g fin23lem11 sylc 3exp ralrimiv
+      sbc2ie pssdifcom1 impbii df-fin2 abeq2i pweq pweqd raleqdv 3bitr4i eqriv
+      elab ) EUCBHZIJZWRKLZMZDHZCHZNZUAZDWROZCWRPZUDZBAHZUBZUBZOZAUEZFHZIJZXNKL
+      ZMZXCXBNZUAZDXNOZCXNPZUDZFEHZUBZUBZOZXHBYEOZYCUCQYCXMQYFYGYFXHBYEYFWRYEQZ
+      XAXGYFYHXAUFZYHXSDYCGHUGZWRQZGYDUPZOZCYLPZXGYFYHXAUHZYIYLYEQZYFYLIJZYLKLZ
+      YNYPYIYPYLYDRYKGYDUIYLYDEUJZUKULUMYFYHXAUNYIYHWSYQYOYFYHWSWTUOEBGUQURXAYF
+      YRYHWTYRWSGYCWRUSUTVAYPYFMYQYRMZYNYBYTYNUDFYLYEXNYLSZXQYTYAYNUUAXOYQXPYRX
+      NYLIVBXNYLKVEVCXTYMCXNYLXSDXNYLVFVDVGVHVIVJXRXDACDFEBGXIYCRZXNYCRMZXNYCXI
+      UGZNZXIYCXNUGZNZXDDFVKCUUDVPXRDUUFVPCAVKUUCUUEUUGXIXNYCVLVMXDUUECDUUDXNYC
+      TQZUUDTQEVNZYCXITVOVQZFVNXCUUDSZDFVRZMXBXNXCUUDUUKUULVSUUKUULVTWAWGXRUUGC
+      DXIUUFAVNZUUHUUFTQUUIYCXNTVOVQCAVRZXBUUFSZMXCXIXBUUFUUNUUOVTUUNUUOVSWAWGW
+      BWCWDWEWFYGYBFYEYGXNYEQZXQYAYGUUPXQUFZUUPXEDYJXNQZGYDUPZOZCUUSPZYAYGUUPXQ
+      UHZUUQUUSYEQZYGUUSIJZUUSKLZUVAUVCUUQUVCUUSYDRUURGYDUIUUSYDYSUKULUMYGUUPXQ
+      UNUUQUUPXOUVDUVBYGUUPXOXPUOEFGUQURXQYGUVEUUPXPUVEXOGYCXNUSUTVAUVCYGMUVDUV
+      EMZUVAXHUVFUVAUDBUUSYEWRUUSSZXAUVFXGUVAUVGWSUVDWTUVEWRUUSIVBWRUUSKVEVCXFU
+      UTCWRUUSXEDWRUUSVFVDVGVHVIVJXDXRACDBEFGUUBWRYCRMZUUDWRNZYCWRUGZXINZXRDBVK
+      CUUDVPXDDUVJVPCAVKUVHUVIUVKXIWRYCWHVMXRUVICDUUDWRUUJBVNUUKDBVRZMXCUUDXBWR
+      UUKUVLVTUUKUVLVSWAWGXDUVKCDXIUVJUUMUUHUVJTQUUIYCWRTVOVQUUNXBUVJSZMXBUVJXC
+      XIUUNUVMVSUUNUVMVTWAWGWBWCWDWEWFWIYFEUCEFCDWJWKXLYGAYCUUIAEVRZXHBXKYEUVNX
+      JYDXIYCWLWMWNWQWOWP $.
+      $( [2-Nov-2014] $)
 
     $( ` Fin2 ` sets contain unions for all nonempty chains. $)
-    dffin2-3 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
-      A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) -> U. y e. y ) } $=
-      ( va vb cfin2 cv c0 wne wss wo wral wcel wi cpw weq sseq1 sseq2 orbi12d
-      wa cuni wpss wn wrex wb cbvral2v fin23lem4OLD sylbi adantl pm5.74i ralbii
-      cab df-fin2OLD abeq2i vex pweq pweqd raleqdv elab 3bitr4i eqriv ) EGBHZIJ
-      ZCHZDHZKZVFVEKZLZDVCMCVCMZUAZVCUBVCNZOZBAHZPZPZMZAUMZVKVEVFUCUDDVCMCVCUEZ
-      OZBEHZPZPZMZVMBWCMZWAGNWAVRNVTVMBWCVKVSVLVJVSVLUFZVDVJWAFHZKZWGWAKZLZFVCM
-      EVCMWFVIWJWAVFKZVFWAKZLCDEFVCVCCEQVGWKVHWLVEWAVFRVEWAVFSTDFQWKWHWLWIVFWGW
-      ASVFWGWARTUGEFDCVCUHUIUJUKULWDEGEBCDUNUOVQWEAWAEUPAEQZVMBVPWCWMVOWBVNWAUQ
-      URUSUTVAVB $.
-      $( [1-Nov-2014] $)
+    dffin2-3 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
+        U. y e. y ) } $=
+      ( va vz vw cfin2 cv c0 wne crpss wor wa cuni wcel wi cpw wral cab wpss wn
+      wrex wb fin23lem4 adantl pm5.74i ralbii df-fin2 abeq2i vex weq pweq pweqd
+      raleqdv elab 3bitr4i eqriv ) CFBGZHIZUQJKZLZUQMUQNZOZBAGZPZPZQZARZUTDGEGS
+      TEUQQDUQUAZOZBCGZPZPZQZVBBVLQZVJFNVJVGNVIVBBVLUTVHVAUSVHVAUBUREDUQUCUDUEU
+      FVMCFCBDEUGUHVFVNAVJCUIACUJZVBBVEVLVOVDVKVCVJUKULUMUNUOUP $.
+      $( [2-Nov-2014] $)
 
     $( ` Fin2 ` sets contain intersections for all nonempty chains. $)
-    dffin2-4 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
-      A. z e. y A. w e. y ( z C_ w \/ w C_ z ) ) -> |^| y e. y ) } $=
-      ( va vb cfin2 cv c0 wne wss wo wral wcel wi cpw weq sseq1 sseq2 orbi12d
-      wa cint wpss wn wrex wb cbvral2v fin23lem5OLD sylbi adantl pm5.74i ralbii
-      cab dffin2-2 abeq2i vex pweq pweqd raleqdv elab 3bitr4i eqriv ) EGBHZIJZC
-      HZDHZKZVFVEKZLZDVCMCVCMZUAZVCUBVCNZOZBAHZPZPZMZAUMZVKVFVEUCUDDVCMCVCUEZOZ
-      BEHZPZPZMZVMBWCMZWAGNWAVRNVTVMBWCVKVSVLVJVSVLUFZVDVJWAFHZKZWGWAKZLZFVCMEV
-      CMWFVIWJWAVFKZVFWAKZLCDEFVCVCCEQVGWKVHWLVEWAVFRVEWAVFSTDFQWKWHWLWIVFWGWAS
-      VFWGWARTUGEFDCVCUHUIUJUKULWDEGEBCDUNUOVQWEAWAEUPAEQZVMBVPWCWMVOWBVNWAUQUR
-      USUTVAVB $.
-      $( [1-Nov-2014] $)
+    dffin2-4 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
+        |^| y e. y ) } $=
+      ( va vw vz cfin2 cv c0 wne crpss wor wa cint wcel wi cpw wral cab wpss wn
+      wrex fin23lem5 adantl pm5.74i ralbii dffin2-2 abeq2i vex weq pweq raleqdv
+      wb pweqd elab 3bitr4i eqriv ) CFBGZHIZUQJKZLZUQMUQNZOZBAGZPZPZQZARZUTDGEG
+      STDUQQEUQUAZOZBCGZPZPZQZVBBVLQZVJFNVJVGNVIVBBVLUTVHVAUSVHVAULURDEUQUBUCUD
+      UEVMCFCBEDUFUGVFVNAVJCUHACUIZVBBVEVLVOVDVKVCVJUJUMUKUNUOUP $.
+      $( [2-Nov-2014] $)
 
   $}
 
@@ -9481,25 +9437,26 @@ $)
     $( Lemma for ~ fin23 .  By ` Fin2 ` , ` U ` achieves its minimum ( ` X ` in
        the synopsis above, but we will not be assigning a symbol here). $)
     fin23lem17 $p |- ( U. ran t e. Fin2 -> |^| ran U e. ran U ) $=
-      ( vb vc vd va cv wcel c0 wne wss wo wral wa wi wceq com crn cuni cint cpw
-      cfin2 vex rnex uniex pweq pweqd raleqdv dffin2-4 elab2 fin23lem16 eqimssi
-      sspwuni mpbir pwex elpw2 cdm wfn cvv cfv cin cif cmpt2 fnseqom fndm ax-mp
-      peano1 ne0i eqnetri dm0rn0 necon3bii mpbi wrex wb fvelrnb word ordtri2or2
-      nnord syl2anr fin23lem15 ancoms orim12d mpd sseq2 sseq1 orbi12d syl5ibcom
-      ex rexlimdva imbi2d rexlimiv syl2anb rgen2a pm3.2i neeq1 raleq raleqbi1dv
-      imp anbi12d inteq id eleq12d imbi12d rcla4v 3imp mp3an13 sylbi ) BJZUAZUB
-      ZUEKFJZLMZGJZHJZNZXQXPNZOZHXNPZGXNPZQZXNUCZXNKZRZFXMUDZUDZPZCUAZUCZYJKZYF
-      FIJZUDZUDZPYIIXMUEXLXKBUFUGUHZYMXMSZYFFYOYHYQYNYGYMXMUIUJUKIFGHULUMYJYHKZ
-      YIYJLMZXTHYJPZGYJPZQZYLYRYJYGNZUUCYJUBZXMNUUDXMABCDEUNUOYJXMUPUQYJYGXMYPU
-      RUSUQYSUUACUTZLMYSUUETLCTVAZUUETSDATVBDJXKVCAJZVDZLSUUGUUHVEVFCXMEVGZTCVH
-      VILTKTLMVJTLVKVIVLUUELYJLCVMVNVOXTGHYJXPYJKZYMCVCZXPSZITVPZXNCVCZXQSZFTVP
-      ZXTXQYJKZUUFUUJUUMVQUUIITXPCVRVIUUFUUQUUPVQUUIFTXQCVRVIUUMUUPXTUULUUPXTRZ
-      ITYMTKZUUPUUKXQNZXQUUKNZOZRUULUURUUSUUOUVBFTUUSXNTKZQZUUKUUNNZUUNUUKNZOZU
-      UOUVBUVDXNYMNZYMXNNZOZUVGUVCXNVSYMVSUVJUUSXNWAYMWAXNYMVTWBUVDUVHUVEUVIUVF
-      UVDUVHUVEABYMXNCDEWCWKUVCUUSUVIUVFRUVCUUSQUVIUVFABXNYMCDEWCWKWDWEWFUUOUVE
-      UUTUVFUVAUUNXQUUKWGUUNXQUUKWHWIWJWLUULUVBXTUUPUULUUTXRUVAXSUUKXPXQWHUUKXP
-      XQWGWIWMWJWNXAWOWPWQYRYIUUBYLYFUUBYLRFYJYHXNYJSZYCUUBYEYLUVKXOYSYBUUAXNYJ
-      LWRYAYTGXNYJXTHXNYJWSWTXBUVKYDYKXNYJXNYJXCUVKXDXEXFXGXHXIXJ $.
+      ( vb va vc vd cv wcel c0 wne wa wi cpw wral wceq wss com cuni cfin2 crpss
+      crn wor cint rnex uniex pweq pweqd raleqdv dffin2-4 elab2 eqimssi sspwuni
+      vex fin23lem16 mpbir pwex elpw2 cdm wfn cvv cfv cin cif cmpt2 fndm peano1
+      fnseqom ax-mp ne0i eqnetri dm0rn0 necon3bii mpbi wo wrex wb fvelrnb nnord
+      word ordtri2or2 syl2anr fin23lem15 ancoms orim12d mpd sseq2 sseq1 orbi12d
+      ex syl5ibcom rexlimdva imbi2d rexlimiv syl2anb rgen2a sorpss pm3.2i neeq1
+      imp soeq2 anbi12d inteq id eleq12d imbi12d rcla4v 3imp mp3an13 sylbi ) BJ
+      ZUDZUAZUBKFJZLMZXPUCUEZNZXPUFZXPKZOZFXOPZPZQZCUDZUFZYFKZYBFGJZPZPZQYEGXOU
+      BXNXMBUPUGUHZYIXORZYBFYKYDYMYJYCYIXOUIUJUKGFULUMYFYDKZYEYFLMZYFUCUEZNZYHY
+      NYFYCSZYRYFUAZXOSYSXOABCDEUQUNYFXOUOURYFYCXOYLUSUTURYOYPCVAZLMYOYTTLCTVBZ
+      YTTRDATVCDJXMVDAJZVEZLRUUBUUCVFVGCXOEVJZTCVHVKLTKTLMVITLVLVKVMYTLYFLCVNVO
+      VPYPHJZIJZSZUUFUUESZVQZIYFQHYFQUUIHIYFUUEYFKZYICVDZUUERZGTVRZXPCVDZUUFRZF
+      TVRZUUIUUFYFKZUUAUUJUUMVSUUDGTUUECVTVKUUAUUQUUPVSUUDFTUUFCVTVKUUMUUPUUIUU
+      LUUPUUIOZGTYITKZUUPUUKUUFSZUUFUUKSZVQZOUULUURUUSUUOUVBFTUUSXPTKZNZUUKUUNS
+      ZUUNUUKSZVQZUUOUVBUVDXPYISZYIXPSZVQZUVGUVCXPWBYIWBUVJUUSXPWAYIWAXPYIWCWDU
+      VDUVHUVEUVIUVFUVDUVHUVEABYIXPCDEWEWLUVCUUSUVIUVFOUVCUUSNUVIUVFABXPYICDEWE
+      WLWFWGWHUUOUVEUUTUVFUVAUUNUUFUUKWIUUNUUFUUKWJWKWMWNUULUVBUUIUUPUULUUTUUGU
+      VAUUHUUKUUEUUFWJUUKUUEUUFWIWKWOWMWPXBWQWRHIYFWSURWTYNYEYQYHYBYQYHOFYFYDXP
+      YFRZXSYQYAYHUVKXQYOXRYPXPYFLXAXPYFUCXCXDUVKXTYGXPYFXPYFXEUVKXFXGXHXIXJXKX
+      L $.
       $( [1-Nov-2014] $)
 
     $( Lemma for ~ fin23 and the start of the "API" which will be carried into
