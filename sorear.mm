@@ -8460,6 +8460,54 @@ $)
       ZBCHZBCIZCBHZJZBCKCBKRUJBCDLZULCBDLZJUNABCDMUJUOUKULULUPUMUJCNFZUOUKSUIUQ
       UGUHCAOPBCQTUJULUAUJBNFZUPUMSUHURUGUIBAOUBCBQTUCUDBCUEUF $.
       $( [2-Nov-2014] $)
+
+    $d F a b c d e f $.  $d R a b c d e f $.
+    $( The range of a single-step monotone function from ` om ` into a
+       partially ordered set is a chain. $)
+    sornom $p |- ( ( F Fn om /\ A. a e. om ( ( F ` a ) R ( F ` suc a ) \/
+          ( F ` a ) = ( F ` suc a ) ) /\ R Po ran F ) -> R Or ran F ) $=
+      ( vb vc vd ve com cv cfv wbr wceq wo weq wcel wa wrex wi fveq2 orbi12d wb
+      wfn csuc wral crn wpo w3a w3o wor simp3 fvelrnb anbi12d 3ad2ant1 wss word
+      reeanv nnord ordtri2or2 syl2an adantl vex eleq1 bi2anan9 anbi2d breqan12d
+      sseq12 eqeqan12d imbi12d breq2d eqeq2d imbi2d a1i12 simplll simpr2 fveq2d
+      eqid suceq breq12d eqeq12d rcla4va syl2anc simprr simprl simpllr fnfvelrn
+      olci peano2 ad3antrrr potr syl13anc ancom2s orcd expr breq1 biimprcd syl6
+      imp orc jaod ex breq2 eqeq2 biimpd a1i 3adantr2 mpd findsg ancom1s impcom
+      a2d vtocl2 orim12d 3mix1 3mix2 jaoi 3mix3 eqcoms syl breq12 eqeq12 ancoms
+      3orbi123d syl5ibcom rexlimdvva syl5bir sylbid ralrimivv df-so sylanbrc )
+      BHUBZCIZBJZYKUCZBJZAKZYLYNLZMZCHUDZBUEZAUFZUGZYTDIZEIZAKZDENZUUCUUBAKZUHZ
+      EYSUDDYSUDYSAUIYJYRYTUJUUAUUGDEYSYSUUAUUBYSOZUUCYSOZPZFIZBJZUUBLZFHQZGIZB
+      JZUUCLZGHQZPZUUGYJYRUUJUUSUAYTYJUUHUUNUUIUURFHUUBBUKGHUUCBUKULUMUUSUUMUUQ
+      PZGHQFHQUUAUUGUUMUUQFGHHUPUUAUUTUUGFGHHUUAUUKHOZUUOHOZPZPZUULUUPAKZUULUUP
+      LZUUPUULAKZUHZUUTUUGUVDUVEUVFMZUVGUUPUULLZMZMZUVHUVDUUKUUOUNZUUOUUKUNZMZU
+      VLUVCUVOUUAUVAUUKUOUUOUOUVOUVBUUKUQUUOUQUUKUUOURUSUTUVDUVMUVIUVNUVKUUAUUB
+      HOZUUCHOZPZPZUUBUUCUNZUUBBJZUUCBJZAKZUWAUWBLZMZRZRZUVDUVMUVIRZRDEUUKUUOFV
+      AZGVAZDFNZEGNZPZUVSUVDUWFUWHUWMUVRUVCUUAUWKUVPUVAUWLUVQUVBUUBUUKHVBUUCUUO
+      HVBVCVDUWMUVTUVMUWEUVIUUBUUKUUCUUOVFUWMUWCUVEUWDUVFUWKUWLUWAUULUWBUUPAUUB
+      UUKBSZUUCUUOBSZVEUWKUWLUWAUULUWBUUPUWNUWOVGTVHVHUUAUVRUVTUWEUVRUVTPUUAUWE
+      UVQUVPUVTUUAUWERZUUAUWAUULAKZUWAUULLZMZRUUAUWAUWAAKZUWAUWALZMZRUUAUWAUUPA
+      KZUWAUUPLZMZRUUAUWAUUOUCZBJZAKZUWAUXGLZMZRUWPFGUUCUUBFDNZUWSUXBUUAUXKUWQU
+      WTUWRUXAUXKUULUWAUWAAUUKUUBBSZVIUXKUULUWAUWAUXLVJTVKFGNZUWSUXEUUAUXMUWQUX
+      CUWRUXDUXMUULUUPUWAAUUKUUOBSZVIUXMUULUUPUWAUXNVJTVKUUKUXFLZUWSUXJUUAUXOUW
+      QUXHUWRUXIUXOUULUXGUWAAUUKUXFBSZVIUXOUULUXGUWAUXPVJTVKFENZUWSUWEUUAUXQUWQ
+      UWCUWRUWDUXQUULUWBUWAAUUKUUCBSZVIUXQUULUWBUWAUXRVJTVKUVPUUAUXBUXAUWTUWAVP
+      WFVLUVBUVPPUUBUUOUNZPZUUAUXEUXJUXTUUAUXEUXJRZUXTUUAPZUUPUXGAKZUUPUXGLZMZU
+      YAUYBUVBYRUYEUVBUVPUXSUUAVMUXTYJYRYTVNYQUYECUUOHCGNZYOUYCYPUYDUYFYLUUPYNU
+      XGAYKUUOBSZUYFYMUXFBYKUUOVQVOZVRUYFYLUUPYNUXGUYGUYHVSTVTWAUXTYJYTUYEUYARY
+      RUXTYJYTPZPZUYCUYAUYDUYJUYCUYAUYJUYCPUXCUXJUXDUYJUYCUXCUXJUYJUYCUXCPPUXHU
+      XIUYJUXCUYCUXHUYJUXCUYCPZUXHUYJYTUWAYSOZUUPYSOZUXGYSOZUYKUXHRUXTYJYTWBUYJ
+      YJUVPUYLUXTYJYTWCZUVBUVPUXSUYIWDHUUBBWEWAUYJYJUVBUYMUYOUVBUVPUXSUYIVMHUUO
+      BWEWAUYJYJUXFHOZUYNUYOUVBUYPUVPUXSUYIUUOWGWHHUXFBWEWAYSUWAUUPUXGAWIWJWQWK
+      WLWMUYCUXDUXJRUYJUYCUXDUXHUXJUXDUXHUYCUWAUUPUXGAWNWOUXHUXIWRWPUTWSWTUYDUY
+      ARUYJUYDUXEUXJUYDUXCUXHUXDUXIUUPUXGUWAAXAUUPUXGUWAXBTXCXDWSXEXFWTXJXGXHXI
+      WMZXKUUAUVBUVAUVNUVKRZUWGUUAUVBUVAPZPZUYRRDEUUOUUKUWJUWIDGNZEFNZPZUVSUYTU
+      WFUYRVUCUVRUYSUUAVUAUVPUVBVUBUVQUVAUUBUUOHVBUUCUUKHVBVCVDVUCUVTUVNUWEUVKU
+      UBUUOUUCUUKVFVUCUWCUVGUWDUVJVUAVUBUWAUUPUWBUULAUUBUUOBSZUUCUUKBSZVEVUAVUB
+      UWAUUPUWBUULVUDVUEVGTVHVHUYQXKWKXLXFUVIUVHUVKUVEUVHUVFUVEUVFUVGXMUVFUVEUV
+      GXNZXOUVGUVHUVJUVGUVEUVFXPUVHUULUUPVUFXQXOXOXRUUTUVEUUDUVFUUEUVGUUFUULUUB
+      UUPUUCAXSUULUUBUUPUUCXTUUQUUMUVGUUFUAUUPUUCUULUUBAXSYAYBYCYDYEYFYGDEYSAYH
+      YI $.
+      $( [3-Nov-2014] $)
   $}
 
 
@@ -9336,6 +9384,17 @@ $)
       $( [2-Nov-2014] $)
   $}
 
+  $c Fin3DS $.
+  ${
+    $( Extend class notation to include the class of III-finite sets (descending sequence version). $)
+    cfin2ds $a class Fin3DS $.
+
+    $d g a b $.
+
+    $( A set satisfies the descending sequence condition iff every descending function from ` om ` is eventually constant. $)
+    df-fin2ds $a |- Fin3DS = { g | A. a ( ( a : om --> ~P g /\
+        A. b e. om ( a ` suc b ) C_ ( a ` b ) ) -> |^| ran a e. ran a ) } $.
+  $}
 
   ${
     $d U i u a b c d $.  $d A i u a b $.  $d i u t a b c d $.  $d B i u a b $.
@@ -9471,6 +9530,12 @@ $)
       L $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  By ` Fin3DS ` , ` U ` achieves its minimum ( ` X ` in
+       the synopsis above, but we will not be assigning a symbol here). $)
+    fin23lem17NEW $p |- ( ( U. ran t e. Fin3DS /\ t : om -1-1-> _V ) ->
+        |^| ran U e. ran U ) $=
+      ? $.
+
     $( Lemma for ~ fin23 and the start of the "API" which will be carried into
        the next section . ` X ` is a set. $)
     fin23lem18 $p |- |^| ran U e. _V $=
@@ -9523,6 +9588,12 @@ $)
       WKXGXBLWMWNWOWPWQ $.
       $( [1-Nov-2014] $)
 
+    $( Lemma for ~ fin23 . ` X ` is not empty.  We only need here that ` t `
+       has at least one set in its range besides ` (/) ` ; the much stronger
+       hypothesis here will serve as our induction hypothesis though. $)
+    fin23lem21NEW $p |- ( ( U. ran t e. Fin3DS /\ t : om -1-1-> _V ) ->
+        |^| ran U =/= (/) ) $=
+      ? $.
 
     $d P w z a b x $.  $d U v z $.  $d a b t v z $.  $d R b v i u a $.
     fin23lem.b $e |- P = { v e. om | |^| ran U C_ ( t ` v ) } $.
@@ -9631,6 +9702,13 @@ $)
       RWSWTXDXLXJXAXBXEXF $.
       $( [2-Nov-2014] $)
 
+    $( Lemma for ~ fin23 .  The residual is has a strictly smaller range than
+       the previous sequence.  This will be iterated to build an unbounded
+       chain. $)
+    fin23lem31NEW $p |- ( ( t : om -1-1-> _V /\ G e. Fin3DS /\
+        U. ran t C_ G ) -> U. ran Z C. U. ran t ) $=
+      ? $.
+
     $( Lemma for ~ fin23 .  Wrap the previous construction into a function to
        hide the hypotheses. $)
     fin23lem32 $p |- ( G e. Fin2 -> E. a A. b
@@ -9658,6 +9736,14 @@ $)
       UDYNXRWFUVQYQYALUVQYPXTYNXRWGWHZXIWNUVQUUAYFUUDYIUVQYTYEUTUUAYFVAYNXRYDXJ
       ZUCUDYTYEWFWAUVQUUCYHYQYAUVQUUBYGUVQYTYEUVSXDWHUVRXKWNXLXMXNXO $.
       $( [2-Nov-2014] $)
+
+    $( Lemma for ~ fin23 .  Wrap the previous construction into a function to
+       hide the hypotheses. $)
+    fin23lem32NEW $p |- ( G e. Fin3DS -> E. a A. b
+        ( ( b : om -1-1-> _V /\ U. ran b C_ G ) ->
+        ( ( a ` b ) : om -1-1-> _V /\ U. ran ( a ` b ) C. U. ran b ) ) ) $=
+      ? $.
+
   $}
 
   ${
@@ -9676,6 +9762,12 @@ $)
       VNVAXBVBJHUPZWTWPVNWSWNWOXCWSWOQVNWNWMVCZUTXCVIXDVBVDVSTVRWRVSVSVEVFWDWAG
       NZVLOZUHKGMKGUPWCXFWAWBXEVLUQVGVHWHTWJTWKTVJ $.
       $( [2-Nov-2014] $)
+
+    $( Lemma for ~ fin23 .  Discharge hypotheses. $)
+    fin23lem33NEW $p |- ( G e. Fin3DS -> E. a A. b
+        ( ( b : om -1-1-> _V /\ U. ran b C_ G ) ->
+        ( ( a ` b ) : om -1-1-> _V /\ U. ran ( a ` b ) C. U. ran b ) ) ) $=
+      ? $.
 
     $d ph j a b c $.  $d A a b c j $.  $d B a b c j $.  $d Y a b c j $.
     fin23lem.f $e |- ( ph -> h : om -1-1-> _V ) $.
@@ -9797,6 +9889,46 @@ $)
       WFWGWHABCDEFKLGHIJWIWJYDYEYHXNYAYHXNUKMXLYCXOXLPZXRYHXTXNUUCXPYFXQYGXOXLS
       WKXOXLUIWLWMUUCXSXMXOXLXOXLWOUUCWPWNWQWRWSWTXAXB $.
       $( [2-Nov-2014] $)
+
+    $( Lemma for ~ fin23 .  Thus we have that ` g ` could not have been
+       ` Fin3DS ` after all. $)
+    fin23lem39NEW $p |- ( ph -> -. g e. Fin3DS ) $=
+      ? $.
+  $}
+
+  ${
+    $d a b c d e f g $.
+
+    $( Lemma for ~ fin23 . ` Fin2 ` sets satisfy the descending chain
+       condition. $)
+    fin23lem40 $p |- ( g e. Fin2 -> A. a ( ( a : om --> ~P g /\
+          A. b e. om ( a ` suc b ) C_ ( a ` b ) ) -> |^| ran a e. ran a ) ) $=
+      ( vc cv cfin2 wcel com cpw cfv wss wral wa wi wne crpss wor adantr wceq
+      c0 wf csuc crn cint dffin2-4 abeq2i frn vex rnex elpw sylibr cdm fdm ne0i
+      peano1 ax-mp a1i eqnetrd dm0rn0 necon3bii sylib ccnv wfn wbr wpo ffn wpss
+      wo sspss fvex brcnv brrpss bitri eqcom orbi12i sylbi ralimi adantl porpss
+      biimpri cnvpo mpbi sornom syl3anc cnvso jca32 neeq1 soeq2 anbi12d eleq12d
+      inteq id imbi12d rcla4cv imp3a syl5 alrimiv ) AEZFGZHWRIZBEZUAZCEZUBZXAJZ
+      XCXAJZKZCHLZMZXAUCZUDZXJGZNZBWSDEZTOZXNPQZMZXNUDZXNGZNZDWTIZLZXMYBAFADUEU
+      FXIXJYAGZXJTOZXJPQZMZMYBXLXIYCYDYEXBYCXHXBXJWTKYCHWTXAUGXJWTXABUHUIUJUKRX
+      BYDXHXBXAULZTOYDXBYGHTHWTXAUMHTOZXBTHGYHUOHTUNUPUQURYGTXJTXAUSUTVARXIXJPV
+      BZQZYEXIXAHVCZXFXEYIVDZXFXESZVHZCHLZXJYIVEZYJXBYKXHHWTXAVFRXHYOXBXGYNCHXG
+      XEXFVGZXEXFSZVHZYNXEXFVIYNYSYLYQYMYRYLXEXFPVDYQXFXEPXCXAVJZXDXAVJVKXEXFYT
+      VLVMXFXEVNVOVTVPVQVRYPXIXJPVEYPXJVSXJPWAWBUQYIXACWCWDXJPWEUKWFYBYCYFXLXTY
+      FXLNDXJYAXNXJSZXQYFXSXLUUAXOYDXPYEXNXJTWGXNXJPWHWIUUAXRXKXNXJXNXJWKUUAWLW
+      JWMWNWOWPVPWQ $.
+      $( [3-Nov-2014] $)
+
+    $( Lemma for ~ fin23 . ` Fin2 ` sets satisfy the descending chain
+       condition. $)
+    fin23lem40NEW $p |- Fin2 C_ Fin3DS $=
+      ? $.
+
+    $( Lemma for ~ fin23 . A set which satisfies the descending sequence condition must be III-finite. $)
+    fin23lem41 $p |- Fin3DS C_ Fin3 $=
+      ? $.
+
+    $( TODO: a set which fails the descending sequence condition generates by differences a sequence of disjoint subsets I-infinitely many of which are nonempty.  Thus we can filter out an infinite sequence of disjoint nonempty subsets, and (after lumping the remainder into bucket 0) map the set onto om.  A mapping onto om generates a countable set of disjoint preimages, closing the cycle... $)
   $}
 
   ${
@@ -9824,6 +9956,29 @@ $)
       elab ) BDEAFZGHZIZAJZCFZBFZKUNUOLHMZCNZIZEUOGHZIZUODOUOUMOUQUSUQUSUPUSCUO
       UNBRZPQCUOVASTUAURBDBCUBUCULUTAUOVAABUDUKUSUJUOEGUEUFUIUGUH $.
       $( [30-Oct-2014] $)
+
+    $( A set is finite in the usual sense iff the power set of its power set is
+       Dedekind finite.  This provides an alternate proof of ~ fineqv . $)
+    dffin1-2 $p |- Fin = { x | ~P ~P x e. Fin4 } $=
+      ( va vb vc vd ve cfn cv cpw cfin4 wcel com cdom wbr wn cen wa ex syl wi
+      cab vex pwex wceq breq2 notbid dffin4-2 elab2 pweq pweqd eleq1d elab pwfi
+      weq bitri isfinite1 sbth ancoms con3d imp sylbi con2i cvv crab wss ssrab2
+      elpw2 mpbir a1i12 wb wex wral isinf ra4 adantrd anim1i breq1 elrab sylibr
+      biimpri eximi eleq2 biimpcd adantl simprbi ensym entr sylan syl2an nneneq
+      biimpd ad2antlr 3syld exlimdv mpd rabbidv impbid1 impbii con2bii 3bitr4ri
+      dom3d mpi eqriv ) BGAHZIZIZJKZAUAZBHZIZIZJKZLXKMNZOZXIXHKXIGKZLCHZMNZOXNC
+      XKJXJXIBUBZUCZUCZXPXKUDXQXMXPXKLMUEUFCUGUHXGXLAXIXRABUNZXFXKJYAXEXJXDXIUI
+      UJUKULXMXOXMXOOZXOXMXOXKGKZXNXOXJGKYCXIUMXJUMUOYCXKLMNZLXKPNZOZQXNXKUPYDY
+      FXNYDXMYEYDXMYEXMYDYELXKUQURRUSUTSVAVBYBXKVCKXMXTYBCDLXKEHZXPPNZEXJVDZYGD
+      HZPNZEXJVDZVCYBXPLKZYIXKKZYNYIXJVEYHEXJVFYIXJXSVGVHVIYBYMYJLKZQZYIYLUDZCD
+      UNZVJYBYPQZYQYRYSFHZYIKZFVKZYQYRTZYSYTXIVEZYTXPPNZQZFVKZUUBYBYPUUGYBYMUUG
+      YOYBUUGCLVLYMUUGTFXICVMUUGCLVNSVOUTUUFUUAFUUFYTXJKZUUEQUUAUUDUUHUUEUUHUUD
+      YTXIXRVGVTVPYHUUEEYTXJYGYTXPPVQVRZVSWASYSUUAUUCFYSUUAUUCYSUUAQYQYTYLKZXPY
+      JPNZYRUUAYQUUJTYSYQUUAUUJYIYLYTWBWCWDUUAUUJUUKTYSUUAUUJUUKUUAUUEYTYJPNZUU
+      KUUJUUAUUHUUEUUIWEUUJUUHUULYKUULEYTXJYGYTYJPVQVRWEUUEXPYTPNUULUUKYTXPCUBW
+      FXPYTYJWGWHWIRWDYPUUKYRTYBUUAYPUUKYRXPYJWJWKWLWMRWNWOYRYHYKEXJXPYJYGPUEWP
+      WQRXAXBWRWSWTXC $.
+      $( [3-Nov-2014] $)
 
     $( Every II-finite set is III-finite. $)
     fin23 $p |- Fin2 C_ Fin3 $=
