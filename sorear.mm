@@ -8394,33 +8394,6 @@ $)
     $d a b c d e f g h i j k l m $.  $d A a b c $.  $d B a b c $.
     $d C a b c $.
 
-    $( Relationship between onto function existance and ordinary dominance
-       (1-1). $)
-    ttaclem2 $p |- ( ( A e. _V /\ A : B -onto-> C ) -> ~P C ~<_ ~P B ) $=
-      ( va vc cvv wcel wa cpw syl cv cima wss wceq wb ex imaeq2 vex elpw sylib
-      wfo cdom wbr wf fof dmfex sylan2 pwexg ccnv crn imassrn cdm dfdm4 syl5eqr
-      fdm ad2antlr syl5sseq cnvexg imaexg ad2antrr elpwg mpbird simpllr simplrl
-      weq adantl foimacnv syl2anc simplrr 3eqtr3d impbid1 dom3d mpd ) AFGZBCAUA
-      ZHZBIZFGZCIZVQUBUCVPBFGZVRVOVNBCAUDZVTBCAUEZBCFAUFUGBFUHJVPDEVSVQAUIZDKZL
-      ZWCEKZLZFVPWDVSGZWEVQGZVPWHHZWIWEBMZWJWCUJZWEBWCWDUKVOWLBNVNWHVOWLAULZBAU
-      MVOWAWMBNWBBCAUOJUNUPUQWJWEFGZWIWKOVNWNVOWHVNWCFGWNAFURWCWDFUSJUTWEBFVAJV
-      BPVPWHWFVSGZHZWEWGNZDEVEZOVPWPHZWQWRWSWQWRWSWQHZAWELZAWGLZWDWFWQXAXBNWSWE
-      WGAQVFWTVOWDCMZXAWDNVNVOWPWQVCZWTWHXCVPWHWOWQVDWDCDRSTBCWDAVGVHWTVOWFCMZX
-      BWFNXDWTWOXEVPWHWOWQVIWFCERSTBCWFAVGVHVJPWDWFWCQVKPVLVM $.
-      $( [4-Nov-2014] $)
-
-    $( There is always an ordinal that a given set cannot be mapped onto.
-       Corrolary of ~ hartogs . $)
-    ttaclem $p |- E. a e. On -. E. b b : c -onto-> a $=
-      ( vd cv cpw cdom wbr con0 crab wcel wfo wex wrex cvv vex ax-mp mpan breq1
-      wn pwex hartogs onirri ttaclem2 csdm elexi canth2 sdomdom domtr wa elrab2
-      cbvrabv biimpri 3syl mto nex wceq foeq3 exbidv notbid rcla4ev mp2an ) DEZ
-      CEZFZGHZDIJZIKZVDVGBEZLZBMZTZVDAEZVILZBMZTZAINVEOKVHVDCPUADVEOUBQZVJBVJVG
-      VGKZVGVQUCVJVGFZVEGHZVGVEGHZVRVIOKVJVTBPVIVDVGUDRVGVSGHZVTWAVGVSUEHWBVGVG
-      IVQUFUGVGVSUHQVGVSVEUIRVHWAVRVQVRVHWAUJVMVEGHZWAAVGIVGVMVGVEGSVFWCDAIVCVM
-      VEGSULUKUMRUNUOUPVPVLAVGIVMVGUQZVOVKWDVNVJBVMVGVDVIURUSUTVAVB $.
-      $( [4-Nov-2014] $)
-
     $( Lemma for ~ ttac .  Use non-surjection to prove non-emptiness. $)
     ttaclem4 $p |- ( ( ( ( b i^i a ) = (/) /\ e e. ( b u. a ) ) /\
         -. b ~<_ a /\ d : ( ( b u. a ) X. ( b u. a ) ) -1-1-onto->
@@ -10053,8 +10026,258 @@ $)
       VMZKQXOYOVEVNUUCXRYRXKYLUUCXQYQUUCXOYOUUEVOVHUUDVPVJVQVRVSUJYDWJVTWAWBWCW
       AWDWEWFWGKXCLMZNXBBWSJXFXCWSVKUUFXAXCWSKLWHWIBWKWLWMWTAGAWNWOWMWP $.
       $( [2-Nov-2014] $)
+  $}
 
-    $( TODO: a set which fails the descending sequence condition generates by differences a sequence of disjoint subsets I-infinitely many of which are nonempty.  Thus we can filter out an infinite sequence of disjoint nonempty subsets, and (after lumping the remainder into bucket 0) map the set onto om.  A mapping onto om generates a countable set of disjoint preimages, closing the cycle... $)
+  ${
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    nnunifi $p |- ( ( S C_ om /\ S e. Fin ) -> U. S e. om ) $=
+      ( com wss cfn wcel wa cuni wceq unieq uni0 peano1 eqeltri syl6eqel adantl
+      c0 wne simpll con0 omsson syl6ss simplr simpr ordunifi syl3anc pm2.61dane
+      sseldd ) ABCZADEZFZAGZBEZAOAOHZUKUIULUJOGZBAOIUMOBJKLMNUIAOPZFZABUJUGUHUN
+      QZUOARCUHUNUJAEUOABRUPSTUGUHUNUAUIUNUBAUCUDUFUE $.
+      $( [5-Nov-2014] $)
+  $}
+
+  ${
+    df32lem.a $e |- ( ph -> f : om --> ~P g ) $.
+    df32lem.b $e |- ( ph -> A. x e. om ( f ` suc x ) C_ ( f ` x ) ) $.
+    df32lem.c $e |- ( ph -> -. |^| ran f e. ran f ) $.
+    $d ph a b c d e s t u v w x y $.  $d A a b c d e s t u v w x y $.
+    $d B a b c d e s t u v w x y $.  $d a b c d e s t u v w x y f g $.
+
+    $( Lemma for ~ dffin3-2 .  Derive weak ordering property. $)
+    df32lem1 $p |- ( ( ( A e. om /\ B e. om ) /\ ( B C_ A /\ ph ) ) ->
+        ( f ` A ) C_ ( f ` B ) ) $=
+      ( va vb com wcel wss cv cfv wi fveq2 sseq1d imbi2d wa csuc wceq weq a1i12
+      ssid wral suceq fveq2d sseq12d rcla4v syl5 ad2antrr sstr2 syl6 a2d findsg
+      impr ) CLMDLMZUADCNACEOZPZDUTPZNZAJOZUTPZVBNZQAVBVBNZQAKOZUTPZVBNZQAVHUBZ
+      UTPZVBNZQAVCQJKCDVDDUCZVFVGAVNVEVBVBVDDUTRSTJKUDZVFVJAVOVEVIVBVDVHUTRSTVD
+      VKUCZVFVMAVPVEVLVBVDVKUTRSTVDCUCZVFVCAVQVEVAVBVDCUTRSTUSAVGVBUFUEVHLMZUSU
+      ADVHNZUAZAVJVMVTAVLVINZVJVMQVRAWAQUSVSABOZUBZUTPZWBUTPZNZBLUGVRWAHWFWABVH
+      LBKUDZWDVLWEVIWGWCVKUTWBVHUHUIWBVHUTRUJUKULUMVLVIVBUNUOUPUQUR $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ dffin3-2 .  Non-minimum implies that there is always another
+       decrease. $)
+    df32lem2 $p |- ( ( ph /\ A e. om ) -> E. a e. om ( A e. a /\
+        ( f ` suc a ) C. ( f ` a ) ) ) $=
+      ( vb com wcel wa cv cfv wceq wi wss syl fveq2 vc vd csuc wn wrex wpss crn
+      wral cint adantr wfn cpw wf ffn peano2 fnfvelrn syl2an intss1 wb ad2antrr
+      fvelrnb wo word nnord ad2antlr ordtri2or2 syl2anc simplrr simpllr simplrl
+      ad2antll simpr eqeq2d imbi2d weq eqid1 a1i12 sucexb sylibr adantl sucssel
+      cvv elex imp eleq2 suceq fveq2d eqeq12d imbi12d rcla4v com23 eqtr3 expcom
+      mpd syl6 a2d findsg syl22anc eqimss simplll df32lem1 jaodan mpdan anassrs
+      impr sseq2 syl5ibcom rexlimdva sylbid ralrimiv ssint eqssd eqeltrd rexnal
+      mtand sseq12d cbvralv sylib pm4.61 dfpss2 anim2d syl5bi ralimi rexim 3syl
+      simplbi2 ) ACKLZMZCFNZLZYIUCZDNZOZYIYLOZPZQZUDZFKUEZYJYMYNUFZMZFKUEZYHYPF
+      KUHZUDYRYHUUBYLUGZUIZUUCLZAUUEUDYGIUJYHUUBMZUUDCUCZYLOZUUCUUFUUDUUHUUFUUH
+      UUCLZUUDUUHRYHUUIUUBAYLKUKZUUGKLZUUIYGAKENULZYLUMUUJGKUULYLUNSZCUOZKUUGYL
+      UPUQUJZUUHUUCURSUUFUUHJNZRZJUUCUHUUHUUDRUUFUUQJUUCUUFUUPUUCLZUANZYLOZUUPP
+      ZUAKUEZUUQAUURUVBUSZYGUUBAUUJUVCUUMUAKUUPYLVASUTUUFUVAUUQUAKUUFUUSKLZMUUH
+      UUTRZUVAUUQYHUUBUVDUVEYHUUBUVDMZMZUUGUUSRZUUSUUGRZVBZUVEUVGUUGVCZUUSVCZUV
+      JYGUVKAUVFYGUUKUVKUUNUUGVDSVEUVDUVLYHUUBUUSVDVKUUGUUSVFVGUVGUVHUVEUVIUVGU
+      VHMZUUHUUTPZUVEUVMUVDUUKUVHUUBUVNYHUUBUVDUVHVHUVMYGUUKAYGUVFUVHVIUUNSUVGU
+      VHVLYHUUBUVDUVHVJUVDUUKMUVHUUBUVNUUBUUHUUPYLOZPZQUUBUUHUUHPZQUUBUUHUBNZYL
+      OZPZQUUBUUHUVRUCZYLOZPZQUUBUVNQJUBUUSUUGUUPUUGPZUVPUVQUUBUWDUVOUUHUUHUUPU
+      UGYLTVMVNJUBVOZUVPUVTUUBUWEUVOUVSUUHUUPUVRYLTVMVNUUPUWAPZUVPUWCUUBUWFUVOU
+      WBUUHUUPUWAYLTVMVNJUAVOZUVPUVNUUBUWGUVOUUTUUHUUPUUSYLTVMVNUUKUUBUVQUUHVPV
+      QUVRKLZUUKMZUUGUVRRZMZUUBUVTUWCUWKUUBUWBUVSPZUVTUWCQUWKCUVRLZUUBUWLQZUWIU
+      WJUWMUWICWBLZUWJUWMQUUKUWOUWHUUKUUGWBLUWOUUGKWCCVRVSVTCUVRWBWASWDUWHUWMUW
+      NQUUKUWJUWHUUBUWMUWLYPUWMUWLQFUVRKFUBVOZYJUWMYOUWLYIUVRCWEUWPYMUWBYNUVSUW
+      PYKUWAYLYIUVRWFWGYIUVRYLTWHWIWJWKUTWNUVTUWLUWCUUHUWBUVSWLWMWOWPWQXEWRUUHU
+      UTWSSUVGUVIMZUUKUVDUVIAUVEUWQYGUUKAYGUVFUVIVIUUNSYHUUBUVDUVIVHUVGUVIVLAYG
+      UVFUVIWTABUUGUUSDEGHIXAWRXBXCXDUUTUUPUUHXFXGXHXIXJJUUHUUCXKVSXLUUOXMXOYPF
+      KXNVSYHYMYNRZFKUHZYQYTQZFKUHYRUUAQAUWSYGABNZUCZYLOZUXAYLOZRZBKUHUWSHUXEUW
+      RBFKBFVOZUXCYMUXDYNUXFUXBYKYLUXAYIWFWGUXAYIYLTXPXQXRUJUWRUWTFKYQYJYOUDZMU
+      WRYTYJYOXSUWRUXGYSYJYSUWRUXGYMYNXTYFYAYBYCYQYTFKYDYEWN $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ dffin3-2 .  Being a chain, difference sets are disjoint (one
+       case). $)
+    df32lem3 $p |- ( ( ( A e. om /\ B e. om ) /\ ( B e. A /\ ph ) ) ->
+        ( ( ( f ` A ) \ ( f ` suc A ) ) i^i
+          ( ( f ` B ) \ ( f ` suc B ) ) ) = (/) ) $=
+      ( va com wcel wa cv cfv csuc cdif wn wral wss cin c0 eldifi simpll peano2
+      wceq ad2antlr word ad2antrr simprl ordsucss sylc simprr df32lem1 syl22anc
+      nnord sseld elndif syl6 syl5 ralrimiv disj sylibr ) CKLZDKLZMZDCLZAMZMZJN
+      ZDENZOZDPZVKOZQZLRZJCVKOZCPVKOZQZSVSVOUAUBUFVIVPJVSVJVSLVJVQLZVIVPVJVQVRU
+      CVIVTVJVNLVPVIVQVNVJVIVDVMKLZVMCTZAVQVNTVDVEVHUDVEWAVDVHDUEUGVICUHZVGWBVD
+      WCVEVHCUPUIVFVGAUJDCUKULVFVGAUMABCVMEFGHIUNUOUQVJVNVLURUSUTVAJVSVOVBVC $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ dffin3-2 .  Being a chain, difference sets are disjoint. $)
+    df32lem4 $p |- ( ( ( ph /\ A =/= B ) /\ ( A e. om /\ B e. om ) ) ->
+        ( ( ( f ` A ) \ ( f ` suc A ) ) i^i
+          ( ( f ` B ) \ ( f ` suc B ) ) ) = (/) ) $=
+      ( wa com wcel cfv csuc cdif cin c0 wceq word nnord wne wo cv simplr wn wb
+      ordtri3 syl2an adantl mpbird simplrr simplrl simpr simplll incom df32lem3
+      necon2abid syl5eq syl22anc jaodan mpdan ) ACDUAZJZCKLZDKLZJZJZCDLZDCLZUBZ
+      CEUCZMCNVKMOZDVKMDNVKMOZPZQRZVGVJVBAVBVFUDVGVJCDVFCDRVJUEUFZVCVDCSDSVPVEC
+      TDTCDUGUHUIUQUJVGVHVOVIVGVHJVEVDVHAVOVCVDVEVHUKVCVDVEVHULVGVHUMAVBVFVHUNV
+      EVDJVHAJJVNVMVLPQVLVMUOABDCEFGHIUPURUSVGVIJVDVEVIAVOVCVDVEVIULVCVDVEVIUKV
+      GVIUMAVBVFVIUNABCDEFGHIUPUSUTVA $.
+      $( [5-Nov-2014] $)
+
+    $d S a b c d g s t u v w x y $.
+    df32lem.d $e |- S = { y e. om | ( f ` suc y ) C. ( f ` y ) } $.
+    $( Lemma for ~ dffin3-2 .  There are infinite decrease points. $)
+    df32lem5 $p |- ( ph -> -. S e. Fin ) $=
+      ( va vb wcel cv cfv wa com wrex wn con0 csuc wpss wral df32lem2 ralrimiva
+      cfn wel cuni crab ssrab2 eqsstri nnunifi mpan adantl wi elssuni wb omsson
+      wss nnon sseldi ontri1 syl2anr syl5ib con2d impr eleq2i sylnib weq fveq2d
+      suceq fveq2 psseq12d elrab3 ad2antrl mtbid expr imnan sylib nrexdv anbi1d
+      wceq eleq1 rexbidv notbid rcla4ev syl2anc rexnal ex mt2d ) ADUFMZKLUGZLNZ
+      UAZENZOZWMWOOZUBZPZLQRZKQUCZAWTKQABKNZEFLGHIUDUEAWKXASZAWKPZWTSZKQRZXCXDD
+      UHZQMZXGWMMZWRPZLQRZSZXFWKXHADQUSWKXHDCNZUAZWOOZXMWOOZUBZCQUIZQJXQCQUJUKD
+      ULUMUNZXDXJLQXDWMQMZPZXIWRSZUOXJSXDXTXIYBXDXTXIPPZWMXRMZWRYCWMDMZYDXDXTXI
+      YESYAYEXIYEWMXGUSZYAXISZWMDUPXTWMTMXGTMYFYGUQXDWMUTXDQTXGURXSVAWMXGVBVCVD
+      VEVFDXRWMJVGVHXTYDWRUQXDXIXQWRCWMQCLVIZXOWPXPWQYHXNWNWOXMWMVKVJXMWMWOVLVM
+      VNVOVPVQXIWRVRVSVTXEXLKXGQXBXGWBZWTXKYIWSXJLQYIWLXIWRXBXGWMWCWAWDWEWFWGWT
+      KQWHVSWIWJ $.
+      $( [5-Nov-2014] $)
+
+    $d J a b c d s t w x y $.  $d K a b c d s t x y $.
+    df32lem.e $e |- J = ( u e. om |-> U. { v e. S | ( v i^i S ) ~~ u } ) $.
+    df32lem.f $e |- K = ( ( w e. S |-> ( ( f ` w ) \ ( f ` suc w ) ) ) o.
+      J ) $.
+    $( Lemma for ~ dffin3-2 .  Each K value is non-empty. $)
+    df32lem6 $p |- ( ( ph /\ A e. om ) -> ( K ` A ) =/= (/) ) $=
+      ( com cfv wcel wa cv csuc cdif cmpt ccom fveq1i wfun wceq funmpt a1i wf1o
+      c0 wf wss cfn wpss crab ssrab2 eqsstri df32lem5 adantr fin23lem22 sylancr
+      f1of syl simpr fvco3 syl3anc ffvelrn sylancom fveq2 suceq fveq2d difeq12d
+      eqid cvv fvex difexg ax-mp fvmpt eqtrd syl5eq wne psseq12d elrab2 simprbi
+      wn df-pss biimpi pssdifn0 3syl eqnetrd ) AGSUAZUBZGLTZGKTZIUCZTZWRUDZWSTZ
+      UEZUNWPWQGDHDUCZWSTZXDUDZWSTZUEZUFZKUGZTZXCGLXJRUHWPXKWRXITZXCWPXIUIZSHKU
+      OZWOXKXLUJXMWPDHXHUKULWPSHKUMZXNWPHSUPHUQUAWIZXOHCUCZUDZWSTZXQWSTZURZCSUS
+      SPYACSUTVAAXPWOABCHIJMNOPVBVCKHFEQVDVESHKVFVGZAWOVHSHGXIKVIVJWPWRHUAZXLXC
+      UJAWOXNYCYBSHGKVKVLZDWRXHXCHXIXDWRUJZXEWTXGXBXDWRWSVMYEXFXAWSXDWRVNVOVPXI
+      VQWTVRUAXCVRUAWRWSVSWTXBVRVTWAWBVGWCWDWPXBWTURZXBWTUPXBWTWEUBZXCUNWEWPYCY
+      FYDYCWRSUAYFYAYFCWRSHXQWRUJZXSXBXTWTYHXRXAWSXQWRVNVOXQWRWSVMWFPWGWHVGYFYG
+      XBWTWJWKXBWTWLWMWN $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ dffin3-2 .  Different K values are disjoint. $)
+    df32lem7 $p |- ( ( ( ph /\ A =/= B ) /\ ( A e. om /\ B e. om ) ) ->
+        ( ( K ` A ) i^i ( K ` B ) ) = (/) ) $=
+      ( com wne wa wcel cfv cin cv csuc cdif c0 cmpt ccom fveq1i wfun wf funmpt
+      wceq a1i wf1o wss wn wpss crab ssrab2 eqsstri df32lem5 fin23lem22 sylancr
+      cfn f1of syl simprl fvco3 syl3anc adantr simpl ffvelrn syl2an fveq2 suceq
+      ad2antrr fveq2d difeq12d eqid fvex difexg ax-mp fvmpt eqtrd syl5eq simprr
+      cvv simpr ineq12d simpll simplr wf1 f1of1 f1fveq sylan biimpd necon3d mpd
+      wb sseldi df32lem4 syl22anc ) AGHUAZUBZGTUCZHTUCZUBZUBZGMUDZHMUDZUEGLUDZJ
+      UFZUDZXOUGZXPUDZUHZHLUDZXPUDZYAUGZXPUDZUHZUEZUIXLXMXTXNYEXLXMGDIDUFZXPUDZ
+      YGUGZXPUDZUHZUJZLUKZUDZXTGMYMSULXLYNXOYLUDZXTXLYLUMZTILUNZXIYNYOUPYPXLDIY
+      KUOUQZAYQXGXKATILURZYQAITUSIVHUCUTYSICUFZUGXPUDYTXPUDVAZCTVBTQUUACTVCVDZA
+      BCIJKNOPQVELIFERVFVGZTILVIVJZVTZXHXIXJVKTIGYLLVLVMXLXOIUCZYOXTUPXHYQXIUUF
+      XKAYQXGUUDVNZXIXJVOTIGLVPVQZDXOYKXTIYLYGXOUPZYHXQYJXSYGXOXPVRUUIYIXRXPYGX
+      OVSWAWBYLWCZXQWKUCXTWKUCXOXPWDXQXSWKWEWFWGVJWHWIXLXNHYMUDZYEHMYMSULXLUUKY
+      AYLUDZYEXLYPYQXJUUKUULUPYRUUEXHXIXJWJTIHYLLVLVMXLYAIUCZUULYEUPXHYQXJUUMXK
+      UUGXIXJWLTIHLVPVQZDYAYKYEIYLYGYAUPZYHYBYJYDYGYAXPVRUUOYIYCXPYGYAVSWAWBUUJ
+      YBWKUCYEWKUCYAXPWDYBYDWKWEWFWGVJWHWIWMXLAXOYAUAZXOTUCYATUCYFUIUPAXGXKWNXL
+      XGUUPAXGXKWOXLXOYAGHXLXOYAUPZGHUPZXHTILWPZXKUUQUURXCAUUSXGAYSUUSUUCTILWQV
+      JVNTIGHLWRWSWTXAXBXLITXOUUBUUHXDXLITYAUUBUUNXDABXOYAJKNOPXEXFWH $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ dffin3-2 .  K sets are subsets of the base. $)
+    df32lem8 $p |- ( ( ph /\ A e. om ) -> ( K ` A ) C_ g ) $=
+      ( com cfv wcel wa cv csuc cdif cmpt ccom fveq1i wfun wceq funmpt a1i wf1o
+      wf wss cfn wn wpss crab ssrab2 eqsstri df32lem5 fin23lem22 sylancr adantr
+      f1of syl simpr fvco3 syl3anc ffvelrn sylan fveq2 fveq2d difeq12d eqid cvv
+      suceq fvex difexg ax-mp fvmpt eqtrd syl5eq difss cpw sseldi syl2anc elpw2
+      vex sylib syl5ss eqsstrd ) AGSUAZUBZGLTZGKTZIUCZTZWQUDZWRTZUEZJUCZWOWPGDH
+      DUCZWRTZXDUDZWRTZUEZUFZKUGZTZXBGLXJRUHWOXKWQXITZXBWOXIUIZSHKUNZWNXKXLUJXM
+      WODHXHUKULAXNWNASHKUMZXNAHSUOHUPUAUQXOHCUCZUDWRTXPWRTURZCSUSSPXQCSUTVAZAB
+      CHIJMNOPVBKHFEQVCVDSHKVFVGZVEAWNVHSHGXIKVIVJWOWQHUAZXLXBUJAXNWNXTXSSHGKVK
+      VLZDWQXHXBHXIXDWQUJZXEWSXGXAXDWQWRVMYBXFWTWRXDWQVRVNVOXIVPWSVQUAXBVQUAWQW
+      RVSWSXAVQVTWAWBVGWCWDWOXBWSXCWSXAWEWOWSXCWFZUAZWSXCUOWOSYCWRUNZWQSUAYDAYE
+      WNMVEWOHSWQXRYAWGSYCWQWRVKWHWSXCJWJWIWKWLWM $.
+      $( [6-Nov-2014] $)
+
+    $d L a b c d x $.
+    df32lem.g $e |- L = ( t e. g |-> if ( E! s e. om t e. ( K ` s ) ,
+        ( iota_ s e. om t e. ( K ` s ) ) , (/) ) ) $.
+    $( Lemma for ~ dffin3-2 .  Construction of the onto function. $)
+    df32lem9 $p |- ( ph -> L : g -onto-> om ) $=
+      ( va vb cv com wf cfv wceq wrex wral wfo wcel wreu crio c0 cif wel adantl
+      riotacl wn wa peano1 a1i ifclda rgen fmpt wex wne df32lem6 sylib df32lem8
+      mpbi sselda weq eleq1 reubidv riotabidv eqidd ifbieq12d riotaex 0ex fvmpt
+      n0 ifex syl w3a simp1r wal cin simpl1 simpr necomd simpl2 simpl3 df32lem7
+      wi syl22anc disj1 ax-4 syl6 com23 3adant1r mpd necon4ad eleq2d syl5ibrcom
+      ex fveq2 impbid riota5 an32s simplr eqeltrd cvv wb cpw vex dmfex ad2antrr
+      sylancr riotaclbg mpbird iftrue 3eqtrrd jca eximdv df-rex ralrimiva dffo3
+      syl6ibr sylanbrc ) AJUDZUEMUFZUBUDZUCUDZMUGZUHZUCYLUIZUBUEUJYLUEMUKYMAGUD
+      ZNUDZLUGZULZNUEUMZUUBNUEUNZUOUPZUEULZGYLUJYMUUFGYLGJUQZUUCUUDUOUEUUCUUDUE
+      ULUUGUUBNUEUSURUOUEULUUGUUCUTVAVBVCVDVEGYLUEUUEMUAVFVLVCAYRUBUEAYNUEULZVA
+      ZYOYNLUGZULZUCVGZYRUUIUUJUOVHUULABCDEFYNHIJKLOPQRSTVIUCUUJWCVJUUIUULUCJUQ
+      ZYQVAZUCVGYRUUIUUKUUNUCUUIUUKUUNUUIUUKVAZUUMYQUUIUUJYLYOABCDEFYNHIJKLOPQR
+      STVKVMZUUOYPYOUUAULZNUEUMZUUQNUEUNZUOUPZUUSYNUUOUUMYPUUTUHUUPGYOUUEUUTYLM
+      GUCVNZUUCUURUUDUOUUSUOUVAUUBUUQNUEYSYOUUAVOZVPUVAUUBUUQNUEUVBVQUVAUOVRVSU
+      AUURUUSUOUUQNUEVTWAWDWBWEUUOUURUUTUUSUHUUOUURUUSUEULZUUOUUSYNUEAUUKUUHUUS
+      YNUHAUUKVAZUUQNUEYNUVDUUHYTUEULZWFZUUQNUBVNZUVFUUQYTYNUVFUUKYTYNVHZUUQUTZ
+      WPZAUUKUUHUVEWGZAUUHUVEUUKUVJWPUUKAUUHUVEWFZUVHUUKUVIUVLUVHUUKUVIWPZUCWHZ
+      UVMUVLUVHUVNUVLUVHVAZUUJUUAWIUOUHZUVNUVOAYNYTVHUUHUVEUVPAUUHUVEUVHWJUVOYT
+      YNUVLUVHWKWLAUUHUVEUVHWMAUUHUVEUVHWNABCDEFYNYTHIJKLOPQRSTWOWQUCUUJUUAWRVJ
+      XGUVMUCWSWTXAXBXCXDUVFUUQUVGUUKUVKUVGUUAUUJYOYTYNLXHXEXFXIXJXKZAUUHUUKXLX
+      MUUOUEXNULZUURUVCXOAUVRUUHUUKAIUDZXNULUEYLXPZUVSUFUVRIXQOUEUVTXNUVSXRXTXS
+      UUQNUEXNYAWEYBUURUUSUOYCWEUVQYDYEXGYFYQUCYLYGYJXCYHUCUBYLUEMYIYK $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for dffin3-2 .  Wrap in existential. $)
+    df32lem10 $p |- ( ph -> E. a a : g -onto-> om ) $=
+      ( cv com wfo wex df32lem9 cvv wcel wf fof vex fex mpan2 syl foeq1 cla4egv
+      id sylc ) AJUCZUDMUEZUTUDOUCZUEZOUFZABCDEFGHIJKLMNPQRSTUAUBUGVAMUHUIZVAVD
+      VAUTUDMUJZVEUTUDMUKVFUTUHUIVEJULUTUDUHMUMUNUOVAURVCVAOMUHUTUDVBMUPUQUSUO
+      $.
+      $( [6-Nov-2014] $)
+  $}
+
+  ${
+    $d A a b c $.  $d B a b c $.  $d F a b c $.
+
+    $( Lemma for ~ dffin3-2 .  Covering implies injection on power sets. $)
+    df32lem11 $p |- ( ( F e. _V /\ F : A -onto-> B ) -> ~P B ~<_ ~P A ) $=
+      ( va vb cvv wcel wa cpw syl cv cima wss wceq adantl imaeq2 vex elpw sylib
+      wb wfo cdom wbr fof dmfex sylan2 pwexg ccnv crn imassrn cdm dfdm4 syl5eqr
+      wf fdm syl5sseq cnvexg adantr imaexg elpwg mpbird a1d weq simpllr simplrl
+      3syl foimacnv syl2anc simplrr 3eqtr3d ex impbid1 dom3d mpd ) CFGZABCUAZHZ
+      AIZFGZBIZVRUBUCVQAFGZVSVPVOABCUNZWAABCUDZABFCUEUFAFUGJVQDEVTVRCUHZDKZLZWD
+      EKZLZFVQWFVRGZWEVTGZVQWIWFAMZVPWKVOVPWDUIZWFAWDWEUJVPWLCUKZACULVPWBWMANWC
+      ABCUOJUMUPOVQWDFGZWFFGWIWKTVOWNVPCFUQURWDWEFUSWFAFUTVFVAVBVQWJWGVTGZHZWFW
+      HNZDEVCZTVQWPHZWQWRWSWQWRWSWQHZCWFLZCWHLZWEWGWQXAXBNWSWFWHCPOWTVPWEBMZXAW
+      ENVOVPWPWQVDZWTWJXCVQWJWOWQVEWEBDQRSABWECVGVHWTVPWGBMZXBWGNXDWTWOXEVQWJWO
+      WQVIWGBEQRSABWGCVGVHVJVKWEWGWDPVLVKVMVN $.
+      $( [6-Nov-2014] $)
+
+    $d a b c d e f g h i j k l x y $.
+
+    $( Lemma for ~ dffin3-2 .  Remove hypotheses from ~ df32lem9 . $)
+    df32lem12 $p |- ( -. j e. Fin3DS -> E. i i : j -onto-> om ) $=
+      ( va vb vc vd vh vg vf vk ve vl cv wcel wn com csuc cfv cmpt eqid cfin2ds
+      cpw wf wss wral wa crn wi wal wfo wex df-fin2ds abeq2i notbii exnal annim
+      cint wpss crab cin cen wbr cuni cdif ccom wreu crio cif simpll weq fveq2d
+      c0 suceq fveq2 sseq12d cbvralv biimpi ad2antlr psseq12d cbvrabv df32lem10
+      simpr sylbir exlimiv sylbi ) BMZUANZOPWFUBCMZUCZDMZQZWHRZWJWHRZUDZDPUEZUF
+      ZWHUGZUQWQNZUHZCUIZOZWFPAMUJAUKZWGWTWTBUABCDULUMUNXAWSOZCUKXBWSCUOXCXBCXC
+      WPWROZUFZXBWPWRUPXEEFGHIJKMZQZWHRZXFWHRZURZKPUSZCBIPHMXKUTIMVAVBHXKUSVCSZ
+      GXKGMZWHRXMQWHRVDSXLVEZJWFJMLMXNRNZLPVFXOLPVGVLVHSZLAWIWOXDVIWOEMZQZWHRZX
+      QWHRZUDZEPUEZWIXDWOYBWNYADEPDEVJZWLXSWMXTYCWKXRWHWJXQVMVKWJXQWHVNVOVPVQVR
+      WPXDWBXJFMZQZWHRZYDWHRZURKFPKFVJZXHYFXIYGYHXGYEWHXFYDVMVKXFYDWHVNVSVTXLTX
+      NTXPTWAWCWDWCWE $.
+      $( [6-Nov-2014] $)
+
+    $( Weakly Dedekind-infinite sets are exactly those which can be mapped onto
+       ` om ` . $)
+    dffin3-2 $p |- Fin3 = { x | -. E. y y : x -onto-> om } $=
+      ( va vb cfin3 cv com wfo wex cab wcel cpw cdom wbr cvv vex notbid cfin2ds
+      wn cfin4 csdm wi fornex ax-mp canth2g sdomdom 3syl df32lem11 mpan syl2anc
+      domtr df-fin3 abeq2i pwex wceq breq2 dffin4-2 elab2 bitri con2bii exlimiv
+      sylib con2i fin23lem41 df32lem12 con1i sseldi impbii weq foeq2 elab eqriv
+      exbidv bitr4i ) CEAFZGBFZHZBIZSZAJZCFZEKZWAGVPHZBIZSZWAVTKWBWEWDWBWCWBSZB
+      WCGWALZMNZWFWCGGLZMNZWIWGMNZWHWCGOKZGWIUANWJWAOKWCWLUBCPZWAGOVPUCUDGOUEGW
+      IUFUGVPOKWCWKBPWAGVPUHUIGWIWGUKUJWBWHWBWGTKZWHSZWNCECULUMGDFZMNZSWODWGTWA
+      WMUNWPWGUOWQWHWPWGGMUPQDUQURUSUTVBVAVCWEREWAVDWARKWDBCVEVFVGVHVSWEAWAWMAC
+      VIZVRWDWRVQWCBVOWAGVPVJVMQVKVNVL $.
+      $( [6-Nov-2014] $)
   $}
 
   ${
