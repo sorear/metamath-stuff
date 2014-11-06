@@ -8390,6 +8390,150 @@ $)
       $( [28-Oct-2014] $)
   $}
 
+  ${
+    $d a b c d e f g h i j k l m $.  $d A a b c $.  $d B a b c $.
+    $d C a b c $.
+
+    $( Relationship between onto function existance and ordinary dominance
+       (1-1). $)
+    ttaclem2 $p |- ( ( A e. _V /\ A : B -onto-> C ) -> ~P C ~<_ ~P B ) $=
+      ( va vc cvv wcel wa cpw syl cv cima wss wceq wb ex imaeq2 vex elpw sylib
+      wfo cdom wbr wf fof dmfex sylan2 pwexg ccnv crn imassrn cdm dfdm4 syl5eqr
+      fdm ad2antlr syl5sseq cnvexg imaexg ad2antrr elpwg mpbird simpllr simplrl
+      weq adantl foimacnv syl2anc simplrr 3eqtr3d impbid1 dom3d mpd ) AFGZBCAUA
+      ZHZBIZFGZCIZVQUBUCVPBFGZVRVOVNBCAUDZVTBCAUEZBCFAUFUGBFUHJVPDEVSVQAUIZDKZL
+      ZWCEKZLZFVPWDVSGZWEVQGZVPWHHZWIWEBMZWJWCUJZWEBWCWDUKVOWLBNVNWHVOWLAULZBAU
+      MVOWAWMBNWBBCAUOJUNUPUQWJWEFGZWIWKOVNWNVOWHVNWCFGWNAFURWCWDFUSJUTWEBFVAJV
+      BPVPWHWFVSGZHZWEWGNZDEVEZOVPWPHZWQWRWSWQWRWSWQHZAWELZAWGLZWDWFWQXAXBNWSWE
+      WGAQVFWTVOWDCMZXAWDNVNVOWPWQVCZWTWHXCVPWHWOWQVDWDCDRSTBCWDAVGVHWTVOWFCMZX
+      BWFNXDWTWOXEVPWHWOWQVIWFCERSTBCWFAVGVHVJPWDWFWCQVKPVLVM $.
+      $( [4-Nov-2014] $)
+
+    $( There is always an ordinal that a given set cannot be mapped onto.
+       Corrolary of ~ hartogs . $)
+    ttaclem $p |- E. a e. On -. E. b b : c -onto-> a $=
+      ( vd cv cpw cdom wbr con0 crab wcel wfo wex wrex cvv vex ax-mp mpan breq1
+      wn pwex hartogs onirri ttaclem2 csdm elexi canth2 sdomdom domtr wa elrab2
+      cbvrabv biimpri 3syl mto nex wceq foeq3 exbidv notbid rcla4ev mp2an ) DEZ
+      CEZFZGHZDIJZIKZVDVGBEZLZBMZTZVDAEZVILZBMZTZAINVEOKVHVDCPUADVEOUBQZVJBVJVG
+      VGKZVGVQUCVJVGFZVEGHZVGVEGHZVRVIOKVJVTBPVIVDVGUDRVGVSGHZVTWAVGVSUEHWBVGVG
+      IVQUFUGVGVSUHQVGVSVEUIRVHWAVRVQVRVHWAUJVMVEGHZWAAVGIVGVMVGVEGSVFWCDAIVCVM
+      VEGSULUKUMRUNUOUPVPVLAVGIVMVGUQZVOVKWDVNVJBVMVGVDVIURUSUTVAVB $.
+      $( [4-Nov-2014] $)
+
+    $( Lemma for ~ ttac .  Use non-surjection to prove non-emptiness. $)
+    ttaclem4 $p |- ( ( ( ( b i^i a ) = (/) /\ e e. ( b u. a ) ) /\
+        -. b ~<_ a /\ d : ( ( b u. a ) X. ( b u. a ) ) -1-1-onto->
+        ( b u. a ) ) -> ( b i^i ( d " ( b X. { e } ) ) ) =/= (/) ) $=
+      ( vf vg vh cv cin c0 wceq wcel wa wn wi vex wel ad2antlr opelxp sylanbrc
+      cun cdom wbr cxp wf1o w3a csn cima wne simp2 cvv cop wo wfun f1ofun elun1
+      cfv cdm adantl simpllr f1odm eleqtrrd simpr snid a1i funfvima imp adantlr
+      syl21anc incom eqeq1i wral disj eleq1 notbid rcla4v com12 mpd wf f1of syl
+      sylbi simplr ad2antrr ffvelrn syl2anc elun sylib orel1 sylc ex weq wb wf1
+      f1of1 ad2antrl ad2antll jca f1fveq biimpd opth simplbi syl6 opeq1 impbid1
+      fveq2d adantr dom2d mpi necon3bd 3adant2 ) CHZBHZIJKZAHZXLXMUAZLZMZXLXMUB
+      UCZNZXPXPUDZXPDHZUEZUFXTXLYBXLXOUGZUDZUHZIZJUIZXRXTYCUJXRYCXTYHOXTXRYCMZX
+      SYGJYIYGJKZXSYIYJMZXLUKLXSCPYKEFXLXMEHZXOULZYBUQZFHZXOULZYBUQZUKYKECQZYNX
+      MLZYKYRMZYNXLLZNZUUAYSUMZYSYTYNYFLZUUBYIYRUUDYJYIYRMZYBUNZYMYBURZLZYMYELZ
+      UUDYCUUFXRYRYAXPYBUORUUEYMYAUUGUUEYLXPLZXQYMYALZYRUUJYIYLXLXMUPZUSXNXQYCY
+      RUTYLXOXPXPAPZSZTYCUUGYAKXRYRYAXPYBVARVBUUEYRXOYDLZUUIYIYRVCUUOUUEXOUUMVD
+      VEYLXOXLYDUUMSTUUFUUHMUUIUUDYEYMYBVFVGVIVHYJUUDUUBOZYIYRYJYFXLIZJKZUUPYGU
+      UQJXLYFVJVKUURGCQZNZGYFVLZUUPGYFXLVMUUDUVAUUBUUTUUBGYNYFGHZYNKUUSUUAUVBYN
+      XLVNVOVPVQWBWBRVRYTYNXPLZUUCYTYAXPYBVSZUUKUVCYTYCUVDXRYCYJYRUTYAXPYBVTWAY
+      TUUJXQUUKYRUUJYKUULUSYIXQYJYRXNXQYCWCWDUUNTYAXPYMYBWEWFYNXLXMWGWHUUAYSWIW
+      JWKYIYRFCQZMZYNYQKZEFWLZWMZOYJYIUVFUVIYIUVFMZUVGUVHUVJUVGYMYPKZUVHUVJUVGU
+      VKUVJYAXPYBWNZUUKYPYALZMZUVGUVKWMYCUVLXRUVFYAXPYBWORXRUVFUVNYCXRUVFMZUUKU
+      VMUVOUUJXQUUKYRUUJXRUVEUULWPXNXQUVFWCZUUNTUVOYOXPLZXQUVMUVEUVQXRYRYOXLXMU
+      PWQUVPYOXOXPXPUUMSTWRVHYAXPYMYPYBWSWFWTUVKUVHAAWLYLXOYOXOEPUUMUUMXAXBXCUV
+      HYMYPYBYLYOXOXDXFXEWKXGXHXIWKXJXKVR $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ ttac . $)
+    ttaclem5 $p |- ( ( ( ( b i^i a ) = (/) /\ -. b ~<_ a /\ d : ( ( b u. a ) X.
+        ( b u. a ) ) -1-1-onto-> ( b u. a ) ) /\ b e. On ) -> a ~<_ b ) $=
+      ( ve vf vg cv cin c0 wceq cxp con0 wcel wa cima wss wne adantl simpll3 ex
+      cdom wbr wn cun wf1o w3a cvv vex csn cint wel inss1 onss ad2antlr simpll1
+      syl5ss elun2 simpll2 ttaclem4 syl211anc syl2anc sseldi weq wb wex adantrr
+      onint adantr wi adantrl eleq1a syl imp elin sylanbrc eleq1 cla4egv inindi
+      sylc n0 ccnv wfun wf1 f1of1 wf df-f1 simprbi eqcomd ineq2d xpindi imaeq2i
+      imain ineq2i disjsn2 xpeq2d imaeq2d xp0 in0 3eqtri syl6eq syl5eqr necon1d
+      ima0 eqtrd syl5bir sylsyld sneq inteqd impbid1 dom2d mpi ) BGZAGZHIJZXLXM
+      UAUBUCZXLXMUDZXPKZXPCGZUEZUFZXLLMZNZXMUGMXMXLUAUBAUHYBDEXMXLXLXRXLDGZUIZK
+      ZOZHZUJZXLXRXLEGZUIZKZOZHZUJZUGYBDAUKZYHXLMYBYONZYGXLYHXLYFULZYPYGLPYGIQZ
+      YHYGMZYPYGXLLYQYAXLLPZXTYOXLUMZUNUPYPXNYCXPMZXOXSYRXNXOXSYAYOUOYOUUBYBYCX
+      MXLUQRXNXOXSYAYOURXNXOXSYAYOSDABCUSUTYGVGVAZVBTYBYOEAUKZNZYHYNJZDEVCZVDYB
+      UUENZUUFUUGUUHXSUUFFGZYGYMHZMZFVEZUUGXNXOXSYAUUESUUHUUFUULUUHUUFNZYSYHUUJ
+      MZUULUUHYSUUFYBYOYSUUDUUCVFVHZUUMYSYHYMMZUUNUUOUUHUUFUUPUUHYNYMMZUUFUUPVI
+      YBUUDUUQYOYBUUDNZYMLPYMIQZUUQUURYMXLLXLYLULYAYTXTUUDUUAUNUPUURXNYIXPMZXOX
+      SUUSXNXOXSYAUUDUOUUDUUTYBYIXMXLUQRXNXOXSYAUUDURXNXOXSYAUUDSEABCUSUTYMVGVA
+      VJYNYMYHVKVLVMYHYGYMVNVOUUKUUNFYHYGUUIYHUUJVPVQVSTUULUUJIQXSUUGFUUJVTXSYC
+      YIUUJIXSYCYIQZUUJIJXSUVANZUUJXLYFYLHZHZIXLYFYLVRUVBUVDXLXRYEYKHZOZHZIUVBU
+      VCUVFXLUVBUVFUVCUVBXRWAWBZUVFUVCJXSUVHUVAXSXQXPXRWCZUVHXQXPXRWDUVIXQXPXRW
+      EUVHXQXPXRWFWGVLVHYEYKXRWLVLWHWIUVBUVGXLXRXLYDYJHZKZOZHZIUVLUVFXLUVKUVEXR
+      XLYDYJWJWKWMUVAUVMIJXSUVAUVMXLXRXLIKZOZHZIUVAUVLUVOXLUVAUVKUVNXRUVAUVJIXL
+      YCYIWNWOWPWIUVPXLXRIOZHXLIHIUVOUVQXLUVNIXRXLWQWKWMUVQIXLXRXCWMXLWRWSWTRXA
+      XDXATXBXEXFUUGYGYMUUGYFYLXLUUGYEYKXRUUGYDYJXLYCYIXGWOWPWIXHXITXJXK $.
+    $( [5-Nov-2014] $)
+
+    $( Lemma for ~ ttac . $)
+    ttaclem6 $p |- ( ( ( ( b i^i a ) = (/) /\ -. b ~<_ a /\ -. a e. Fin ) /\
+        ( b e. On /\ A. c ( om ~<_ c -> ( c X. c ) ~~ c ) ) ) -> a ~<_ b ) $=
+      ( vd cv wceq cdom wbr wn wcel com cxp cen wi wa wss wex syl vex cvv isinf
+      cin cfn w3a con0 wal cun simpl2 wral weq breq2 anbi2d exbidv rcla4v com12
+      c0 3ad2ant3 ensym adantl ssdomg ax-mp adantr endomtr syl2anc exlimiv syld
+      mtod word wb ordom eloni ordtri1 sylancr mpbird ssun1 syl6ss unex ssdom2g
+      a1i xpeq12 anidms id breq12d imbi12d cla4v wf1o bren simpll1 simpr simplr
+      simpll2 ttaclem5 syl31anc ex exlimdv syl5bi impr ) BEZAEZUBUPFZWRWSGHZIZW
+      SUCJIZUDZWRUEJZKCEZGHZXFXFLZXFMHZNZCUFZWSWRGHZXDXEOZXKWRWSUGZXNLZXNMHZXLX
+      MKXNGHZXKXPNXMKXNPZXQXMKWRXNXMKWRPZWRKJZIZXMXTXAWTXBXCXEUHXDXTXANXEXDXTDE
+      ZWSPZYBWRMHZOZDQZXAXCWTXTYFNZXBXCYCYBXFMHZOZDQZCKUIZYGDWSCUAXTYKYFYJYFCWR
+      KCBUJZYIYEDYLYHYDYCXFWRYBMUKULUMUNUORUQYFXANXDYEXADYEWRYBMHZYBWSGHZXAYDYM
+      YCYBWRBSZURUSYCYNYDYBTJYCYNNDSYBWSTUTVAVBWRYBWSVCVDVEVSVFVBVGXMKVHWRVHZXS
+      YAVIVJXEYPXDWRVKUSKWRVLVMVNWRWSVOVPXNTJXRXQNWRWSYOASVQZKXNTVRVARXKXQXPXJX
+      QXPNCXNYQXFXNFZXGXQXIXPXFXNKGUKYRXHXOXFXNMYRXHXOFXFXNXFXNVTWAYRWBWCWDWEUO
+      RXPXOXNXFWFZCQXMXLXOXNCYQWGXMYSXLCXMYSXLXMYSOWTXBYSXEXLWTXBXCXEYSWHWTXBXC
+      XEYSWKXMYSWIXDXEYSWJABCWLWMWNWOWPVFWQ $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ ttac . $)
+    ttaclem7 $p |- ( ( ( On i^i a ) = (/) /\ A. c ( om ~<_ c ->
+        ( c X. c ) ~~ c ) ) -> E. b e. On b ~~ a ) $=
+      ( vd cv wcel con0 cin c0 wceq cdom wbr cen wi wa wrex cvv breq1 syl2anc
+      wn cfn com cxp wal finnum a1d hartogs ax-mp onirri cbvrabv elrab2 biimpri
+      crab vex mpan mto notbid rcla4ev mp2an simprl wss ad2antrl simplrl ssdisj
+      onss simprr simplrr ttaclem6 syl32anc ra4e ondomen syl expr rexlimdva mpi
+      simpll ex pm2.61i ) AEZUAFZGVSHIJZUBCEZKLWBWBUCWBMLNCUDZOZBEZVSMLBGPZNVTW
+      FWDBVSUEUFVTTZWDWFWGWDOZDEZVSKLZTZDGPZWFWEVSKLZBGUMZGFZWNVSKLZTZWLVSQFWOA
+      UNBVSQUGUHZWPWNWNFZWNWRUIWOWPWSWRWSWOWPOWBVSKLZWPCWNGWNWBWNVSKRWMWTBCGWEW
+      BVSKRUJUKULUOUPWKWQDWNGWIWNJWJWPWIWNVSKRUQURUSWHWKWFDGWHWIGFZWKWFWHXAWKOZ
+      OZVSWIKLZDGPZWFXCXAXDXEWHXAWKUTZXCWIVSHIJZWKWGXAWCXDXCWIGVAZWAXGXAXHWHWKW
+      IVEVBWGWAWCXBVCWIGVSVDSWHXAWKVFWGWDXBVPXFWGWAWCXBVGADCVHVIXDDGVJSDBVSVKVL
+      VMVNVOVQVR $.
+      $( [5-Nov-2014] $)
+
+    $( Lemma for ~ ttac . $)
+    ttaclem8 $p |- ( A. c ( om ~<_ c -> ( c X. c ) ~~ c ) ->
+        E. b e. On b ~~ a ) $=
+      ( vd com cv wbr cxp cen wi c1o con0 wrex cin c0 wceq incom cvv eqtri wa
+      cdom wal wss xpss onxpdisj ssdisj mp2an vex 1onn elexi xpex eqeq1d anbi1d
+      ineq2 breq2 rexbidv imbi12d ttaclem7 vtocl mpan xp1en entr mpan2 reximi
+      syl ) ECFZUAGVFVFHVFIGJCUBZBFZAFZKHZIGZBLMZVHVIIGZBLMLVJNZOPZVGVLVNVJLNZO
+      LVJQVJRRHZUCVQLNZOPVPOPVIKUDVRLVQNOVQLQUESVJVQLUFUGSLDFZNZOPZVGTZVHVSIGZB
+      LMZJVOVGTZVLJDVJVIKAUHZKEUIUJUKVSVJPZWBWEWDVLWGWAVOVGWGVTVNOVSVJLUNULUMWG
+      WCVKBLVSVJVHIUOUPUQDBCURUSUTVKVMBLVKVJVIIGVMVIWFVAVHVJVIVBVCVDVE $.
+      $( [5-Nov-2014] $)
+
+    $( Tarski's theorem about choice: ~ infxpidm is equivalent to ~ ax-ac . $)
+    ttac $p |- ( A. a E. b b We a <-> A. c ( om ~<_ c -> ( c X. c ) ~~ c ) ) $=
+      ( vd cv wwe wex wal cen wbr con0 wrex com cdom cvv wcel vex con2i alrimiv
+      wn cxp wi ween ax-mp albii weq breq2 rexbidv cla4v csdm isfinite3 domnsym
+      wb cfn sylbi infxpidm2 ex syl5 syl ttaclem8 impbii bitri ) AEZBEFBGZAHDEZ
+      VCIJZDKLZAHZMCEZNJZVIVIUAVIIJZUBZCHZVDVGAVCOPVDVGUMAQDVCOBUCUDUEVHVMVHVLC
+      VHVEVIIJZDKLZVLVGVOAVICQZACUFVFVNDKVCVIVEIUGUHUIVJVIUNPZTZVOVKVQVJVQVIMUJ
+      JZVJTVIUKVJVSMVIULRUORVOVRVKDVIVPUPUQURUSSVMVGAADCUTSVAVB $.
+      $( [4-Nov-2014] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Eight inequivalent definitions of finite set
@@ -9913,6 +10057,64 @@ $)
     $( TODO: a set which fails the descending sequence condition generates by differences a sequence of disjoint subsets I-infinitely many of which are nonempty.  Thus we can filter out an infinite sequence of disjoint nonempty subsets, and (after lumping the remainder into bucket 0) map the set onto om.  A mapping onto om generates a countable set of disjoint preimages, closing the cycle... $)
   $}
 
+  ${
+    $d A x y a b $.  $d F a b y $.  $d G a b x y $.
+    compssiso.a $e |- F = ( x e. ~P A |-> ( A \ x ) ) $.
+    compssiso.b $e |- A e. _V $.
+    $( Complementation is an antiautomorphism on power set latticies. $)
+    compssiso $p |- F Isom {C.} , `' {C.} ( ~P A , ~P A ) $=
+      ( va vb crpss wbr wb cvv wcel cdif wa wss elpw2 wceq bitri difeq2 sscon
+      cpw ccnv wiso wf1o cv cfv wral df-iso difss mpbir a1i dfss4 biimpi eqcomd
+      wi eqeq2d syl5ibrcom adantl adantr impbid f1o2d ax-mp wpss sseq12 syl2anr
+      wn syl5ib impbid2 ancoms notbid anbi12d dfpss3 3bitr4g brrpss brcnv fvmpt
+      vex difexg breqan12d bitr4d rgen2a mpbir2an ) BUAZWCHHUBZCUCWCWCCUDZFUEZG
+      UEZHIZWFCUFZWGCUFZWDIZJZGWCUGFWCUGFGWCWCHWDCUHBKLZWEEWMAFWCWCBAUEZMZBWFMZ
+      CDWOWCLZWMWNWCLZNWQWOBOBWNUIWOBEPUJUKWPWCLZWMWFWCLZNWSWPBOBWFUIWPBEPUJUKW
+      RWTNZWNWPQZWFWOQZJWMXAXBXCWTXBXCUOWRWTXCXBWFBWPMZQWTXDWFWTXDWFQZWTWFBOXEW
+      FBEPWFBULRUMZUNXBWOXDWFWNWPBSUPUQURWRXCXBUOWTWRXBXCWNBWOMZQWRXGWNWRXGWNQZ
+      WRWNBOXHWNBEPWNBULRUMUNXCWPXGWNWFWOBSUPUQUSUTURVAVBWLFGWCWTWGWCLZNZWHWPBW
+      GMZWDIZWKXJWFWGVCZXKWPVCZWHXLXJWFWGOZWGWFOZVFZNXKWPOZWPXKOZVFZNXMXNXJXOXR
+      XQXTXIWTXOXRJXIWTNZXOXRWFWGBTXRXDBXKMZOZYAXOXKWPBTWTXEYBWGQZYCXOJXIXFXIYD
+      XIWGBOYDWGBEPWGBULRUMZXDWFYBWGVDVEVGVHVIXJXPXSXJXPXSWGWFBTXSYBXDOZXJXPWPX
+      KBTXIYDXEYFXPJWTYEXFYBWGXDWFVDVEVGVHVJVKWFWGVLXKWPVLVMWFWGGVQVNXLXKWPHIXN
+      WPXKHWMWPKLEBWFKVRVBZWMXKKLEBWGKVRVBZVOXKWPYGVNRVMWTXIWIWPWJXKWDAWFWOWPWC
+      CWNWFBSDYGVPAWGWOXKWCCWNWGBSDYHVPVSVTWAWB $.
+    $( [4-Nov-2014] $)
+
+    $( Express image under of the complementation isomorphism. $)
+    compss $p |- ( G C_ ~P A -> ( F " G ) = { y e. ~P A | ( A \ y ) e. G } ) $=
+      ( va vb wss cv cdif wcel wceq wrex wa wb difeq2 cvv elpw2 cima crab ssel2
+      cpw cfv difexg ax-mp fvmpt syl rexbidva difss mpbir eleq1 mpbii rexlimivw
+      eqeq1d pm4.71ri dfss4 biimpi adantlr eqcomd syl5ibcom ad2antlr syl5ibrcom
+      bitri eqeq2d impbid risset syl6bbr pm5.32da syl5bb bitrd wfn a1i fvelimab
+      fnmpt mprg mpan weq eleq1d elrab 3bitr4d eqrdv ) ECUDZJZHDEUAZCBKZLZEMZBW
+      DUBZWEIKZDUEZHKZNZIEOZWMWDMZCWMLZEMZPZWMWFMZWMWJMZWEWOCWKLZWMNZIEOZWSWEWN
+      XCIEWEWKEMZPZWKWDMZWNXCQEWDWKUCZXGWLXBWMAWKCAKZLZXBWDDXIWKCRFCSMZXBSMGCWK
+      SUFUGUHUPUIUJXDWPXDPWEWSXDWPXCWPIEXCXBWDMZWPXLXBCJCWKUKXBCGTULXBWMWDUMUNU
+      OUQWEWPXDWRWEWPPZXDWKWQNZIEOWRXMXCXNIEXMXEPZXCXNXOWKCXBLZNXCXNXOXPWKWEXEX
+      PWKNZWPXFXGXQXHXGXQXGWKCJXQWKCGTWKCURVEUSUIUTVAXCXPWQWKXBWMCRVFVBXOXCXNCW
+      QLZWMNZWPXSWEXEWPXSWPWMCJXSWMCGTWMCURVEUSVCXNXBXRWMWKWQCRUPVDVGUJIWQEVHVI
+      VJVKVLDWDVMZWEWTWOQXJSMZXTAWDAWDXJDSFVPYAXIWDMXKYAGCXISUFUGVNVQIWDEWMDVOV
+      RXAWSQWEWIWRBWMWDBHVSWHWQEWGWMCRVTWAVNWBWC $.
+      $( [5-Nov-2014] $)
+  $}
+
+  ${
+    $d H a b c $.  $d R a b c $.  $d S a b c $.  $d K a b c $.  $d A a b c $.
+    $d B a b c $.  $d X a b c $.
+    $( Induced isomorphism on a subset. $)
+    isores3 $p |- ( ( H Isom R , S ( A , B ) /\ K C_ A /\ X = ( H " K ) ) ->
+        ( H |` K ) Isom R , S ( K , X ) ) $=
+      ( va vb wiso wa wf1o cv wbr cfv wb wral ssralv wcel fvres cima wceq f1of1
+      wss cres wf1 f1ores expcom syl5 adantr breqan12d adantll biimprd ralimdva
+      wi bibi2d syld anim12d df-iso 3imtr4g impcom isoeq5 syl5ibrcom 3impia ) A
+      BCDEJZFAUDZGEFUAZUBZFGCDEFUEZJZVEVFKVJVHFVGCDVIJZVFVEVKVFABELZHMZIMZCNZVM
+      EOZVNEOZDNZPZIAQZHAQZKFVGVILZVOVMVIOZVNVIOZDNZPZIFQZHFQZKVEVKVFVLWBWAWHVL
+      ABEUFZVFWBABEUCWIVFWBABFEUGUHUIVFWAVTHFQWHVTHFARVFVTWGHFVFVMFSZKZVTVSIFQZ
+      WGVFVTWLUOWJVSIFARUJWKVSWFIFWKVNFSZKZWFVSWNWEVRVOWJWMWEVRPVFWJWMWCVPWDVQD
+      VMFETVNFETUKULUPUMUNUQUNUQURHIABCDEUSHIFVGCDVIUSUTVAFGVGCDVIVBVCVD $.
+      $( [5-Nov-2014] $)
+  $}
 
   ${
     $d x y z a b c d e f g $.
@@ -9953,6 +10155,40 @@ $)
       FXPYTYJWGWHWIRWDYPUUKYRTYBUUAYPUUKYRXPYJWJWKWLWMRWNWOYRYHYKEXJXPYJYGPUEWP
       WQRXAXBWRWSWTXC $.
       $( [3-Nov-2014] $)
+
+    $( A set is I-finite iff every system of subsets contains a maximal
+       subset. $)
+    dffin1-3 $p |- Fin = { x | `' {C.} Fr ~P x } $=
+      ( va vc vb vd cfn cv cpw crpss wfr wcel wbr wn vex wa wss wne elin adantr
+      c0 ccnv cab wpo porpss cnvpo mpbi pwfi biimpi frfi sylancr wral wrex pwex
+      cin cvv inex2 inss2 0fin 0elpw mpbir2an ne0i fri mpanr12 mpan weq wpss wi
+      ax-mp simprbi elpwi df-pss simplbi2 3syl wel wex csn cun inss1 sseli snfi
+      pssnel unfi sylancl elpw2 sylib snssi ad2antrl unssd sylibr sylanbrc wceq
+      disjsn biimpri snnz disjpss ad2antll snex unex brcnv brrpss bitri rcla4ev
+      breq1 syl2anc dfrex2 ex exlimdv syl5 syld necon4ad imp eqeltrrd rexlimiva
+      syl impbii wb pweq freq2 elab bitr4i eqriv ) BFAGZHZIUAZJZAUBZBGZFKZYGHZY
+      DJZYGYFKYHYJYHYIYDUCZYIFKZYJYIIUCYKYIUDYIIUEUFYHYLYGUGUHYIYDUIUJYJCGZDGZY
+      DLZMCFYIUNZUKZDYPULZYHYPUOKZYJYRYIFYGBNZUMUPYSYJOYPYIPYPTQZYRFYIUQTYPKZUU
+      AUUBTFKTYIKTFYIRURYGUSUTYPTVAVHDCYIYPUOYDVBVCVDYQYHDYPYNYPKZYQOYNYGFUUCYQ
+      DBVEUUCYQYNYGUUCYNYGQZYNYGVFZYQMZUUCYNYIKZYNYGPZUUDUUEVGUUCYNFKZUUGYNFYIR
+      VIZYNYGVJUUEUUHUUDYNYGVKVLVMUUEEBVNZEDVNMZOZEVOUUCUUFEYNYGWAUUCUUMUUFEUUC
+      UUMUUFUUCUUMOZYOCYPULZUUFUUNYNEGZVPZVQZYPKZUURYNYDLZUUOUUNUURFKZUURYIKZUU
+      SUUNUUIUUQFKUVAUUCUUIUUMYPFYNFYIVRVSZSUUPVTYNUUQWBWCUUNUURYGPUVBUUNYNUUQY
+      GUUCUUHUUMUUCUUGUUHUUJYNYGYTWDWESUUKUUQYGPUUCUULUUPYGWFWGWHUURYGYTWDWIUUR
+      FYIRWJUUNYNUURVFZUUTUULUVDUUCUUKUULYNUUQUNTWKZUUQTQUVDUVEUULYNUUPWLWMUUPE
+      NWNYNUUQWOWCWPUUTYNUURILUVDUURYNIYNUUQDNZUUPWQWRZUVFWSYNUURUVGWTXAWIYOUUT
+      CUURYPYMUURYNYDXCXBXDYOCYPXEWEXFXGXHXIXJXKUUCUUIYQUVCSXLXMXNXOYEYJAYGYTAB
+      VEYCYIWKYEYJXPYBYGXQYCYIYDXRXNXSXTYA $.
+      $( [4-Nov-2014] $)
+
+    $( A set is I-finite iff every system of subsets contains a minimal
+       subset. $)
+    dffin1-4 $p |- Fin = { x | {C.} Fr ~P x } $=
+      ( va vb cfn cpw crpss wfr cab ccnv wcel cdif cmpt wiso eqid vex compssiso
+      cv wb isofr ax-mp weq wceq pweq freq2 elab dffin1-3 abeq2i 3bitr4ri eqriv
+      syl ) BDAQZEZFGZAHZBQZEZFGZUPFIZGZUOUNJUODJUPUPFURCUPUOCQKLZMUQUSRCUOUTUT
+      NBOZPUPUPFURUTSTUMUQAUOVAABUAULUPUBUMUQRUKUOUCULUPFUDUJUEUSBDBUFUGUHUI $.
+      $( [4-Nov-2014] $)
 
     $( Every II-finite set is III-finite. $)
     fin23 $p |- Fin2 C_ Fin3 $=
