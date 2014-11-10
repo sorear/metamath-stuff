@@ -1,4 +1,4 @@
-$[ set_clean.mm $]
+$[ set_clean.mm $] $( set.mm - Version of 13-Oct-2014 $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -2348,7 +2348,8 @@ $)
     eldioph4b.a $e |- W e. _V $.
     eldioph4b.b $e |- -. W e. Fin $.
     eldioph4b.c $e |- ( W i^i NN ) = (/) $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
+    $( Membership in ` Dioph ` expressed using a quantified union to add
+       witness variables instead of a restriction to remove them. $)
     eldioph4b $p |- ( S e. ( Dioph ` N ) <-> ( N e. NN0 /\ E. p e. ( mzPoly ` (
         W u. ( 1 ... N ) ) ) S = { t e. ( NN0 ^m ( 1 ... N ) ) | E. w e. ( NN0
         ^m W ) ( p ` ( t u. w ) ) = 0 } ) ) $=
@@ -2379,8 +2380,9 @@ $)
       PZUWCUVFUWNUWSUWQEYSMYLYKGUVAXLXIXJXMVGUWDYPXOUUKUWGYPSJYMUULUUFYMPZUUHUW
       GUUJYPUWTUUGUWFYKUUFYMYSXNXPUWTUUIYOOUUFYMYNYEWCWJWEXQXRXSXTYAYFYRBYTYBVJ
       YCYDYGYH $.
+      $( [16-Oct-2014] $)
 
-    $( [16-Oct-2014] $)
+    $( Forward-only version of ~ eldioph4b . $)
     eldioph4i $p |- ( ( N e. NN0 /\ P e. ( mzPoly ` ( W u. ( 1 ... N ) ) ) ) ->
         { t e. ( NN0 ^m ( 1 ... N ) ) | E. w e. ( NN0 ^m W ) ( P ` ( t u. w ) )
         = 0 } e. ( Dioph ` N ) ) $=
@@ -2452,7 +2454,8 @@ $)
 
   ${
     $d ph b $.  $d A a b $.  $d B a b $.  $d F a b $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
+    $( Change variable numbers in a Diophantine class abstraction using
+       explicit substitution. $)
     rabrenfdioph $p |- ( ( B e. NN0 /\ F : ( 1 ... A ) --> ( 1 ... B ) /\
           { a e. ( NN0 ^m ( 1 ... A ) ) | ph } e. ( Dioph ` A ) ) ->
         { b e. ( NN0 ^m ( 1 ... B ) ) | [ ( b o. F ) / a ] ph } e.
@@ -2474,7 +2477,8 @@ $)
     rabren3dioph.b $e |- X e. ( 1 ... N ) $.
     rabren3dioph.c $e |- Y e. ( 1 ... N ) $.
     rabren3dioph.d $e |- Z e. ( 1 ... N ) $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
+    $( Change variable numbers in a 3-variable Diophantine class
+       abstraction. $)
     rabren3dioph $p |- ( ( N e. NN0 /\ { a e. ( NN0 ^m ( 1 ... 3 ) ) | ph } e.
         ( Dioph ` 3 ) ) -> { b e. ( NN0 ^m ( 1 ... N ) ) | ps } e.
         ( Dioph ` N ) ) $=
@@ -5919,15 +5923,16 @@ $)
       UPJULJMUCUAUDUMUTURJIZUPURTLZUQUSTLZUEUMUTVAUFVBVCAUPURUGUHUIUJUK $.
       $( [3-Oct-2014] $)
   $}
-  $( PLEASE PUT DESCRIPTION HERE. $)
+  $( ` rmY ` is positive for positive arguments. $)
   rmynn $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) -> ( A rmY N ) e. NN ) $=
     ( c2 cuz cfv wcel cn wa crmy co cz cc0 clt wbr nnz frmy fovcl sylan2 adantl
     wceq rmy0 adantr nngt0 wb simpl ltrmy syl3anc mpbid eqbrtrrd elnnz sylanbrc
     0z a1i ) ACDEZFZBGFZHZABIJZKFZLURMNURGFUPUOBKFZUSBOZABKUNKIPQRUQALIJZLURMUO
     VBLTUPAUAUBUQLBMNZVBURMNZUPVCUOBUCSUQUOLKFZUTVCVDUDUOUPUEVEUQULUMUPUTUOVASA
     LBUFUGUHUIURUJUK $.
+    $( [16-Oct-2014] $)
 
-  $( [16-Oct-2014] $)
+  $( ` rmY ` is nonnegative for nonnegative arguments. $)
   rmynn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A rmY N ) e. NN0 ) $=
     ( c2 cuz cfv wcel cn0 wa crmy co cz cc0 cle wbr nn0z frmy fovcl sylan2 crmx
     clt rmxypos simprd elnn0z sylanbrc ) ACDEZFZBGFZHZABIJZKFZLUIMNZUIGFUGUFBKF
@@ -6629,7 +6634,7 @@ $)
 
   ${
     $d N a $.  $d D a $.  $d R a $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
+    $( ~ divalgmod using a class variable. $)
     divalgmodcl $p |- ( ( N e. ZZ /\ D e. NN /\ R e. NN0 ) ->
         ( R = ( N mod D ) <-> ( R < D /\ D || ( N - R ) ) ) ) $=
       ( va cz wcel cn cn0 cmo co wceq clt wbr cmin cdivides wa wb cv wi anbi12d
