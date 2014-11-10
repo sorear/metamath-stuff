@@ -2331,12 +2331,6 @@ $)
       $( [16-Oct-2014] $)
   $}
 
-  $( Disjoint classes have disjoint subsets. $)
-  disjss1 $p |- ( ( A C_ B /\ ( B i^i C ) = (/) ) -> ( A i^i C ) = (/) ) $=
-    ( wss cin c0 wceq wa ssrin adantr simpr sseqtrd ss0 syl ) ABDZBCEZFGZHZACEZ
-    FDSFGRSPFOSPDQABCIJOQKLSMN $.
-    $( [16-Oct-2014] $)
-
   ${
     ftp.a $e |- A e. _V $.
     ftp.b $e |- B e. _V $.
@@ -2433,10 +2427,10 @@ $)
       wb omex caddc nnuz ax-1cn addid2i fveq2i eqtr4i difeq2i 0z lzenom eqbrtri
       cuz enfi mp2an mtbir incom disjdif eqtri eldioph4b cres cmpt simpr simplr
       cin ad2antrr nn0ex ovex mapco2 syl2anc uneq1 fveq2d eqeq1d rexbidv elrab3
-      cid syl ad3antrrr w3a coundi coundir elmap 3ad2ant3 simp1 fz1ssnn disjss1
-      biimpi wss a1i coeq0i syl3anc uneq2d syl5eq un0 syl6eq 3ad2ant2 wf1o f1oi
-      f1of mp3an23 wfun wrel elmapfun funrel coires1 3syl wfn ffn fnresdm eqtrd
-      uneq12d uncom syl5req nn0ssz unex mapss reseq2i res0 elmapresaun oveq2i
+      cid syl ad3antrrr w3a coundi coundir elmap biimpi 3ad2ant3 fz1ssnn ssdisj
+      simp1 wss a1i coeq0i syl3anc uneq2d syl5eq syl6eq 3ad2ant2 wf1o f1oi f1of
+      un0 mp3an23 wfun wrel elmapfun coires1 3syl wfn ffn fnresdm eqtrd uneq12d
+      funrel uncom syl5req nn0ssz unex mapss reseq2i res0 elmapresaun oveq2i
       syl6eleq mp3an3 sseldi adantll coeq1 fvmpt eqtr4d rexbidva bitrd rabbidva
       eqid fvex simplll simpllr id1 fun feq1i sylib mzprename eldioph4i eqeltrd
       syl21anc eleq2 rabbidv eleq1d syl5ibrcom rexlimdva expimpd syl5bi impcom
@@ -2453,14 +2447,14 @@ $)
       JUWGUWMHZNZUYLUYEPUYTUYLUXPUYALZUWIGZUYEUYTUYKVUAUWIUYTUVPUYIUYSUYKVUAQUX
       KUVPUXLUYIUYSUYPWRUXMUYIUYSWDUYJUYSWCUVPUYIUYSWSZVUAUXPBLZUXPUXTLZOUYKUXP
       BUXTWTVUCVUDUVRVUEUWGVUCVUDUVRTOZUVRVUCVUDUVRUWGBLZOVUFUVQUWGBXAVUCVUGTUV
-      RVUCUWLIUWGUDZUVPUWLUVOWEZTQZVUGTQUYSUVPVUHUYIUYSVUHIUWLUWGWGUXAXBXGZXCUV
-      PUYIUYSXDVUJVUCVUIUVOUWLWEZTUWLUVOVQUVOSXHUXHTQZVULTQZCXEUXIUVOSUWLXFVOZV
-      SXIUWGBUWLIUVNUVOXJXKXLXMUVRXNXOVUCVUETUWGOZUWGVUCVUEUVQUXTLZUWGUXTLZOVUP
+      RVUCUWLIUWGUDZUVPUWLUVOWEZTQZVUGTQUYSUVPVUHUYIUYSVUHIUWLUWGWGUXAXBXCZXDUV
+      PUYIUYSXGVUJVUCVUIUVOUWLWEZTUWLUVOVQUVOSXHUXHTQZVULTQZCXEUXIUVOSUWLXFVOZV
+      SXIUWGBUWLIUVNUVOXJXKXLXMUVRXSXNVUCVUETUWGOZUWGVUCVUEUVQUXTLZUWGUXTLZOVUP
       UVQUWGUXTXAVUCVUQTVURUWGVUCUVOIUVQUDZVUQTQZUYIUVPVUSUYSUYIVUSIUVOUVQWGUYQ
-      XBXGXPVUSUWLUWLUXTUDZVUNVUTUWLUWLUXTXQVVAUWLXRUWLUWLUXTXSUOZVUOUVQUXTUVOI
+      XBXCXOVUSUWLUWLUXTUDZVUNVUTUWLUWLUXTXPVVAUWLXQUWLUWLUXTXRUOZVUOUVQUXTUVOI
       UWLUWLXJXTWQUYSUVPVURUWGQUYIUYSVURUWGUWLWAZUWGUYSUWGYAUWGYBVURVVCQUWGIUWL
-      YCUWGYDUWGUWLYEYFUYSVUHUWGUWLYGVVCUWGQVUKUWLIUWGYHUWLUWGYIYFYJXCYKXMVUPUW
-      GTOUWGTUWGYLUWGXNVSXOYKYMXKWLUYTUXPUXRHZUYEVUBQUYIUYSVVDUXMUYIUYSNIUXQMKZ
+      YCUWGYKUWGUWLYDYEUYSVUHUWGUWLYFVVCUWGQVUKUWLIUWGYGUWLUWGYHYEYIXDYJXMVUPUW
+      GTOUWGTUWGYLUWGXSVSXNYJYMXKWLUYTUXPUXRHZUYEVUBQUYIUYSVVDUXMUYIUYSNIUXQMKZ
       UXRUXPIRXHVVEUXRXHYNIRUXQUMUWLUVOUXAUYQYOZYPUOUYIUYSUVQVULWAZUWGVULWAZQZU
       XPVVEHVVGTVVHVVGUVQTWATVULTUVQVUOYQUVQYRVSVVHUWGTWATVULTUWGVUOYQUWGYRVSVH
       UYIUYSVVIWSUXPIUVOUWLOZMKVVEUVOUWLIUVQUWGUYQUXAYSVVJUXQIMUVOUWLYLYTUUAUUB
@@ -2880,16 +2874,6 @@ $)
       ZUMAUAZUHUBSUGUOUNUPUHUCSUIUHUDUEUF $.
       $( [13-Sep-2014] $)
 
-    $( Accidental reproof of ~ divides2 . $)
-    zdivnndivides $p |- ( ( A e. ZZ /\ B e. NN ) -> ( B || A <-> ( A / B ) e.
-        ZZ ) ) $=
-      ( va cz wcel cn wa cdivides wbr cv cmul wceq wrex cdiv nnz adantl syl2anc
-      co wb cc simpl divides nncn ad2antlr mulcom eqeq1d rexbidva ancoms 3bitrd
-      zcn zdiv ) ADEZBFEZGZBAHIZCJZBKRZALZCDMZBUPKRZALZCDMZABNRDEZUNBDEZULUOUSS
-      UMVDULBOPULUMUACBAUBQUNURVACDUNUPDEZGZUQUTAVFUPTEZBTEZUQUTLVEVGUNUPUJPUMV
-      HULVEBUCUDUPBUEQUFUGUMULVBVCSCBAUKUHUI $.
-      $( [13-Sep-2014] $)
-
     $( A number is an integer iff its negative is. $)
     znegclb $p |- ( A e. CC -> ( A e. ZZ <-> -u A e. ZZ ) ) $=
       ( cc wcel cz cneg znegcl negneg eleq1d syl5ib impbid2 ) ABCZADCZAEZDCZAFN
@@ -2902,46 +2886,31 @@ $)
       HIADJKL $.
       $( [13-Sep-2014] $)
 
-    $( Accidental reproof of ~ divides2 . $)
-    zdivzne0divides $p |- ( ( A e. ZZ /\ B e. ZZ /\ B =/= 0 ) -> ( B || A <-> (
-        A / B ) e. ZZ ) ) $=
-      ( cz wcel cc0 cdivides wbr cdiv co wb wa clt cr cneg cn ad2antlr sylancom
-      simpll syl2anc cc wne zre adantl 0re lttri2 sylancl znegcl lt0neg1 biimpa
-      wo elnnz biimpri zdivnndivides negdvdsb ancoms adantr zcn ad2antrr lt0ne0
-      recnd divcl syl3anc znegclb syl wceq divneg2 eleq1d bitrd 3bitr4d adantll
-      ex jaod sylbid 3impia ) ACDZBCDZBEUAZBAFGZABHIZCDZJZVOVPKZVQBELGZEBLGZUJZ
-      WAWBBMDZEMDVQWEJVPWFVOBUBZUCUDBEUEUFWBWCWAWDWBWCWAWBWCKZBNZAFGZAWIHIZCDZV
-      RVTWHVOWIODZWJWLJVOVPWCRWHWICDZEWILGZWMVPWNVOWCBUGPWBWCWFWOVPWFVOWCWGPZWF
-      WCWOBUHUIQWMWNWOKWIUKULSAWIUMSWBVRWJJZWCVPVOWQBAUNUOUPWHVTVSNZCDZWLWHVSTD
-      ZVTWSJWHATDZBTDZVQWTVOXAVPWCAUQURZWHBWPUTZWBWCWFVQWPBUSQZABVAVBVSVCVDWHWR
-      WKCWHXAXBVQWRWKVEXCXDXEABVFVBVGVHVIVKWBWDWAWBWDKVOBODZWAVOVPWDRVPWDXFVOXF
-      VPWDKBUKULVJABUMSVKVLVMVN $.
-      $( [19-Oct-2014] $)
-
     $( Strong form of ~ divides2 for natural numbers. $)
     nndivdivides $p |- ( ( A e. NN /\ B e. NN ) -> ( B || A <-> ( A / B ) e. NN
         ) ) $=
-      ( cn wcel wa cdivides wbr cc0 cdiv co clt cz wb nnz zdivnndivides cr nnre
-      adantr nngt0 adantl sylan anbi1d divgt0 syl22anc biantrud elnnz 3bitr4d
-      a1i ) ACDZBCDZEZBAFGZHABIJZKGZEUMLDZUNEZULUMCDZUKULUOUNUIALDUJULUOMANABOU
-      AUBUKUNULUKAPDZHAKGZBPDZHBKGZUNUIURUJAQRUIUSUJASRUJUTUIBQTUJVAUIBSTABUCUD
-      UEUQUPMUKUMUFUHUG $.
+      ( cn wcel wa cdivides wbr cc0 cdiv co clt cz wne wb adantl adantr cr nnre
+      nnz nngt0 nnne0 divides2 syl3anc anbi1d divgt0 syl22anc elnnz a1i 3bitr4d
+      biantrud ) ACDZBCDZEZBAFGZHABIJZKGZEUOLDZUPEZUNUOCDZUMUNUQUPUMBLDZBHMZALD
+      ZUNUQNULUTUKBSOULVAUKBUAOUKVBULASPBAUBUCUDUMUPUNUMAQDZHAKGZBQDZHBKGZUPUKV
+      CULARPUKVDULATPULVEUKBROULVFUKBTOABUEUFUJUSURNUMUOUGUHUI $.
       $( [13-Sep-2014] $)
 
     $( Calculate the reduced form of a quotient using ` gcd ` . $)
     divnumden $p |- ( ( A e. ZZ /\ B e. NN ) -> ( ( numer ` ( A / B ) ) = ( A /
         ( A gcd B ) ) /\ ( denom ` ( A / B ) ) = ( B / ( A gcd B ) ) ) ) $=
-      ( cz wcel cn wa cgcd co cdiv c1 cfv wb cdivides wbr adantl syl2anc cc0 wn
-      wceq cc cnumer cdenom cq znq simpl nnz gcddvds simpld nnne0 df-ne intnand
-      wne sylib gcdn0cl zdivnndivides mpbid simprd simpr nndivdivides qnumdenbi
-      syl21anc syl3anc gcddiv syl31anc nncn syl divid eqtr3d zcn adantr divcan7
-      w3a eqcomd syl122anc mpbi2and ) ACDZBEDZFZAABGHZIHZBVSIHZGHZJSZABIHZVTWAI
-      HZSZWDUAKVTSWDUBKWASFZVRWDUCDVTCDZWAEDZWCWFFWGLABUDVRVSAMNZWHVRWJVSBMNZVR
-      VPBCDZWJWKFZVPVQUEZVQWLVPBUFOZABUGPZUHVRVPVSEDZWJWHLWNVRVPWLAQSZBQSZFRWQW
-      NWOVRWSWRVQWSRZVPVQBQULZWTBUIZBQUJUMOUKABUNVAZAVSUOPUPVRWKWIVRWJWKWPUQVRV
-      QWQWKWILVPVQURXCBVSUSPUPWDVTWAUTVBVRVSVSIHZWBJVRVPWLWQWMXDWBSWNWOXCWPABVS
-      VCVDVRVSTDZVSQULZXDJSVRWQXEXCVSVEVFZVRWQXFXCVSUIVFZVSVGPVHVRATDZBTDZXAXEX
-      FWFVPXIVQAVIVJVQXJVPBVEOVQXAVPXBOXGXHXIXJXAFXEXFFVLWEWDABVSVKVMVNVO $.
+      ( cz wcel cn wa cgcd co cdiv wceq cfv cdivides wbr adantl syl2anc cc0 syl
+      c1 wb cc cnumer cdenom cq znq simpl nnz gcddvds simpld wne cn0 gcdcl nn0z
+      sylan2 nnne0 df-ne sylib intnand gcdn0cl syl21anc divides2 syl3anc simprd
+      wn mpbid simpr nndivdivides qnumdenbi gcddiv syl31anc divid eqtr3d adantr
+      nncn zcn w3a divcan7 eqcomd syl122anc mpbi2and ) ACDZBEDZFZAABGHZIHZBWCIH
+      ZGHZRJZABIHZWDWEIHZJZWHUAKWDJWHUBKWEJFZWBWHUCDWDCDZWEEDZWGWJFWKSABUDWBWCA
+      LMZWLWBWNWCBLMZWBVTBCDZWNWOFZVTWAUEZWAWPVTBUFZNZABUGOZUHWBWCCDZWCPUIZVTWN
+      WLSWAVTWPXBWSVTWPFWCUJDXBABUKWCULQUMWBWCEDZXCWBVTWPAPJZBPJZFVCXDWRWTWBXFX
+      EWAXFVCZVTWABPUIZXGBUNZBPUOUPNUQABURUSZWCUNQZWRWCAUTVAVDWBWOWMWBWNWOXAVBW
+      BWAXDWOWMSVTWAVEXJBWCVFOVDWHWDWEVGVAWBWCWCIHZWFRWBVTWPXDWQXLWFJWRWTXJXAAB
+      WCVHVIWBWCTDZXCXLRJWBXDXMXJWCVMQZXKWCVJOVKWBATDZBTDZXHXMXCWJVTXOWAAVNVLWA
+      XPVTBVMNWAXHVTXINXNXKXOXPXHFXMXCFVOWIWHABWCVPVQVRVS $.
       $( [13-Sep-2014] $)
 
     $( Reducing a quotient never increases the denominator. $)
