@@ -4219,7 +4219,7 @@ $)
       UIVKVFVJVEVKVFLZVGVEVIVLVGLUTVBVGVEUTVBVFVGMUTVBVFVGPVLVGQABCNRVLVILZVDUE
       AVHOJZUFJZVAVMASGZBSGVIVDVOUGVKVPVFVIVKAACUHTUJVMBVKVFVIUKTVLVIQZABULRVMU
       TVNVAGZVOVAGUTVBVFVIMZVMUTVBVIVRVSUTVBVFVIPVQAVHCNRVNCUMUNURUOUSUPUQ $.
-      $( [Characterize the first quadrant Pell1 as the elements ge 1] $)
+      $( [18-Sep-2014] $)
 
     $( First-quadrant Pell solutions are a subset of the positive solutions. $)
     pell1qrss14 $p |- ( D e. ( NN \ []NN ) -> ( Pell1QR ` D ) C_ ( Pell14QR ` D
