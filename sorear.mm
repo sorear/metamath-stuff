@@ -37,8 +37,6 @@ $)
     JUTUNUQUMBLMZNIZOABUCUNUSVBUQUNURVANUKUMBLTSUDUEUFUG $.
     $( [2-Sep-2009] $)
 
-$( JUSTIFICATION: used to prove ZZ-hood in modabsdifz by showing that the number differs at most in sign from an integer $)
-
   $( A real number is an integer iff its absolute value is an integer.
      (Contributed by Jeff Madsen, 2-Sep-2009.) $)
   absz $p |- ( A e. RR -> ( A e. ZZ <-> ( abs ` A ) e. ZZ ) ) $=
@@ -48,9 +46,6 @@ $( JUSTIFICATION: used to prove ZZ-hood in modabsdifz by showing that the number
     ULUNDCZUIUJUOULUQUKUNDOPUQUNLZDCUIUJUNSUIURADUIATCURAKAUAAUBJUCUDUEUFUGUH
     $.
     $( [2-Sep-2009] $)
-
-
-$( JUSTIFICATION: split a set in two by definable predicate, easily show that the pieces "match up" with "no overlap" $)
 
   ${
     $d A x $.
@@ -1056,17 +1051,6 @@ $)
       $( [5-Oct-2014] $)
   $}
 
-  $(
-  $d A f $.
-  fifzf1o $p |- ( A e. Fin -> ( ( # ` A ) e. NN0 /\ E. f f : ( 1 ... ( # ` A ) ) -1-1-onto-> A ) ) $=
-      ? $.
-  $)
-
-  $(
-      eldioph2r: single rename with an injection function from a finite set of witnesses to an infinite set.  original polynomial has the SMALLER variable set
-      eldioph2: *reverse* rename.  use mzpcompact2 to show that the original polynomial is a renaming, and is thus generates the same Diophantine set as a finitary polynomial
-  $)
-
   ${
     $d S a b c d $.  $d T a b c d $.  $d M a b c d $.  $d O a b c d $.
     $d P b c d $.
@@ -1869,8 +1853,6 @@ $)
     rexrabdioph.1 $e |- M = ( N + 1 ) $.
     rexrabdioph.2 $e |- ( v = ( t ` M ) -> ( ps <-> ch ) ) $.
     rexrabdioph.3 $e |- ( u = ( t |` ( 1 ... N ) ) -> ( ch <-> ph ) ) $.
-
-    $( TODO: something very wrong with this proof, should be a trivial definition check? $)
     $( Diophantine set builder for existential quantification. $)
     rexrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... M ) ) | ph } e. (
         Dioph ` M ) ) -> { u e. ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 ps } e. (
@@ -2526,8 +2508,6 @@ $(
     Pigeonhole Principle and cardinality helpers
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
-
-  $( these were proved before I understood explicit substitution and could be much simplified with it; this along with AC removal makes them a high priority to reprove $)
 
   ${
     $d A x y a b c d $.  $d B x y a b c d $.  $d C y a b c d $.
@@ -3343,7 +3323,6 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $( the following development comprises [vandenDries] lemma 62, credited to Dirichlet $)
   ${
     $d a b c d e f g A $.  $d a b c d e f g B $.  $d a b c d e f g C $.
     $d a b c d e f g D $.  $d a b c d e f g E $.  $d a b c d e f g F $.
@@ -3351,10 +3330,14 @@ $)
     $d a b c d e f g x $.  $d a b c d e f g y $.  $d a b c d e f g z $.
     $d a b c d e f g ph $.
 
-    $( a bit of terminology - Pell field = Q[sqr d], Pell ring = Z[sqr d] (algebraic integers in Pell field), Pell group = right branch of the group of units in Pell ring - isomorphic to ZZ, Pell semigroup = Pell group elements >= 1, resembles NN0 $)
+    $( a bit of terminology - Pell field = Q[sqr d], Pell ring = Z[sqr d]
+       (algebraic integers in Pell field), Pell group = right branch of the
+       group of units in Pell ring - isomorphic to ZZ, Pell semigroup = Pell
+       group elements >= 1, resembles NN0 $)
 
     $( Lemma for ~ pellex .  Arithmetical core of pellexlem3, norm lower
-       bound. $)
+       bound.  This begins Dirichlet's proof of the Pell equation solution
+       existance; the proof here follows lemma 62 of [vandenDries]. $)
     pellexlem1 $p |- ( ( ( D e. NN /\ A e. NN /\ B e. NN ) /\ -. ( sqr ` D ) e.
         QQ ) -> ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) =/= 0 ) $=
       ( cn wcel csqr cfv cq c2 cexp co cc0 wne wceq cc wb 3ad2ant2 syl 3ad2ant3
@@ -3493,9 +3476,6 @@ $)
         $( [14-Sep-2014] $)
     $}
 
-    $( we're not defining the Pell-field, Pell-ring, and Pell-norm explicitly because after this construction is done we will never use them $)
-    $( TODO: redo this with general algebraic number theory once that is available in set.mm $)
-
     ${
       $d D x y z $.
       $( Lemma for ~ pellex .  Invoking ~ fiphpd3 , we have infinitely many
@@ -3555,7 +3535,6 @@ $)
         $( [19-Oct-2014] $)
     $}
 
-    $( the only place we use general field division here.  making a deduction to avoid ludicrous antecedents $)
     ${
       pellex.ann $e |- ( ph -> A e. NN ) $. $( A,B first pigeon $)
       pellex.bnn $e |- ( ph -> B e. NN ) $.
@@ -3576,7 +3555,8 @@ $)
       $(
         math form:
 
-        |(A+dB)/(E+dF)| = |(A+dB)(E-dF) / (E+dF)(E-dF)| = |(AE-DBF)+d(BE-AF)| / |EE+DFF=C| is the soln
+        |(A+dB)/(E+dF)| = |(A+dB)(E-dF) / (E+dF)(E-dF)| =
+          |(AE-DBF)+d(BE-AF)| / |EE+DFF=C| is the soln
         norm: (AE-DBF)(AE-DBF)-D(BE-AF)(BE-AF) / CC;
         AAEE-2AEDBF+DDBBFF-DBBEE+2DBEAF-DAAFF / CC
         AAEE+DDBBFF-DBBEE-DAAFF / CC
@@ -3584,14 +3564,20 @@ $)
         EE-DFF / C
         1
         divisibility: AE-DBF ~~ AA-DBB ~ C ~ 0 mod C; BE-AF ~~ FE-FE ~ 0
-        nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC contradicting irrationality.  BE-AF=0 means B/A = F/E = r; common norm then implies B=A and F=E
+        nontriviality: via the norm, AE-DBF=0 implies d = AF-BE / CC
+        contradicting irrationality.  BE-AF=0 means B/A = F/E = r; common norm
+        then implies B=A and F=E
       $)
 
 
       $( Lemma for ~ pellex .  Doing a field division between near solutions
          get us to norm 1, and the modularity constraint ensures we still have
          an integer.  Returning NN guarantees that we are not returning the
-         trivial solution (1,0). $)
+         trivial solution (1,0).  We are not explicitly defining the
+         Pell-field, Pell-ring, and Pell-norm explicitly because after this
+         construction is done we will never use them.  This is mostly basic
+         algebraic number theory and could be simplified if a generic framework
+         for that were in place. $)
       pellexlem6 $p |- ( ph -> E. a e. NN E. b e. NN ( ( a ^ 2 ) - ( D x. ( b ^
           2 ) ) ) = 1 ) $=
         ( cmul co cmin cdiv cabs cfv cn wcel c2 cexp c1 wceq cv wrex cz cc0 wne
@@ -3812,9 +3798,6 @@ $)
     $}
   $}
 
-    $( from now on, all work is in the Pell group, either in ( NN X. ZZ ) or RR $)
-    $( multiplication formula $)
-
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Pell equations 2: Algebraic number theory of the solution set
@@ -3831,28 +3814,12 @@ $)
     $d a b c d e f g x $.  $d a b c d e f g y $.  $d a b c d e f g z $.
     $d a b c d e f g ph $.
 
-    $(
-    pellmulfo $p |- ( ( D e. NN /\ ( A e. ZZ /\ B e. ZZ /\ ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) = 1 ) /\ ( E e. ZZ /\ F e. ZZ /\ ( ( E ^ 2 ) - ( D x. ( F ^ 2 ) ) ) = 1 ) ) -> (   /\ ) ) $=
-        ? $.
-    $)
-
-    $( reciprocal/conjugate formula $)
-    $( pell group is in RR+ - 1Q case $)
-    $( extend to both 1Q+4Q using rpreccl $)
-    $( 1Q iff > 1 $)
-    $( 1Q exists (restate pellex) $)
-    $( a minimal 1Q exists [most likely using an order isomorphism and a well-ordering on NN] $)
-    $( if a PGE is in [1,PellFund), it equals 1 $)
-    $( any PGE equals ` ( Fund ^ ( |_ `` ( ( log `` A ) / ( log `` Fund ) ) ) ) ` $)
-
     $( define image of ZZ or NN $)
     $( prove non-denseness $)
     $( use logarithms to show all elements are powers of a base $)
     $( value of PellFund ` a*a-1 $)
     $( define Ak, Bk $)
     $( Lucas sequence $)
-
-    $( feasibility study of proving existance of the fundamental theorem and the structure theorem using only Pell1QR and a cancellation law $)
 
     $( Extend class notation to include the class of quadrant-1 Pell
        solutions. $)
@@ -3969,8 +3936,6 @@ $)
         $( [17-Sep-2014] $)
 
     $}
-
-    $( [Characterize the full group of units as a set of nonzero reals closed under multiplication and division] $)
 
     $( General Pell solutions are (coded as) real numbers. $)
     pell1234qrre $p |- ( ( D e. ( NN \ []NN ) /\ A e. ( Pell1234QR ` D ) ) -> A
@@ -4626,9 +4591,14 @@ $)
         $( [18-Sep-2014] $)
     $}
 
-    $( use the infimum to find an element ge Fund and lt 2*Fund.  if = Fund we're done, otherwise use the infimum again to find another element which must be ge Fund and lt the first element; their ratio is a group element in (1,2), contradicting pell1qrgapw $)
     $( The fundamental solution as an infimum is itself a solution, showing
-       that the solution set is discrete. $)
+       that the solution set is discrete.
+
+       Since the fundamental solution is an infimum, there must be an element
+       ge to Fund and lt 2*Fund.  If this element is equal to the fundamental
+       solution we're done, otherwise use the infimum again to find another
+       element which must be ge Fund and lt the first element; their ratio is a
+       group element in (1,2), contradicting ~ pell1qrgapw . $)
     pellfundex $p |- ( D e. ( NN \ []NN ) -> ( PellFund ` D ) e. ( Pell1QR ` D
         ) ) $=
       ( va vb wcel cfv cle wbr c2 co clt wa cr 2re cc0 c1 a1i syl2anc wb adantr
@@ -5658,11 +5628,8 @@ $)
       XEXDGTSZXHGVCAXCXDXAAXDUVNXCAXDUVNUUBAXDUIZUVNUJBERXIEVCZXKUVOYBUVNUVPXJX
       DAXIERURUSUVPHGTOVAVBLWRWTWMBEHGRTXFOYDVTVFWNXB $.
       $( [25-Sep-2014] $)
-
-    $( The impression which I am slowly getting is that the major difference between ` ( F `` y ) ` and ` [_ y / x ]_ F ` is that the latter can have proper classes in its range.  Shifting between the two requires proofs of setness.  It is possible the former two theorems could be substantially shortened using a class substitution step instead of a function step $)
   $}
 
-  $( TODO: abstract concept of a symmetric set of reals, and use that instead of ZZ here and in monotoddzz $)
   ${
     $d B a b x $.  $d C a b x $.  $d D a b x y $.  $d E a b x $.  $d F a b x $.
     $d A a b y $.  $d ph a b x y $.
@@ -6328,12 +6295,15 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-    $( [JonesMatijasevic] uses "a \equiv \pm b (mod c)" for this construction.  The disjunction of divisibility constraints seems to adequately capture the concept, but it's rather verbose and somewhat inelegant $)
-
   $( A wff like that in this theorem will be known as an "alternating
      congruence".  A special symbol might be considered if more uses come up.
      They have many of the same properties as normal congruences, starting with
-     reflexivity. $)
+     reflexivity.
+
+     [JonesMatijasevic] uses "a &#8801; &#xB1; b (mod c)" for this
+     construction.  The disjunction of divisibility constraints seems to
+     adequately capture the concept, but it's rather verbose and somewhat
+     inelegant.  Use of an explicit equivalence relation might also work. $)
   acongid $p |- ( ( A e. ZZ /\ B e. ZZ ) -> ( A || ( B - B ) \/ A || ( B - -u B
       ) ) ) $=
     ( cz wcel wa cmin co cdivides wbr cneg congid orcd ) ACDBCDEABBFGHIABBJFGHI
@@ -7383,8 +7353,6 @@ $)
       SPQTWGWJWK $.
       $( [1-Oct-2014] $)
   $}
-
-  $( this may be alternately handled by expanding the domain of rmX and rmY to include 1, using the Lucas sequence as a new definition.  we do not do this $)
 
   ${
     $d a b A $.  $d a b N $.
