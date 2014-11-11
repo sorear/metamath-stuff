@@ -366,7 +366,7 @@ $)
   cmzp $a class mzPoly $.
 
   ${
-    $d v p f g $.  $d v p i $.  $d v p j x $.
+    $d f g i j p v x $.
 
     $( Define the polynomially closed function rings over an arbitrary index
        set ` v ` .  The set ` ( mzPolyCld `` v ) ` contains all sets of
@@ -391,7 +391,7 @@ $)
   $}
 
   ${
-    $d V v p f g $.  $d V v p i $.  $d V v p j x $.
+    $d V v p f g a b c $.  $d V v p i a b c $.  $d V v p j x a b c $.
     $( Substitution lemma for ` mzPolyCld ` . $)
     mzpclval $p |- ( V e. _V -> ( mzPolyCld ` V ) = { p | ( p C_ ( ZZ ^m ( ZZ
         ^m V ) ) /\
@@ -399,14 +399,19 @@ $)
            /\ A. j e. V ( x e. ( ZZ ^m V ) |-> ( x ` j ) ) e. p )
         /\ A. f e. p A. g e. p ( ( f oF + g ) e. p /\ ( f oF x. g ) e. p ) ) )
         } ) $=
-      ( vv cv cz cmap co wss cxp wcel wral cmpt wa cvv wceq csn cfv cmul cmzpcl
-      caddc cof cab oveq2 oveq2d sseq2d xpeq1d eleq1d ralbidv mpteq1 raleqbi1dv
-      syl anbi12d anbi1d abbidv df-mzpcl ovex abssexg ax-mp fvmpt ) HFGIZJJHIZK
-      LZKLZMZVGDIUAZNZVEOZDJPZAVGEIAIUBZQZVEOZEVFPZRZBIZCIZUEUFLVEOVSVTUCUFLVEO
-      RCVEPBVEPZRZRZGUGVEJJFKLZKLZMZWDVJNZVEOZDJPZAWDVNQZVEOZEFPZRZWARZRZGUGZSU
-      DVFFTZWCWOGWQVIWFWBWNWQVHWEVEWQVGWDJKVFFJKUHZUIUJWQVRWMWAWQVMWIVQWLWQVLWH
-      DJWQVKWGVEWQVGWDVJWRUKULUMVPWKEVFFWQVOWJVEWQVGWDTVOWJTWRAVGWDVNUNUPULUOUQ
-      URUQUSAHBCDEGUTWESOWPSOJWDKVAWNGWESVBVCVD $.
+      ( va vc vb cvv wcel cfv cv cz cmap co wral cmpt wa cmzpcl wss csn cxp cof
+      caddc cmul cab wceq oveq2d sseq2d xpeq1d eleq1d ralbidv mpteq1 raleqbi1dv
+      vv oveq2 syl anbi12d anbi1d abbidv df-mzpcl ovex abssexg ax-mp fvmpt sneq
+      xpeq2d cbvralv fveq2 adantr mpteq2dva fveq1 cbvmptv eleq1i syl6bb anbi12i
+      weq anbi1i anbi2i abbii syl6eq ) FKLFUAMGNZOOFPQZPQZUBZWEHNZUCZUDZWDLZHOR
+      ZIWEJNZINZMZSZWDLZJFRZTZBNZCNZUFUEQWDLWTXAUGUEQWDLTCWDRBWDRZTZTZGUHZWGWED
+      NZUCZUDZWDLZDORZAWEENZANZMZSZWDLZEFRZTZXBTZTZGUHUQFWDOOUQNZPQZPQZUBZYAWIU
+      DZWDLZHORZIYAWOSZWDLZJXTRZTZXBTZTZGUHXEKUAXTFUIZYLXDGYMYCWGYKXCYMYBWFWDYM
+      YAWEOPXTFOPURZUJUKYMYJWSXBYMYFWLYIWRYMYEWKHOYMYDWJWDYMYAWEWIYNULUMUNYHWQJ
+      XTFYMYGWPWDYMYAWEUIYGWPUIYNIYAWEWOUOUSUMUPUTVAUTVBIUQBCHJGVCWFKLXEKLOWEPV
+      DXCGWFKVEVFVGXDXSGXCXRWGWSXQXBWLXJWRXPWKXIHDOHDVSZWJXHWDYOWIXGWEWHXFVHVIU
+      MVJWQXOJEFJEVSZWQIWEXKWNMZSZWDLXOYPWPYRWDYPIWEWOYQYPWOYQUIWNWELWMXKWNVKVL
+      VMUMYRXNWDIAWEYQXMXKWNXLVNVOVPVQVJVRVTWAWBWC $.
       $( [4-Oct-2014] $)
   $}
 
