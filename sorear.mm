@@ -8517,36 +8517,39 @@ $)
 
   ${
     $d x y z w a b c d $.
-    $( A set is Ia-finite iff it is not the union of two I-infinite sets.  This
-       is the second of eight definitions of finite set attributed to Tarski;
-       see http://consequences.emich.edu/note-94.pdf .  I-finite is equivalent
-       to our ~ df-fin and not repeated here.  These eight definitions are
-       equivalent with Choice but strictly decreasing in strength in models
-       where Choice fails; conversely, they provide a series of increasingly
-       stronger notions of infiniteness. $)
+    $( A set is Ia-finite iff it is not the union of two I-infinite sets.
+       Definition Ia of [Levy] p. 2.  This is the second of Levy's eight
+       definitions of finite set.  Levy's I-finite is equivalent to our
+       ~ df-fin and not repeated here.  These eight definitions are equivalent
+       with Choice but strictly decreasing in strength in models where Choice
+       fails; conversely, they provide a series of increasingly stronger
+       notions of infiniteness. $)
     df-fin1a $a |- Fin1a = { x | -. E. y E. z ( ( x = ( y u. z ) /\
       ( y i^i z ) = (/) ) /\ ( -. y e. Fin /\ -. z e. Fin ) ) } $.
 
     $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
-       contains a maximum element. $)
+       contains a maximum element.  Definition II of [Levy] p. 2. $)
     df-fin2 $a |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
       {C.} Or y ) -> E. z e. y A. w e. y -. z C. w ) } $.
 
     $( A set is IV-finite (Dedekind finite) iff it has no equinumerous proper
-       subset. $)
+       subset.  Definition IV of [Levy] p. 3. $)
     df-fin4 $a |- Fin4 = { x | -. E. y ( y C. x /\ y ~~ x ) } $.
 
     $( A set is III-finite (weakly Dedekind finite) iff its power set is
-       Dedekind finite. $)
+       Dedekind finite.  Definition III of [Levy] p. 2. $)
     df-fin3 $a |- Fin3 = { x | ~P x e. Fin4 } $.
 
-    $( A set is V-finite iff it behaves finitely under ` +c ` . $)
+    $( A set is V-finite iff it behaves finitely under ` +c ` .  Definition V
+       of [Levy] p. 3. $)
     df-fin5 $a |- Fin5 = { x | ( x ~~ (/) \/ x ~< ( x +c x ) ) } $.
 
-    $( A set is VI-finite iff it behaves finitely under ` X. ` . $)
+    $( A set is VI-finite iff it behaves finitely under ` X. ` .  Definition VI
+       of [Levy] p. 4. $)
     df-fin6 $a |- Fin6 = { x | ( x ~~ (/) \/ x ~~ 1o \/ x ~< ( x X. x ) ) } $.
 
-    $( A set is VII-finite iff it cannot be infinitely well ordered. $)
+    $( A set is VII-finite iff it cannot be infinitely well ordered.
+       Equivalent to definition VII of [Levy] p. 4. $)
     df-fin7 $a |- Fin7 = { x | -. E. y e. ( On \ om ) x ~~ y } $.
   $}
 
@@ -9408,52 +9411,9 @@ $)
     $d U i u a b c d $.  $d A i u a b $.  $d i u t a b c d $.  $d B i u a b $.
     fin23lem.a $e |- U = seqom ( ( i e. om , u e. _V |-> if ( ( ( t ` i ) i^i
       u ) = (/) , u , ( ( t ` i ) i^i u ) ) ) , U. ran t ) $.
-    $( The beginning of the proof proper that every II-finite set (every chain
-       of subsets has a maximal element) is III-finite (has no denumerable
-       collection of subsets).  The proof here is the only one I could find,
-       from ~ http://matwbn.icm.edu.pl/ksiazki/fm/fm6/fm619.pdf p.94 (writeup
-       by Tarski, credited to Kuratowski).  Translated into English and modern
-       notation, the proof proceeds as follows (variables renamed for
-       uniqueness):
-
-       Suppose for a contradiction that ` A ` is a set which is II-finite but
-       not III-finite.
-
-       For any countable sequence of distinct subsets ` T ` of ` A ` , we can
-       form a decreasing sequence of non-empty subsets ` ( U `` T ) ` by taking
-       finite intersections of initial segments of ` T ` while skipping over
-       any element of ` T ` which would cause the intersection to be empty.
-
-       By II-finiteness (as ~ dffin2-4 ) this sequence contains its
-       intersection, call it ` Y ` ; since by induction every subset in the
-       sequence ` U ` is non-empty, the intersection must be non-empty.
-
-       Suppose that an element ` X ` of ` T ` has non-empty intersection with
-       ` Y ` .  Thus said element has a non-empty intersection with the
-       corresponding element of ` U ` , therefore it was used in the
-       construction of ` U ` and all further elements of ` U ` are subsets of
-       ` X ` , thus ` X ` contains the ` Y ` .  That is, all elements of ` X `
-       either contain ` Y ` or are disjoint from it.
-
-       Since there are only two cases, there must exist an infinite subset of
-       ` T ` which uniformly either contain ` Y ` or are disjoint from it.  In
-       the former case we can create an infinite set by subtracting ` Y ` from
-       each element.  In either case, call the result ` Z ` ; this is an
-       infinite set of subsets of ` A ` , each of which is disjoint from ` Y `
-       and contained in the union of ` T ` ; the union of ` Z ` is strictly
-       contained in the union of ` T ` , because only the latter is a superset
-       of the non-empty set ` Y ` .
-
-       The preceeding four steps may be iterated a countable number of times
-       starting from the assumed denumerable set of subsets to produce a
-       denumerable sequence ` B ` of the ` T ` sets from each stage.  Great
-       caution is required to avoid ~ ax-dc here; in particular an effective
-       version of the pigeonhole principle (for aleph-null pigeons and 2 holes)
-       is required.  Since a denumerable set of subsets is assumed to exist, we
-       can conclude ` om e. _V ` without the axiom.
-
-       This ` B ` sequence is strictly decreasing, thus it has no minimum,
-       contradicting the first assumption.
+    $( The beginning of the proof that every II-finite set (every chain of
+       subsets has a maximal element) is III-finite (has no denumerable
+       collection of subsets).
 
        This first section is sedicated to the construction of ` U ` and its
        intersection.  First, the value of ` U ` at a successor. $)
@@ -10387,7 +10347,7 @@ $)
       $( [3-Nov-2014] $)
 
     $( A set is I-finite iff every system of subsets contains a maximal
-       subset. $)
+       subset.  Definition I of [Levy] p. 2. $)
     dffin1-3 $p |- Fin = { x | `' {C.} Fr ~P x } $=
       ( va vc vb vd cfn cv cpw crpss wfr wcel wbr wn vex wa wss wne elin adantr
       c0 ccnv cab wpo porpss cnvpo mpbi pwfi biimpi frfi sylancr wral wrex pwex
@@ -10420,7 +10380,52 @@ $)
       NBOZPUPUPFURUTSTUMUQAUOVAABUAULUPUBUMUQRUKUOUCULUPFUDUJUEUSBDBUFUGUHUI $.
       $( [4-Nov-2014] $)
 
-    $( Every II-finite set is III-finite. $)
+    $( Every II-finite set (every chain of subsets has a maximal element) is
+       III-finite (has no denumerable collection of subsets).  The proof here
+       is the only one I could find, from
+       ~ http://matwbn.icm.edu.pl/ksiazki/fm/fm6/fm619.pdf p.94 (writeup by
+       Tarski, credited to Kuratowski).  Translated into English and modern
+       notation, the proof proceeds as follows (variables renamed for
+       uniqueness):
+
+       Suppose for a contradiction that ` A ` is a set which is II-finite but
+       not III-finite.
+
+       For any countable sequence of distinct subsets ` T ` of ` A ` , we can
+       form a decreasing sequence of non-empty subsets ` ( U `` T ) ` by taking
+       finite intersections of initial segments of ` T ` while skipping over
+       any element of ` T ` which would cause the intersection to be empty.
+
+       By II-finiteness (as ~ dffin2-4 ) this sequence contains its
+       intersection, call it ` Y ` ; since by induction every subset in the
+       sequence ` U ` is non-empty, the intersection must be non-empty.
+
+       Suppose that an element ` X ` of ` T ` has non-empty intersection with
+       ` Y ` .  Thus said element has a non-empty intersection with the
+       corresponding element of ` U ` , therefore it was used in the
+       construction of ` U ` and all further elements of ` U ` are subsets of
+       ` X ` , thus ` X ` contains the ` Y ` .  That is, all elements of ` X `
+       either contain ` Y ` or are disjoint from it.
+
+       Since there are only two cases, there must exist an infinite subset of
+       ` T ` which uniformly either contain ` Y ` or are disjoint from it.  In
+       the former case we can create an infinite set by subtracting ` Y ` from
+       each element.  In either case, call the result ` Z ` ; this is an
+       infinite set of subsets of ` A ` , each of which is disjoint from ` Y `
+       and contained in the union of ` T ` ; the union of ` Z ` is strictly
+       contained in the union of ` T ` , because only the latter is a superset
+       of the non-empty set ` Y ` .
+
+       The preceeding four steps may be iterated a countable number of times
+       starting from the assumed denumerable set of subsets to produce a
+       denumerable sequence ` B ` of the ` T ` sets from each stage.  Great
+       caution is required to avoid ~ ax-dc here; in particular an effective
+       version of the pigeonhole principle (for aleph-null pigeons and 2 holes)
+       is required.  Since a denumerable set of subsets is assumed to exist, we
+       can conclude ` om e. _V ` without the axiom.
+
+       This ` B ` sequence is strictly decreasing, thus it has no minimum,
+       contradicting the first assumption. $)
     fin23 $p |- Fin2 C_ Fin3 $=
       ( cfin2 cfin2ds cfin3 fin23lem40 fin23lem41 sstri ) ABCDEF $.
       $( [2-Nov-2014] $)
@@ -10843,7 +10848,7 @@ $)
       WKXGYBRYEXJYAWTVOCBAVPQWDVQVRVSVTWAVQWBWCWEWF $.
       $( [8-Nov-2014] $)
 
-    $( Every Ia-finite set is II-finite. $)
+    $( Every Ia-finite set is II-finite.  Theorem 1 of [Levy], p. 3. $)
     fin1a2 $p |- Fin1a C_ Fin2 $=
       ( va vb vc vd cfin1a cfin2 cv wcel wn cfn wex wa cun cin c0 sylib vex cvv
       wceq anbi12d wss cdif w3a fin1a2s simpr1 eqcomd disjdif a1i simpr2 simpr3
