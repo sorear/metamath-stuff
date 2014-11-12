@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 10-Nov-2014 $)
+$[ set_clean.mm $] $( set.mm - Version of 11-Nov-2014 $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -3203,10 +3203,10 @@ $)
       OUPUQURUSWMVIVLVPUTWAVLAVHWJAEUIZVTVKDKWRVSVJOVRVHCMUKULVAVBVEVCVDVF $.
       $( [13-Sep-2014] $)
 
-    $( Lagrange's rational approximation theorem.  Every positive irrational
-       number has infinitely many rational approximations which are closer than
-       the inverse squares of their reduced denominators.  Lemma 62 in
-       ?vandenDries?. $)
+    $( Dirichlet's approximation theorem.  Every positive irrational number has
+       infinitely many rational approximations which are closer than the
+       inverse squares of their reduced denominators.  Lemma 61 in
+       [vandenDries] p. 42. $)
     irrapx1 $p |- ( A e. ( RR+ \ QQ ) -> { y e. QQ | ( 0 < y /\ ( abs ` ( y - A
         ) ) < ( ( denom ` y ) ^ -u 2 ) ) } ~~ NN ) $=
       ( vb va crp cq wcel com cen wbr cn wa cv clt cmin co cabs cfv wss cr cdif
@@ -3240,7 +3240,7 @@ $)
 
     $( Lemma for ~ pellex .  Arithmetical core of pellexlem3, norm lower
        bound.  This begins Dirichlet's proof of the Pell equation solution
-       existance; the proof here follows lemma 62 of ?vandenDries?. $)
+       existance; the proof here follows theorem 62 of [vandenDries] p. 43. $)
     pellexlem1 $p |- ( ( ( D e. NN /\ A e. NN /\ B e. NN ) /\ -. ( sqr ` D ) e.
         QQ ) -> ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) =/= 0 ) $=
       ( cn wcel csqr cfv cq c2 cexp co cc0 wne wceq cc wb 3ad2ant2 syl 3ad2ant3
@@ -3641,8 +3641,8 @@ $)
 
     ${
       $d D x y $.
-      $( Every Pell equation has a nontrivial solution.  Lemma 62 in
-         ?vandenDries?. $)
+      $( Every Pell equation has a nontrivial solution.  Theorem 62 in
+         [vandenDries] p. 43. $)
       pellex $p |- ( ( D e. NN /\ -. ( sqr ` D ) e. QQ ) -> E. x e. NN E. y e.
           NN ( ( x ^ 2 ) - ( D x. ( y ^ 2 ) ) ) = 1 ) $=
         ( vb vc vf vg cn wcel cfv wa cv c2 cexp co wceq wbr c1st cmo c2nd va vd
@@ -4980,8 +4980,8 @@ $)
 
   ${
     $d a b c d A $.  $d a b c N $.
-    $( Main definition of the X and Y sequences, for instance
-       ?JonesMatijasevic? 2.3. $)
+    $( Main definition of the X and Y sequences.  Compare definition 2.3 of
+       [JonesMatijasevic] p. 694. $)
     rmxyval $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmX N ) + ( ( sqr
         ` ( ( A ^ 2 ) - 1 ) ) x. ( A rmY N ) ) ) = ( ( A + ( sqr ` ( ( A ^ 2 )
         - 1 ) ) ) ^ N ) ) $=
@@ -5071,7 +5071,7 @@ $)
     AMUBUCPNQEUDOEARUCSTUA $.
     $( [22-Sep-2014] $)
 
-  $( Negation law for X and Y sequences. ?JonesMatijasevic? is inconsistent on
+  $( Negation law for X and Y sequences.  JonesMatijasevic is inconsistent on
      whether the X and Y sequences have domain ` NN0 ` or ` ZZ ` ; we use
      ` ZZ ` consistently to avoid the need for a separate subtraction law. $)
   rmxyneg $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmX -u N ) = ( A
@@ -5178,19 +5178,22 @@ $)
     IZJKABJKLAPMKABMKILABNO $.
     $( [22-Sep-2014] $)
 
-  $( Value of X sequence at 0. ?JonesMatijasevic? 2.11 #1 $)
+  $( Value of X sequence at 0.  Part 1 of equation 2.11 of [JonesMatijasevic]
+     p. 695. $)
   rmx0 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmX 0 ) = 1 ) $=
     ( c2 cuz cfv wcel cc0 crmx co c1 wceq crmy rmxy0 simpld ) ABCDEAFGHIJAFKHFJ
     ALM $.
     $( [22-Sep-2014] $)
 
-  $( Value of X sequence at 1. ?JonesMatijasevic? 2.11 #2 $)
+  $( Value of X sequence at 1.  Part 2 of equation 2.11 of [JonesMatijasevic]
+     p. 695. $)
   rmx1 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmX 1 ) = A ) $=
     ( c2 cuz cfv wcel c1 crmx co wceq crmy rmxy1 simpld ) ABCDEAFGHAIAFJHFIAKL
     $.
     $( [22-Sep-2014] $)
 
-  $( Addition formula for X sequence. ?JonesMatijasevic? 2.7 $)
+  $( Addition formula for X sequence.  Equation 2.7 of [JonesMatijasevic]
+     p. 695. $)
   rmxadd $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) ->
         ( A rmX ( M + N ) ) = ( ( ( A rmX M ) x. ( A rmX N ) ) + ( ( ( A ^ 2 )
       - 1 ) x. ( ( A rmY M ) x. ( A rmY N ) ) ) ) ) $=
@@ -5206,19 +5209,22 @@ $)
     IZJKABJKLAPMKABMKILABNO $.
     $( [22-Sep-2014] $)
 
-  $( Value of Y sequence at 0. ?JonesMatijasevic? 2.12 #1 $)
+  $( Value of Y sequence at 0.  Part 1 of equation 2.12 of [JonesMatijasevic]
+     p. 695. $)
   rmy0 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmY 0 ) = 0 ) $=
     ( c2 cuz cfv wcel cc0 crmx co c1 wceq crmy rmxy0 simprd ) ABCDEAFGHIJAFKHFJ
     ALM $.
     $( [22-Sep-2014] $)
 
-  $( Value of Y sequence at 1. ?JonesMatijasevic? 2.12 #2 $)
+  $( Value of Y sequence at 1.  Part 2 of equation 2.12 of [JonesMatijasevic]
+     p. 695. $)
   rmy1 $p |- ( A e. ( ZZ>= ` 2 ) -> ( A rmY 1 ) = 1 ) $=
     ( c2 cuz cfv wcel c1 crmx co wceq crmy rmxy1 simprd ) ABCDEAFGHAIAFJHFIAKL
     $.
     $( [22-Sep-2014] $)
 
-  $( Addition formula for Y sequence. ?JonesMatijasevic? 2.8 $)
+  $( Addition formula for Y sequence.  Equation 2.8 of [JonesMatijasevic]
+     p. 695. $)
   rmyadd $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) ->
         ( A rmY ( M + N ) ) = ( ( ( A rmY M ) x. ( A rmX N ) ) + ( ( A rmX M )
       x. ( A rmY N ) ) ) ) $=
@@ -5227,7 +5233,8 @@ $)
     UBUELSJSPABCQR $.
     $( [22-Sep-2014] $)
 
-  $( Special addition-of-1 formula for X sequence. ?JonesMatijasevic? 2.9 #1 $)
+  $( Special addition-of-1 formula for X sequence.  Part 1 of equation 2.9 of
+     [JonesMatijasevic] p. 695. $)
   rmxp1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmX ( N + 1 ) ) = ( ( ( A rmX N ) x. A ) + ( ( ( A ^ 2 ) - 1 ) x. (
       A rmY N ) ) ) ) $=
@@ -5238,7 +5245,8 @@ $)
     VBUNVDVIPUOUNVCHVBLAUERQUPVBFEVBUFEVIVBPABFUMFOUGUHVBUIVBUJUKTRULT $.
     $( [19-Oct-2014] $)
 
-  $( Special addition of 1 formula for Y sequence. ?JonesMatijasevic? 2.9 #2 $)
+  $( Special addition of 1 formula for Y sequence.  Part 2 of equation 2.9 of
+     [JonesMatijasevic] p. 695. $)
   rmyp1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmY ( N + 1 ) ) = ( ( ( A rmY N ) x. A ) + ( A rmX N ) ) ) $=
     ( c2 cuz cfv wcel cz wa c1 caddc co crmy crmx cmul wceq oveq2d adantr eqtrd
@@ -5248,7 +5256,8 @@ $)
     FUTUEFVEUTOABTULGMUFUGUTUHUTUIUJRUKR $.
     $( [24-Sep-2014] $)
 
-  $( Subtraction of 1 formula for Y sequence. ?JonesMatijasevic? 2.10 #1 $)
+  $( Subtraction of 1 formula for X sequence.  Part 1 of equation 2.10 of
+     [JonesMatijasevic] p. 695. $)
   rmxm1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmX ( N - 1 ) ) = ( ( A x. ( A rmX N ) ) -
         ( ( ( A ^ 2 ) - 1 ) x. ( A rmY N ) ) ) ) $=
@@ -5268,7 +5277,8 @@ $)
     WKWNVTQWB $.
     $( [14-Oct-2014] $)
 
-  $( Subtraction of 1 formula for Y sequence. ?JonesMatijasevic? 2.10 #1 $)
+  $( Subtraction of 1 formula for Y sequence.  Part 2 of equation 2.10 of
+     [JonesMatijasevic] p. 695. $)
   rmym1 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) ->
         ( A rmY ( N - 1 ) ) = ( ( ( A rmY N ) x. A ) - ( A rmX N ) ) ) $=
     ( c2 wcel cz c1 cmin co crmy cneg caddc crmx cmul wceq ax-1cn negsub oveq2d
@@ -5285,7 +5295,7 @@ $)
     $( [19-Oct-2014] $)
 
   $( The X sequence is a Lucas (second-order integer recurrence) sequence.
-     ?JonesMatijasevic? 2.11 #3 $)
+     Part 3 of equation 2.11 of [JonesMatijasevic] p. 695. $)
   rmxluc $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX ( N + 1 ) ) =
       ( ( ( 2 x. A ) x. ( A rmX N ) ) - ( A rmX ( N - 1 ) ) ) ) $=
     ( c2 wcel cz wa cmul co crmx c1 cmin caddc wceq cc cn0 nn0sscn fovcl sseldi
@@ -5304,11 +5314,12 @@ $)
     $( [14-Oct-2014] $)
 
   $( The Y sequence is a Lucas sequence, definable via this second-order
-     recurrence with ~ rmy0 and ~ rmy1 . ?JonesMatijasevic? 2.12 #3 ; they use
-     this theorem to redefine the X and Y sequences to have domain
-     ` ( ZZ X. ZZ ) ` , which simplifies some later theorems.  It may shorten
-     the derivation to use this as our initial definition.  Incidentally, the X
-     sequence satisfies the exact same recurrence. $)
+     recurrence with ~ rmy0 and ~ rmy1 .  Part 3 of equation 2.12 of
+     [JonesMatijasevic] p. 695.  JonesMatijasevic uses this theorem to redefine
+     the X and Y sequences to have domain ` ( ZZ X. ZZ ) ` , which simplifies
+     some later theorems.  It may shorten the derivation to use this as our
+     initial definition.  Incidentally, the X sequence satisfies the exact same
+     recurrence. $)
   rmyluc $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmY ( N + 1 ) ) = ( (
       2 x. ( ( A rmY N ) x. A ) ) - ( A rmY ( N - 1 ) ) ) ) $=
     ( c2 wcel cz c1 caddc co crmy cmin cmul wceq crmx cc zsscn frmy fovcl mulcl
@@ -5333,7 +5344,8 @@ $)
     UPUOAGFVFCAUBARSUCZURAUDUEUFUQCTFZVFVEVBVDPVIUQUGUHVHVGCAURUIUJUKULUM $.
     $( [16-Oct-2014] $)
 
-  $( "Double-angle formula" for X-values. $)
+  $( "Double-angle formula" for X-values.  Equation 2.13 of [JonesMatijasevic]
+     p. 695. $)
   rmxdbl $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmX ( 2 x. N ) ) = ( (
       2 x. ( ( A rmX N ) ^ 2 ) ) - 1 ) ) $=
     ( c2 wcel cz cmul co crmx caddc cexp c1 cmin crmy cc wceq 2times syl oveq2d
@@ -5348,7 +5360,8 @@ $)
     OWRWFVTOWSVSVIQVOWKWCWAFVOXCWKWCOXDWBVIQRVHVJVK $.
     $( [2-Oct-2014] $)
 
-  $( "Double-angle formula" for Y-values. $)
+  $( "Double-angle formula" for Y-values.  Equation 2.14 of [JonesMatijasevic]
+     p. 695. $)
   rmydbl $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( A rmY ( 2 x. N ) ) = ( (
       2 x. ( A rmX N ) ) x. ( A rmY N ) ) ) $=
     ( c2 cuz cfv wcel cz cmul co crmy caddc crmx cc 2times syl cn0 fovcl sseldi
@@ -5851,7 +5864,7 @@ $)
   $}
 
   $( X(n) is strictly greater than Y(n) + Y(n-1).  Lemma 2.24 of
-     ?JonesMatijasevic? restricted to ` NN ` . $)
+     [JonesMatijasevic] p. 697 restricted to ` NN ` . $)
   jm2.24nn $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) -> ( ( A rmY ( N - 1 ) ) +
       ( A rmY N ) ) < ( A rmX N ) ) $=
     ( c2 wcel c1 cmin co crmy cr cz sylan2 syl2anc cn0 clt wbr cc wceq wb mpbid
@@ -5885,7 +5898,7 @@ $)
 
   ${
     $d A a b $.  $d N a b $.
-    $( Lemma 2.17 of ?JonesMatijasevic?, left side. $)
+    $( First half of lemma 2.17 of [JonesMatijasevic] p. 696. $)
     jm2.17a $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( ( ( 2 x. A ) - 1 ) ^
         N ) <_ ( A rmY ( N + 1 ) ) ) $=
       ( wcel c2 cmul co c1 cmin cexp caddc crmy cle wbr wi cc0 cc cz cr syl2anc
@@ -5923,8 +5936,8 @@ $)
       TUXHUXMUUIYKXSSXTYAUVHYJUVRUUMUWRTUVSUWBAUUHYBSVJWAYCYEYFYGYH $.
       $( [14-Oct-2014] $)
 
-    $( Lemma 2.17 of ?JonesMatijasevic?, right side.  A weaker form of the
-       bound which allows induction to start lower. $)
+    $( Weak form of the second half of lemma 2.17 of [JonesMatijasevic] p. 696,
+       allowing induction to start lower. $)
     jm2.17b $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A rmY ( N + 1 ) )
         <_ ( ( 2 x. A ) ^ N ) ) $=
       ( wcel c2 c1 caddc co crmy cmul cexp cle wbr wi wceq oveq2d cr wa syl2anc
@@ -5958,7 +5971,7 @@ $)
 
   $}
 
-  $( Lemma 2.17 of ?JonesMatijasevic?, right side. $)
+  $( Second half of lemma 2.17 of [JonesMatijasevic] p. 696. $)
   jm2.17c $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) ->
       ( A rmY ( ( N + 1 ) + 1 ) ) < ( ( 2 x. A ) ^ ( N + 1 ) ) ) $=
     ( c2 wcel cn wa cmul co c1 crmy clt cr adantr cz adantl syl2anc cc wceq cc0
@@ -5979,8 +5992,8 @@ $)
     WJZYJWSBWKPWRXFQDUUDUUCXGRWRXFYKWJUUEXFWSWLPWMWN $.
     $( [15-Oct-2014] $)
 
-  $( Lemma 2.24 of ?JonesMatijasevic? extended to ` ZZ ` .  Could be eliminated
-     with a more careful proof of ~ jm2.26lem3 . $)
+  $( Lemma 2.24 of [JonesMatijasevic] p. 697 extended to ` ZZ ` .  Could be
+     eliminated with a more careful proof of ~ jm2.26lem3 . $)
   jm2.24 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) -> ( ( A rmY ( N - 1 ) ) + (
       A rmY N ) ) < ( A rmX N ) ) $=
     ( wcel cz wa cc0 cle wbr c1 co crmy caddc cr fovcl syl2anc sseldi cneg wceq
@@ -6008,7 +6021,7 @@ $)
   ${
     $d A a b $.  $d N a b $.
     $( Y(n) increases faster than n.  Used implicitly without proof or comment
-       in ?JonesMatijasevic? lemma 2.27; fortunately it is true. $)
+       in lemma 2.27 of [JonesMatijasevic] p. 697. $)
     rmygeid $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> N <_ ( A rmY N ) ) $=
       ( va vb wcel co cle wbr wi cc0 c1 id oveq2 breq12d imbi2d cz zssre sseldi
       crmy cr cn0 c2 cuz cfv cv caddc wceq weq 0nn0 nn0ge0i rmy0 syl5breqr nn0z
@@ -6202,10 +6215,10 @@ $)
      They have many of the same properties as normal congruences, starting with
      reflexivity.
 
-     ?JonesMatijasevic? uses "a &#8801; &#xB1; b (mod c)" for this
-     construction.  The disjunction of divisibility constraints seems to
-     adequately capture the concept, but it's rather verbose and somewhat
-     inelegant.  Use of an explicit equivalence relation might also work. $)
+     JonesMatijasevic uses "a &#8801; &#xB1; b (mod c)" for this construction.
+     The disjunction of divisibility constraints seems to adequately capture
+     the concept, but it's rather verbose and somewhat inelegant.  Use of an
+     explicit equivalence relation might also work. $)
   acongid $p |- ( ( A e. ZZ /\ B e. ZZ ) -> ( A || ( B - B ) \/ A || ( B - -u B
       ) ) ) $=
     ( cz wcel wa cmin co cdivides wbr cneg congid orcd ) ACDBCDEABBFGHIABBJFGHI
@@ -6551,7 +6564,7 @@ $)
 
   ${
     $d A a b $.  $d K a b $.  $d N a b $.
-    $( Statement 2.18 of ?JonesMatijasevic?.  Direct relationship of the
+    $( Theorem 2.18 of [JonesMatijasevic] p. 696.  Direct relationship of the
        exponential function to X and Y sequences. $)
     jm2.18 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ K e. NN0 /\ N e. NN0 ) ->
         ( ( ( ( 2 x. A ) x. K ) - ( K ^ 2 ) ) - 1 ) ||
@@ -6718,8 +6731,8 @@ $)
     XKXPXSXLXQBCVKQZDWKVLQYBWLWKVMQXBXTXSXODRYAYBDWKVNQVOVIVPVQVRVSVTWAWB $.
     $( [26-Sep-2014] $)
 
-  $( Lemma 2.19 of ?JonesMatijasevic?.  Transfer divisibility constraints
-     between Y-values and their indices. $)
+  $( Lemma 2.19 of [JonesMatijasevic] p. 696.  Transfer divisibility
+     constraints between Y-values and their indices. $)
   jm2.19 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. ZZ /\ N e. ZZ ) -> ( M || N <-> (
       A rmY M ) || ( A rmY N ) ) ) $=
     ( cfv wcel cz cdivides wbr crmy co wb cc0 wceq adantr oveq2d cr syl2anc cn0
@@ -6959,7 +6972,7 @@ $)
       $( [26-Sep-2014] $)
   $}
 
-  $( Lemma 2.20 of ?JonesMatijasevic?, the "first step down lemma". $)
+  $( Lemma 2.20 of [JonesMatijasevic] p. 696, the "first step down lemma". $)
   jm2.20nn $p |- ( ( A e. ( ZZ>= ` 2 ) /\ M e. NN /\ N e. NN ) -> ( ( ( A rmY N
       ) ^ 2 ) || ( A rmY M ) <-> ( N x. ( A rmY N ) ) || M ) ) $=
     ( c2 wcel crmy co cdivides wbr cmul cc wceq syl2anc syl adantr cmin syl3anc
@@ -7190,7 +7203,8 @@ $)
 
   ${
     $d A k m $.  $d N k m $.  $d K k m $.  $d M k m $.
-    $( Lemma 2.26 of ?JonesMatijasevic?, the "second step down lemma". $)
+    $( Lemma 2.26 of [JonesMatijasevic] p. 697, the "second step down
+       lemma". $)
     jm2.26 $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN ) /\ ( K e. ZZ /\ M e. ZZ )
         ) -> ( ( ( A rmX N ) || ( ( A rmY K ) - ( A rmY M ) ) \/ ( A rmX N ) ||
         ( ( A rmY K ) - -u ( A rmY M ) ) ) <-> ( ( 2 x. N ) || ( K - M ) \/ ( 2
@@ -7223,8 +7237,8 @@ $)
 
   ${
     $d a b A $.  $d a b B $.  $d a b N $.
-    $( Lemma 2.15 of ?JonesMatijasevic?. ` rmY ` is a polynomial for fixed N,
-       so has the expected congruence property. $)
+    $( Lemma 2.15 of [JonesMatijasevic] p. 695. ` rmY ` is a polynomial for
+       fixed N, so has the expected congruence property. $)
     jm2.15nn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ B e. ( ZZ>= ` 2 ) /\ N e. NN0 ) ->
         ( A - B ) || ( ( A rmY N ) - ( B rmY N ) ) ) $=
       ( c2 wcel cmin co crmy cdivides wbr wi cc0 c1 syl2anc wceq oveq12d breq2d
@@ -7258,8 +7272,8 @@ $)
 
   ${
     $d a b A $.  $d a b N $.
-    $( Lemma 2.16 of ?JonesMatijasevic?.  This may be regarded as a special
-       case of ~ jm2.15nn0 if ` rmY ` is redefined as described in
+    $( Lemma 2.16 of [JonesMatijasevic] p. 695.  This may be regarded as a
+       special case of ~ jm2.15nn0 if ` rmY ` is redefined as described in
        ~ rmyluc . $)
     jm2.16nn0 $p |- ( ( A e. ( ZZ>= ` 2 ) /\ N e. NN0 ) -> ( A - 1 ) || ( ( A
         rmY N ) - N ) ) $=
@@ -7542,8 +7556,8 @@ $)
   ${
     $d A d e f g h i j $.  $d B d e f g h i j $.  $d C d e f g h i j $.
 
-    $( ?JonesMatijasevic? lemma 2.27; rmY is a diophantine relation. 0 was
-       excluded from the range of B and the lower limit of G was imposed
+    $( Lemma 2.27 of [JonesMatijasevic] p. 697; rmY is a diophantine relation.
+       0 was excluded from the range of B and the lower limit of G was imposed
        because the source proof does not seem to work otherwise; quite possible
        I'm just missing something.  The source proof uses both i and I; i has
        been changed to j to avoid collision.  This theorem is basically nothing
@@ -7669,8 +7683,7 @@ $)
   ${
     $d a b c d e f g h i j k l $.
 
-    $( Lemma 2.27 of ?JonesMatijasevic? restated in terms of Diophantine
-       sets. $)
+    $( ~ jm2.27 restated in terms of Diophantine sets. $)
     rmydioph $p |- { a e. ( NN0 ^m ( 1 ... 3 ) ) | ( ( a ` 1 ) e. ( ZZ>= ` 2 )
         /\ ( a ` 3 ) = ( ( a ` 1 ) rmY ( a ` 2 ) ) ) } e. ( Dioph ` 3 ) $=
       ( vi c1 cfv c2 wcel c3 co wceq cn0 crab cexp cmin cmul cdivides wbr mp2an
@@ -7913,7 +7926,7 @@ $)
   ${
     $d A a $.  $d K a $.  $d N a $.
     $( Diophantine expression for exponentiation.  Lemma 3.1 of
-       ?JonesMatijasevic?. $)
+       [JonesMatijasevic] p. 698. $)
     jm3.1 $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ K e. ( ZZ>= ` 2 ) /\ N e. NN ) /\
         ( K rmY ( N + 1 ) ) <_ A ) -> ( K ^ N ) = ( ( ( A rmX N ) - ( ( A - K )
           x. ( A rmY N ) ) ) mod ( ( ( ( 2 x. A ) x. K ) - ( K ^ 2 ) ) -
