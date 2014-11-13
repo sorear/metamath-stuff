@@ -6,14 +6,6 @@ $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 $)
 
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Stuff copied from other mathboxen XXX - KEEP
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Miscellanea 1. Map utilities
@@ -10863,6 +10855,173 @@ $)
       VLVN $.
       $( [8-Nov-2014] $)
 
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Liouville's approximation theorem
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d F a $.  $d X a $.  $d Y a $.  $d ph a $.
+    aalioulem1.a $e |- ( ph -> F e. ( Poly ` ZZ ) ) $.
+    aalioulem1.b $e |- ( ph -> X e. ZZ ) $.
+    aalioulem1.c $e |- ( ph -> Y e. NN ) $.
+    $( Lemma for ~ aaliou .  An integer polynomial cannot inflate the
+       denominator of a rational by more than its degree. $)
+    aalioulem1 $p |- ( ph -> ( ( F ` ( X / Y ) ) x. ( Y ^ ( deg ` F ) ) )
+        e. ZZ ) $=
+      ( va co cfv cexp cmul cc0 cz wcel cc wceq syl syl2anc cn0 cdiv cfz cv csu
+      cdgr ccoe cply wne zcn nncn nnne0 divcl syl3anc coeid2 oveq1d fzfid dgrcl
+      cn expcl wa zsscn wf 0z coef2 sylancl elfznn0 ffvelrn syl2an sseldi mulcl
+      eqid fsummulc1 eqtrd adantr mulass adantl expdiv syl121anc nnexpcl nn0ssz
+      div13 cmin elfzelz expsub syl22anc nnz fvex fznn0sub mpan zexpcl eqeltrrd
+      cvv zmulcl eqeltrd fsumzcl ) ACDUAIZBJZDBUEJZKIZLIZMWRUBIZHUCZBUFJZJZWPXB
+      KIZLIZWSLIZHUDZNAWTXAXFHUDZWSLIXHAWQXIWSLABNUGJOZWPPOZWQXIQEACPOZDPOZDMUH
+      ZXKACNOZXLFCUIRADUROZXMGDUJRZAXPXNGDUKRZCDULUMZXCNHBWRWPXCVKZWRVKUNSUOAXA
+      XFWSHAMWRUPZAXMWRTOZWSPOZXQAXJYBENBUQRZDWRUSZSAXBXAOZUTZXDPOZXEPOZXFPOYGN
+      PXDVAATNXCVBZXBTOZXDNOZYFAXJMNOYJEVCXCNBXTVDVEXBWRVFZTNXBXCVGVHZVIZAXKYKY
+      IYFXSYMWPXBUSVHZXDXEVJSVLVMAXAXGHYAYGXGXDXEWSLIZLIZNYGYHYIYCXGYRQYOYPYGXM
+      YBYCAXMYFXQVNZAYBYFYDVNZYESZXDXEWSVOUMYGYLYQNOYRNOYNYGYQWSDXBKIZUAIZCXBKI
+      ZLIZNYGYQUUDUUBUAIZWSLIZUUEYGXEUUFWSLYGXLXMXNYKXEUUFQYGNPCVAAXOYFFVNVIZYS
+      AXNYFXRVNZYFYKAYMVPZCDXBVQVRUOYGUUDPOZUUBPOZUUBMUHZYCUUGUUEQYGXLYKUUKUUHU
+      UJCXBUSSYGUUBUROZUULAXPYKUUNYFGYMDXBVSVHZUUBUJRYGUUNUUMUUOUUBUKRUUAUUDUUB
+      WSWAVRVMYGUUCNOUUDNOZUUENOYGDWRXBWBIZKIZUUCNYGXMXNWRNOXBNOZUURUUCQYSUUIYG
+      TNWRVTYTVIYFUUSAXBMWRWCVPDWRXBWDWEYGDNOZUUQTOZUURNOYGXPUUTAXPYFGVNDWFRYFU
+      VAAWRWLOYFUVABUEWGWLXBMWRWHWIVPDUUQWJSWKAXOYKUUPYFFYMCXBWJVHUUCUUDWMSWNXD
+      YQWMSWNWOWN $.
+      $( [12-Nov-2014] $)
+  $}
+
+  ${
+    $d z a A $.  $d z a B $.  $d z a C $.  $d z a x y $.
+    cbvmptf.ax $e |- ( z e. A -> A. x z e. A ) $.
+    cbvmptf.ay $e |- ( z e. A -> A. y z e. A ) $.
+    cbvmptf.b $e |- ( z e. B -> A. y z e. B ) $.
+    cbvmptf.c $e |- ( z e. C -> A. x z e. C ) $.
+    cbvmptf.e $e |- ( x = y -> B = C ) $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    cbvmptf $p |- ( x e. A |-> B ) = ( y e. A |-> C ) $=
+      ( va cv wcel wceq wa copab cmpt hblem hbeleq hban eqeq2d anbi12d cbvopab1
+      weq eleq1 df-mpt 3eqtr4i ) AMZDNZLMZEOZPZALQBMZDNZUKFOZPZBLQADERBDFRUMUQA
+      LBUJULBBCADHSBLEBCLEISTUAUOUPAACBDGSALFACLFJSTUAABUEZUJUOULUPUIUNDUFUREFU
+      KKUBUCUDALDEUGBLDFUGUH $.
+      $( [13-Nov-2014] $)
+  $}
+
+  ${
+    $d ph a b $.  $d V a b $.  $d W a b $.  $d X a b $.  $d a x b $.
+    $d A a b $.  $d B a b $.  $d C a b $.  $d D a b $.
+    dvmptaddf.x $e |- ( ph -> X C_ RR ) $.
+    dvmptaddf.a $e |- ( ( ph /\ x e. X ) -> A e. CC ) $.
+    dvmptaddf.b $e |- ( ( ph /\ x e. X ) -> B e. V ) $.
+    dvmptaddf.da $e |- ( ph -> ( _D ` ( x e. X |-> A ) ) =
+        ( x e. X |-> B ) ) $.
+    dvmptaddf.c $e |- ( ( ph /\ x e. X ) -> C e. CC ) $.
+    dvmptaddf.d $e |- ( ( ph /\ x e. X ) -> D e. W ) $.
+    dvmptaddf.dc $e |- ( ph -> ( _D ` ( x e. X |-> C ) ) =
+        ( x e. X |-> D ) ) $.
+    dvmptaddf.fv $e |- ( b e. V -> A. x b e. V ) $.
+    dvmptaddf.fw $e |- ( b e. W -> A. x b e. W ) $.
+    dvmptaddf.fx $e |- ( b e. X -> A. x b e. X ) $.
+    dvmptaddf.fph $e |- ( ph -> A. x ph ) $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    dvmptaddf $p |- ( ph -> ( _D ` ( x e. X |-> ( A + C ) ) ) =
+        ( x e. X |-> ( B + D ) ) ) $=
+      ( va cv csb caddc co cmpt cdv cfv wcel wa cc wi hblem hban vex wel hbcsb1
+      ax-17 hbel hbim eleq1 anbi2d csbeq1a eleq1d imbi12d chvar cbvmptf 3eqtr3g
+      weq fveq2i dvmptadd hbov oveq12d 3eqtr4g ) AUBIBUBUCZCUDZBVPEUDZUEUFZUGZU
+      HUIUBIBVPDUDZBVPFUDZUEUFZUGBICEUEUFZUGZUHUIBIDFUEUFZUGAUBVQWAVRWBGHIKABUC
+      ZIUJZUKZCULUJZUMAVPIUJZUKZVQULUJZUMBUBWLWMBAWKBUABJUBITUNUOZBJJVQULBJVPCU
+      BUPZJUBUQBUSZURZJUCZULUJBUSZUTVABUBVJZWIWLWJWMWTWHWKAWGVPIVBVCZWTCVQULBVP
+      CVDZVEVFLVGWIDGUJZUMWLWAGUJZUMBUBWLXDBWNBJJWAGBJVPDWOWPURZRUTVAWTWIWLXCXD
+      XAWTDWAGBVPDVDZVEVFMVGABICUGZUHUIBIDUGUBIVQUGZUHUIUBIWAUGNXGXHUHBUBJICVQT
+      WRIUJUBUSZWRCUJUBUSWQXBVHVKBUBJIDWATXIWRDUJUBUSXEXFVHVIWIEULUJZUMWLVRULUJ
+      ZUMBUBWLXKBWNBJJVRULBJVPEWOWPURZWSUTVAWTWIWLXJXKXAWTEVRULBVPEVDZVEVFOVGWI
+      FHUJZUMWLWBHUJZUMBUBWLXOBWNBJJWBHBJVPFWOWPURZSUTVAWTWIWLXNXOXAWTFWBHBVPFV
+      DZVEVFPVGABIEUGZUHUIBIFUGUBIVRUGZUHUIUBIWBUGQXRXSUHBUBJIEVRTXIWREUJUBUSXL
+      XMVHVKBUBJIFWBTXIWRFUJUBUSXPXQVHVIVLWEVTUHBUBJIWDVSTXIWRWDUJUBUSBJVQVRUEW
+      QWRUEUJBUSZXLVMWTCVQEVRUEXBXMVNVHVKBUBJIWFWCTXIWRWFUJUBUSBJWAWBUEXEXTXPVM
+      WTDWAFWBUEXFXQVNVHVO $.
+      $( [12-Nov-2014] $)
+  $}
+
+  ${
+    $d ph i x a b c d $.  $d X i x a b c d $.  $d I i x a b c d $.
+    $d A a b c d $.  $d B a b c d $.
+    dvmptfsum.x $e |- ( ph -> X C_ RR ) $.
+    dvmptfsum.i $e |- ( ph -> I e. Fin ) $.
+    dvmptfsum.a $e |- ( ( ph /\ i e. I /\ x e. X ) -> A e. CC ) $.
+    dvmptfsum.b $e |- ( ( ph /\ i e. I /\ x e. X ) -> B e. CC ) $.
+    dvmptfsum.d $e |- ( ( ph /\ i e. I ) -> ( _D ` ( x e. X |-> A ) ) =
+        ( x e. X |-> B ) ) $.
+    dvmptfsum.o $e |- ( ph -> X e. ( topGen ` ran (,) ) ) $.
+    $( Function-builder for derivative, finite sums rule. $)
+    dvmptfsum $p |- ( ph -> ( _D ` ( x e. X |-> sum_ i e. I A ) ) =
+        ( x e. X |-> sum_ i e. I B ) ) $=
+      ( va cmpt cdv wceq wcel wa wi vb vc wss csu cfv ssid cfn adantr cv c0 csn
+      cun sseq1 anbi2d sumeq1 mpteq2dv fveq2d eqeq12d imbi12d weq cc0 cc cr a1i
+      0cn cxp dvconst ax-mp fveq2i 3eqtr3g dvmptres sum0 mpteq2i 3eqtr4g simpll
+      fconstmpt ssun1 sstr2 ad2antlr jca wel snssi unssd eqssd ad2antll biimprd
+      wb syl expr wn csb caddc co ad3antrrr simplrl simpl simpllr syl5ss sselda
+      cvv simplr syl3anc fsumcl adantlr sumex simpr simplll ssun2 sstr mpan vex
+      snss sylibr w3a ax-17 hbcsb1 hbel hbim eleq1 3anbi2d csbeq1a eleq1d chvar
+      hbmpt hbfv hbeq syl2anc hbmpt1 hban dvmptaddf cin disjsn fsumsplit sumsns
+      simplrr sylancr oveq2d eqtrd mpteq2dva ex eqidd snfi unfi sylancl 3eqtr4d
+      pm2.61d embantd com3l findcard2 mpcom mpan2 ) AFFUCZBGFCEUDZOZPUEZBGFDEUD
+      ZOZQZFUFFUGRZAUULSZUURAUUSUULIUHANUIZFUCZSZBGUVACEUDZOZPUEZBGUVADEUDZOZQZ
+      TAUJFUCZSZBGUJCEUDZOZPUEZBGUJDEUDZOZQZTAUAUIZFUCZSZBGUVRCEUDZOZPUEZBGUVRD
+      EUDZOZQZTZAUVRUBUIZUKZULZFUCZSZBGUWJCEUDZOZPUEZBGUWJDEUDZOZQZTUUTUURTNUAU
+      BFUVAUJQZUVCUVKUVIUVQUWSUVBUVJAUVAUJFUMUNUWSUVFUVNUVHUVPUWSUVEUVMPUWSBGUV
+      DUVLUVAUJCEUOUPUQUWSBGUVGUVOUVAUJDEUOUPURUSNUAUTZUVCUVTUVIUWFUWTUVBUVSAUV
+      AUVRFUMUNUWTUVFUWCUVHUWEUWTUVEUWBPUWTBGUVDUWAUVAUVRCEUOUPUQUWTBGUVGUWDUVA
+      UVRDEUOUPURUSUVAUWJQZUVCUWLUVIUWRUXAUVBUWKAUVAUWJFUMUNUXAUVFUWOUVHUWQUXAU
+      VEUWNPUXABGUVDUWMUVAUWJCEUOUPUQUXABGUVGUWPUVAUWJDEUOUPURUSUVAFQZUVCUUTUVI
+      UURUXBUVBUULAUVAFFUMUNUXBUVFUUOUVHUUQUXBUVEUUNPUXBBGUVDUUMUVAFCEUOUPUQUXB
+      BGUVGUUPUVAFDEUOUPURUSAUVQUVJABGVAOZPUEUXCUVNUVPABVAVAVBVCGVCVCUCAVCUFVDV
+      AVBRZABUIZVCRSVEVDZUXFAVCVAUKVFZPUEZUXGBVCVAOZPUEUXIUXHUXGQZAUXDUXJVEVAVG
+      VHVDUXGUXIPBVCVAVPZVIUXKVJHMVKUVMUXCPBGUVLVACEVLVMVIBGUVOVADEVLVMVNUHUWLU
+      VRUGRZUWGUWRUWLUXLUWGUWRTUWLUXLSZUVTUWFUWRUXMAUVSAUWKUXLVOUWKUVSAUXLUVRUW
+      JUCZUWKUVSTUVRUWIVQZUVRUWJFVRVHVSVTUXMUBUAWAZUWFUWRTZUWLUXLUXPUXQUWLUXLUX
+      PSSZUWRUWFUXRUWJUVRQZUWRUWFWGUXPUXSUWLUXLUXPUWJUVRUXPUVRUWIUVRUVRUVRUCUXP
+      UVRUFVDUWHUVRWBWCUXNUXPUXOVDWDWEUXSUWOUWCUWQUWEUXSUWNUWBPUXSBGUWMUWAUWJUV
+      RCEUOUPUQUXSBGUWPUWDUWJUVRDEUOUPURWHWFWIUWLUXLUXPWJZUXQUWLUXLUXTSZSZUWFUW
+      RUYBUWFSZBGUWAEUWHCWKZWLWMZOZPUEZBGUWDEUWHDWKZWLWMZOZUWOUWQUYCBUWAUWDUYDU
+      YHWTVBGNAGVCUCUWKUYAUWFHWNUYBUXEGRZUWAVBRUWFUYBUYKSZUVRCEUWLUXLUXTUYKWOZU
+      YLEUAWAZSAEUIZFRZUYKCVBRZUWLAUYAUYKUYNAUWKWPZWNUYLUVRFUYOUYLUVRUWJFUXOAUW
+      KUYAUYKWQZWRWSUYBUYKUYNXAJXBXCXDUWDWTRUYCUYKSUVRDEXEVDUYBUWFXFUYBUYKUYDVB
+      RZUWFUYLAUWHFRZUYKUYTAUWKUYAUYKXGZUYLUWKVUAUYSUWKUWIFUCZVUAUWIUWJUCUWKVUC
+      UWIUVRXHUWIUWJFXIXJUWHFUBXKZXLXMZWHZUYBUYKXFZAUYPUYKXNZUYQTAVUAUYKXNZUYTT
+      EUBVUIUYTEVUIEXOZENNUYDVBENUWHCVUDNUBWAEXOZXPZUVAVBRZEXOZXQXREUBUTZVUHVUI
+      UYQUYTVUOUYPVUAAUYKUYOUWHFXSZXTZVUOCUYDVBEUWHCYAZYBUSJYCXBZXDUYBUYKUYHVBR
+      ZUWFUYLAVUAUYKVUTVUBVUFVUGVUHDVBRZTVUIVUTTEUBVUIVUTEVUJENNUYHVBENUWHDVUDV
+      UKXPZVUNXQXRVUOVUHVUIVVAVUTVUQVUODUYHVBEUWHDYAZYBUSKYCXBZXDUYBBGUYDOZPUEZ
+      BGUYHOZQZUWFUYBAVUAVVHAUWKUYAVOUWKVUAAUYAVUEVSAUYPSZBGCOZPUEZBGDOZQZTAVUA
+      SZVVHTEUBVVNVVHEVVNEXOENNVVFVVGENVVEPUVAPRZEXOEBNGUYDUVAGRZEXOZVULYDYEEBN
+      GUYHVVQVVBYDYFXRVUOVVIVVNVVMVVHVUOUYPVUAAVUPUNVUOVVKVVFVVLVVGVUOVVJVVEPVU
+      OBGCUYDVURUPUQVUOBGDUYHVVCUPURUSLYCYGUHUVAWTRBXOVUMBXOVVPBXOUYBUWFBUYBBXO
+      BNNUWCUWEBNUWBPVVOBXOBNGUWAYHYEBNGUWDYHYFYIYJUYBUWOUYGQUWFUYBUWNUYFPUYBBG
+      UWMUYEUYLUWMUWAUWICEUDZWLWMUYEUYLUVRUWICUWJEUYLUXTUVRUWIYKUJQUWLUXLUXTUYK
+      YOUVRUWHYLXMZUYLUWJUUAZUYLUXLUWIUGRUWJUGRUYMUWHUUBUVRUWIUUCUUDZUYLUYOUWJR
+      ZSZAUYPUYKUYQUWLAUYAUYKVWBUYRWNZUYLUWJFUYOUYSWSZUYBUYKVWBXAZJXBYMUYLVVRUY
+      DUWAWLUYLUWHWTRZUYTVVRUYDQVUDVUSCEUWHWTYNYPYQYRYSUQUHUYBUWQUYJQUWFUYBBGUW
+      PUYIUYLUWPUWDUWIDEUDZWLWMUYIUYLUVRUWIDUWJEVVSVVTVWAVWCAUYPUYKVVAVWDVWEVWF
+      KXBYMUYLVWHUYHUWDWLUYLVWGVUTVWHUYHQVUDVVDDEUWHWTYNYPYQYRYSUHUUEYTWIUUFUUG
+      YTUUHUUIUUJUUK $.
+      $( [12-Nov-2014] $)
+  $}
+
+  ${
+    dvply1.f $e |- ( ph -> F = ( z e. RR |-> sum_ k e. ( 0 ... N )
+        ( ( A ` k ) x. ( z ^ k ) ) ) ) $.
+    dvply1.g $e |- ( ph -> G = ( z e. RR |-> sum_ k e. ( 0 ... ( N - 1 ) )
+        ( ( B ` k ) x. ( z ^ k ) ) ) ) $.
+    dvply1.b $e |- B = ( k e. NN0 |-> ( ( k + 1 ) x. ( A ` ( k + 1 ) ) ) ) $.
+    dvply1.n $e |- ( ph -> N e. NN0 ) $.
+    $( Derivative of a polynomial, explicit sum version. $)
+    dvply1 $p |- ( ph -> ( _D ` F ) = G ) $=
+      ? $.
   $}
 
 $( (End of Stefan O'Rear's mathbox.) $)
