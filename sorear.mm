@@ -8519,16 +8519,16 @@ $)
     ttaclem7 $p |- ( ( ( On i^i a ) = (/) /\ A. c ( om ~<_ c ->
         ( c X. c ) ~~ c ) ) -> E. b e. On b ~~ a ) $=
       ( vd cv wcel con0 cin c0 wceq cdom wbr cen wi wa wrex cvv breq1 syl2anc
-      wn cfn com cxp wal finnum a1d crab vex hartogs ax-mp elirr cbvrabv elrab2
-      biimpri mpan mto notbid rcla4ev mp2an simprl onss ad2antrl simplrl ssdisj
-      wss simprr simpll simplrr ttaclem6 syl32anc ra4e ondomen syl rexlimdva ex
-      expr mpi pm2.61i ) AEZUAFZGVSHIJZUBCEZKLWBWBUCWBMLNCUDZOZBEZVSMLBGPZNVTWF
-      WDBVSUEUFVTTZWDWFWGWDOZDEZVSKLZTZDGPZWFWEVSKLZBGUGZGFZWNVSKLZTZWLVSQFWOAU
-      HBVSQUIUJZWPWNWNFZWNUKWOWPWSWRWSWOWPOWBVSKLZWPCWNGWNWBWNVSKRWMWTBCGWEWBVS
-      KRULUMUNUOUPWKWQDWNGWIWNJWJWPWIWNVSKRUQURUSWHWKWFDGWHWIGFZWKWFWHXAWKOZOZV
-      SWIKLZDGPZWFXCXAXDXEWHXAWKUTZXCWIVSHIJZWKWGXAWCXDXCWIGVEZWAXGXAXHWHWKWIVA
-      VBWGWAWCXBVCWIGVSVDSWHXAWKVFWGWDXBVGXFWGWAWCXBVHADCVIVJXDDGVKSDBVSVLVMVPV
-      NVQVOVR $.
+      wn cfn com cxp wal finnum a1d hartogs ax-mp onirri cbvrabv elrab2 biimpri
+      crab vex mpan mto notbid rcla4ev mp2an simprl wss ad2antrl simplrl ssdisj
+      onss simprr simplrr ttaclem6 syl32anc ra4e ondomen syl expr rexlimdva mpi
+      simpll ex pm2.61i ) AEZUAFZGVSHIJZUBCEZKLWBWBUCWBMLNCUDZOZBEZVSMLBGPZNVTW
+      FWDBVSUEUFVTTZWDWFWGWDOZDEZVSKLZTZDGPZWFWEVSKLZBGUMZGFZWNVSKLZTZWLVSQFWOA
+      UNBVSQUGUHZWPWNWNFZWNWRUIWOWPWSWRWSWOWPOWBVSKLZWPCWNGWNWBWNVSKRWMWTBCGWEW
+      BVSKRUJUKULUOUPWKWQDWNGWIWNJWJWPWIWNVSKRUQURUSWHWKWFDGWHWIGFZWKWFWHXAWKOZ
+      OZVSWIKLZDGPZWFXCXAXDXEWHXAWKUTZXCWIVSHIJZWKWGXAWCXDXCWIGVAZWAXGXAXHWHWKW
+      IVEVBWGWAWCXBVCWIGVSVDSWHXAWKVFWGWDXBVPXFWGWAWCXBVGADCVHVIXDDGVJSDBVSVKVL
+      VMVNVOVQVR $.
       $( [5-Nov-2014] $)
 
     $( Lemma for ~ ttac . $)
@@ -8759,11 +8759,13 @@ $)
     $( Trichotomy of dominance without AC when one set is finite.  (Contributed
        by Stefan O'Rear, 30-Oct-2014.) $)
     fidomtri $p |- ( A e. Fin -> ( A ~<_ B <-> -. B ~< A ) ) $=
-      ( va cfn wcel cdom wbr wn domnsym wi wa domtri biimprd cv wf1 wex isinffi
-      csdm cvv wf vex f1f dmfex sylancr f1domg exlimiv syl ancoms a1d pm2.61dan
-      mpcom impbid2 ) ADEZABFGZBARGHZABIUMBDEZUOUNJUMUPKUNUOABDDLMUMUPHZKUNUOUQ
-      UMUNUQUMKABCNZOZCPUNBACQUSUNCASEZUSUNUSURSEABURTUTCUAABURUBABSURUCUDABSUR
-      UEUKUFUGUHUIUJUL $.
+      ( va cfn wcel cdom wbr csdm wn domnsym wi ccrd cfv wss con0 cardon ancoms
+      wa wb cvv ficarddom ontri1 mp2an ficardsdom notbid syl5bb biimprd wf1 wex
+      bitrd cv isinffi vex f1f dmfex sylancr f1domg mpcom exlimiv syl pm2.61dan
+      wf a1d impbid2 ) ADEZABFGZBAHGZIZABJVEBDEZVHVFKVEVIRZVFVHVJVFALMZBLMZNZVH
+      ABUAVMVLVKEZIZVJVHVKOEVLOEVMVOSAPBPVKVLUBUCVJVNVGVIVEVNVGSBAUDQUEUFUJUGVE
+      VIIZRVFVHVPVEVFVPVERABCUKZUHZCUIVFBACULVRVFCATEZVRVFVRVQTEABVQVBVSCUMABVQ
+      UNABTVQUOUPABTVQUQURUSUTQVCVAVD $.
       $( [30-Oct-2014] $)
   $}
 
@@ -9436,8 +9438,9 @@ $)
   $( Strict dominance and elementhood are the same for finite ordinals.
      (Contributed by Stefan O'Rear, 2-Nov-2014.) $)
   nnsdomel $p |- ( ( A e. om /\ B e. om ) -> ( A e. B <-> A ~< B ) ) $=
-    ( com wcel wa ccrd cfv csdm wbr wceq cardnn eleq12 syl2an cardsdom bitr3d
-    wb ) ACDZBCDZEAFGZBFGZDZABDZABHIQSAJTBJUAUBPRAKBKSATBLMABCCNO $.
+    ( com wcel wa ccrd cfv csdm wbr wceq wb cardnn eleq12 syl2an cfn cin onfin2
+    con0 inss2 sseli eqsstri ficardsdom bitr3d ) ACDZBCDZEAFGZBFGZDZABDZABHIZUD
+    UFAJUGBJUHUIKUEALBLUFAUGBMNUDAODBODUHUJKUECOACROPOQROSUAZTCOBUKTABUBNUC $.
     $( [2-Nov-2014] $)
 
   $( An ordinal with more elements of some type is larger.  (Contributed by
@@ -10670,18 +10673,19 @@ $)
        O'Rear, 30-Oct-2014.) $)
     fin45 $p |- Fin4 C_ Fin5 $=
       ( va vb vc cfin4 cfin5 cv wpss cen wbr wa wex wn wne ccda c1o cxp c2o wss
-      wcel df-2o c0 co csuc sssucid sseqtr4i xpss2 ax-mp a1i wel cop 1onn elexi
-      com sucid eleqtrri jctr opelxp sylibr elirr intnan nelne1 sylancl exlimiv
-      n0 mtbir sylbi necomd df-pss sylanbrc vex xp2cda psseq2i sylib xp1en entr
-      mpan xpex wceq psseq1 breq1 anbi12d cla4ev syl2an wi ovex ensym infpssen1
-      cvv adantl mpd con3i df-fin4 abeq2i dffin5-2 3imtr4i ssriv ) ADEBFZAFZGWQ
-      WRHIJBKZLZWRUAMZWRWRWRNUBZHIZJZLZWRDSWRESXDWSXDCFZXBGZXFXBHIZJZCKZWSXAWRO
-      PZXBGZXKXBHIZXJXCXAXKWRQPZGZXLXAXKXNRZXKXNMXOXPXAOQRXPOOUCZQOUDTUEOQWRUFU
-      GUHXAXNXKXABAUIZBKXNXKMZBWRVDXRXSBXRWQOUJZXNSZXTXKSZLXSXRXROQSZJYAXRYCOXQ
-      QOOUMUKULZUNTUOUPWQOWRQYDUQURYBXROOSZJYEXROUSUTWQOWROYDUQVEXTXNXKVAVBVCVF
-      VGXKXNVHVIXNXBXKWRAVJZVKVLVMXKWRHIXCXMWRYFVNXKWRXBVOVPXIXLXMJCXKWROYFYDVQ
-      XFXKVRXGXLXHXMXFXKXBVSXFXKXBHVTWAWBWCXCXJWSWDZXAXCXBWRHIWRWHSYGWRXBWRWRNW
-      EWFYFCBXBWRWGVBWIWJWKWTADABWLWMXEAEAWNWMWOWP $.
+      wcel ax-mp c0 co csuc sssucid df-2o sseqtr4i xpss2 a1i wel cop 1onn elexi
+      n0 com sucid eleqtrri jctr opelxp sylibr nnord ordirr intnan mtbir nelne1
+      word sylancl exlimiv sylbi necomd df-pss sylanbrc vex psseq2i sylib xp1en
+      xp2cda entr mpan xpex wceq psseq1 breq1 anbi12d cla4ev syl2an wi cvv ovex
+      ensym infpssen1 adantl mpd con3i df-fin4 abeq2i dffin5-2 3imtr4i ssriv )
+      ADEBFZAFZGWSWTHIJBKZLZWTUAMZWTWTWTNUBZHIZJZLZWTDSWTESXFXAXFCFZXDGZXHXDHIZ
+      JZCKZXAXCWTOPZXDGZXMXDHIZXLXEXCXMWTQPZGZXNXCXMXPRZXMXPMXQXRXCOQRXROOUCZQO
+      UDUEUFOQWTUGTUHXCXPXMXCBAUIZBKXPXMMZBWTUMXTYABXTWSOUJZXPSZYBXMSZLYAXTXTOQ
+      SZJYCXTYEOXSQOOUNUKULZUOUEUPUQWSOWTQYFURUSYDXTOOSZJYGXTOVEZYGLOUNSYHUKOUT
+      TOVATVBWSOWTOYFURVCYBXPXMVDVFVGVHVIXMXPVJVKXPXDXMWTAVLZVPVMVNXMWTHIXEXOWT
+      YIVOXMWTXDVQVRXKXNXOJCXMWTOYIYFVSXHXMVTXIXNXJXOXHXMXDWAXHXMXDHWBWCWDWEXEX
+      LXAWFZXCXEXDWTHIWTWGSYJWTXDWTWTNWHWIYICBXDWTWJVFWKWLWMXBADABWNWOXGAEAWPWO
+      WQWR $.
       $( [30-Oct-2014] $)
 
     $( Every V-finite set is VI-finite because multiplication dominates
