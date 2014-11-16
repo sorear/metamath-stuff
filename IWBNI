@@ -24,16 +24,21 @@ $( TODO / IWBNI
     18. Pony: Pluggable decision procedures
     19. MATCH would be much more awesome if it took a name wildcard
     20. Blank lines before/after SHOW PROOF would help
-    21. backrefs in SEARCH
+===Mostly moot with workflow change
+    21. backrefs in SEARCH [Looks very difficult]
     22. how can the PA (in particular SHOW PROOF) be made more usable with very large proofs?  common syntax-subtree mining / abbrevification?  reduce indent without going all the way to LEMMON?  better control over the proof tree fragment to display?
     23. Pony: catch SIGINT, make MINIMIZE_WITH and IMPROVE interruptable, suppress output
     24. IMPROVE LHF: switch to iterated deepening to avoid idiVD, use the first of a set of equivalent theorems to avoid grothomex syndrome ( but prefer axioms if later )
     25. SHOW STATEMENT NEW would be cool
+===Norm did this
     26. ASSIGN with $e does not work as described.  it would be much more useful if out of scope $e's were excluded
+===Actually the issue was the existance of .1, .2 theorems.  switching to .a, .b makes it work since there are no such theorems
     27. /WIDTH to SHOW PROOF
     28. LET [VAR] $1 = $2 = ...
     29. LET STEP seems possibly nonfunctional, need to investigate
     30. V P {MY-MATHBOX}
+===I did this
     31. MMPE: hover over GIFs to see original math symbol?
     32. MMPE: hover over subexpression, see "parse" (highlight smallest wff/class around cursor)?
+    33. IMPROVE /WITH
 $)
