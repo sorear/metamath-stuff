@@ -12189,8 +12189,8 @@ $)
   $}
 
   ${
-    $d a b c d e $.  $d F b c d e $.  $d L c d e $.  $d H b d e $.
-    $d A a b c $.
+    $d a b c d e $.  $d F b c d e $.  $d L c d e f $.  $d H b d e $.
+    $d A a b c d e $.  $d B a b c d e $.
     aaliou3lem.c $e |- F = ( a e. NN |-> ( 2 ^ -u ( ! ` a ) ) ) $.
     aaliou3lem.d $e |- L = sum_ b e. NN ( F ` b ) $.
     aaliou3lem.e $e |- H = ( c e. NN |-> sum_ b e. ( 1 ... c ) ( F ` b ) ) $.
@@ -12274,6 +12274,27 @@ $)
       XIUXTUUOUULYJYIUXKYMUXEUYCUXGUYBUXMYKUYDUXCUXLDYLVJYNUXEUVIUXNUUBUVHUVIYO
       UXEUXGUXFUXOUVIUXNVDUXJUXIUYADUUOUULYPXLYQYRYSYTUUAYN $.
       $( [16-Nov-2014] $)
+
+    $( Lemma for ~ aaliou3 . $)
+    aaliou3lem8 $p |- ( ( A e. NN /\ B e. RR+ ) -> E. d e. RR E. e e. NN
+        ( L =/= d /\ ( d x. e ) e. ZZ /\ ( abs ` ( L - d ) ) <_
+            ( B / ( e ^ A ) ) ) ) $=
+      ( cX cn wcel cfv co cmul cle crp wa cr c2 cfa cexp wne cmin cabs cdiv wbr
+      cz cv w3a wrex aaliou3lem5 c1 caddc aaliou3lem7 simpld necomd aaliou3lem6
+      syl cneg simprd mulass syl3anc expmul eqcomd oveq2d expaddz addcom negsub
+      syl12anc syl2anc facp1 subdi eqtrd 3eqtrd lemuldiv2 mpbird lemuldiv mpbid
+      eqbrtrd letrd wceq neeq2 oveq1 eleq1d oveq2 fveq2d breq1d breq2d 3anbi23d
+      3anbi123d rcla42ev syl113anc ) AOPBUAPUBZNEQZUCPZUDNUEQUFRZOPFWSUGZWSXASR
+      ZULPZFWSUHRZUIQZBXAAUFRZUJRZTUKZFJUMZUGZXJCUMZSRZULPZFXJUHRZUIQZBXLAUFRZU
+      JRZTUKZUNZCOUOJUCUOWRNOPZWT?NDEFGHIKLMUPVC?WRWSFWRWSFUGZXFUDUDNUQURRUEQVD
+      UFRSRZTUKZWRYAYBYDUB?NDEFGHIKLMUSVCZUTVAWRYAXD?NDEFGHIKLMVBVCWRXFYCXH???W
+      RYBYDYEVE???????????????????VFVG????????????????????????????????VHVGVIVJ?
+      ?????????????VKVNVI??????????????????VLVO????????VMVO??????????????VPVCVJ
+      ??????????????VQVGVIVRVSVJVS?WD???????????VTVGWAWD???????????WBVGWCWEXTXB
+      XDXIUNXBWSXLSRZULPZXFXRTUKZUNJCWSXAUCOXJWSWFZXKXBXNYGXSYHXJWSFWGYIXMYFULX
+      JWSXLSWHWIYIXPXFXRTYIXOXEUIXJWSFUHWJWKWLWOXLXAWFZYGXDYHXIXBYJYFXCULXLXAWS
+      SWJWIYJXRXHXFTYJXQXGBUJXLXAAUFWHVJWMWNWPWQ $.
+      $( [17-Nov-2014] $)
 
     $( Example of a "Liouville number", a very simple definable transcedental
        real. $)
@@ -12616,6 +12637,406 @@ $)
       cv crab cz cply wrex cc cmpt eqid aannenlem3 ) ABFCSDSGHIDESZJKUHLGBSZMNA
       SUHOGGPGUIMNAFQREUAUBGTUCCUDTUEZBCDEUJUFUG $.
       $( [16-Nov-2014] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    The Ackermann bijection
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c csum $.
+
+  ${
+    $d x y z w $.
+
+    $( Extend class notation to include indexed cardinal sums. $)
+    ccsum $a class csum $.
+
+    $( Define indexed (k-ary) cardinal sums.  This is intended primarily to
+       replace ` sum_ ` in subsystems without ~ ax-inf ; since ordinal addition
+       is not commutative, finite sums of ordinals would be less useful, but
+       cardinal sum is commutative and coincides with ordinal sum precisely
+       where both are commutative. $)
+    df-csum $a |- csum = { <. x , y >. | ( Fun x /\
+        y = { <. z , w >. | w e. ( x ` z ) } ) } $.
+
+    $d A u x y z w $.  $d B u x y z w $.
+
+    $( Value of an indexed cardinal sum. $)
+    csumval $p |- ( ( Fun A /\ A e. V ) -> ( csum ` A ) =
+        { <. z , w >. | w e. ( A ` z ) } ) $=
+      ? $.
+  $}
+
+  ${
+    $d F a b c x y $.  $d G a b c x y $.  $d H a b c x y $.  $d A a b c x y $.
+    $d B a b c x y $.
+
+    $( A one-to-one mapping induces a one-to-one mapping on power sets. $)
+    f1opw $p |- ( F : A -1-1-onto-> B -> ( b e. ~P A |-> ( F " b ) ) :
+          ~P A -1-1-onto-> ~P B ) $=
+      ( va cpw cv cima wcel wss crn imassrn wceq syl5sseq wfun cvv vex funimaex
+      wb adantr wf1o ccnv cmpt eqid wfo f1ofo forn syl f1ofun elpwg 3syl mpbird
+      dfdm4 f1odm syl5eqr dff1o3 simprbi wa elpwi adantl foimacnv syl2an eqcomd
+      cdm imaeq2 eqeq2d syl5ibrcom wf1 f1of1 f1imacnv impbid f1o2d ) ABCUAZDEAF
+      ZBFZCDGZHZCUBZEGZHZDVNVQUCZWAUDVMVQVOIZVPVNIZVMWBVQBJZVMCKZVQBCVPLVMABCUE
+      ZWEBMABCUFZABCUGUHNVMCOVQPIWBWDSABCUICVPDQRVQBPUJUKULTVMVTVNIZVSVOIZVMWHV
+      TAJZVMVRKZVTAVRVSLVMWKCVDACUMABCUNUONVMVROZVTPIWHWJSVMWFWLABCUPUQVRVSEQRV
+      TAPUJUKULTVMWCWIURZURZVPVTMZVSVQMZWNWPWOVSCVTHZMWNWQVSVMWFVSBJZWQVSMWMWGW
+      IWRWCVSBUSUTABVSCVAVBVCWOVQWQVSVPVTCVEVFVGWNWOWPVPVRVQHZMWNWSVPVMABCVHVPA
+      JZWSVPMWMABCVIWCWTWIVPAUSTABVPCVJVBVCWPVTWSVPVSVQVRVEVFVGVKVL $.
+      $( [18-Nov-2014] $)
+
+    $( An ordinal number is a proper subset of its successor. $)
+    onpsssuc $p |- ( A e. On -> A C. suc A ) $=
+      ( con0 wcel csuc wpss sucidg wb eloni ordsuc sylib ordelpss syl2anc mpbid
+      word ) ABCZAADZCZAPEZABFOANZPNZQRGAHZOSTUAAIJAPKLM $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij2 . $)
+    ackbij2lem2 $p |- ( A e. om -> ~P A C_ ( ~P om i^i Fin ) ) $=
+      ( va com wcel cpw cfn cin cv wa wss word ordom ordelss sspwb sylib sselda
+      mpan con0 onfin2 inss2 eqsstri sseli elpwi ssfi syl2an sylanbrc ex ssrdv
+      elin ) ACDZBAEZCEZFGZUJBHZUKDZUNUMDZUJUOIUNULDUNFDZUPUJUKULUNUJACJZUKULJC
+      KUJURLCAMQACNOPUJAFDUNAJUQUOCFACRFGFSRFTUAUBUNAUCAUNUDUEUNULFUIUFUGUH $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij2 . $)
+    ackbij1lem9 $p |- ( -. A e. B -> ( B i^i suc A ) = ( B i^i A ) ) $=
+      ( wcel wn csuc cin csn cun df-suc ineq2i indi eqtri c0 wceq disjsn uneq2d
+      biimpri un0 syl6eq syl5eq ) ABCDZBAEZFZBAFZBAGZFZHZUDUCBAUEHZFUGUBUHBAIJB
+      AUEKLUAUGUDMHUDUAUFMUDUFMNUABAOQPUDRST $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij2 . $)
+    ackbij1lem10 $p |- ( A e. B -> ( B i^i suc A ) =
+        ( { A } u. ( B i^i A ) ) ) $=
+      ( wcel csuc cin csn cun df-suc ineq2i indi uncom 3eqtri wss snssi sseqin2
+      wceq sylib uneq1d syl5eq ) ABCZBADZEZBAFZEZBAEZGZUCUEGUBBAUCGZEUEUDGUFUAU
+      GBAHIBAUCJUEUDKLTUDUCUETUCBMUDUCPABNUCBOQRS $.
+      $( [18-Nov-2014] $)
+
+    ackbij.f $e |- F = ( x e. ( ~P om i^i Fin ) |->
+        ( card ` ( csum ` ( y e. x |-> ~P y ) ) ) ) $.
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem2 $p |- ( A e. ( ~P om i^i Fin ) -> ( F ` A ) =
+        ( card ` ( csum ` ( y e. A |-> ~P y ) ) ) ) $=
+      ( cv cpw cmpt ccsum cfv ccrd com cfn cin wceq mpteq1 fveq2d fvex fvmpt )
+      ACBAFZBFGZHZIJZKJBCUAHZIJZKJLGMNDTCOZUCUEKUFUBUDIBTCUAPQQEUEKRS $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem11 $p |- ( A e. om -> ( F ` { A } ) = ( card ` ~P A ) ) $=
+      ? $.
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem12 $p |- ( ( A e. ( ~P om i^i Fin ) /\ B e. ( ~P om i^i Fin ) /\
+          ( A i^i B ) = (/) ) ->
+        ( F ` ( A u. B ) ) = ( ( F ` A ) +o ( F ` B ) ) ) $=
+      ? $.
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem3 $p |- F : ( ~P om i^i Fin ) --> om $=
+      ( ficardom syl adantl fmptd trud ) ???????????????EFGDHI $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem7 $p |- ( ( A e. ( ~P om i^i Fin ) /\ B C_ A ) ->
+        B e. ( ~P om i^i Fin ) ) $=
+      ( com cpw cfn cin wcel wss wa inss1 sseli elpwi syl sstr sylan2 cvv ssexg
+      wb elpwg mpbird ancoms inss2 ssfi sylan elin sylanbrc ) CGHZIJZKZDCLZMDUK
+      KZDIKZDULKUNUMUOUNUMMZUODGLZUMUNCGLZURUMCUKKUSULUKCUKINOCGPQDCGRSUQDTKUOU
+      RUBDCULUADGTUCQUDUEUMCIKUNUPULICUKIUFOCDUGUHDUKIUIUJ $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem5 $p |- ( ( B e. ( ~P om i^i Fin ) /\ A C_ B ) ->
+        ( F ` A ) C_ ( F ` B ) ) $=
+      ( com cpw cfn cin wcel wss cfv cdif ackbij1lem7 ffvelrn sylancr a1i wceq
+      wa coa co wf ackbij1lem3 syldan nnaword1 syl2anc cun disjdif ackbij1lem12
+      difss c0 syl3anc undif biimpi adantl fveq2d eqtr3d sseqtrd ) DGHIJZKZCDLZ
+      TZCEMZVDDCNZEMZUAUBZDEMZVCVDGKZVFGKZVDVGLVCUTGEUCZCUTKZVIABEFUDZABDCEFOZU
+      TGCEPQVCVKVEUTKZVJVMVAVBVEDLZVOVPVCDCUKRABDVEEFOUEZUTGVEEPQVDVFUFUGVCCVEU
+      HZEMZVGVHVCVLVOCVEJULSZVSVGSVNVQVTVCCDUIRABCVEEFUJUMVCVRDEVBVRDSZVAVBWACD
+      UNUOUPUQURUS $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem6 $p |- ( A e. om -> ( F ` { A } ) = suc ( F ` A ) ) $=
+      ( va vb cfv cpw ccrd csuc wceq c0 pweq fveq2d fveq2 suceq syl eqeq12d c1o
+      com wcel csn ackbij1lem11 weq df-1o pw0 fveq2i cvv 0ex cardsn ax-mp eqtri
+      cv 3eqtr4i finds eqtrd ) CUAUBCUCDHCIZJHZCDHZKZABCDEUDFUNZIZJHZVBDHZKZLMI
+      ZJHZMDHZKZLGUNZIZJHZVKDHZKZLVKKZIZJHZVPDHZKZLUSVALFGCVBMLZVDVHVFVJWAVCVGJ
+      VBMNOWAVEVILVFVJLVBMDPVEVIQRSFGUEZVDVMVFVOWBVCVLJVBVKNOWBVEVNLVFVOLVBVKDP
+      VEVNQRSVBVPLZVDVRVFVTWCVCVQJVBVPNOWCVEVSLVFVTLVBVPDPVEVSQRSVBCLZVDUSVFVAW
+      DVCURJVBCNOWDVEUTLVFVALVBCDPVEUTQRSTMKZVHVJUFVHMUCZJHZTVGWFJUGUHMUIUBWGTL
+      UJMUIUKULUMVIMLVJWEL?VIMQULUO?UPUQ $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem4 $p |- ( ( ( A e. ( ~P om i^i Fin ) /\
+          B e. ( ~P om i^i Fin ) ) /\ ( c e. om /\ c e. A /\ -. c e. B ) ) ->
+        -. ( F ` ( A i^i suc c ) ) = ( F ` ( B i^i suc c ) ) ) $=
+      ( com cfn cin wcel wa wn cfv wceq wpss wss con0 syl syl2anc cpw cv simpr1
+      w3a csuc wne word ordom ordelss mpan vex elpw sylibr onfin2 inss2 eqsstri
+      sseli sylanbrc simpr3 ackbij1lem9 a1i eqsstrd ackbij1lem5 csn ackbij1lem3
+      elin ffvelrni nnon onpsssuc ackbij1lem6 psseq2d mpbird simpll ackbij1lem7
+      3syl inss1 cun ssun1 simpr2 ackbij1lem10 syl5sseqr psssstr sspsstr df-pss
+      simprbi necomd df-ne sylib ) CHUAZIJZKZDWJKZLZFUBZHKZWNCKZWNDKMZUDZLZCWNU
+      EZJZENZDWTJZENZUFXBXDOMWSXDXBWSXDXBPZXDXBUFZWSXDWNENZQZXGXBPZXEWSWNWJKZXC
+      WNQXHWSWOXJWMWOWPWQUCZWOWNWIKZWNIKXJWOWNHQZXLHUGWOXMUHHWNUIUJWNHFUKULUMHI
+      WNHRIJIUNRIUOUPUQWNWIIVFURSZWSXCDWNJZWNWSWQXCXOOWMWOWPWQUSWNDUTSXOWNQWSDW
+      NUOVAVBABXCWNEGVCTWSXGWNVDZENZPZXQXBQZXIWSXRXGXGUEZPZWSXGRKZYAWSXJXGHKYBX
+      NWJHWNEABEGVEVGXGVHVOXGVISWSXQXTXGWSWOXQXTOXKABWNEGVJSVKVLWSXAWJKZXPXAQXS
+      WSWKXACQZYCWKWLWRVMYDWSCWTVPVAABCXAEGVNTWSXPCWNJZVQZXPXAXPYEVRWSWPXAYFOWM
+      WOWPWQVSWNCVTSWAABXPXAEGVCTXGXQXBWBTXDXGXBWCTXEXDXBQXFXDXBWDWESWFXBXDWGWH
+      $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem1 $p |- ( ( A e. ( ~P om i^i Fin ) /\ B e. ( ~P om i^i Fin ) ) ->
+        ( ( F ` A ) = ( F ` B ) -> A = B ) ) $=
+      ( vb com cfn cin wcel cfv wceq wi wss c0 ineq2 fveq2d eqeq12d imbi12d cpw
+      va wa cun cuni csuc inss1 sseli elpwi syl adantr adantl unssd unfi syl2an
+      inss2 nnunifi syl2anc peano2 cv imbi2d weq in0 eqtr4i a1i12 simp13 3simpa
+      w3a syl3an1 3eqtr3d nnacan syl3anc 3adant3 3ad2ant1 mpbid 3adant1 embantd
+      wn eqcomd simp12r simp12l simp11 simp3 simp2 ackbij1lem4 syl23anc pm2.65i
+      3exp pm2.21i pm2.61d biimpd mpd biimprd com34 a2d finds mpcom con0 omsson
+      ssun1 syl6ss onsucuni syl5ss df-ss sylib ssun2 ) CHUAZIJZKZDXHKZUCZCCDUDZ
+      UEZUFZJZELZDXNJZELZMZXOXQMZNZCELZDELZMZCDMZNXNHKZXKYAXKXMHKZYFXKXLHOXLIKZ
+      YGXKCDHXICHOZXJXICXGKYIXHXGCXGIUGZUHCHUIUJUKXJDHOZXIXJDXGKYKXHXGDYJUHDHUI
+      UJULUMZXICIKDIKYHXJXHICXGIUPZUHXHIDYMUHCDUNUOXLUQURXMUSUJXKCUBUTZJZELZDYN
+      JZELZMZYOYQMZNZNXKCPJZELZDPJZELZMZUUBUUDMZNZNXKCGUTZJZELZDUUIJZELZMZUUJUU
+      LMZNZNXKCUUIUFZJZELZDUUQJZELZMZUURUUTMZNZNXKYANUBGXNYNPMZUUAUUHXKUVEYSUUF
+      YTUUGUVEYPUUCYRUUEUVEYOUUBEYNPCQZRUVEYQUUDEYNPDQZRSUVEYOUUBYQUUDUVFUVGSTV
+      AUBGVBZUUAUUPXKUVHYSUUNYTUUOUVHYPUUKYRUUMUVHYOUUJEYNUUICQZRUVHYQUULEYNUUI
+      DQZRSUVHYOUUJYQUULUVIUVJSTVAYNUUQMZUUAUVDXKUVKYSUVBYTUVCUVKYPUUSYRUVAUVKY
+      OUUREYNUUQCQZRUVKYQUUTEYNUUQDQZRSUVKYOUURYQUUTUVLUVMSTVAYNXNMZUUAYAXKUVNY
+      SXSYTXTUVNYPXPYRXRUVNYOXOEYNXNCQZRUVNYQXQEYNXNDQZRSUVNYOXOYQXQUVOUVPSTVAX
+      KUUFUUGUUBPUUDCVCDVCVDVEUUIHKZXKUUPUVDUVQXKUVBUUPUVCUVQXKUVBUUPUVCNZUVQXK
+      UVBVHZUUIDKZUVRUVSUUICKZUVTUVRNUVSUWAUVTUVRUVSUWAUVTVHUUNUUOUVC??????????
+      ???VF????????VG?VIZUWBVJ???????????????????VKVLVMVNVOUWAUVTUUOUVCNZUVS?VP
+      VQWHUVSUWAVRZUVTUVRUVSUWDUVTVHZUVRUWEUVAUUSMZUWEUUSUVAUVQXKUVBUWDUVTVFVSU
+      WEXJXIUVQUVTUWDUWFVRXIXJUVQUVBUWDUVTVTXIXJUVQUVBUWDUVTWAUVQXKUVBUWDUVTWBU
+      VSUWDUVTWCUVSUWDUVTWDABDCEGFWEWFWGWIWHWJUVSUWAUVTVRZUVRNUVSUWAUWGUVRUVSUW
+      AUWGVHZUVRUWHUVBUVQXKUVBUWAUWGVFUWHXIXJUVQUWAUWGUVBVRXIXJUVQUVBUWAUWGWAXI
+      XJUVQUVBUWAUWGVTUVQXKUVBUWAUWGWBUVSUWAUWGWDUVSUWAUWGWCABCDEGFWEWFWGWIWHUV
+      SUWDUWGUVRUVSUWDUWGVHZUUNUUOUVCUWIUVBUUNUVQXKUVBUWDUWGVFUWDUWGUVBUUNNUVSU
+      WDUWGUCZUVBUUNUWJUUSUUKUVAUUMUWJUURUUJE?RUWJUUTUULE?RSWKVPWLUWDUWGUWCUVSU
+      WJUVCUUOUWJUURUUJUUTUUL??SWMVPVQWHWJWJWHWNWOWPWQXKXSYDXTYEXKXPYBXRYCXKXOC
+      EXKCXNOXOCMXKCXLXNCDWTXKXLWROXLXNOXKXLHWRYLWSXAXLXBUJZXCCXNXDXEZRXKXQDEXK
+      DXNOXQDMXKDXLXNDCXFUWKXCDXNXDXEZRSXKXOCXQDUWLUWMSTVO $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem8 $p |- F : ( ~P om i^i Fin ) -1-1-> om $=
+      ( va vb com cpw cfn cin wf1 wf cv cfv wceq weq wi wral dff13 ackbij1lem3
+      ackbij1lem1 rgen2a mpbir2an ) GHIJZGCKUDGCLEMZCNFMZCNOEFPQZFUDREUDREFUDGC
+      SABCDTUGEFUDABUEUFCDUAUBUC $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij1 . $)
+    ackbij1lem13 $p |- ( A e. ( ~P om i^i Fin ) -> E. b e. ( ~P om i^i Fin )
+          ( F ` b ) = suc ( F ` A ) ) $=
+      ( com cin wcel cdif cun cfv csuc wceq coa co c0 wss ackbij1lem12 syl3anc
+      cpw cfn cint csn cv difss ackbij1lem7 mpan2 ackbij1lem6 syl oveq2d nnasuc
+      wrex syl2anc incom eqtri a1i uncom undif sylib syl5eq fveq2d eqtr3d suceq
+      disjdif eqtrd 3eqtrd fveq2 eqeq1d rcla4ev ) CGUAUBHZIZCGCJUCZJZVMUDZKZVKI
+      VPDLZCDLZMZNZEUEZDLZVSNZEVKUM?VLVQVNDLZVODLZOPZWDVMDLZMZOPZVSVLVNVKIZVOVK
+      IVNVOHQNVQWFNVLVNCRWJCVMUFABCVNDFUGUHZ??ABVNVODFSTVLWEWHWDOVLVMGIWEWHN?AB
+      VMDFUIUJUKVLWIWDWGOPZMZVSVLWDGIWGGIWIWMN??WDWGULUNVLWLVRNWMVSNVLVNVMKZDLZ
+      WLVRVLWJVMVKIVNVMHZQNZWOWLNWK?WQVLWPVMVNHQVNVMUOVMCVEUPUQABVNVMDFSTVLWNCD
+      VLWNVMVNKZCVNVMURVLVMCRWRCN?VMCUSUTVAVBVCWLVRVDUJVFVGWCVTEVPVKWAVPNWBVQVS
+      WAVPDVHVIVJUN $.
+      $( [18-Nov-2014] $)
+
+    $( The Ackermann bijection, part 1: each natural number can be uniquely
+       coded in binary as a finite set of natural numbers and conversely. $)
+    ackbij1 $p |- F : ( ~P om i^i Fin ) -1-1-onto-> om $=
+      ( va vb com cpw cfn cin wf1o wf1 crn wceq cv wcel c0 eleq1 ax-mp fvelrnb
+      dff1o5 ackbij1lem8 wf wss f1f mp2b csuc peano1 fveq2 eqeq1d rcla4ev mp2an
+      frn wfn f1fn mpbir ackbij1lem13 adantl eqeq2d rexbidv syl5ibcom rexlimdva
+      suceq 3imtr4g finds ssriv eqssi mpbir2an ) GHIJZGCKVIGCLZCMZGNVIGCUAABCDU
+      BZVKGVJVIGCUCVKGUDVLVIGCUEVIGCUMUFEGVKFOZVKPQVKPZEOZVKPZVOUGZVKPZVPFEVOVM
+      QVKRVMVOVKRZVMVQVKRVSVN??????UH?S?????????????UIUJUKULCVIUNZ?VJVTVLVIGCUO
+      SZ?VIQCTSUPVOGP??VPVR?????????????????DUQUR???????????VCUSUTVAVBVT?WA?VIV
+      OCTSVT?WA?VIVQCTSVDVEVFVGVH $.
+      $( [18-Nov-2014] $)
+
+    $( The Ackermann bijection, part 1b: the bijection from ~ ackbij1 restricts
+       naturally to the powers of particular naturals. $)
+    ackbij1b $p |- ( A e. om -> ( F " ~P A ) = ( card ` ~P A ) ) $=
+      ( va com wcel cpw cima cfv wn wceq cen wbr cfn wss sylib syl ax-mp wo cin
+      ccrd wpss cv pweq imaeq2d breq12d wf1 ackbij1lem8 ackbij2lem2 vex f1imaen
+      pwex sylancr vtoclga con0 onfin2 inss2 eqsstri sseli pwfi ficardid ensymg
+      sylc entr syl2anc csdm wi ficardom php3 ex sdomnen syl6 mt2d wral wa csuc
+      sseldi adantr elpwi adantl ackbij1lem5 word ackbij1lem3 f0cli ordsucsssuc
+      wb peano1 nnord mp2an csn ackbij1lem6 ackbij1lem11 eqtr3d sseqtrd sucssel
+      cvv ralrimiva wfun cdm f1fun f1dm sseqtr4d funimass4 mpbird sspss orel1
+      a1i ) CGHZDCIZJZXKUCKZUDZLXNXLXMMZUAZXOXJXNXLXMNOZXJXLXKNOZXKXMNOZXQDFUEZ
+      IZJZYANOZXRFCGXTCMZYBXLYAXKNYDYAXKDXTCUFZUGYEUHXTGHGIPUBZGDUIZYAYFQYCABDE
+      UJZXTUKYFGYADXTFULUNUMUOUPXJXKPHZXMXKNOZXSXJCPHYIGPCGUQPUBPURUQPUSUTZVACV
+      BRZXJYIYJYLXKVCSXMXKPVDVEXLXKXMVFVGXJXNXLXMVHOZXQLXJXMPHZXNYMVIXJGPXMYKXJ
+      YIXMGHYLXKVJSVSYNXNYMXMXLVKVLSXLXMVMVNVOXJXLXMQZXPXJYOXTDKZXMHZFXKVPZXJYQ
+      FXKXJXTXKHZVQZYPVRZXMQZYQYTUUACDKZVRZXMYTYPUUCQZUUAUUDQZYTCYFHZXTCQZUUEXJ
+      UUGYS?VTYSUUHXJXTCWAWBABXTCDEWCVGYPWDZUUCWDZUUEUUFWHYPGHUUIYFGXTDABDEWEZW
+      IWFYPWJTUUCGHUUJYFGCDUUKWIWFUUCWJTYPUUCWGWKRXJUUDXMMYSXJCWLDKUUDXMABCDEWM
+      ABCDEWNWOVTWPYPWRHUUBYQVI?ULYPXMWRWQTSWSXJDWTZXKDXAZQYOYRWHYGUULYHYFGDXBT
+      XJXKYFUUMCUKUUMYFMZXJYGUUNYHYFGDXCTXIXDFXKXMDXEUOXFXLXMXGRXNXOXHVE $.
+      $( [18-Nov-2014] $)
+
+    ackbij.g $e |- G = ( x e. _V |-> ( y e. ~P dom x |->
+          ( F ` ( x " y ) ) ) ) $.
+    $( Lemma for ~ ackbij2 . $)
+    ackbij2lem1 $p |- ( A e. om -> ( rec ( G , (/) ) ` A ) :
+        ( R1 ` A ) -1-1-onto-> ( card ` ( R1 ` A ) ) ) $=
+      ( cr1 cfv ccrd c0 wf1o wceq wb fveq2 syl fveq2d syl2anc com wcel va vb vc
+      cv crdg csuc f1oeq1 f1oeq23 bitrd weq f1o0 0ex rdg0 ax-mp r10 card0 eqtri
+      fveq2i mp2an bitri mpbir wa cpw cres cima cmpt ccom cfn cin wf1 wss f1of1
+      ackbij1 a1i r1fin ficardom ackbij2lem2 f1ores ackbij1b ficardid fvex pwen
+      cen wbr cvv wi pwex carden2b eqtrd f1oeq3 mpbid adantr f1opw adantl f1oco
+      3syl cdm peano2 fvres eqcomd frsuc dmeq pweqd imaeq1 mpteq12dv dmex mptex
+      fvmpt eqidd 3eqtrd f1odm mpteq1 wfn eqid fnmpt mprg f1ofn wf f1of ffvelrn
+      sylan imaeq2 imaexg simpr fvco4 3eqtr4d eqfnfvd con0 nnon r1suc mpbird ex
+      finds ) UAUDZHIZYOJIZYNEKUEZIZLZKHIZYTJIZKYQIZLZUBUDZHIZUUEJIZUUDYQIZLZUU
+      DUFZHIZUUJJIZUUIYQIZLZCHIZUUNJIZCYQIZLZUAUBCYNKMZYSYOYPUUBLZUUCUURYRUUBMY
+      SUUSNYNKYQOYOYPYRUUBUGPUURYOYTMYPUUAMUUSUUCNYNKHOZUURYOYTJUUTQYOYTYPUUAUU
+      BUHRUIUAUBUJZYSYOYPUUGLZUUHUVAYRUUGMYSUVBNYNUUDYQOYOYPYRUUGUGPUVAYOUUEMYP
+      UUFMUVBUUHNYNUUDHOZUVAYOUUEJUVCQYOUUEYPUUFUUGUHRUIYNUUIMZYSYOYPUULLZUUMUV
+      DYRUULMYSUVENYNUUIYQOYOYPYRUULUGPUVDYOUUJMYPUUKMUVEUUMNYNUUIHOZUVDYOUUJJU
+      VFQYOUUJYPUUKUULUHRUIYNCMZYSYOYPUUPLZUUQUVGYRUUPMYSUVHNYNCYQOYOYPYRUUPUGP
+      UVGYOUUNMYPUUOMUVHUUQNYNCHOZUVGYOUUNJUVIQYOUUNYPUUOUUPUHRUIUUCKKKLZUKUUCY
+      TUUAKLZUVJUUBKMUUCUVKNKEULUMYTUUAUUBKUGUNYTKMUUAKMUVKUVJNUOUUAKJIKYTKJUOU
+      RUPUQYTKUUAKKUHUSUTVAUUDSTZUUHUUMUVLUUHVBZUUMUUEVCZUVNJIZDUUFVCZVDZUAUVNU
+      UGYNVEZVFZVGZLZUVMUVPUVOUVQLZUVNUVPUVSLZUWAUVLUWBUUHUVLUVPDUVPVEZUVQLZUWB
+      UVLSVCVHVIZSDVJZUVPUWFVKZUWEUWGUVLUWFSDLUWGABDFVMUWFSDVLUNVNUVLUUFSTZUWHU
+      VLUUEVHTZUWIUUDVOZUUEVPPZUUFVQPUWFSUVPDVRRUVLUWDUVOMUWEUWBNUVLUWDUVPJIZUV
+      OUVLUWIUWDUWMMUWLABUUFDFVSPUVLUUFUUEWCWDZUVPUVNWCWDZUWMUVOMZUVLUWJUWNUWKU
+      UEVTPUUFUUEUUDHWAZWBUVNWETUWOUWPWFUUEUWQWGUVPUVNWEWHUNWPWIUWDUVOUVPUVQWJP
+      WKWLUUHUWCUVLUUEUUFUUGUAWMWNZUVNUVPUVOUVQUVSWORZUVMUUMUUJUUKUVTLZUWAUVMUU
+      LUVTMUUMUWTNUVMUULBUUGWQZVCZUUGBUDZVEZDIZVFZBUVNUXEVFZUVTUVLUULUXFMUUHUVL
+      UULUUIYQSVDZIZUUDUXHIZEIZUXFUVLUXIUULUVLUUISTUXIUULMUUDWRUUISYQWSPWTKUUDE
+      XAUVLUXKUUGEIZUXFUXFUVLUXJUUGEUUDSYQWSQUXLUXFMZUVLUUGWETZUXMUUDYQWAZAUUGB
+      AUDZWQZVCZUXPUXCVEZDIZVFUXFWEEUXPUUGMZBUXRUXTUXBUXEUYAUXQUXAUXPUUGXBXCUYA
+      UXSUXDDUXPUUGUXCXDQXEGBUXBUXEUXAUUGUXOXFWGXGXHUNVNUVLUXFXIXJXJWLUVMUXBUVN
+      MUXFUXGMUVMUXAUUEUUHUXAUUEMUVLUUEUUFUUGXKWNXCBUXBUVNUXEXLPUVMUCUVNUXGUVTU
+      XGUVNXMZUVMUXEWETZUYBBUVNBUVNUXEUXGWEUXGXNZXOUYCUXCUVNTUXDDWAVNXPVNUVMUWA
+      UVTUVNXMUWSUVNUVOUVTXQPUVMUCUDZUVNTZVBZUUGUYEVEZDIZUYEUVSIZUVQIZUYEUXGIZU
+      YEUVTIZUYGUYKUYIUYGUYKUYJDIZUYIUYGUYJUVPTZUYKUYNMUVMUVNUVPUVSXRZUYFUYOUVM
+      UWCUYPUWRUVNUVPUVSXSPUVNUVPUYEUVSXTYAUYJUVPDWSPUYGUYJUYHDUYFUYJUYHMUVMUAU
+      YEUVRUYHUVNUVSYNUYEUUGYBUVSXNUXNUYHWETUXOUUGUYEWEYCUNXHWNQWIWTUYFUYLUYIMU
+      VMBUYEUXEUYIUVNUXGBUCUJUXDUYHDUXCUYEUUGYBQUYDUYHDWAXHWNUYGUVSUVNXMZUYFUYM
+      UYKMUVMUYQUYFUVMUWCUYQUWRUVNUVPUVSXQPWLUVMUYFYDUVNUVQUVSUYEYERYFYGXJUUJUU
+      KUULUVTUGPUVLUWTUWANZUUHUVLUUJUVNMZUUKUVOMUYRUVLUUDYHTUYSUUDYIUUDYJPZUVLU
+      UJUVNJUYTQUUJUVNUUKUVOUVTUHRWLUIYKYLYM $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij2 . $)
+    ackbij2lem3 $p |- ( A e. om -> ( rec ( G , (/) ) ` A ) C_
+        ( rec ( G , (/) ) ` suc A ) ) $=
+      ( wcel c0 cfv csuc cr1 cres cv wceq fveq2 fveq2d syl wss cima va com crdg
+      vb suceq reseq12d eqeq12d weq res0 r10 reseq2i 0ex rdg0 3eqtr4ri wfn ccrd
+      vc wf1o peano2 ackbij2lem1 f1ofn adantr con0 nnon r1sssuc fnssres syl2anc
+      wa fveq1d ad2antlr cpw r1suc eleq2d biimpa vex elpw sylib resima2 cdm cvv
+      cmpt fvex resex dmeq pweqd imaeq1 mpteq12dv dmex mptex fvmpt ax-mp fveq1i
+      pwex fndm eleqtrrd imaeq2 eqid syl5eq wtr r1tr dftr4 sselda f1odm 3eqtr4d
+      a1i adantlr eqtrd rdgsuc ad2antrr fvres adantl eqtr4d eqfnfvd finds resss
+      ex eqsstrd ) CUBHZCEIUCZJZCKZXSJZCLJZMZYBUANZXSJZYEKZXSJZYELJZMZOIXSJZIKZ
+      XSJZILJZMZOUDNZXSJZYPKZXSJZYPLJZMZOZYSYRKZXSJZYRLJZMZOZXTYDOUAUDCYEIOZYFY
+      KYJYOYEIXSPUUHYHYMYIYNUUHYGYLXSYEIUEQYEILPUFUGUAUDUHZYFYQYJUUAYEYPXSPUUIY
+      HYSYIYTUUIYGYRXSYEYPUEQYEYPLPUFUGYEYROZYFYSYJUUFYEYRXSPUUJYHUUDYIUUEUUJYG
+      UUCXSYEYRUEQYEYRLPUFUGYECOZYFXTYJYDYECXSPUUKYHYBYIYCUUKYGYAXSYECUEQYECLPU
+      FUGYMIMIYOYKYMUIYNIYMUJUKIEULUMUNYPUBHZUUBUUGUULUUBVHZUQUUEYSUUFUULYSUUEU
+      OZUUBUULUUEUUEUPJZYSURZUUNUULYRUBHZUUPYPUSZABYRDEFGUTRZUUEUUOYSVARZVBUULU
+      UFUUEUOZUUBUULUUDUUCLJZUOZUUEUVBSZUVAUULUVBUVBUPJZUUDURZUVCUULUUCUBHZUVFU
+      ULUUQUVGUURYRUSRABUUCDEFGUTRUVBUVEUUDVARUULYRVCHZUVDUULUUQUVHUURYRVDRZYRV
+      ERUVBUUEUUDVFVGVBUUMUQNZUUEHZVHZUVJYSJZUVJUUDJZUVJUUFJZUVLUVJYQEJZJZUVJYS
+      EJZJZUVMUVNUVLUVQUVJUUAEJZJZUVSUUBUVQUWAOUULUVKUUBUVJUVPUVTYQUUAEPVIVJUUL
+      UVKUWAUVSOUUBUULUVKVHZUUAUVJTZDJZYSUVJTZDJZUWAUVSUWBUWCUWEDUWBUVJYTSZUWCU
+      WEOUWBUVJYTVKZHZUWGUULUVKUWIUULUUEUWHUVJUULYPVCHZUUEUWHOYPVDZYPVLRVMVNZUV
+      JYTUQVOVPVQYSUVJYTVRRQUWBUWAUVJBUUAVSZVKZUUABNZTZDJZWAZJZUWDUVJUVTUWRUUAV
+      THUVTUWROYSYTYRXSWBZWCZAUUABANZVSZVKZUXBUWOTZDJZWAZUWRVTEUXBUUAOZBUXDUXFU
+      WNUWQUXHUXCUWMUXBUUAWDWEUXHUXEUWPDUXBUUAUWOWFQWGGBUWNUWQUWMUUAUXAWHWMWIWJ
+      WKWLUWBUVJUWNHUWSUWDOUWBUVJUWHUWNUWLUULUWNUWHOUVKUULUWMYTUULUUAYTUOZUWMYT
+      OUULUUNYTUUESZUXIUUTUULUWJUXJUWKYPVERUUEYTYSVFVGYTUUAWNRWEVBWOBUVJUWQUWDU
+      WNUWRBUQUHZUWPUWCDUWOUVJUUAWPQUWRWQUWCDWBWJRWRUWBUVSUVJBYSVSZVKZYSUWOTZDJ
+      ZWAZJZUWFUVJUVRUXPYSVTHUVRUXPOUWTAYSUXGUXPVTEUXBYSOZBUXDUXFUXMUXOUXRUXCUX
+      LUXBYSWDWEUXRUXEUXNDUXBYSUWOWFQWGGBUXMUXOUXLYSUWTWHWMWIWJWKWLUWBUVJUXMHUX
+      QUWFOUWBUVJUUEVKZUXMUULUUEUXSUVJUULUUEWSZUUEUXSSUXTUULYRWTXEUUEXAVQXBUULU
+      XMUXSOUVKUULUXLUUEUULUUPUXLUUEOUUSUUEUUOYSXCRWEVBWOBUVJUXOUWFUXMUXPUXKUXN
+      UWEDUWOUVJYSWPQUXPWQUWEDWBWJRWRXDXFXGUULUVMUVQOUUBUVKUULUVJYSUVPUULUWJYSU
+      VPOUWKIYPEXHRVIXIUULUVNUVSOUUBUVKUULUVJUUDUVRUULUVHUUDUVROUVIIYREXHRVIXIX
+      DUVKUVOUVNOUUMUVJUUEUUDXJXKXLXMXPXNYDYBSXRYBYCXOXEXQ $.
+      $( [18-Nov-2014] $)
+
+    $( Lemma for ~ ackbij2 . $)
+    ackbij2lem4 $p |- ( ( ( A e. om /\ B e. om ) /\ B C_ A ) ->
+        ( rec ( G , (/) ) ` B ) C_ ( rec ( G , (/) ) ` A ) ) $=
+      ( va vb c0 cfv cv wss wceq fveq2 sseq2d com wcel wa crdg csuc ackbij2lem3
+      weq ssid a1i ad2antrr sstr2 syl5com findsg ) DFKUAZLZIMZUKLZNULULNZULJMZU
+      KLZNZULUPUBZUKLZNZULCUKLZNIJCDUMDOUNULULUMDUKPQIJUDUNUQULUMUPUKPQUMUSOUNU
+      TULUMUSUKPQUMCOUNVBULUMCUKPQUODRSZULUEUFUPRSZVCTDUPNZTUQUTNZURVAVDVFVCVEA
+      BUPEFGHUCUGULUQUTUHUIUJ $.
+      $( [18-Nov-2014] $)
+
+    ackbij.h $e |- H = U. ( rec ( G , (/) ) " om ) $.
+    $( The Ackermann bijection, part 2: hereditarily finite sets can be
+       represented by recursive binary notation. $)
+    ackbij2 $p |- H : U. ( R1 " om ) -1-1-onto-> om $=
+      ( va vb cr1 com wf1o wceq cfv wss wcel cfn con0 ax-mp vc cima cuni c0 wf1
+      crdg dff1o5 cv ciun wo wral wa fveq2 fvex fun11iun ccrd ackbij2lem1 f1of1
+      crn syl r1fin ficardom word ordom ordelss mpan 3syl f1ss nnord ordtri2or2
+      syl2anc syl2an wi ackbij2lem4 ex ancoms orim12d mpd ralrimiva jca mprg wb
+      wfun wfn rdgfnon fnfun funiunfv eqcomd f1eq1 mp2b f1eq2 bitri mpbir rnuni
+      r1fnon wrex wex eliun df-rex omsson fvelimab mp2an wfo f1ofo forn sylancr
+      eqsstrd rneq sseq1d syl5ibcom rexlimiv sylbi sselda exlimiv csuc cdm fndm
+      peano2 sseqtr4i funfvima2 cardnn cdom wbr onssr1 cvv vex sucex ssdomg cin
+      nnon onfin2 inss2 eqsstri sseli ficarddom mpbid eqsstr3d sucssel eleqtrrd
+      eleq1 eleq2d anbi12d cla4ev impbii 3bitri eqriv eqtri mpbir2an f1oeq1 ) K
+      LUBUCZLEMZUUJLDUDUFZLUBZUCZMZUUOUUJLUUNUEZUUNUSZLNUUJLUUNUGUUPILIUHZKOZUI
+      ZLILUURUULOZUIZUEZUUSLUVAUEZUVAJUHZUULOZPZUVFUVAPZUJZJLUKZULUVCILIJLUVAUV
+      FUUSLUURUVEUULUMUURUULUNUOUURLQZUVDUVJUVKUUSUUSUPOZUVAUEZUVLLPZUVDUVKUUSU
+      VLUVAMUVMABUURCDFGUQUUSUVLUVAURUTUVKUUSRQUVLLQZUVNUURVAUUSVBLVCZUVOUVNVDL
+      UVLVEVFVGUUSUVLLUVAVHVKUVKUVIJLUVKUVELQZULZUURUVEPZUVEUURPZUJZUVIUVKUURVC
+      UVEVCUWAUVQUURVIUVEVIUURUVEVJVLUVRUVSUVGUVTUVHUVQUVKUVSUVGVMUVQUVKULUVSUV
+      GABUVEUURCDFGVNVOVPUVRUVTUVHABUURUVECDFGVNVOVQVRVSVTWAUUPUUJLUVBUEZUVCUUL
+      WCZUUNUVBNUUPUWBWBUULSWDZUWCUDDWEZSUULWFTZUWCUVBUUNILUULWGWHUUJLUUNUVBWIW
+      JKWCZUUJUUTNUWBUVCWBKSWDUWGWOSKWFTUWGUUTUUJILKWGWHUUJUUTLUVBWKWJWLWMUUQIU
+      UMUURUSZUIZLIUUMWNJUWILUVEUWIQUVEUWHQZIUUMWPUURUUMQZUWJULZIWQZUVQIUVEUUMU
+      WHWRUWJIUUMWSUWMUVQUWLUVQIUWKUWHLUVEUWKUAUHZUULOZUURNZUALWPZUWHLPZUWDLSPU
+      WKUWQWBUWEWTUASLUURUULXAXBUWPUWRUALUWNLQZUWOUSZLPUWPUWRUWSUWTUWNKOZUPOZLU
+      WSUXAUXBUWOMUXAUXBUWOXCUWTUXBNABUWNCDFGUQUXAUXBUWOXDUXAUXBUWOXEVGUWSUVPUX
+      BLQZUXBLPVDUWSUXARQUXCUWNVAUXAVBUTLUXBVEXFXGUWPUWTUWHLUWOUURXHXIXJXKXLXMX
+      NUVQUVEXOZUULOZUUMQZUVEUXEUSZQZUWMUVQUXDLQZUXFUVEXRZUWCLUULXPZPUXIUXFVMUW
+      FLSUXKWTUWDUXKSNUWESUULXQTXSLUXDUULXTXBUTUVQUVEUXDKOZUPOZUXGUVQUXIUXDUXMP
+      ZUVEUXMQZUXJUXIUXDUXDUPOZUXMUXDYAUXIUXDUXLYBYCZUXPUXMPZUXIUXDSQUXDUXLPZUX
+      QUXDYJUXDYDUXDYEQUXSUXQVMUVEJYFZYGUXDUXLYEYHTVGUXIUXDRQUXLRQUXQUXRWBLRUXD
+      LSRYIRYKSRYLYMYNUXDVAUXDUXLYOVKYPYQUVEYEQUXNUXOVMUXTUVEUXMYEYRTVGUVQUXLUX
+      MUXEMZUXLUXMUXEXCUXGUXMNUVQUXIUYAUXJABUXDCDFGUQUTUXLUXMUXEXDUXLUXMUXEXEVG
+      YSUWLUXFUXHULIUXEUXDUULUNUURUXENZUWKUXFUWJUXHUURUXEUUMYTUYBUWHUXGUVEUURUX
+      EXHUUAUUBUUCVKUUDUUEUUFUUGUUHEUUNNUUKUUOWBHUUJLEUUNUUITWM $.
+      $( [18-Nov-2014] $)
+  $}
+
+  ${
+    $d a b c d e f $.
+
+    $( The set of hereditarily finite sets is countable.  See ~ ackbij2 for an
+       explicit bijection that works without Infinity. $)
+    r1omNEW $p |- ( R1 ` om ) ~~ om $=
+      ( vc vd ve vf va vb com cvv cr1 cfv cen cv cpw cima cmpt ccrd weq cbvmptv
+      ccsum fveq2d wcel wbr cdm cfn cin crdg cuni wf1o mpteq1 pweq syl6eq pweqd
+      c0 dmeq imaeq1 mpteq12dv eqid ackbij2 wceq wb ciun wlim limom r1lim mpan2
+      imaeq2 wfun con0 wfn r1fnon fnfun ax-mp funiunfv f1oeq2 mpbiri fvex f1oen
+      syl wn enref brprc pm2.61i ) GHUAZGIJZGKUBZWCWDGAHBALZUCZMZWFBLZNZCGMUDUE
+      ZDCLZDLZMZOZSJZPJZOZJZOZOZUMUFGNUGZUHZWEWCXCIGNUGZGXBUHZEFWRXAXBCEWKWQFEL
+      ZFLZMZOZSJZPJCEQZWPXJPXKWOXISXKWODXFWNOXIDWLXFWNUIDFXFWNXHWMXGUJRUKTTRAEH
+      WTFXFUCZMZXFXGNZWRJZOZAEQZWTBXMXFWINZWRJZOXPXQBWHWSXMXSXQWGXLWFXFUNULXQWJ
+      XRWRWFXFWIUOTUPBFXMXSXOBFQXRXNWRWIXGXFVFTRUKRXBUQURWCWDXDUSXCXEUTWCWDEGXF
+      IJVAZXDWCGVBWDXTUSVCEGHVDVEIVGZXTXDUSIVHVIYAVJVHIVKVLEGIVMVLUKWDXDGXBVNVR
+      VOWDGXBGIVPZVQVRWCVSWEWDWDKUBWDYBVTWDGKWAVOWB $.
+      $( [18-Nov-2014] $)
   $}
 
 $( (End of Stefan O'Rear's mathbox.) $)
