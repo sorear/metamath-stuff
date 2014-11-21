@@ -12770,42 +12770,42 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c csum $.
+  $c cdsum $.
 
   ${
     $d x y z w $.
 
     $( Extend class notation to include indexed cardinal sums. $)
-    ccsum $a class csum $.
+    ccsum $a class cdsum $.
 
     $( Define indexed (k-ary) cardinal sums.  This is intended primarily to
        replace ` sum_ ` in subsystems without ~ ax-inf ; since ordinal addition
        is not commutative, finite sums of ordinals would be less useful, but
        cardinal sum is commutative and coincides with ordinal sum precisely
        where both are commutative. $)
-    df-csum $a |- csum = { <. x , y >. | ( Fun x /\
+    df-cdsum $a |- cdsum = { <. x , y >. | ( Fun x /\
         y = { <. z , w >. | w e. ( x ` z ) } ) } $.
 
     $d A u x y z w $.  $d B u x y z w $.
 
     $( Value of an indexed cardinal sum. $)
-    cdsumval $p |- ( ( Fun A /\ A e. V ) -> ( csum ` A ) =
+    cdsumval $p |- ( ( Fun A /\ A e. V ) -> ( cdsum ` A ) =
         { <. z , w >. | w e. ( A ` z ) } ) $=
       ( vu vx vy wcel wfun cvv ccsum cfv cv copab wceq elex wa cab funeq eqid
       elab4g biimpri ancoms fveq1 eleq2d opabbidv eleq1d cdm dmex abid2 eqeltri
-      vex fvex opabex3 elfvdm ancri ssopab2i ssexi vtoclg adantl df-csum anbi1i
-      a1i elab opabbii eqtr4i fvopab4g syl2anc sylan2 ) CDHCIZCJHZCKLBMZAMZCLZH
-      ZABNZOZCDPVJVKQCEMZIZERZHZVPJHZVQVKVJWAWAVKVJQVSVJECVTVRCSVTTUAUBUCVKWBVJ
-      VLVMFMZLZHZABNZJHWBFCJWCCOZWFVPJWGWEVOABWGWDVNVLVMWCCUDUEUFZUGWFVMWCUHZHZ
-      WEQZABNWEABWIWCFULZUIWEBRZJHWJWMWDJBWDUJVMWCUMUKVCUNWEWKABWEWJVLVMWCUOUPU
-      QURUSUTFGCWFVPVTJKWHKWCIZGMWFOZQZFGNWCVTHZWOQZFGNFGABVAWRWPFGWQWNWOVSWNEW
-      CWLVRWCSVDVBVEVFVGVHVI $.
+      vex a1i opabex3 elfvdm ancri ssopab2i ssexi vtoclg adantl df-cdsum anbi1i
+      fvex elab opabbii eqtr4i fvopab4g syl2anc sylan2 ) CDHCIZCJHZCKLBMZAMZCLZ
+      HZABNZOZCDPVJVKQCEMZIZERZHZVPJHZVQVKVJWAWAVKVJQVSVJECVTVRCSVTTUAUBUCVKWBV
+      JVLVMFMZLZHZABNZJHWBFCJWCCOZWFVPJWGWEVOABWGWDVNVLVMWCCUDUEUFZUGWFVMWCUHZH
+      ZWEQZABNWEABWIWCFULZUIWEBRZJHWJWMWDJBWDUJVMWCVCUKUMUNWEWKABWEWJVLVMWCUOUP
+      UQURUSUTFGCWFVPVTJKWHKWCIZGMWFOZQZFGNWCVTHZWOQZFGNFGABVAWRWPFGWQWNWOVSWNE
+      WCWLVRWCSVDVBVEVFVGVHVI $.
       $( [19-Nov-2014] $)
 
     $d D y z u v $.  $d v u x $.
 
     $( Value of an indexed cardinal sum. $)
-    cdsumval2 $p |- ( A e. Fin -> ( csum ` ( x e. A |-> D ) ) =
+    cdsumval2 $p |- ( A e. Fin -> ( cdsum ` ( x e. A |-> D ) ) =
             { <. x , y >. | ( x e. A /\ y e. ( _I ` D ) ) } ) $=
       ( vz vu vv cfn wcel cfv cv copab cid wa cvv wceq csb syl ax-17 vex funmpt
       cmpt ccsum wfun a1i mptexg cdsumval syl2anc cdm elfvdm eqid dmmptss sseli
@@ -12821,7 +12821,7 @@ $)
 
     $( Value of an indexed cardinal sum. $)
     cdsumval3 $p |- ( ( A e. Fin /\ A. x e. A D e. V ) ->
-          ( csum ` ( x e. A |-> D ) ) =
+          ( cdsum ` ( x e. A |-> D ) ) =
             { <. x , y >. | ( x e. A /\ y e. D ) } ) $=
       ( cfn wcel wral cmpt ccsum cfv cv cid wa copab cdsumval2 wceq elex ralimi
       cvv hbra1 ax-17 wb ra4 fvi eleq2d syl6 pm5.32d opabbid syl sylan9eq ) CFG
@@ -12834,8 +12834,9 @@ $)
   ${
     $d A a b x $.  $d B a b x $.  $d D a $.
     $( Union of index sets of cardinal sum (non-cardinal property). $)
-    cdsumun $p |- ( ( A u. B ) e. Fin -> ( csum ` ( x e. ( A u. B ) |-> D ) ) =
-        ( ( csum ` ( x e. A |-> D ) ) u. ( csum ` ( x e. B |-> D ) ) ) ) $=
+    cdsumun $p |- ( ( A u. B ) e. Fin -> ( cdsum `
+          ( x e. ( A u. B ) |-> D ) ) = ( ( cdsum ` ( x e. A |-> D ) ) u.
+          ( cdsum ` ( x e. B |-> D ) ) ) ) $=
       ( va cun cfn wcel cv cid cfv wa copab cmpt ccsum wo elun anbi1i cdsumval2
       wceq andir bitri opabbii unopab eqtr4i unfir uneq12 syl2an syl 3eqtr4a )
       BCFZGHZAIZUKHZEIDJKHZLZAEMZUMBHZUOLZAEMZUMCHZUOLZAEMZFZAUKDNOKABDNOKZACDN
@@ -12848,7 +12849,7 @@ $)
     $d A a b c x $.  $d B a b c y $.  $d C a b c $.  $d D a b c $.
 
     $( Cardinal sum is a subset of a cross product. $)
-    cdsumssxpfi $p |- ( A e. Fin -> ( csum ` ( x e. A |-> D ) ) C_
+    cdsumssxpfi $p |- ( A e. Fin -> ( cdsum ` ( x e. A |-> D ) ) C_
         ( A X. _V ) ) $=
       ( va cfn wcel cmpt ccsum cfv cv cid copab cvv cxp cdsumval2 wss simpl vex
       wa jctir ssopab2i df-xp sseqtr4i a1i eqsstrd ) BEFZABCGHIAJBFZDJZCKIFZSZA
@@ -12858,8 +12859,8 @@ $)
     $( Cardinal sums with disjoint index sets are disjoint (non-cardinal
        property). $)
     cdsumdisj $p |- ( ( A e. Fin /\ B e. Fin /\ ( A i^i B ) = (/) ) ->
-        ( ( csum ` ( x e. A |-> C ) ) i^i
-          ( csum ` ( y e. B |-> D ) ) ) = (/) ) $=
+        ( ( cdsum ` ( x e. A |-> C ) ) i^i
+          ( cdsum ` ( y e. B |-> D ) ) ) = (/) ) $=
       ( cfn wcel cin wceq cmpt ccsum cfv cvv cxp wss cdsumssxpfi incom syl5eq
       c0 w3a 3ad2ant1 3ad2ant2 xpdisj1 3ad2ant3 ssdisj syl2anc ) CGHZDGHZCDITJZ
       UAZACEKLMZCNOZPZUMBDFKLMZIZTJULUOITJUHUIUNUJACEQUBUKUPUOUMIZTUMUORUKUODNO
@@ -12868,7 +12869,7 @@ $)
       $( [19-Nov-2014] $)
 
     $( Cardinal sum with an empty index set. $)
-    cdsum0 $p |- ( csum ` ( x e. (/) |-> C ) ) = (/) $=
+    cdsum0 $p |- ( cdsum ` ( x e. (/) |-> C ) ) = (/) $=
       ( cfn wcel cmpt ccsum cfv wss wceq 0fin cvv cxp cdsumssxpfi xp0r syl6sseq
       c0 ss0 mp2b ) PCDZAPBEFGZPHTPIJSTPKLPAPBMKNOTQR $.
       $( [19-Nov-2014] $)
@@ -12881,9 +12882,9 @@ $)
     cdsumsplitfi.b $e |- ( ph -> ( B u. C ) = A ) $.
     cdsumsplitfi.c $e |- ( ph -> ( B i^i C ) = (/) ) $.
     $( Split a finite-indexed cardinal sum. $)
-    cdsumsplitfi $p |- ( ph -> ( csum ` ( x e. A |-> D ) ) ~~
-          ( ( csum ` ( x e. B |-> D ) ) +c
-            ( csum ` ( x e. C |-> D ) ) ) ) $=
+    cdsumsplitfi $p |- ( ph -> ( cdsum ` ( x e. A |-> D ) ) ~~
+          ( ( cdsum ` ( x e. B |-> D ) ) +c
+            ( cdsum ` ( x e. C |-> D ) ) ) ) $=
       ( cmpt ccsum cfv cen wbr cun wceq cfn wcel fvex syl co cin c0 wss eqeltrd
       ccda ssun1 ssfi sylancl ssun2 cdsumdisj syl3anc cdaun eqcomd mpteq1 eqtrd
       fveq2d cdsumun breqtrrd ensym ) ABDFJZKLZBEFJZKLZUFUAZBCFJZKLZMNVGVEMNAVE
@@ -12894,20 +12895,9 @@ $)
   $}
 
   ${
-    $d x y $.  $d A y $.  $d B y $.  $d C y $.
-    mptsn.a $e |- ( x = A -> B = C ) $.
-    $( All mappings from a singleton are constants. $)
-    mptsn $p |- ( x e. { A } |-> B ) = ( x e. { A } |-> C ) $=
-      ( vy cv csn wcel wceq copab cmpt elsni syl eqeq2d pm5.32i opabbii 3eqtr4i
-      wa df-mpt ) AGZBHZIZFGZCJZSZAFKUCUDDJZSZAFKAUBCLAUBDLUFUHAFUCUEUGUCCDUDUC
-      UABJCDJUABMENOPQAFUBCTAFUBDTR $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
     $d A x a b $.  $d B x a b $.
     $( Cross product is iterated cardinal sum. $)
-    cdsumxpfi $p |- ( ( A e. Fin /\ B e. V ) -> ( csum ` ( x e. A |-> B ) ) =
+    cdsumxpfi $p |- ( ( A e. Fin /\ B e. V ) -> ( cdsum ` ( x e. A |-> B ) ) =
         ( A X. B ) ) $=
       ( va cfn wcel wa cmpt ccsum cfv cv copab cxp cvv wral wceq elex ralrimivw
       syl cdsumval3 sylan2 df-xp syl6eqr ) BFGZCDGZHABCIJKZALBGELCGHAEMZBCNUFUE
@@ -12919,7 +12909,7 @@ $)
     $d A x a b $.  $d D a b $.
 
     $( Cardinal sum at a single point. $)
-    cdsumsn $p |- ( A e. V -> ( csum ` ( x e. { A } |-> D ) ) ~~
+    cdsumsn $p |- ( A e. V -> ( cdsum ` ( x e. { A } |-> D ) ) ~~
           [_ A / x ]_ D ) $=
       ( va vb wcel csn cmpt ccsum cfv csb cen cv ax-17 cvv wbr cxp mpan adantl
       vex wel hbcsb1 csbeq1a cbvmpt elsni csbeq1d mpteq2ia eqtri fveq2i wa wceq
@@ -12937,7 +12927,7 @@ $)
     cdsumfi.a $e |- ( ph -> A e. Fin ) $.
     cdsumfi.b $e |- ( ( ph /\ x e. A ) -> D e. Fin ) $.
     $( Finiteness of cardinal sum. $)
-    cdsumfi $p |- ( ph -> ( csum ` ( x e. A |-> D ) ) e. Fin ) $=
+    cdsumfi $p |- ( ph -> ( cdsum ` ( x e. A |-> D ) ) e. Fin ) $=
       ( va vc wss cmpt ccsum cfv cfn wcel wa wi c0 anbi2d eleq1d imbi12d adantr
       vb ssid cv csn cun wceq sseq1 mpteq1 fveq2d weq cdsum0 0fin eqeltri ssun1
       a1i sstr mpan anim2i imim1i w3a snfi mpan2 3ad2ant1 cdsumun syl simp3 csb
@@ -13053,10 +13043,10 @@ $)
       $( [18-Nov-2014] $)
 
     ackbij.f $e |- F = ( x e. ( ~P om i^i Fin ) |->
-        ( card ` ( csum ` ( y e. x |-> ~P y ) ) ) ) $.
+        ( card ` ( cdsum ` ( y e. x |-> ~P y ) ) ) ) $.
     $( Lemma for ~ ackbij1 . $)
     ackbij1lem2 $p |- ( A e. ( ~P om i^i Fin ) -> ( F ` A ) =
-        ( card ` ( csum ` ( y e. A |-> ~P y ) ) ) ) $=
+        ( card ` ( cdsum ` ( y e. A |-> ~P y ) ) ) ) $=
       ( cv cpw cmpt ccsum cfv ccrd com cfn cin wceq mpteq1 fveq2d fvex fvmpt )
       ACBAFZBFGZHZIJZKJBCUAHZIJZKJLGMNDTCOZUCUEKUFUBUDIBTCUAPQQEUEKRS $.
       $( [18-Nov-2014] $)
