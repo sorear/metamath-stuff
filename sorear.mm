@@ -11518,7 +11518,7 @@ $)
         ( ( A [,] B ) -cn-> RR ) ) $.
     c1liplem1.k $e |- K = sup ( ( abs " ( ( _D ` F ) " ( A [,] B ) ) ) ,
         RR , < ) $.
-    $( Lemma for ~ c1lip . $)
+    $( Lemma for ~ c1lip1 . $)
     c1liplem1 $p |- ( ph -> ( K e. RR /\ A. x e. ( A [,] B )
         A. y e. ( A [,] B ) ( x < y -> ( abs ` ( ( F ` y ) - ( F ` x ) ) ) <_
           ( K x. ( abs ` ( y - x ) ) ) ) ) ) $=
@@ -11702,7 +11702,7 @@ $)
 
   ${
     $( Membership in a closed real interval. $)
-    elicc3 $p |- ( ( A e. RR* /\ B e. RR* /\ C e. RR* ) ->
+    elicc4 $p |- ( ( A e. RR* /\ B e. RR* /\ C e. RR* ) ->
         ( C e. ( A [,] B ) <-> ( A <_ C /\ C <_ B ) ) ) $=
       ( cxr wcel w3a cicc co cle wbr wa wb elicc1 3adant3 3anass baibr 3ad2ant3
       bitr4d ) ADEZBDEZCDEZFCABGHEZUAACIJZCBIJZFZUCUDKZSTUBUELUAABCMNUASUFUELTU
@@ -11710,10 +11710,10 @@ $)
       $( [16-Nov-2014] $)
 
     $( Membership in a symmetric closed real interval. $)
-    elicc3abs $p |- ( ( A e. RR /\ B e. RR /\ C e. RR ) ->
+    elicc4abs $p |- ( ( A e. RR /\ B e. RR /\ C e. RR ) ->
         ( C e. ( ( A - B ) [,] ( A + B ) ) <-> ( abs ` ( C - A ) ) <_ B ) ) $=
       ( cr wcel w3a cmin co caddc cicc cle wbr wa cabs cfv cxr 3adant3 rexr syl
-      wb resubcl readdcl 3ad2ant3 elicc3 syl3anc absdifle 3coml bitr4d ) ADEZBD
+      wb resubcl readdcl 3ad2ant3 elicc4 syl3anc absdifle 3coml bitr4d ) ADEZBD
       EZCDEZFZCABGHZABIHZJHEZUMCKLCUNKLMZCAGHNOBKLZULUMPEZUNPEZCPEZUOUPTULUMDEZ
       URUIUJVAUKABUAQUMRSULUNDEZUSUIUJVBUKABUBQUNRSUKUIUTUJCRUCUMUNCUDUEUKUIUJU
       QUPTCABUFUGUH $.
@@ -11826,7 +11826,7 @@ $)
       cres wfn fncpn 1nn0 fnfvelrn mp2an intss1 ax-mp cply plycpn sseldi df-ima
       cz cima wf zssre ax-resscn plyss sseli plyreres 3syl frn syl5eqss iccssre
       cdm syl2anc syl6ss wceq plyf fdm sseqtr4d c1lip3 w3a simp2 recnd 3ad2ant1
-      wa adantr abssub simp3 eqbrtrd wb a1i elicc3abs syl3anc mpbird subid abs0
+      wa adantr abssub simp3 eqbrtrd wb a1i elicc4abs syl3anc mpbird subid abs0
       fveq2d nn0ge0i eqbrtri syl6eqbr fveq2 oveq2d oveq2 breq12d oveq1d rcla42v
       weq oveq1 simp1l 0cn syl6eqel ffvelrn subid1 eqtrd breq1d mpd cdiv adantl
       wne ad2antrr abscl absge0 syl5ibrcom expimpd remulcl sylibd 3exp ralrimdv

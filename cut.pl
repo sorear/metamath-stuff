@@ -2,8 +2,6 @@
 use strict; use warnings;
 use File::Slurp 'read_file', 'write_file';
 
-my @status = grep { length } split /\0/, scalar qx{ git status -z };
-
 my @lines = read_file $ARGV[0];
 my ($ver) = $lines[0] =~ /(set\.mm - Version of \S+)/;
 
