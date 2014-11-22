@@ -400,9 +400,9 @@ $)
       EEDUKTULVOVPVKVQUMUNVJVNECDVFCUOZVIVMAVTBVEVHVLVFCVGUPUQURUST $.
       $( [4-Oct-2014] $)
 
-    $( Defining properties 2 of a polynomially closed function set ` P ` : it
-       is closed under pointwise addition and multiplication.  (Contributed by
-       Stefan O'Rear, 4-Oct-2014.) $)
+    $( Defining properties 3 and 4 of a polynomially closed function set
+       ` P ` : it is closed under pointwise addition and multiplication.
+       (Contributed by Stefan O'Rear, 4-Oct-2014.) $)
     mzpcl34 $p |- ( ( V e. _V /\ P e. ( mzPolyCld ` V ) /\ ( F e. P /\ G e. P )
         ) -> ( ( F oF + G ) e. P /\ ( F oF x. G ) e. P ) ) $=
       ( vf vg cvv wcel cfv wa cv cof co wral cz cmap syl2anc wceq oveq1 eleq1d
@@ -926,11 +926,12 @@ $)
        the former could be avoided by considering coincidence sets of ` NN0 `
        polynomials at the cost of requiring two, and the second is driven by
        consistency with our mu-recursive functions and the requirements of the
-       DPRM proof.  Both are avoidable at a complexity cost.  In particular, it
-       is a consequence of ~ 4sq that implicitly restricting variables to
-       ` NN0 ` adds no expressive power over allowing them to range over
-       ` ZZ ` .  While this definition stipulates a specific index set for the
-       polynomials, there is actually flexibility here, see ~ eldioph2b . $)
+       Davis-Putnam-Robinson-Matiyasevich proof.  Both are avoidable at a
+       complexity cost.  In particular, it is a consequence of ~ 4sq that
+       implicitly restricting variables to ` NN0 ` adds no expressive power
+       over allowing them to range over ` ZZ ` .  While this definition
+       stipulates a specific index set for the polynomials, there is actually
+       flexibility here, see ~ eldioph2b . $)
     df-dioph $a |- Dioph = ( n e. NN0 |-> { d | E. k e. ( ZZ>= ` n ) E. p e. (
         mzPoly ` ( 1 ... k ) ) d = { t | E. u e. ( NN0 ^m ( 1 ... k ) ) ( t =
         ( u |` ( 1 ... n ) ) /\ ( p ` u ) = 0 ) } } ) $.
@@ -1652,8 +1653,8 @@ $)
       wo ) ACEFDGHIHZJZDKLZMBCTJZUBMNABSCTJUAUCOUBABCTPUAUCDQR $.
       $( [10-Oct-2014] $)
 
-    $( Diophantine set builder for conjunctions.  (Contributed by Stefan
-       O'Rear, 10-Oct-2014.) $)
+    $( Diophantine set builder for ternary conjunctions.  (Contributed by
+       Stefan O'Rear, 10-Oct-2014.) $)
     3anrabdioph $p |- ( ( { t e. ( NN0 ^m ( 1 ... N ) ) | ph } e. ( Dioph ` N )
         /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ps } e. ( Dioph ` N ) /\ { t e. (
         NN0 ^m ( 1 ... N ) ) | ch } e. ( Dioph ` N ) ) -> { t e. ( NN0 ^m ( 1
@@ -1664,8 +1665,8 @@ $)
       UPUGNABDETUNCDETUCUDUE $.
       $( [10-Oct-2014] $)
 
-    $( Diophantine set builder for disjunctions.  (Contributed by Stefan
-       O'Rear, 10-Oct-2014.) $)
+    $( Diophantine set builder for ternary disjunctions.  (Contributed by
+       Stefan O'Rear, 10-Oct-2014.) $)
     3orrabdioph $p |- ( ( { t e. ( NN0 ^m ( 1 ... N ) ) | ph } e. ( Dioph ` N )
         /\ { t e. ( NN0 ^m ( 1 ... N ) ) | ps } e. ( Dioph ` N ) /\ { t e. (
         NN0 ^m ( 1 ... N ) ) | ch } e. ( Dioph ` N ) ) -> { t e. ( NN0 ^m ( 1
@@ -1923,7 +1924,7 @@ $)
 
     rexfrabdioph.4 $e |- J = ( K + 1 ) $.
     $( Diophantine set builder for existential quantifier, explicit
-       substitution, 4 variables.  (Contributed by Stefan O'Rear,
+       substitution, four variables.  (Contributed by Stefan O'Rear,
        11-Oct-2014.) $)
     4rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... J ) ) | [ ( t
         |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] [ ( t ` K )
@@ -1962,7 +1963,7 @@ $)
     rexfrabdioph.5 $e |- I = ( J + 1 ) $.
     rexfrabdioph.6 $e |- H = ( I + 1 ) $.
     $( Diophantine set builder for existential quantifier, explicit
-       substitution, 6 variables.  (Contributed by Stefan O'Rear,
+       substitution, six variables.  (Contributed by Stefan O'Rear,
        11-Oct-2014.) $)
     6rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... H ) ) | [ ( t
         |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] [ ( t ` K )
@@ -2004,7 +2005,7 @@ $)
 
     rexfrabdioph.7 $e |- G = ( H + 1 ) $.
     $( Diophantine set builder for existential quantifier, explicit
-       substitution, 7 variables.  (Contributed by Stefan O'Rear,
+       substitution, seven variables.  (Contributed by Stefan O'Rear,
        11-Oct-2014.) $)
     7rexfrabdioph $p |- ( ( N e. NN0 /\ { t e. ( NN0 ^m ( 1 ... G ) ) | [ ( t
         |` ( 1 ... N ) ) / u ] [ ( t ` M ) / v ] [ ( t ` L ) / w ] [ ( t ` K )
@@ -3056,7 +3057,7 @@ $)
 
   ${
     $d x a b c $.  $d A a b c d x y z w $.  $d B a b c d x y z w $.
-    $( Lemma for ~ irrapx1 .  Divides the unit interval into ` A ` half-open
+    $( Lemma for ~ irrapx1 .  Divides the unit interval into ` B ` half-open
        sections and using the pigeonhole principle ~ fphpdo finds two multiples
        of ` A ` in the same section mod 1. $)
     irrapxlem1 $p |- ( ( A e. RR+ /\ B e. NN ) -> E. x e. ( 0 ... B ) E. y e. (
@@ -3325,7 +3326,7 @@ $)
 
     $( Lemma for ~ pellex .  Arithmetical core of pellexlem3, norm lower
        bound.  This begins Dirichlet's proof of the Pell equation solution
-       existance; the proof here follows theorem 62 of [vandenDries] p. 43. $)
+       existence; the proof here follows theorem 62 of [vandenDries] p. 43. $)
     pellexlem1 $p |- ( ( ( D e. NN /\ A e. NN /\ B e. NN ) /\ -. ( sqr ` D ) e.
         QQ ) -> ( ( A ^ 2 ) - ( D x. ( B ^ 2 ) ) ) =/= 0 ) $=
       ( cn wcel csqr cfv cq c2 cexp co cc0 wne wceq cc wb 3ad2ant2 syl 3ad2ant3
@@ -6582,7 +6583,7 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $( Partial converse to ~ bezout .  Existance of a linear combination does not
+  $( Partial converse to ~ bezout .  Existence of a linear combination does not
      set the GCD, but it does upper bound it.  (Contributed by Stefan O'Rear,
      23-Sep-2014.) $)
   bezoutr $p |- ( ( ( A e. ZZ /\ B e. ZZ ) /\ ( X e. ZZ /\ Y e. ZZ ) ) -> ( A
@@ -7274,7 +7275,7 @@ $)
   ${
     $d A a $.  $d N a $.  $d K a $.  $d M a $.
     $( Lemma for ~ jm2.26 .  Reverse direction is required to prove forward
-       direction, so do it separatly. induction on difference between K and M,
+       direction, so do it separatly.  Induction on difference between K and M,
        together with the addition formula fact that adding 2N only inverts
        sign. $)
     jm2.26a $p |- ( ( ( A e. ( ZZ>= ` 2 ) /\ N e. ZZ ) /\ ( K e. ZZ /\ M e. ZZ
@@ -8882,7 +8883,7 @@ $)
   ${
     $d a x c y f A $.  $d a x c y f X $.
     infpssr.a $e |- A e. _V $.
-    $( Dedekind infinity implies existance of a denumerable subset: take a
+    $( Dedekind infinity implies existence of a denumerable subset: take a
        single point witnessing the proper subset relation and iterate the
        embedding.  The hypothesis is technically redundant with our current
        ~ df-op .  (Contributed by Stefan O'Rear, 30-Oct-2014.) $)
@@ -9541,8 +9542,9 @@ $)
 
     fin23lem22.b $e |- C = ( i e. om |-> U. { j e. S | ( j i^i S ) ~~ i } ) $.
     $( Lemma for ~ fin23 but could be used elsewhere if we find a good name for
-       it.  Explicit construction of a bijection (actually an isomorphism, TODO
-       prove this) between an infinite subset of ` om ` and ` om ` itself. $)
+       it.  Explicit construction of a bijection (actually an isomorphism, see
+       ~ fin23lem27 ) between an infinite subset of ` om ` and ` om `
+       itself. $)
     fin23lem22 $p |- ( ( S C_ om /\ -. S e. Fin ) -> C : om -1-1-onto-> S ) $=
       ( va com wss cfn wcel wa cv cin cen wbr ccrd cfv syl wceq wb wn crab cuni
       wreu fin23lem23 reucl simpll simpr sseldd con0 onfin2 inss2 eqsstri sseli
@@ -12894,7 +12896,6 @@ $)
 
     ackbij.f $e |- F = ( x e. ( ~P om i^i Fin ) |->
         ( card ` U_ y e. x ( { y } X. ~P y ) ) ) $.
-
     $( Lemma for ~ ackbij1 . $)
     ackbij1lem7 $p |- ( A e. ( ~P om i^i Fin ) -> ( F ` A ) =
         ( card ` U_ y e. A ( { y } X. ~P y ) ) ) $=
