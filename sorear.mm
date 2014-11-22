@@ -11094,7 +11094,8 @@ $)
 
   ${
     $d F a $.
-    $( Real-coefficient polynomials restrict to real functions. $)
+    $( Real-coefficient polynomials restrict to real functions.  (Contributed
+       by Stefan O'Rear, 16-Nov-2014.) $)
     plyreres $p |- ( F e. ( Poly ` RR ) -> ( F |` RR ) : RR --> RR ) $=
       ( va cr cply cfv wcel cres wfn crn wss wf cc plybss wb plyf mpbird adantl
       ffn wceq ccj fnssresb 3syl cv wral fvres recn plyrecj sylan2 fveq2d eqtrd
@@ -11116,7 +11117,8 @@ $)
     dvmptfsum.d $e |- ( ( ph /\ i e. I ) -> ( _D ` ( x e. X |-> A ) ) =
         ( x e. X |-> B ) ) $.
     dvmptfsum.o $e |- ( ph -> X e. ( topGen ` ran (,) ) ) $.
-    $( Function-builder for derivative, finite sums rule. $)
+    $( Function-builder for derivative, finite sums rule.  (Contributed by
+       Stefan O'Rear, 12-Nov-2014.) $)
     dvmptfsum $p |- ( ph -> ( _D ` ( x e. X |-> sum_ i e. I A ) ) =
         ( x e. X |-> sum_ i e. I B ) ) $=
       ( va vd cmpt cdv wceq wcel wi vb vc wss csu cfv ssid cfn cv csn cun sseq1
@@ -11182,7 +11184,8 @@ $)
 
   ${
     $d x N $.
-    $( Derivative of an exponential, possibly zero power. $)
+    $( Derivative of an exponential, possibly zero power.  (Contributed by
+       Stefan O'Rear, 13-Nov-2014.) $)
     dvexp2 $p |- ( N e. NN0 -> ( _D ` ( x e. RR |-> ( x ^ N ) ) ) =
         ( x e. RR |-> if ( N = 0 , 0 , ( N x. ( x ^ ( N - 1 ) ) ) ) ) ) $=
       ( wcel cc0 wceq cr cexp co cmpt cdv cfv c1 csn cxp fconstmpt syl mpteq2dv
@@ -11206,7 +11209,8 @@ $)
     dvply1.a $e |- ( ph -> A : NN0 --> CC ) $.
     dvply1.b $e |- B = ( k e. NN0 |-> ( ( k + 1 ) x. ( A ` ( k + 1 ) ) ) ) $.
     dvply1.n $e |- ( ph -> N e. NN0 ) $.
-    $( Derivative of a polynomial, explicit sum version. $)
+    $( Derivative of a polynomial, explicit sum version.  (Contributed by
+       Stefan O'Rear, 13-Nov-2014.) $)
     dvply1 $p |- ( ph -> ( _D ` F ) = G ) $=
       ( cc0 co cmul c1 wcel cc cn0 vj cdv cfv cr cfz cv cexp csu cmpt wceq cmin
       cif fveq2d wss ssid fzfid wa wf elfznn0 ffvelrn syl2an adantr simpr recnd
@@ -11262,7 +11266,7 @@ $)
     $d S a b c p $.  $d F a b c p $.  $d D a b c p $.
 
     $( An infinite set of values can be extended to a polynomial in at most one
-       way. $)
+       way.  (Contributed by Stefan O'Rear, 14-Nov-2014.) $)
     plyexmo $p |- ( ( D C_ CC /\ -. D e. Fin ) -> E* p ( p e. ( Poly ` S ) /\
         ( p |` D ) = F ) ) $=
       ( va cc wcel wa cv cfv wceq cmin cc0 c0p wfn cvv wf syl adantr syl2anc vb
@@ -11294,7 +11298,7 @@ $)
   ${
     $d F a b c d e g $.
     $( The derivative of a polynomial is a polynomial up to domain
-       difficulties. $)
+       difficulties.  (Contributed by Stefan O'Rear, 14-Nov-2014.) $)
     dvply2 $p |- ( F e. ( Poly ` S ) -> E! g e. ( Poly ` CC )
         ( _D ` ( F |` RR ) ) = ( g |` RR ) ) $=
       ( va vb vc cfv wcel cc cr wceq wa cc0 c1 co cn0 cmul cmpt cn c0 cply cres
@@ -11351,7 +11355,8 @@ $)
 
   ${
     $d F a b c d $.
-    $( Strengthening of ~ dvf . $)
+    $( Strengthening of ~ dvf .  (Contributed by Stefan O'Rear,
+       15-Nov-2014.) $)
     dvf2 $p |- ( _D ` F ) : dom ( _D ` F ) --> CC $=
       ( va vd vb vc cdv cdm wcel cfv cc wf cr cpm co wss wa cv cioo cmin c0 crn
       ctg cnt weq cdiv cif cmpt csubsp cabs ccom copn copab df-dv dmmptss sseli
@@ -11366,7 +11371,8 @@ $)
   ${
     $d F a b c $.  $d N a b c $.  $d M a b c $.
 
-    $( Zero times iterated derivative. $)
+    $( Zero times iterated derivative.  (Contributed by Stefan O'Rear,
+       15-Nov-2014.) $)
     dvn0 $p |- ( F e. ( CC ^pm RR ) -> ( 0 DnNEW F ) = F ) $=
       ( va vb cc cr cpm co wcel cc0 cdvnNEW cdv c1st cn0 csn cxp cseq wceq 0nn0
       cfv cv ccom fveq2 sneq xpeq2d fveq1d df-dvnNEW fvex ovmpt2 mpan fvconst2g
@@ -11375,7 +11381,8 @@ $)
       KUEBCUFIVBUGUHUIUQAUSVAIULUQVDIVASAQRMAIUPUJUMUNUO $.
       $( [15-Nov-2014] $)
 
-    $( Successor iterated derivative. $)
+    $( Successor iterated derivative.  (Contributed by Stefan O'Rear,
+       15-Nov-2014.) $)
     dvnp1 $p |- ( ( F e. ( CC ^pm RR ) /\ N e. NN0 ) ->
         ( ( N + 1 ) DnNEW F ) = ( _D ` ( N DnNEW F ) ) ) $=
       ( va vb co wcel cn0 cdv c1st csn cxp cc0 cseq cfv cdvnNEW wceq adantl cvv
@@ -11390,7 +11397,8 @@ $)
       IPCDBAGVSXHWIOBXGNXCBXGVHXIBXGWGXJVKXKXAVMVOVRVP $.
       $( [15-Nov-2014] $)
 
-    $( The N-times derivative is a function. $)
+    $( The N-times derivative is a function.  (Contributed by Stefan O'Rear,
+       16-Nov-2014.) $)
     dvnf $p |- ( ( F e. ( CC ^pm RR ) /\ N e. NN0 ) ->
         ( N DnNEW F ) : dom ( N DnNEW F ) --> CC ) $=
       ( cn0 wcel cc cr cpm co cn cc0 wceq wo cdvnNEW cdm wf elnn0 wa cmin syl
@@ -11404,7 +11412,7 @@ $)
       $( [16-Nov-2014] $)
 
     $( The set of N-times differentiable points is a subset of the domain of
-       the function. $)
+       the function.  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
     dvnbss $p |- ( ( F e. ( CC ^pm RR ) /\ N e. NN0 ) ->
         dom ( N DnNEW F ) C_ dom F ) $=
       ( va vb cn0 wcel cc cr co cdvnNEW cdm wss wi cc0 wceq oveq1 sseq1d imbi2d
@@ -11419,14 +11427,16 @@ $)
       KWFUSZVKWOVNHLZWFVKVNGAUQXCGHAUTVAVBVCVDVEWEWDVFTUIXBVEVGVHVIVJ $.
       $( [16-Nov-2014] $)
 
-    $( The ` C^n ` object is a function. $)
+    $( The ` C^n ` object is a function.  (Contributed by Stefan O'Rear,
+       16-Nov-2014.) $)
     fncpn $p |- C^nNEW Fn NN0 $=
       ( va vb cv cdvnNEW co cdm cc ccncf wcel cr cpm crab cvv ccpnNEW df-cpnNEW
       cn0 wfn fnmpt ovex rabex a1i mprg ) ACZBCZDEUDFGHEIZBGJKEZLZMIZNPQAPAPUGN
       MABORUHUCPIUEBUFGJKSTUAUB $.
       $( [16-Nov-2014] $)
 
-    $( Condition for n-times continuous differentiability. $)
+    $( Condition for n-times continuous differentiability.  (Contributed by
+       Stefan O'Rear, 15-Nov-2014.) $)
     elcpn $p |- ( N e. NN0 -> ( F e. ( C^nNEW ` N ) <-> ( F e. ( CC ^pm RR ) /\
           ( N DnNEW F ) e. ( dom F -cn-> CC ) ) ) ) $=
       ( vb va cn0 wcel ccpnNEW cfv cv cdvnNEW co cdm cc ccncf cr cpm crab oveq1
@@ -11436,7 +11446,8 @@ $)
       CVAMOPUDUEUFUGUTVFCAVAUPATZUQVCUSVEUPABJUHVKURVDMNUPAUIUKULUJUM $.
       $( [15-Nov-2014] $)
 
-    $( ` C^n ` conditions are ordered by strength. $)
+    $( ` C^n ` conditions are ordered by strength.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     cpnord $p |- ( ( M e. NN0 /\ N e. NN0 /\ M <_ N ) ->
         ( C^nNEW ` N ) C_ ( C^nNEW ` M ) ) $=
       ( va cn0 wcel cle wbr ccpnNEW cfv wss wi co fveq2 sseq1d imbi2d cc0 cr cc
@@ -11465,7 +11476,8 @@ $)
   ${
     $d F a b c d g $.  $d N a b c d g $.
 
-    $( Polynomials have polynomials as derivatives of all orders. $)
+    $( Polynomials have polynomials as derivatives of all orders.  (Contributed
+       by Stefan O'Rear, 15-Nov-2014.) $)
     dvnply $p |- ( ( F e. ( Poly ` S ) /\ N e. NN0 ) -> E! g e. ( Poly ` CC )
         ( g |` RR ) = ( N DnNEW ( F |` RR ) ) ) $=
       ( va cfv wcel wa cr cdvnNEW co wceq cc wrex wi oveq1 eqeq2d rexbidv cvv
@@ -11491,7 +11503,7 @@ $)
       XJXKXLIMYDBXMXGXPYEBYFXNXO $.
       $( [15-Nov-2014] $)
 
-    $( Polynomials are smooth. $)
+    $( Polynomials are smooth.  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
     plycpn $p |- ( F e. ( Poly ` S ) -> ( F |` RR ) e. |^| ran C^nNEW ) $=
       ( va vb cply cfv wcel cc cr cres ccpnNEW cn0 wb wa co ccncf wss ax-resscn
       wceq syl crn cint plyssc sseli cv wral wrex wfn fncpn fvelrnb cpm cdvnNEW
@@ -11597,7 +11609,8 @@ $)
         ( ( A [,] B ) -cn-> RR ) ) $.
     c1lip1.cn $e |- ( ph -> ( F |` ( A [,] B ) ) e.
         ( ( A [,] B ) -cn-> RR ) ) $.
-    $( C1 functions are Lipschitz continuous on closed intervals. $)
+    $( C1 functions are Lipschitz continuous on closed intervals.  (Contributed
+       by Stefan O'Rear, 16-Nov-2014.) $)
     c1lip1 $p |- ( ph -> E. k e. RR A. x e. ( A [,] B ) A. y e. ( A [,] B )
         ( abs ` ( ( F ` y ) - ( F ` x ) ) ) <_
           ( k x. ( abs ` ( y - x ) ) ) ) $=
@@ -11655,7 +11668,8 @@ $)
     c1lip2.f $e |- ( ph -> F e. ( C^nNEW ` 1 ) ) $.
     c1lip2.rn $e |- ( ph -> ran F C_ RR ) $.
     c1lip2.dm $e |- ( ph -> ( A [,] B ) C_ dom F ) $.
-    $( C1 functions are Lipschitz continuous on closed intervals. $)
+    $( C1 functions are Lipschitz continuous on closed intervals.  (Contributed
+       by Stefan O'Rear, 16-Nov-2014.) $)
     c1lip2 $p |- ( ph -> E. k e. RR A. x e. ( A [,] B ) A. y e. ( A [,] B )
         ( abs ` ( ( F ` y ) - ( F ` x ) ) ) <_
           ( k x. ( abs ` ( y - x ) ) ) ) $=
@@ -11687,7 +11701,8 @@ $)
     c1lip3.f $e |- ( ph -> ( F |` RR ) e. ( C^nNEW ` 1 ) ) $.
     c1lip3.rn $e |- ( ph -> ( F " RR ) C_ RR ) $.
     c1lip3.dm $e |- ( ph -> ( A [,] B ) C_ dom F ) $.
-    $( C1 functions are Lipschitz continuous on closed intervals. $)
+    $( C1 functions are Lipschitz continuous on closed intervals.  (Contributed
+       by Stefan O'Rear, 16-Nov-2014.) $)
     c1lip3 $p |- ( ph -> E. k e. RR A. x e. ( A [,] B ) A. y e. ( A [,] B )
         ( abs ` ( ( F ` y ) - ( F ` x ) ) ) <_
           ( k x. ( abs ` ( y - x ) ) ) ) $=
@@ -11704,7 +11719,8 @@ $)
   $}
 
   ${
-    $( Membership in a closed real interval. $)
+    $( Membership in a closed real interval.  (Contributed by Stefan O'Rear,
+       16-Nov-2014.) $)
     elicc4 $p |- ( ( A e. RR* /\ B e. RR* /\ C e. RR* ) ->
         ( C e. ( A [,] B ) <-> ( A <_ C /\ C <_ B ) ) ) $=
       ( cxr wcel w3a cicc co cle wbr wa wb elicc1 3adant3 3anass baibr 3ad2ant3
@@ -11712,7 +11728,8 @@ $)
       EUAUFUAUCUDOPQR $.
       $( [16-Nov-2014] $)
 
-    $( Membership in a symmetric closed real interval. $)
+    $( Membership in a symmetric closed real interval.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     elicc4abs $p |- ( ( A e. RR /\ B e. RR /\ C e. RR ) ->
         ( C e. ( ( A - B ) [,] ( A + B ) ) <-> ( abs ` ( C - A ) ) <_ B ) ) $=
       ( cr wcel w3a cmin co caddc cicc cle wbr wa cabs cfv cxr 3adant3 rexr syl
@@ -11996,7 +12013,8 @@ $)
        being a root of a polynomial ` F ` in integer coefficients, is not
        approximable beyond order ` N = deg ( F ) ` by rational numbers.  In
        this form, it also applies to rational numbers themselves, which are not
-       well approximable by other rational numbers. $)
+       well approximable by other rational numbers.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     aaliou $p |- ( ph -> E. x e. RR+ A. p e. ZZ A. q e. NN ( A = ( p / q ) \/
       ( x / ( q ^ N ) ) < ( abs ` ( A - ( p / q ) ) ) ) ) $=
       ( cdiv co wbr cn cz crp wcel cr va cv wceq cexp cmin cabs cfv cle wo wral
@@ -12027,7 +12045,8 @@ $)
     geolim3.c $e |- ( ph -> C e. CC ) $.
     geolim3.f $e |- F = ( k e. ( ZZ>= ` A ) |-> ( C x. ( B ^ ( k - A ) ) ) ) $.
     $( Geometric series convergence with arbitrary shift, radix, and
-       multiplicative constant. $)
+       multiplicative constant.  (Contributed by Stefan O'Rear,
+       16-Nov-2014.) $)
     geolim3 $p |- ( ph -> seq A ( + , F ) ~~> ( C / ( 1 - B ) ) ) $=
       ( caddc co cexp cmul c1 wceq cc0 wcel cc va cseq cuz cfv cv cmin cmpt cli
       cdiv seqeq3 ax-mp wbr cneg cshi cn0 cvv nn0uz cz 0z ovex oveq2 eqid fvmpt
@@ -12054,7 +12073,8 @@ $)
   ${
     $d A a k x p q $.
 
-    $( Liouville's approximation theorem for algebraic numbers per se. $)
+    $( Liouville's approximation theorem for algebraic numbers per se.
+       (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
     aaliou2 $p |- ( A e. ( AA i^i RR ) -> E. k e. NN E. x e. RR+ A. p e. ZZ
         A. q e. NN ( A = ( p / q ) \/ ( x / ( q ^ k ) ) <
             ( abs ` ( A - ( p / q ) ) ) ) ) $=
@@ -12076,7 +12096,8 @@ $)
       UBWOWPWQWRWSWTXAXBXCXDVEXEXFXE $.
       $( [16-Nov-2014] $)
 
-    $( Liouville's approximation theorem extended to complex ` A ` . $)
+    $( Liouville's approximation theorem extended to complex ` A ` .
+       (Contributed by Stefan O'Rear, 20-Nov-2014.) $)
     aaliou2b $p |- ( A e. AA -> E. k e. NN E. x e. RR+ A. p e. ZZ
         A. q e. NN ( A = ( p / q ) \/ ( x / ( q ^ k ) ) <
             ( abs ` ( A - ( p / q ) ) ) ) ) $=
@@ -12393,7 +12414,7 @@ $)
     $d L a b c d e f $.
 
     $( Example of a "Liouville number", a very simple definable transcedental
-       real. $)
+       real.  (Contributed by Stefan O'Rear, 20-Nov-2014.) $)
     aaliou3 $p |- -. L e. AA $=
       ( vf vd wcel cdiv co cn cz crp wn c2 cr ve caa cv wceq cexp cmin cabs cfv
       clt wbr wo wral wrex wa c1 cfa cneg cmul aaliou3lem9 aaliou3lem6 ad2antrl
@@ -12461,7 +12482,8 @@ $)
       CDEVIVGUSTVLRVMVNVORFGHBDVPIJKACVPVQ $.
       $( [16-Nov-2014] $)
 
-    $( An isomorphism preserves partial ordering. $)
+    $( An isomorphism preserves partial ordering.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     isopo $p |- ( H Isom R , S ( A , B ) -> ( R Po A <-> S Po B ) ) $=
       ( wiso wpo ccnv wi isocnv isopolem syl impbid ) ABCDEFZACGZBDGZNBADCEHZFO
       PIABCDEJBADCQKLABCDEKM $.
@@ -12482,14 +12504,16 @@ $)
       EVCVDVEVMWKWJWGWRVAABWDWCCDEUTVFTVGVIVJSUKFGBDVKHIACVKVL $.
       $( [16-Nov-2014] $)
 
-    $( An isomorphism preserves strict ordering. $)
+    $( An isomorphism preserves strict ordering.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     isoso $p |- ( H Isom R , S ( A , B ) -> ( R Or A <-> S Or B ) ) $=
       ( wiso wor ccnv wi isocnv isosolem syl impbid ) ABCDEFZACGZBDGZNBADCEHZFO
       PIABCDEJBADCQKLABCDEKM $.
       $( [16-Nov-2014] $)
 
     $d a b c d e f x $.
-    $( The complex numbers can be linearly ordered. $)
+    $( The complex numbers can be linearly ordered.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     cnso $p |- E. x x Or CC $=
       ( va vb vd vc ve cr cc cv wex wor wbr cn cnex cfv wceq wa clt wrex syl wb
       wf1o cen cpw nnex pwex rpnnen cpnnen entr4i bren mpbi copab cxp ltso wiso
@@ -12502,7 +12526,7 @@ $)
 
     $d a b c F $.
     $( A well-ordering has no nontrivial automorphisms.  (Is sethood actually
-       needed here?) $)
+       needed here?)  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
     weniso $p |- ( ( A e. V /\ R We A /\ F Isom R , R ( A , A ) ) ->
         F = ( _I |` A ) ) $=
       ( va vc vb wcel cvv wceq cfv wral wn wbr wa syl wi fveq2 id adantr wwe cv
@@ -12541,7 +12565,7 @@ $)
 
     $d a b c f R $.  $d f A $.
     $( A finite totally ordered set has a unique order isomorphism to a finite
-       ordinal. $)
+       ordinal.  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
     finnisoeu $p |- ( ( R Or A /\ A e. Fin ) ->
         E! f f Isom _E , R ( ( card ` A ) , A ) ) $=
       ( va cfn wcel ccrd cep wiso con0 syl wceq cen wbr wf1o isof1o adantl ccom
@@ -12568,7 +12592,8 @@ $)
     $d A a b c d e f g h i j k $.  $d B a b c d e f g h i j k $.
 
     $( Countability of a countable union of finite sets with an strict (not
-       globally well) order fulfilling the choice role. $)
+       globally well) order fulfilling the choice role.  (Contributed by Stefan
+       O'Rear, 16-Nov-2014.) $)
     iunfictbso $p |- ( ( A ~<_ om /\ A C_ Fin /\ B Or U. A ) ->
         U. A ~<_ om ) $=
       ( va vf vg vh vc com cdom wbr c0 wceq cv wcel wa syl cfv cep wiso syl2anc
@@ -12759,7 +12784,8 @@ $)
 
   ${
     $d a b c d e $.
-    $( The algebraic numbers are countable. $)
+    $( The algebraic numbers are countable.  (Contributed by Stefan O'Rear,
+       16-Nov-2014.) $)
     aannen $p |- AA ~~ NN $=
       ( ve va vb vc vd cn0 cfv cc0 wceq c0p wne cdgr cle wbr ccoe cabs wral w3a
       cv crab cz cply wrex cc cmpt eqid aannenlem3 ) ABFCSDSGHIDESZJKUHLGBSZMNA
@@ -12773,8 +12799,8 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $( A set is equinumerous to its cross-product with a singleton on the
-     left. $)
+  $( A set is equinumerous to its cross-product with a singleton on the left.
+     (Contributed by Stefan O'Rear, 21-Nov-2014.) $)
   xpsnen2g $p |- ( ( A e. V /\ B e. W ) -> ( { A } X. B ) ~~ B ) $=
     ( wcel wa csn cxp cen wbr cvv snex xpcomeng mpan adantl xpsneng ancoms entr
     syl2anc ) ACEZBDEZFAGZBHZBUBHZIJZUDBIJZUCBIJUAUETUBKEUAUEALUBBKDMNOUATUFBAD
@@ -12784,7 +12810,8 @@ $)
   ${
     $d x A $.
 
-    $( Disjoint union is a subset of a cross product. $)
+    $( Disjoint union is a subset of a cross product.  (Contributed by Stefan
+       O'Rear, 21-Nov-2014.) $)
     djussxp $p |- U_ x e. A ( { x } X. B ) C_ ( A X. _V ) $=
       ( cv csn cxp ciun cvv wss iunss wcel snssi ssv xpss12 sylancl mprgbir ) A
       BADZEZCFZGBHFZISTIZABABSTJQBKRBICHIUAQBLCMRBCHNOP $.
@@ -12792,7 +12819,8 @@ $)
 
     $d y B $.
 
-    $( Disjoint unions with disjoint index sets are disjoint. $)
+    $( Disjoint unions with disjoint index sets are disjoint.  (Contributed by
+       Stefan O'Rear, 21-Nov-2014.) $)
     djudisj $p |- ( ( A i^i B ) = (/) -> ( U_ x e. A ( { x } X. C ) i^i
             U_ y e. B ( { y } X. D ) ) = (/) ) $=
       ( cin c0 wceq cv csn cxp ciun cvv wss djussxp incom syl5eq ssdisj sylancr
@@ -12805,7 +12833,8 @@ $)
     $d F a b c x y $.  $d G a b c x y $.  $d H a b c x y $.  $d A a b c x y $.
     $d B a b c x y $.
 
-    $( A one-to-one mapping induces a one-to-one mapping on power sets. $)
+    $( A one-to-one mapping induces a one-to-one mapping on power sets.
+       (Contributed by Stefan O'Rear, 18-Nov-2014.) $)
     f1opw $p |- ( F : A -1-1-onto-> B -> ( b e. ~P A |-> ( F " b ) ) :
           ~P A -1-1-onto-> ~P B ) $=
       ( va cpw cv cima wcel wss crn imassrn wceq syl5sseq wfun cvv vex funimaex
@@ -12820,7 +12849,8 @@ $)
       JZWSVPMWMABCVIWCWTWIVPAUSTABVPCVJVBVCWPVTWSVPVSVQVRVEVFVGVKVL $.
       $( [18-Nov-2014] $)
 
-    $( An ordinal number is a proper subset of its successor. $)
+    $( An ordinal number is a proper subset of its successor.  (Contributed by
+       Stefan O'Rear, 18-Nov-2014.) $)
     onpsssuc $p |- ( A e. On -> A C. suc A ) $=
       ( con0 wcel csuc wpss sucidg wb eloni ordsuc sylib ordelpss syl2anc mpbid
       word ) ABCZAADZCZAPEZABFOANZPNZQRGAHZOSTUAAIJAPKLM $.
@@ -13106,7 +13136,8 @@ $)
       $( [18-Nov-2014] $)
 
     $( The Ackermann bijection, part 1: each natural number can be uniquely
-       coded in binary as a finite set of natural numbers and conversely. $)
+       coded in binary as a finite set of natural numbers and conversely.
+       (Contributed by Stefan O'Rear, 18-Nov-2014.) $)
     ackbij1 $p |- F : ( ~P om i^i Fin ) -1-1-onto-> om $=
       ( va vb vc com cpw wceq cv wcel c0 csuc eleq1 cfv wrex ax-mp wb fvelrnb
       cfn cin wf1o wf1 crn dff1o5 ackbij1lem17 wf wss f1f frn mp2b ackbij1lem13
@@ -13121,7 +13152,8 @@ $)
       $( [18-Nov-2014] $)
 
     $( The Ackermann bijection, part 1b: the bijection from ~ ackbij1 restricts
-       naturally to the powers of particular naturals. $)
+       naturally to the powers of particular naturals.  (Contributed by Stefan
+       O'Rear, 18-Nov-2014.) $)
     ackbij1b $p |- ( A e. om -> ( F " ~P A ) = ( card ` ~P A ) ) $=
       ( va com wcel cpw cima cfv wn wceq cen wbr cfn wss sylib syl ax-mp wo cin
       ccrd wpss cv imaeq2d breq12d wf1 ackbij1lem17 ackbij2lem1 f1imaen sylancr
@@ -13238,7 +13270,8 @@ $)
 
     ackbij.h $e |- H = U. ( rec ( G , (/) ) " om ) $.
     $( The Ackermann bijection, part 2: hereditarily finite sets can be
-       represented by recursive binary notation. $)
+       represented by recursive binary notation.  (Contributed by Stefan
+       O'Rear, 18-Nov-2014.) $)
     ackbij2 $p |- H : U. ( R1 " om ) -1-1-onto-> om $=
       ( va vb cr1 com wf1o wceq cfv wss wcel cfn con0 ax-mp vc cima cuni c0 wf1
       crdg dff1o5 cv ciun wo wral wa fveq2 fvex fun11iun ccrd ackbij2lem2 f1of1
@@ -13279,7 +13312,8 @@ $)
     $d a b c d e f $.
 
     $( The set of hereditarily finite sets is countable.  See ~ ackbij2 for an
-       explicit bijection that works without Infinity. $)
+       explicit bijection that works without Infinity.  (Contributed by Stefan
+       O'Rear, 18-Nov-2014.) $)
     r1omNEW $p |- ( R1 ` om ) ~~ om $=
       ( vc vd ve vf va vb com cvv cr1 cfv cen cv cpw cima ciun ccrd cmpt syl6eq
       weq fveq2d wcel wbr cdm cfn cin csn c0 crdg cuni wf1o iuneq1 sneq xpeq12d
