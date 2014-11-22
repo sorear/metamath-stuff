@@ -29,14 +29,14 @@ htmldef "PellFund" as "PellFund";
 htmldef "[]NN" as "&#x25FB;<SUB><I>NN</I></SUB>";
   althtmldef "[]NN" as "&#x25FB;<SUB><I>NN</I></SUB>";
   latexdef "[]NN" as "{\rm []NN}";
-htmldef "rmX" as "X<SUB>rm</SUB>";
-  althtmldef "rmX" as "X<SUB>rm</SUB>";
+htmldef "rmX" as " X<SUB>rm</SUB> ";
+  althtmldef "rmX" as " X<SUB>rm</SUB> ";
   latexdef "rmX" as "{\rm rmX}";
-htmldef "rmY" as "Y<SUB>rm</SUB>";
-  althtmldef "rmY" as "Y<SUB>rm</SUB>";
+htmldef "rmY" as " Y<SUB>rm</SUB> ";
+  althtmldef "rmY" as " Y<SUB>rm</SUB> ";
   latexdef "rmY" as "{\rm rmY}";
-htmldef "{C.}" as "<B>{&sub;}</B>";
-  althtmldef "{C.}" as "<B>{&sub;}</B>";
+htmldef "{C.}" as " <B>{&sub;}</B> ";
+  althtmldef "{C.}" as " <B>{&sub;}</B> ";
   latexdef "{C.}" as "{\rm {C.}}";
 /* standard notation is Roman numerals, but that looks ugly smashed up against
    the word "Fin" in the same font/size */
