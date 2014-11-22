@@ -11335,6 +11335,7 @@ $)
 
 
   ${
+    $d x f $.
     $( Define the ` n ` -th derivative operator on functions on the reals.
        This just iterates the derivative operation according to the first
        argument. $)
@@ -11418,9 +11419,9 @@ $)
 
     $( The ` C^n ` object is a function. $)
     fncpn $p |- C^nNEW Fn NN0 $=
-      ( va cv cdvnNEW co cdm cc ccncf wcel cr cpm cvv ccpnNEW cn0 wfn df-cpnNEW
-      crab fnmpt ovex rabex a1i mprg ) ABZUBCDUBEFGDHZAFIJDZPZKHZLMNAMAMUELKAAO
-      QUFUBMHUCAUDFIJRSTUA $.
+      ( va vb cv cdvnNEW co cdm cc ccncf wcel cr cpm crab cvv ccpnNEW df-cpnNEW
+      cn0 wfn fnmpt ovex rabex a1i mprg ) ACZBCZDEUDFGHEIZBGJKEZLZMIZNPQAPAPUGN
+      MABORUHUCPIUEBUFGJKSTUAUB $.
       $( [16-Nov-2014] $)
 
     $( Condition for n-times continuous differentiability. $)
