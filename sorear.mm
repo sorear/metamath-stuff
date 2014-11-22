@@ -12771,183 +12771,32 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c cdsum $.
+  $( A set is equinumerous to its cross-product with a singleton on the
+     left. $)
+  xpsnen2g $p |- ( ( A e. V /\ B e. W ) -> ( { A } X. B ) ~~ B ) $=
+    ( wcel wa csn cxp cen wbr cvv snex xpcomeng mpan adantl xpsneng ancoms entr
+    syl2anc ) ACEZBDEZFAGZBHZBUBHZIJZUDBIJZUCBIJUAUETUBKEUAUEALUBBKDMNOUATUFBAD
+    CPQUCUDBRS $.
+    $( [21-Nov-2014] $)
 
   ${
-    $d x y z w $.
+    $d x A $.
 
-    $( Extend class notation to include indexed cardinal sums. $)
-    ccsum $a class cdsum $.
+    $( Disjoint union is a subset of a cross product. $)
+    djussxp $p |- U_ x e. A ( { x } X. B ) C_ ( A X. _V ) $=
+      ( cv csn cxp ciun cvv wss iunss wcel snssi ssv xpss12 sylancl mprgbir ) A
+      BADZEZCFZGBHFZISTIZABABSTJQBKRBICHIUAQBLCMRBCHNOP $.
+      $( [21-Nov-2014] $)
 
-    $( Define indexed (k-ary) cardinal sums.  This is intended primarily to
-       replace ` sum_ ` in subsystems without ~ ax-inf ; since ordinal addition
-       is not commutative, finite sums of ordinals would be less useful, but
-       cardinal sum is commutative and coincides with ordinal sum precisely
-       where both are commutative. $)
-    df-cdsum $a |- cdsum = { <. x , y >. | ( Fun x /\
-        y = { <. z , w >. | w e. ( x ` z ) } ) } $.
+    $d y B $.
 
-    $d A u x y z w $.  $d B u x y z w $.
-
-    $( Value of an indexed cardinal sum. $)
-    cdsumval $p |- ( ( Fun A /\ A e. V ) -> ( cdsum ` A ) =
-        { <. z , w >. | w e. ( A ` z ) } ) $=
-      ( vu vx vy wcel wfun cvv ccsum cfv cv copab wceq elex wa cab funeq eqid
-      elab4g biimpri ancoms fveq1 eleq2d opabbidv eleq1d cdm dmex abid2 eqeltri
-      vex a1i opabex3 elfvdm ancri ssopab2i ssexi vtoclg adantl df-cdsum anbi1i
-      fvex elab opabbii eqtr4i fvopab4g syl2anc sylan2 ) CDHCIZCJHZCKLBMZAMZCLZ
-      HZABNZOZCDPVJVKQCEMZIZERZHZVPJHZVQVKVJWAWAVKVJQVSVJECVTVRCSVTTUAUBUCVKWBV
-      JVLVMFMZLZHZABNZJHWBFCJWCCOZWFVPJWGWEVOABWGWDVNVLVMWCCUDUEUFZUGWFVMWCUHZH
-      ZWEQZABNWEABWIWCFULZUIWEBRZJHWJWMWDJBWDUJVMWCVCUKUMUNWEWKABWEWJVLVMWCUOUP
-      UQURUSUTFGCWFVPVTJKWHKWCIZGMWFOZQZFGNWCVTHZWOQZFGNFGABVAWRWPFGWQWNWOVSWNE
-      WCWLVRWCSVDVBVEVFVGVHVI $.
-      $( [19-Nov-2014] $)
-
-    $d D y z u v $.  $d v u x $.
-
-    $( Value of an indexed cardinal sum. $)
-    cdsumval2 $p |- ( A e. Fin -> ( cdsum ` ( x e. A |-> D ) ) =
-            { <. x , y >. | ( x e. A /\ y e. ( _I ` D ) ) } ) $=
-      ( vz vu vv cfn wcel cfv cv copab cid wa cvv wceq csb syl ax-17 vex funmpt
-      cmpt ccsum wfun a1i mptexg cdsumval syl2anc cdm elfvdm eqid dmmptss sseli
-      pm4.71ri csbeq1 wel hbcsb1 csbeq1a cbvmpt fvmpti adantl pm5.32da opabbidv
-      eleq2d syl5bb hbfv hban weq eleq1 fveq2d anbi12d cbvopab1 syl6eqr eqtrd )
-      CHIZACDUBZUCJZBKZEKZVPJZIZEBLZAKZCIZVRDMJZIZNZABLZVOVPUDZVPOIZVQWBPWIVOAC
-      DUAUEACDHUFZEBVPOUGUHVOWBVSCIZVRAVSDQZMJZIZNZEBLZWHVOWJWBWQPWKWJWAWPEBWAW
-      LWANWJWPWAWLWAVSVPUIZIWLVRVSVPUJWRCVSACDVPVPUKULUMRUNWJWLWAWOWJWLNVTWNVRW
-      LVTWNPWJFVSAFKZDQZWMCVPAWSVSDUOAFGCDWTGKDIFSAGWSDFTGFUPASUQAWSDURUSUTVAVD
-      VBVEVCRWGWPABEWGESWLWOAWLASABWMMVRMIASABVSDETBEUPASUQVFVGAEVHZWDWLWFWOWCV
-      SCVIXAWEWNVRXADWMMAVSDURVJVDVKVLVMVN $.
-      $( [19-Nov-2014] $)
-
-    $( Value of an indexed cardinal sum. $)
-    cdsumval3 $p |- ( ( A e. Fin /\ A. x e. A D e. V ) ->
-          ( cdsum ` ( x e. A |-> D ) ) =
-            { <. x , y >. | ( x e. A /\ y e. D ) } ) $=
-      ( cfn wcel wral cmpt ccsum cfv cv cid wa copab cdsumval2 wceq elex ralimi
-      cvv hbra1 ax-17 wb ra4 fvi eleq2d syl6 pm5.32d opabbid syl sylan9eq ) CFG
-      DEGZACHZACDIJKALCGZBLZDMKZGZNZABOZUNUODGZNZABOZABCDPUMDTGZACHZUSVBQULVCAC
-      DERSVDURVAABVCACUAVDBUBVDUNUQUTVDUNVCUQUTUCVCACUDVCUPDUODTUEUFUGUHUIUJUK
-      $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
-    $d A a b x $.  $d B a b x $.  $d D a $.
-    $( Union of index sets of cardinal sum (non-cardinal property). $)
-    cdsumun $p |- ( ( A u. B ) e. Fin -> ( cdsum `
-          ( x e. ( A u. B ) |-> D ) ) = ( ( cdsum ` ( x e. A |-> D ) ) u.
-          ( cdsum ` ( x e. B |-> D ) ) ) ) $=
-      ( va cun cfn wcel cv cid cfv wa copab cmpt ccsum wo elun anbi1i cdsumval2
-      wceq andir bitri opabbii unopab eqtr4i unfir uneq12 syl2an syl 3eqtr4a )
-      BCFZGHZAIZUKHZEIDJKHZLZAEMZUMBHZUOLZAEMZUMCHZUOLZAEMZFZAUKDNOKABDNOKZACDN
-      OKZFZUQUSVBPZAEMVDUPVHAEUPURVAPZUOLVHUNVIUOUMBCQRURVAUOUAUBUCUSVBAEUDUEAE
-      UKDSULBGHZCGHZLVGVDTZBCUFVJVEUTTVFVCTVLVKAEBDSAECDSVEUTVFVCUGUHUIUJ $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
-    $d A a b c x $.  $d B a b c y $.  $d C a b c $.  $d D a b c $.
-
-    $( Cardinal sum is a subset of a cross product. $)
-    cdsumssxpfi $p |- ( A e. Fin -> ( cdsum ` ( x e. A |-> D ) ) C_
-        ( A X. _V ) ) $=
-      ( va cfn wcel cmpt ccsum cfv cv cid copab cvv cxp cdsumval2 wss simpl vex
-      wa jctir ssopab2i df-xp sseqtr4i a1i eqsstrd ) BEFZABCGHIAJBFZDJZCKIFZSZA
-      DLZBMNZADBCOUKULPUFUKUGUHMFZSZADLULUJUNADUJUGUMUGUIQDRTUAADBMUBUCUDUE $.
-      $( [19-Nov-2014] $)
-
-    $( Cardinal sums with disjoint index sets are disjoint (non-cardinal
-       property). $)
-    cdsumdisj $p |- ( ( A e. Fin /\ B e. Fin /\ ( A i^i B ) = (/) ) ->
-        ( ( cdsum ` ( x e. A |-> C ) ) i^i
-          ( cdsum ` ( y e. B |-> D ) ) ) = (/) ) $=
-      ( cfn wcel cin wceq cmpt ccsum cfv cvv cxp wss cdsumssxpfi incom syl5eq
-      c0 w3a 3ad2ant1 3ad2ant2 xpdisj1 3ad2ant3 ssdisj syl2anc ) CGHZDGHZCDITJZ
-      UAZACEKLMZCNOZPZUMBDFKLMZIZTJULUOITJUHUIUNUJACEQUBUKUPUOUMIZTUMUORUKUODNO
-      ZPZURUMIZTJZUQTJUIUHUSUJBDFQUCUJUHVAUIUJUTUMURITURUMRCDNNUDSUEUOURUMUFUGS
-      ULUMUOUFUG $.
-      $( [19-Nov-2014] $)
-
-    $( Cardinal sum with an empty index set. $)
-    cdsum0 $p |- ( cdsum ` ( x e. (/) |-> C ) ) = (/) $=
-      ( cfn wcel cmpt ccsum cfv wss wceq 0fin cvv cxp cdsumssxpfi xp0r syl6sseq
-      c0 ss0 mp2b ) PCDZAPBEFGZPHTPIJSTPKLPAPBMKNOTQR $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
-    $d A x y a b $.  $d ph x y a b $.  $d B x y a b $.  $d C x y a b $.
-    $d D y a b $.
-    cdsumsplitfi.a $e |- ( ph -> A e. Fin ) $.
-    cdsumsplitfi.b $e |- ( ph -> ( B u. C ) = A ) $.
-    cdsumsplitfi.c $e |- ( ph -> ( B i^i C ) = (/) ) $.
-    $( Split a finite-indexed cardinal sum. $)
-    cdsumsplitfi $p |- ( ph -> ( cdsum ` ( x e. A |-> D ) ) ~~
-          ( ( cdsum ` ( x e. B |-> D ) ) +c
-            ( cdsum ` ( x e. C |-> D ) ) ) ) $=
-      ( cmpt ccsum cfv cen wbr cun wceq cfn wcel fvex syl co cin c0 wss eqeltrd
-      ccda ssun1 ssfi sylancl ssun2 cdsumdisj syl3anc cdaun eqcomd mpteq1 eqtrd
-      fveq2d cdsumun breqtrrd ensym ) ABDFJZKLZBEFJZKLZUFUAZBCFJZKLZMNVGVEMNAVE
-      VBVDOZVGMAVBVDUBUCPZVEVHMNADQRZEQRZDEUBUCPVIADEOZQRZDVLUDVJAVLCQHGUEZDEUG
-      VLDUHUIAVMEVLUDVKVNEDUJVLEUHUIIBBDEFFUKULVBVDVAKSVCKSUMTAVGBVLFJZKLZVHACV
-      LPZVGVPPAVLCHUNVQVFVOKBCVLFUOUQTAVMVPVHPVNBDEFURTUPUSVEVGVFKSUTT $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
-    $d A x a b $.  $d B x a b $.
-    $( Cross product is iterated cardinal sum. $)
-    cdsumxpfi $p |- ( ( A e. Fin /\ B e. V ) -> ( cdsum ` ( x e. A |-> B ) ) =
-        ( A X. B ) ) $=
-      ( va cfn wcel wa cmpt ccsum cfv cv copab cxp cvv wral wceq elex ralrimivw
-      syl cdsumval3 sylan2 df-xp syl6eqr ) BFGZCDGZHABCIJKZALBGELCGHAEMZBCNUFUE
-      COGZABPZUGUHQUFUIUJCDRUIUIABCORSTAEBCOUAUBAEBCUCUD $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
-    $d A x a b $.  $d D a b $.
-
-    $( Cardinal sum at a single point. $)
-    cdsumsn $p |- ( A e. V -> ( cdsum ` ( x e. { A } |-> D ) ) ~~
-          [_ A / x ]_ D ) $=
-      ( va vb wcel csn cmpt ccsum cfv csb cen cv ax-17 cvv wbr cxp mpan adantl
-      vex wel hbcsb1 csbeq1a cbvmpt elsni csbeq1d mpteq2ia eqtri fveq2i wa wceq
-      cfn snfi cdsumxpfi snex xpcomeng xpsneng ancoms entr syl2anc eqbrtrd fvex
-      wn enref brprc mpbiri pm2.61dan syl5eqbr ) BDGZABHZCIZJKEVKABCLZIZJKZVMMV
-      LVNJVLEVKAENZCLZIVNAEFVKCVQFNCGEOAFVPCEUAFEUBAOUCAVPCUDUEEVKVQVMVPVKGAVPB
-      CVPBUFUGUHUIUJVJVMPGZVOVMMQZVJVRUKZVOVKVMRZVMMVRVOWAULZVJVKUMGVRWBBUNEVKV
-      MPUOSTVTWAVMVKRZMQZWCVMMQZWAVMMQVRWDVJVKPGVRWDBUPVKVMPPUQSTVRVJWEVMBPDURU
-      SWAWCVMUTVAVBVRVDZVSVJWFVSVOVOMQVOVNJVCVEVOVMMVFVGTVHVI $.
-      $( [19-Nov-2014] $)
-  $}
-
-  ${
-    $d ph x a b c $.  $d A a b c x $.  $d D a b c $.
-    cdsumfi.a $e |- ( ph -> A e. Fin ) $.
-    cdsumfi.b $e |- ( ( ph /\ x e. A ) -> D e. Fin ) $.
-    $( Finiteness of cardinal sum. $)
-    cdsumfi $p |- ( ph -> ( cdsum ` ( x e. A |-> D ) ) e. Fin ) $=
-      ( va vc wss cmpt ccsum cfv cfn wcel wa wi c0 anbi2d eleq1d imbi12d adantr
-      vb ssid cv csn cun wceq sseq1 mpteq1 fveq2d weq cdsum0 0fin eqeltri ssun1
-      a1i sstr mpan anim2i imim1i w3a snfi mpan2 3ad2ant1 cdsumun syl simp3 csb
-      unfi ssun2 vex snss sylibr ax-17 wel hbcsb1 hbel hbim eleq1 csbeq1a chvar
-      sylan2 cen wbr wb cdsumsn ax-mp enfi syl2anc mpbird 3ad2ant2 eqeltrd 3exp
-      cvv a2d syl5 findcard2 mpcom ) ACCIZBCDJZKLZMNZCUCCMNZAWSOZXBAXCWSEUAAGUD
-      ZCIZOZBXEDJZKLZMNZPAQCIZOZBQDJZKLZMNZPAUBUDZCIZOZBXPDJZKLZMNZPZAXPHUDZUEZ
-      UFZCIZOZBYEDJZKLZMNZPZXDXBPGUBHCXEQUGZXGXLXJXOYLXFXKAXEQCUHRYLXIXNMYLXHXM
-      KBXEQDUIUJSTGUBUKZXGXRXJYAYMXFXQAXEXPCUHRYMXIXTMYMXHXSKBXEXPDUIUJSTXEYEUG
-      ZXGYGXJYJYNXFYFAXEYECUHRYNXIYIMYNXHYHKBXEYEDUIUJSTXECUGZXGXDXJXBYOXFWSAXE
-      CCUHRYOXIXAMYOXHWTKBXECDUIUJSTXOXLXNQMBDULUMUNUPYBYGYAPXPMNZYKYGXRYAYFXQA
-      XPYEIYFXQXPYDUOXPYECUQURUSUTYPYGYAYJYPYGYAYJYPYGYAVAZYIXTBYDDJKLZUFZMYQYE
-      MNZYIYSUGYPYGYTYAYPYDMNYTYCVBXPYDVIVCVDBXPYDDVEVFYQYAYRMNZYSMNYPYGYAVGYGY
-      PUUAYAYGUUABYCDVHZMNZYFAYCCNZUUCYFYDCIZUUDYDYEIYFUUEYDXPVJYDYECUQURYCCHVK
-      ZVLVMABUDZCNZOZDMNZPAUUDOZUUCPBHUUKUUCBUUKBVNBGGUUBMBGYCDUUFGHVOBVNVPXEMN
-      BVNVQVRBHUKZUUIUUKUUJUUCUULUUHUUDAUUGYCCVSRUULDUUBMBYCDVTSTFWAWBZYGUUCYRU
-      UBWCWDZUUAUUCWEUUMUUNYGYCWNNUUNUUFBYCDWNWFWGUPYRUUBMWHWIWJWKXTYRVIWIWLWMW
-      OWPWQWRVC $.
-      $( [19-Nov-2014] $)
+    $( Disjoint unions with disjoint index sets are disjoint. $)
+    djudisj $p |- ( ( A i^i B ) = (/) -> ( U_ x e. A ( { x } X. C ) i^i
+            U_ y e. B ( { y } X. D ) ) = (/) ) $=
+      ( cin c0 wceq cv csn cxp ciun cvv wss djussxp incom syl5eq ssdisj sylancr
+      xpdisj1 ) CDGHIZACAJKELMZCNLZOUDBDBJKFLMZGZHIUCUEGHIACEPUBUFUEUDGZHUDUEQU
+      BUEDNLZOUHUDGZHIUGHIBDFPUBUIUDUHGHUHUDQCDNNUARUEUHUDSTRUCUDUEST $.
+      $( [21-Nov-2014] $)
   $}
 
   ${
@@ -13044,51 +12893,57 @@ $)
       $( [18-Nov-2014] $)
 
     ackbij.f $e |- F = ( x e. ( ~P om i^i Fin ) |->
-        ( card ` ( cdsum ` ( y e. x |-> ~P y ) ) ) ) $.
+        ( card ` U_ y e. x ( { y } X. ~P y ) ) ) $.
+
     $( Lemma for ~ ackbij1 . $)
     ackbij1lem7 $p |- ( A e. ( ~P om i^i Fin ) -> ( F ` A ) =
-        ( card ` ( cdsum ` ( y e. A |-> ~P y ) ) ) ) $=
-      ( cv cpw cmpt ccsum cfv ccrd com cfn cin wceq mpteq1 fveq2d fvex fvmpt )
-      ACBAFZBFGZHZIJZKJBCUAHZIJZKJLGMNDTCOZUCUEKUFUBUDIBTCUAPQQEUEKRS $.
-      $( [18-Nov-2014] $)
+        ( card ` U_ y e. A ( { y } X. ~P y ) ) ) $=
+      ( cv csn cpw cxp ciun ccrd cfv com cfn cin wceq iuneq1 fveq2d fvex fvmpt
+      ) ACBAFZBFZGUBHIZJZKLBCUCJZKLMHNODUACPUDUEKBUACUCQREUEKST $.
+      $( [21-Nov-2014] $)
 
     $( Lemma for ~ ackbij1 . $)
     ackbij1lem8 $p |- ( A e. om -> ( F ` { A } ) = ( card ` ~P A ) ) $=
-      ( va com wcel csn cfv cv cpw cmpt ccsum ccrd cfn cin wceq cvv cen syl wbr
-      ackbij1lem4 ackbij1lem7 pwexg csb cdsumsn a17d pweq csbiegf carden2b sylc
-      breqtrd eqtrd ) CGHZCIZDJZBUPBKZLZMNJZOJZCLZOJZUOUPGLPQHUQVARCUCABUPDEUDU
-      AUOVBSHUTVBTUBVAVCRCGUEUOUTBCUSUFVBTBCUSGUGBFCUSVBGUOFKVBHBUHURCUIUJUMUTV
-      BSUKULUN $.
+      ( va cv csn cfv cpw ccrd wceq com sneq fveq2d pweq eqeq12d wcel cxp cvv
+      cfn cin ackbij1lem4 ackbij1lem7 syl vex weq xpeq12d iunxsn fveq2i cen wbr
+      ciun pwex xpsnen2g mp2an carden2b mp2 eqtri syl6eq vtoclga ) FGZHZDIZVBJZ
+      KIZLCHZDIZCJZKIZLFCMVBCLZVDVHVFVJVKVCVGDVBCNOVKVEVIKVBCPOQVBMRZVDBVCBGZHZ
+      VMJZSZUMZKIZVFVLVCMJUAUBRVDVRLVBUCABVCDEUDUEVRVCVESZKIZVFVQVSKBVBVPVSFUFZ
+      BFUGVNVCVOVEVMVBNVMVBPUHUIUJVETRZVSVEUKULZVTVFLVBWAUNZVBTRWBWCWAWDVBVETTU
+      OUPVSVETUQURUSUTVA $.
       $( [19-Nov-2014] $)
 
     $( Lemma for ~ ackbij1 . $)
     ackbij1lem9 $p |- ( ( A e. ( ~P om i^i Fin ) /\ B e. ( ~P om i^i Fin ) /\
           ( A i^i B ) = (/) ) ->
         ( F ` ( A u. B ) ) = ( ( F ` A ) +o ( F ` B ) ) ) $=
-      ( com cfn cin wcel wceq ccsum cfv ccrd co cen wbr sseli syl fvex cpw cmpt
-      c0 w3a cun coa ccda cvv ovex inss2 ackbij1lem6 3adant3 sseldi eqidd simp3
-      cv cdsumsplitfi 3ad2ant1 wa inss1 elpwi con0 onfin2 eqsstri syl6ss sselda
-      wss pwfi sylib cdsumfi ficardid ensym 3syl 3ad2ant2 syl2anc entr carden2b
-      cdaen mpsyl ficardom nnacda eqtrd ackbij1lem7 oveqan12d 3eqtr4d ) CGUAZHI
-      ZJZDWGJZCDIUCKZUDZBCDUEZBUPZUAZUBLMZNMZBCWNUBZLMZNMZBDWNUBZLMZNMZUFOZWLEM
-      ZCEMZDEMZUFOZWKWPWSXBUGOZNMZXCXHUHJWKWOXHPQZWPXIKWSXBUGUIWKWOWRXAUGOZPQXK
-      XHPQZXJWKBWLCDWNWKWGHWLWFHUJZWHWIWLWGJZWJCDUKULZUMWKWLUNWHWIWJUOUQWKWRWSP
-      QZXAXBPQZXLWKWRHJZWSWRPQXPWKBCWNWHWICHJWJWGHCXMRURWKWMCJUSWMHJZWNHJZWKCHW
-      MWKCGHWKCWFJZCGVGWHWIYAWJWGWFCWFHUTZRURCGVASGVBHIHVCVBHUJVDZVEVFWMVHZVIVJ
-      ZWRVKWSWRWQLTZVLVMWKXAHJZXBXAPQXQWKBDWNWIWHDHJWJWGHDXMRVNWKWMDJUSXSXTWKDH
-      WMWKDGHWKDWFJZDGVGWIWHYHWJWGWFDYBRVNDGVASYCVEVFYDVIVJZXAVKXBXAWTLTZVLVMWR
-      WSXAXBYFWRNTYJXANTVRVOWOXKXHVPVOWOXHUHVQVSWKWSGJZXBGJZXIXCKWKXRYKYEWRVTSW
-      KYGYLYIXAVTSWSXBWAVOWBWKXNXDWPKXOABWLEFWCSWHWIXGXCKWJWHWIXEWSXFXBUFABCEFW
-      CABDEFWCWDULWE $.
+      ( com cfn cin wcel wceq ciun ccrd cfv co cen wbr sseli syl syl2anc cpw c0
+      w3a cun cv csn cxp coa ccda iunxun wral inss2 3ad2ant1 wa wss inss1 elpwi
+      snfi con0 onfin2 eqsstri syl6ss sselda pwfi sylib sylancr ralrimiva iunfi
+      xpfi 3ad2ant2 syl5eqel ficardom ficardid cdaeng syl222anc 3ad2ant3 cdaung
+      unfi djudisj syl3anc syl6breqr carden2b nnacda eqtr3d ackbij1lem6 3adant3
+      entr sylc ackbij1lem7 oveqan12d 3eqtr4d ) CGUAZHIZJZDWMJZCDIUBKZUCZBCDUDZ
+      BUEZUFZWSUAZUGZLZMNZBCXBLZMNZBDXBLZMNZUHOZWRENZCENZDENZUHOZWQXFXHUIOZMNZX
+      DXIWQXCHJXNXCPQZXOXDKWQXCXEXGUDZHBCDXBUJZWQXEHJZXGHJZXQHJWQCHJZXBHJZBCUKX
+      SWNWOYAWPWMHCWLHULZRUMWQYBBCWQWSCJUNZWTHJZXAHJZYBWSURZYDWSHJZYFWQCHWSWQCG
+      HWNWOCGUOZWPWNCWLJYIWMWLCWLHUPZRCGUQSUMGUSHIHUTUSHULVAZVBVCWSVDZVEWTXAVIZ
+      VFVGBCXBVHTZWQDHJZYBBDUKXTWOWNYOWPWMHDYCRVJWQYBBDWQWSDJUNZYEYFYBYGYPYHYFW
+      QDHWSWQDGHWOWNDGUOZWPWODWLJYQWMWLDYJRDGUQSVJYKVBVCYLVEYMVFVGBDXBVHTZXEXGV
+      RTVKWQXNXEXGUIOZPQZYSXCPQXPWQXFGJZXSXHGJZXTXFXEPQZXHXGPQZYTWQXSUUAYNXEVLS
+      ZYNWQXTUUBYRXGVLSZYRWQXSUUCYNXEVMSWQXTUUDYRXGVMSXFXEXHXGGHGHVNVOWQYSXQXCP
+      WQXSXTXEXGIUBKZYSXQPQYNYRWPWNUUGWOBBCDXAXAVSVPXEXGHHVQVTXRWAXNYSXCWGTXNXC
+      HWBWHWQUUAUUBXOXIKUUEUUFXFXHWCTWDWQWRWMJZXJXDKWNWOUUHWPCDWEWFABWREFWISWNW
+      OXMXIKWPWNWOXKXFXLXHUHABCEFWIABDEFWIWJWFWK $.
       $( [19-Nov-2014] $)
 
     $( Lemma for ~ ackbij1 . $)
     ackbij1lem10 $p |- F : ( ~P om i^i Fin ) --> om $=
-      ( com cpw cfn cin wf wtru cmpt ccsum cfv ccrd wcel inss2 sseli con0 sylib
-      cv wel wa onfin2 eqsstri wss vex elpw sselda sseldi pwfi cdsumfi ficardom
-      inss1 syl adantl fmptd trud ) EFZGHZECIJAUSBATZBTZFZKLMZNMZECUTUSOZVDEOZJ
-      VEVCGOVFVEBUTVBUSGUTURGPQVEBAUAUBZVAGOVBGOVGEGVAERGHGUCRGPUDVEUTEVAVEUTUR
-      OUTEUEUSURUTURGUMQUTEAUFUGSUHUIVAUJSUKVCULUNUODUPUQ $.
+      ( com cpw cfn cin wf wtru cv csn cxp ciun ccrd wcel inss2 sseli syl con0
+      cfv wral wel snfi wss inss1 elpwi onfin2 eqsstri syl6ss sselda pwfi sylib
+      wa xpfi sylancr ralrimiva iunfi syl2anc ficardom adantl fmptd trud ) EFZG
+      HZECIJAVEBAKZBKZLZVGFZMZNZOUAZECVFVEPZVLEPZJVMVKGPZVNVMVFGPVJGPZBVFUBVOVE
+      GVFVDGQRVMVPBVFVMBAUCUNZVHGPVIGPZVPVGUDVQVGGPVRVMVFGVGVMVFEGVMVFVDPVFEUEV
+      EVDVFVDGUFRVFEUGSETGHGUHTGQUIUJUKVGULUMVHVIUOUPUQBVFVJURUSVKUTSVADVBVC $.
       $( [18-Nov-2014] $)
 
     $( Lemma for ~ ackbij1 . $)
@@ -13425,17 +13280,18 @@ $)
     $( The set of hereditarily finite sets is countable.  See ~ ackbij2 for an
        explicit bijection that works without Infinity. $)
     r1omNEW $p |- ( R1 ` om ) ~~ om $=
-      ( vc vd ve vf va vb com cvv cr1 cfv cen cv cpw cima cmpt ccrd weq cbvmptv
-      ccsum fveq2d wcel wbr cdm cfn cin crdg cuni wf1o mpteq1 pweq syl6eq pweqd
-      c0 dmeq imaeq1 mpteq12dv eqid ackbij2 wceq wb ciun wlim limom r1lim mpan2
-      imaeq2 wfun con0 wfn r1fnon fnfun ax-mp funiunfv f1oeq2 mpbiri fvex f1oen
-      syl wn enref brprc pm2.61i ) GHUAZGIJZGKUBZWCWDGAHBALZUCZMZWFBLZNZCGMUDUE
-      ZDCLZDLZMZOZSJZPJZOZJZOZOZUMUFGNUGZUHZWEWCXCIGNUGZGXBUHZEFWRXAXBCEWKWQFEL
-      ZFLZMZOZSJZPJCEQZWPXJPXKWOXISXKWODXFWNOXIDWLXFWNUIDFXFWNXHWMXGUJRUKTTRAEH
-      WTFXFUCZMZXFXGNZWRJZOZAEQZWTBXMXFWINZWRJZOXPXQBWHWSXMXSXQWGXLWFXFUNULXQWJ
-      XRWRWFXFWIUOTUPBFXMXSXOBFQXRXNWRWIXGXFVFTRUKRXBUQURWCWDXDUSXCXEUTWCWDEGXF
-      IJVAZXDWCGVBWDXTUSVCEGHVDVEIVGZXTXDUSIVHVIYAVJVHIVKVLEGIVMVLUKWDXDGXBVNVR
-      VOWDGXBGIVPZVQVRWCVSWEWDWDKUBWDYBVTWDGKWAVOWB $.
+      ( vc vd ve vf va vb com cvv cr1 cfv cen cv cpw cima ciun ccrd cmpt syl6eq
+      weq fveq2d wcel wbr cdm cfn cin csn c0 crdg cuni wf1o iuneq1 sneq xpeq12d
+      pweq cbviunv cbvmptv dmeq pweqd imaeq1 mpteq12dv imaeq2 eqid ackbij2 wceq
+      cxp wb wlim limom r1lim mpan2 wfun wfn r1fnon fnfun ax-mp funiunfv f1oeq2
+      con0 syl mpbiri fvex f1oen wn enref brprc pm2.61i ) GHUAZGIJZGKUBZWGWHGAH
+      BALZUCZMZWJBLZNZCGMUDUEZDCLZDLZUFZWQMZVEZOZPJZQZJZQZQZUGUHGNUIZUJZWIWGXHI
+      GNUIZGXGUJZEFXCXFXGCEWOXBFELZFLZUFZXLMZVEZOZPJCESZXAXPPXQXADXKWTOXPDWPXKW
+      TUKDFXKWTXODFSWRXMWSXNWQXLULWQXLUNUMUORTUPAEHXEFXKUCZMZXKXLNZXCJZQZAESZXE
+      BXSXKWMNZXCJZQYBYCBWLXDXSYEYCWKXRWJXKUQURYCWNYDXCWJXKWMUSTUTBFXSYEYABFSYD
+      XTXCWMXLXKVATUPRUPXGVBVCWGWHXIVDXHXJVFWGWHEGXKIJOZXIWGGVGWHYFVDVHEGHVIVJI
+      VKZYFXIVDIVRVLYGVMVRIVNVOEGIVPVORWHXIGXGVQVSVTWHGXGGIWAZWBVSWGWCWIWHWHKUB
+      WHYHWDWHGKWEVTWF $.
       $( [18-Nov-2014] $)
   $}
 
