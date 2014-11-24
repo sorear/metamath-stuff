@@ -73,4 +73,5 @@ htmldef "DnNEW" as "D<SUP><I>n<SUP>NEW</SUP></I></SUP>";
 htmldef "C^nNEW" as "<I>C<SUP>n<SUP>NEW</SUP></SUP></I>";
   althtmldef "C^nNEW" as "<I>C<SUP>n<SUP>NEW</SUP></SUP></I>";
   latexdef "C^nNEW" as "{\rm C^nNEW}";
+/* End of mathbox of Stefan O'Rear */
 
