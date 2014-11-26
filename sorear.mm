@@ -13287,4 +13287,130 @@ $)
       $( [18-Nov-2014] $)
   $}
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Algebraic integers I
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c degAA minPolyAA _ZZ $.
+
+  $( Extend class notation to include the degree function for algebraic
+     numbers. $)
+  cdgraa $a class degAA $.
+
+  $( Extend class notation to include the minimal polynomial for an algebraic
+     number. $)
+  cmpaa $a class minPolyAA $.
+
+  $( Extend class notation to include the class of algebraic integers. $)
+  cza $a class _ZZ $.
+
+  ${
+    $d x d p $.
+
+    $( Define the degree of an algebraic number as the smallest degree of any
+       nonzero polynomial which has said number as a root. $)
+    df-dgraa $a |- degAA = ( x e. AA |-> sup ( { d e. NN |
+        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
+          ( p ` x ) = 0 ) } , RR , `' < ) ) $.
+
+    $( Define the minimal polynomial of an algebraic number as the unique monic
+       polynomial which achieves the minimum of ` degAA ` . $)
+    df-mpaa $a |- minPolyAA = ( x e. AA |-> ( iota_ p e. ( Poly ` QQ )
+        ( ( deg ` p ) = ( degAA ` x ) /\ ( p ` x ) = 0 /\
+          ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $.
+
+    $( Define an algebraic integer as an algebraic number whose minimal
+       polynomial has all integer coefficients. $)
+    df-za $a |- _ZZ = { x e. AA | ( minPolyAA ` x ) e. ( Poly ` ZZ ) } $.
+  $}
+
+  ${
+    $d A x d p a b c $.  $d P x d p a b c $.
+
+    $( Value of the degree function on an algebraic number. $)
+    dgraaval $p |- ( A e. AA -> ( degAA ` A ) = sup ( { d e. NN |
+        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
+          ( p ` A ) = 0 ) } , RR , `' < ) ) $=
+      ? $.
+
+    $( Properties of the degree of an algebraic number. $)
+    dgraalem $p |- ( A e. AA -> ( ( degAA ` A ) e. NN /\
+        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = ( degAA ` A ) /\
+          ( p ` A ) = 0 ) ) ) $=
+      ? $.
+
+    $( Closure of the degree function on algebraic numbers. $)
+    dgraacl $p |- ( A e. AA -> ( degAA ` A ) e. NN ) $=
+      ? $.
+
+    $( Degree function on algebraic numbers is a function. $)
+    dgraaf $p |- degAA : AA --> NN $=
+      ? $.
+
+    $( Upper bound on degree of an algebraic number. $)
+    dgraaub $p |- ( ( ( P e. ( Poly ` QQ ) /\ P =/= 0p ) /\ ( A e. CC /\
+          ( P ` A ) = 0 ) ) -> ( degAA ` A ) <_ ( deg ` P ) ) $=
+      ? $.
+
+    $( Degree of a rational number. $)
+    dgraaq $p |- ( A e. QQ -> ( degAA ` A ) = 1 ) $=
+      ? $.
+
+    $( An algebraic number has exactly one monic polynomial of least degree. $)
+    mpaaeu $p |- ( A e. AA -> E! p e. ( Poly ` QQ ) ( ( deg ` p ) =
+          ( degAA ` A ) /\ ( p ` A ) = 0 /\
+        ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) $=
+      ? $.
+
+    $( Value of the minimal polynomial of an algebraic number. $)
+    mpaaval $p |- ( A e. AA -> ( minPolyAA ` A ) = ( iota_ p e. ( Poly ` QQ )
+        ( ( deg ` p ) = ( degAA ` x ) /\ ( p ` x ) = 0 /\
+          ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $=
+      ? $.
+
+    $( Properties of the minimal polynomial of an algebraic number. $)
+    mpaalem $p |- ( A e. AA -> ( ( minPolyAA ` A ) e. ( Poly ` QQ ) /\
+        ( ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) /\
+          ( ( minPolyAA ` A ) ` A ) = 0 /\
+          ( ( coeff ` ( minPolyAA ` A ) ) ` ( degAA ` A ) ) = 1 ) ) ) $=
+      ? $.
+
+    $( Minimal polynomial is a polynomial. $)
+    mpaacl $p |- ( A e. AA -> ( minPolyAA ` A ) e. ( Poly ` QQ ) ) $=
+      ? $.
+
+    $( Minimal polynomial has degree the degree of the number. $)
+    mpaadgr $p |- ( A e. AA -> ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) ) $=
+      ? $.
+
+    $( Minimal polynomial has the polynomial as a root. $)
+    mpaaroot $p |- ( A e. AA -> ( ( minPolyAA ` A ) ` A ) = 0 ) $=
+      ? $.
+
+    $( Minimal polynomial is monic. $)
+    mpaamn $p |- ( A e. AA -> ( ( coeff ` ( minPolyAA ` A ) ) `
+          ( degAA ` A ) ) = 1 ) $=
+      ? $.
+
+    $( The algebraic integers are a subset of the algebraic numbers. $)
+    zassaa $p |- _ZZ C_ AA $=
+      ? $.
+
+    $( The algebraic integers are a set. $)
+    zaex $p |- _ZZ e. _V $=
+      ? $.
+
+    $( Membership in the set of algebraic integers. $)
+    elza $p |- ( A e. _ZZ <-> ( A e. AA /\
+          ( minPolyAA ` A ) e. ( Poly ` ZZ ) ) ) $=
+      ? $.
+
+    $( The rational algebraic integers are the ordinary integers, justifying
+       the term "rational integers" for the latter. $)
+    zaqz $p |- ZZ = ( _ZZ i^i QQ ) $=
+      ? $.
+  $}
+
 $( (End of Stefan O'Rear's mathbox.) $)
