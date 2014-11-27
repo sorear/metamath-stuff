@@ -13835,33 +13835,90 @@ $)
     algpart.a $e |- A = ( { <. ( Base ` ndx ) , B >. , <. ( +g ` ndx ) , P >. ,
         <. ( .r ` ndx ) , T >. } u. { <. ( Scalar ` ndx ) , S >. ,
           <. ( vsca ` ndx ) , M >. } ) $.
+
+    ${
+      algpart.b $e |- D = ( { ( Base ` ndx ) , ( +g ` ndx ) , ( .r ` ndx ) } u.
+          { ( Scalar ` ndx ) , ( vsca ` ndx ) } ) $.
+      $( Lemma to shorten proofs of ~ algbase through ~ algvsca . $)
+      algfn $p |- A Fn D $=
+        ( va cnx cfv cun wcel c5 wceq wne ltneii neeqtrri c6 cbs cmulr ctp csca
+        cplusg csn cop cvsca fvex eqid eqid1 rngfn w3o w3a 1re 5re 1lt5 basendx
+        wn c1 c2 2re 2lt5 df-plusg 2nn ndxarg 3re 3lt5 df-mulr 3pm3.2i ne3anior
+        c3 3nn mpbi df-sca eleq1i cn elexi eltp bitri mtbir fnunsn df-pr uneq2i
+        5nn cpr unass 3eqtr4i 6re 1lt6 2lt6 3lt6 6nn 5lt6 elsnc nemtbir pm3.2ni
+        wo df-vsca elun ) KUALZKUELZKUBLZUCZKUDLZUFZMZCXABUGXBDUGXCFUGUCZXEEUGZ
+        UFZMZAKUHLZGKUHUIXDXGXHXKXEEKUDUIBXDDXHFXHUJXDUKULXKUJXGUJXEXDNZOXAPOXB
+        POXCPUMZOXAQZOXBQZOXCQZUNXNUSXOXPXQOUTXAUTOUOUPUQRURSOVAXBVAOVBUPVCRUEV
+        AJJVDVEVFZSOVLXCVLOVGUPVHRUBVLJJVIVMVFZSVJOXAOXBOXCVKVNXMOXDNXNXEOXDUDO
+        JJVOWEVFZVPOXAXBXCOVQWEVRVSVTWAWBXHXIXLGUGZWFZMXHXJYAUFZMZMAXKYCMYBYDXH
+        XIYAWCWDHXHXJYCWGWHXDXEXLWFZMXDXFXLUFZMZMCXGYFMYEYGXDXEXLWCWDIXDXFYFWGW
+        HXLXGNZTXDNZTXFNZWRZYIYJYITXAPTXBPTXCPUMZTXAQZTXBQZTXCQZUNYLUSYMYNYOTUT
+        XAUTTUOWIWJRURSTVAXBVATVBWIWKRXRSTVLXCVLTVGWIWLRXSSVJTXATXBTXCVKVNTXAXB
+        XCTVQWMVRZVSWAYJTXETOXEOTUPWIWNRXTSTXEYPWOWPWQYHTXGNYKXLTXGUHTJJWSWMVFV
+        PTXDXFWTVTWAWB $.
+        $( [27-Nov-2014] $)
+    $}
+
     $( Lemma to shorten proofs of ~ algbase through ~ algvsca . $)
     algfun $p |- Fun A $=
-      ? $.
+      ( cnx cbs cfv cplusg cmulr ctp csca cvsca cpr cun wfn wfun eqid algfn
+      fnfun ax-mp ) AHIJHKJHLJMHNJHOJPQZRASABUDCDEFGUDTUAUDAUBUC $.
+      $( [27-Nov-2014] $)
+
+    $d A a $.  $d B a $.  $d P a $.  $d T a $.  $d S a $.  $d M a $.
 
     $( The base set of a constructed algebra. $)
     algbase $p |- ( B e. V -> B = ( Base ` A ) ) $=
-      ? $.
+      ( va cbs cnx cfv cop cplusg cmulr ctp csca cvsca cpr wcel cun cvv eqeltri
+      tpex prex unex algfun baseid opex tpid1 elun1 ax-mp eleqtrri strfv ) BAJG
+      IAKJLZBMZKNLCMZKOLEMZPZKQLDMZKRLFMZSZUAZUBHUSVBUPUQURUDUTVAUEUFUCABCDEFHU
+      GIUHUPVCAUPUSTUPVCTUPUQURUOBUIUJUPUSVBUKULHUMUN $.
+      $( [27-Nov-2014] $)
 
     $( The additive operation of a constructed algebra. $)
     algaddg $p |- ( P e. V -> P = ( +g ` A ) ) $=
-      ? $.
+      ( va cplusg cnx cbs cfv cop cmulr ctp csca cvsca cpr wcel cun cvv eqeltri
+      tpex prex unex algfun plusgid opex tpid2 elun1 ax-mp eleqtrri strfv ) CAJ
+      GIAKLMBNZKJMZCNZKOMENZPZKQMDNZKRMFNZSZUAZUBHUSVBUOUQURUDUTVAUEUFUCABCDEFH
+      UGIUHUQVCAUQUSTUQVCTUOUQURUPCUIUJUQUSVBUKULHUMUN $.
+      $( [27-Nov-2014] $)
 
     $( The multiplicative operation of a constructed algebra. $)
     algmulr $p |- ( T e. V -> T = ( .r ` A ) ) $=
-      ? $.
+      ( va cmulr cnx cbs cfv cop cplusg ctp csca cvsca cpr wcel cun cvv eqeltri
+      tpex prex unex algfun mulrid opex tpid3 elun1 ax-mp eleqtrri strfv ) EAJG
+      IAKLMBNZKOMCNZKJMZENZPZKQMDNZKRMFNZSZUAZUBHUSVBUOUPURUDUTVAUEUFUCABCDEFHU
+      GIUHURVCAURUSTURVCTUOUPURUQEUIUJURUSVBUKULHUMUN $.
+      $( [27-Nov-2014] $)
 
     $( The set of scalars of a constructed algebra. $)
     algsca $p |- ( S e. V -> S = ( Scalar ` A ) ) $=
-      ? $.
+      ( va csca cnx cbs cfv cop cplusg cmulr ctp cvsca cpr wcel cun cvv eqeltri
+      tpex prex unex algfun scaid opex prid1 elun2 ax-mp eleqtrri strfv ) DAJGI
+      AKLMBNZKOMCNZKPMENZQZKJMZDNZKRMFNZSZUAZUBHURVBUOUPUQUDUTVAUEUFUCABCDEFHUG
+      IUHUTVCAUTVBTUTVCTUTVAUSDUIUJUTVBURUKULHUMUN $.
+      $( [27-Nov-2014] $)
 
     $( The scalar product operation of a constructed algebra. $)
     algvsca $p |- ( M e. V -> M = ( vsca ` A ) ) $=
-      ? $.
+      ( va cvsca cnx cbs cfv cop cplusg cmulr ctp csca cpr wcel cun cvv eqeltri
+      tpex prex unex algfun vscaid opex prid2 elun2 ax-mp eleqtrri strfv ) FAJG
+      IAKLMBNZKOMCNZKPMENZQZKRMDNZKJMZFNZSZUAZUBHURVBUOUPUQUDUSVAUEUFUCABCDEFHU
+      GIUHVAVCAVAVBTVAVCTUSVAUTFUIUJVAVBURUKULHUMUN $.
+      $( [27-Nov-2014] $)
   $}
 
   ${
-    $d W w s $.  $d S w s $.  $d ph w s $.
+    str0.a $e |- F = ( s e. _V |-> ( s ` I ) ) $.
+    $( All components of the empty set are empty sets. $)
+    str0 $p |- ( F ` (/) ) = (/) $=
+      ( c0 cvv wcel cfv wceq 0ex cv fveq1 fv01 syl6eq fvmpt ax-mp ) EFGEAHEIJCE
+      BCKZHZEFAQEIRBEHEBQELBMNDJOP $.
+      $( [27-Nov-2014] $)
+  $}
+
+  ${
+    $d W w s $.  $d S w s $.  $d ph w s a $.
     $( Lemma for ~ srabase through ~ sravsca . $)
     sraval $p |- ( ( W e. V /\ S C_ ( Base ` W ) ) ->
         ( ( subringAlg ` W ) ` S ) = ( { <. ( Base ` ndx ) , ( Base ` W ) >. ,
@@ -13869,29 +13926,77 @@ $)
             <. ( .r ` ndx ) , ( .r ` W ) >. } u.
           { <. ( Scalar ` ndx ) , ( W |`s S ) >. ,
             <. ( vsca ` ndx ) , ( .r ` W ) >. } ) ) $=
-      ? $.
+      ( vs vw wcel cbs cfv csra cnx cop cplusg cmulr cress cpr cun fveq2 opeq2d
+      co wceq wss cpw ctp csca cvsca cmpt cvv elex pweqd tpeq123d oveq1 preq12d
+      cv uneq12d mpteq12dv df-sra fvex pwex mptex fvmpt syl fveq1d elpw2 preq1d
+      oveq2 uneq2d eqid tpex prex unex sylbir sylan9eq ) CBFZACGHZUAZACIHZHADVN
+      UBZJGHZVNKZJLHZCLHZKZJMHZCMHZKZUCZJUDHZCDUMZNSZKZJUEHZWDKZOZPZUFZHZWFWGCA
+      NSZKZWLOZPZVMAVPWOVMCUGFVPWOTCBUHECDEUMZGHZUBZVRXBKZVTXALHZKZWCXAMHZKZUCZ
+      WGXAWHNSZKZWKXGKZOZPZUFWOUGIXACTZDXCXNVQWNXOXBVNXACGQZUIXOXIWFXMWMXOXDVSX
+      FWBXHWEXOXBVNVRXPRXOXEWAVTXACLQRXOXGWDWCXACMQZRUJXOXKWJXLWLXOXJWIWGXACWHN
+      UKRXOXGWDWKXQRULUNUOEDUPDVQWNVNCGUQZURUSUTVAVBVOAVQFWPWTTAVNXRVCDAWNWTVQW
+      OWHATZWMWSWFXSWJWRWLXSWIWQWGWHACNVERVDVFWOVGWFWSVSWBWEVHWRWLVIVJUTVKVL $.
+      $( [27-Nov-2014] $)
 
     srapart.a $e |- ( ph -> A = ( ( subringAlg ` W ) ` S ) ) $.
     srapart.s $e |- ( ph -> S C_ ( Base ` W ) ) $.
     $( Base set of a subring algebra. $)
     srabase $p |- ( ph -> ( Base ` W ) = ( Base ` A ) ) $=
-      ? $.
+      ( vw cbs cfv csra wceq cvv wcel cnx cop cplusg cmulr fveq2d c0 fvprc csca
+      wss wa ctp cress co cvsca cpr cun sraval fvex eqid algbase ax-mp syl6reqr
+      wn fveq1d fv01 fveq2i c1 df-base eqtri syl6eq eqtr4d adantr pm2.61ian syl
+      str0 ) ADHIZCDJIZIZHIZBHIACVIUBZVIVLKZFDLMZVMVNVOVMUCZVLNHIVIONPIDPIZONQI
+      DQIZOUDNUAIDCUEUFZONUGIVROUHUIZHIZVIVPVKVTHCLDUJRVILMVIWAKDHUKVTVIVQVSVRV
+      RLVTULUMUNUOVOUPZVNVMWBVISVLDHTWBVLCSIZHIZSWBVKWCHWBCVJSDJTUQRWDSHISWCSHC
+      URUSHUTGGVAVHVBVCVDVEVFVGABVKHERVD $.
+      $( [27-Nov-2014] $)
 
     $( Additive operation of a subring algebra. $)
     sraaddg $p |- ( ph -> ( +g ` W ) = ( +g ` A ) ) $=
-      ? $.
+      ( vw cplusg cfv csra cbs wceq cvv wcel cnx cop cmulr fveq2d c0 fvprc csca
+      wss wa ctp cress co cvsca cpr cun sraval fvex eqid algaddg ax-mp syl6reqr
+      wn fveq1d fv01 fveq2i c2 df-plusg str0 syl6eq eqtr4d adantr pm2.61ian syl
+      eqtri ) ADHIZCDJIZIZHIZBHIACDKIZUBZVIVLLZFDMNZVNVOVPVNUCZVLOKIVMPOHIVIPOQ
+      IDQIZPUDOUAIDCUEUFZPOUGIVRPUHUIZHIZVIVQVKVTHCMDUJRVIMNVIWALDHUKVTVMVIVSVR
+      VRMVTULUMUNUOVPUPZVOVNWBVISVLDHTWBVLCSIZHIZSWBVKWCHWBCVJSDJTUQRWDSHISWCSH
+      CURUSHUTGGVAVBVHVCVDVEVFVGABVKHERVD $.
+      $( [27-Nov-2014] $)
 
     $( Multiplicative operation of a subring algebra. $)
     sramulr $p |- ( ph -> ( .r ` W ) = ( .r ` A ) ) $=
-      ? $.
+      ( vs cmulr cfv csra cbs wceq cvv wcel cnx cop cplusg fveq2d c0 fvprc csca
+      wss wa ctp cress co cvsca cpr cun sraval fvex eqid algmulr ax-mp syl6reqr
+      wn fveq1d fv01 fveq2i c3 df-mulr eqtri syl6eq eqtr4d adantr pm2.61ian syl
+      str0 ) ADHIZCDJIZIZHIZBHIACDKIZUBZVIVLLZFDMNZVNVOVPVNUCZVLOKIVMPOQIDQIZPO
+      HIVIPUDOUAIDCUEUFZPOUGIVIPUHUIZHIZVIVQVKVTHCMDUJRVIMNVIWALDHUKVTVMVRVSVIV
+      IMVTULUMUNUOVPUPZVOVNWBVISVLDHTWBVLCSIZHIZSWBVKWCHWBCVJSDJTUQRWDSHISWCSHC
+      URUSHUTGGVAVHVBVCVDVEVFVGABVKHERVD $.
+      $( [27-Nov-2014] $)
 
     $( The set of scalars of a subring algebra. $)
     srasca $p |- ( ph -> ( W |`s S ) = ( Scalar ` A ) ) $=
-      ? $.
+      ( vw vs va cress cfv csca cbs wceq cvv wcel wa cnx cop c0 csra wss cplusg
+      cmulr ctp cvsca cpr cun sraval fveq2d ovex eqid algsca ax-mp syl6reqr cdm
+      co wn wrel cv cin cdif cres copab2 reldmoprab cmpt2 df-ress df-mpt2 eqtri
+      csn dmeqi releqi mpbir ovprc1 fvprc fveq1d fv01 fveq2i df-sca str0 syl6eq
+      c5 eqtr4d adantr pm2.61ian syl ) ADCJUQZCDUAKZKZLKZBLKACDMKZUBZWGWJNZFDOP
+      ZWLWMWNWLQZWJRMKZWKSRUCKDUCKZSRUDKDUDKZSUERLKWGSRUFKWRSUGUHZLKZWGWOWIWSLC
+      ODUIUJWGOPWGWTNDCJUKWSWKWQWGWRWROWSULUMUNUOWNURZWMWLXAWGTWJDCJJUPZUSGUTZO
+      PHUTZOPQIUTWPXDXCMKVASVJXCOWPVJVBVCUHZNQZGHIVDZUPZUSXFGHIVEXBXHJXGJGHOOXE
+      VFXGGHVGGHIOOXEVHVIVKVLVMVNXAWJCTKZLKZTXAWIXILXACWHTDUAVOVPUJXJTLKTXITLCV
+      QVRLWBHHVSVTVIWAWCWDWEWFABWILEUJWC $.
+      $( [27-Nov-2014] $)
 
     $( The scalar product operation of a subring algebra. $)
     sravsca $p |- ( ph -> ( .r ` W ) = ( vsca ` A ) ) $=
-      ? $.
+      ( vs cmulr cfv csra cvsca cbs wceq cvv wcel cnx cop cplusg fveq2d c0 csca
+      wss wa ctp cress co cpr cun sraval fvex eqid algvsca ax-mp syl6reqr fvprc
+      wn fveq1d fv01 fveq2i c6 df-vsca eqtri syl6eq eqtr4d adantr pm2.61ian syl
+      str0 ) ADHIZCDJIZIZKIZBKIACDLIZUBZVIVLMZFDNOZVNVOVPVNUCZVLPLIVMQPRIDRIZQP
+      HIVIQUDPUAIDCUEUFZQPKIVIQUGUHZKIZVIVQVKVTKCNDUISVINOVIWAMDHUJVTVMVRVSVIVI
+      NVTUKULUMUNVPUPZVOVNWBVITVLDHUOWBVLCTIZKIZTWBVKWCKWBCVJTDJUOUQSWDTKITWCTK
+      CURUSKUTGGVAVHVBVCVDVEVFVGABVKKESVD $.
+      $( [27-Nov-2014] $)
   $}
 
   ${
@@ -13899,7 +14004,18 @@ $)
     sralmod.a $e |- A = ( ( subringAlg ` W ) ` S ) $.
     $( The subring algebra is a left module. $)
     sralmod $p |- ( ( W e. Ring /\ S e. ( SubRing ` W ) ) -> A e. LMod ) $=
-      ? $.
+      ( va vb vc wcel cfv wa cbs co wceq eqid w3a simpll simpr1 simpr2 syl13anc
+      cv crg csubrg cplusg cin cmulr cur cress csra a1i srabase sraaddg sravsca
+      srasca ressbase adantl simp1l inss2 sseli 3ad2ant2 simp3 rngcl syl simpr3
+      syl3anc rngdi sseldi rngdir rngass simpl rnglidm sylan islmodd ) CUAHZBCU
+      BIZHZJZEFGCUCIZBCKIZUDZVQCUEIZVTCUFIZCBUGLZVRAVPABCABCUHIIMVPDUIZ?UJVPABC
+      WC?UKVPABCWC?UMVPABCWC?ULVOVSWBKIMVMBWBVNCWBNUNUO?????VPETZVSHZFTZVRHZOVM
+      WDVRHZWGWDWFVTLZVRHVMVOWEWGUPWEVPWHWGVSVRWDBVRUQZURZUSVPWEWGUTVRCVTWDWFVR
+      NZVTNZVAVDVPWEWGGTZVRHZOZJZVMWHWGWOWDWFWNVQLVTLWIWDWNVTLZVQLMVMVOWPPWQWEW
+      HVPWEWGWOQWKVBVPWEWGWORVPWEWGWOVCVRVQCVTWDWFWNWLVQNZWMVESVPWEWFVSHZWOOZJZ
+      VMWHWGWOWDWFVQLWNVTLWRWFWNVTLZVQLMVMVOXAPZXBVSVRWDWJVPWEWTWOQVFZXBVSVRWFW
+      JVPWEWTWORVFZVPWEWTWOVCZVRVQCVTWDWFWNWLWSWMVGSXBVMWHWGWOWIWNVTLWDXCVTLMXD
+      XEXFXGVRCVTWDWFWNWLWMVHSVPVMWHWAWDVTLWDMVMVOVIVRCVTWAWDWLWMWANVJVKVL $.
 
     $( The subring algebra is a left vector space. $)
     sralvec $p |- ( ( W e. DivRing /\ S e. ( SubRing ` W ) ) -> A e. LVec ) $=
