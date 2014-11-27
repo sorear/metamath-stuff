@@ -13572,6 +13572,156 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Abstract algebra preliminaries for algebraic integers I
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c |`s SubRing RingSpan ringLMod CCfld LFinGen $.
+
+  $( Extend class notation with the extensible structure builder restriction
+     operator. $)
+  cress $a class |`s $.
+
+  $( Extend class notation with all subrings of a ring. $)
+  csubrg $a class SubRing $.
+
+  $( Extend class notation with span of a set of elements over a ring. $)
+  crgspn $a class RingSpan $.
+
+  $( Extend class notation with the left module induced by a ring over
+     itself. $)
+  crglmod $a class ringLMod $.
+
+  $( Extend class notation with the field of complex numbers. $)
+  ccnfld $a class CCfld $.
+
+  $( Extend class notation with the class of finitely generated left
+     modules. $)
+  clfig $a class LFinGen $.
+
+  ${
+    $d a w s t $.
+    $( Define a multifunction restriction operator for extensible structures,
+       which can be used to turn statements about rings into statements about
+       subrings, modules into submodules, etc.  This definition knows nothing
+       about individual structures and merely truncates the ` Base ` set while
+       leaving operators alone; this will do the right thing for structures
+       like ` Ring ` where the operators are ignored outside of the base set,
+       but will not currently (2014-Nov-26) do the right thing for structures
+       like ` TopSp ` because the topology slot is not changed.  (We could
+       change the use of ` TopSp ` to restrict the topology to the base set
+       before use, which could be a good idea if this definition gains
+       traction.)
+
+       (Credit for this operator goes to Mario Carneiro).
+
+       See ~ ressbase for the altered base set, and ~ resslem ( ~ ress0g ,
+       ~ ressplusg, ~ ressur , ~ ressmulr ) for the (un)altered other
+       operations. $)
+    df-ress $a |- |`s = ( w e. _V , a e. _V |-> ( { <. ( Base ` ndx ) ,
+        ( a i^i ( Base ` w ) ) >. } u.
+      ( w |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $.
+
+    $( Define a subring of a ring as a set of elements that is a ring in its
+       own right. $)
+    df-subrg $a |- SubRing = ( w e. _V |->
+        { a e. ~P ( Base ` w ) | ( w |`s a ) e. Ring } ) $.
+
+    $( The ring-span of a set of elements in a ring is the smallest subring
+       which contains all of them. $)
+    df-rgspn $a |- RingSpan = ( w e. _V |-> ( s e. ~P ( Base ` w ) |->
+        |^| { t e. ( SubRing ` w ) | s C_ t } ) ) $.
+
+    $( Every ring can be viewed as a left module over itself. $)
+    df-rgmod $a |- ringLMod = ( w e. _V |-> ( {
+        <. ( Base ` ndx ) , ( Base ` w ) >. , <. ( +g ` ndx ) , ( +g ` w ) >. ,
+          <. ( Scalar ` ndx ) , w >. } u.
+      { <. ( vsca ` ndx ) , ( .r ` w ) >. } ) ) $.
+
+    $( The field of complex numbers.  Other number fields and rings can be
+       constructed by applying the ` |``s ` restriction operator, for instance
+       ` ( CCfld |`` AA ) ` is the field of algebraic numbers. $)
+    df-cnfld $a |- CCfld = { <. ( Base ` ndx ) , CC >. ,
+        <. ( +g ` ndx ) , + >. , <. ( .r ` ndx ) , x. >. } $.
+
+    $( Define the class of finitely generated left modules.  Finite generation
+       of subspaces can be intepreted using ` |``s ` . $)
+    df-lfig $a |- LFinGen = { w e. LMod | ( Base ` w ) e. ( ( LSpan ` w ) "
+        ( ~P ( Base ` w ) i^i Fin ) ) } $.
+  $}
+
+  ${
+    $d W a w s t $.  $d A a w s t $.
+    $( Value of finite structure restriction. $)
+    ressval $p |- ( ( W e. X /\ A e. Y ) -> ( W |`s A ) =
+        ( { <. ( Base ` ndx ) , ( A i^i ( Base ` W ) ) >. } u.
+          ( W |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $=
+      ( vw va wcel cvv cress cbs cfv cin cop csn cres cun wceq elex cv opeq2d
+      co cnx cdif wa snex resexg adantr unexg sylancr fveq2 ineq2d sneqd reseq1
+      uneq12d ineq1 uneq1d df-ress ovmpt2g mpd3an3 syl2an ) BCGBHGZAHGZBAIUAUBJ
+      KZABJKZLZMZNZBHVCNUCZOZPZQZADGBCRADRVAVBVJHGZVKVAVBUDVGHGVIHGZVLVFUEVAVMV
+      BBVHHUFUGVGVIHHUHUIEFBAHHVCFSZESZJKZLZMZNZVOVHOZPVJIVCVNVDLZMZNZVIPHVOBQZ
+      VSWCVTVIWDVRWBWDVQWAVCWDVPVDVNVOBJUJUKTULVOBVHUMUNVNAQZWCVGVIWEWBVFWEWAVE
+      VCVNAVDUOTULUPEFUQURUSUT $.
+      $( [26-Nov-2014] $)
+
+    $( Function value of the empty set. $)
+    fv01 $p |- ( (/) ` A ) = (/) $=
+      ( c0 cdm wcel wn cfv wceq noel dm0 eleq2i mtbir ndmfv ax-mp ) ABCZDZEABFB
+      GOABDAHNBAIJKABLM $.
+      $( [26-Nov-2014] $)
+
+    ${
+      $d F f a w $.  $d A f $.  $d W f $.
+      ressbase.a $e |- R = ( W |`s A ) $.
+      $( Base set of a finite structure restriction. $)
+      ressbase $p |- ( A e. V -> ( A i^i ( Base ` W ) ) = ( Base ` R ) ) $=
+        ( vf vw va wcel cbs cfv cin cress cvv wceq wa csn cres cun c0 co baseid
+        cnx ovex strfvn cdif ressval fveq1d resundir resres incom disjdif eqtri
+        cop reseq2i res0 3eqtri uneq2i un0 a1i fvex snid fvres ax-mp inex2 fvsn
+        3eqtr3g syl6eq eqtrd syl5req wn fv01 0ex in0 3eqtr4ri fvprc ineq2d wrel
+        cdm cv copab2 reldmoprab cmpt2 df-ress dmeqi releqi mpbir ovprc1 fveq2d
+        df-mpt2 3eqtr4a adantr pm2.61ian fveq2i syl6eqr ) ACIZADJKZLZDAMUAZJKZB
+        JKDNIZWPWRWTOZXAWPPZWTUCJKZWSKZWRWSJXDFDAMUDFUBZUEXCXEXDXDWRUNQZDNXDQZU
+        FZRZSZKZWRXCXDWSXKADNCUGUHXCXLXDXGKZWRXCXDXKXHRZKZXDXGXHRZKZXLXMXCXDXNX
+        PXNXPOXCXNXPXJXHRZSXPTSXPXGXJXHUIXRTXPXRDXIXHLZRDTRTDXIXHUJXSTDXSXHXILT
+        XIXHUKXHNULUMUODUPUQURXPUSUQUTUHXDXHIZXOXLOXDUCJVAZVBZXDXHXKVCVDXTXQXMO
+        YBXDXHXGVCVDVGXDWRYAWQADJVAVEVFVHVIVJXAVKZXBWPYCATLZTJKZWRWTXDTKTYEYDXD
+        VLTJXDFVMXFUEAVNVOYCWQTADJVPVQYCWSTJDAMMVSZVRGVTZNIHVTZNIPFVTXDYHYGJKLU
+        NQYGXIRSZOPZGHFWAZVSZVRYJGHFWBYFYLMYKMGHNNYIWCYKGHWDGHFNNYIWJUMWEWFWGWH
+        WIWKWLWMBWSJEWNWO $.
+        $( [26-Nov-2014] $)
+    $}
+
+    ${
+      $d F f a w $.  $d A f $.  $d W f $.
+      resslem.r $e |- R = ( W |`s A ) $.
+      resslem.e $e |- E = ( F ` W ) $.
+      resslem.f $e |- F = ( f e. _V |-> ( f ` ( F ` ndx ) ) ) $.
+      resslem.d $e |- -. ( F ` ndx ) e. { ( Base ` ndx ) } $.
+      $( Other elements of a finite structure restriction. $)
+      resslem $p |- ( A e. V -> E = ( F ` R ) ) $=
+        ( vw va wcel cfv cress cvv wceq cres c0 co cnx cbs cin cop csn cdif cun
+        wa ressval fveq1d resundir disjdif wfn fvex fnsn fnresdisj ax-mp uneq1i
+        wb mpbi uncom residm 3eqtri fveq1i eldif mpbir2an fvres 3eqtr3i syl6req
+        un0 wn cv fveq1 fvmpt adantr ovex strfvn a1i 3eqtr4d 0ex fv01 eqtri cdm
+        wrel copab2 reldmoprab cmpt2 df-ress df-mpt2 dmeqi releqi ovprc1 fveq2d
+        mpbir fvprc 3eqtr4rd pm2.61ian fveq2i 3eqtr4g ) AFNZGEOZGAPUAZEOZDBEOGQ
+        NZXAXBXDRZXEXAUIZUBEOZGOZXHXCOZXBXDXGXJXHUBUCOZAGUCOUDZUEUFZGQXKUFZUGZS
+        ZUHZOZXIXGXHXCXQAGQFUJUKXHXQXOSZOZXHXPOZXRXIXHXSXPXSXMXOSZXPXOSZUHTYCUH
+        ZXPXMXPXOULYBTYCXNXOUDTRZYBTRZXNQUMXMXNUNYEYFUTXKXLUBUCUOUPXNXOXMUQURVA
+        USYDYCTUHYCXPTYCVBYCVKGXOVCVDVDVEXHXONZXTXRRYGXHQNXHXNNVLXHQXNVFUBEUOKV
+        GZXHXOXQVHURYGYAXIRYHXHXOGVHURVIVJXEXBXIRXACGXHCVMZOXIQEXHYIGVNJXHGUOVO
+        VPXDXJRXGXCEXHCGAPVQJVRVSVTXEVLZXFXAYJTEOZTXDXBYKTRYJYKXHTOTTEXHCWAJVRX
+        HWBWCVSYJXCTEGAPPWDZWELVMZQNMVMZQNUIYIXKYNYMUCOUDUEUFYMXOSUHZRUIZLMCWFZ
+        WDZWEYPLMCWGYLYRPYQPLMQQYOWHYQLMWILMCQQYOWJWCWKWLWOWMWNGEWPWQVPWRIBXCEH
+        WSWT $.
+        $( [26-Nov-2014] $)
+    $}
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Algebraic integers I
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -13594,18 +13744,30 @@ $)
   ${
     $d A p x a b c $.
 
+    $( Definition of the algebraic integers. $)
+    elza $p |- ( A e. _ZZ <-> ( A e. CC /\ E. p e. ( Poly ` ZZ )
+          ( ( p ` A ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) ) ) $=
+      ( va cv cfv cc0 wceq cdgr ccoe c1 wa cz cply wrex cza fveq2 eqeq1d anbi1d
+      cc rexbidv df-za elrab2 ) CDZBDZEZFGZUDHEUDIEEJGZKZBLMEZNAUDEZFGZUGKZBUIN
+      CASOUCAGZUHULBUIUMUFUKUGUMUEUJFUCAUDPQRTCBUAUB $.
+      $( [26-Nov-2014] $)
+
     $( The algebraic integers are a subset of the algebraic numbers. $)
     zassaa $p |- _ZZ C_ AA $=
-      ? $.
+      ( va vb cza caa cv wcel cfv cc0 wceq cdgr ccoe c1 wa wrex c0p csn wne cn0
+      0nn0 fveq2 cc cply cdif simpl cxp coe0 fveq1i dgr0 eqeltri elexi fvconst2
+      ax-mp eqtri ax-1ne0 necomi eqnetri fveq12d neeq1d mpbiri necon2i ad2antll
+      cz eldifsn sylanbrc simprl jca reximi2 anim2i elza elaa 3imtr4i ssriv ) A
+      CDAEZUAFZVMBEZGHIZVOJGZVOKGZGZLIZMZBVBUBGZNZMVNVPBWBOPUCZNZMVMCFVMDFWCWEV
+      NWAVPBWBWDVOWBFZWAMZVOWDFZVPWGWFVOOQZWHWFWAUDVTWIWFVPVOOVSLVOOIZVSLQOJGZO
+      KGZGZLQWMHLWMWKRHPUEZGZHWKWLWNUFUGWKRFWOHIWKHRUHSUIRHWKHRSUJUKULUMLHUNUOU
+      PWJVSWMLWJVQWKVRWLVOOKTVOOJTUQURUSUTVAVOWBOVCVDWFVPVTVEVFVGVHVMBVIVMBVJVK
+      VL $.
+      $( [26-Nov-2014] $)
 
     $( The algebraic integers are a set. $)
     zaex $p |- _ZZ e. _V $=
       ( cza caa cc cnex aasscn ssexi zassaa ) ABBCDEFGF $.
-
-    $( Definition of the algebraic integers. $)
-    elza $p |- ( A e. _ZZ <-> ( A e. CC /\ E. p e. ( Poly ` ZZ )
-          ( ( p ` A ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) ) ) $=
-      ? $.
 
     $( Membership in the set of algebraic integers. $)
     elza2 $p |- ( A e. _ZZ <-> ( A e. AA /\
@@ -13625,6 +13787,51 @@ $)
     $( All rational integers are algebraic integers. $)
     zzssza $p |- ZZ C_ _ZZ $=
       ? $.
+  $}
+
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Draft definitions for formal polynomial rings
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c FBag +bg fPoly $.
+
+  $( Extend class notation with the finite bags drawn from some set. $)
+  cfbag $a class FBag $.
+
+  $( Extend class notation with the bag sum operator. $)
+  caddbg $a class +bg $.
+
+  $( Extend class notation with the class of formal polynomials over a set. $)
+  cfply $a class fPoly $.
+
+  ${
+    $d s t u $.
+
+    $( Define the class of finite bags drawn from some base set.  We define the
+       range using nonzero ordinals (XXX Norm is this an OK use of ` N. ` or
+       should I write it out?) so that domains can be ambiguous and ~ ndmfv
+       will pick up the slack. $)
+    df-fbag $a |- FBag = ( s e. _V |->
+      { u e. ( ( om \ { (/) } ) ^pm s ) | dom u e. Fin } ) $.
+
+    $( Define the addition operator on bags.  Does not actually require
+       finiteness. $)
+    df-addbg $a |- +bg = ( s e. _V , t e. _V |->
+        ( u e. ( dom s u. dom t ) |-> ( ( s ` u ) +o ( t ` u ) ) ) ) $.
+
+    $( Define the basic set of formal polynomials over a coefficient ring:
+       mappings from exponent vectors to coefficients such that all but
+       finitely many are zero. $)
+    df-fply $a |- fPoly = ( s e. _V , t e. _V |->
+        { u e. ( ( Base ` s ) ^m ( FBag ` t ) ) |
+          ( `' u " ( _V \ { ( 0g ` s ) } ) ) e. Fin } ) $.
+
+    $( TODO: define commutative monoids, general bag sum operation for
+       commutative monoids, product operation for commutative rings, polynomial
+       evaluator on that basis $)
   $}
 
 $( (End of Stefan O'Rear's mathbox.) $)
