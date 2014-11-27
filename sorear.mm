@@ -13576,7 +13576,7 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c |`s SubRing RingSpan ringLMod CCfld LFinGen $.
+  $c |`s SubRing RingSpan ringLMod CCfld LFinGen subringAlg $.
 
   $( Extend class notation with the extensible structure builder restriction
      operator. $)
@@ -13598,6 +13598,9 @@ $)
   $( Extend class notation with the class of finitely generated left
      modules. $)
   clfig $a class LFinGen $.
+
+  $( Extend class notation with the subring algebra generator. $)
+  csra $a class subringAlg $.
 
   ${
     $d a w s t $.
@@ -13623,7 +13626,18 @@ $)
       ( w |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $.
 
     $( Define a subring of a ring as a set of elements that is a ring in its
-       own right and contains the identity. $)
+       own right and contains the multiplicative identity.
+
+       The additional constraint is necessary because the multiplicative
+       identity of a ring, unlike the additive identity of a ring/group or the
+       multiplicative identity of a field, cannot be identified by a local
+       property.  Thus it is possible for a subset of a ring to be a ring while
+       not containing the true identity if it contains a false identity.  For
+       instance, the subset ` ( ZZ X. { 0 } ) ` of ` ( ZZ X. ZZ ) ` (where
+       multiplication is component-wise) contains the false identity
+       ` <. 1 , 0 >. ` which preserves every element of the subset and thus
+       appears to be the identity of the subset, but is not the identity of the
+       larger ring. $)
     df-subrg $a |- SubRing = ( w e. _V |->
         { a e. ~P ( Base ` w ) | ( ( w |`s a ) e. Ring /\
             ( 1r ` w ) e. a ) } ) $.
@@ -13653,6 +13667,15 @@ $)
        of subspaces can be intepreted using ` |``s ` . $)
     df-lfig $a |- LFinGen = { w e. LMod | ( Base ` w ) e. ( ( LSpan ` w ) "
         ( ~P ( Base ` w ) i^i Fin ) ) } $.
+
+    $( Given any subring of a ring, we can construct a left-algebra by
+       regarding the elements of the subring as scalars and the ring itself as
+       a set of vectors. $)
+    df-sra $a |- subringAlg = ( w e. _V |-> ( s e. ~P ( Base ` w ) |->
+        ( { <. ( Base ` ndx ) , ( Base ` w ) >. , <. ( +g ` ndx ) ,
+            ( +g ` w ) >. , <. ( .r ` ndx ) , ( .r ` w ) >. } u.
+          { <. ( Scalar ` ndx ) , ( w |`s s ) >. ,
+            <. ( vsca ` ndx ) , ( .r ` w ) >. } ) ) ) $.
   $}
 
   ${
@@ -13808,73 +13831,141 @@ $)
       $( [27-Nov-2014] $)
   $}
 
+  ${
+    algpart.a $e |- A = ( { <. ( Base ` ndx ) , B >. , <. ( +g ` ndx ) , P >. ,
+        <. ( .r ` ndx ) , T >. } u. { <. ( Scalar ` ndx ) , S >. ,
+          <. ( vsca ` ndx ) , M >. } ) $.
+    $( Lemma to shorten proofs of ~ algbase through ~ algvsca . $)
+    algfun $p |- Fun A $=
+      ? $.
+
+    $( The base set of a constructed algebra. $)
+    algbase $p |- ( B e. V -> B = ( Base ` A ) ) $=
+      ? $.
+
+    $( The additive operation of a constructed algebra. $)
+    algaddg $p |- ( P e. V -> P = ( +g ` A ) ) $=
+      ? $.
+
+    $( The multiplicative operation of a constructed algebra. $)
+    algmulr $p |- ( T e. V -> T = ( .r ` A ) ) $=
+      ? $.
+
+    $( The set of scalars of a constructed algebra. $)
+    algsca $p |- ( S e. V -> S = ( Scalar ` A ) ) $=
+      ? $.
+
+    $( The scalar product operation of a constructed algebra. $)
+    algvsca $p |- ( M e. V -> M = ( vsca ` A ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d W w s $.  $d S w s $.  $d ph w s $.
+    $( Lemma for ~ srabase through ~ sravsca . $)
+    sraval $p |- ( ( W e. V /\ S C_ ( Base ` W ) ) ->
+        ( ( subringAlg ` W ) ` S ) = ( { <. ( Base ` ndx ) , ( Base ` W ) >. ,
+            <. ( +g ` ndx ) , ( +g ` W ) >. ,
+            <. ( .r ` ndx ) , ( .r ` W ) >. } u.
+          { <. ( Scalar ` ndx ) , ( W |`s S ) >. ,
+            <. ( vsca ` ndx ) , ( .r ` W ) >. } ) ) $=
+      ? $.
+
+    srapart.a $e |- ( ph -> A = ( ( subringAlg ` W ) ` S ) ) $.
+    srapart.s $e |- ( ph -> S C_ ( Base ` W ) ) $.
+    $( Base set of a subring algebra. $)
+    srabase $p |- ( ph -> ( Base ` W ) = ( Base ` A ) ) $=
+      ? $.
+
+    $( Additive operation of a subring algebra. $)
+    sraaddg $p |- ( ph -> ( +g ` W ) = ( +g ` A ) ) $=
+      ? $.
+
+    $( Multiplicative operation of a subring algebra. $)
+    sramulr $p |- ( ph -> ( .r ` W ) = ( .r ` A ) ) $=
+      ? $.
+
+    $( The set of scalars of a subring algebra. $)
+    srasca $p |- ( ph -> ( W |`s S ) = ( Scalar ` A ) ) $=
+      ? $.
+
+    $( The scalar product operation of a subring algebra. $)
+    sravsca $p |- ( ph -> ( .r ` W ) = ( vsca ` A ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d W a b c $.  $d S a b c $.
+    sralmod.a $e |- A = ( ( subringAlg ` W ) ` S ) $.
+    $( The subring algebra is a left module. $)
+    sralmod $p |- ( ( W e. Ring /\ S e. ( SubRing ` W ) ) -> A e. LMod ) $=
+      ? $.
+
+    $( The subring algebra is a left vector space. $)
+    sralvec $p |- ( ( W e. DivRing /\ S e. ( SubRing ` W ) ) -> A e. LVec ) $=
+      ? $.
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Algebraic integers I
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c _ZZ $.
+  $c _ZZ IntgOver $.
 
-  $( Extend class notation to include the class of algebraic integers. $)
+  $( Extend class notation with the integral-over predicate. $)
+  citgo $a class IntgOver $.
+
+  $( Extend class notation with the class of algebraic integers. $)
   cza $a class _ZZ $.
 
   ${
-    $d x p $.
+    $d x p s $.
+    $( A complex number is said to be integral over a subset if it is the root
+       of a monic polynomial with coefficients from the subset.  This
+       definition is typically not used for fields but it works there, see
+       ~ aaitgo .  This definition could work for subsets of an arbitrary ring
+       with a more general definition of polynomials. $)
+    df-itgo $a |- IntgOver = ( s e. ~P CC |-> { x e. CC | E. p e. ( Poly ` s )
+        ( ( p ` x ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } ) $.
+
     $( Define an algebraic integer as a complex number which is the root of a
-       monic integer polynomial.  Previously this was defined in terms of the
-       characteristic polynomial ( see ~ elza2 ), but this is more common as a
-       starting definition. $)
-    df-za $a |- _ZZ = { x e. CC | E. p e. ( Poly ` ZZ )
-        ( ( p ` x ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } $.
+       monic integer polynomial. $)
+    df-za $a |- _ZZ = ( IntgOver ` ZZ ) $.
   $}
 
   ${
-    $d A p x a b c $.
-
-    $( Definition of the algebraic integers. $)
-    elza $p |- ( A e. _ZZ <-> ( A e. CC /\ E. p e. ( Poly ` ZZ )
-          ( ( p ` A ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) ) ) $=
-      ( va cv cfv cc0 wceq cdgr ccoe c1 wa cz cply wrex cza fveq2 eqeq1d anbi1d
-      cc rexbidv df-za elrab2 ) CDZBDZEZFGZUDHEUDIEEJGZKZBLMEZNAUDEZFGZUGKZBUIN
-      CASOUCAGZUHULBUIUMUFUKUGUMUEUJFUCAUDPQRTCBUAUB $.
-      $( [26-Nov-2014] $)
-
-    $( The algebraic integers are a subset of the algebraic numbers. $)
-    zassaa $p |- _ZZ C_ AA $=
-      ( va vb cza caa cv wcel cfv cc0 wceq cdgr ccoe c1 wa wrex c0p csn wne cn0
-      0nn0 fveq2 cc cply cdif simpl cxp coe0 fveq1i dgr0 eqeltri elexi fvconst2
-      ax-mp eqtri ax-1ne0 necomi eqnetri fveq12d neeq1d mpbiri necon2i ad2antll
-      cz eldifsn sylanbrc simprl jca reximi2 anim2i elza elaa 3imtr4i ssriv ) A
-      CDAEZUAFZVMBEZGHIZVOJGZVOKGZGZLIZMZBVBUBGZNZMVNVPBWBOPUCZNZMVMCFVMDFWCWEV
-      NWAVPBWBWDVOWBFZWAMZVOWDFZVPWGWFVOOQZWHWFWAUDVTWIWFVPVOOVSLVOOIZVSLQOJGZO
-      KGZGZLQWMHLWMWKRHPUEZGZHWKWLWNUFUGWKRFWOHIWKHRUHSUIRHWKHRSUJUKULUMLHUNUOU
-      PWJVSWMLWJVQWKVRWLVOOKTVOOJTUQURUSUTVAVOWBOVCVDWFVPVTVEVFVGVHVMBVIVMBVJVK
-      VL $.
-      $( [26-Nov-2014] $)
-
-    $( The algebraic integers are a set. $)
-    zaex $p |- _ZZ e. _V $=
-      ( cza caa cc cnex aasscn ssexi zassaa ) ABBCDEFGF $.
-
-    $( Membership in the set of algebraic integers. $)
-    elza2 $p |- ( A e. _ZZ <-> ( A e. AA /\
-          ( minPolyAA ` A ) e. ( Poly ` ZZ ) ) ) $=
+    $d X x p s a b c $.  $d S x p s a b c $.  $d T x p s a b c $.
+    $d P x p s a b c $.
+    $( Value of the integral-over function. $)
+    itgoval $p |- ( S C_ CC -> ( IntgOver ` S ) = { x e. CC |
+        E. p e. ( Poly ` S ) ( ( p ` x ) = 0 /\
+          ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } ) $=
       ? $.
 
-    $( If ` A ` is an algebraic number, then some integer multiple of it is an
-       algebraic integer.  Analogous to ~ qmulz . $)
-    aamulza $p |- ( A e. AA -> E. x e. NN ( A x. x ) e. _ZZ ) $=
+    $( The normal algebraic numbers ` AA ` are generated by ` IntgOver ` . $)
+    aaitgo $p |- AA = ( IntgOver ` QQ ) $=
       ? $.
 
-    $( The rational algebraic integers are the ordinary integers, justifying
-       the term "rational integers" for the latter. $)
-    zaqz $p |- ZZ = ( _ZZ i^i QQ ) $=
+    $( An integral element is integral over a subset. $)
+    itgoss $p |- ( ( S C_ T /\ T C_ CC ) ->
+          ( IntgOver ` S ) C_ ( IntgOver ` T ) ) $=
       ? $.
 
-    $( All rational integers are algebraic integers. $)
-    zzssza $p |- ZZ C_ _ZZ $=
+    $( All integral elements are complex numbers. $)
+    itgocn $p |- ( IntgOver ` S ) C_ CC $=
       ? $.
+
+    ${
+      itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
+      itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
+      $( An element is finitely generated over a ring if and only adjoining it
+         to the base ring results in a finitely spanned algebra. $)
+      itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
+            A e. LFinGen ) ) $=
+        ? $.
+    $}
   $}
 
 
