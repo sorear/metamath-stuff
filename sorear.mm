@@ -13623,9 +13623,10 @@ $)
       ( w |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $.
 
     $( Define a subring of a ring as a set of elements that is a ring in its
-       own right. $)
+       own right and contains the identity. $)
     df-subrg $a |- SubRing = ( w e. _V |->
-        { a e. ~P ( Base ` w ) | ( w |`s a ) e. Ring } ) $.
+        { a e. ~P ( Base ` w ) | ( ( w |`s a ) e. Ring /\
+            ( 1r ` w ) e. a ) } ) $.
 
     $( The ring-span of a set of elements in a ring is the smallest subring
        which contains all of them. $)
@@ -13640,7 +13641,11 @@ $)
 
     $( The field of complex numbers.  Other number fields and rings can be
        constructed by applying the ` |``s ` restriction operator, for instance
-       ` ( CCfld |`` AA ) ` is the field of algebraic numbers. $)
+       ` ( CCfld |`` AA ) ` is the field of algebraic numbers.
+
+       The contract of this set is defined entirely by ~ cnfldex , ~ cnfldadd ,
+       ~ cnfldmul , and ~ cnfldbas .  We may add additional members to this in
+       the future, e.g. a topology. $)
     df-cnfld $a |- CCfld = { <. ( Base ` ndx ) , CC >. ,
         <. ( +g ` ndx ) , + >. , <. ( .r ` ndx ) , x. >. } $.
 
@@ -13718,6 +13723,89 @@ $)
         WSWT $.
         $( [26-Nov-2014] $)
     $}
+
+    $d X a b c $.  $d Y a b c $.
+
+    $( The base set of the field of complex numbers.  TODO: this and the
+       following may largely obsolete ~ qrng et al, as the ring of rationals
+       can be constructed as ` ( CCfld |``s QQ ) ` . $)
+    cnfldbas $p |- CC = ( Base ` CCfld ) $=
+      ( cc cvv wcel ccnfld cbs cfv wceq cnex caddc cmul df-cnfld rngbase ax-mp
+      ) ABCADEFGHAIDJBKLM $.
+      $( [27-Nov-2014] $)
+
+    $( The addition operation of the field of complex numbers. $)
+    cnfldadd $p |- + = ( +g ` CCfld ) $=
+      ( caddc cvv wcel ccnfld cplusg wceq addex cc cmul df-cnfld rngplusg ax-mp
+      cfv ) ABCADEMFGHADIBJKL $.
+      $( [27-Nov-2014] $)
+
+    $( The multiplication operation of the field of complex numbers. $)
+    cnfldmul $p |- x. = ( .r ` CCfld ) $=
+      ( cmul cvv wcel ccnfld cmulr cfv wceq mulex caddc df-cnfld rngmulr ax-mp
+      cc ) ABCADEFGHMIDABJKL $.
+      $( [27-Nov-2014] $)
+
+    $( The field of complex numbers is a set. $)
+    cnfldex $p |- CCfld e. _V $=
+      ( ccnfld cnx cbs cfv cc cop cplusg caddc cmulr cmul ctp cvv df-cnfld tpex
+      eqeltri ) ABCDEFZBGDHFZBIDJFZKLMPQRNO $.
+      $( [27-Nov-2014] $)
+
+    $( The complex numbers form a ring. $)
+    cnrng $p |- CCfld e. Ring $=
+      ( va vb vc ccnfld wcel wtru cc caddc cmul c1 cfv cnfldbas a1i cnfldadd cv
+      wceq cc0 co addcom adantl crg cbs cmulr cnfldmul cabel cneg cnfldex addcl
+      cplusg cnnvdemo 0cn addid2 negcl mpancom negid eqtrd isgrpi mulcl 3adant1
+      isabli w3a mulass adddi adddir ax-1cn mulid2 mulid1 isrngd trud ) DUAEFAB
+      CGHDIJGDUBKPFLMHDUIKPFNMIDUCKPFUDMDUEEFABGHDABCGHDAOZUFZQUGLNVJBOZUHVJVLC
+      OZUJUKVJULVJUMZVJGEZVKVJHRZVJVKHRZQVKGEVOVPVQPVNVKVJSUNVJUOUPUQLNVJVLSUTM
+      VOVLGEZVJVLIRZGEFVJVLURUSVOVRVMGEVAZVSVMIRVJVLVMIRZIRPFVJVLVMVBTVTVJVLVMH
+      RIRVSVJVMIRZHRPFVJVLVMVCTVTVJVLHRVMIRWBWAHRPFVJVLVMVDTJGEFVEMVOJVJIRVJPFV
+      JVFTVOVJJIRVJPFVJVGTVHVI $.
+      $( [27-Nov-2014] $)
+
+    $( The zero element of the field of complex numbers. $)
+    cnfld0 $p |- 0 = ( 0g ` CCfld ) $=
+      ( ccnfld c0g cfv cc0 caddc co wceq 00id cgrp cc wb crg cnrng rnggrp ax-mp
+      wcel 0cnALT cnfldbas cnfldadd eqid1 grpid mp2an mpbi eqcomi ) ABCZDDDEFDG
+      ZUEDGZHAIPZDJPUFUGKALPUHMANOQJEAUEDRSUETUAUBUCUD $.
+      $( [27-Nov-2014] $)
+
+    $( The unit element of the field of complex numbers. $)
+    cnfld1 $p |- 1 = ( 1r ` CCfld ) $=
+      ( va ccnfld cur cfv c1 cc wcel cv cmul wceq wral ax-1cn mulid2 mulid1 jca
+      co wa rgen pm3.2i crg wb cnrng cnfldbas cnfldmul eqid isrngid mpbi eqcomi
+      ax-mp ) BCDZEEFGZEAHZIPULJZULEIPULJZQZAFKZQZUJEJZUKUPLUOAFULFGUMUNULMULNO
+      RSBTGUQURUAUBAFBIUJEUCUDUJUEUFUIUGUH $.
+      $( [27-Nov-2014] $)
+
+    $( The additive inverse in the field of complex numbers. $)
+    cnfldneg $p |- ( X e. CC -> ( ( invg ` CCfld ) ` X ) = -u X ) $=
+      ( cc wcel ccnfld cminusg cfv cneg wceq caddc co negid wb negcl cgrp cnrng
+      cc0 crg rnggrp ax-mp cnfldbas cnfldadd cnfld0 eqid grpinvid1 mp3an1 mpdan
+      mpbird ) ABCZADEFZFAGZHZAUJIJPHZAKUHUJBCZUKULLZAMDNCZUHUMUNDQCUOODRSBIDUI
+      PAUJTUAUBUIUCUDUEUFUG $.
+      $( [27-Nov-2014] $)
+
+    $( The complex numbers form a division ring. $)
+    cndrng $p |- CCfld e. DivRing $=
+      ( va vb ccnfld cdr wcel wtru cc cmul c1 cv cdiv co cc0 cbs cfv a1i wne wa
+      wceq adantl cnfldbas cmulr c0g cnfld0 cur cnfld1 crg cnrng mulne0 3adant1
+      cnfldmul ax-1ne0 reccl recne0 recid2 isdrngd trud ) CDEFABGCHIIAJZKLZMGCN
+      OSFUAPHCUBOSFUKPMCUCOSFUDPICUEOSFUFPCUGEFUHPURGEURMQRZBJZGEVAMQRURVAHLMQF
+      URVAUIUJIMQFULPUTUSGEFURUMTUTUSMQFURUNTUTUSURHLISFURUOTUPUQ $.
+      $( [27-Nov-2014] $)
+
+    $( The division operation in the field of complex numbers. $)
+    cnflddiv $p |- ( ( X e. CC /\ Y e. CC /\ Y =/= 0 ) ->
+        ( X ( /r ` CCfld ) Y ) = ( X / Y ) ) $=
+      ( cc wcel cc0 wne w3a ccnfld cdvr cfv cmul cdiv wceq cnfldbas cnfld0 eqid
+      co cdr cndrng a1i simp1 simp2 simp3 drngdvcl syld3an1 cnfldmul drngdvcan1
+      divcan4 oveq1d eqtr3d ) ACDZBCDZBEFZGZABHIJZQZBKQZBLQZUPABLQUPCDULUKUMURU
+      PMUNCUOHEABNOUOPZHRDUNSTZUKULUMUAZUKULUMUBZUKULUMUCZUDUPBUHUEUNUQABLUNCUO
+      HKEABNUFOUSUTVAVBVCUGUIUJ $.
+      $( [27-Nov-2014] $)
   $}
 
 $(

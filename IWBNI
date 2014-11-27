@@ -4,20 +4,25 @@ $( TODO / IWBNI
     Things I've wanted.  If I still want them after I'm more familiar with the system, I'll implement/call for them
     1. Cheat sheet of "do you want to do this -> use these theorems".  tell people to take advantage of min *
     2. WRITE SOURCE with $[ $] would make my life much easier
+===cut.pl is good enough
     3. Namespaces - see separate doc
     4. How to handle similar subtrees in the PA: command to copy a subtree to a new node, either with or without syntax proofs(?).  An easy way to create new lemmas from completely proved subtrees without losing PA state would be nice.
         or, create a lemma from a part of a completely proved theorem.  that would be nice.
     5. proof mangling?
     6. ;-commands.  control over prompting
     7. disjoint variables in PA would save me much time
+===Smm
     8. vim highlighting
     9. PA should collapse identical proof stages; possibly add an improve option to seek out commonality by using incomplete subtrees
     10. experiment with the proof shrinking potential of deduction versions of the algebra theorems
         10b. <. A , B >. = if ( B e. _V , { A , { A , B } } , 1o )
     11. PA should display [-NN] in sh n/u listing
     12. automatic improve and loud warning when a ground wff cannot be proved?
+===this is a parser issue.  Smm
     13. command to list changed proofs
+===I did this (SH L %)
     14. I just reproved 19.26 because I had no way of finding it :x
+===I'm getting better at this.  maybe add a tag system to Smm
     15. Last command in HELP DEMO is wrong ( (_ is C_ )
     16. Some kind of macro/repeat command.  Needs much more though
     17. Pony: PA working directly on compressed proofs
@@ -26,7 +31,9 @@ $( TODO / IWBNI
     20. Blank lines before/after SHOW PROOF would help
 ===Mostly moot with workflow change
     21. backrefs in SEARCH [Looks very difficult]
+===right.  Smm
     22. how can the PA (in particular SHOW PROOF) be made more usable with very large proofs?  common syntax-subtree mining / abbrevification?  reduce indent without going all the way to LEMMON?  better control over the proof tree fragment to display?
+===Smm
     23. Pony: catch SIGINT, make MINIMIZE_WITH and IMPROVE interruptable, suppress output
     24. IMPROVE LHF: switch to iterated deepening to avoid idiVD, use the first of a set of equivalent theorems to avoid grothomex syndrome ( but prefer axioms if later )
     25. SHOW STATEMENT NEW would be cool
@@ -39,6 +46,8 @@ $( TODO / IWBNI
     30. V P {MY-MATHBOX}
 ===I did this
     31. MMPE: hover over GIFs to see original math symbol?
+===NM did this
     32. MMPE: hover over subexpression, see "parse" (highlight smallest wff/class around cursor)?
+===will need to wait for Smm
     33. IMPROVE /WITH
 $)
