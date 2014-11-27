@@ -13289,11 +13289,11 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Algebraic integers I
+    Degree and minimal polynomial of algebraic numbers
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c degAA minPolyAA _ZZ $.
+  $c degAA minPolyAA $.
 
   $( Extend class notation to include the degree function for algebraic
      numbers. $)
@@ -13302,9 +13302,6 @@ $)
   $( Extend class notation to include the minimal polynomial for an algebraic
      number. $)
   cmpaa $a class minPolyAA $.
-
-  $( Extend class notation to include the class of algebraic integers. $)
-  cza $a class _ZZ $.
 
   ${
     $d x d p $.
@@ -13320,14 +13317,10 @@ $)
     df-mpaa $a |- minPolyAA = ( x e. AA |-> ( iota_ p e. ( Poly ` QQ )
         ( ( deg ` p ) = ( degAA ` x ) /\ ( p ` x ) = 0 /\
           ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $.
-
-    $( Define an algebraic integer as an algebraic number whose minimal
-       polynomial has all integer coefficients. $)
-    df-za $a |- _ZZ = { x e. AA | ( minPolyAA ` x ) e. ( Poly ` ZZ ) } $.
   $}
 
   ${
-    $d x A $.  $d x B $.
+    $d x A a b $.  $d x B a b $.
     plydeg1.a $e |- F = ( x e. CC |-> ( ( A x. x ) + B ) ) $.
     $( A polynomial with 2 terms. $)
     plydeg1a $p |- ( ( A e. S /\ B e. S /\ S C_ CC ) -> F e. ( Poly ` S ) ) $=
@@ -13525,33 +13518,81 @@ $)
 
     $( Value of the minimal polynomial of an algebraic number. $)
     mpaaval $p |- ( A e. AA -> ( minPolyAA ` A ) = ( iota_ p e. ( Poly ` QQ )
-        ( ( deg ` p ) = ( degAA ` x ) /\ ( p ` x ) = 0 /\
-          ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $=
-      ? $.
+        ( ( deg ` p ) = ( degAA ` A ) /\ ( p ` A ) = 0 /\
+          ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) ) $=
+      ( va cv cdgr cfv cdgraa wceq cc0 ccoe c1 w3a cq cply crio caa cmpaa fveq2
+      eqeq2d eqeq1d fveq2d 3anbi123d riotabidv df-mpaa riotaex fvmpt ) CABDZEFZ
+      CDZGFZHZUIUGFZIHZUJUGJFZFZKHZLZBMNFZOUHAGFZHZAUGFZIHZUSUNFZKHZLZBUROPQUIA
+      HZUQVEBURVFUKUTUMVBUPVDVFUJUSUHUIAGRZSVFULVAIUIAUGRTVFUOVCKVFUJUSUNVGUATU
+      BUCCBUDVEBURUEUF $.
+      $( [25-Nov-2014] $)
 
     $( Properties of the minimal polynomial of an algebraic number. $)
     mpaalem $p |- ( A e. AA -> ( ( minPolyAA ` A ) e. ( Poly ` QQ ) /\
         ( ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) /\
           ( ( minPolyAA ` A ) ` A ) = 0 /\
           ( ( coeff ` ( minPolyAA ` A ) ) ` ( degAA ` A ) ) = 1 ) ) ) $=
-      ? $.
+      ( vp caa wcel cmpaa cfv cv cdgr cdgraa wceq cc0 ccoe c1 w3a cq cply fveq2
+      crab wa eqeq1d crio mpaaval wreu mpaaeu riotacl2 syl eqeltrd fveq1 fveq1d
+      3anbi123d elrab sylib ) ACDZAEFZBGZHFZAIFZJZAUOFZKJZUQUOLFZFZMJZNZBOPFZRZ
+      DUNVEDUNHFZUQJZAUNFZKJZUQUNLFZFZMJZNZSUMUNVDBVEUAZVFABUBUMVDBVEUCVOVFDABU
+      DVDBVEUEUFUGVDVNBUNVEUOUNJZURVHUTVJVCVMVPUPVGUQUOUNHQTVPUSVIKAUOUNUHTVPVB
+      VLMVPUQVAVKUOUNLQUITUJUKUL $.
+      $( [25-Nov-2014] $)
 
     $( Minimal polynomial is a polynomial. $)
     mpaacl $p |- ( A e. AA -> ( minPolyAA ` A ) e. ( Poly ` QQ ) ) $=
-      ? $.
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpld
+      c1 ) ABCADEZFGECQHEAIEZJAQEKJRQLEEPJMANO $.
+      $( [25-Nov-2014] $)
 
     $( Minimal polynomial has degree the degree of the number. $)
     mpaadgr $p |- ( A e. AA -> ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) ) $=
-      ? $.
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr1
+      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUBANTUBUCUDOR $.
+      $( [25-Nov-2014] $)
 
     $( Minimal polynomial has the polynomial as a root. $)
     mpaaroot $p |- ( A e. AA -> ( ( minPolyAA ` A ) ` A ) = 0 ) $=
-      ? $.
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr2
+      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUCANTUBUCUDOR $.
+      $( [25-Nov-2014] $)
 
     $( Minimal polynomial is monic. $)
     mpaamn $p |- ( A e. AA -> ( ( coeff ` ( minPolyAA ` A ) ) `
           ( degAA ` A ) ) = 1 ) $=
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr3
+      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUDANTUBUCUDOR $.
+      $( [25-Nov-2014] $)
+
+    $( The minimal polynomial of a rational number. $)
+    mpaaq $p |- ( A e. QQ -> ( minPolyAA ` A ) = ( x e. CC |-> ( x - A ) ) ) $=
       ? $.
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Algebraic integers I
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c _ZZ $.
+
+  $( Extend class notation to include the class of algebraic integers. $)
+  cza $a class _ZZ $.
+
+  ${
+    $d x p $.
+    $( Define an algebraic integer as a complex number which is the root of a
+       monic integer polynomial.  Previously this was defined in terms of the
+       characteristic polynomial ( see ~ elza2 ), but this is more common as a
+       starting definition. $)
+    df-za $a |- _ZZ = { x e. CC | E. p e. ( Poly ` ZZ )
+        ( ( p ` x ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } $.
+  $}
+
+  ${
+    $d A p x a b c $.
 
     $( The algebraic integers are a subset of the algebraic numbers. $)
     zassaa $p |- _ZZ C_ AA $=
@@ -13559,16 +13600,30 @@ $)
 
     $( The algebraic integers are a set. $)
     zaex $p |- _ZZ e. _V $=
+      ( cza caa cc cnex aasscn ssexi zassaa ) ABBCDEFGF $.
+
+    $( Definition of the algebraic integers. $)
+    elza $p |- ( A e. _ZZ <-> ( A e. CC /\ E. p e. ( Poly ` ZZ )
+          ( ( p ` A ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) ) ) $=
       ? $.
 
     $( Membership in the set of algebraic integers. $)
-    elza $p |- ( A e. _ZZ <-> ( A e. AA /\
+    elza2 $p |- ( A e. _ZZ <-> ( A e. AA /\
           ( minPolyAA ` A ) e. ( Poly ` ZZ ) ) ) $=
+      ? $.
+
+    $( If ` A ` is an algebraic number, then some integer multiple of it is an
+       algebraic integer.  Analogous to ~ qmulz . $)
+    aamulza $p |- ( A e. AA -> E. x e. NN ( A x. x ) e. _ZZ ) $=
       ? $.
 
     $( The rational algebraic integers are the ordinary integers, justifying
        the term "rational integers" for the latter. $)
     zaqz $p |- ZZ = ( _ZZ i^i QQ ) $=
+      ? $.
+
+    $( All rational integers are algebraic integers. $)
+    zzssza $p |- ZZ C_ _ZZ $=
       ? $.
   $}
 
