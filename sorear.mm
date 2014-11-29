@@ -14291,17 +14291,30 @@ $)
       GPZBHQZHBACUHVIHIVGVHBHUIRUJULUKUSUMZUTUNHAEUOUNHIVJHUPRUJUQ $.
       $( [27-Nov-2014] $)
 
-    ${
-      itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
-      itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
-      $( An element is finitely generated over a ring if and only adjoining it
-         to the base ring results in a finitely spanned algebra. $)
-      itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
-            A e. LFinGen ) ) $=
-        ? $.
-    $}
   $}
 
+  ${
+    itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
+    itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
+    $( An element is finitely generated over a ring if and only adjoining it
+       to the base ring results in a finitely spanned algebra. $)
+    itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
+          A e. LFinGen ) ) $=
+      ? $.
+  $}
+
+  ${
+    itgocllem.a $e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) $.
+    itgocllem.b $e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) $.
+    itgocllem.c $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) $.
+    itgocllem.d $e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) $.
+    itgocllem.e $e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) $.
+    itgocllem.f $e |- Z e. { ( X + Y ) , ( X x. Y ) } $.
+
+    itgocllem $p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
+          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) $=
+      ? $.
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
