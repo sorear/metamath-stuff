@@ -8885,8 +8885,7 @@ $)
     infpssr.a $e |- A e. _V $.
     $( Dedekind infinity implies existence of a denumerable subset: take a
        single point witnessing the proper subset relation and iterate the
-       embedding.  The hypothesis is technically redundant with our current
-       ~ df-op .  (Contributed by Stefan O'Rear, 30-Oct-2014.) $)
+       embedding.  (Contributed by Stefan O'Rear, 30-Oct-2014.) $)
     infpssr $p |- ( ( X C. A /\ X ~~ A ) -> om ~<_ A ) $=
       ( va vx vy vf cv wpss cen wbr wa com cdom wi wceq breq2 anbi12d cvv wcel
       psseq2 imbi12d relen brrelexi psseq1 imbi1d wel wn wex pssnel adantr cdif
