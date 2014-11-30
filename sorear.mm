@@ -13650,9 +13650,9 @@ $)
        See ~ ressbase for the altered base set, and ~ resslem ( ~ ress0g ,
        ~ ressplusg, ~ ressur , ~ ressmulr ) for the (un)altered other
        operations. $)
-    df-ress $a |- |`s = ( w e. _V , a e. _V |-> ( { <. ( Base ` ndx ) ,
-        ( a i^i ( Base ` w ) ) >. } u.
-      ( w |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $.
+    df-ress $a |- |`s = ( w e. _V , a e. _V |-> if ( ( Base ` w ) C_ a , w ,
+        ( ( w |` ( _V \ { ( Base ` ndx ) } ) ) u. { <. ( Base ` ndx ) ,
+            ( a i^i ( Base ` w ) ) >. } ) ) ) $.
 
     $( Define a subring of a ring as a set of elements that is a ring in its
        own right and contains the multiplicative identity.
@@ -13724,38 +13724,64 @@ $)
 
   ${
     $d W a w s t $.  $d A a w s t $.
-    $( Value of finite structure restriction. $)
+    $( Value of structure restriction. $)
     ressval $p |- ( ( W e. X /\ A e. Y ) -> ( W |`s A ) =
-        ( { <. ( Base ` ndx ) , ( A i^i ( Base ` W ) ) >. } u.
-          ( W |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $=
-      ( vw va wcel cvv cress cbs cfv cin cop csn cres cun wceq elex cv opeq2d
-      co cnx cdif wa snex resexg adantr unexg sylancr fveq2 ineq2d sneqd reseq1
-      uneq12d ineq1 uneq1d df-ress ovmpt2g mpd3an3 syl2an ) BCGBHGZAHGZBAIUAUBJ
-      KZABJKZLZMZNZBHVCNUCZOZPZQZADGBCRADRVAVBVJHGZVKVAVBUDVGHGVIHGZVLVFUEVAVMV
-      BBVHHUFUGVGVIHHUHUIEFBAHHVCFSZESZJKZLZMZNZVOVHOZPVJIVCVNVDLZMZNZVIPHVOBQZ
-      VSWCVTVIWDVRWBWDVQWAVCWDVPVDVNVOBJUJUKTULVOBVHUMUNVNAQZWCVGVIWEWBVFWEWAVE
-      VCVNAVDUOTULUPEFUQURUSUT $.
-      $( [26-Nov-2014] $)
+        if ( ( Base ` W ) C_ A , W , ( ( W |` ( _V \ { ( Base ` ndx ) } ) ) u.
+            { <. ( Base ` ndx ) , ( A i^i ( Base ` W ) ) >. } ) ) ) $=
+      ( vw va wcel cvv cress cbs cfv wss csn cres cin cop cun cif wceq elex cnx
+      co cdif wa resexg adantr snex unexg sylancl syldan cv fveq2 sseq1d reseq1
+      ifcl id ineq2d opeq2d sneqd uneq12d ifbieq12d sseq2 ineq1 uneq2d ifbieq2d
+      df-ress ovmpt2g mpd3an3 syl2an ) BCGBHGZAHGZBAIUBBJKZALZBBHUAJKZMUCZNZVNA
+      VLOZPZMZQZRZSZADGBCTADTVJVKWAHGZWBVJVKVTHGZWCVJVKUDVPHGZVSHGWDVJWEVKBVOHU
+      EUFVRUGVPVSHHUHUIVMBVTHUOUJEFBAHHEUKZJKZFUKZLZWFWFVONZVNWHWGOZPZMZQZRWAIV
+      LWHLZBVPVNWHVLOZPZMZQZRHWFBSZWIWOWFWNBWSWTWGVLWHWFBJULZUMWTUPWTWJVPWMWRWF
+      BVOUNWTWLWQWTWKWPVNWTWGVLWHXAUQURUSUTVAWHASZWOVMWSVTBWHAVLVBXBWRVSVPXBWQV
+      RXBWPVQVNWHAVLVCURUSVDVEEFVFVGVHVI $.
+      $( [29-Nov-2014] $)
+
+    $( General behavior of trivial restriction. $)
+    ressid2 $p |- ( ( ( Base ` W ) C_ A /\ W e. X /\ A e. Y ) ->
+          ( W |`s A ) = W ) $=
+      ( cbs cfv wss wcel cress co wceq wa cvv cnx csn cdif cres cin cop cun cif
+      ressval iftrue sylan9eqr 3impb ) BEFZAGZBCHZADHZBAIJZBKUHUILUGUJUGBBMNEFZ
+      OPQUKAUFRSOTZUABABCDUBUGBULUCUDUE $.
+      $( [29-Nov-2014] $)
+
+    $( Value of nontrivial structure restriction. $)
+    ressval2 $p |- ( ( -. ( Base ` W ) C_ A /\ W e. X /\ A e. Y ) ->
+        ( W |`s A ) = ( { <. ( Base ` ndx ) , ( A i^i ( Base ` W ) ) >. } u.
+           ( W |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $=
+      ( cbs cfv wss wn wcel cress co cnx cin cop csn cvv cdif cres cun wa uncom
+      wceq cif ressval iffalse sylan9eqr syl6eq 3impb ) BEFZAGZHZBCIZADIZBAJKZL
+      EFZAUIMNOZBPUOOQRZSZUBUKULUMTZTUNUQUPSZURUSUKUNUJBUTUCUTABCDUDUJBUTUEUFUQ
+      UPUAUGUH $.
+      $( [29-Nov-2014] $)
+
+    $( The structure restriction is a proper operator, so it can be used with
+       ~ ovprc1 . $)
+    reldmress $p |- Rel dom |`s $=
+      ( vw va cress cvv cbs cfv wss cnx csn cdif cres cin cop cun cif reldmmpt2
+      cv df-ress ) ABCDDAQZEFZBQZGSSDHEFZIJKUBUATLMINOABRP $.
+      $( [29-Nov-2014] $)
 
     ${
       $d F f a w $.  $d A f $.  $d W f $.
       ressbase.a $e |- R = ( W |`s A ) $.
       $( Base set of a finite structure restriction. $)
       ressbase $p |- ( A e. V -> ( A i^i ( Base ` W ) ) = ( Base ` R ) ) $=
-        ( vf vw va wcel cbs cfv cin cress cvv wceq wa csn cres cun c0 co baseid
-        cnx ovex strfvn cdif ressval fveq1d resundir resres incom disjdif eqtri
-        cop reseq2i res0 3eqtri uneq2i un0 a1i fvex snid fvres ax-mp inex2 fvsn
-        3eqtr3g syl6eq eqtrd syl5req wn fv01 0ex in0 3eqtr4ri fvprc ineq2d wrel
-        cdm cv copab2 reldmoprab cmpt2 df-ress dmeqi releqi mpbir ovprc1 fveq2d
-        df-mpt2 3eqtr4a adantr pm2.61ian fveq2i syl6eqr ) ACIZADJKZLZDAMUAZJKZB
-        JKDNIZWPWRWTOZXAWPPZWTUCJKZWSKZWRWSJXDFDAMUDFUBZUEXCXEXDXDWRUNQZDNXDQZU
-        FZRZSZKZWRXCXDWSXKADNCUGUHXCXLXDXGKZWRXCXDXKXHRZKZXDXGXHRZKZXLXMXCXDXNX
-        PXNXPOXCXNXPXJXHRZSXPTSXPXGXJXHUIXRTXPXRDXIXHLZRDTRTDXIXHUJXSTDXSXHXILT
-        XIXHUKXHNULUMUODUPUQURXPUSUQUTUHXDXHIZXOXLOXDUCJVAZVBZXDXHXKVCVDXTXQXMO
-        YBXDXHXGVCVDVGXDWRYAWQADJVAVEVFVHVIVJXAVKZXBWPYCATLZTJKZWRWTXDTKTYEYDXD
-        VLTJXDFVMXFUEAVNVOYCWQTADJVPVQYCWSTJDAMMVSZVRGVTZNIHVTZNIPFVTXDYHYGJKLU
-        NQYGXIRSZOPZGHFWAZVSZVRYJGHFWBYFYLMYKMGHNNYIWCYKGHWDGHFNNYIWJUMWEWFWGWH
-        WIWKWLWMBWSJEWNWO $.
+        ( va vw vs vf wcel cbs cfv cin cress co cvv wceq cv fveq2d c0 fveq2 wss
+        ineq2d oveq1 eqeq12d ineq1 oveq2 incom df-ss biimpi vex ressid2 mp3an23
+        syl5eq eqtr4d wn cnx ovex baseid strfvn cop csn cdif cres ressval2 fvex
+        cun fveq1d inex1 eqid fvsnun1 syl5req pm2.61i vtocl2g fv01 0ex 3eqtr4ri
+        syl6eq fvprc reldmress ovprc1 3eqtr4a adantr pm2.61ian fveq2i syl6eqr
+        in0 ) ACJZADKLZMZDANOZKLZBKLDPJZWHWJWLQZFRZGRZKLZMZWPWONOZKLZQZWOWIMZDW
+        ONOZKLZQWNGFDAPCWPDQZWRXBWTXDXEWQWIWOWPDKUAUCXEWSXCKWPDWONUDSUEWOAQZXBW
+        JXDWLWOAWIUFXFXCWKKWOADNUGSUEWQWOUBZXAXGWRWQWTXGWRWQWOMZWQWOWQUHXGXHWQQ
+        WQWOUIUJUNXGWSWPKXGWPPJZWOPJZWSWPQGUKZFUKZWOWPPPULUMSUOXGUPZWTUQKLZWSLZ
+        WRWSKXNHWPWONURHUSUTXMXOXNXNWRVAVBWPPXNVBVCVDVGZLWRXMXNWSXPXMXIXJWSXPQX
+        KXLWOWPPPVEUMVHXNWRPWPXPUQKVFWOWQXLVIXPVJVKVRVLVMVNWMUPZWNWHXQATMZTKLZW
+        JWLXNTLTXSXRXNVOTKXNIVPIUSUTAWGVQXQWITADKVSUCXQWKTKDANVTWASWBWCWDBWKKEW
+        EWF $.
         $( [26-Nov-2014] $)
     $}
 
@@ -13767,31 +13793,26 @@ $)
       resslem.d $e |- -. ( F ` ndx ) e. { ( Base ` ndx ) } $.
       $( Other elements of a finite structure restriction. $)
       resslem $p |- ( A e. V -> E = ( F ` R ) ) $=
-        ( vw va wcel cfv cress cvv wceq cres c0 co cnx cbs cin cop csn cdif cun
-        wa ressval fveq1d resundir disjdif wfn fvex fnsn fnresdisj ax-mp uneq1i
-        wb mpbi uncom residm 3eqtri fveq1i eldif mpbir2an fvres 3eqtr3i syl6req
-        un0 wn cv fveq1 fvmpt adantr ovex strfvn a1i 3eqtr4d 0ex fv01 eqtri cdm
-        wrel copab2 reldmoprab cmpt2 df-ress df-mpt2 dmeqi releqi ovprc1 fveq2d
-        mpbir fvprc 3eqtr4rd pm2.61ian fveq2i 3eqtr4g ) AFNZGEOZGAPUAZEOZDBEOGQ
-        NZXAXBXDRZXEXAUIZUBEOZGOZXHXCOZXBXDXGXJXHUBUCOZAGUCOUDZUEUFZGQXKUFZUGZS
-        ZUHZOZXIXGXHXCXQAGQFUJUKXHXQXOSZOZXHXPOZXRXIXHXSXPXSXMXOSZXPXOSZUHTYCUH
-        ZXPXMXPXOULYBTYCXNXOUDTRZYBTRZXNQUMXMXNUNYEYFUTXKXLUBUCUOUPXNXOXMUQURVA
-        USYDYCTUHYCXPTYCVBYCVKGXOVCVDVDVEXHXONZXTXRRYGXHQNXHXNNVLXHQXNVFUBEUOKV
-        GZXHXOXQVHURYGYAXIRYHXHXOGVHURVIVJXEXBXIRXACGXHCVMZOXIQEXHYIGVNJXHGUOVO
-        VPXDXJRXGXCEXHCGAPVQJVRVSVTXEVLZXFXAYJTEOZTXDXBYKTRYJYKXHTOTTEXHCWAJVRX
-        HWBWCVSYJXCTEGAPPWDZWELVMZQNMVMZQNUIYIXKYNYMUCOUDUEUFYMXOSUHZRUIZLMCWFZ
-        WDZWEYPLMCWGYLYRPYQPLMQQYOWHYQLMWILMCQQYOWJWCWKWLWOWMWNGEWPWQVPWRIBXCEH
-        WSWT $.
+        ( va wcel cfv cress cvv wceq wa cnx c0 co cv oveq2 fveq1d eqeq1d imbi2d
+        wi cbs wss vex ressid2 mp3an3 wn cin cop csn cdif cres cun w3a ressval2
+        eldif fvex inex1 eqid fvsnun2 ax-mp syl6eq pm2.61ian vtoclg impcom ovex
+        mpbir2an strfvn a1i fveq1 fvmpt adantr 3eqtr4rd reldmress ovprc1 fveq2d
+        str0 fvprc fveq2i 3eqtr4g ) AFMZGENZGAOUAZENZDBENGPMZWGWHWJQZWKWGRZSENZ
+        WINZWNGNZWJWHWGWKWOWPQZWKWNGLUBZOUAZNZWPQZUGWKWQUGLAFWRAQZXAWQWKXBWTWOW
+        PXBWNWSWIWRAGOUCUDUEUFGUHNZWRUIZWKXAXDWKRWNWSGXDWKWRPMZWSGQLUJZWRGPPUKU
+        LUDXDUMZWKRWTWNSUHNZWRXCUNZUOUPGPXHUPZUQZURUSZNZWPXGWKXEWTXMQXFXGWKXEUT
+        WNWSXLWRGPPVAUDULWNXKMZXMWPQXNWNPMWNXJMUMWNPXJVBSEVCKVMXHXIPWNGXLSUHVCW
+        RXCXFVDXLVEVFVGVHVIVJVKWJWOQWMWIEWNCGAOVLJVNVOWKWHWPQWGCGWNCUBZNWPPEWNX
+        OGVPJWNGVCVQVRVSWKUMZWLWGXPTENZTWJWHXQTQXPEWNCJWCVOXPWITEGAOVTWAWBGEWDV
+        SVRVIIBWIEHWEWF $.
         $( [26-Nov-2014] $)
 
       $( Other elements of a finite structure restriction. $)
       resslem2 $p |- E = ( F ` R ) $=
-        ( va vw cvv wcel cfv wceq resslem wn cress c0 ovprc2 syl5eq fveq2d eqid
-        co cnx str0 eqcomi fvprc cbs cv cin cop csn cdif cres df-ress reldmmpt2
-        cun ovprc1 3eqtr4a pm2.61i syl6reqr ) AMNZDBEOZPABCDEMFGHIJQVDRZVEFFSUE
-        ZEOZDVFBVGEVFBFASUEVGGFASUAUBUCFMNZDVHPFVGCDEMFVGUDHIJQVIRZTTEOZDVHVKTE
-        UFEOCIUGUHVJDFEOTHFEUIUBVJVGTEFFSKLSMMUFUJOZLUKKUKZUJOULUMUNVMMVLUNUOUP
-        USKLUQURUTUCVAVBVCVB $.
+        ( cvv wcel cfv wceq resslem wn cress co syl5eq c0 ovprc2 eqid cnx fvprc
+        fveq2d str0 eqcomi reldmress ovprc1 3eqtr4a pm2.61i syl6reqr ) AKLZDBEM
+        ZNABCDEKFGHIJOUMPZUNFFQRZEMZDUOBUPEUOBFAQRUPGFAQUASUEFKLZDUQNFUPCDEKFUP
+        UBHIJOURPZTTEMZDUQUTTEUCEMCIUFUGUSDFEMTHFEUDSUSUPTEFFQUHUIUEUJUKULUK $.
         $( [27-Nov-2014] $)
     $}
 
@@ -13801,13 +13822,12 @@ $)
       $( The base set of a restriction is a subset of the base set of the
          original structure. $)
       ressbasess1 $p |- ( ph -> ( Base ` R ) C_ ( Base ` W ) ) $=
-        ( va vb cbs cfv cress co fveq2d wss cvv wcel cin eqid ressbase a1i c0
-        inss2 eqsstr3d wn cnx cv cop csn cdif cres cun df-ress reldmmpt2 ovprc1
-        baseid str0 0ss eqsstri eqsstrd pm2.61i ovprc2 sseq1d mpbiri ) ACHIDBJK
-        ZHIZDHIZACVCHELVDVEMZABNOZVFVGVDBVEPZVEBVCNDVCQRVHVEMVGBVEUASUBVGUCZVFD
-        DJKZHIZVEMZDNOZVLVMVKDVEPZVEDVJNDVJQRVNVEMVMDVEUASUBVMUCZVKTHIZVEVOVJTH
-        DDJFGJNNUDHIZGUEFUEZHIPUFUGVRNVQUGUHUIUJFGUKULUMLVPVEMVOVPTVEHVQFFUNUOV
-        EUPUQSURUSVIVDVKVEVIVCVJHDBJUTLVAVBUSSUR $.
+        ( va cbs cfv cress co fveq2d wss cvv wcel cin eqid ressbase inss2 a1i
+        c0 eqsstr3d wn reldmress ovprc1 cnx baseid str0 eqsstri eqsstrd pm2.61i
+        0ss ovprc2 sseq1d mpbiri ) ACGHDBIJZGHZDGHZACUOGEKUPUQLZABMNZURUSUPBUQO
+        ZUQBUOMDUOPQUTUQLUSBUQRSUAUSUBZURDDIJZGHZUQLZDMNZVDVEVCDUQOZUQDVBMDVBPQ
+        VFUQLVEDUQRSUAVEUBZVCTGHZUQVGVBTGDDIUCUDKVHUQLVGVHTUQGUEGHFFUFUGUQUKUHS
+        UIUJVAUPVCUQVAUOVBGDBIULKUMUNUJSUI $.
         $( [27-Nov-2014] $)
 
       ${
@@ -13828,6 +13848,76 @@ $)
           UIMUHMHNOIJZOPJZQZRUJUKOSJZTZRUBULUNUJUKUMUCUAUDUEGACUIIFUFUG $.
           $( [27-Nov-2014] $)
       $}
+    $}
+
+    $( Behavior of trivial restriction. $)
+    ressid $p |- ( W e. X -> ( W |`s ( Base ` W ) ) = W ) $=
+      ( cbs cfv wss wcel cvv cress co wceq ssid fvex ressid2 mp3an13 ) ACDZOEAB
+      FOGFAOHIAJOKACLOABGMN $.
+      $( [29-Nov-2014] $)
+
+    $( All restrictions of the null set are trivial. $)
+    ress0 $p |- ( (/) |`s A ) = (/) $=
+      ( vs cvv wcel c0 cress co wceq cbs cfv wss cnx baseid 0ss eqsstri ressid2
+      str0 0ex mp3an12 wn ovprc2 mp3an syl6eq pm2.61i ) ACDZEAFGZEHZEIJZAKECDZU
+      EUGUHEAILIJBBMQZANORAECCPSUETUFEEFGZEEAFUAUHEKUIUIUKEHUHEEUJENORREECCPUBU
+      CUD $.
+      $( [29-Nov-2014] $)
+
+    $( Restriction only cares about the part of the second set which intersects
+       the base of the first. $)
+    ressinbase $p |- ( A e. X -> ( W |`s A ) =
+        ( W |`s ( A i^i ( Base ` W ) ) ) ) $=
+      ( wcel cvv cress co cbs cfv cin wceq elex wss ressid2 syl3an eqtr4d 3expb
+      w3a wn csn wa ssid incom biimpi syl5eq syl5sseqr inex1g cnx cop cdif cres
+      df-ss cun inass inidm ineq2i eqtr2i opeq2i sneqi uneq1i inss1 mpan2 con3i
+      ressval2 sstr 3eqtr4a pm2.61ian c0 reldmress ovprc1 adantr syl ) ACDAEDZB
+      AFGZBABHIZJZFGZKZACLBEDZVMVRVOAMZVSVMUAVRVTVSVMVRVTVSVMRVNBVQABEENVTVOVPM
+      ZVSVSVMVPEDZVQBKVTVOVOVPVOUBVTVPVOAJZVOAVOUCVTWCVOKVOAULUDUEUFBELZAVOEUGZ
+      VPBEENOPQVTSZVSVMVRWFVSVMRUHHIZVPUIZTZBEWGTUJUKZUMWGVPVOJZUIZTZWJUMZVNVQW
+      IWMWJWHWLVPWKWGWKAVOVOJZJVPAVOVOUNWOVOAVOUOUPUQURUSUTABEEVDWFWASVSVSVMWBV
+      QWNKWAVTWAVPAMVTAVOVAVOVPAVEVBVCWDWEVPBEEVDOVFQVGVSSZVRVMWPVNVHVQBAFVIVJB
+      VPFVIVJPVKVGVL $.
+      $( [29-Nov-2014] $)
+
+    ${
+      $d A a b c w $.  $d B a b c w $.  $d W a b c w $.
+      ressabs.a $e |- ( ph -> A e. X ) $.
+      ressabs.b $e |- ( ph -> B e. Y ) $.
+      ressabs.c $e |- ( ph -> ( A i^i B ) = C ) $.
+      $( Absorbing law for restrictions. $)
+      ressabs $p |- ( ph -> ( ( W |`s A ) |`s B ) = ( W |`s C ) ) $=
+        ( cress co cin wcel wceq oveq2d cvv wss cun c0 va vb vw cv oveq2 oveq1d
+        ineq1 eqeq12d ineq2 oveq1 cbs cfv wn cnx cop csn cdif cres incom ineq1i
+        inass vex eqid ressbase ax-mp ineq2i 3eqtrri opeq2i sneqi resundir fvex
+        wa snid elndif ressnop0 uneq1i uncom un0 residm 3eqtri uneq12i ressval2
+        mp2b ovex mp3an23 reseq1d uneq2d sylan9eq inss1 sstr mpan2 con3i adantl
+        inex1 3eqtr4a ex ressid2 eqtr2i eqcomi sseq1i biimpi df-ss sylib syl5eq
+        syl ressinbase 3eqtr4g eqtrd inindir inss2 inidm ssrin syl5eqssr syl5ss
+        syl5reqr eqtr4d pm2.61ii vtoclg ress0 reldmress pm2.61i vtocl2g syl2anc
+        ovprc1 ) AEBKLZCKLZEBCMZKLZEDKLABFNCGNYFYHOZHIEUAUDZKLZUBUDZKLZEYJYLMZK
+        LZOZYEYLKLZEBYLMZKLZOYIUAUBBCFGYJBOZYMYQYOYSYTYKYEYLKYJBEKUEUFYTYNYREKY
+        JBYLUGPUHYLCOZYQYFYSYHYLCYEKUEUUAYRYGEKYLCBUIPUHEQNZYPUCUDZYJKLZYLKLZUU
+        CYNKLZOZYPUCEQUUCEOZUUEYMUUFYOUUHUUDYKYLKUUCEYJKUJUFUUCEYNKUJUHUUDUKULZ
+        YLRZUUCUKULZYJRZUUGUUJUMZUULUMZUUGUUMUUNVLUNUKULZYLUUIMZUOZUPZUUOYJUUKM
+        ZUOUPZUUCQUUOUPZUQZURZSZUVBURZSZUUOYNUUKMZUOZUPZUVCSZUUEUUFUURUVIUVEUVC
+        UUQUVHUUPUVGUUOUVGYLYJMZUUKMZYLUUSMZUUPYNUVKUUKYJYLUSUTZYLYJUUKVAZUUSUU
+        IYLYJQNZUUSUUIOUAVBZYJUUDQUUCUUDVCVDVEZVFVGVHVIUVEUUTUVBURZUVCUVBURZSTU
+        VTSZUVCUUTUVCUVBVJUVSTUVTUUOUVANUUOUVBNUMUVSTOUUOUNUKVKVMUUOUVAQVNUUOUU
+        SUVBVOWCVPUWAUVTTSUVTUVCTUVTVQUVTVRUUCUVBVSVTVTWAUUMUUNUUEUURUUDUVBURZS
+        ZUVFUUMUUDQNZYLQNZUUEUWCOUUCYJKWDZUBVBZYLUUDQQWBWEUUNUWBUVEUURUUNUUDUVD
+        UVBUUNUUCQNZUVPUUDUVDOUCVBZUVQYJUUCQQWBWEWFWGWHUUNUUFUVJOZUUMUUNUUKYNRZ
+        UMZUWJUWKUULUWKYNYJRUULYJYLWIUUKYNYJWJWKWLUWLUWHYNQNZUWJUWIYJYLUVQWNZYN
+        UUCQQWBWEXEWMWOWPUUJUUEUUDUUFUUJUWDUWEUUEUUDOUWFUWGYLUUDQQWQWEUUJUUCUUS
+        KLZUUCUVGKLZUUDUUFUUJUUSUVGUUCKUUJUVGUVMUUSUVGUVLUVMUVNUVOWRUUJUVMUUSYL
+        MZUUSYLUUSUSUUJUUSYLRZUWQUUSOUUJUWRUUIUUSYLUUSUUIUVRWSWTXAUUSYLXBXCXDXO
+        PUVPUUDUWOOUVQYJUUCQXFVEUWMUUFUWPOUWNYNUUCQXFVEZXGXHUULUUEUUCYLKLZUUFUU
+        LUUDUUCYLKUULUWHUVPUUDUUCOUWIUVQYJUUCQQWQWEUFUULUWPUUCYLUUKMZKLZUUFUWTU
+        ULUVGUXAUUCKUULUVGUUSUXAMZUXAYJYLUUKXIUULUXCUXAUUSMZUXAUUSUXAUSUULUXAUU
+        SRUXDUXAOUULUXAUUKUUSYLUUKXJUULUUKUUKUUKMUUSUUKXKUUKYJUUKXLXMXNUXAUUSXB
+        XCXDXDPUWSUWEUWTUXBOUWGYLUUCQXFVEXGXPXQXRUUBUMZTYLKLTYMYOYLXSUXEYKTYLKE
+        YJKXTYDUFEYNKXTYDWOYAYBYCAYGDEKJPXH $.
+        $( [29-Nov-2014] $)
     $}
 
     $d X a b c $.  $d Y a b c $.
@@ -13921,19 +14011,18 @@ $)
     $( The subring predicate. $)
     issubrg $p |- ( S e. ( SubRing ` R ) <-> ( S C_ B /\
           ( R |`s S ) e. Ring /\ I e. S ) ) $=
-      ( va vb csubrg cfv wcel cvv cress co crg c0 wceq cbs cur wa wss elfvdm wn
-      w3a cdm elex syl cnx cv cin cop csn cdif cres cun reldmmpt2 ovprc1 baseid
-      df-ress noel str0 eqcomi eqid rngidcl mto eleq1 mtbiri con4i 3ad2ant2 cpw
-      crab fveq2 pweqd oveq1 eleq1d anbi12d rabeqbidv df-subrg fvex rabex fvmpt
-      eleq2d wb oveq2 eleq2 elrab a1i elpw2 sseq2i bitr4i eleq1i anbi2i anbi12i
-      pwex 3anass syl6bbr 3bitrd pm5.21nii ) CBIJZKZBLKZCAUAZBCMNZOKZDCKZUDZWTB
-      IUEZKXACBIUBBXGUFUGXDXBXAXEXAXDXAUCXCPQZXDUCBCMGHMLLUHRJZHUIZGUIZRJZUJUKU
-      LXKLXIULUMUNUOGHUSUPUQXHXDPOKZXMPSJZPKXNUTPPXNPRJPRXIGGURVAVBXNVCVDVEXCPO
-      VFVGUGVHVIXAWTCBXJMNZOKZBSJZXJKZTZHBRJZVJZVKZKZCYAKZXDXQCKZTZTZXFXAWSYBCG
-      BXKXJMNZOKZXKSJZXJKZTZHXLVJZVKYBLIXKBQZYLXSHYMYAYNXLXTXKBRVLVMYNYIXPYKXRY
-      NYHXOOXKBXJMVNVOYNYJXQXJXKBSVLVOVPVQGHVRXSHYAXTBRVSZWNVTWAWBYCYGWCXAXSYFH
-      CYAXJCQZXPXDXRYEYPXOXCOXJCBMWDVOXJCXQWEVPWFWGXAYGXBXDXETZTZXFYGYRWCXAYDXB
-      YFYQYDCXTUAXBCXTYOWHAXTCEWIWJYEXEXDXQDCDXQFVBWKWLWMWGXBXDXEWOWPWQWR $.
+      ( va vb csubrg cfv wcel cress co crg c0 wceq cur cbs wa eleq1d cvv elfvdm
+      wss w3a cdm elex syl wn reldmress ovprc1 noel cnx baseid str0 eqcomi eqid
+      rngidcl mto eleq1 mtbiri con4i 3ad2ant2 cv crab fveq2 pweqd oveq1 anbi12d
+      cpw rabeqbidv df-subrg fvex pwex rabex fvmpt eleq2d oveq2 eleq2 elrab a1i
+      elpw2 sseq2i bitr4i eleq1i anbi2i anbi12i 3anass syl6bbr 3bitrd pm5.21nii
+      wb ) CBIJZKZBUAKZCAUCZBCLMZNKZDCKZUDZWMBIUEZKWNCBIUBBWTUFUGWQWOWNWRWNWQWN
+      UHWPOPZWQUHBCLUIUJXAWQONKZXBOQJZOKXCUKOOXCORJORULRJGGUMUNUOXCUPUQURWPONUS
+      UTUGVAVBWNWMCBHVCZLMZNKZBQJZXDKZSZHBRJZVIZVDZKZCXKKZWQXGCKZSZSZWSWNWLXLCG
+      BGVCZXDLMZNKZXRQJZXDKZSZHXRRJZVIZVDXLUAIXRBPZYCXIHYEXKYFYDXJXRBRVEVFYFXTX
+      FYBXHYFXSXENXRBXDLVGTYFYAXGXDXRBQVETVHVJGHVKXIHXKXJBRVLZVMVNVOVPXMXQWKWNX
+      IXPHCXKXDCPZXFWQXHXOYHXEWPNXDCBLVQTXDCXGVRVHVSVTWNXQWOWQWRSZSZWSXQYJWKWNX
+      NWOXPYIXNCXJUCWOCXJYGWAAXJCEWBWCXOWRWQXGDCDXGFUOWDWEWFVTWOWQWRWGWHWIWJ $.
       $( [27-Nov-2014] $)
   $}
 
@@ -14159,16 +14248,13 @@ $)
 
     $( The set of scalars of a subring algebra. $)
     srasca $p |- ( ph -> ( W |`s S ) = ( Scalar ` A ) ) $=
-      ( vw vs va cress cfv csca cbs wceq cvv wcel wa cnx cop c0 csra wss cplusg
-      cmulr ctp cvsca cpr cun sraval fveq2d ovex eqid algsca ax-mp syl6reqr cdm
-      co wn wrel cv cin cdif cres copab2 reldmoprab cmpt2 df-ress df-mpt2 eqtri
-      csn dmeqi releqi mpbir ovprc1 fvprc fveq1d fv01 fveq2i df-sca str0 syl6eq
-      c5 eqtr4d adantr pm2.61ian syl ) ADCJUQZCDUAKZKZLKZBLKACDMKZUBZWGWJNZFDOP
-      ZWLWMWNWLQZWJRMKZWKSRUCKDUCKZSRUDKDUDKZSUERLKWGSRUFKWRSUGUHZLKZWGWOWIWSLC
-      ODUIUJWGOPWGWTNDCJUKWSWKWQWGWRWROWSULUMUNUOWNURZWMWLXAWGTWJDCJJUPZUSGUTZO
-      PHUTZOPQIUTWPXDXCMKVASVJXCOWPVJVBVCUHZNQZGHIVDZUPZUSXFGHIVEXBXHJXGJGHOOXE
-      VFXGGHVGGHIOOXEVHVIVKVLVMVNXAWJCTKZLKZTXAWIXILXACWHTDUAVOVPUJXJTLKTXITLCV
-      QVRLWBHHVSVTVIWAWCWDWEWFABWILEUJWC $.
+      ( vs cress csra cfv csca cbs wceq cvv wcel cnx cop cplusg fveq2d c0 co wa
+      wss cmulr ctp cvsca cpr cun sraval ovex eqid algsca syl6reqr wn reldmress
+      ax-mp ovprc1 fvprc fveq1d fv01 fveq2i c5 df-sca str0 syl6eq eqtr4d adantr
+      eqtri pm2.61ian syl ) ADCHUAZCDIJZJZKJZBKJACDLJZUCZVKVNMZFDNOZVPVQVRVPUBZ
+      VNPLJVOQPRJDRJZQPUDJDUDJZQUEPKJVKQPUFJWAQUGUHZKJZVKVSVMWBKCNDUISVKNOVKWCM
+      DCHUJWBVOVTVKWAWANWBUKULUPUMVRUNZVQVPWDVKTVNDCHUOUQWDVNCTJZKJZTWDVMWEKWDC
+      VLTDIURUSSWFTKJTWETKCUTVAKVBGGVCVDVHVEVFVGVIVJABVMKESVF $.
       $( [27-Nov-2014] $)
 
     $( The scalar product operation of a subring algebra. $)
@@ -14295,8 +14381,8 @@ $)
   ${
     itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
     itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
-    $( An element is finitely generated over a ring if and only adjoining it
-       to the base ring results in a finitely spanned algebra. $)
+    $( An element is finitely generated over a ring if and only adjoining it to
+       the base ring results in a finitely spanned algebra. $)
     itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
           A e. LFinGen ) ) $=
       ? $.
@@ -14309,7 +14395,7 @@ $)
     itgocllem.d $e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) $.
     itgocllem.e $e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) $.
     itgocllem.f $e |- Z e. { ( X + Y ) , ( X x. Y ) } $.
-
+    $( PLEASE PUT DESCRIPTION HERE. $)
     itgocllem $p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
           Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) $=
       ? $.

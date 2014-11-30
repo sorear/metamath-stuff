@@ -1,2 +1,6 @@
 metamath
+metamath-o
+tmp.mm
+*~*
 set.mm
+set_clean.*
