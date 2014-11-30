@@ -13335,7 +13335,8 @@ $)
   ${
     dgrsub2.a $e |- N = ( deg ` F ) $.
     $( Subtracting two polynomials with the same degree and top coefficient
-       gives a polynomial of strictly lower degree. $)
+       gives a polynomial of strictly lower degree.  (Contributed by Stefan
+       O'Rear, 25-Nov-2014.) $)
     dgrsub2 $p |- ( ( ( F e. ( Poly ` S ) /\ G e. ( Poly ` T ) ) /\
           ( ( deg ` G ) = N /\ N e. NN /\
             ( ( coeff ` F ) ` N ) = ( ( coeff ` G ) ` N ) ) ) ->
@@ -13363,7 +13364,7 @@ $)
     $d A x d p a b c $.  $d P x d p a b c $.
 
     $( A nonzero polynomial with a root has positive degree.  TODO: use in
-       ~ aaliou2 . $)
+       ~ aaliou2 .  (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
     dgrnznn $p |- ( ( ( P e. ( Poly ` S ) /\ P =/= 0p ) /\
         ( A e. CC /\ ( P ` A ) = 0 ) ) -> ( deg ` P ) e. NN ) $=
       ( cply cfv wcel c0p wne wa cc cc0 wceq cdgr wn cn csn cxp simpr ad2antrr
@@ -13375,7 +13376,8 @@ $)
       BUOSUPVJVKUQFZVNVDWEVEVICBURSVKUSUTVLVMVAVB $.
       $( [25-Nov-2014] $)
 
-    $( Value of the degree function on an algebraic number. $)
+    $( Value of the degree function on an algebraic number.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
     dgraaval $p |- ( A e. AA -> ( degAA ` A ) = sup ( { d e. NN |
         E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
           ( p ` A ) = 0 ) } , RR , `' < ) ) $=
@@ -13404,13 +13406,15 @@ $)
       LWIIZWPXBBWRYDWMXAWOWLWIWKQRWDWEWF $.
       $( [25-Nov-2014] $)
 
-    $( Closure of the degree function on algebraic numbers. $)
+    $( Closure of the degree function on algebraic numbers.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
     dgraacl $p |- ( A e. AA -> ( degAA ` A ) e. NN ) $=
       ( va caa wcel cdgraa cfv cn cv cdgr wceq cc0 wa cq cply c0p csn cdif wrex
       dgraalem simpld ) ACDAEFZGDBHZIFUAJAUBFKJLBMNFOPQRABST $.
       $( [25-Nov-2014] $)
 
-    $( Degree function on algebraic numbers is a function. $)
+    $( Degree function on algebraic numbers is a function.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
     dgraaf $p |- degAA : AA --> NN $=
       ( va vp vb caa cn cdgraa wf wfn cfv wcel wral ffnfv cdgr wceq cc0 clt cvv
       cv cr wor wa cq cply c0p csn cdif wrex crab ccnv csup df-dgraa fnmpt ltso
@@ -13419,7 +13423,8 @@ $)
       FVGSPTSVGTUMSPUNUOUPUQURVDADVCUSUTVA $.
       $( [25-Nov-2014] $)
 
-    $( Upper bound on degree of an algebraic number. $)
+    $( Upper bound on degree of an algebraic number.  (Contributed by Stefan
+       O'Rear, 25-Nov-2014.) $)
     dgraaub $p |- ( ( ( P e. ( Poly ` QQ ) /\ P =/= 0p ) /\ ( A e. CC /\
           ( P ` A ) = 0 ) ) -> ( degAA ` A ) <_ ( deg ` P ) ) $=
       ( vb va cq cfv wcel c0p wa cc0 wceq cv cdgr wrex cle fveq1 eqeq1d rcla4ev
@@ -13436,7 +13441,8 @@ $)
       $( [25-Nov-2014] $)
 
     $( A rational polynomial of degree less than an algebraic number cannot be
-       zero at that number unless it is the zero polynomial. $)
+       zero at that number unless it is the zero polynomial.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
     dgraa0p $p |- ( ( A e. AA /\ P e. ( Poly ` QQ ) /\
           ( deg ` P ) < ( degAA ` A ) ) -> ( ( P ` A ) = 0 <-> P = 0p ) ) $=
       ( caa wcel cq cply cfv cdgr cdgraa wbr cc0 wceq c0p wn simpl2 3syl simpl1
@@ -13464,7 +13470,8 @@ $)
       @( [25-Nov-2014] @)
     $)
 
-    $( An algebraic number has exactly one monic polynomial of least degree. $)
+    $( An algebraic number has exactly one monic polynomial of least degree.
+       (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
     mpaaeu $p |- ( A e. AA -> E! p e. ( Poly ` QQ ) ( ( deg ` p ) =
           ( degAA ` A ) /\ ( p ` A ) = 0 /\
         ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) $=
@@ -13519,7 +13526,8 @@ $)
       YGYIUVHUVI $.
       $( [25-Nov-2014] $)
 
-    $( Value of the minimal polynomial of an algebraic number. $)
+    $( Value of the minimal polynomial of an algebraic number.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
     mpaaval $p |- ( A e. AA -> ( minPolyAA ` A ) = ( iota_ p e. ( Poly ` QQ )
         ( ( deg ` p ) = ( degAA ` A ) /\ ( p ` A ) = 0 /\
           ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) ) $=
@@ -13543,25 +13551,29 @@ $)
       VLMVPUQVAVKUOUNLQUITUJUKUL $.
       $( [25-Nov-2014] $)
 
-    $( Minimal polynomial is a polynomial. $)
+    $( Minimal polynomial is a polynomial.  (Contributed by Stefan O'Rear,
+       25-Nov-2014.) $)
     mpaacl $p |- ( A e. AA -> ( minPolyAA ` A ) e. ( Poly ` QQ ) ) $=
       ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpld
       c1 ) ABCADEZFGECQHEAIEZJAQEKJRQLEEPJMANO $.
       $( [25-Nov-2014] $)
 
-    $( Minimal polynomial has degree the degree of the number. $)
+    $( Minimal polynomial has degree the degree of the number.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
     mpaadgr $p |- ( A e. AA -> ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) ) $=
       ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr1
       c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUBANTUBUCUDOR $.
       $( [25-Nov-2014] $)
 
-    $( Minimal polynomial has the polynomial as a root. $)
+    $( Minimal polynomial has the polynomial as a root.  (Contributed by Stefan
+       O'Rear, 25-Nov-2014.) $)
     mpaaroot $p |- ( A e. AA -> ( ( minPolyAA ` A ) ` A ) = 0 ) $=
       ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr2
       c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUCANTUBUCUDOR $.
       $( [25-Nov-2014] $)
 
-    $( Minimal polynomial is monic. $)
+    $( Minimal polynomial is monic.  (Contributed by Stefan O'Rear,
+       25-Nov-2014.) $)
     mpaamn $p |- ( A e. AA -> ( ( coeff ` ( minPolyAA ` A ) ) `
           ( degAA ` A ) ) = 1 ) $=
       ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr3
@@ -13586,7 +13598,8 @@ $)
     grppropd.a $e |- ( ph -> ( Base ` K ) = ( Base ` L ) ) $.
     grppropd.b $e |- ( ph -> ( +g ` K ) = ( +g ` L ) ) $.
     $( If two structures have the same group components (properties), one is a
-       group iff the other one is. $)
+       group iff the other one is.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     grppropd $p |- ( ph -> ( K e. Grp <-> L e. Grp ) ) $=
       ( va vb vc vd ve cv cfv co wcel wceq wa wral wrex oveqd raleqbidv eleq12d
       cplusg cbs eqidd oveq123d eqeq12d anbi12d eqeq1d rexeqbidv isgrp2 3bitr4g
@@ -13603,7 +13616,8 @@ $)
   ${
     $d x y z $.  $d B z $.  $d C z $.  $d D z $.
     reldmmpt2.a $e |- A = ( x e. B , y e. C |-> D ) $.
-    $( The domain of an operation defined by maps-to notation is a relation. $)
+    $( The domain of an operation defined by maps-to notation is a relation.
+       (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     reldmmpt2 $p |- Rel dom A $=
       ( vz cdm wrel cv wcel wa wceq copab2 reldmoprab cmpt2 df-mpt2 eqtri dmeqi
       releqi mpbir ) CIZJAKDLBKELMHKFNMZABHOZIZJUDABHPUCUFCUECABDEFQUEGABHDEFRS
@@ -13714,14 +13728,16 @@ $)
   $}
 
   ${
-    $( Function value of the empty set. $)
+    $( Function value of the empty set.  (Contributed by Stefan O'Rear,
+       26-Nov-2014.) $)
     fv01 $p |- ( (/) ` A ) = (/) $=
       ( c0 cdm wcel wn cfv wceq noel dm0 eleq2i mtbir ndmfv ax-mp ) ABCZDZEABFB
       GOABDAHNBAIJKABLM $.
       $( [26-Nov-2014] $)
 
     str0.a $e |- F = ( s e. _V |-> ( s ` I ) ) $.
-    $( All components of the empty set are empty sets. $)
+    $( All components of the empty set are empty sets.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     str0 $p |- ( F ` (/) ) = (/) $=
       ( c0 cvv wcel cfv wceq 0ex cv fveq1 fv01 syl6eq fvmpt ax-mp ) EFGEAHEIJCE
       BCKZHZEFAQEIRBEHEBQELBMNDJOP $.
@@ -13730,7 +13746,8 @@ $)
 
   ${
     $d W a w s t $.  $d A a w s t $.
-    $( Value of structure restriction. $)
+    $( Value of structure restriction.  (Contributed by Stefan O'Rear,
+       29-Nov-2014.) $)
     ressval $p |- ( ( W e. X /\ A e. Y ) -> ( W |`s A ) =
         if ( ( Base ` W ) C_ A , W , ( ( W |` ( _V \ { ( Base ` ndx ) } ) ) u.
             { <. ( Base ` ndx ) , ( A i^i ( Base ` W ) ) >. } ) ) ) $=
@@ -13745,7 +13762,8 @@ $)
       RXBWPVQVNWHAVLVCURUSVDVEEFVFVGVHVI $.
       $( [29-Nov-2014] $)
 
-    $( General behavior of trivial restriction. $)
+    $( General behavior of trivial restriction.  (Contributed by Stefan O'Rear,
+       29-Nov-2014.) $)
     ressid2 $p |- ( ( ( Base ` W ) C_ A /\ W e. X /\ A e. Y ) ->
           ( W |`s A ) = W ) $=
       ( cbs cfv wss wcel cress co wceq wa cvv cnx csn cdif cres cin cop cun cif
@@ -13753,7 +13771,8 @@ $)
       OPQUKAUFRSOTZUABABCDUBUGBULUCUDUE $.
       $( [29-Nov-2014] $)
 
-    $( Value of nontrivial structure restriction. $)
+    $( Value of nontrivial structure restriction.  (Contributed by Stefan
+       O'Rear, 29-Nov-2014.) $)
     ressval2 $p |- ( ( -. ( Base ` W ) C_ A /\ W e. X /\ A e. Y ) ->
         ( W |`s A ) = ( { <. ( Base ` ndx ) , ( A i^i ( Base ` W ) ) >. } u.
            ( W |` ( _V \ { ( Base ` ndx ) } ) ) ) ) $=
@@ -13764,7 +13783,7 @@ $)
       $( [29-Nov-2014] $)
 
     $( The structure restriction is a proper operator, so it can be used with
-       ~ ovprc1 . $)
+       ~ ovprc1 .  (Contributed by Stefan O'Rear, 29-Nov-2014.) $)
     reldmress $p |- Rel dom |`s $=
       ( vw va cress cvv cbs cfv wss cnx csn cdif cres cin cop cun cif reldmmpt2
       cv df-ress ) ABCDDAQZEFZBQZGSSDHEFZIJKUBUATLMINOABRP $.
@@ -13773,7 +13792,8 @@ $)
     ${
       $d F f a w $.  $d A f $.  $d W f $.
       ressbase.a $e |- R = ( W |`s A ) $.
-      $( Base set of a finite structure restriction. $)
+      $( Base set of a finite structure restriction.  (Contributed by Stefan
+         O'Rear, 26-Nov-2014.) $)
       ressbase $p |- ( A e. V -> ( A i^i ( Base ` W ) ) = ( Base ` R ) ) $=
         ( va vw vs vf wcel cbs cfv cin cress co cvv wceq cv fveq2d c0 fveq2 wss
         ineq2d oveq1 eqeq12d ineq1 oveq2 incom df-ss biimpi vex ressid2 mp3an23
@@ -13826,7 +13846,7 @@ $)
       $d R a b $.  $d W a $.  $d A a $.  $d M a $.  $d P a $.
       ressbasess.a $e |- ( ph -> R = ( W |`s A ) ) $.
       $( The base set of a restriction is a subset of the base set of the
-         original structure. $)
+         original structure.  (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
       ressbasess1 $p |- ( ph -> ( Base ` R ) C_ ( Base ` W ) ) $=
         ( va cbs cfv cress co fveq2d wss cvv wcel cin eqid ressbase inss2 a1i
         c0 eqsstr3d wn reldmress ovprc1 cnx baseid str0 eqsstri eqsstrd pm2.61i
@@ -13838,7 +13858,8 @@ $)
 
       ${
         ressplusg.b $e |- ( ph -> P = ( +g ` W ) ) $.
-        $( ` +g ` is unaffected by restriction. $)
+        $( ` +g ` is unaffected by restriction.  (Contributed by Stefan O'Rear,
+           27-Nov-2014.) $)
         ressplusg $p |- ( ph -> P = ( +g ` R ) ) $=
           ( va cplusg cfv cress co wceq eqid plusgid grplem resslem2 a1i fveq2d
           3eqtr4d ) AEIJZEBKLZIJZCDIJUAUCMABUBHUAIEUBNUANHOPQRGADUBIFST $.
@@ -13847,7 +13868,8 @@ $)
 
       ${
         ressmulr.b $e |- ( ph -> M = ( .r ` W ) ) $.
-        $( ` .r ` is unaffected by restriction. $)
+        $( ` .r ` is unaffected by restriction.  (Contributed by Stefan O'Rear,
+           27-Nov-2014.) $)
         ressmulr $p |- ( ph -> M = ( .r ` R ) ) $=
           ( va cmulr cfv cress co eqid mulrid cnx cbs csn wcel cplusg cpr sseli
           rnglem snsspr1 mto resslem2 fveq2d 3eqtr4a ) AEIJZEBKLZIJDCIJBUIHUHIE
@@ -13856,13 +13878,15 @@ $)
       $}
     $}
 
-    $( Behavior of trivial restriction. $)
+    $( Behavior of trivial restriction.  (Contributed by Stefan O'Rear,
+       29-Nov-2014.) $)
     ressid $p |- ( W e. X -> ( W |`s ( Base ` W ) ) = W ) $=
       ( cbs cfv wss wcel cvv cress co wceq ssid fvex ressid2 mp3an13 ) ACDZOEAB
       FOGFAOHIAJOKACLOABGMN $.
       $( [29-Nov-2014] $)
 
-    $( All restrictions of the null set are trivial. $)
+    $( All restrictions of the null set are trivial.  (Contributed by Stefan
+       O'Rear, 29-Nov-2014.) $)
     ress0 $p |- ( (/) |`s A ) = (/) $=
       ( vs cvv wcel c0 cress co wceq cbs cfv wss cnx baseid 0ss eqsstri ressid2
       str0 0ex mp3an12 wn ovprc2 mp3an syl6eq pm2.61i ) ACDZEAFGZEHZEIJZAKECDZU
@@ -13871,7 +13895,7 @@ $)
       $( [29-Nov-2014] $)
 
     $( Restriction only cares about the part of the second set which intersects
-       the base of the first. $)
+       the base of the first.  (Contributed by Stefan O'Rear, 29-Nov-2014.) $)
     ressinbase $p |- ( A e. X -> ( W |`s A ) =
         ( W |`s ( A i^i ( Base ` W ) ) ) ) $=
       ( wcel cvv cress co cbs cfv cin wceq elex wss ressid2 syl3an eqtr4d 3expb
@@ -13891,7 +13915,8 @@ $)
       ressabs.a $e |- ( ph -> A e. X ) $.
       ressabs.b $e |- ( ph -> B e. Y ) $.
       ressabs.c $e |- ( ph -> ( A i^i B ) = C ) $.
-      $( Absorbing law for restrictions. $)
+      $( Absorbing law for restrictions.  (Contributed by Stefan O'Rear,
+         29-Nov-2014.) $)
       ressabs $p |- ( ph -> ( ( W |`s A ) |`s B ) = ( W |`s C ) ) $=
         ( cress co cin wcel wceq oveq2d cvv wss cun c0 va vb vw cv oveq2 oveq1d
         ineq1 eqeq12d ineq2 oveq1 cbs cfv wn cnx cop csn cdif cres incom ineq1i
@@ -13930,31 +13955,36 @@ $)
 
     $( The base set of the field of complex numbers.  TODO: this and the
        following may largely obsolete ~ qrng et al, as the ring of rationals
-       can be constructed as ` ( CCfld |``s QQ ) ` . $)
+       can be constructed as ` ( CCfld |``s QQ ) ` .  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     cnfldbas $p |- CC = ( Base ` CCfld ) $=
       ( cc cvv wcel ccnfld cbs cfv wceq cnex caddc cmul df-cnfld rngbase ax-mp
       ) ABCADEFGHAIDJBKLM $.
       $( [27-Nov-2014] $)
 
-    $( The addition operation of the field of complex numbers. $)
+    $( The addition operation of the field of complex numbers.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     cnfldadd $p |- + = ( +g ` CCfld ) $=
       ( caddc cvv wcel ccnfld cplusg wceq addex cc cmul df-cnfld rngplusg ax-mp
       cfv ) ABCADEMFGHADIBJKL $.
       $( [27-Nov-2014] $)
 
-    $( The multiplication operation of the field of complex numbers. $)
+    $( The multiplication operation of the field of complex numbers.
+       (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     cnfldmul $p |- x. = ( .r ` CCfld ) $=
       ( cmul cvv wcel ccnfld cmulr cfv wceq mulex caddc df-cnfld rngmulr ax-mp
       cc ) ABCADEFGHMIDABJKL $.
       $( [27-Nov-2014] $)
 
-    $( The field of complex numbers is a set. $)
+    $( The field of complex numbers is a set.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     cnfldex $p |- CCfld e. _V $=
       ( ccnfld cnx cbs cfv cc cop cplusg caddc cmulr cmul ctp cvv df-cnfld tpex
       eqeltri ) ABCDEFZBGDHFZBIDJFZKLMPQRNO $.
       $( [27-Nov-2014] $)
 
-    $( The complex numbers form a ring. $)
+    $( The complex numbers form a ring.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     cnrng $p |- CCfld e. Ring $=
       ( va vb vc ccnfld wcel wtru cc caddc cmul c1 cfv cnfldbas a1i cnfldadd cv
       wceq cc0 co addcom adantl crg cbs cmulr cnfldmul cabel cneg cnfldex addcl
@@ -13967,14 +13997,16 @@ $)
       JVFTVOVJJIRVJPFVJVGTVHVI $.
       $( [27-Nov-2014] $)
 
-    $( The zero element of the field of complex numbers. $)
+    $( The zero element of the field of complex numbers.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     cnfld0 $p |- 0 = ( 0g ` CCfld ) $=
       ( ccnfld c0g cfv cc0 caddc co wceq 00id cgrp cc wb crg cnrng rnggrp ax-mp
       wcel 0cnALT cnfldbas cnfldadd eqid1 grpid mp2an mpbi eqcomi ) ABCZDDDEFDG
       ZUEDGZHAIPZDJPUFUGKALPUHMANOQJEAUEDRSUETUAUBUCUD $.
       $( [27-Nov-2014] $)
 
-    $( The unit element of the field of complex numbers. $)
+    $( The unit element of the field of complex numbers.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     cnfld1 $p |- 1 = ( 1r ` CCfld ) $=
       ( va ccnfld cur cfv c1 cc wcel cv cmul wceq wral ax-1cn mulid2 mulid1 jca
       co wa rgen pm3.2i crg wb cnrng cnfldbas cnfldmul eqid isrngid mpbi eqcomi
@@ -13982,7 +14014,8 @@ $)
       RSBTGUQURUAUBAFBIUJEUCUDUJUEUFUIUGUH $.
       $( [27-Nov-2014] $)
 
-    $( The additive inverse in the field of complex numbers. $)
+    $( The additive inverse in the field of complex numbers.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     cnfldneg $p |- ( X e. CC -> ( ( invg ` CCfld ) ` X ) = -u X ) $=
       ( cc wcel ccnfld cminusg cfv cneg wceq caddc co negid wb negcl cgrp cnrng
       cc0 crg rnggrp ax-mp cnfldbas cnfldadd cnfld0 eqid grpinvid1 mp3an1 mpdan
@@ -13990,7 +14023,8 @@ $)
       PAUJTUAUBUIUCUDUEUFUG $.
       $( [27-Nov-2014] $)
 
-    $( The complex numbers form a division ring. $)
+    $( The complex numbers form a division ring.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     cndrng $p |- CCfld e. DivRing $=
       ( va vb ccnfld cdr wcel wtru cc cmul c1 cv cdiv co cc0 cbs cfv a1i wne wa
       wceq adantl cnfldbas cmulr c0g cnfld0 cur cnfld1 crg cnrng mulne0 3adant1
@@ -13999,7 +14033,8 @@ $)
       URVAUIUJIMQFULPUTUSGEFURUMTUTUSMQFURUNTUTUSURHLISFURUOTUPUQ $.
       $( [27-Nov-2014] $)
 
-    $( The division operation in the field of complex numbers. $)
+    $( The division operation in the field of complex numbers.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     cnflddiv $p |- ( ( X e. CC /\ Y e. CC /\ Y =/= 0 ) ->
         ( X ( /r ` CCfld ) Y ) = ( X / Y ) ) $=
       ( cc wcel cc0 wne w3a ccnfld cdvr cfv cmul cdiv wceq cnfldbas cnfld0 eqid
@@ -14014,7 +14049,7 @@ $)
     $d S a b $.  $d R a b $.
     issubrg.b $e |- B = ( Base ` R ) $.
     issubrg.i $e |- I = ( 1r ` R ) $.
-    $( The subring predicate. $)
+    $( The subring predicate.  (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     issubrg $p |- ( S e. ( SubRing ` R ) <-> ( S C_ B /\
           ( R |`s S ) e. Ring /\ I e. S ) ) $=
       ( va vb csubrg cfv wcel cress co crg c0 wceq cur cbs wa eleq1d cvv elfvdm
@@ -14034,7 +14069,7 @@ $)
 
   ${
     subrgss.a $e |- B = ( Base ` R ) $.
-    $( A subring is a subset. $)
+    $( A subring is a subset.  (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     subrgss $p |- ( S e. ( SubRing ` R ) -> S C_ B ) $=
       ( csubrg cfv wcel wss cress co crg cur eqid issubrg simp1bi ) CBEFGCAHBCI
       JKGBLFZCGABCPDPMNO $.
@@ -14042,7 +14077,7 @@ $)
   $}
 
   ${
-    $( A subring is a ring. $)
+    $( A subring is a ring.  (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     subrgring $p |- ( S e. ( SubRing ` R ) -> ( R |`s S ) e. Ring ) $=
       ( csubrg cfv wcel cbs wss cress co crg cur eqid issubrg simp2bi ) BACDEBA
       FDZGABHIJEAKDZBEOABPOLPLMN $.
@@ -14056,7 +14091,8 @@ $)
     subgrpid.i $e |- ( ph -> I = ( 0g ` R ) ) $.
     subgrpid.j $e |- ( ph -> J = ( 0g ` S ) ) $.
     subgrpid.a $e |- ( ph -> S = ( R |`s A ) ) $.
-    $( A subset of a group which is a group must have the same identity. $)
+    $( A subset of a group which is a group must have the same identity.
+       (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     subgrpid $p |- ( ph -> I = J ) $=
       ( c0g cfv cplusg co wceq eqid cgrp wcel cbs eqidd ressplusg oveqd grpidcl
       wb syl grpid syl2anc mpbiri eqtrd ressbasess1 sseldd mpbid 3eqtr4d ) ACLM
@@ -14071,7 +14107,8 @@ $)
     subrg0.b $e |- ( ph -> S = ( R |`s A ) ) $.
     subrg0.c $e |- ( ph -> I = ( 0g ` R ) ) $.
     subrg0.d $e |- ( ph -> R e. Ring ) $.
-    $( A subring always has the same additive identity. $)
+    $( A subring always has the same additive identity.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     subrg0 $p |- ( ph -> I = ( 0g ` S ) ) $=
       ( c0g cfv crg wcel cgrp rnggrp syl cress co csubrg subrgring subgrpid
       eqeltrd eqidd ) ABCDEDJKZACLMCNMICOPADLMDNMADCBQRZLGABCSKMUELMFCBTPUBDOPH
@@ -14081,7 +14118,8 @@ $)
 
   ${
     subrg1el.a $e |- I = ( 1r ` R ) $.
-    $( A subring contains the multiplicative identity. $)
+    $( A subring contains the multiplicative identity.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     subrg1el $p |- ( S e. ( SubRing ` R ) -> I e. S ) $=
       ( csubrg cfv wcel cbs wss cress co crg eqid issubrg simp3bi ) BAEFGBAHFZI
       ABJKLGCBGPABCPMDNO $.
@@ -14091,7 +14129,8 @@ $)
   ${
     subrgbase.a $e |- ( ph -> A e. ( SubRing ` R ) ) $.
     subrgbase.b $e |- ( ph -> S = ( R |`s A ) ) $.
-    $( Base set of a subring structure. $)
+    $( Base set of a subring structure.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     subrgbase $p |- ( ph -> A = ( Base ` S ) ) $=
       ( cbs cfv cress cin fveq2d csubrg wcel wceq eqid ressbase syl wss subrgss
       co df-ss sylib 3eqtr2rd ) ADGHCBITZGHZBCGHZJZBADUDGFKABCLHZMZUGUENEBUDUHC
@@ -14105,7 +14144,8 @@ $)
     subrg1.b $e |- ( ph -> S = ( R |`s A ) ) $.
     subrg1.c $e |- ( ph -> I = ( 1r ` R ) ) $.
     subrg1.d $e |- ( ph -> R e. Ring ) $.
-    $( A subring always has the same multiplicative identity. $)
+    $( A subring always has the same multiplicative identity.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     subrg1 $p |- ( ph -> I = ( 1r ` S ) ) $=
       ( vx cur cfv wcel co wceq wa wral crg syl eqid cbs cmulr csubrg subrgring
       cv wb cress eqeltrd isrngid subrgbase subrg1el ressbasess1 eqidd ressmulr
@@ -14127,7 +14167,8 @@ $)
     ${
       algpart.b $e |- D = ( { ( Base ` ndx ) , ( +g ` ndx ) , ( .r ` ndx ) } u.
           { ( Scalar ` ndx ) , ( vsca ` ndx ) } ) $.
-      $( Lemma to shorten proofs of ~ algbase through ~ algvsca . $)
+      $( Lemma to shorten proofs of ~ algbase through ~ algvsca .  (Contributed
+         by Stefan O'Rear, 27-Nov-2014.) $)
       algfn $p |- A Fn D $=
         ( va cnx cfv cun wcel c5 wceq wne ltneii neeqtrri c6 cbs cmulr ctp csca
         cplusg csn cop cvsca fvex eqid eqid1 rngfn w3o w3a 1re 5re 1lt5 basendx
@@ -14147,7 +14188,8 @@ $)
         $( [27-Nov-2014] $)
     $}
 
-    $( Lemma to shorten proofs of ~ algbase through ~ algvsca . $)
+    $( Lemma to shorten proofs of ~ algbase through ~ algvsca .  (Contributed
+       by Stefan O'Rear, 27-Nov-2014.) $)
     algfun $p |- Fun A $=
       ( cnx cbs cfv cplusg cmulr ctp csca cvsca cpr cun wfn wfun eqid algfn
       fnfun ax-mp ) AHIJHKJHLJMHNJHOJPQZRASABUDCDEFGUDTUAUDAUBUC $.
@@ -14155,7 +14197,8 @@ $)
 
     $d A a $.  $d B a $.  $d P a $.  $d T a $.  $d S a $.  $d M a $.
 
-    $( The base set of a constructed algebra. $)
+    $( The base set of a constructed algebra.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     algbase $p |- ( B e. V -> B = ( Base ` A ) ) $=
       ( va cbs cnx cfv cop cplusg cmulr ctp csca cvsca cpr wcel cun cvv eqeltri
       tpex prex unex algfun baseid opex tpid1 elun1 ax-mp eleqtrri strfv ) BAJG
@@ -14163,7 +14206,8 @@ $)
       GIUHUPVCAUPUSTUPVCTUPUQURUOBUIUJUPUSVBUKULHUMUN $.
       $( [27-Nov-2014] $)
 
-    $( The additive operation of a constructed algebra. $)
+    $( The additive operation of a constructed algebra.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     algaddg $p |- ( P e. V -> P = ( +g ` A ) ) $=
       ( va cplusg cnx cbs cfv cop cmulr ctp csca cvsca cpr wcel cun cvv eqeltri
       tpex prex unex algfun plusgid opex tpid2 elun1 ax-mp eleqtrri strfv ) CAJ
@@ -14171,7 +14215,8 @@ $)
       UGIUHUQVCAUQUSTUQVCTUOUQURUPCUIUJUQUSVBUKULHUMUN $.
       $( [27-Nov-2014] $)
 
-    $( The multiplicative operation of a constructed algebra. $)
+    $( The multiplicative operation of a constructed algebra.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     algmulr $p |- ( T e. V -> T = ( .r ` A ) ) $=
       ( va cmulr cnx cbs cfv cop cplusg ctp csca cvsca cpr wcel cun cvv eqeltri
       tpex prex unex algfun mulrid opex tpid3 elun1 ax-mp eleqtrri strfv ) EAJG
@@ -14179,7 +14224,8 @@ $)
       GIUHURVCAURUSTURVCTUOUPURUQEUIUJURUSVBUKULHUMUN $.
       $( [27-Nov-2014] $)
 
-    $( The set of scalars of a constructed algebra. $)
+    $( The set of scalars of a constructed algebra.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     algsca $p |- ( S e. V -> S = ( Scalar ` A ) ) $=
       ( va csca cnx cbs cfv cop cplusg cmulr ctp cvsca cpr wcel cun cvv eqeltri
       tpex prex unex algfun scaid opex prid1 elun2 ax-mp eleqtrri strfv ) DAJGI
@@ -14187,7 +14233,8 @@ $)
       IUHUTVCAUTVBTUTVCTUTVAUSDUIUJUTVBURUKULHUMUN $.
       $( [27-Nov-2014] $)
 
-    $( The scalar product operation of a constructed algebra. $)
+    $( The scalar product operation of a constructed algebra.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     algvsca $p |- ( M e. V -> M = ( vsca ` A ) ) $=
       ( va cvsca cnx cbs cfv cop cplusg cmulr ctp csca cpr wcel cun cvv eqeltri
       tpex prex unex algfun vscaid opex prid2 elun2 ax-mp eleqtrri strfv ) FAJG
@@ -14219,7 +14266,8 @@ $)
 
     srapart.a $e |- ( ph -> A = ( ( subringAlg ` W ) ` S ) ) $.
     srapart.s $e |- ( ph -> S C_ ( Base ` W ) ) $.
-    $( Base set of a subring algebra. $)
+    $( Base set of a subring algebra.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     srabase $p |- ( ph -> ( Base ` W ) = ( Base ` A ) ) $=
       ( vw cbs cfv csra wceq cvv wcel cnx cop cplusg cmulr fveq2d c0 fvprc csca
       wss wa ctp cress co cvsca cpr cun sraval fvex eqid algbase ax-mp syl6reqr
@@ -14230,7 +14278,8 @@ $)
       URUSHUTGGVAVHVBVCVDVEVFVGABVKHERVD $.
       $( [27-Nov-2014] $)
 
-    $( Additive operation of a subring algebra. $)
+    $( Additive operation of a subring algebra.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     sraaddg $p |- ( ph -> ( +g ` W ) = ( +g ` A ) ) $=
       ( vw cplusg cfv csra cbs wceq cvv wcel cnx cop cmulr fveq2d c0 fvprc csca
       wss wa ctp cress co cvsca cpr cun sraval fvex eqid algaddg ax-mp syl6reqr
@@ -14241,7 +14290,8 @@ $)
       CURUSHUTGGVAVBVHVCVDVEVFVGABVKHERVD $.
       $( [27-Nov-2014] $)
 
-    $( Multiplicative operation of a subring algebra. $)
+    $( Multiplicative operation of a subring algebra.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     sramulr $p |- ( ph -> ( .r ` W ) = ( .r ` A ) ) $=
       ( vs cmulr cfv csra cbs wceq cvv wcel cnx cop cplusg fveq2d c0 fvprc csca
       wss wa ctp cress co cvsca cpr cun sraval fvex eqid algmulr ax-mp syl6reqr
@@ -14252,7 +14302,8 @@ $)
       URUSHUTGGVAVHVBVCVDVEVFVGABVKHERVD $.
       $( [27-Nov-2014] $)
 
-    $( The set of scalars of a subring algebra. $)
+    $( The set of scalars of a subring algebra.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     srasca $p |- ( ph -> ( W |`s S ) = ( Scalar ` A ) ) $=
       ( vs cress csra cfv csca cbs wceq cvv wcel cnx cop cplusg fveq2d c0 co wa
       wss cmulr ctp cvsca cpr cun sraval ovex eqid algsca syl6reqr wn reldmress
@@ -14263,7 +14314,8 @@ $)
       VLTDIURUSSWFTKJTWETKCUTVAKVBGGVCVDVHVEVFVGVIVJABVMKESVF $.
       $( [27-Nov-2014] $)
 
-    $( The scalar product operation of a subring algebra. $)
+    $( The scalar product operation of a subring algebra.  (Contributed by
+       Stefan O'Rear, 27-Nov-2014.) $)
     sravsca $p |- ( ph -> ( .r ` W ) = ( vsca ` A ) ) $=
       ( vs cmulr cfv csra cvsca cbs wceq cvv wcel cnx cop cplusg fveq2d c0 csca
       wss wa ctp cress co cpr cun sraval fvex eqid algvsca ax-mp syl6reqr fvprc
@@ -14278,7 +14330,8 @@ $)
   ${
     $d W a b c $.  $d S a b c $.  $d A a b c $.
     sralmod.a $e |- A = ( ( subringAlg ` W ) ` S ) $.
-    $( The subring algebra is a left module. $)
+    $( The subring algebra is a left module.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     sralmod $p |- ( ( W e. Ring /\ S e. ( SubRing ` W ) ) -> A e. LMod ) $=
       ( va vb vc crg wcel cfv wa co wceq eqid adantl eqidd w3a sseldi syl13anc
       cv csubrg cplusg cbs cin cmulr cur cress csra a1i subrgss srabase sraaddg
@@ -14337,7 +14390,8 @@ $)
   ${
     $d X x p s a b c $.  $d S x p s a b c $.  $d T x p s a b c $.
     $d P x p s a b c $.
-    $( Value of the integral-over function. $)
+    $( Value of the integral-over function.  (Contributed by Stefan O'Rear,
+       27-Nov-2014.) $)
     itgoval $p |- ( S C_ CC -> ( IntgOver ` S ) = { x e. CC |
         E. p e. ( Poly ` S ) ( ( p ` x ) = 0 /\
           ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } ) $=
@@ -14347,7 +14401,8 @@ $)
       SULCUQUMUPBPUCUDUEADCUFUNAESUGUHUI $.
       $( [27-Nov-2014] $)
 
-    $( The normal algebraic numbers ` AA ` are generated by ` IntgOver ` . $)
+    $( The normal algebraic numbers ` AA ` are generated by ` IntgOver ` .
+       (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     aaitgo $p |- AA = ( IntgOver ` QQ ) $=
       ( va vb caa cq cfv cv cc0 wceq cdgr ccoe c1 wa wrex cc wcel ax-mp c0p wne
       fveq2 cn0 citgo cply crab rabid qsscn itgoval eleq2i aacn mpaacl mpaaroot
@@ -14365,7 +14420,8 @@ $)
       HWOBWIWJWKWLWM $.
       $( [27-Nov-2014] $)
 
-    $( An integral element is integral over a subset. $)
+    $( An integral element is integral over a subset.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     itgoss $p |- ( ( S C_ T /\ T C_ CC ) ->
           ( IntgOver ` S ) C_ ( IntgOver ` T ) ) $=
       ( va vb wss cc wa cv cfv cc0 wceq cdgr ccoe c1 cply wrex crab syl itgoval
@@ -14375,7 +14431,8 @@ $)
       VAKUKCBDSUIUJ $.
       $( [27-Nov-2014] $)
 
-    $( All integral elements are complex numbers. $)
+    $( All integral elements are complex numbers.  (Contributed by Stefan
+       O'Rear, 27-Nov-2014.) $)
     itgocn $p |- ( IntgOver ` S ) C_ CC $=
       ( va vb vc citgo wcel cfv cc wss cv cc0 wceq cdgr ccoe cply wrex crab a1i
       c1 wa cdm cpw df-itgo dmmptss sseli cnex elpw2 itgoval ssrab2 eqsstrd syl
