@@ -13318,17 +13318,19 @@ $)
           ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $.
   $}
 
-  ${
-    $d x A a b $.  $d x B a b $.
-    plydeg1.a $e |- F = ( x e. CC |-> ( ( A x. x ) + B ) ) $.
-    $( A polynomial with 2 terms. $)
-    plydeg1a $p |- ( ( A e. S /\ B e. S /\ S C_ CC ) -> F e. ( Poly ` S ) ) $=
-      ? $.
+  $(
+  @{
+    @d x A a b @.  @d x B a b @.
+    plydeg1.a @e |- F = ( x e. CC |-> ( ( A x. x ) + B ) ) @.
+    @( A polynomial with 2 terms. @)
+    plydeg1a @p |- ( ( A e. S /\ B e. S /\ S C_ CC ) -> F e. ( Poly ` S ) ) @=
+      ? @.
 
-    $( Degree of a polynomial with 2 terms. $)
-    plydeg1b $p |- ( ( A e. CC /\ B e. CC /\ A =/= 0 ) -> ( deg ` A ) = 1 ) $=
-      ? $.
-  $}
+    @( Degree of a polynomial with 2 terms. @)
+    plydeg1b @p |- ( ( A e. CC /\ B e. CC /\ A =/= 0 ) -> ( deg ` A ) = 1 ) @=
+      ? @.
+  @}
+  $)
 
   ${
     dgrsub2.a $e |- N = ( deg ` F ) $.
@@ -13448,8 +13450,9 @@ $)
       JVKVL $.
       $( [25-Nov-2014] $)
 
-    $( Degree of a rational number. $)
-    dgraaq $p |- ( A e. QQ -> ( degAA ` A ) = 1 ) $=
+    $(
+    @( Degree of a rational number. @)
+    dgraaq @p |- ( A e. QQ -> ( degAA ` A ) = 1 ) @=
       ( va cq wcel cdgraa cfv c1 cle wbr wceq cc cneg cv cmul co caddc cmpt cc0
       oveq1d syl cdgr cply c0p wne qcn oveq2 eqid ovex fvmpt mulm1 negcl addcom
       syl2anc negid 3eqtrd eqtrd dgraaub syl22anc breqtrd cn wb caa qaa dgraacl
@@ -13457,8 +13460,9 @@ $)
       CUDAKDZAVOFZRJVHVPHI??AUEZVGVRVKANOZAPOZRVGVQVRWAJVSBAVNWAKVOVLAJVMVTAPVL
       AVKNUFSVOUGVTAPUHUITVGWAALZAPOZAWBPOZRVGVTWBAPVGVQVTWBJVSAUJTSVGWBKDZVQWC
       WDJVGVQWEVSAUKTVSWBAULUMVGVQWDRJVSAUNTUOUPAVOUQUR?USVGVHUTDZVIVJVAVGAVBDW
-      FAVCAVDTVHVETVF $.
-      $( [25-Nov-2014] $)
+      FAVCAVDTVHVETVF @.
+      @( [25-Nov-2014] @)
+    $)
 
     $( An algebraic number has exactly one monic polynomial of least degree. $)
     mpaaeu $p |- ( A e. AA -> E! p e. ( Poly ` QQ ) ( ( deg ` p ) =
@@ -13564,9 +13568,11 @@ $)
       c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUDANTUBUCUDOR $.
       $( [25-Nov-2014] $)
 
-    $( The minimal polynomial of a rational number. $)
-    mpaaq $p |- ( A e. QQ -> ( minPolyAA ` A ) = ( x e. CC |-> ( x - A ) ) ) $=
-      ? $.
+    $(
+    @( The minimal polynomial of a rational number. @)
+    mpaaq @p |- ( A e. QQ -> ( minPolyAA ` A ) = ( x e. CC |-> ( x - A ) ) ) @=
+      ? @.
+    $)
   $}
 
 $(
@@ -14291,10 +14297,12 @@ $)
       XSWLLMXTYAYBYCWJCWLXBXDXJWPXIWASWEXFWMXBWLLXBMWGWJCWLWMXBWPXIWMNWBWCWD $.
       $( [27-Nov-2014] $)
 
-    $( The subring algebra is a left vector space. $)
-    sralvec $p |- ( ( W e. Ring /\ S e. ( SubRing ` W ) /\
-        ( W |`s S ) e. DivRing ) -> A e. LVec ) $=
-      ? $.
+    $(
+    @( The subring algebra is a left vector space. @)
+    sralvec @p |- ( ( W e. Ring /\ S e. ( SubRing ` W ) /\
+        ( W |`s S ) e. DivRing ) -> A e. LVec ) @=
+      ? @.
+    $)
   $}
 
 $(
@@ -14378,28 +14386,30 @@ $)
 
   $}
 
-  ${
-    itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
-    itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
-    $( An element is finitely generated over a ring if and only adjoining it to
-       the base ring results in a finitely spanned algebra. $)
-    itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
-          A e. LFinGen ) ) $=
-      ? $.
-  $}
+  $(
+  @{
+    itgofg.s @e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) @.
+    itgofg.a @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) @.
+    @( An element is finitely generated over a ring if and only adjoining it to
+       the base ring results in a finitely spanned algebra. @)
+    itgofg @p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
+          A e. LFinGen ) ) @=
+      ? @.
+  @}
 
-  ${
-    itgocllem.a $e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) $.
-    itgocllem.b $e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) $.
-    itgocllem.c $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) $.
-    itgocllem.d $e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) $.
-    itgocllem.e $e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) $.
-    itgocllem.f $e |- Z e. { ( X + Y ) , ( X x. Y ) } $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
-    itgocllem $p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
-          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) $=
-      ? $.
-  $}
+  @{
+    itgocllem.a @e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) @.
+    itgocllem.b @e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) @.
+    itgocllem.c @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) @.
+    itgocllem.d @e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) @.
+    itgocllem.e @e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) @.
+    itgocllem.f @e |- Z e. { ( X + Y ) , ( X x. Y ) } @.
+    @( Integrality is transitive(?). @)
+    itgocllem @p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
+          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) @=
+      ? @.
+  @}
+  $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
