@@ -14083,6 +14083,19 @@ $)
   $}
 
   ${
+    issubrgd.b $e |- ( ph -> B = ( Base ` R ) ) $.
+    issubrgd.i $e |- ( ph -> I = ( 1r ` R ) ) $.
+    issubrgd.t $e |- ( ph -> T = ( R |`s S ) ) $.
+    $( Subring predicate, deduction. $)
+    issubrgd $p |- ( ph -> ( S e. ( SubRing ` R ) <-> ( S C_ B /\
+        T e. Ring /\ I e. S ) ) ) $=
+      ( wss crg wcel w3a cbs cfv cress co cur eleq1d eqid csubrg sseq2d issubrg
+      3anbi123d syl6rbbr ) ADBJZEKLZFDLZMDCNOZJZCDPQZKLZCROZDLZMDCUAOLAUFUJUGUL
+      UHUNABUIDGUBAEUKKISAFUMDHSUDUICDUMUITUMTUCUE $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
     subrgss.a $e |- B = ( Base ` R ) $.
     $( A subring is a subset.  (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
     subrgss $p |- ( S e. ( SubRing ` R ) -> S C_ B ) $=
@@ -14772,7 +14785,21 @@ $)
     subrgintcl.i $e |- ( ph -> I = |^| A ) $.
     $( The intersection of a nonempty class of subrings is a subring. $)
     subrgintcl $p |- ( ph -> I e. ( SubRing ` R ) ) $=
-      ? $.
+      ( vx vy vz cfv wcel wss wral eqidd wa ralrimiva elint2 sylibr cint csubrg
+      cbs c0g cur w3a cv cplusg co cmulr cminusg issubrg2 wex wne intss1 adantl
+      c0 n0 sylib sselda eqid subrgss syl sstrd exlimdv mpd crg adantr subrg0cl
+      fvex subrg1cl 3jca ad2antrr adantlr simplrl simplrr subrgaddcl subrgmulcl
+      ex sseldd ovex subrgnegcl ralrimivva mpbir2and eqeltrd ) ADBUAZCUBLZHAWFW
+      GMWFCUCLZNZCUDLZWFMZCUELZWFMZUFIUGZJUGZCUHLZUIZWFMZWNWOCUJLZUIZWFMZWNCUKL
+      ZLZWFMZUFZJWFOIWFOAIJWHWPCWFWSWLWJEAWHPAWJPAWLPAWPPAWSPULAWIWKWMAKUGZBMZK
+      UMZWIABUQUNXHGKBURUSAXGWIKAXGWIAXGQZWFXFWHXGWFXFNZAXFBUOZUPXIXFWGMZXFWHNA
+      BWGXFFUTZWHCXFWHVAVBVCVDVSVEVFAWJXFMZKBOWKAXNKBXIXFCWJACVGMZXGEVHZXMXIWJP
+      VIRKWJBCUDVJSTAWLXFMZKBOWMAXQKBXIXFCWLXPXMXIWLPVKRKWLBCUEVJSTVLAXEIJWFWFA
+      WNWFMZWOWFMZQZQZWRXAXDYAWQXFMZKBOWRYAYBKBYAXGQZXFWPCWNWOAXOXTXGEVMZAXGXLX
+      TXMVNZYCWFXFWNXGXJYAXKUPZAXRXSXGVOVTZYCWFXFWOYFAXRXSXGVPVTZYCWPPVQRKWQBWN
+      WOWPWASTYAWTXFMZKBOXAYAYIKBYCXFCWSWNWOYDYEYGYHYCWSPVRRKWTBWNWOWSWASTYAXCX
+      FMZKBOXDYAYJKBYCXFCXCWNYDYEYGYCXCPWBRKXCBWNXBVJSTVLWCWDWE $.
+      $( [30-Nov-2014] $)
   $}
 
   ${
@@ -14782,7 +14809,88 @@ $)
     subrgincl.z $e |- ( ph -> Z = ( X i^i Y ) ) $.
     $( The intersection of two subrings is a subring. $)
     subrgincl $p |- ( ph -> Z e. ( SubRing ` R ) ) $=
-      ? $.
+      ( cpr csubrg cfv wcel wss wa prssg ibi syl2anc c0 wne prnzg syl cint wceq
+      cin intprg eqtr4d subrgintcl ) ACDJZBEFACBKLZMZDUJMZUIUJNZGHUKULOUMCDUJUJ
+      UJPQRAUKUISTGCDUJUAUBAECDUEZUIUCZIAUKULUOUNUDGHCDUJUJUFRUGUH $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    subrgtr.r $e |- ( ph -> R e. Ring ) $.
+    subrgtr.a $e |- ( ph -> A e. ( SubRing ` R ) ) $.
+    subrgtr.s $e |- ( ph -> S = ( R |`s A ) ) $.
+    $( The subrings of a subring are just the smaller subrings. $)
+    subrgtr $p |- ( ph -> ( B e. ( SubRing ` S ) <->
+        ( B e. ( SubRing ` R ) /\ B C_ A ) ) ) $=
+      ( wss cress co crg wcel cfv w3a wa csubrg adantr wceq eqidd cur cbs sstrd
+      simpr1 subrgss syl oveq1d cvv id1 ssexg syl2anr incom df-ss biimpi adantl
+      eqid cin syl5eq ressabs eqtrd 3ad2antr1 simpr2 eqeltrrd simpr3 jca simprr
+      adantrl simprl2 eqeltrd simprl3 impbida subrgbase subrg1 issubrgd 3bitr4d
+      3jca anbi1d ) ACBIZECJKZLMZDUANZCMZOZCDUBNZIZDCJKZLMZWBOZVRPZCEQNMCDQNZMZ
+      VRPAWCWIAWCPZWHVRWLWEWGWBWLCBWDAVRVTWBUDZABWDIZWCABWJMZWNGWDDBWDUPUEUFRUC
+      WLVSWFLAVTVRVSWFSZWBAVRPZVSDBJKZCJKWFWQEWRCJAEWRSVRHRUGWQBCCDWJUHAWOVRGRV
+      RVRWOCUHMAVRUIGCBWJUJUKWQBCUQCBUQZCBCULVRWSCSZAVRWTCBUMUNUOURUSUTZVAAVRVT
+      WBVBVCAVRVTWBVDVPWMVEAWIPZVRVTWBAWHVRVFXBVSWFLAVRWPWHXAVGWEWGWBVRAVHVIWEW
+      GWBVRAVJVPVKABECVSWAABDEGHVLABDEWAGHAWATZFVMAVSTVNAWKWHVRAWDDCWFWAAWDTXCA
+      WFTVNVQVO $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    $d ph a b t $.  $d R a b t $.  $d B a b t $.  $d A a b t $.  $d S t $.
+    rgspnval.r $e |- ( ph -> R e. Ring ) $.
+    rgspnval.b $e |- ( ph -> B = ( Base ` R ) ) $.
+    rgspnval.ss $e |- ( ph -> A C_ B ) $.
+    rgspnval.n $e |- ( ph -> N = ( RingSpan ` R ) ) $.
+    rgspnval.sp $e |- ( ph -> U = ( N ` A ) ) $.
+    $( Value of the ring-span of a set of elements in a ring. $)
+    rgspnval $p |- ( ph -> U = |^| { t e. ( SubRing ` R ) | A C_ t } ) $=
+      ( vb va cfv wss cbs wcel cvv wceq crgspn csubrg crab cint fveq1d cpw cmpt
+      crg elex fveq2 pweqd rabeq syl inteqd mpteq12dv df-rgspn fvex mptex fvmpt
+      cv pwex 3syl sseqtrd elpw2 sylibr wrex subrgself rcla4ev syl2anc intexrab
+      sseq2 sylib sseq1 rabbidv eqid fvmptg eqtrd 3eqtrd ) AFCGOCEUAOZOZCBUTZPZ
+      BEUBOZUCZUDZLACGVSKUEAVTCMEQOZUFZMUTZWAPZBWCUCZUDZUGZOZWEACVSWLAEUHRESRVS
+      WLTHEUHUINEMNUTZQOZUFZWIBWNUBOZUCZUDZUGWLSUAWNETZMWPWSWGWKWTWOWFWNEQUJUKW
+      TWRWJWTWQWCTWRWJTWNEUBUJWIBWQWCULUMUNUONBMUPMWGWKWFEQUQZVAURUSVBUEACWGRZW
+      ESRZWMWETACWFPXBACDWFJIVCCWFXAVDVEAWBBWCVFZXCADWCRCDPZXDADEHIVGJWBXEBDWCW
+      ADCVKVHVIWBBWCVJVLMCWKWEWGSWLWHCTZWJWDXFWIWBBWCWHCWAVMVNUNWLVOVPVIVQVR $.
+      $( [30-Nov-2014] $)
+
+    $( The ring-span of a set is a subring. $)
+    rgspncl $p |- ( ph -> U e. ( SubRing ` R ) ) $=
+      ( vt cv wss csubrg cfv crab ssrab2 a1i wrex c0 wne wcel subrgself rcla4ev
+      sseq2 syl2anc rabn0 sylibr rgspnval subrgintcl ) ABLMZNZLDOPZQZDEGUOUNNAU
+      MLUNRSAUMLUNTZUOUAUBACUNUCBCNZUPACDGHUDIUMUQLCUNULCBUFUEUGUMLUNUHUIALBCDE
+      FGHIJKUJUK $.
+      $( [30-Nov-2014] $)
+
+    $( The ring-span of a set contains the set. $)
+    rgspnssid $p |- ( ph -> A C_ U ) $=
+      ( vt cv wss csubrg cfv crab cint ssintub rgspnval syl5sseqr ) ABLMNLDOPZQ
+      RBELBUBSALBCDEFGHIJKTUA $.
+      $( [30-Nov-2014] $)
+
+    rgspnmin.sr $e |- ( ph -> S e. ( SubRing ` R ) ) $.
+    rgspnmin.ss $e |- ( ph -> A C_ S ) $.
+    $( The ring-span is contained in all subspaces which contain all the
+       generators. $)
+    rgspnmin $p |- ( ph -> U C_ S ) $=
+      ( vt cv wss csubrg cfv wcel crab rgspnval sseq2 elrab sylanbrc intss1 syl
+      cint eqsstrd ) AFBOPZQZODRSZUAZUHZEAOBCDFGHIJKLUBAEUMTZUNEQAEULTBEQZUOMNU
+      KUPOEULUJEBUCUDUEEUMUFUGUI $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    rgspnid.r $e |- ( ph -> R e. Ring ) $.
+    rgspnid.sr $e |- ( ph -> A e. ( SubRing ` R ) ) $.
+    rgspnid.sp $e |- ( ph -> S = ( ( RingSpan ` R ) ` A ) ) $.
+    $( The span of a subring is itself. $)
+    rgspnid $p |- ( ph -> S = A ) $=
+      ( cbs cfv crgspn eqidd csubrg wcel wss eqid subrgss syl ssid a1i rgspnmin
+      rgspnssid eqssd ) ADBABCHIZCBDCJIZEAUCKZABCLIMBUCNFUCCBUCOPQZAUDKZGFBBNAB
+      RSTABUCCDUDEUEUFUGGUAUB $.
+      $( [30-Nov-2014] $)
   $}
 
   ${
