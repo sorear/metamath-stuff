@@ -9626,7 +9626,7 @@ $)
        subsets has a maximal element) is III-finite (has no denumerable
        collection of subsets).
 
-       This first section is sedicated to the construction of ` U ` and its
+       This first section is dedicated to the construction of ` U ` and its
        intersection.  First, the value of ` U ` at a successor. $)
     fin23lem12 $p |- ( A e. om -> ( U ` suc A ) = if ( ( ( t ` A ) i^i
         ( U ` A ) ) = (/) , ( U ` A ) , ( ( t ` A ) i^i ( U ` A ) ) ) ) $=
@@ -10278,7 +10278,7 @@ $)
     $d A x y a b $.  $d F a b y $.  $d G a b x y $.
     compssiso.a $e |- F = ( x e. ~P A |-> ( A \ x ) ) $.
     compssiso.b $e |- A e. _V $.
-    $( Complementation is an antiautomorphism on power set latticies.
+    $( Complementation is an antiautomorphism on power set lattices.
        (Contributed by Stefan O'Rear, 4-Nov-2014.) $)
     compssiso $p |- F Isom {C.} , `' {C.} ( ~P A , ~P A ) $=
       ( va vb crpss wbr wb cvv wcel cdif wa wss elpw2 wceq bitri difeq2 sscon
