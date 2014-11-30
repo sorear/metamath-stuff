@@ -13653,8 +13653,8 @@ $)
 
        (Credit for this operator goes to Mario Carneiro).
 
-       See ~ ressbase for the altered base set, and ~ resslem ( ~ ress0g ,
-       ~ ressplusg, ~ ressur , ~ ressmulr ) for the (un)altered other
+       See ~ ressbase for the altered base set, and ~ resslem2 ( ~ subrg0 ,
+       ~ ressplusg , ~ subrg1 , ~ ressmulr ) for the (un)altered other
        operations. $)
     df-ress $a |- |`s = ( w e. _V , a e. _V |-> if ( ( Base ` w ) C_ a , w ,
         ( ( w |` ( _V \ { ( Base ` ndx ) } ) ) u. { <. ( Base ` ndx ) ,
