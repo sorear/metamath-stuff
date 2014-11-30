@@ -13696,12 +13696,6 @@ $)
     df-rgspn $a |- RingSpan = ( w e. _V |-> ( s e. ~P ( Base ` w ) |->
         |^| { t e. ( SubRing ` w ) | s C_ t } ) ) $.
 
-    $( Every ring can be viewed as a left module over itself. $)
-    df-rgmod $a |- ringLMod = ( w e. _V |-> ( {
-        <. ( Base ` ndx ) , ( Base ` w ) >. , <. ( +g ` ndx ) , ( +g ` w ) >. ,
-          <. ( Scalar ` ndx ) , w >. } u.
-      { <. ( vsca ` ndx ) , ( .r ` w ) >. } ) ) $.
-
     $( The field of complex numbers.  Other number fields and rings can be
        constructed by applying the ` |``s ` restriction operator, for instance
        ` ( CCfld |`` AA ) ` is the field of algebraic numbers.
@@ -13725,6 +13719,10 @@ $)
             ( +g ` w ) >. , <. ( .r ` ndx ) , ( .r ` w ) >. } u.
           { <. ( Scalar ` ndx ) , ( w |`s s ) >. ,
             <. ( vsca ` ndx ) , ( .r ` w ) >. } ) ) ) $.
+
+    $( Every ring can be viewed as a left module over itself. $)
+    df-rgmod $a |- ringLMod = ( w e. _V |->
+        ( ( subringAlg ` w ) ` ( Base ` w ) ) ) $.
   $}
 
   ${
@@ -14659,6 +14657,76 @@ $)
   $}
 
   ${
+    subrgcl.r $e |- ( ph -> R e. Ring ) $.
+    subrgcl.a $e |- ( ph -> A e. ( SubRing ` R ) ) $.
+
+    ${
+      subrg0cl.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
+      $( A subring contains 0. $)
+      subrg0cl $p |- ( ph -> Z e. A ) $=
+        ( wcel cress co c0g cfv cbs csubrg crg subrgring eqid rng0cl 3syl eqidd
+        subrg0 subrgbase eleq12d mpbird ) ADBHCBIJZKLZUEMLZHZABCNLHUEOHUHFCBPUG
+        UEUFUGQUFQRSADUFBUGABCUEDFAUETZGEUAABCUEFUIUBUCUD $.
+        $( [30-Nov-2014] $)
+    $}
+
+    ${
+      subrg1cl.o $e |- ( ph -> O = ( 1r ` R ) ) $.
+      $( A subring contains 0. $)
+      subrg1cl $p |- ( ph -> O e. A ) $=
+        ( cress co csubrg cfv crg subrgring syl eqidd subrgbase subrg1 rngidcld
+        wcel ) ABCBHIZDABCJKSTLSFCBMNABCTFATOZPABCTDFUAGEQR $.
+        $( [30-Nov-2014] $)
+    $}
+
+    subrgcl.x $e |- ( ph -> X e. A ) $.
+
+    ${
+      subrgnegcl.n $e |- ( ph -> ( ( invg ` R ) ` X ) = N ) $.
+      $( A subring is closed under negation. $)
+      subrgnegcl $p |- ( ph -> N e. A ) $=
+        ( cress co cminusg cfv crg wcel cgrp rnggrp syl csubrg eqidd subrgring
+        3syl subrgbase subgrpinv eqtr3d grpinvcld eqeltrd ) ADECBJKZLMZMZBAECLM
+        ZMDUJIABBCUHUKUIEACNOCPOFCQRABCSMOUHNOUHPOGCBUAUHQUBZAUKTAUITZABCUHGAUH
+        TZUCZHUNUDUEABUHUIEULUOUMHUFUG $.
+        $( [30-Nov-2014] $)
+    $}
+
+    subrgcl.y $e |- ( ph -> Y e. A ) $.
+
+    ${
+      subrgaddcl.p $e |- ( ph -> P = ( +g ` R ) ) $.
+      $( A subring is closed under addition. $)
+      subrgaddcl $p |- ( ph -> ( X P Y ) e. A ) $=
+        ( cress co csubrg cfv wcel crg cgrp subrgring rnggrp 3syl eqidd grpcld
+        subrgbase ressplusg ) ABCDBLMZEFABDNOPUFQPUFRPHDBSUFTUAABDUFHAUFUBZUDAB
+        CUFDUGKUEIJUC $.
+        $( [30-Nov-2014] $)
+    $}
+
+    ${
+      subrgmulcl.p $e |- ( ph -> T = ( .r ` R ) ) $.
+      $( A subring is closed under multiplication. $)
+      subrgmulcl $p |- ( ph -> ( X T Y ) e. A ) $=
+        ( cress co csubrg cfv wcel crg subrgring syl eqidd subrgbase ressmulr
+        rngcld ) ABCBLMZDEFABCNOPUDQPHCBRSABCUDHAUDTZUAABUDDCUEKUBIJUC $.
+        $( [30-Nov-2014] $)
+    $}
+  $}
+
+  ${
+    subrgself.r $e |- ( ph -> R e. Ring ) $.
+    subrgself.b $e |- ( ph -> B = ( Base ` R ) ) $.
+    $( Every ring is a subring of itself. $)
+    subrgself $p |- ( ph -> B e. ( SubRing ` R ) ) $=
+      ( cbs cfv csubrg wss cress crg wcel cur ssid a1i wceq eqeltrd eqidd eqid
+      co ressid syl rngidcld issubrg syl3anbrc ) ABCFGZCHGZEAUFUFIZCUFJTZKLCMGZ
+      UFLUFUGLUHAUFNOAUICKACKLUICPDCKUAUBDQAUFCUJDAUFRAUJRUCUFCUFUJUFSUJSUDUEQ
+      $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
     $d ph x y u v $.  $d T x y u v $.  $d P x y u v $.  $d O x y u v $.
     $d Z x y u v $.  $d B x y u v $.  $d S x y u v $.  $d R x y u v $.
     issubrg2.r $e |- ( ph -> R e. Ring ) $.
@@ -14672,33 +14740,49 @@ $)
         ( S C_ B /\ Z e. S /\ O e. S ) /\
         A. x e. S A. y e. S ( ( x P y ) e. S /\
             ( x T y ) e. S /\ ( ( invg ` R ) ` x ) e. S ) ) ) ) $=
-      ( cfv wcel wa adantr vu vv csubrg wss cress co crg w3a cv cminusg cbs cur
-      wral sseq2d eleq1d 3anbi13d eqid issubrg syl6rbbr simpr1 cgrp simpr2 wceq
-      rnggrp syl sseqtrd eqidd ressbased biimpar subrg0 grpidcld simpr3 simplr2
-      3jca cplusg ressplusg simprl simprr grpcld cmulr ressmulr rngcld ad2antrr
-      c0g subgrpinv grpinvcld eqeltrd simprl1 simprl2 simpr simplrr oveq1 fveq2
-      ralrimivva jca weq 3anbi123d oveq2 3anbi12d rcla42va simp1d syl2anc 3impb
-      id ancli adantl simp3d simprl3 simp2d issubrngd impbida bitrd ) AGFUCQRZG
-      DUDZFGUEUFZUGRZIGRZUHZXNJGRZXQUHZBUIZCUIZEUFZGRZYAYBHUFZGRZYAFUJQZQZGRZUH
-      ZCGUMBGUMZSZAXRGFUKQZUDZXPFULQZGRZUHXMAXNYNXQYPXPADYMGLUNAIYOGNUOUPYMFGYO
-      YMUQYOUQURUSZAXRYLAXRSZXTYKYRXNXSXQAXNXPXQUTZYRGXOJYRXPXOVARZAXNXPXQVBXOV
-      DZVEYRGXOFYRGDYMYSADYMVCZXRLTVFYRXOVGZVHZYRGFXOJAXMXRYQVIUUCAJFWDQVCZXRMT
-      AFUGRZXRKTVJVKAXNXPXQVLVNYRYJBCGGYRYAGRZYBGRZSZSZYDYFYIUUJGEXOYAYBUUJXPYT
-      XNXPXQAUUIVMZUUAVEZYRGXOUKQVCUUIUUDTZYREXOVOQVCUUIYRGEXOFUUCAEFVOQVCZXROT
-      VPTYRUUGUUHVQZYRUUGUUHVRZVSUUJGXOHYAYBUUKUUMYRHXOVTQVCUUIYRGXOHFUUCAHFVTQ
-      VCZXRPTWATUUOUUPWBUUJYHYAXOUJQZQGUUJGGFXOYGUURYAAFVARZXRUUIAUUFUUSKFVDVEW
-      CUULUUJYGVGUUJUURVGZUUMUUOUUJXOVGWEUUJGXOUURYAUULUUMUUTUUOWFWGVNWNWOAYLSZ
-      XNXPXQXNXSXQYKAWHZUVAUAUBGEXOHFIJUVAXOVGAUUEYLMTAUUNYLOTUVAGDYMUVBAUUBYLL
-      TVFXNXSXQYKAWIUVAUAUIZGRZUBUIZGRZUVCUVEEUFZGRZUVAUVDUVFSZSZUVIYKUVHUVAUVI
-      WJZAXTYKUVIWKZUVIYKSZUVHUVCUVEHUFZGRZUVCYGQZGRZYJUVHUVOUVQUHUVCYBEUFZGRZU
-      VCYBHUFZGRZUVQUHZBCUVCUVEGGBUAWPZYDUVSYFUWAYIUVQUWCYCUVRGYAUVCYBEWLUOUWCY
-      EUVTGYAUVCYBHWLUOUWCYHUVPGYAUVCYGWMUOWQZCUBWPZUVSUVHUWAUVOUVQUWEUVRUVGGYB
-      UVEUVCEWRUOUWEUVTUVNGYBUVEUVCHWRUOWSWTZXAXBXCUVAUVDSUVDUVDSZYKUVQUVDUWGUV
-      AUVDUVDUVDXDXEXFAXTYKUVDWKUWGYKSUVCUVCEUFZGRZUVCUVCHUFZGRZUVQYJUWIUWKUVQU
-      HUWBBCUVCUVCGGUWDCUAWPZUVSUWIUWAUWKUVQUWLUVRUWHGYBUVCUVCEWRUOUWLUVTUWJGYB
-      UVCUVCHWRUOWSWTXGXBAIYOVCYLNTAUUQYLPTXNXSXQYKAXHZUVAUVDUVFUVOUVJUVIYKUVOU
-      VKUVLUVMUVHUVOUVQUWFXIXBXCAUUFYLKTXJUWMVNXKXL $.
+      ( cfv wcel wa adantr vu vv csubrg wss w3a cv co cminusg wral eqid subrgss
+      cbs adantl wceq sseqtr4d crg simpr subrg0cl subrg1cl 3jca ad2antrr simplr
+      c0g cur simprl simprr cplusg subrgaddcl cmulr subrgmulcl eqidd subrgnegcl
+      ralrimivva jca cress simprl1 sseqtrd simprl2 simplrr weq eleq1d 3anbi123d
+      oveq1 fveq2 oveq2 3anbi12d rcla42va simp1d syl2anc 3impb id ancli simprl3
+      simp3d simp2d issubrngd eqeltrrd issubrg syl3anbrc impbida ) AGFUCQRZGDUD
+      ZJGRZIGRZUEZBUFZCUFZEUGZGRZXFXGHUGZGRZXFFUHQZQZGRZUEZCGUIBGUIZSZAXASZXEXP
+      XRXBXCXDXRGFULQZDXAGXSUDZAXSFGXSUJZUKUMADXSUNZXALTUOXRGFJAFUPRZXAKTZAXAUQ
+      ZAJFVCQUNZXAMTURXRGFIYDYEAIFVDQZUNZXANTUSUTXRXOBCGGXRXFGRZXGGRZSZSZXIXKXN
+      YLGEFXFXGAYCXAYKKVAZAXAYKVBZXRYIYJVEZXRYIYJVFZAEFVGQUNZXAYKOVAVHYLGFHXFXG
+      YMYNYOYPAHFVIQUNZXAYKPVAVJYLGFXMXFYMYNYOYLXMVKVLUTVMVNAXQSZXTFGVOUGZUPRYG
+      GRXAYSGDXSXBXCXDXPAVPAYBXQLTVQZYSUAUBGEYTHFIJYSYTVKAYFXQMTAYQXQOTUUAXBXCX
+      DXPAVRYSUAUFZGRZUBUFZGRZUUBUUDEUGZGRZYSUUCUUESZSZUUHXPUUGYSUUHUQZAXEXPUUH
+      VSZUUHXPSZUUGUUBUUDHUGZGRZUUBXLQZGRZXOUUGUUNUUPUEUUBXGEUGZGRZUUBXGHUGZGRZ
+      UUPUEZBCUUBUUDGGBUAVTZXIUURXKUUTXNUUPUVBXHUUQGXFUUBXGEWCWAUVBXJUUSGXFUUBX
+      GHWCWAUVBXMUUOGXFUUBXLWDWAWBZCUBVTZUURUUGUUTUUNUUPUVDUUQUUFGXGUUDUUBEWEWA
+      UVDUUSUUMGXGUUDUUBHWEWAWFWGZWHWIWJYSUUCSUUCUUCSZXPUUPUUCUVFYSUUCUUCUUCWKW
+      LUMAXEXPUUCVSUVFXPSUUBUUBEUGZGRZUUBUUBHUGZGRZUUPXOUVHUVJUUPUEUVABCUUBUUBG
+      GUVCCUAVTZUURUVHUUTUVJUUPUVKUUQUVGGXGUUBUUBEWEWAUVKUUSUVIGXGUUBUUBHWEWAWF
+      WGWNWIAYHXQNTZAYRXQPTXBXCXDXPAWMZYSUUCUUEUUNUUIUUHXPUUNUUJUUKUULUUGUUNUUP
+      UVEWOWIWJAYCXQKTWPYSIYGGUVLUVMWQXSFGYGYAYGUJWRWSWT $.
       $( [30-Nov-2014] $)
+  $}
+
+  ${
+    $d ph x y z u $.  $d R x y z u $.  $d S A x y z u $.
+    subrgintcl.r $e |- ( ph -> R e. Ring ) $.
+    subrgintcl.a $e |- ( ph -> A C_ ( SubRing ` R ) ) $.
+    subrgintcl.n $e |- ( ph -> A =/= (/) ) $.
+    subrgintcl.i $e |- ( ph -> I = |^| A ) $.
+    $( The intersection of a nonempty class of subrings is a subring. $)
+    subrgintcl $p |- ( ph -> I e. ( SubRing ` R ) ) $=
+      ? $.
+  $}
+
+  ${
+    subrgincl.r $e |- ( ph -> R e. Ring ) $.
+    subrgincl.x $e |- ( ph -> X e. ( SubRing ` R ) ) $.
+    subrgincl.y $e |- ( ph -> Y e. ( SubRing ` R ) ) $.
+    subrgincl.z $e |- ( ph -> Z = ( X i^i Y ) ) $.
+    $( The intersection of two subrings is a subring. $)
+    subrgincl $p |- ( ph -> Z e. ( SubRing ` R ) ) $=
+      ? $.
   $}
 
   ${
