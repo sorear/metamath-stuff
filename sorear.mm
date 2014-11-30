@@ -13812,6 +13812,18 @@ $)
     $}
 
     ${
+      ressbased.d $e |- ( ph -> D C_ ( Base ` W ) ) $.
+      ressbased.r $e |- ( ph -> R = ( W |`s D ) ) $.
+      $( Base set of a finite structure restriction.  (Contributed by Stefan
+         O'Rear, 29-Nov-2014.) $)
+      ressbased $p |- ( ph -> D = ( Base ` R ) ) $=
+        ( cbs cfv cress co cin fveq2d wss cvv wcel wceq fvex ssex eqid ressbase
+        3syl df-ss sylib 3eqtr2rd ) ACGHDBIJZGHZBDGHZKZBACUEGFLABUGMZBNOUHUFPEB
+        UGDGQRBUENDUESTUAAUIUHBPEBUGUBUCUD $.
+        $( [30-Nov-2014] $)
+    $}
+
+    ${
       $d F f a w $.  $d A f $.  $d W f $.
       resslem.r $e |- R = ( W |`s A ) $.
       resslem.e $e |- E = ( F ` W ) $.
@@ -14043,6 +14055,11 @@ $)
       PMUNCUOHEABNOUOPZHRDUNSTZUKULUMUAZUKULUMUBZUKULUMUCZUDUPBUHUEUNUQABLUNCUO
       HKEABNUFOUSUTVAVBVCUGUIUJ $.
       $( [27-Nov-2014] $)
+
+    $( The reciprocal operation in the field of complex numbers. $)
+    cnfldrec $p |- ( ( X e. CC /\ X =/= 0 ) ->
+        ( ( invr ` CCfld ) ` X ) = ( 1 / X ) ) $=
+      ? $.
   $}
 
   ${
@@ -14100,6 +14117,29 @@ $)
       PZUPUPPZUPQZADRSZUPDTMZSZVCVDUEHAVFVHHVGDUPVGQZVEUDUFZVGVADUPUPVIVAQVEUGU
       HUIUJACRSUPCTMZSUSUTUEGAVGVKUPABDCKUKVJULVKUQCUOUPVKQUQQUOQUGUHUMIJUN $.
       $( [27-Nov-2014] $)
+  $}
+
+  ${
+    $d R x $.  $d S x $.  $d A x $.
+    subgrpinv.r $e |- ( ph -> R e. Grp ) $.
+    subgrpinv.s $e |- ( ph -> S e. Grp ) $.
+    subgrpinv.m $e |- ( ph -> M = ( invg ` R ) ) $.
+    subgrpinv.n $e |- ( ph -> N = ( invg ` S ) ) $.
+    subgrpinv.b $e |- ( ph -> B = ( Base ` S ) ) $.
+    subgrpinv.x $e |- ( ph -> X e. B ) $.
+    subgrpinv.a $e |- ( ph -> S = ( R |`s A ) ) $.
+    $( A subset of a group which is a group must have the same inverses.
+       (Contributed by Stefan O'Rear, 27-Nov-2014.) $)
+    subgrpinv $p |- ( ph -> ( M ` X ) = ( N ` X ) ) $=
+      ( cfv wceq eqidd wcel eqid cminusg cplusg co c0g subgrpid cgrp wb eleqtrd
+      cbs grpinvcl syl2anc grpinvid1 syl3anc mpbid ressplusg eqcomd ressbasess1
+      oveqd 3eqtr2rd sseldd mpbird fveq1d 3eqtr4d ) AHDUAPZPZHEUAPZPZHFPHGPAVEV
+      GQZHVGDUBPZUCZDUDPZQZAVKEUDPZHVGEUBPZUCZVJABDEVKVMIJAVKRAVMROUEAVGVGQZVOV
+      MQZAVGRAEUFSZHEUIPZSZVGVSSZVPVQUGJAHCVSNMUHZAVRVTWAJWBVSEVFHVSTZVFTZUJUKZ
+      VSVNEVFVMHVGWCVNTVMTWDULUMUNAVNVIHVGAVIVNABVIEDOAVIRUOUPURUSADUFSHDUIPZSV
+      GWFSVHVLUGIAVSWFHABEDOUQZWBUTAVSWFVGWGWEUTWFVIDVDVKHVGWFTVITVKTVDTULUMVAA
+      HFVDKVBAHGVFLVBVC $.
+      $( [30-Nov-2014] $)
   $}
 
   ${
@@ -14364,13 +14404,16 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c _ZZ IntgOver $.
+  $c _ZZ IntgOver Monic $.
 
   $( Extend class notation with the integral-over predicate. $)
   citgo $a class IntgOver $.
 
   $( Extend class notation with the class of algebraic integers. $)
   cza $a class _ZZ $.
+
+  $( Extend class notation with the class of monic polynomials. $)
+  cmnc $a class Monic $.
 
   ${
     $d x p s $.
@@ -14443,30 +14486,403 @@ $)
 
   $}
 
-  $(
-  @{
-    itgofg.s @e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) @.
-    itgofg.a @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) @.
-    @( An element is finitely generated over a ring if and only adjoining it to
-       the base ring results in a finitely spanned algebra. @)
-    itgofg @p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
-          A e. LFinGen ) ) @=
-      ? @.
-  @}
+  ${
+    isfigen.a $e |- B = ( Base ` A ) $.
+    $( Property of a finitely generated left module. $)
+    isfigen $p |- ( A e. LFinGen <-> ( A e. LMod /\ E. f e. ~P B ( f e. Fin /\
+        ( ( LSpan ` A ) ` f ) = B ) ) ) $=
+      ? $.
+  $}
 
-  @{
-    itgocllem.a @e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) @.
-    itgocllem.b @e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) @.
-    itgocllem.c @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) @.
-    itgocllem.d @e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) @.
-    itgocllem.e @e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) @.
-    itgocllem.f @e |- Z e. { ( X + Y ) , ( X x. Y ) } @.
-    @( Integrality is transitive(?). @)
-    itgocllem @p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
-          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) @=
-      ? @.
-  @}
-  $)
+  ${
+    $d ph x y z $.  $d Z x y z $.  $d P x y z $.  $d T x y z $.  $d O x y z $.
+    $d S x y z $.  $d I x y z $.  $d N x y z $.  $d D x y z $.
+    issubgrpd.s $e |- ( ph -> S = ( I |`s D ) ) $.
+    issubgrpd.z $e |- ( ph -> Z = ( 0g ` I ) ) $.
+    issubgrpd.p $e |- ( ph -> P = ( +g ` I ) ) $.
+    issubgrpd.ss $e |- ( ph -> D C_ ( Base ` I ) ) $.
+    issubgrpd.zcl $e |- ( ph -> Z e. D ) $.
+    issubgrpd.acl $e |- ( ( ph /\ x e. D /\ y e. D ) -> ( x P y ) e. D ) $.
+    issubgrpd.ncl $e |- ( ( ph /\ x e. D ) -> ( ( invg ` I ) ` x ) e. D ) $.
+
+    ${
+      issubgrpd.g $e |- ( ph -> I e. Grp ) $.
+      $( Prove a subgroup by closure. $)
+      issubgrpd $p |- ( ph -> S e. Grp ) $=
+        ( cfv co wcel wceq vz cv cminusg ressbased ressplusg cress cvv syl6eqel
+        ovex w3a cplusg cgrp cbs adantr sseld 3anim123d imp eqid grpass syl2anc
+        wa oveqd eqidd oveq123d eqeq12d mpbird c0g sselda grplid eqeq1d grplinv
+        wb isgrpd ) ABCUADEFBUBZGUCQZQZHADFGLIUDADEFGIKUEAFGDUFRUGIGDUFUIUHNAVN
+        DSZCUBZDSZUAUBZDSZUJZVAZVNVRERZVTERZVNVRVTERZERZTZVNVRGUKQZRZVTWIRZVNVR
+        VTWIRZWIRZTZWCGULSZVNGUMQZSZVRWPSZVTWPSZUJZWNAWOWBPUNAWBWTAVQWQVSWRWAWS
+        ADWPVNLUOADWPVRLUOADWPVTLUOUPUQWPWIGVNVRVTWPURZWIURZUSUTAWHWNVLWBAWEWKW
+        GWMAWDWJVTVTEWIKAEWIVNVRKVBAVTVCVDAVNVNWFWLEWIKAVNVCZAEWIVRVTKVBVDVEUNV
+        FMAVQVAZHVNERZVNTZGVGQZVNWIRZVNTZXDWOWQXIAWOVQPUNZADWPVNLVHZWPWIGXGVNXA
+        XBXGURZVIUTAXFXIVLVQAXEXHVNAHXGVNVNEWIKJXCVDVJUNVFOXDVPVNERZHTZVPVNWIRZ
+        XGTZXDWOWQXPXJXKWPWIGVOXGVNXAXBXLVOURVKUTAXNXPVLVQAXMXOHXGAEWIVPVNKVBJV
+        EUNVFVM $.
+        $( [29-Nov-2014] $)
+    $}
+
+    ${
+      issubabld.g $e |- ( ph -> I e. Abel ) $.
+      $( Prove an Abelian subgroup by closure. $)
+      issubabld $p |- ( ph -> S e. Abel ) $=
+        ( wcel cv co wceq cabel ablgrp syl issubgrpd ressbased ressplusg cplusg
+        cgrp w3a cfv cbs 3ad2ant1 sselda 3adant3 3adant2 eqid ablcom syl3anc wb
+        oveqd eqeq12d mpbird isabld ) ABCDEFABCDEFGHIJKLMNOAGUAQZGUHQPGUBUCUDAD
+        FGLIUEADEFGIKUFABRZDQZCRZDQZUIZVEVGESZVGVEESZTZVEVGGUGUJZSZVGVEVMSZTZVI
+        VDVEGUKUJZQZVGVQQZVPAVFVDVHPULAVFVRVHADVQVELUMUNAVHVSVFADVQVGLUMUOVQVMG
+        VEVGVQUPVMUPUQURAVFVLVPUSVHAVJVNVKVOAEVMVEVGKUTAEVMVGVEKUTVAULVBVC $.
+        $( [30-Nov-2014] $)
+    $}
+
+    ${
+      issubrngd.o $e |- ( ph -> O = ( 1r ` I ) ) $.
+      issubrngd.t $e |- ( ph -> T = ( .r ` I ) ) $.
+      issubrngd.ocl $e |- ( ph -> O e. D ) $.
+      issubrngd.tcl $e |- ( ( ph /\ x e. D /\ y e. D ) -> ( x T y ) e. D ) $.
+
+      ${
+        issubrngd.g $e |- ( ph -> I e. Ring ) $.
+        $( Prove a subring by closure. $)
+        issubrngd $p |- ( ph -> S e. Ring ) $=
+          ( vz ressbased ressplusg ressmulr crg wcel cabel rngabl syl issubabld
+          cv w3a wa co wceq cmulr cfv cbs adantr sseld 3anim123d rngass syl2anc
+          imp wb oveqd eqidd oveq123d eqeq12d mpbird cplusg rngdi rngdir sselda
+          eqid cur rnglidm eqeq1d rngridm isrngd ) ABCUCDEFGIADFHNKUDADEFHKMUEA
+          DFGHKSUFABCDEFHJKLMNOPQAHUGUHZHUIUHUBHUJUKULUAABUMZDUHZCUMZDUHZUCUMZD
+          UHZUNZUOZWDWFGUPZWHGUPZWDWFWHGUPZGUPZUQZWDWFHURUSZUPZWHWQUPZWDWFWHWQU
+          PZWQUPZUQZWKWCWDHUTUSZUHZWFXCUHZWHXCUHZUNZXBAWCWJUBVAZAWJXGAWEXDWGXEW
+          IXFADXCWDNVBADXCWFNVBADXCWHNVBVCVFZXCHWQWDWFWHXCVQZWQVQZVDVEAWPXBVGWJ
+          AWMWSWOXAAWLWRWHWHGWQSAGWQWDWFSVHZAWHVIZVJAWDWDWNWTGWQSAWDVIZAGWQWFWH
+          SVHZVJVKVAVLWKWDWFWHEUPZGUPZWLWDWHGUPZEUPZUQZWDWFWHHVMUSZUPZWQUPZWRWD
+          WHWQUPZYAUPZUQZWKWCXGYFXHXIXCYAHWQWDWFWHXJYAVQZXKVNVEAXTYFVGWJAXQYCXS
+          YEAWDWDXPYBGWQSXNAEYAWFWHMVHVJAWLWRXRYDEYAMXLAGWQWDWHSVHZVJVKVAVLWKWD
+          WFEUPZWHGUPZXRWNEUPZUQZWDWFYAUPZWHWQUPZYDWTYAUPZUQZWKWCXGYPXHXIXCYAHW
+          QWDWFWHXJYGXKVOVEAYLYPVGWJAYJYNYKYOAYIYMWHWHGWQSAEYAWDWFMVHXMVJAXRYDW
+          NWTEYAMYHXOVJVKVAVLTAWEUOZIWDGUPZWDUQZHVRUSZWDWQUPZWDUQZYQWCXDUUBAWCW
+          EUBVAZADXCWDNVPZXCHWQYTWDXJXKYTVQZVSVEAYSUUBVGWEAYRUUAWDAIYTWDWDGWQSR
+          XNVJVTVAVLYQWDIGUPZWDUQZWDYTWQUPZWDUQZYQWCXDUUIUUCUUDXCHWQYTWDXJXKUUE
+          WAVEAUUGUUIVGWEAUUFUUHWDAWDWDIYTGWQSXNRVJVTVAVLWB $.
+          $( [30-Nov-2014] $)
+      $}
+
+      issubdrngd.rcl $e |- ( ( ph /\ ( x e. D /\ x =/= Z ) ) ->
+          ( ( invr ` I ) ` x ) e. D ) $.
+
+      ${
+        issubdrngd.g $e |- ( ph -> I e. DivRing ) $.
+        $( Prove a sub-division-ring by closure. $)
+        issubdrngd $p |- ( ph -> S e. DivRing ) $=
+          ( cv cinvr cfv ressbased ressmulr cbs wss cress co crg cur csubrg cdr
+          wcel drngrng syl issubrngd eqeltrrd eqid issubrg syl3anbrc subrg0 wne
+          subrg1 wa csn cdif eldifsn anbi12i cmulr adantr ssdif difeq2d sseqtrd
+          c0g sneqd sselda adantrr adantrl drngmcl syl3anc oveqd eleq12d mpbird
+          wb simprbi sylan2br 3impb drngunz 3netr4d sseld neeq2d biimpd anim12d
+          imp drnginvrn0 3expb syl2anc wceq drnginvrl eqeq12d isdrngd ) ABCDFGI
+          BUDZHUEUFZUFZJADFHNKUGADFGHKSUHADHFJADHUIUFZUJZHDUKULZUMUQHUNUFZDUQDH
+          UOUFUQNAFXKUMKABCDEFGHIJKLMNOPQRSTUAAHUPUQZHUMUQUCHURUSZUTZVAAIXLDRTV
+          AXIHDXLXIVBZXLVBZVCVDZKLXNVEADHFIXRKRXNVGXOAXFDUQZXFJVFZVHZCUDZDUQYBJ
+          VFVHZXFYBGULZJVFZYAYCVHAXFDJVIZVJZUQZYBYGUQZVHZYEYHYAYIYCXFDJVKYBDJVK
+          VLAYJVHZYDXIYFVJZUQZYEYKYMXFYBHVMUFZULZXIHVRUFZVIZVJZUQZYKXMXFYRUQZYB
+          YRUQZYSAXMYJUCVNAYHYTYIAYGYRXFAYGYLYRAXJYGYLUJNDXIYFVOUSAYFYQXIAJYPLV
+          SVPZVQZVTWAAYIUUAYHAYGYRYBUUCVTWBXIHYNXFYBYPXPYNVBZYPVBZWCWDAYMYSWHYJ
+          AYDYOYLYRAGYNXFYBSWEUUBWFVNWGYMYDXIUQYEYDXIJVKWIUSWJWKAXLYPIJAXMXLYPV
+          FUCHXLYPUUEXQWLUSRLWMUBAYAVHZXHJVFZXHYPVFZUUFXMXFXIUQZXFYPVFZVHZUUHAX
+          MYAUCVNZAYAUUKAXSUUIXTUUJADXIXFNWNAXTUUJAJYPXFLWOWPWQWRZXMUUIUUJUUHXI
+          HXGXFYPXPUUEXGVBZWSWTXAAUUGUUHWHYAAJYPXHLWOVNWGUUFXHXFGULZIXBZXHXFYNU
+          LZXLXBZUUFXMUUKUURUULUUMXMUUIUUJUURXIHYNXLXGXFYPXPUUEUUDXQUUNXCWTXAAU
+          UPUURWHYAAUUOUUQIXLAGYNXHXFSWERXDVNWGXE $.
+          $( [30-Nov-2014] $)
+      $}
+    $}
+  $}
+
+  ${
+    grpcld.r $e |- ( ph -> G e. Grp ) $.
+    grpcld.b $e |- ( ph -> B = ( Base ` G ) ) $.
+
+    ${
+      grpcld.z $e |- ( ph -> Z = ( 0g ` G ) ) $.
+      $( Deduction version of ~ grpidcl . $)
+      grpidcld $p |- ( ph -> Z e. B ) $=
+        ( wcel c0g cfv cbs cgrp eqid grpidcl syl eleq12d mpbird ) ADBHCIJZCKJZH
+        ZACLHTESCRSMRMNOADRBSGFPQ $.
+        $( [30-Nov-2014] $)
+    $}
+
+    ${
+      grpinvcld.n $e |- ( ph -> N = ( invg ` G ) ) $.
+      grpinvcld.x $e |- ( ph -> X e. B ) $.
+      $( Deduction verison of ~ grpinvcl . $)
+      grpinvcld $p |- ( ph -> ( N ` X ) e. B ) $=
+        ( cfv wcel cminusg cgrp eleqtrd eqid grpinvcl syl2anc fveq1d eleq12d
+        cbs mpbird ) AEDJZBKECLJZJZCTJZKZACMKEUEKUFFAEBUEIGNUECUCEUEOUCOPQAUBUD
+        BUEAEDUCHRGSUA $.
+        $( [30-Nov-2014] $)
+    $}
+
+    grpcld.p $e |- ( ph -> P = ( +g ` G ) ) $.
+    grpcld.x $e |- ( ph -> X e. B ) $.
+    grpcld.y $e |- ( ph -> Y e. B ) $.
+    $( Deduction version of ~ grpcl . $)
+    grpcld $p |- ( ph -> ( X P Y ) e. B ) $=
+      ( co wcel cplusg cfv cbs cgrp eleqtrd eqid grpcl syl3anc eleq12d mpbird
+      oveqd ) AEFCLZBMEFDNOZLZDPOZMZADQMEUHMFUHMUIGAEBUHJHRAFBUHKHRUHUFDEFUHSUF
+      STUAAUEUGBUHACUFEFIUDHUBUC $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    rngcld.r $e |- ( ph -> R e. Ring ) $.
+    rngcld.b $e |- ( ph -> B = ( Base ` R ) ) $.
+
+    ${
+      rngcld.o $e |- ( ph -> O = ( 1r ` R ) ) $.
+      $( Deduction version of ~ rngidcl . $)
+      rngidcld $p |- ( ph -> O e. B ) $=
+        ( wcel cur cfv cbs crg eqid rngidcl syl eleq12d mpbird ) ADBHCIJZCKJZHZ
+        ACLHTESCRSMRMNOADRBSGFPQ $.
+        $( [30-Nov-2014] $)
+    $}
+
+    rngcld.t $e |- ( ph -> T = ( .r ` R ) ) $.
+    rngcld.x $e |- ( ph -> X e. B ) $.
+    rngcld.y $e |- ( ph -> Y e. B ) $.
+    $( Deduction version of ~ rngcl . $)
+    rngcld $p |- ( ph -> ( X T Y ) e. B ) $=
+      ( co wcel cmulr cfv cbs crg eleqtrd eqid rngcl syl3anc eleq12d mpbird
+      oveqd ) AEFDLZBMEFCNOZLZCPOZMZACQMEUHMFUHMUIGAEBUHJHRAFBUHKHRUHCUFEFUHSUF
+      STUAAUEUGBUHADUFEFIUDHUBUC $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    $d ph x y u v $.  $d T x y u v $.  $d P x y u v $.  $d O x y u v $.
+    $d Z x y u v $.  $d B x y u v $.  $d S x y u v $.  $d R x y u v $.
+    issubrg2.r $e |- ( ph -> R e. Ring ) $.
+    issubrg2.b $e |- ( ph -> B = ( Base ` R ) ) $.
+    issubrg2.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
+    issubrg2.o $e |- ( ph -> O = ( 1r ` R ) ) $.
+    issubrg2.p $e |- ( ph -> P = ( +g ` R ) ) $.
+    issubrg2.t $e |- ( ph -> T = ( .r ` R ) ) $.
+    $( Characterization of subrings in terms of closure properties. $)
+    issubrg2 $p |- ( ph -> ( S e. ( SubRing ` R ) <-> (
+        ( S C_ B /\ Z e. S /\ O e. S ) /\
+        A. x e. S A. y e. S ( ( x P y ) e. S /\
+            ( x T y ) e. S /\ ( ( invg ` R ) ` x ) e. S ) ) ) ) $=
+      ( cfv wcel wa adantr vu vv csubrg wss cress co crg w3a cv cminusg cbs cur
+      wral sseq2d eleq1d 3anbi13d eqid issubrg syl6rbbr simpr1 cgrp simpr2 wceq
+      rnggrp syl sseqtrd eqidd ressbased biimpar subrg0 grpidcld simpr3 simplr2
+      3jca cplusg ressplusg simprl simprr grpcld cmulr ressmulr rngcld ad2antrr
+      c0g subgrpinv grpinvcld eqeltrd simprl1 simprl2 simpr simplrr oveq1 fveq2
+      ralrimivva jca weq 3anbi123d oveq2 3anbi12d rcla42va simp1d syl2anc 3impb
+      id ancli adantl simp3d simprl3 simp2d issubrngd impbida bitrd ) AGFUCQRZG
+      DUDZFGUEUFZUGRZIGRZUHZXNJGRZXQUHZBUIZCUIZEUFZGRZYAYBHUFZGRZYAFUJQZQZGRZUH
+      ZCGUMBGUMZSZAXRGFUKQZUDZXPFULQZGRZUHXMAXNYNXQYPXPADYMGLUNAIYOGNUOUPYMFGYO
+      YMUQYOUQURUSZAXRYLAXRSZXTYKYRXNXSXQAXNXPXQUTZYRGXOJYRXPXOVARZAXNXPXQVBXOV
+      DZVEYRGXOFYRGDYMYSADYMVCZXRLTVFYRXOVGZVHZYRGFXOJAXMXRYQVIUUCAJFWDQVCZXRMT
+      AFUGRZXRKTVJVKAXNXPXQVLVNYRYJBCGGYRYAGRZYBGRZSZSZYDYFYIUUJGEXOYAYBUUJXPYT
+      XNXPXQAUUIVMZUUAVEZYRGXOUKQVCUUIUUDTZYREXOVOQVCUUIYRGEXOFUUCAEFVOQVCZXROT
+      VPTYRUUGUUHVQZYRUUGUUHVRZVSUUJGXOHYAYBUUKUUMYRHXOVTQVCUUIYRGXOHFUUCAHFVTQ
+      VCZXRPTWATUUOUUPWBUUJYHYAXOUJQZQGUUJGGFXOYGUURYAAFVARZXRUUIAUUFUUSKFVDVEW
+      CUULUUJYGVGUUJUURVGZUUMUUOUUJXOVGWEUUJGXOUURYAUULUUMUUTUUOWFWGVNWNWOAYLSZ
+      XNXPXQXNXSXQYKAWHZUVAUAUBGEXOHFIJUVAXOVGAUUEYLMTAUUNYLOTUVAGDYMUVBAUUBYLL
+      TVFXNXSXQYKAWIUVAUAUIZGRZUBUIZGRZUVCUVEEUFZGRZUVAUVDUVFSZSZUVIYKUVHUVAUVI
+      WJZAXTYKUVIWKZUVIYKSZUVHUVCUVEHUFZGRZUVCYGQZGRZYJUVHUVOUVQUHUVCYBEUFZGRZU
+      VCYBHUFZGRZUVQUHZBCUVCUVEGGBUAWPZYDUVSYFUWAYIUVQUWCYCUVRGYAUVCYBEWLUOUWCY
+      EUVTGYAUVCYBHWLUOUWCYHUVPGYAUVCYGWMUOWQZCUBWPZUVSUVHUWAUVOUVQUWEUVRUVGGYB
+      UVEUVCEWRUOUWEUVTUVNGYBUVEUVCHWRUOWSWTZXAXBXCUVAUVDSUVDUVDSZYKUVQUVDUWGUV
+      AUVDUVDUVDXDXEXFAXTYKUVDWKUWGYKSUVCUVCEUFZGRZUVCUVCHUFZGRZUVQYJUWIUWKUVQU
+      HUWBBCUVCUVCGGUWDCUAWPZUVSUWIUWAUWKUVQUWLUVRUWHGYBUVCUVCEWRUOUWLUVTUWJGYB
+      UVCUVCHWRUOWSWTXGXBAIYOVCYLNTAUUQYLPTXNXSXQYKAXHZUVAUVDUVFUVOUVJUVIYKUVOU
+      VKUVLUVMUVHUVOUVQUWFXIXBXCAUUFYLKTXJUWMVNXKXL $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    $d x y z $.
+
+    $( The rationals are a sub-division-ring of ` CCfld ` . $)
+    cnqdrng $p |- ( CCfld |`s QQ ) e. DivRing $=
+      ( vx vy ccnfld cq co cdr wcel wtru caddc cmul c1 cc0 cfv wceq cc cz ax-mp
+      a1i zq cv cress eqidd c0g cnfld0 cplusg cnfldadd cbs wss cnfldbas sseqtri
+      0z qaddcl 3adant1 cminusg cneg qcn cnfldneg syl qnegcl eqeltrd adantl cur
+      qsscn cnfld1 cmulr cnfldmul 1z qmulcl wa cinvr cdiv cnfldrec sylan qreccl
+      wne cndrng issubdrngd trud ) CDUAEZFGHABDIVSJCKLHVSUBLCUCMNHUDRICUEMNHUFR
+      DCUGMZUHHDOVTVCUIUJRLDGZHLPGWAUKLSQRATZDGZBTZDGZWBWDIEDGHWBWDULUMWCWBCUNM
+      MZDGHWCWFWBUOZDWCWBOGZWFWGNWBUPZWBUQURWBUSUTVAKCVBMNHVDRJCVEMNHVFRKDGZHKP
+      GWJVGKSQRWCWEWBWDJEDGHWBWDVHUMWCWBLVOZVIZWBCVJMMZDGHWLWMKWBVKEZDWCWHWKWMW
+      NNWIWBVLVMWBVNUTVACFGHVPRVQVR $.
+      $( [30-Nov-2014] $)
+
+    $( The integers are a subring of ` CCfld ` . $)
+    cnzring $p |- ( CCfld |`s ZZ ) e. Ring $=
+      ( vx vy ccnfld cz cress co crg wcel wtru caddc cmul c1 cc0 eqidd cfv wceq
+      a1i cc cv 3adant1 c0g cnfld0 cplusg cnfldadd cbs wss zsscn sseqtri zaddcl
+      cnfldbas 0z cminusg cneg zcn cnfldneg syl znegcl eqeltrd adantl cur cmulr
+      cnfld1 cnfldmul 1z zmulcl cnrng issubrngd trud ) CDEFZGHIABDJVIKCLMIVINMC
+      UAOPIUBQJCUCOPIUDQDCUEOZUFIDRVJUGUJUHQMDHIUKQASZDHZBSZDHZVKVMJFDHIVKVMUIT
+      VLVKCULOOZDHIVLVOVKUMZDVLVKRHVOVPPVKUNVKUOUPVKUQURUSLCUTOPIVBQKCVAOPIVCQL
+      DHIVDQVLVNVKVMKFDHIVKVMVETCGHIVFQVGVH $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    srafgtr.t $e |- ( ph -> T e. Ring ) $.
+    srafgtr.s $e |- ( ph -> S e. ( SubRing ` T ) ) $.
+    srafgtr.r $e |- ( ph -> R e. ( SubRing ` ( T |`s S ) ) ) $.
+    srafgtr.a $e |- ( ph -> A = ( ( subringAlg ` T ) ` S ) ) $.
+    srafgtr.b $e |- ( ph -> B = ( ( subringAlg ` ( T |`s S ) ) ` R ) ) $.
+    srafgtr.c $e |- ( ph -> C = ( ( subringAlg ` T ) ` R ) ) $.
+    srafgtr.ts $e |- ( ph -> A e. LFinGen ) $.
+    srafgtr.sr $e |- ( ph -> B e. LFinGen ) $.
+    $( A finitely generated ring extension of a finitely generated ring
+       extension is finitely generated. $)
+    srafgtr $p |- ( ph -> C e. LFinGen ) $=
+      ? $.
+  $}
+
+  ${
+    rngunsnply.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    rngunsnply.x $e |- ( ph -> X e. CC ) $.
+    rngunsnply.s $e |- ( ph -> S = ( ( RingSpan ` CCfld ) `
+        ( B u. { X } ) ) ) $.
+    $( Adjoining one element to a ring results in a set of polynomial
+       evaluations. $)
+    rngunsnply $p |- ( ph -> ( V e. S <->
+        E. p e. ( Poly ` B ) V = ( p ` X ) ) ) $=
+      ? $.
+
+    rngunsnpow.l $e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) $.
+    rngunsnpow.p $e |- ( ph -> P = { x | E. i e. NN0 x = ( X ^ i ) } ) $.
+    $( Adjoining one element to a ring results in linear span of powers. $)
+    rngunsnpow $p |- ( ph -> S = ( ( LSpan ` A ) ` P ) ) $=
+      ? $.
+  $}
+
+  ${
+    itgofglem5.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    itgofglem5.x $e |- ( ph -> X e. CC ) $.
+    itgofglem5.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
+    itgofglem5.d $e |- ( ph -> D e. NN0 ) $.
+    itgofglem5.d2 $e |- ( ph -> ( deg ` U ) < D ) $.
+    itgofglem5.a $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
+    itgofglem5.q $e |- Q = { x | E. i e. ( 0 ... ( D - 1 ) ) x = ( X ^ i ) } $.
+    $( Lemma for ~ itgofg .  The span of the first ` D ` powers of ` X `
+       contains all evaluations of polynomials with degree at most ` D ` . $)
+    itgofglem5 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
+      ? $.
+  $}
+
+  ${
+    itgofglem4.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    itgofglem4.p $e |- ( ph -> P e. ( Monic ` B ) ) $.
+    itgofglem4.x $e |- ( ph -> X e. CC ) $.
+    itgofglem4.x0 $e |- ( ph -> ( P ` X ) = 0 ) $.
+    itgofglem4.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
+    itgofglem4.f $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
+    itgofglem4.g $e |- Q = { x | E. i e. ( 0 ... ( ( deg ` P ) - 1 ) )
+        x = ( X ^ i ) } $.
+    $( Lemma for ~ itgofg .  Use the polynomial identity to inductively prove
+       that the span of Q contains all polynomial evaluations. $)
+    itgofglem4 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
+      ? $.
+  $}
+
+  ${
+    itgofglem3.a $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    itgofglem3.b $e |- ( ph -> P e. ( Monic ` B ) ) $.
+    itgofglem3.c $e |- ( ph -> X e. CC ) $.
+    itgofglem3.d $e |- ( ph -> ( P ` X ) = 0 ) $.
+    itgofglem3.e $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
+    itgofglem3.f $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
+    itgofglem3.g $e |- Q = { x | E. i e. ( 0 ... ( deg ` P ) )
+        x = ( X ^ i ) } $.
+    $( Lemma for ~ itgofg .  Given a polynomial witnessing the integrality of
+       ` X ` , demonstrate the finite generation of ` A ` . $)
+    itgofglem3 $p |- ( ph -> ( ( LSpan ` A ) ` Q ) = S ) $=
+      ? $.
+  $}
+
+  ${
+    itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
+    itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
+    $( Lemma for ~ itgofg . $)
+    itgofglem2 $p |- ( ( B e. ( SubRing ` CCfld ) /\ A e. LFinGen ) ->
+          X e. ( IntgOver ` B ) ) $=
+      ? $.
+
+    $( Lemma for ~ itgofg . $)
+    itgofglem1 $p |- ( ( B e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` B ) ) ->
+          A e. LFinGen ) $=
+      ? $.
+
+    $( An element is finitely generated over a ring if and only adjoining it to
+       the base ring results in a finitely spanned algebra.
+
+       Both directions:  The ring span of a ring R and a singleton is the
+       R-linear span of the powers of the singleton.  It is also the set of
+       values of R-polynomials evaluated at the singleton.
+
+       Forward:  If X is algebraic, it is the root of a monic polynomial P with
+       degree D. The span of the finite set of powers (X^0 ...  X^D) is
+       finitely spanned, and it is equal to the span of all the powers: it is a
+       subset because the ring span is a ring which contains all the powers,
+       and it also a superset, because it is a linear subspace that contains
+       all of the powers (by induction).
+
+       Reverse:  Suppose the ring of polynomial values is finitely spanned,
+       that is, there is a finite set of polynomials P(i) such that any linear
+       subspace that contains P(i)(X) contains all polynomials of X. Let N be
+       one more than the supremum of the degrees of P(i).  By assumption (X^N)
+       is in the span of P(i)(X), so there is an R-linear combination of
+       P(i)(X) equal to (X^N); but an R-linear combination of R-polynomials
+       with degree less than N is an R-polynomial with degree less than N, so
+       let Q be an R-polynomial such that Q(X) = (X^N) and deg(Q) < N. Then
+       (X^N) - Q(X) is a monic R-polynomial with X as a root, i.e.  X is
+       algebraic. $)
+    itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
+          A e. LFinGen ) ) $=
+      ? $.
+  $}
+
+  ${
+    rgspnchn.r $e |- ( ph -> R e. Ring ) $.
+    rgspnchn.s $e |- ( ph -> S = ( RingSpan ` R ) ) $.
+    rgspnchn.b $e |- ( ph -> B = ( Base ` R ) ) $.
+    rgspnchn.x $e |- ( ph -> X C_ B ) $.
+    rgspnchn.a $e |- ( ph -> A C_ B ) $.
+    $( Chaining lemma for ring spans. $)
+    rgspnchn $p |- ( ph -> ( R ` ( ( R ` X ) u. A ) ) = ( R ` ( X u. A ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    itgofg2.ba $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    itgofg2.fi $e |- ( ph -> F e. Fin ) $.
+    itgofg2.ss $e |- ( ph -> F C_ ( IntgOver ` B ) ) $.
+    itgofg2.sp $e |- ( ph -> S = ( ( RingSpan ` CCfld ) ` ( B u. F ) ) ) $.
+    itgofg2.al $e |- ( ph -> A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) ) $.
+    $( Adjoining finitely many integral elements to a ring still gives a finite
+       extension. $)
+    itgofg2 $p |- ( ph -> A e. LFinGen ) $=
+      ? $.
+  $}
+
+  ${
+    itgocllem.a $e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) $.
+    itgocllem.b $e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) $.
+    itgocllem.c $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) $.
+    itgocllem.d $e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) $.
+    itgocllem.e $e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) $.
+    itgocllem.f $e |- Z e. { ( X + Y ) , ( X x. Y ) } $.
+    $( Integrality is transitive(?). $)
+    itgocllem $p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
+          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) $=
+      ? $.
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
