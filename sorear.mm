@@ -14415,7 +14415,7 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c _ZZ IntgOver Monic $.
+  $c _ZZ IntgOver Monic Poly< $.
 
   $( Extend class notation with the integral-over predicate. $)
   citgo $a class IntgOver $.
@@ -14426,8 +14426,20 @@ $)
   $( Extend class notation with the class of monic polynomials. $)
   cmnc $a class Monic $.
 
+  $( Extend class notatin with the class of limited-degree polynomials. $)
+  cplylt $a class Poly< $.
+
   ${
     $d x p s $.
+
+    $( Define the class of monic polynomials. $)
+    df-mnc $a |- Monic = ( s e. ~P CC |-> { p e. ( Poly ` s ) |
+        ( ( coeff ` p ) ` ( deg ` p ) ) = 1 } ) $.
+
+    $( Define the class of limited-degree polynomials. $)
+    df-plylt $a |- Poly< = ( s e. ~P CC , x e. NN0 |-> { p e. ( Poly ` s ) |
+        ( p = 0p \/ ( deg ` p ) < x ) } ) $.
+
     $( A complex number is said to be integral over a subset if it is the root
        of a monic polynomial with coefficients from the subset.  This
        definition is typically not used for fields but it works there, see
@@ -14576,6 +14588,13 @@ $)
           EUBVAZADXCWDNVPZXCHWQYTWDXJXKYTVQZVSVEAYSUUBVGWEAYRUUAWDAIYTWDWDGWQSR
           XNVJVTVAVLYQWDIGUPZWDUQZWDYTWQUPZWDUQZYQWCXDUUIUUCUUDXCHWQYTWDXJXKUUE
           WAVEAUUGUUIVGWEAUUFUUHWDAWDWDIYTGWQSXNRVJVTVAVLWB $.
+          $( [30-Nov-2014] $)
+
+        $( Prove a subring by closure (definition version). $)
+        issubrngd2 $p |- ( ph -> D e. ( SubRing ` I ) ) $=
+          ( csubrg cfv wcel cbs wss crg eqidd issubrgd issubrngd mpbir3and ) AD
+          HUCUDUEDHUFUDZUGFUHUEIDUEAUMHDFIAUMUIRKUJNABCDEFGHIJKLMNOPQRSTUAUBUKT
+          UL $.
           $( [30-Nov-2014] $)
       $}
 
@@ -14778,6 +14797,61 @@ $)
   $}
 
   ${
+    $d ph a b $.  $d X a b $.  $d Y a b $.  $d S a b $.
+    cnsrexpcl.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
+    cnsrexpcl.x $e |- ( ph -> X e. S ) $.
+    cnsrexpcl.y $e |- ( ph -> Y e. NN0 ) $.
+    $( Exponentiation is closed in number rings. $)
+    cnsrexpcl $p |- ( ph -> ( X ^ Y ) e. S ) $=
+      ( va wcel cexp co wi c1 wceq oveq2 eleq1d imbi2d cc ccnfld a1i vb cn0 cc0
+      cv caddc weq csubrg cfv wss cnfldbas subrgss syl sseldd exp0 cnrng cnfld1
+      crg cur subrg1cl eqeltrd cmul 3ad2ant2 simp1 expp1 syl2anc simp3 cnfldmul
+      w3a cmulr subrgmulcl 3exp a2d nn0ind mpcom ) DUBIACDJKZBIZGACHUDZJKZBIZLA
+      CUCJKZBIZLACUAUDZJKZBIZLACWBMUEKZJKZBIZLAVPLHUADVQUCNZVSWAAWHVRVTBVQUCCJO
+      PQHUAUFZVSWDAWIVRWCBVQWBCJOPQVQWENZVSWGAWJVRWFBVQWECJOPQVQDNZVSVPAWKVRVOB
+      VQDCJOPQAVTMBACRIZVTMNABRCABSUGUHIZBRUIERSBUJUKULFUMZCUNULABSMSUQIZAUOTEM
+      SURUHNAUPTUSUTWBUBIZAWDWGWPAWDWGWPAWDVHZWFWCCVAKZBWQWLWPWFWRNAWPWLWDWNVBW
+      PAWDVCCWBVDVEWQBSVAWCCWOWQUOTAWPWMWDEVBWPAWDVFAWPCBIWDFVBVASVIUHNWQVGTVJU
+      TVKVLVMVN $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    $d ph k a b $.  $d A k a b $.  $d B a b $.  $d S k a b $.
+    fsumcnsrcl.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
+    fsumcnsrcl.a $e |- ( ph -> A e. Fin ) $.
+    fsumcnsrcl.b $e |- ( ( ph /\ k e. A ) -> B e. S ) $.
+    $( Finite sums are closed in number rings. $)
+    fsumcnsrcl $p |- ( ph -> sum_ k e. A B e. S ) $=
+      ( va vb ccnfld cfv wcel cc cv wa caddc cnrng a1i wceq csubrg wss cnfldbas
+      subrgss syl crg adantr simprl simprr cnfldadd subrgaddcl cc0 c0g subrg0cl
+      cplusg cnfld0 fsumcllem ) AIJBCDEADKUALMZDNUBFNKDUCUDUEAIOZDMZJOZDMZPZPZD
+      QKUSVAKUFMZVDRSAURVCFUGAUTVBUHAUTVBUIQKUOLTVDUJSUKGHADKULVEARSFULKUMLTAUP
+      SUNUQ $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
+    $d P k $.  $d ph k $.  $d X k $.  $d S k $.  $d C k $.
+    cnsrplycl.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
+    cnsrplycl.p $e |- ( ph -> P e. ( Poly ` C ) ) $.
+    cnsrplycl.x $e |- ( ph -> X e. S ) $.
+    cnsrplycl.c $e |- ( ph -> C C_ S ) $.
+    $( Polynomials are closed in number rings. $)
+    cnsrplycl $p |- ( ph -> ( P ` X ) e. S ) $=
+      ( vk cfv cc0 co cmul wcel cc wceq ccnfld syl2anc a1i cdgr cfz cv ccoe csu
+      cexp cply wss csubrg cnfldbas subrgss syl plyss sseldd eqid coeid2 wa crg
+      fzfid cnrng adantr cn0 c0g cnfld0 subrg0cl coef2 elfznn0 adantl cnsrexpcl
+      wf ffvelrn cmulr cnfldmul subrgmulcl fsumcnsrcl eqeltrd ) AECKZLCUAKZUBMZ
+      JUCZCUDKZKZEVTUFMZNMZJUEZDACDUGKZOZEPOVQWEQABUGKZWFCABDUHDPUHZWHWFUHIADRU
+      IKOZWIFPRDUJUKULZBDUMSGUNZADPEWKHUNWADJCVREWAUOZVRUOUPSAVSWDDJFALVRUSAVTV
+      SOZUQZDRNWBWCRUROZWOUTTAWJWNFVAZWOVBDWAVJZVTVBOZWBDOAWRWNAWGLDOWRWLADRLWP
+      AUTTFLRVCKQAVDTVEWADCWMVFSVAWNWSAVTVRVGVHZVBDVTWAVKSWODEVTWQAEDOWNHVAWTVI
+      NRVLKQWOVMTVNVOVP $.
+      $( [30-Nov-2014] $)
+  $}
+
+  ${
     $d ph x y z u $.  $d R x y z u $.  $d S A x y z u $.
     subrgintcl.r $e |- ( ph -> R e. Ring ) $.
     subrgintcl.a $e |- ( ph -> A C_ ( SubRing ` R ) ) $.
@@ -14937,6 +15011,8 @@ $)
   $}
 
   ${
+    $d ph a b c d e p $.  $d B a b c d e p $.  $d X a b c d e p $.
+    $d V a b c d e p $.
     rngunsnply.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
     rngunsnply.x $e |- ( ph -> X e. CC ) $.
     rngunsnply.s $e |- ( ph -> S = ( ( RingSpan ` CCfld ) `
@@ -14945,7 +15021,67 @@ $)
        evaluations. $)
     rngunsnply $p |- ( ph -> ( V e. S <->
         E. p e. ( Poly ` B ) V = ( p ` X ) ) ) $=
-      ? $.
+      ( va wcel ccnfld cfv wceq wrex cc a1i caddc co cmul vb vc ve vd crgspn cv
+      csn cun cply eleq2d cab crg cnrng cbs cnfldbas csubrg subrgss snssd unssd
+      wss syl eqidd cress c1 cc0 cnfld0 cplusg cnfldadd wa plyf ffvelrn syl2anr
+      wf eleq1 syl5ibrcom rexlimdva ss2abdv abid2 eqtri syl6sseq plyconst sylan
+      c0g cxp adantr vex fvconst2 eqcomd fveq1 eqeq2d rcla4ev syl2anc syl5eqssr
+      subrg0cl sseldd w3a biid weq eqeq1 rexbidv cbvrexv syl6bb elab cof simplr
+      ex wi simprl simprr subrgaddcl adantlr plyadd wfn cvv ffn ad2antlr adantl
+      simpr cnex ad2antrr fnfvof syl22anc oveq2 eqeq1d imbi2d 3imp syl3anb ovex
+      oveq1 sylibr cminusg cneg cnfldneg ax-mp cnfldmul plymul fvex cidp syl5ss
+      cur cnfld1 subrg1cl ax-1cn subrgnegcl cmulr subrgmulcl negex oveq1d mulm1
+      eqtr2d fnconstg 3eqtr4d fveq2 sylan2b issubrngd2 plyid cres df-idp fveq1i
+      imp cid fvresi syl5req elabg mpbird rgspnmin sseld mpbiri rexlimivw elab3
+      wb syl6ib rgspncl ssun2 rgspnssid snidg ssun1 cnsrplycl impbid bitrd ) AD
+      CKDBEUGZUHZLUEMZMZKZDEFUFZMZNZFBUIMZOZACUWDDIUJAUWEUWJAUWEDJUFZUWGNZFUWIO
+      ZJUKZKUWJAUWDUWNDAUWBPLUWNUWDUWCLULKZAUMQZPLUNMZNAUOQZABUWAPABLUPMZKZBPUT
+      ZGPLBUOUQVAZAEPHURUSZAUWCVBZAUWDVBZAUAUBUWNRLUWNVCSZTLVDVEAUXFVBVELWCMNAV
+      FQZRLVGMNZAVHQAUWNUWKPKZJUKZUWQAUWMUXIJAUWLUXIFUWIAUWFUWIKZVIZUXIUWLUWGPK
+      ZUXKPPUWFVMEPKZUXMABUWFVJHPPEUWFVKVLUWKUWGPVNVOVPVQUXJPUWQJPVRUOVSVTABUWN
+      VEABUWKBKZJUKUWNJBVRAUXOUWMJAUXOUWMAUXOVIZPUWKUGWDZUWIKZUWKEUXQMZNZUWMAUX
+      AUXOUXRUXBUWKBWAWBUXPUXSUWKUXPUXNUXSUWKNAUXNUXOHWEPUWKEJWFWGVAWHUWLUXTFUX
+      QUWIUWFUXQNUWGUXSUWKEUWFUXQWIWJWKWLXFVQWMZABLVEUWPGUXGWNWOAUAUFZUWNKZUBUF
+      ZUWNKZWPZUYBUYDRSZUWGNZFUWIOZUYGUWNKAAUYCUYBEUCUFZMZNZUCUWIOZUYEUYDEUDUFZ
+      MZNZUDUWIOZUYIAWQZUWMUYMJUYBUAWFJUAWRZUWMUYBUWGNZFUWIOUYMUYSUWLUYTFUWIUWK
+      UYBUWGWSWTUYTUYLFUCUWIFUCWRUWGUYKUYBEUWFUYJWIWJXAXBXCZUWMUYQJUYDUBWFJUBWR
+      ZUWMUYDUWGNZFUWIOUYQVUBUWLVUCFUWIUWKUYDUWGWSWTVUCUYPFUDUWIFUDWRUWGUYOUYDE
+      UWFUYNWIWJXAXBXCZAUYMUYQUYIAUYLUYQUYIXGZUCUWIAUYJUWIKZVIZVUEUYLUYQUYKUYDR
+      SZUWGNZFUWIOZXGVUGUYPVUJUDUWIVUGUYNUWIKZVIZVUJUYPUYKUYORSZUWGNZFUWIOZVULU
+      YJUYNRXDSZUWIKVUMEVUPMZNZVUOVULJUABUYJUYNAVUFVUKXEZVUGVUKXRZVUGUXOUYBBKZV
+      IZUWKUYBRSBKZVUKAVVBVVCVUFAVVBVIZBRLUWKUYBUWOVVDUMQZAUWTVVBGWEZAUXOVVAXHZ
+      AUXOVVAXIZUXHVVDVHQXJXKZXKZXLVULVUQVUMVULUYJPXMZUYNPXMZPXNKZUXNVUQVUMNVUF
+      VVKAVUKVUFPPUYJVMZVVKBUYJVJZPPUYJXOVAZXPZVUKVVLVUGVUKPPUYNVMVVLBUYNVJPPUY
+      NXOVAXQZVVMVULXSQZAUXNVUFVUKHXTZPRUYJUYNXNEYAYBWHVUNVURFVUPUWIUWFVUPNUWGV
+      UQVUMEUWFVUPWIWJWKWLUYPVUIVUNFUWIUYPVUHVUMUWGUYDUYOUYKRYCYDWTVOVPUYLUYIVU
+      JUYQUYLUYHVUIFUWIUYLUYGVUHUWGUYBUYKUYDRYIYDWTYEVOVPYFYGUWMUYIJUYGUYBUYDRY
+      HUWKUYGNUWLUYHFUWIUWKUYGUWGWSWTXCYJAUYCVIUYBLYKMZMZUWGNZFUWIOZVWBUWNKUYCA
+      UYMVWDVUAAUYMVWDAUYLVWDUCUWIVUGVWDUYLUYKVWAMZUWGNZFUWIOZVUGPVDYLZUGWDZUYJ
+      TXDZSZUWIKVWEEVWKMZNZVWGVUGJUABVWIUYJAVWIUWIKZVUFAUXAVWHBKVWNUXBABLVWHVDU
+      WPGABLVDUWPGVDLYTMNAUUAQZUUBZVDVWAMVWHNZAVDPKVWQUUCVDYMYNQUUDVWHBWAWLWEAV
+      UFXRVVIAVVBUWKUYBTSBKZVUFVVDBLTUWKUYBVVEVVFVVGVVHTLUUEMNZVVDYOQUUFXKZYPVU
+      GUYKYLZEVWIMZUYKTSZVWEVWLVUGVXCVWHUYKTSZVXAVUGVXBVWHUYKTVUGUXNVXBVWHNAUXN
+      VUFHWEZPVWHEVDUUGZWGVAUUHVUGUYKPKZVXDVXANVUFVVNUXNVXGAVVOHPPEUYJVKVLZUYKU
+      UIVAUUJVUGVXGVWEVXANVXHUYKYMVAVUGVWIPXMZVVKVVMUXNVWLVXCNVXIVUGVWHXNKVXIVX
+      FPVWHXNUUKYNQVUFVVKAVVPXQVVMVUGXSQVXEPTVWIUYJXNEYAYBUULVWFVWMFVWKUWIUWFVW
+      KNUWGVWLVWEEUWFVWKWIWJWKWLUYLVWCVWFFUWIUYLVWBVWEUWGUYBUYKVWAUUMYDWTVOVPUU
+      TUUNUWMVWDJVWBUYBVWAYQUWKVWBNUWLVWCFUWIUWKVWBUWGWSWTXCYJVWOVWSAYOQABUWNVD
+      UYAVWPWOUYFUYBUYDTSZUWGNZFUWIOZVXJUWNKAAUYCUYMUYEUYQVXLUYRVUAVUDAUYMUYQVX
+      LAUYLUYQVXLXGZUCUWIVUGVXMUYLUYQUYKUYDTSZUWGNZFUWIOZXGVUGUYPVXPUDUWIVULVXP
+      UYPUYKUYOTSZUWGNZFUWIOZVULUYJUYNVWJSZUWIKVXQEVXTMZNZVXSVULJUABUYJUYNVUSVU
+      TVVJVUGVVBVWRVUKVWTXKYPVULVYAVXQVULVVKVVLVVMUXNVYAVXQNVVQVVRVVSVVTPTUYJUY
+      NXNEYAYBWHVXRVYBFVXTUWIUWFVXTNUWGVYAVXQEUWFVXTWIWJWKWLUYPVXOVXRFUWIUYPVXN
+      VXQUWGUYDUYOUYKTYCYDWTVOVPUYLVXLVXPUYQUYLVXKVXOFUWIUYLVXJVXNUWGUYBUYKUYDT
+      YIYDWTYEVOVPYFYGUWMVXLJVXJUYBUYDTYHUWKVXJNUWLVXKFUWIUWKVXJUWGWSWTXCYJUWPU
+      UOABUWAUWNUYAAEUWNAEUWNKZEUWGNZFUWIOZAYRUWIKZEEYRMZNZVYEAUXAVDBKVYFUXBVWP
+      BUUPWLAVYGEUVAPUUQZMZEEYRVYIUURUUSAUXNVYJENHPEUVBVAUVCVYDVYHFYRUWIUWFYRNU
+      WGVYGEEUWFYRWIWJWKWLAUXNVYCVYEUVKHUWMVYEJEPUWKENUWLVYDFUWIUWKEUWGWSWTUVDV
+      AUVEURUSUVFUVGUWMUWJJDUWHDXNKZFUWIUWHVYKUWGXNKEUWFYQDUWGXNVNUVHUVIUWKDNUW
+      LUWHFUWIUWKDUWGWSWTUVJUVLAUWHUWEFUWIUXLUWEUWHUWGUWDKUXLBUWFUWDEAUWDUWSKUX
+      KAUWBPLUWDUWCUWPUWRUXCUXDUXEUVMWEAUXKXRAEUWDKUXKAUWAUWDEAUWAUWBUWDUWABUVN
+      AUWBPLUWDUWCUWPUWRUXCUXDUXEUVOZYSAUXNEUWAKHEPUVPVAWOWEABUWDUTUXKABUWBUWDB
+      UWAUVQVYLYSWEUVRDUWGUWDVNVOVPUVSUVT $.
+      $( [30-Nov-2014] $)
 
     rngunsnpow.l $e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) $.
     rngunsnpow.p $e |- ( ph -> P = { x | E. i e. NN0 x = ( X ^ i ) } ) $.
@@ -14955,59 +15091,106 @@ $)
   $}
 
   ${
-    itgofglem5.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    itgofglem5.x $e |- ( ph -> X e. CC ) $.
-    itgofglem5.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
-    itgofglem5.d $e |- ( ph -> D e. NN0 ) $.
-    itgofglem5.d2 $e |- ( ph -> ( deg ` U ) < D ) $.
-    itgofglem5.a $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
-    itgofglem5.q $e |- Q = { x | E. i e. ( 0 ... ( D - 1 ) ) x = ( X ^ i ) } $.
-    $( Lemma for ~ itgofg .  The span of the first ` D ` powers of ` X `
-       contains all evaluations of polynomials with degree at most ` D ` . $)
-    itgofglem5 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
+    $d ph i a b c $.  $d B i a b c $.  $d G i a b c $.  $d F i a b c $.
+
+    cnfispn.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    cnfispn.a $e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) $.
+    cnfispn.g $e |- ( ph -> G e. Fin ) $.
+    cnfispn.f $e |- ( ph -> F : G --> CC ) $.
+    cnfispn.s $e |- ( ph -> S = ( ( LSpan ` A ) ` ran F ) ) $.
+
+    $( Finite spans of numbers in terms of finite sums. $)
+    cnfispn $p |- ( ph -> ( X e. S <-> E. f e. ( B ^m G ) X =
+        sum_ i e. G ( ( f ` i ) x. ( F ` i ) ) ) ) $=
       ? $.
   $}
 
   ${
-    itgofglem4.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    itgofglem4.p $e |- ( ph -> P e. ( Monic ` B ) ) $.
-    itgofglem4.x $e |- ( ph -> X e. CC ) $.
-    itgofglem4.x0 $e |- ( ph -> ( P ` X ) = 0 ) $.
-    itgofglem4.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
-    itgofglem4.f $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
-    itgofglem4.g $e |- Q = { x | E. i e. ( 0 ... ( ( deg ` P ) - 1 ) )
+    $d ph i a b c $.  $d B i a b c $.  $d G i a b c $.  $d F i a b c $.
+
+    cnplyspn.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    cnplyspn.a $e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) $.
+    cnplyspn.s $e |- ( ph -> S = ( ( LSpan ` A ) ` ran F ) ) $.
+    cnplyspn.f $e |- ( ph -> F = ( j e. ( 0 ... ( K - 1 ) ) |-> ( R ^ j ) ) ) $.
+
+    $( Finite spans of powers are the values of limited-degree polynomials. $)
+    cnfispn $p |- ( ph -> ( X e. S <-> E. f e. ( B Poly< K ) X = ( f ` R ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    mncdiv.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
+    mncdiv.f $e |- ( ph -> F e. ( Poly ` S ) ) $.
+    mncdiv.g $e |- ( ph -> G e. ( Monic ` S ) ) $.
+
+    $( Monic version of polynomial division algorithm, does not require division over the base ring. $)
+    mncdivex $p |- ( ph -> E. q e. ( Poly ` S ) ( F oF - ( G oF x. q ) ) e.
+          ( S Poly< ( deg ` G ) ) ) $=
+      ? $.
+  $}
+
+    $( Finite spans in terms of limited degree polynomials. $)
+    $( Patch monic definition into itgo. $)
+    $( Transitivity of finite spans. $)
+    $( Forward itgofg. $)
+    $( Reverse using ac6sfi. $)
+    $( itgofg2 and lemmas $)
+    $( start on Noetherian $)
+
+  ${
+    Xitgofglem5.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    Xitgofglem5.x $e |- ( ph -> X e. CC ) $.
+    Xitgofglem5.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
+    Xitgofglem5.d $e |- ( ph -> D e. NN0 ) $.
+    Xitgofglem5.d2 $e |- ( ph -> ( deg ` U ) < D ) $.
+    Xitgofglem5.a $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
+    Xitgofglem5.q $e |- Q = { x | E. i e. ( 0 ... ( D - 1 ) ) x = ( X ^ i ) } $.
+    $( Lemma for ~ itgofg .  The span of the first ` D ` powers of ` X `
+       contains all evaluations of polynomials with degree at most ` D ` . $)
+    Xitgofglem5 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
+      ? $.
+  $}
+
+  ${
+    Xitgofglem4.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    Xitgofglem4.p $e |- ( ph -> P e. ( Monic ` B ) ) $.
+    Xitgofglem4.x $e |- ( ph -> X e. CC ) $.
+    Xitgofglem4.x0 $e |- ( ph -> ( P ` X ) = 0 ) $.
+    Xitgofglem4.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
+    Xitgofglem4.f $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
+    Xitgofglem4.g $e |- Q = { x | E. i e. ( 0 ... ( ( deg ` P ) - 1 ) )
         x = ( X ^ i ) } $.
     $( Lemma for ~ itgofg .  Use the polynomial identity to inductively prove
        that the span of Q contains all polynomial evaluations. $)
-    itgofglem4 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
+    Xitgofglem4 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
       ? $.
   $}
 
   ${
-    itgofglem3.a $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    itgofglem3.b $e |- ( ph -> P e. ( Monic ` B ) ) $.
-    itgofglem3.c $e |- ( ph -> X e. CC ) $.
-    itgofglem3.d $e |- ( ph -> ( P ` X ) = 0 ) $.
-    itgofglem3.e $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
-    itgofglem3.f $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
-    itgofglem3.g $e |- Q = { x | E. i e. ( 0 ... ( deg ` P ) )
+    Xitgofglem3.a $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
+    Xitgofglem3.b $e |- ( ph -> P e. ( Monic ` B ) ) $.
+    Xitgofglem3.c $e |- ( ph -> X e. CC ) $.
+    Xitgofglem3.d $e |- ( ph -> ( P ` X ) = 0 ) $.
+    Xitgofglem3.e $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
+    Xitgofglem3.f $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
+    Xitgofglem3.g $e |- Q = { x | E. i e. ( 0 ... ( deg ` P ) )
         x = ( X ^ i ) } $.
     $( Lemma for ~ itgofg .  Given a polynomial witnessing the integrality of
        ` X ` , demonstrate the finite generation of ` A ` . $)
-    itgofglem3 $p |- ( ph -> ( ( LSpan ` A ) ` Q ) = S ) $=
+    Xitgofglem3 $p |- ( ph -> ( ( LSpan ` A ) ` Q ) = S ) $=
       ? $.
   $}
 
   ${
-    itgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
-    itgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
+    Xitgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
+    Xitgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
     $( Lemma for ~ itgofg . $)
-    itgofglem2 $p |- ( ( B e. ( SubRing ` CCfld ) /\ A e. LFinGen ) ->
+    Xitgofglem2 $p |- ( ( B e. ( SubRing ` CCfld ) /\ A e. LFinGen ) ->
           X e. ( IntgOver ` B ) ) $=
       ? $.
 
     $( Lemma for ~ itgofg . $)
-    itgofglem1 $p |- ( ( B e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` B ) ) ->
+    Xitgofglem1 $p |- ( ( B e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` B ) ) ->
           A e. LFinGen ) $=
       ? $.
 
