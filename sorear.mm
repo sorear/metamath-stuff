@@ -13288,307 +13288,6 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Degree and minimal polynomial of algebraic numbers
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  $c degAA minPolyAA $.
-
-  $( Extend class notation to include the degree function for algebraic
-     numbers. $)
-  cdgraa $a class degAA $.
-
-  $( Extend class notation to include the minimal polynomial for an algebraic
-     number. $)
-  cmpaa $a class minPolyAA $.
-
-  ${
-    $d x d p $.
-
-    $( Define the degree of an algebraic number as the smallest degree of any
-       nonzero polynomial which has said number as a root. $)
-    df-dgraa $a |- degAA = ( x e. AA |-> sup ( { d e. NN |
-        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
-          ( p ` x ) = 0 ) } , RR , `' < ) ) $.
-
-    $( Define the minimal polynomial of an algebraic number as the unique monic
-       polynomial which achieves the minimum of ` degAA ` . $)
-    df-mpaa $a |- minPolyAA = ( x e. AA |-> ( iota_ p e. ( Poly ` QQ )
-        ( ( deg ` p ) = ( degAA ` x ) /\ ( p ` x ) = 0 /\
-          ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $.
-  $}
-
-  $(
-  @{
-    @d x A a b @.  @d x B a b @.
-    plydeg1.a @e |- F = ( x e. CC |-> ( ( A x. x ) + B ) ) @.
-    @( A polynomial with 2 terms. @)
-    plydeg1a @p |- ( ( A e. S /\ B e. S /\ S C_ CC ) -> F e. ( Poly ` S ) ) @=
-      ? @.
-
-    @( Degree of a polynomial with 2 terms. @)
-    plydeg1b @p |- ( ( A e. CC /\ B e. CC /\ A =/= 0 ) -> ( deg ` A ) = 1 ) @=
-      ? @.
-  @}
-  $)
-
-  ${
-    dgrsub2.a $e |- N = ( deg ` F ) $.
-    $( Subtracting two polynomials with the same degree and top coefficient
-       gives a polynomial of strictly lower degree.  (Contributed by Stefan
-       O'Rear, 25-Nov-2014.) $)
-    dgrsub2 $p |- ( ( ( F e. ( Poly ` S ) /\ G e. ( Poly ` T ) ) /\
-          ( ( deg ` G ) = N /\ N e. NN /\
-            ( ( coeff ` F ) ` N ) = ( ( coeff ` G ) ` N ) ) ) ->
-        ( deg ` ( F oF - G ) ) < N ) $=
-      ( cply cfv wcel wa cdgr wceq clt wbr cc0 syl cle cc cn0 eqid cn ccoe cmin
-      w3a cof co c0p wi simpr2 nngt0 syl5eqbr fveq2 breq1d syl5ibrcom wo plyssc
-      dgr0 wb sseli plysubcl syl2an adantr nnnn0 dgrlt cif dgrsub simpr1 eqcomi
-      syl2anc a1i ifeq12 ifid syl6eq breqtrd coesub fveq1d cvv wfn simpll coef3
-      wf 3syl simplr nn0ex inidm simplr3 eqidd ofval mpdan ffvelrn subid 3eqtrd
-      ffn mpbir2and ord pm2.61d ) CAGHZIZDBGHZIZJZDKHZELZEUAIZECUBHZHEDUBHZHZLZ
-      UDZJZCDUCUEZUFZUGLZXLKHZEMNZXJXDXMXOUHXAXCXDXHUIZXDXOXMUGKHZEMNXDXQOEMUQE
-      UJUKXMXNXQEMXLUGKULUMUNPXJXMXOXJXMXOUOZXNEQNZEXLUBHZHZOLZXJXLRGHZIZESIZXR
-      XSYBJURXAYDXIWRCYCIZDYCIZYDWTWQYCCAUPUSZWSYCDBUPUSZRCDUTVAVBXJXDYEXPEVCPZ
-      XTRXLEXNXNTXTTVDVIXJXNCKHZXBQNZXBYKVEZEQXAXNYMQNZXIWRYFYGYNWTYHYIRCDYKXBY
-      KTXBTVFVAVBXJYMYLEEVEZEXJXCYKELZYMYOLXAXCXDXHVGYPXJEYKFVHVJYLXBEYKEVKVIYL
-      EVLVMVNXJYAEXEXFXKUFZHZXGXGUCUFZOXJEXTYQXAXTYQLZXIWRYFYGYTWTYHYIXEXFRCDXE
-      TZXFTZVOVAVBVPXJYEYRYSLYJXJSSXGXGUCSXEXFVQVQEXJWRSRXEWAXESVRWRWTXIVSXEACU
-      UAVTSRXEWMWBXJWTSRXFWAZXFSVRWRWTXIWCZXFBDUUBVTZSRXFWMWBSVQIXJWDVJZUUFSWEX
-      CXDXHXAYEWFXJYEJXGWGWHWIXJXGRIZYSOLXJUUCYEUUGXJWTUUCUUDUUEPYJSREXFWJVIXGW
-      KPWLWNWOWP $.
-      $( [25-Nov-2014] $)
-  $}
-
-  ${
-    $d A x d p a b c $.  $d P x d p a b c $.
-
-    $( A nonzero polynomial with a root has positive degree.  TODO: use in
-       ~ aaliou2 .  (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
-    dgrnznn $p |- ( ( ( P e. ( Poly ` S ) /\ P =/= 0p ) /\
-        ( A e. CC /\ ( P ` A ) = 0 ) ) -> ( deg ` P ) e. NN ) $=
-      ( cply cfv wcel c0p wne wa cc cc0 wceq cdgr wn cn csn cxp simpr ad2antrr
-      wo fveq1d simplr fvex fvconst2 3eqtr3rd sneqd xpeq2d eqtrd df-0p necon3ad
-      syl6eqr ex impcom adantll 0dgrb mtbird cn0 dgrcl elnn0 sylib orel2 sylc
-      wb ) BCDEFZBGHZIAJFZABEZKLZIZIZBMEZKLZNVKOFZVLTZVMVJVLBJKBEZPZQZLZVEVIVRN
-      ZVDVIVEVSVIVRBGVIVRBGLVIVRIZBJKPZQZGVTBVQWBVIVRRZVTVPWAJVTVOKVTVGAVQEZKVO
-      VTABVQWCUAVFVHVRUBVFWDVOLVHVRJVOAKBUCUDSUEUFUGUHUIUKULUJUMUNVDVLVRVCVEVIC
-      BUOSUPVJVKUQFZVNVDWEVEVICBURSVKUSUTVLVMVAVB $.
-      $( [25-Nov-2014] $)
-
-    $( Value of the degree function on an algebraic number.  (Contributed by
-       Stefan O'Rear, 25-Nov-2014.) $)
-    dgraaval $p |- ( A e. AA -> ( degAA ` A ) = sup ( { d e. NN |
-        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
-          ( p ` A ) = 0 ) } , RR , `' < ) ) $=
-      ( va cv cdgr cfv wceq cc0 wa cq cply c0p wrex cn crab cr clt csup wor csn
-      cdif ccnv caa cdgraa fveq2 eqeq1d anbi2d rexbidv rabbidv supeq1d df-dgraa
-      ltso cnvso mpbi supex fvmpt ) DABEZFGCEHZDEZURGZIHZJZBKLGMUAUBZNZCOPZQRUC
-      ZSUSAURGZIHZJZBVDNZCOPZQVGSUDUEUTAHZQVFVLVGVMVEVKCOVMVCVJBVDVMVBVIUSVMVAV
-      HIUTAURUFUGUHUIUJUKDBCULQVLVGQRTQVGTUMQRUNUOUPUQ $.
-      $( [25-Nov-2014] $)
-
-    $( Properties of the degree of an algebraic number. $)
-    dgraalem $p |- ( A e. AA -> ( ( degAA ` A ) e. NN /\
-        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = ( degAA ` A ) /\
-          ( p ` A ) = 0 ) ) ) $=
-      ( va vb wcel cfv cv cdgr wceq cc0 wa cq c0p cn c1 wne eqeq2 anbi1d eqeq1d
-      wrex caa cdgraa cply csn cdif crab cr clt ccnv dgraaval cuz wss c0 ssrab2
-      csup nnuz sseqtri cc eldifsn biimpi ad2antrr simpr simplr syl12anc simpll
-      wi dgrnznn eqid jctil weq fveq2 anbi12d rcla42ev syl3anc rexlimiva impcom
-      fveq1 elqaa rabn0 3imtr4i infmssuzcl sylancr eqeltrd rexbidv elrab sylib
-      ex ) AUAEZAUBFZBGZHFZCGZIZAWJFZJIZKZBLUCFZMUDUEZTZCNUFZEWINEWKWIIZWOKZBWR
-      TZKWHWIWTUGUHUIUOZWTABCUJWHWTOUKFZULWTUMPZXDWTEWTNXEWSCNUNUPUQAUREZADGZFZ
-      JIZDWRTZKWSCNTZWHXFXKXGXLXJXGXLVFDWRXHWREZXJKZXGXLXNXGKZXHHFZNEZXMXPXPIZX
-      JKZXLXOXHWQEXHMPKZXGXJXQXMXTXJXGXMXTXHWQMUSUTVAXNXGVBXMXJXGVCZAXHLVGVDXMX
-      JXGVEXOXJXRYAXPVHVIWPXSWKXPIZWOKCBXPXHNWRWLXPIWMYBWOWLXPWKQRBDVJZYBXRWOXJ
-      YCWKXPXPWJXHHVKSYCWNXIJAWJXHVQSVLVMVNWGVOVPADVRWSCNVSVTWTOWAWBWCWSXCCWINW
-      LWIIZWPXBBWRYDWMXAWOWLWIWKQRWDWEWF $.
-      $( [25-Nov-2014] $)
-
-    $( Closure of the degree function on algebraic numbers.  (Contributed by
-       Stefan O'Rear, 25-Nov-2014.) $)
-    dgraacl $p |- ( A e. AA -> ( degAA ` A ) e. NN ) $=
-      ( va caa wcel cdgraa cfv cn cv cdgr wceq cc0 wa cq cply c0p csn cdif wrex
-      dgraalem simpld ) ACDAEFZGDBHZIFUAJAUBFKJLBMNFOPQRABST $.
-      $( [25-Nov-2014] $)
-
-    $( Degree function on algebraic numbers is a function.  (Contributed by
-       Stefan O'Rear, 25-Nov-2014.) $)
-    dgraaf $p |- degAA : AA --> NN $=
-      ( va vp vb caa cn cdgraa wf wfn cfv wcel wral ffnfv cdgr wceq cc0 clt cvv
-      cv cr wor wa cq cply c0p csn cdif wrex crab ccnv csup df-dgraa fnmpt ltso
-      cnvso mpbi supex a1i mprg dgraacl rgen mpbir2an ) DEFGFDHZARZFIEJZADKADEF
-      LBRZMICRNVCVEIONUABUBUCIUDUEUFUGCEUHZSPUIZUJZQJZVBADADVHFQABCUKULVIVCDJSV
-      FVGSPTSVGTUMSPUNUOUPUQURVDADVCUSUTVA $.
-      $( [25-Nov-2014] $)
-
-    $( Upper bound on degree of an algebraic number.  (Contributed by Stefan
-       O'Rear, 25-Nov-2014.) $)
-    dgraaub $p |- ( ( ( P e. ( Poly ` QQ ) /\ P =/= 0p ) /\ ( A e. CC /\
-          ( P ` A ) = 0 ) ) -> ( degAA ` A ) <_ ( deg ` P ) ) $=
-      ( vb va cq cfv wcel c0p wa cc0 wceq cv cdgr wrex cle fveq1 eqeq1d rcla4ev
-      cn syl2anc cply wne cdgraa csn cdif crab clt ccnv csup caa simprl eldifsn
-      cc cr biimpri adantr simprr elqaa sylanbrc dgraaval syl c1 cuz wss ssrab2
-      nnuz sseqtri dgrnznn eqid1 jctil fveq2 anbi12d eqeq2 anbi1d rexbidv elrab
-      wbr infmssuzle sylancr eqbrtrd ) BEUAFZGBHUBIZAUMGZABFZJKZIZIZAUCFZCLZMFZ
-      DLZKZAWIFZJKZIZCWAHUDUEZNZDSUFZUNUGUHUIZBMFZOWGAUJGZWHWSKWGWCAWKFZJKZDWPN
-      ZXAWBWCWEUKWGBWPGZWEXDWBXEWFXEWBBWAHULUOUPZWBWCWEUQZXCWEDBWPWKBKXBWDJAWKB
-      PQRTADURUSACDUTVAWGWRVBVCFZVDWTWRGZWSWTOVQWRSXHWQDSVEVFVGWGWTSGWJWTKZWNIZ
-      CWPNZXIABEVHWGXEWTWTKZWEIZXLXFWGWEXMXGWTVIVJXKXNCBWPWIBKZXJXMWNWEXOWJWTWT
-      WIBMVKQXOWMWDJAWIBPQVLRTWQXLDWTSWKWTKZWOXKCWPXPWLXJWNWKWTWJVMVNVOVPUSWTWR
-      VBVRVSVT $.
-      $( [25-Nov-2014] $)
-
-    $( A rational polynomial of degree less than an algebraic number cannot be
-       zero at that number unless it is the zero polynomial.  (Contributed by
-       Stefan O'Rear, 25-Nov-2014.) $)
-    dgraa0p $p |- ( ( A e. AA /\ P e. ( Poly ` QQ ) /\
-          ( deg ` P ) < ( degAA ` A ) ) -> ( ( P ` A ) = 0 <-> P = 0p ) ) $=
-      ( caa wcel cq cply cfv cdgr cdgraa wbr cc0 wceq c0p wn simpl2 3syl simpl1
-      wa cr syl clt w3a wne cle simpl3 wb cn0 dgrcl nn0re cn dgraacl nnre ltnle
-      syl2anc mpbid cc simprl aacn dgraaub syl22anc expr mtod ex necon4ad 0pval
-      simprr wi fveq1 eqeq1d syl5ibrcom 3ad2ant1 impbid ) ACDZBEFGDZBHGZAIGZUAJ
-      ZUBZABGZKLZBMLZVRVTBMVRBMUCZVTNVRWBRZVTVPVOUDJZWCVQWDNZVMVNVQWBUEWCVOSDZV
-      PSDZVQWEUFWCVNVOUGDWFVMVNVQWBOEBUHVOUIPWCVMVPUJDWGVMVNVQWBQAUKVPULPVOVPUM
-      UNUOVRWBVTWDVRWBVTRZRZVNWBAUPDZVTWDVMVNVQWHOVRWBVTUQWIVMWJVMVNVQWHQAURZTV
-      RWBVTVFABUSUTVAVBVCVDVMVNWAVTVGVQVMVTWAAMGZKLZVMWJWMWKAVETWAVSWLKABMVHVIV
-      JVKVL $.
-      $( [25-Nov-2014] $)
-
-    $(
-    @( Degree of a rational number. @)
-    dgraaq @p |- ( A e. QQ -> ( degAA ` A ) = 1 ) @=
-      ( va cq wcel cdgraa cfv c1 cle wbr wceq cc cneg cv cmul co caddc cmpt cc0
-      oveq1d syl cdgr cply c0p wne qcn oveq2 eqid ovex fvmpt mulm1 negcl addcom
-      syl2anc negid 3eqtrd eqtrd dgraaub syl22anc breqtrd cn wb caa qaa dgraacl
-      nnle1eq1 mpbid ) ACDZAEFZGHIZVHGJZVGVHBKGLZBMZNOZAPOZQZUAFZGHVGVOCUBFDVOU
-      CUDAKDZAVOFZRJVHVPHI??AUEZVGVRVKANOZAPOZRVGVQVRWAJVSBAVNWAKVOVLAJVMVTAPVL
-      AVKNUFSVOUGVTAPUHUITVGWAALZAPOZAWBPOZRVGVTWBAPVGVQVTWBJVSAUJTSVGWBKDZVQWC
-      WDJVGVQWEVSAUKTVSWBAULUMVGVQWDRJVSAUNTUOUPAVOUQUR?USVGVHUTDZVIVJVAVGAVBDW
-      FAVCAVDTVHVETVF @.
-      @( [25-Nov-2014] @)
-    $)
-
-    $( An algebraic number has exactly one monic polynomial of least degree.
-       (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
-    mpaaeu $p |- ( A e. AA -> E! p e. ( Poly ` QQ ) ( ( deg ` p ) =
-          ( degAA ` A ) /\ ( p ` A ) = 0 /\
-        ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) $=
-      ( va wcel cdgr cfv wceq cc0 c1 cq wa c0p cc co cn0 syl syl2anc adantl cvv
-      cmul vb vc caa cv cdgraa ccoe w3a cply wrex weq wi wral wreu csn dgraalem
-      cdif cn simprd cdiv cxp cof wss qsscn wne wf eldifi ad2antlr cz 0z sselii
-      zssq eqid coef2 sylancl dgrcl ffvelrn eldifsn simprbi wb dgreq0 necon3bid
-      mpbid qreccl plyconst sylancr simpl simpr caddc qaddcl qmulcl coef3 reccl
-      plymul recne0 dgrmulc syl3anc eqtrd aacn ad2antrr wfn ovex fnconstg ax-mp
-      simprl a1i plyf ffn 3syl inidm fvconst2 simplrr ofval mpdan mul01 coemulc
-      cnex fveq1d dgraacl nnnn0 nn0ex simplrl eqcomd fveq2d recid2 3eqtrd fveq2
-      eqeq1d fveq1 3anbi123d rcla4ev syl13anc rexlimdva mpd simp2 sylan2 syl6eq
-      ex cmin clt wbr anim12i 0cnALT subid1i com12 impl simpll cneg qnegcl mp2b
-      1z plysub simprr1 simprl1 eqtr4d eqeltrd simprl3 simprr3 3eqtr4d syl23anc
-      zq dgrsub2 breqtrd dgraa0p df-0p ofsubeq0 mp3an1 ralrimivva reu4 sylanbrc
-      syl2an ) AUCDZBUDZEFZAUEFZGZAUVLFZHGZUVNUVLUFFZFZIGZUGZBJUHFZUIZUWACUDZEF
-      ZUVNGZAUWDFZHGZUVNUWDUFFZFZIGZUGZKZBCUJZUKZCUWBULBUWBULUWABUWBUMUVKUWFUWH
-      KZCUWBLUNZUPZUIZUWCUVKUVNUQDZUWSACUOURUVKUWPUWCCUWRUVKUWDUWRDZKZUWPUWCUXB
-      UWPKZMIUWEUWIFZUSNZUNZUTZUWDTVAZNZUWBDZUXIEFZUVNGZAUXIFZHGZUVNUXIUFFZFZIG
-      ZUWCUXCUXGUWBDZUWDUWBDZUXJUXCJMVBUXEJDZUXRVCUXCUXDJDZUXDHVDZUXTUXCOJUWIVE
-      ZUWEODZUYAUXCUXSHJDUYCUXAUXSUVKUWPUWDUWBUWQVFVGZVHJHVKVIVJUWIJUWDUWIVLZVM
-      VNUXCUXSUYDUYEJUWDVOPZOJUWEUWIVPQUXCUWDLVDZUYBUXAUYHUVKUWPUXAUXSUYHUWDUWB
-      LVQVRVGUXCUXSUYHUYBVSUYEUXSUWDLUXDHUWIJUWDUWEUWEVLUYFVTWAPWBZUXDWCQUXEJWD
-      WEUYEUXRUXSKZUAUBJUXGUWDUXRUXSWFUXRUXSWGUAUDZJDUBUDZJDKZUYKUYLWHNJDZUYJUY
-      KUYLWIZRUYMUYKUYLTNJDZUYJUYKUYLWJZRWMQUXCUXKUWEUVNUXCUXEMDZUXEHVDZUXSUXKU
-      WEGUXCUXDMDZUYBUYRUXCOMUWIVEZUYDUYTUXCUXSVUAUYEUWIJUWDUYFWKPZUYGOMUWEUWIV
-      PQZUYIUXDWLQZUXCUYTUYBUYSVUCUYIUXDWNQUYEUXEJUWDWOWPUXBUWFUWHXDWQUXCUXMUXE
-      HTNZHUXCAMDZUXMVUEGUVKVUFUXAUWPAWRZWSUXCMMUXEHTMUXGUWDSSAUXGMWTZUXCUXESDZ
-      VUHIUXDUSXAZMUXESXBXCXEUXCUXSMMUWDVEZUWDMWTZUYEJUWDXFZMMUWDXGZXHMSDZUXCXP
-      XEZVUPMXIZVUFAUXGFUXEGUXCMUXEAVUJXJRUXBUWFUWHVUFXKXLXMUXCUYRVUEHGVUDUXEXN
-      PWQUXCUXPUVNOUXFUTZUWIUXHNZFZUXEUXDTNZIUXCUVNUXOVUSUXCUYRUXSUXOVUSGVUDUYE
-      UXEJUWDXOQXQUXCUVNODZVUTVVAGUXCUWTVVBUVKUWTUXAUWPAXRZWSUVNXSPUXCOOUXEUXDT
-      OVURUWISSUVNVUROWTZUXCVUIVVDVUJOUXESXBXCXEUXCVUAUWIOWTVUBOMUWIXGPOSDUXCXT
-      XEZVVEOXIVVBUVNVURFUXEGUXCOUXEUVNVUJXJRUXCVVBKZUVNUWEUWIVVFUWEUVNUXBUWFUW
-      HVVBYAYBYCXLXMUXCUYTUYBVVAIGVUCUYIUXDYDQYEUWAUXLUXNUXQUGBUXIUWBUVLUXIGZUV
-      OUXLUVQUXNUVTUXQVVGUVMUXKUVNUVLUXIEYFYGVVGUVPUXMHAUVLUXIYHYGVVGUVSUXPIVVG
-      UVNUVRUXOUVLUXIUFYFXQYGYIYJYKYQYLYMUVKUWOBCUWBUWBUVKUVLUWBDZUXSKZKZUWMUWN
-      VVJUWMKZUVLUWDYRVANZMHUNUTZGZUWNVVKVVLLVVMVVKAVVLFZHGZVVLLGZUVKVVIUWMVVPV
-      VIUWMKUVKVVPUWMVVIUVQUWHKZUVKVVPUKUWAUVQUWLUWHUVOUVQUVTYNUWFUWHUWKYNUUAVV
-      IVVRKZUVKVVPVVSUVKKVVOHHYRNZHUVKVVSVUFVVOVVTGVUGVVSMMHHYRMUVLUWDSSAVVHUVL
-      MWTZUXSVVRVVHMMUVLVEZVWAJUVLXFZMMUVLXGPWSUXSVULVVHVVRUXSVUKVULVUMVUNPVGVU
-      OVVSXPXEZVWDVUQVVIUVQUWHVUFYAVVIUVQUWHVUFXKXLYOHUUBUUCYPYQYOUUDUUEVVKUVKV
-      VLUWBDZVVLEFZUVNYSYTVVPVVQVSUVKVVIUWMUUFVVIVWEUVKUWMVVIUAUBJUVLUWDVVHUXSW
-      FVVHUXSWGUYMUYNVVIUYORUYMUYPVVIUYQRIUUGJDZVVIIVHDIJDVWGUUJIUUTIUUHUUIXEUU
-      KVGVVKVWFUVMUVNYSVVKVVHUXSUWEUVMGUVMUQDUVMUVRFZUVMUWIFZGVWFUVMYSYTUVKVVHU
-      XSUWMYAUVKVVHUXSUWMXKVVKUWEUVNUVMUWFUWHUWKUWAVVJUULUVOUVQUVTUWLVVJUUMZUUN
-      VVKUVMUVNUQVWJUVKUWTVVIUWMVVCWSUUOVVKUVSIVWHVWIUVOUVQUVTUWLVVJUUPVVKUVMUV
-      NUVRVWJYCVVKVWIUWJIVVKUVMUVNUWIVWJYCUWFUWHUWKUWAVVJUUQWQUURJJUVLUWDUVMUVM
-      VLUVAUUSVWJUVBAVVLUVCWPWBUVDYPVVIVVNUWNVSZUVKUWMVVHVWBVUKVWKUXSVWCVUMVUOV
-      WBVUKVWKXPMUVLUWDSUVEUVFUVJVGWBYQUVGUWAUWLBCUWBUWNUVOUWFUVQUWHUVTUWKUWNUV
-      MUWEUVNUVLUWDEYFYGUWNUVPUWGHAUVLUWDYHYGUWNUVSUWJIUWNUVNUVRUWIUVLUWDUFYFXQ
-      YGYIUVHUVI $.
-      $( [25-Nov-2014] $)
-
-    $( Value of the minimal polynomial of an algebraic number.  (Contributed by
-       Stefan O'Rear, 25-Nov-2014.) $)
-    mpaaval $p |- ( A e. AA -> ( minPolyAA ` A ) = ( iota_ p e. ( Poly ` QQ )
-        ( ( deg ` p ) = ( degAA ` A ) /\ ( p ` A ) = 0 /\
-          ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) ) $=
-      ( va cv cdgr cfv cdgraa wceq cc0 ccoe c1 w3a cq cply crio caa cmpaa fveq2
-      eqeq2d eqeq1d fveq2d 3anbi123d riotabidv df-mpaa riotaex fvmpt ) CABDZEFZ
-      CDZGFZHZUIUGFZIHZUJUGJFZFZKHZLZBMNFZOUHAGFZHZAUGFZIHZUSUNFZKHZLZBUROPQUIA
-      HZUQVEBURVFUKUTUMVBUPVDVFUJUSUHUIAGRZSVFULVAIUIAUGRTVFUOVCKVFUJUSUNVGUATU
-      BUCCBUDVEBURUEUF $.
-      $( [25-Nov-2014] $)
-
-    $( Properties of the minimal polynomial of an algebraic number. $)
-    mpaalem $p |- ( A e. AA -> ( ( minPolyAA ` A ) e. ( Poly ` QQ ) /\
-        ( ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) /\
-          ( ( minPolyAA ` A ) ` A ) = 0 /\
-          ( ( coeff ` ( minPolyAA ` A ) ) ` ( degAA ` A ) ) = 1 ) ) ) $=
-      ( vp caa wcel cmpaa cfv cv cdgr cdgraa wceq cc0 ccoe c1 w3a cq cply fveq2
-      crab wa eqeq1d crio mpaaval wreu mpaaeu riotacl2 syl eqeltrd fveq1 fveq1d
-      3anbi123d elrab sylib ) ACDZAEFZBGZHFZAIFZJZAUOFZKJZUQUOLFZFZMJZNZBOPFZRZ
-      DUNVEDUNHFZUQJZAUNFZKJZUQUNLFZFZMJZNZSUMUNVDBVEUAZVFABUBUMVDBVEUCVOVFDABU
-      DVDBVEUEUFUGVDVNBUNVEUOUNJZURVHUTVJVCVMVPUPVGUQUOUNHQTVPUSVIKAUOUNUHTVPVB
-      VLMVPUQVAVKUOUNLQUITUJUKUL $.
-      $( [25-Nov-2014] $)
-
-    $( Minimal polynomial is a polynomial.  (Contributed by Stefan O'Rear,
-       25-Nov-2014.) $)
-    mpaacl $p |- ( A e. AA -> ( minPolyAA ` A ) e. ( Poly ` QQ ) ) $=
-      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpld
-      c1 ) ABCADEZFGECQHEAIEZJAQEKJRQLEEPJMANO $.
-      $( [25-Nov-2014] $)
-
-    $( Minimal polynomial has degree the degree of the number.  (Contributed by
-       Stefan O'Rear, 25-Nov-2014.) $)
-    mpaadgr $p |- ( A e. AA -> ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) ) $=
-      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr1
-      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUBANTUBUCUDOR $.
-      $( [25-Nov-2014] $)
-
-    $( Minimal polynomial has the polynomial as a root.  (Contributed by Stefan
-       O'Rear, 25-Nov-2014.) $)
-    mpaaroot $p |- ( A e. AA -> ( ( minPolyAA ` A ) ` A ) = 0 ) $=
-      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr2
-      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUCANTUBUCUDOR $.
-      $( [25-Nov-2014] $)
-
-    $( Minimal polynomial is monic.  (Contributed by Stefan O'Rear,
-       25-Nov-2014.) $)
-    mpaamn $p |- ( A e. AA -> ( ( coeff ` ( minPolyAA ` A ) ) `
-          ( degAA ` A ) ) = 1 ) $=
-      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr3
-      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUDANTUBUCUDOR $.
-      $( [25-Nov-2014] $)
-
-    $(
-    @( The minimal polynomial of a rational number. @)
-    mpaaq @p |- ( A e. QQ -> ( minPolyAA ` A ) = ( x e. CC |-> ( x - A ) ) ) @=
-      ? @.
-    $)
-  $}
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Abstract algebra preliminaries for algebraic integers I
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -14428,17 +14127,11 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Algebraic integers I
+    Additional material on polynomials
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c _ZZ IntgOver Monic Poly< $.
-
-  $( Extend class notation with the integral-over predicate. $)
-  citgo $a class IntgOver $.
-
-  $( Extend class notation with the class of algebraic integers. $)
-  cza $a class _ZZ $.
+  $c Monic Poly< $.
 
   $( Extend class notation with the class of monic polynomials. $)
   cmnc $a class Monic $.
@@ -14447,7 +14140,7 @@ $)
   cplylt $a class Poly< $.
 
   ${
-    $d x p s $.
+    $d s p x $.
 
     $( Define the class of monic polynomials. $)
     df-mnc $a |- Monic = ( s e. ~P CC |-> { p e. ( Poly ` s ) |
@@ -14456,18 +14149,49 @@ $)
     $( Define the class of limited-degree polynomials. $)
     df-plylt $a |- Poly< = ( s e. ~P CC , x e. NN0 |-> { p e. ( Poly ` s ) |
         ( p = 0p \/ ( deg ` p ) < x ) } ) $.
+  $}
 
-    $( A complex number is said to be integral over a subset if it is the root
-       of a monic polynomial with coefficients from the subset.  This
-       definition is typically not used for fields but it works there, see
-       ~ aaitgo .  This definition could work for subsets of an arbitrary ring
-       with a more general definition of polynomials. $)
-    df-itgo $a |- IntgOver = ( s e. ~P CC |-> { x e. CC | E. p e. ( Poly ` s )
-        ( ( p ` x ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } ) $.
+  ${
+    dgrsub2.a $e |- N = ( deg ` F ) $.
+    $( Subtracting two polynomials with the same degree and top coefficient
+       gives a polynomial of strictly lower degree.  (Contributed by Stefan
+       O'Rear, 25-Nov-2014.) $)
+    dgrsub2 $p |- ( ( ( F e. ( Poly ` S ) /\ G e. ( Poly ` T ) ) /\
+          ( ( deg ` G ) = N /\ N e. NN /\
+            ( ( coeff ` F ) ` N ) = ( ( coeff ` G ) ` N ) ) ) ->
+        ( deg ` ( F oF - G ) ) < N ) $=
+      ( cply cfv wcel wa cdgr wceq clt wbr cc0 syl cle cc cn0 eqid cn ccoe cmin
+      w3a cof co c0p wi simpr2 nngt0 syl5eqbr fveq2 breq1d syl5ibrcom wo plyssc
+      dgr0 wb sseli plysubcl syl2an adantr nnnn0 dgrlt cif dgrsub simpr1 eqcomi
+      syl2anc a1i ifeq12 ifid syl6eq breqtrd coesub fveq1d cvv wfn simpll coef3
+      wf 3syl simplr nn0ex inidm simplr3 eqidd ofval mpdan ffvelrn subid 3eqtrd
+      ffn mpbir2and ord pm2.61d ) CAGHZIZDBGHZIZJZDKHZELZEUAIZECUBHZHEDUBHZHZLZ
+      UDZJZCDUCUEZUFZUGLZXLKHZEMNZXJXDXMXOUHXAXCXDXHUIZXDXOXMUGKHZEMNXDXQOEMUQE
+      UJUKXMXNXQEMXLUGKULUMUNPXJXMXOXJXMXOUOZXNEQNZEXLUBHZHZOLZXJXLRGHZIZESIZXR
+      XSYBJURXAYDXIWRCYCIZDYCIZYDWTWQYCCAUPUSZWSYCDBUPUSZRCDUTVAVBXJXDYEXPEVCPZ
+      XTRXLEXNXNTXTTVDVIXJXNCKHZXBQNZXBYKVEZEQXAXNYMQNZXIWRYFYGYNWTYHYIRCDYKXBY
+      KTXBTVFVAVBXJYMYLEEVEZEXJXCYKELZYMYOLXAXCXDXHVGYPXJEYKFVHVJYLXBEYKEVKVIYL
+      EVLVMVNXJYAEXEXFXKUFZHZXGXGUCUFZOXJEXTYQXAXTYQLZXIWRYFYGYTWTYHYIXEXFRCDXE
+      TZXFTZVOVAVBVPXJYEYRYSLYJXJSSXGXGUCSXEXFVQVQEXJWRSRXEWAXESVRWRWTXIVSXEACU
+      UAVTSRXEWMWBXJWTSRXFWAZXFSVRWRWTXIWCZXFBDUUBVTZSRXFWMWBSVQIXJWDVJZUUFSWEX
+      CXDXHXAYEWFXJYEJXGWGWHWIXJXGRIZYSOLXJUUCYEUUGXJWTUUCUUDUUEPYJSREXFWJVIXGW
+      KPWLWNWOWP $.
+      $( [25-Nov-2014] $)
+  $}
 
-    $( Define an algebraic integer as a complex number which is the root of a
-       monic integer polynomial. $)
-    df-za $a |- _ZZ = ( IntgOver ` ZZ ) $.
+  ${
+    $( A nonzero polynomial with a root has positive degree.  TODO: use in
+       ~ aaliou2 .  (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
+    dgrnznn $p |- ( ( ( P e. ( Poly ` S ) /\ P =/= 0p ) /\
+        ( A e. CC /\ ( P ` A ) = 0 ) ) -> ( deg ` P ) e. NN ) $=
+      ( cply cfv wcel c0p wne wa cc cc0 wceq cdgr wn cn csn cxp simpr ad2antrr
+      wo fveq1d simplr fvex fvconst2 3eqtr3rd sneqd xpeq2d eqtrd df-0p necon3ad
+      syl6eqr ex impcom adantll 0dgrb mtbird cn0 dgrcl elnn0 sylib orel2 sylc
+      wb ) BCDEFZBGHZIAJFZABEZKLZIZIZBMEZKLZNVKOFZVLTZVMVJVLBJKBEZPZQZLZVEVIVRN
+      ZVDVIVEVSVIVRBGVIVRBGLVIVRIZBJKPZQZGVTBVQWBVIVRRZVTVPWAJVTVOKVTVGAVQEZKVO
+      VTABVQWCUAVFVHVRUBVFWDVOLVHVRJVOAKBUCUDSUEUFUGUHUIUKULUJUMUNVDVLVRVCVEVIC
+      BUOSUPVJVKUQFZVNVDWEVEVICBURSVKUSUTVLVMVAVB $.
+      $( [25-Nov-2014] $)
   $}
 
   ${
@@ -14506,6 +14230,307 @@ $)
       RJIFDZIGDZDZRJVALRVAUSMLNOZDZLUSUTVBPQUSMEVCLHUSLMUISUAMLUSLMSUBUCUDUJRLU
       EUFUGURUQVARURUOUSUPUTAIGTAIFTUHUKULUMUN $.
       $( [5-Dec-2014] $)
+  $}
+
+  ${
+    mncdiv.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
+    mncdiv.f $e |- ( ph -> F e. ( Poly ` S ) ) $.
+    mncdiv.g $e |- ( ph -> G e. ( Monic ` S ) ) $.
+    $( Monic version of polynomial division algorithm, does not require
+       division over the base ring. $)
+    mncdivex $p |- ( ph -> E. q e. ( Poly ` S ) ( F oF - ( G oF x. q ) ) e.
+          ( S Poly< ( deg ` G ) ) ) $=
+      ? $.
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Degree and minimal polynomial of algebraic numbers
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c degAA minPolyAA $.
+
+  $( Extend class notation to include the degree function for algebraic
+     numbers. $)
+  cdgraa $a class degAA $.
+
+  $( Extend class notation to include the minimal polynomial for an algebraic
+     number. $)
+  cmpaa $a class minPolyAA $.
+
+  ${
+    $d x d p $.
+
+    $( Define the degree of an algebraic number as the smallest degree of any
+       nonzero polynomial which has said number as a root. $)
+    df-dgraa $a |- degAA = ( x e. AA |-> sup ( { d e. NN |
+        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
+          ( p ` x ) = 0 ) } , RR , `' < ) ) $.
+
+    $( Define the minimal polynomial of an algebraic number as the unique monic
+       polynomial which achieves the minimum of ` degAA ` . $)
+    df-mpaa $a |- minPolyAA = ( x e. AA |-> ( iota_ p e. ( Poly ` QQ )
+        ( ( deg ` p ) = ( degAA ` x ) /\ ( p ` x ) = 0 /\
+          ( ( coeff ` p ) ` ( degAA ` x ) ) = 1 ) ) ) $.
+  $}
+
+  $(
+  @{
+    @d x A a b @.  @d x B a b @.
+    plydeg1.a @e |- F = ( x e. CC |-> ( ( A x. x ) + B ) ) @.
+    @( A polynomial with 2 terms. @)
+    plydeg1a @p |- ( ( A e. S /\ B e. S /\ S C_ CC ) -> F e. ( Poly ` S ) ) @=
+      ? @.
+
+    @( Degree of a polynomial with 2 terms. @)
+    plydeg1b @p |- ( ( A e. CC /\ B e. CC /\ A =/= 0 ) -> ( deg ` A ) = 1 ) @=
+      ? @.
+  @}
+  $)
+
+  ${
+    $d A x d p a b c $.  $d P x d p a b c $.
+
+    $( Value of the degree function on an algebraic number.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
+    dgraaval $p |- ( A e. AA -> ( degAA ` A ) = sup ( { d e. NN |
+        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = d /\
+          ( p ` A ) = 0 ) } , RR , `' < ) ) $=
+      ( va cv cdgr cfv wceq cc0 wa cq cply c0p wrex cn crab cr clt csup wor csn
+      cdif ccnv caa cdgraa fveq2 eqeq1d anbi2d rexbidv rabbidv supeq1d df-dgraa
+      ltso cnvso mpbi supex fvmpt ) DABEZFGCEHZDEZURGZIHZJZBKLGMUAUBZNZCOPZQRUC
+      ZSUSAURGZIHZJZBVDNZCOPZQVGSUDUEUTAHZQVFVLVGVMVEVKCOVMVCVJBVDVMVBVIUSVMVAV
+      HIUTAURUFUGUHUIUJUKDBCULQVLVGQRTQVGTUMQRUNUOUPUQ $.
+      $( [25-Nov-2014] $)
+
+    $( Properties of the degree of an algebraic number. $)
+    dgraalem $p |- ( A e. AA -> ( ( degAA ` A ) e. NN /\
+        E. p e. ( ( Poly ` QQ ) \ { 0p } ) ( ( deg ` p ) = ( degAA ` A ) /\
+          ( p ` A ) = 0 ) ) ) $=
+      ( va vb wcel cfv cv cdgr wceq cc0 wa cq c0p cn c1 wne eqeq2 anbi1d eqeq1d
+      wrex caa cdgraa cply csn cdif crab cr clt ccnv dgraaval cuz wss c0 ssrab2
+      csup nnuz sseqtri cc eldifsn biimpi ad2antrr simpr simplr syl12anc simpll
+      wi dgrnznn eqid jctil weq fveq2 anbi12d rcla42ev syl3anc rexlimiva impcom
+      fveq1 elqaa rabn0 3imtr4i infmssuzcl sylancr eqeltrd rexbidv elrab sylib
+      ex ) AUAEZAUBFZBGZHFZCGZIZAWJFZJIZKZBLUCFZMUDUEZTZCNUFZEWINEWKWIIZWOKZBWR
+      TZKWHWIWTUGUHUIUOZWTABCUJWHWTOUKFZULWTUMPZXDWTEWTNXEWSCNUNUPUQAUREZADGZFZ
+      JIZDWRTZKWSCNTZWHXFXKXGXLXJXGXLVFDWRXHWREZXJKZXGXLXNXGKZXHHFZNEZXMXPXPIZX
+      JKZXLXOXHWQEXHMPKZXGXJXQXMXTXJXGXMXTXHWQMUSUTVAXNXGVBXMXJXGVCZAXHLVGVDXMX
+      JXGVEXOXJXRYAXPVHVIWPXSWKXPIZWOKCBXPXHNWRWLXPIWMYBWOWLXPWKQRBDVJZYBXRWOXJ
+      YCWKXPXPWJXHHVKSYCWNXIJAWJXHVQSVLVMVNWGVOVPADVRWSCNVSVTWTOWAWBWCWSXCCWINW
+      LWIIZWPXBBWRYDWMXAWOWLWIWKQRWDWEWF $.
+      $( [25-Nov-2014] $)
+
+    $( Closure of the degree function on algebraic numbers.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
+    dgraacl $p |- ( A e. AA -> ( degAA ` A ) e. NN ) $=
+      ( va caa wcel cdgraa cfv cn cv cdgr wceq cc0 wa cq cply c0p csn cdif wrex
+      dgraalem simpld ) ACDAEFZGDBHZIFUAJAUBFKJLBMNFOPQRABST $.
+      $( [25-Nov-2014] $)
+
+    $( Degree function on algebraic numbers is a function.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
+    dgraaf $p |- degAA : AA --> NN $=
+      ( va vp vb caa cn cdgraa wf wfn cfv wcel wral ffnfv cdgr wceq cc0 clt cvv
+      cv cr wor wa cq cply c0p csn cdif wrex crab ccnv csup df-dgraa fnmpt ltso
+      cnvso mpbi supex a1i mprg dgraacl rgen mpbir2an ) DEFGFDHZARZFIEJZADKADEF
+      LBRZMICRNVCVEIONUABUBUCIUDUEUFUGCEUHZSPUIZUJZQJZVBADADVHFQABCUKULVIVCDJSV
+      FVGSPTSVGTUMSPUNUOUPUQURVDADVCUSUTVA $.
+      $( [25-Nov-2014] $)
+
+    $( Upper bound on degree of an algebraic number.  (Contributed by Stefan
+       O'Rear, 25-Nov-2014.) $)
+    dgraaub $p |- ( ( ( P e. ( Poly ` QQ ) /\ P =/= 0p ) /\ ( A e. CC /\
+          ( P ` A ) = 0 ) ) -> ( degAA ` A ) <_ ( deg ` P ) ) $=
+      ( vb va cq cfv wcel c0p wa cc0 wceq cv cdgr wrex cle fveq1 eqeq1d rcla4ev
+      cn syl2anc cply wne cdgraa csn cdif crab clt ccnv csup caa simprl eldifsn
+      cc cr biimpri adantr simprr elqaa sylanbrc dgraaval syl c1 cuz wss ssrab2
+      nnuz sseqtri dgrnznn eqid1 jctil fveq2 anbi12d eqeq2 anbi1d rexbidv elrab
+      wbr infmssuzle sylancr eqbrtrd ) BEUAFZGBHUBIZAUMGZABFZJKZIZIZAUCFZCLZMFZ
+      DLZKZAWIFZJKZIZCWAHUDUEZNZDSUFZUNUGUHUIZBMFZOWGAUJGZWHWSKWGWCAWKFZJKZDWPN
+      ZXAWBWCWEUKWGBWPGZWEXDWBXEWFXEWBBWAHULUOUPZWBWCWEUQZXCWEDBWPWKBKXBWDJAWKB
+      PQRTADURUSACDUTVAWGWRVBVCFZVDWTWRGZWSWTOVQWRSXHWQDSVEVFVGWGWTSGWJWTKZWNIZ
+      CWPNZXIABEVHWGXEWTWTKZWEIZXLXFWGWEXMXGWTVIVJXKXNCBWPWIBKZXJXMWNWEXOWJWTWT
+      WIBMVKQXOWMWDJAWIBPQVLRTWQXLDWTSWKWTKZWOXKCWPXPWLXJWNWKWTWJVMVNVOVPUSWTWR
+      VBVRVSVT $.
+      $( [25-Nov-2014] $)
+
+    $( A rational polynomial of degree less than an algebraic number cannot be
+       zero at that number unless it is the zero polynomial.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
+    dgraa0p $p |- ( ( A e. AA /\ P e. ( Poly ` QQ ) /\
+          ( deg ` P ) < ( degAA ` A ) ) -> ( ( P ` A ) = 0 <-> P = 0p ) ) $=
+      ( caa wcel cq cply cfv cdgr cdgraa wbr cc0 wceq c0p wn simpl2 3syl simpl1
+      wa cr syl clt w3a wne cle simpl3 wb cn0 dgrcl nn0re cn dgraacl nnre ltnle
+      syl2anc mpbid cc simprl aacn dgraaub syl22anc expr mtod ex necon4ad 0pval
+      simprr wi fveq1 eqeq1d syl5ibrcom 3ad2ant1 impbid ) ACDZBEFGDZBHGZAIGZUAJ
+      ZUBZABGZKLZBMLZVRVTBMVRBMUCZVTNVRWBRZVTVPVOUDJZWCVQWDNZVMVNVQWBUEWCVOSDZV
+      PSDZVQWEUFWCVNVOUGDWFVMVNVQWBOEBUHVOUIPWCVMVPUJDWGVMVNVQWBQAUKVPULPVOVPUM
+      UNUOVRWBVTWDVRWBVTRZRZVNWBAUPDZVTWDVMVNVQWHOVRWBVTUQWIVMWJVMVNVQWHQAURZTV
+      RWBVTVFABUSUTVAVBVCVDVMVNWAVTVGVQVMVTWAAMGZKLZVMWJWMWKAVETWAVSWLKABMVHVIV
+      JVKVL $.
+      $( [25-Nov-2014] $)
+
+    $(
+    @( Degree of a rational number. @)
+    dgraaq @p |- ( A e. QQ -> ( degAA ` A ) = 1 ) @=
+      ( va cq wcel cdgraa cfv c1 cle wbr wceq cc cneg cv cmul co caddc cmpt cc0
+      oveq1d syl cdgr cply c0p wne qcn oveq2 eqid ovex fvmpt mulm1 negcl addcom
+      syl2anc negid 3eqtrd eqtrd dgraaub syl22anc breqtrd cn wb caa qaa dgraacl
+      nnle1eq1 mpbid ) ACDZAEFZGHIZVHGJZVGVHBKGLZBMZNOZAPOZQZUAFZGHVGVOCUBFDVOU
+      CUDAKDZAVOFZRJVHVPHI??AUEZVGVRVKANOZAPOZRVGVQVRWAJVSBAVNWAKVOVLAJVMVTAPVL
+      AVKNUFSVOUGVTAPUHUITVGWAALZAPOZAWBPOZRVGVTWBAPVGVQVTWBJVSAUJTSVGWBKDZVQWC
+      WDJVGVQWEVSAUKTVSWBAULUMVGVQWDRJVSAUNTUOUPAVOUQUR?USVGVHUTDZVIVJVAVGAVBDW
+      FAVCAVDTVHVETVF @.
+      @( [25-Nov-2014] @)
+    $)
+
+    $( An algebraic number has exactly one monic polynomial of least degree.
+       (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
+    mpaaeu $p |- ( A e. AA -> E! p e. ( Poly ` QQ ) ( ( deg ` p ) =
+          ( degAA ` A ) /\ ( p ` A ) = 0 /\
+        ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) $=
+      ( va wcel cdgr cfv wceq cc0 c1 cq wa c0p cc co cn0 syl syl2anc adantl cvv
+      cmul vb vc caa cv cdgraa ccoe w3a cply wrex weq wi wral wreu csn dgraalem
+      cdif cn simprd cdiv cxp cof wss qsscn wne wf eldifi ad2antlr cz 0z sselii
+      zssq eqid coef2 sylancl dgrcl ffvelrn eldifsn simprbi wb dgreq0 necon3bid
+      mpbid qreccl plyconst sylancr simpl simpr caddc qaddcl qmulcl coef3 reccl
+      plymul recne0 dgrmulc syl3anc eqtrd aacn ad2antrr wfn ovex fnconstg ax-mp
+      simprl a1i plyf ffn 3syl inidm fvconst2 simplrr ofval mpdan mul01 coemulc
+      cnex fveq1d dgraacl nnnn0 nn0ex simplrl eqcomd fveq2d recid2 3eqtrd fveq2
+      eqeq1d fveq1 3anbi123d rcla4ev syl13anc rexlimdva mpd simp2 sylan2 syl6eq
+      ex cmin clt wbr anim12i 0cnALT subid1i com12 impl simpll cneg qnegcl mp2b
+      1z plysub simprr1 simprl1 eqtr4d eqeltrd simprl3 simprr3 3eqtr4d syl23anc
+      zq dgrsub2 breqtrd dgraa0p df-0p ofsubeq0 mp3an1 ralrimivva reu4 sylanbrc
+      syl2an ) AUCDZBUDZEFZAUEFZGZAUVLFZHGZUVNUVLUFFZFZIGZUGZBJUHFZUIZUWACUDZEF
+      ZUVNGZAUWDFZHGZUVNUWDUFFZFZIGZUGZKZBCUJZUKZCUWBULBUWBULUWABUWBUMUVKUWFUWH
+      KZCUWBLUNZUPZUIZUWCUVKUVNUQDZUWSACUOURUVKUWPUWCCUWRUVKUWDUWRDZKZUWPUWCUXB
+      UWPKZMIUWEUWIFZUSNZUNZUTZUWDTVAZNZUWBDZUXIEFZUVNGZAUXIFZHGZUVNUXIUFFZFZIG
+      ZUWCUXCUXGUWBDZUWDUWBDZUXJUXCJMVBUXEJDZUXRVCUXCUXDJDZUXDHVDZUXTUXCOJUWIVE
+      ZUWEODZUYAUXCUXSHJDUYCUXAUXSUVKUWPUWDUWBUWQVFVGZVHJHVKVIVJUWIJUWDUWIVLZVM
+      VNUXCUXSUYDUYEJUWDVOPZOJUWEUWIVPQUXCUWDLVDZUYBUXAUYHUVKUWPUXAUXSUYHUWDUWB
+      LVQVRVGUXCUXSUYHUYBVSUYEUXSUWDLUXDHUWIJUWDUWEUWEVLUYFVTWAPWBZUXDWCQUXEJWD
+      WEUYEUXRUXSKZUAUBJUXGUWDUXRUXSWFUXRUXSWGUAUDZJDUBUDZJDKZUYKUYLWHNJDZUYJUY
+      KUYLWIZRUYMUYKUYLTNJDZUYJUYKUYLWJZRWMQUXCUXKUWEUVNUXCUXEMDZUXEHVDZUXSUXKU
+      WEGUXCUXDMDZUYBUYRUXCOMUWIVEZUYDUYTUXCUXSVUAUYEUWIJUWDUYFWKPZUYGOMUWEUWIV
+      PQZUYIUXDWLQZUXCUYTUYBUYSVUCUYIUXDWNQUYEUXEJUWDWOWPUXBUWFUWHXDWQUXCUXMUXE
+      HTNZHUXCAMDZUXMVUEGUVKVUFUXAUWPAWRZWSUXCMMUXEHTMUXGUWDSSAUXGMWTZUXCUXESDZ
+      VUHIUXDUSXAZMUXESXBXCXEUXCUXSMMUWDVEZUWDMWTZUYEJUWDXFZMMUWDXGZXHMSDZUXCXP
+      XEZVUPMXIZVUFAUXGFUXEGUXCMUXEAVUJXJRUXBUWFUWHVUFXKXLXMUXCUYRVUEHGVUDUXEXN
+      PWQUXCUXPUVNOUXFUTZUWIUXHNZFZUXEUXDTNZIUXCUVNUXOVUSUXCUYRUXSUXOVUSGVUDUYE
+      UXEJUWDXOQXQUXCUVNODZVUTVVAGUXCUWTVVBUVKUWTUXAUWPAXRZWSUVNXSPUXCOOUXEUXDT
+      OVURUWISSUVNVUROWTZUXCVUIVVDVUJOUXESXBXCXEUXCVUAUWIOWTVUBOMUWIXGPOSDUXCXT
+      XEZVVEOXIVVBUVNVURFUXEGUXCOUXEUVNVUJXJRUXCVVBKZUVNUWEUWIVVFUWEUVNUXBUWFUW
+      HVVBYAYBYCXLXMUXCUYTUYBVVAIGVUCUYIUXDYDQYEUWAUXLUXNUXQUGBUXIUWBUVLUXIGZUV
+      OUXLUVQUXNUVTUXQVVGUVMUXKUVNUVLUXIEYFYGVVGUVPUXMHAUVLUXIYHYGVVGUVSUXPIVVG
+      UVNUVRUXOUVLUXIUFYFXQYGYIYJYKYQYLYMUVKUWOBCUWBUWBUVKUVLUWBDZUXSKZKZUWMUWN
+      VVJUWMKZUVLUWDYRVANZMHUNUTZGZUWNVVKVVLLVVMVVKAVVLFZHGZVVLLGZUVKVVIUWMVVPV
+      VIUWMKUVKVVPUWMVVIUVQUWHKZUVKVVPUKUWAUVQUWLUWHUVOUVQUVTYNUWFUWHUWKYNUUAVV
+      IVVRKZUVKVVPVVSUVKKVVOHHYRNZHUVKVVSVUFVVOVVTGVUGVVSMMHHYRMUVLUWDSSAVVHUVL
+      MWTZUXSVVRVVHMMUVLVEZVWAJUVLXFZMMUVLXGPWSUXSVULVVHVVRUXSVUKVULVUMVUNPVGVU
+      OVVSXPXEZVWDVUQVVIUVQUWHVUFYAVVIUVQUWHVUFXKXLYOHUUBUUCYPYQYOUUDUUEVVKUVKV
+      VLUWBDZVVLEFZUVNYSYTVVPVVQVSUVKVVIUWMUUFVVIVWEUVKUWMVVIUAUBJUVLUWDVVHUXSW
+      FVVHUXSWGUYMUYNVVIUYORUYMUYPVVIUYQRIUUGJDZVVIIVHDIJDVWGUUJIUUTIUUHUUIXEUU
+      KVGVVKVWFUVMUVNYSVVKVVHUXSUWEUVMGUVMUQDUVMUVRFZUVMUWIFZGVWFUVMYSYTUVKVVHU
+      XSUWMYAUVKVVHUXSUWMXKVVKUWEUVNUVMUWFUWHUWKUWAVVJUULUVOUVQUVTUWLVVJUUMZUUN
+      VVKUVMUVNUQVWJUVKUWTVVIUWMVVCWSUUOVVKUVSIVWHVWIUVOUVQUVTUWLVVJUUPVVKUVMUV
+      NUVRVWJYCVVKVWIUWJIVVKUVMUVNUWIVWJYCUWFUWHUWKUWAVVJUUQWQUURJJUVLUWDUVMUVM
+      VLUVAUUSVWJUVBAVVLUVCWPWBUVDYPVVIVVNUWNVSZUVKUWMVVHVWBVUKVWKUXSVWCVUMVUOV
+      WBVUKVWKXPMUVLUWDSUVEUVFUVJVGWBYQUVGUWAUWLBCUWBUWNUVOUWFUVQUWHUVTUWKUWNUV
+      MUWEUVNUVLUWDEYFYGUWNUVPUWGHAUVLUWDYHYGUWNUVSUWJIUWNUVNUVRUWIUVLUWDUFYFXQ
+      YGYIUVHUVI $.
+      $( [25-Nov-2014] $)
+
+    $( Value of the minimal polynomial of an algebraic number.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
+    mpaaval $p |- ( A e. AA -> ( minPolyAA ` A ) = ( iota_ p e. ( Poly ` QQ )
+        ( ( deg ` p ) = ( degAA ` A ) /\ ( p ` A ) = 0 /\
+          ( ( coeff ` p ) ` ( degAA ` A ) ) = 1 ) ) ) $=
+      ( va cv cdgr cfv cdgraa wceq cc0 ccoe c1 w3a cq cply crio caa cmpaa fveq2
+      eqeq2d eqeq1d fveq2d 3anbi123d riotabidv df-mpaa riotaex fvmpt ) CABDZEFZ
+      CDZGFZHZUIUGFZIHZUJUGJFZFZKHZLZBMNFZOUHAGFZHZAUGFZIHZUSUNFZKHZLZBUROPQUIA
+      HZUQVEBURVFUKUTUMVBUPVDVFUJUSUHUIAGRZSVFULVAIUIAUGRTVFUOVCKVFUJUSUNVGUATU
+      BUCCBUDVEBURUEUF $.
+      $( [25-Nov-2014] $)
+
+    $( Properties of the minimal polynomial of an algebraic number. $)
+    mpaalem $p |- ( A e. AA -> ( ( minPolyAA ` A ) e. ( Poly ` QQ ) /\
+        ( ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) /\
+          ( ( minPolyAA ` A ) ` A ) = 0 /\
+          ( ( coeff ` ( minPolyAA ` A ) ) ` ( degAA ` A ) ) = 1 ) ) ) $=
+      ( vp caa wcel cmpaa cfv cv cdgr cdgraa wceq cc0 ccoe c1 w3a cq cply fveq2
+      crab wa eqeq1d crio mpaaval wreu mpaaeu riotacl2 syl eqeltrd fveq1 fveq1d
+      3anbi123d elrab sylib ) ACDZAEFZBGZHFZAIFZJZAUOFZKJZUQUOLFZFZMJZNZBOPFZRZ
+      DUNVEDUNHFZUQJZAUNFZKJZUQUNLFZFZMJZNZSUMUNVDBVEUAZVFABUBUMVDBVEUCVOVFDABU
+      DVDBVEUEUFUGVDVNBUNVEUOUNJZURVHUTVJVCVMVPUPVGUQUOUNHQTVPUSVIKAUOUNUHTVPVB
+      VLMVPUQVAVKUOUNLQUITUJUKUL $.
+      $( [25-Nov-2014] $)
+
+    $( Minimal polynomial is a polynomial.  (Contributed by Stefan O'Rear,
+       25-Nov-2014.) $)
+    mpaacl $p |- ( A e. AA -> ( minPolyAA ` A ) e. ( Poly ` QQ ) ) $=
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpld
+      c1 ) ABCADEZFGECQHEAIEZJAQEKJRQLEEPJMANO $.
+      $( [25-Nov-2014] $)
+
+    $( Minimal polynomial has degree the degree of the number.  (Contributed by
+       Stefan O'Rear, 25-Nov-2014.) $)
+    mpaadgr $p |- ( A e. AA -> ( deg ` ( minPolyAA ` A ) ) = ( degAA ` A ) ) $=
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr1
+      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUBANTUBUCUDOR $.
+      $( [25-Nov-2014] $)
+
+    $( Minimal polynomial has the polynomial as a root.  (Contributed by Stefan
+       O'Rear, 25-Nov-2014.) $)
+    mpaaroot $p |- ( A e. AA -> ( ( minPolyAA ` A ) ` A ) = 0 ) $=
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr2
+      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUCANTUBUCUDOR $.
+      $( [25-Nov-2014] $)
+
+    $( Minimal polynomial is monic.  (Contributed by Stefan O'Rear,
+       25-Nov-2014.) $)
+    mpaamn $p |- ( A e. AA -> ( ( coeff ` ( minPolyAA ` A ) ) `
+          ( degAA ` A ) ) = 1 ) $=
+      ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr3
+      c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUDANTUBUCUDOR $.
+      $( [25-Nov-2014] $)
+
+    $(
+    @( The minimal polynomial of a rational number. @)
+    mpaaq @p |- ( A e. QQ -> ( minPolyAA ` A ) = ( x e. CC |-> ( x - A ) ) ) @=
+      ? @.
+    $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Algebraic integers I
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c _ZZ IntgOver $.
+
+  $( Extend class notation with the integral-over predicate. $)
+  citgo $a class IntgOver $.
+
+  $( Extend class notation with the class of algebraic integers. $)
+  cza $a class _ZZ $.
+
+  ${
+    $d x p s $.
+
+    $( A complex number is said to be integral over a subset if it is the root
+       of a monic polynomial with coefficients from the subset.  This
+       definition is typically not used for fields but it works there, see
+       ~ aaitgo .  This definition could work for subsets of an arbitrary ring
+       with a more general definition of polynomials.  TODO: use ` Monic `  $)
+    df-itgo $a |- IntgOver = ( s e. ~P CC |-> { x e. CC | E. p e. ( Poly ` s )
+        ( ( p ` x ) = 0 /\ ( ( coeff ` p ) ` ( deg ` p ) ) = 1 ) } ) $.
+
+    $( Define an algebraic integer as a complex number which is the root of a
+       monic integer polynomial. $)
+    df-za $a |- _ZZ = ( IntgOver ` ZZ ) $.
   $}
 
   ${
@@ -15326,26 +15351,12 @@ $)
     cnplyspn.f $e |- ( ph -> F = ( j e. ( 0 ... ( K - 1 ) ) |-> ( R ^ j ) ) )
         $.
     $( Finite spans of powers are the values of limited-degree polynomials. $)
-    cnplyspn $p |- ( ph -> ( X e. S <-> E. f e. ( B Poly< K ) X = ( f ` R ) ) )
-        $=
-      ( vb va wcel co cv cc cc0 c1 cmin cfz cfv cmul csu wceq cmap cplylt fzfid
-      wrex wf cexp cmpt cn0 elfznn0 expcl syl2an eqid fmptd feq1d cnfispn bitrd
-      mpbird ) AJEQJUAIUBUCRZUDRZOSZPSUEVHHUEUFROUGUHPCVGUIRULJDFSUEUHFCIUJRULA
-      BCEPOHVGJKLAUAVFUKAVGTHUMVGTGVGDGSZUNRZUOZUMAGVGVJTVKADTQVIUPQVJTQVIVGQ?V
-      IVFUQDVIURUSVKUTVAAVGTHVKNVBVEMVC?VD $.
-  $}
-
-  ${
-    mncdiv.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
-    mncdiv.f $e |- ( ph -> F e. ( Poly ` S ) ) $.
-    mncdiv.g $e |- ( ph -> G e. ( Monic ` S ) ) $.
-    $( Monic version of polynomial division algorithm, does not require
-       division over the base ring. $)
-    mncdivex $p |- ( ph -> E. q e. ( Poly ` S ) ( F oF - ( G oF x. q ) ) e.
-          ( S Poly< ( deg ` G ) ) ) $=
+    cnplyspn $p |- ( ph -> ( X e. S <->
+        E. f e. ( B Poly< K ) X = ( f ` R ) ) ) $=
       ? $.
   $}
 
+    $( TODO $)
     $( Finite spans in terms of limited degree polynomials. $)
     $( Patch monic definition into itgo. $)
     $( Transitivity of finite spans. $)
@@ -15476,50 +15487,6 @@ $)
     itgocllem $p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
           Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) $=
       ? $.
-  $}
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Draft definitions for formal polynomial rings
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  $c FBag +bg fPoly $.
-
-  $( Extend class notation with the finite bags drawn from some set. $)
-  cfbag $a class FBag $.
-
-  $( Extend class notation with the bag sum operator. $)
-  caddbg $a class +bg $.
-
-  $( Extend class notation with the class of formal polynomials over a set. $)
-  cfply $a class fPoly $.
-
-  ${
-    $d s t u $.
-
-    $( Define the class of finite bags drawn from some base set.  We define the
-       range using nonzero ordinals (XXX Norm is this an OK use of ` N. ` or
-       should I write it out?) so that domains can be ambiguous and ~ ndmfv
-       will pick up the slack. $)
-    df-fbag $a |- FBag = ( s e. _V |->
-      { u e. ( ( om \ { (/) } ) ^pm s ) | dom u e. Fin } ) $.
-
-    $( Define the addition operator on bags.  Does not actually require
-       finiteness. $)
-    df-addbg $a |- +bg = ( s e. _V , t e. _V |->
-        ( u e. ( dom s u. dom t ) |-> ( ( s ` u ) +o ( t ` u ) ) ) ) $.
-
-    $( Define the basic set of formal polynomials over a coefficient ring:
-       mappings from exponent vectors to coefficients such that all but
-       finitely many are zero. $)
-    df-fply $a |- fPoly = ( s e. _V , t e. _V |->
-        { u e. ( ( Base ` s ) ^m ( FBag ` t ) ) |
-          ( `' u " ( _V \ { ( 0g ` s ) } ) ) e. Fin } ) $.
-
-    $( TODO: define commutative monoids, general bag sum operation for
-       commutative monoids, product operation for commutative rings, polynomial
-       evaluator on that basis $)
   $}
 
 $( (End of Stefan O'Rear's mathbox.) $)
