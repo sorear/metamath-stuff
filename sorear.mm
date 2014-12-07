@@ -14416,6 +14416,34 @@ $)
       $( [30-Nov-2014] $)
   $}
 
+  ${
+    $d x y z $.
+
+    $( The rationals are a sub-division-ring of ` CCfld ` . $)
+    cnqdrng $p |- ( CCfld |`s QQ ) e. DivRing $=
+      ( vx vy ccnfld cq co cdr wcel wtru caddc cmul c1 cc0 cfv wceq cc cz ax-mp
+      a1i zq cv cress eqidd c0g cnfld0 cplusg cnfldadd cbs wss cnfldbas sseqtri
+      0z qaddcl 3adant1 cminusg cneg qcn cnfldneg syl qnegcl eqeltrd adantl cur
+      qsscn cnfld1 cmulr cnfldmul 1z qmulcl wa cinvr cdiv cnfldrec sylan qreccl
+      wne cndrng issubdrngd trud ) CDUAEZFGHABDIVSJCKLHVSUBLCUCMNHUDRICUEMNHUFR
+      DCUGMZUHHDOVTVCUIUJRLDGZHLPGWAUKLSQRATZDGZBTZDGZWBWDIEDGHWBWDULUMWCWBCUNM
+      MZDGHWCWFWBUOZDWCWBOGZWFWGNWBUPZWBUQURWBUSUTVAKCVBMNHVDRJCVEMNHVFRKDGZHKP
+      GWJVGKSQRWCWEWBWDJEDGHWBWDVHUMWCWBLVOZVIZWBCVJMMZDGHWLWMKWBVKEZDWCWHWKWMW
+      NNWIWBVLVMWBVNUTVACFGHVPRVQVR $.
+      $( [30-Nov-2014] $)
+
+    $( The integers are a subring of ` CCfld ` . $)
+    cnzring $p |- ( CCfld |`s ZZ ) e. Ring $=
+      ( vx vy ccnfld cz cress co crg wcel wtru caddc cmul c1 cc0 eqidd cfv wceq
+      a1i cc cv 3adant1 c0g cnfld0 cplusg cnfldadd cbs wss zsscn sseqtri zaddcl
+      cnfldbas 0z cminusg cneg zcn cnfldneg syl znegcl eqeltrd adantl cur cmulr
+      cnfld1 cnfldmul 1z zmulcl cnrng issubrngd trud ) CDEFZGHIABDJVIKCLMIVINMC
+      UAOPIUBQJCUCOPIUDQDCUEOZUFIDRVJUGUJUHQMDHIUKQASZDHZBSZDHZVKVMJFDHIVKVMUIT
+      VLVKCULOOZDHIVLVOVKUMZDVLVKRHVOVPPVKUNVKUOUPVKUQURUSLCUTOPIVBQKCVAOPIVCQL
+      DHIVDQVLVNVKVMKFDHIVKVMVETCGHIVFQVGVH $.
+      $( [30-Nov-2014] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Noetherian rings and left modules
@@ -14842,6 +14870,31 @@ $)
   $}
 
   ${
+    $d ph a b $.  $d X a b $.  $d Y a b $.
+    grpidprop.x $e |- ( ph -> X e. V ) $.
+    grpidprop.y $e |- ( ph -> Y e. W ) $.
+    grpidprop.b $e |- ( ph -> ( Base ` X ) = ( Base ` Y ) ) $.
+    grpidprop.p $e |- ( ph -> ( +g ` X ) = ( +g ` Y ) ) $.
+    $( Identity depends only on the base and group operation. $)
+    grpidprop $p |- ( ph -> ( 0g ` X ) = ( 0g ` Y ) ) $=
+      ( va vb cv cplusg cfv co wceq cbs wral crio eqid oveqd eqeq1d riotaeqbidv
+      c0g raleqbidv wcel grpidval syl 3eqtr4d ) AJLZKLZDMNZOZUKPZKDQNZRZJUOSZUJ
+      UKEMNZOZUKPZKEQNZRZJVASZDUDNZEUDNZAUPVBJUOVAHAUNUTKUOVAHAUMUSUKAULURUJUKI
+      UAUBUEUCADBUFVDUQPFKUOULJDVDBUOTULTVDTUGUHAECUFVEVCPGKVAURJEVECVATURTVETU
+      GUHUI $.
+      $( [6-Dec-2014] $)
+
+    $( Negation depends only on the base and group operation. $)
+    grpnegprop $p |- ( ph -> ( invg ` X ) = ( invg ` Y ) ) $=
+      ( va vb cbs cfv cv cplusg co c0g wceq crio eqid cminusg grpidprop eqeq12d
+      cmpt oveqd riotaeqbidv mpteq12dv wcel grpinvfval syl 3eqtr4d ) AJDLMZKNZJ
+      NZDOMZPZDQMZRZKULSZUDZJELMZUMUNEOMZPZEQMZRZKVASZUDZDUAMZEUAMZAJULUSVAVFHA
+      URVEKULVAHAUPVCUQVDAUOVBUMUNIUEABCDEFGHIUBUCUFUGADBUHVHUTRFJKULUODVHUQBUL
+      TUOTUQTVHTUIUJAECUHVIVGRGJKVAVBEVIVDCVATVBTVDTVITUIUJUK $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
     $( Base set of the ring module. $)
     rlmbase $p |- ( R e. X -> ( Base ` R ) = ( Base ` ( ringLMod ` R ) ) ) $=
       ( wcel crglmod cfv cbs rlmval wss ssid a1i srabase ) ABCZADEAFEZAABGMMHLM
@@ -14877,6 +14930,12 @@ $)
       ( crg wcel crglmod cfv cbs clmod rlmval csubrg id eqidd subrgself sralmod
       csra eqid mpdan eqeltrd ) ABCZADEAFEZANEEZGABHRSAIECTGCRSARJRSKLTSATOMPQ
       $.
+      $( [6-Dec-2014] $)
+
+    $( Vector negation in the ring module. $)
+    rlmvneg $p |- ( R e. X -> ( invg ` R ) = ( invg ` ( ringLMod ` R ) ) ) $=
+      ( wcel cvv crglmod cfv id fvex a1i rlmbase rlmplusg grpnegprop ) ABCZBDAA
+      EFZMGNDCMAEHIABJABKL $.
       $( [6-Dec-2014] $)
   $}
 
@@ -14917,6 +14976,18 @@ $)
         ( clidl cfv crglmod cplusg crg wcel wceq rlmplusg syl eqtrd clss clmod
         lidlval rlmlmod lssvacld ) ABCLMZDCNMZEFABCOMZUHOMZIACPQZUIUJRGCPSTUAAU
         KUGUHUBMRGCPUDTAUKUHUCQGCUETHJKUF $.
+        $( [6-Dec-2014] $)
+    $}
+
+    ${
+      lidlnegcl.x $e |- ( ph -> X e. I ) $.
+      lidlnegcl.n $e |- ( ph -> ( ( invg ` R ) ` X ) = N ) $.
+      $( An ideal contains negatives. $)
+      lidlnegcl $p |- ( ph -> N e. I ) $=
+        ( crglmod cfv cminusg crg wcel wceq rlmvneg syl eqcomd fveq1d eqtrd
+        clidl clss lidlval clmod rlmlmod lssvnegcld eqeltrrd ) AEBJKZLKZKZDCAUJ
+        EBLKZKDAEUIUKAUKUIABMNZUKUIOFBMPQRSITABUAKZCUHEGAULUMUHUBKOFBMUCQAULUHU
+        DNFBUEQHUFUG $.
         $( [6-Dec-2014] $)
     $}
 
@@ -15057,31 +15128,101 @@ $)
   $}
 
   ${
-    $d ph i g $.  $d I i g $.  $d B i g $.  $d R i g $.
+    $d ph r i g $.  $d I r i g $.  $d B r i g $.  $d R r i g $.
     islpir.i $e |- ( ph -> I = ( LIdeal ` R ) ) $.
     islpir.b $e |- ( ph -> B = ( Base ` R ) ) $.
     islpir.k $e |- ( ph -> K = ( RSpan ` R ) ) $.
     $( Property of a left principal ideal ring. $)
     islpir $p |- ( ph -> ( R e. LPIR <-> ( R e. Ring /\
           A. i e. I E. g e. B i = ( K ` { g } ) ) ) ) $=
-      ? $.
+      ( vr cv cfv wceq wrex wral crsp cbs clidl fveq2 crg wcel csn clpir fveq1d
+      wa eqeq2d rexeqbidv raleqbidv anbi2d df-lpir elrab2 syl6rbbr ) ACUAUBZELZ
+      DLUCZGMZNZDBOZEFPZUFUNUOUPCQMZMZNZDCRMZOZECSMZPZUFCUDUBAUTVGUNAUSVEEFVFHA
+      URVCDBVDIAUQVBUOAUPGVAJUEUGUHUIUJUOUPKLZQMZMZNZDVHRMZOZEVHSMZPVGKCUAUDVHC
+      NZVMVEEVNVFVHCSTVOVKVCDVLVDVHCRTVOVJVBUOVOUPVIVAVHCQTUEUGUHUIKDEUKULUM $.
+      $( [6-Dec-2014] $)
 
     islpir2.r $e |- ( ph -> R e. Ring ) $.
-    islpir2.g $e |- ( ( ph /\ i e. I ) -> E. g e. B i = ( K ` { g } ) ) $.
+    ${
+      islpir2.g $e |- ( ( ph /\ i e. I ) -> E. g e. B i = ( K ` { g } ) ) $.
+      $( Deduce ` LPIR ` status. $)
+      islpir2 $p |- ( ph -> R e. LPIR ) $=
+        ( clpir wcel crg cv csn cfv wceq wrex wral islpir ralrimiva mpbir2and )
+        ACMNCONEPDPQGRSDBTZEFUAABCDEFGHIJUBKAUEEFLUCUD $.
+        $( [6-Dec-2014] $)
+    $}
+
+    $d K g $.  $d Z g $.
+    islpir3.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
+    islpir3.g $e |- ( ( ph /\ i e. I /\ { Z } C. i ) ->
+        E. g e. B i = ( K ` { g } ) ) $.
     $( Deduce ` LPIR ` status. $)
-    islpir2 $p |- ( ph -> R e. LPIR ) $=
-      ? $.
+    islpir3 $p |- ( ph -> R e. LPIR ) $=
+      ( cv wcel csn wceq cfv adantr wa wpss wo wrex wss crg clidl simpr eleqtrd
+      c0g lidl0cl snssd sspss sylib 3expia cgrp rnggrp syl grpidcld rsp0 eqcomd
+      wi sneq fveq2d eqeq2d rcla4ev syl2anc eqeq1 rexbidv syl5ibcom mpd islpir2
+      jaod ) ABCDEFGIJKLAEOZFPZUAZHQZVNUBZVQVNRZUCZVNDOZQZGSZRZDBUDZVPVQVNUEVTV
+      PHVNVPCVNHACUFPZVOLTVPVNFCUGSZAVOUHAFWGRVOITUIAHCUJSRVOMTUKULVQVNUMUNVPVR
+      WEVSAVOVRWENUOAVSWEVBVOAVQWCRZDBUDZVSWEAHBPVQVQGSZRZWIABCHAWFCUPPLCUQURJM
+      USAWJVQACGHLKMUTVAWHWKDHBWAHRZWCWJVQWLWBVQGWAHVCVDVEVFVGVSWHWDDBVQVNWCVHV
+      IVJTVMVKVL $.
+      $( [6-Dec-2014] $)
   $}
 
   ${
-    $d R i g a b $.
+    $d R i g a b c d $.
     $( A left principal ideal ring is a ring. $)
     lpirrng $p |- ( R e. LPIR -> R e. Ring ) $=
-      ? $.
+      ( vi vg clpir wcel crg cv csn crsp cfv wceq wrex clidl wral wa wtru eqidd
+      cbs wb islpir trud simplbi ) ADEZAFEZBGCGHAIJZJKCARJZLBAMJZNZUCUDUHOSPUFA
+      CBUGUEPUGQPUFQPUEQTUAUB $.
+      $( [6-Dec-2014] $)
+
+    $( A division ring is a left principal ideal ring. $)
+    drnglpir $p |- ( R e. DivRing -> R e. LPIR ) $=
+      ( vg vi cdr wcel cbs cfv clidl crsp c0g eqidd drngrng cv csn w3a 3ad2ant1
+      wpss wceq wne sylib cur rngidcld wn wo wss df-pss simprbi necomd 3ad2ant3
+      wrex df-ne cpr simp2 id drngnidl eleqtrd elpr orel1 sylc rsp1 eqtr4d sneq
+      vex fveq2d eqeq2d rcla4ev syl2anc islpir3 ) ADEZAFGZABCAHGZAIGZAJGZVIVKKV
+      IVJKZVIVLKZALZVIVMKZVICMZVKEZVMNZVRQZOZAUAGZVJEZVRWCNZVLGZRZVRBMZNZVLGZRZ
+      BVJUJVIVSWDWAVIVJAWCVPVNVIWCKZUBPWBVRVJWFWBVRVTRZUCZWMVRVJRZUDZWOWAVIWNVS
+      WAVRVTSWNWAVTVRWAVTVRUEVTVRSVTVRUFUGUHVRVTUKTUIWBVRVTVJULZEWPWBVRVKWQVIVS
+      WAUMVIVSVKWQRWAVIVJAVMVIUNVNVQUOPUPVRVTVJCVCUQTWMWOURUSVIVSWFVJRWAVIVJAVL
+      WCVPVOWLVNUTPVAWKWGBWCVJWHWCRZWJWFVRWRWIWEVLWHWCVBVDVEVFVGVH $.
+      $( [6-Dec-2014] $)
 
     $( The integers are a left principal ideal ring. $)
     zlpir $p |- ( CCfld |`s ZZ ) e. LPIR $=
-      ? $.
+      ( vg vi va ccnfld cz co wcel wtru cfv cc0 eqidd wss a1i cnzring cn adantr
+      cr wceq syl cmul cress clpir clidl crsp cbs cc cnfldbas sseqtri ressbased
+      zsscn crg cv csn wpss w3a cin clt ccnv csup wrex inss2 nnssz sstri c1 cuz
+      c0 wne nnuz wel wn wa wex pssnel 3ad2ant3 cabs cneg wo cvv 3ad2ant1 simp2
+      ovex lidlss simprl sseldd absor 3syl eleq1 syl5ibrcom simpl2 cminusg cgrp
+      zre cnrng rnggrp trud id subgrpinv zcn cnfldneg eqtr3d lidlnegcl jaod mpd
+      elsn biimpri necon3bi ad2antll nnabscl syl2anc elin sylanbrc ne0i exlimdv
+      ax-mp ex infmssuzcl sylancr sseldi cdiv sselda nncn nnne0 divcan1 syl3anc
+      eleqtrd snssd rspcl cmulr cnfldmul ressmulr rspssid ltso cnvso mpbi supex
+      wor snid lidlmcl eqeltrrd ssrdv eqssd sneq fveq2d eqeq2d rcla4ev islpir3
+      ) DEUAFZUBGHEUUGABUUGUCIZUUGUDIZJHUUHKHEUUGDEDUEIZLHEUFUUJUJUGUHMHUUGKZUI
+      ZHUUIKUUGUKGZHNM?HBULZUUHGZJUMZUUNUNZUOZUUNOUPZQUQURZUSZEGUUNUVAUMZUUIIZR
+      ZUUNAULZUMZUUIIZRZAEUTUURUUSEUVAUUSOEUUNOVAZVBVCUURUUSVDVEIZLUUSVFVGZUVAU
+      USGUUSOUVJUVIVHUHUURCBVIZCULZUUPGZVJZVKZCVLZUVKUUQHUVQUUOCUUPUUNVMVNUURUV
+      PUVKCUURUVPUVKUURUVPVKZUVMVOIZUUSGZUVKUVRUVSUUNGZUVSOGZUVTUVRUVSUVMRZUVSU
+      VMVPZRZVQZUWAUVRUVMEGZUVMQGUWFUVRUUNEUVMUURUUNELUVPUUREUUNUUHUUGVRUUGVRGU
+      URDEUAWAMHUUOEUUGUEIZRZUUQUULVSZUURUUHKHUUOUUQVTWBZPUURUVLUVOWCZWDZUVMWLU
+      VMWEWFUVRUWCUWAUWEUVRUWAUWCUVLUWLUVSUVMUUNWGWHUVRUWAUWEUWDUUNGUVRUUGUUNUW
+      DUVMUUMUVRNMHUUOUUQUVPWIUWLUVRUWGUVMUUGWJIZIZUWDRUWMUWGUVMDWJIZIZUWOUWDUW
+      GEEDUUGUWPUWNUVMDWKGZUWGDUKGUWRWMDWNXNMUUGWKGZUWGUUMUWSNUUGWNXNMUWGUWPKUW
+      GUWNKUWIUWGUWIUULWOMUWGWPUWGUUGKWQUWGUVMUFGZUWQUWDRUVMWRZUVMWSSWTSXAUVSUW
+      DUUNWGWHXBXCUVRUWGUVMJVGZUWBUWMUVOUXBUURUVLUVNUVMJUVNUVMJRCJXDXEXFXGUVMXH
+      XIUVSUUNOXJXKUUSUVSXLSXOXMXCUUSVDXPXQZXRZUURUUNUVCUURCUUNUVCUURUVLUVMUVCG
+      UURUVLVKZUVMUVAXSFZUVATFZUVMUVCUXEUWTUVAUFGZUVAJVGZUXGUVMRUXEUWGUWTUURUUN
+      EUVMUWKXTUXASUURUXHUVLUURUVAOGZUXHUURUUSOUVAUVIUXCXRZUVAYASPUURUXIUVLUURU
+      XJUXIUXKUVAYBSPUVMUVAYCYDUXEEUUGTUVCUXFUVAUUMUXENMZUXEUUGUVBUVCUXLUXEUVAU
+      WHUURUVAUWHGUVLUURUVAEUWHUXDUWJYEPYFZUXEUVCKZYGUURUWIUVLUWJPUURTUUGYHIRZU
+      VLHUUOUXOUUQHEUUGTDUUKTDYHIRHYIMYJVSP?UXEUVBUVCUVAUXEUUGUVBUVCUXLUXMUXNYK
+      UVAUVBGUXEUVAQUUSUUTQUQYPQUUTYPYLQUQYMYNYOYQMWDYRYSXOYT?UUAUVHUVDAUVAEUVE
+      UVARZUVGUVCUUNUXPUVFUVBUUIUVEUVAUUBUUCUUDUUEXIUUFWO $.
   $}
 
 $(
@@ -15716,34 +15857,6 @@ $)
       ( cbs cfv crgspn eqidd csubrg wcel wss eqid subrgss syl ssid a1i rgspnmin
       rgspnssid eqssd ) ADBABCHIZCBDCJIZEAUCKZABCLIMBUCNFUCCBUCOPQZAUDKZGFBBNAB
       RSTABUCCDUDEUEUFUGGUAUB $.
-      $( [30-Nov-2014] $)
-  $}
-
-  ${
-    $d x y z $.
-
-    $( The rationals are a sub-division-ring of ` CCfld ` . $)
-    cnqdrng $p |- ( CCfld |`s QQ ) e. DivRing $=
-      ( vx vy ccnfld cq co cdr wcel wtru caddc cmul c1 cc0 cfv wceq cc cz ax-mp
-      a1i zq cv cress eqidd c0g cnfld0 cplusg cnfldadd cbs wss cnfldbas sseqtri
-      0z qaddcl 3adant1 cminusg cneg qcn cnfldneg syl qnegcl eqeltrd adantl cur
-      qsscn cnfld1 cmulr cnfldmul 1z qmulcl wa cinvr cdiv cnfldrec sylan qreccl
-      wne cndrng issubdrngd trud ) CDUAEZFGHABDIVSJCKLHVSUBLCUCMNHUDRICUEMNHUFR
-      DCUGMZUHHDOVTVCUIUJRLDGZHLPGWAUKLSQRATZDGZBTZDGZWBWDIEDGHWBWDULUMWCWBCUNM
-      MZDGHWCWFWBUOZDWCWBOGZWFWGNWBUPZWBUQURWBUSUTVAKCVBMNHVDRJCVEMNHVFRKDGZHKP
-      GWJVGKSQRWCWEWBWDJEDGHWBWDVHUMWCWBLVOZVIZWBCVJMMZDGHWLWMKWBVKEZDWCWHWKWMW
-      NNWIWBVLVMWBVNUTVACFGHVPRVQVR $.
-      $( [30-Nov-2014] $)
-
-    $( The integers are a subring of ` CCfld ` . $)
-    cnzring $p |- ( CCfld |`s ZZ ) e. Ring $=
-      ( vx vy ccnfld cz cress co crg wcel wtru caddc cmul c1 cc0 eqidd cfv wceq
-      a1i cc cv 3adant1 c0g cnfld0 cplusg cnfldadd cbs wss zsscn sseqtri zaddcl
-      cnfldbas 0z cminusg cneg zcn cnfldneg syl znegcl eqeltrd adantl cur cmulr
-      cnfld1 cnfldmul 1z zmulcl cnrng issubrngd trud ) CDEFZGHIABDJVIKCLMIVINMC
-      UAOPIUBQJCUCOPIUDQDCUEOZUFIDRVJUGUJUHQMDHIUKQASZDHZBSZDHZVKVMJFDHIVKVMUIT
-      VLVKCULOOZDHIVLVOVKUMZDVLVKRHVOVPPVKUNVKUOUPVKUQURUSLCUTOPIVBQKCVAOPIVCQL
-      DHIVDQVLVNVKVMKFDHIVKVMVETCGHIVFQVGVH $.
       $( [30-Nov-2014] $)
   $}
 
