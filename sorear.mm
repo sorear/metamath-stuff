@@ -14668,22 +14668,94 @@ $)
   $}
 
   ${
+    lsslmod.x $e |- ( ph -> X = ( W |`s U ) ) $.
+    lsslmod.w $e |- ( ph -> W e. LMod ) $.
+    lsslmod.u $e |- ( ph -> U e. ( LSubSp ` W ) ) $.
+    $( A submodule is a module. $)
+    lsslmod $p |- ( ph -> X e. LMod ) $=
+      ( cress co clmod cbs cfv wss wcel clss wa eqidd islss3 mpbid simprd
+      eqeltrd ) ADCBHIZJEABCKLZMZUBJNZABCOLZNUDUEPGAUFBUCCFAUCQAUFQRSTUA $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
+    lsslss.w $e |- ( ph -> W e. LMod ) $.
+    lsslss.x $e |- ( ph -> X = ( W |`s U ) ) $.
+    lsslss.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
+    lsslss.t $e |- ( ph -> T = ( LSubSp ` X ) ) $.
+    lsslss.u $e |- ( ph -> U e. S ) $.
+    $( The subspaces of a subspace are the smaller subspaces. $)
+    lsslss $p |- ( ph -> ( V e. T <-> ( V e. S /\ V C_ U ) ) ) $=
+      ( wcel wss cress co clmod wa islss3 adantr cbs eqidd mpbid simprd eqeltrd
+      cfv clss eleqtrd eqid lssss syl2anc ressbased sstr2 biantrurd wceq oveq1d
+      mpan9 cvv ssexg sylan2 ancoms cin incom simpr df-ss syl5eq ressabs eleq1d
+      sylib eqtrd wb 3bitr4d pm5.32da ancom syl6bb bitrd ) AECMEDNZGEOPZQMZRZEB
+      MZVQRZACEDGAGFDOPZQIADFUAUFZNZWCQMZADBMZWEWFRLABDWDFHAWDUBZJSUCUDUEADGFAF
+      QMDFUGUFZMWEHADBWILJUHWIDWDFQWDUIWIUIUJUKZIULKSAVTVQWARWBAVQVSWAAVQRZFEOP
+      ZQMZEWDNZWMRZVSWAWKWNWMAWEVQWNWJEDWDUMUQUNWKVRWLQWKVRWCEOPZWLAVRWPUOVQAGW
+      CEOIUPTWKDEEFBURAWGVQLTVQAEURMZAVQWGWQLEDBUSUTVAWKDEVBEDVBZEDEVCWKVQWREUO
+      AVQVDEDVEVIVFVGVJVHAWAWOVKVQABEWDFHWHJSTVLVMVQWAVNVOVP $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
+    lsslsp.w $e |- ( ph -> W e. LMod ) $.
+    lsslsp.u $e |- ( ph -> U e. ( LSubSp ` W ) ) $.
+    lsslsp.x $e |- ( ph -> X = ( W |`s U ) ) $.
+    lsslsp.k $e |- ( ph -> K = ( LSpan ` W ) ) $.
+    lsslsp.l $e |- ( ph -> L = ( LSpan ` X ) ) $.
+    lsslsp.g $e |- ( ph -> G C_ U ) $.
+    $( Spans in submodules correspond to spans in the containing module. $)
+    lsslsp $p |- ( ph -> ( K ` G ) = ( L ` G ) ) $=
+      ( cfv clmod wcel wss eqid syl2anc lspssp clspn clss cbs lsslmod ressbased
+      wa lssss sseqtrd lspcl eqidd lsslss mpbid lspssid syl3anc sstrd mpbir2and
+      simpld eqssd fveq1d 3eqtr4d ) ACFUANZNZCGUANZNZCDNCENAVBVDAFOPZVDFUBNZPZC
+      VDQZVBVDQHAVGVDBQZAVDGUBNZPZVGVIUFAGOPZCGUCNZQZVKABFGJHIUDZACBVMMABGFAVEB
+      VFPZBFUCNZQHIVFBVQFOVQRZVFRZUGSZJUEUHZVJCVCVMGVMRZVJRZVCRZUISAVFVJBVDFGHJ
+      AVFUJZAVJUJZIUKULUQAVLVNVHVOWACVCVMGWBWDUMSVFCVDVAFVSVARZTUNAVLVBVJPZCVBQ
+      ZVDVBQVOAWHVBVFPZVBBQZAVFVJBVBFGHJWEWFIUKAVECVQQZWJHACBVQMVTUOZVFCVAVQFVR
+      VSWGUISAVEVPCBQWKHIMVFCBVAFVSWGTUNUPAVEWLWIHWMCVAVQFVRWGUMSVJCVBVCGWCWDTU
+      NURACDVAKUSACEVCLUSUT $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
+    $d V s p $.  $d ph s p $.  $d N s p $.  $d W s p $.  $d S s p $.
+    lspf.w $e |- ( ph -> W e. LMod ) $.
+    lspf.v $e |- ( ph -> V = ( Base ` W ) ) $.
+    lspf.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
+    lspf.n $e |- ( ph -> N = ( LSpan ` W ) ) $.
+    $( The span operator on a left module maps subsets to subsets. $)
+    lspf $p |- ( ph -> N : ~P V --> S ) $=
+      ( vs vp cpw wf cfv cv wss wcel clmod adantr eqid cbs clss crab cint wa c0
+      cmpt wne ssrab2 a1i wrex lss1 syl elpwi sseq2 rcla4ev syl2an rabn0 sylibr
+      lssintcl syl3anc wceq eleqtrrd fmptd pweqd feq2d mpbird clspn eqtrd feq1d
+      lspfval ) ADLZBCMVLBJEUANZLZJOZKOZPZKEUBNZUCZUDZUGZMZAWBVNBWAMAJVNVTBWAAV
+      OVNQZUEZVTVRBWDERQZVSVRPZVSUFUHZVTVRQAWEWCFSWFWDVQKVRUIUJWDVQKVRUKZWGAVMV
+      RQZVOVMPZWHWCAWEWIFVRVMEVMTZVRTZULUMVOVMUNVQWJKVMVRVPVMVOUOUPUQVQKVRURUSV
+      SVREWLUTVAABVRVBWCHSVCWATVDAVLVNBWAADVMGVEVFVGAVLBCWAACEVHNZWAIAWEWMWAVBF
+      KVRWMVMERJWKWLWMTVKUMVIVJVG $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
     $d ph a b $.  $d W a b $.  $d B a b $.
     islmodfg.w $e |- ( ph -> W e. LMod ) $.
     islmodfg.b $e |- ( ph -> B = ( Base ` W ) ) $.
     $( Property of a finitely generated left module. $)
     islmodfg $p |- ( ph -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin /\
           ( ( LSpan ` W ) ` b ) = B ) ) ) $=
-      ( va clfig wcel cbs cfv clspn cpw cfn cin cima clmod wceq wa wb crab wrex
-      cv df-lfig eleq2i fveq2 imaeq1d pweqd ineq1d imaeq2d eqtrd eleq12d elrab3
-      a1i syl fvelimab syl2anc wex eleq2d eqeq2d bicomd elin anbi1i anass bitri
-      anbi12d syl6bb exbidv df-rex 3bitr4g bitrd 3bitrd ) ACHIZCGUCZJKZVNLKZVOM
-      ZNOZPZIZGQUAZIZCJKZCLKZWCMZNOZPZIZDUCZNIZWIWDKZBRZSZDBMZUBZVMWBTAHWACGUDU
-      EUNACQIWBWHTEVTWHGCQVNCRZVOWCVSWGVNCJUFZWPVSWDVRPWGWPVPWDVRVNCLUFUGWPVRWF
-      WDWPVQWENWPVOWCWQUHUIUJUKULUMUOAWHWKWCRZDWFUBZWOA??WHWST??D?WFWCWDUPUQAWI
-      WFIZWRSZDURWIWNIZWMSZDURWSWOAXAXCDAXAWIWNNOZIZWLSZXCAXFXAAXEWTWLWRAXDWFWI
-      AWNWENABWCFUHUIUSABWCWKFUTVFVAXFXBWJSZWLSXCXEXGWLWIWNNVBVCXBWJWLVDVEVGVHW
-      RDWFVIWMDWNVIVJVKVL $.
+      ( va wcel cbs cfv clspn cpw cfn cin cima clmod wceq wa wb eqidd crab wrex
+      clfig df-lfig eleq2i a1i fveq2 imaeq1d pweqd ineq1d imaeq2d eqtrd eleq12d
+      cv elrab3 syl wfn wss clss wf lspf ffn inss1 fvelimab sylancl elin anbi1i
+      anass bitri eleq2d eqeq2d anbi12d syl5rbbr rexbidv2 bitrd 3bitrd ) ACUCHZ
+      CGUNZIJZVRKJZVSLZMNZOZHZGPUAZHZCIJZCKJZWGLZMNZOZHZDUNZMHZWMWHJZBQZRZDBLZU
+      BZVQWFSAUCWECGUDUEUFACPHWFWLSEWDWLGCPVRCQZVSWGWCWKVRCIUGZWTWCWHWBOWKWTVTW
+      HWBVRCKUGUHWTWBWJWHWTWAWIMWTVSWGXAUIUJUKULUMUOUPAWLWOWGQZDWJUBZWSAWHWIUQZ
+      WJWIURWLXCSAWICUSJZWHUTXDAXEWHWGCEAWGTAXETAWHTVAWIXEWHVBUPWIMVCDWIWJWGWHV
+      DVEAXBWQDWJWRWMWRHZWQRZWMWRMNZHZWPRZAWMWJHZXBRXJXFWNRZWPRXGXIXLWPWMWRMVFV
+      GXFWNWPVHVIAXIXKWPXBAXHWJWMAWRWIMABWGFUIUJVJABWGWOFVKVLVMVNVOVP $.
+      $( [6-Dec-2014] $)
   $}
 
   ${
@@ -14694,9 +14766,13 @@ $)
     $( Property of a finitely generated left (sub-)module. $)
     islssfg $p |- ( ph -> ( X e. LFinGen <-> E. b e. ~P S ( b e. Fin /\
         ( ( LSpan ` W ) ` b ) = S ) ) ) $=
-      ( clfig wcel cv cfn clspn cfv wceq wa cpw wrex islmodfg eqeq1d rexbidva
-      anbi2d bitrd ) ADIJEKZLJZUDDMNNZBOZPZEBQZRUEUDCMNNZBOZPZEUIRABDE??SAUHULE
-      UIAUDUIJPZUGUKUEUMUFUJB?TUBUAUC $.
+      ( clfig wcel clspn cfv wceq wa wrex clmod wss eqid adantr eqidd cfn lssss
+      cv cpw lsslmod clss cbs syl2anc ressbased islmodfg cress co adantl lsslsp
+      elpwi eqcomd eqeq1d anbi2d rexbidva bitrd ) ADIJEUCZUAJZVADKLZLZBMZNZEBUD
+      ZOVBVACKLZLZBMZNZEVGOABDEABCDGFHUEABDCACPJZBCUFLZJZBCUGLZQFHVMBVOCPVORVMR
+      UBUHGUIUJAVFVKEVGAVAVGJZNZVEVJVBVQVDVIBVQVIVDVQBVAVHVCCDAVLVPFSAVNVPHSADC
+      BUKULMVPGSVQVHTVQVCTVPVABQAVABUOUMUNUPUQURUSUT $.
+      $( [6-Dec-2014] $)
   $}
 
 $(
