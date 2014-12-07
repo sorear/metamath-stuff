@@ -13765,10 +13765,12 @@ $)
       HKEABNUFOUSUTVAVBVCUGUIUJ $.
       $( [27-Nov-2014] $)
 
-    $( The reciprocal operation in the field of complex numbers. $)
-    cnfldrec $p |- ( ( X e. CC /\ X =/= 0 ) ->
-        ( ( invr ` CCfld ) ` X ) = ( 1 / X ) ) $=
-      ? $.
+    $(
+    @( The reciprocal operation in the field of complex numbers. @)
+    cnfldrec @p |- ( ( X e. CC /\ X =/= 0 ) ->
+        ( ( invr ` CCfld ) ` X ) = ( 1 / X ) ) @=
+      ? @.
+    $)
   $}
 
   ${
@@ -14419,8 +14421,9 @@ $)
   ${
     $d x y z $.
 
-    $( The rationals are a sub-division-ring of ` CCfld ` . $)
-    cnqdrng $p |- ( CCfld |`s QQ ) e. DivRing $=
+    $(
+    @( The rationals are a sub-division-ring of ` CCfld ` . @)
+    cnqdrng @p |- ( CCfld |`s QQ ) e. DivRing @=
       ( vx vy ccnfld cq co cdr wcel wtru caddc cmul c1 cc0 cfv wceq cc cz ax-mp
       a1i zq cv cress eqidd c0g cnfld0 cplusg cnfldadd cbs wss cnfldbas sseqtri
       0z qaddcl 3adant1 cminusg cneg qcn cnfldneg syl qnegcl eqeltrd adantl cur
@@ -14429,8 +14432,9 @@ $)
       DCUGMZUHHDOVTVCUIUJRLDGZHLPGWAUKLSQRATZDGZBTZDGZWBWDIEDGHWBWDULUMWCWBCUNM
       MZDGHWCWFWBUOZDWCWBOGZWFWGNWBUPZWBUQURWBUSUTVAKCVBMNHVDRJCVEMNHVFRKDGZHKP
       GWJVGKSQRWCWEWBWDJEDGHWBWDVHUMWCWBLVOZVIZWBCVJMMZDGHWLWMKWBVKEZDWCWHWKWMW
-      NNWIWBVLVMWBVNUTVACFGHVPRVQVR $.
-      $( [30-Nov-2014] $)
+      NNWIWBVLVMWBVNUTVACFGHVPRVQVR @.
+      @( [30-Nov-2014] @)
+    $)
 
     $( The integers are a subring of ` CCfld ` . $)
     cnzring $p |- ( CCfld |`s ZZ ) e. Ring $=
@@ -15190,39 +15194,6 @@ $)
       WAUMVIVSVKWQRWAVIVJAVMVIUNVNVQUOPUPVRVTVJCVCUQTWMWOURUSVIVSWFVJRWAVIVJAVL
       WCVPVOWLVNUTPVAWKWGBWCVJWHWCRZWJWFVRWRWIWEVLWHWCVBVDVEVFVGVH $.
       $( [6-Dec-2014] $)
-
-    $( The integers are a left principal ideal ring. $)
-    zlpir $p |- ( CCfld |`s ZZ ) e. LPIR $=
-      ( vg vi va ccnfld cz co wcel wtru cfv cc0 eqidd wss a1i cnzring cn adantr
-      cr wceq syl cmul cress clpir clidl crsp cbs cc cnfldbas sseqtri ressbased
-      zsscn crg cv csn wpss w3a cin clt ccnv csup wrex inss2 nnssz sstri c1 cuz
-      c0 wne nnuz wel wn wa wex pssnel 3ad2ant3 cabs cneg wo cvv 3ad2ant1 simp2
-      ovex lidlss simprl sseldd absor 3syl eleq1 syl5ibrcom simpl2 cminusg cgrp
-      zre cnrng rnggrp trud id subgrpinv zcn cnfldneg eqtr3d lidlnegcl jaod mpd
-      elsn biimpri necon3bi ad2antll nnabscl syl2anc elin sylanbrc ne0i exlimdv
-      ax-mp ex infmssuzcl sylancr sseldi cdiv sselda nncn nnne0 divcan1 syl3anc
-      eleqtrd snssd rspcl cmulr cnfldmul ressmulr rspssid ltso cnvso mpbi supex
-      wor snid lidlmcl eqeltrrd ssrdv eqssd sneq fveq2d eqeq2d rcla4ev islpir3
-      ) DEUAFZUBGHEUUGABUUGUCIZUUGUDIZJHUUHKHEUUGDEDUEIZLHEUFUUJUJUGUHMHUUGKZUI
-      ZHUUIKUUGUKGZHNM?HBULZUUHGZJUMZUUNUNZUOZUUNOUPZQUQURZUSZEGUUNUVAUMZUUIIZR
-      ZUUNAULZUMZUUIIZRZAEUTUURUUSEUVAUUSOEUUNOVAZVBVCUURUUSVDVEIZLUUSVFVGZUVAU
-      USGUUSOUVJUVIVHUHUURCBVIZCULZUUPGZVJZVKZCVLZUVKUUQHUVQUUOCUUPUUNVMVNUURUV
-      PUVKCUURUVPUVKUURUVPVKZUVMVOIZUUSGZUVKUVRUVSUUNGZUVSOGZUVTUVRUVSUVMRZUVSU
-      VMVPZRZVQZUWAUVRUVMEGZUVMQGUWFUVRUUNEUVMUURUUNELUVPUUREUUNUUHUUGVRUUGVRGU
-      URDEUAWAMHUUOEUUGUEIZRZUUQUULVSZUURUUHKHUUOUUQVTWBZPUURUVLUVOWCZWDZUVMWLU
-      VMWEWFUVRUWCUWAUWEUVRUWAUWCUVLUWLUVSUVMUUNWGWHUVRUWAUWEUWDUUNGUVRUUGUUNUW
-      DUVMUUMUVRNMHUUOUUQUVPWIUWLUVRUWGUVMUUGWJIZIZUWDRUWMUWGUVMDWJIZIZUWOUWDUW
-      GEEDUUGUWPUWNUVMDWKGZUWGDUKGUWRWMDWNXNMUUGWKGZUWGUUMUWSNUUGWNXNMUWGUWPKUW
-      GUWNKUWIUWGUWIUULWOMUWGWPUWGUUGKWQUWGUVMUFGZUWQUWDRUVMWRZUVMWSSWTSXAUVSUW
-      DUUNWGWHXBXCUVRUWGUVMJVGZUWBUWMUVOUXBUURUVLUVNUVMJUVNUVMJRCJXDXEXFXGUVMXH
-      XIUVSUUNOXJXKUUSUVSXLSXOXMXCUUSVDXPXQZXRZUURUUNUVCUURCUUNUVCUURUVLUVMUVCG
-      UURUVLVKZUVMUVAXSFZUVATFZUVMUVCUXEUWTUVAUFGZUVAJVGZUXGUVMRUXEUWGUWTUURUUN
-      EUVMUWKXTUXASUURUXHUVLUURUVAOGZUXHUURUUSOUVAUVIUXCXRZUVAYASPUURUXIUVLUURU
-      XJUXIUXKUVAYBSPUVMUVAYCYDUXEEUUGTUVCUXFUVAUUMUXENMZUXEUUGUVBUVCUXLUXEUVAU
-      WHUURUVAUWHGUVLUURUVAEUWHUXDUWJYEPYFZUXEUVCKZYGUURUWIUVLUWJPUURTUUGYHIRZU
-      VLHUUOUXOUUQHEUUGTDUUKTDYHIRHYIMYJVSP?UXEUVBUVCUVAUXEUUGUVBUVCUXLUXMUXNYK
-      UVAUVBGUXEUVAQUUSUUTQUQYPQUUTYPYLQUQYMYNYOYQMWDYRYSXOYT?UUAUVHUVDAUVAEUVE
-      UVARZUVGUVCUUNUXPUVFUVBUUIUVEUVAUUBUUCUUDUUEXIUUFWO $.
   $}
 
 $(
@@ -15332,16 +15303,18 @@ $)
       $( [5-Dec-2014] $)
   $}
 
-  ${
-    mncdiv.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
-    mncdiv.f $e |- ( ph -> F e. ( Poly ` S ) ) $.
-    mncdiv.g $e |- ( ph -> G e. ( Monic ` S ) ) $.
-    $( Monic version of polynomial division algorithm, does not require
-       division over the base ring. $)
-    mncdivex $p |- ( ph -> E. q e. ( Poly ` S ) ( F oF - ( G oF x. q ) ) e.
-          ( S Poly< ( deg ` G ) ) ) $=
-      ? $.
-  $}
+  $(
+  @{
+    mncdiv.s @e |- ( ph -> S e. ( SubRing ` CCfld ) ) @.
+    mncdiv.f @e |- ( ph -> F e. ( Poly ` S ) ) @.
+    mncdiv.g @e |- ( ph -> G e. ( Monic ` S ) ) @.
+    @( Monic version of polynomial division algorithm, does not require
+       division over the base ring. @)
+    mncdivex @p |- ( ph -> E. q e. ( Poly ` S ) ( F oF - ( G oF x. q ) ) e.
+          ( S Poly< ( deg ` G ) ) ) @=
+      ? @.
+  @}
+  $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -15861,21 +15834,6 @@ $)
   $}
 
   ${
-    srafgtr.t $e |- ( ph -> T e. Ring ) $.
-    srafgtr.s $e |- ( ph -> S e. ( SubRing ` T ) ) $.
-    srafgtr.r $e |- ( ph -> R e. ( SubRing ` ( T |`s S ) ) ) $.
-    srafgtr.a $e |- ( ph -> A = ( ( subringAlg ` T ) ` S ) ) $.
-    srafgtr.b $e |- ( ph -> B = ( ( subringAlg ` ( T |`s S ) ) ` R ) ) $.
-    srafgtr.c $e |- ( ph -> C = ( ( subringAlg ` T ) ` R ) ) $.
-    srafgtr.ts $e |- ( ph -> A e. LFinGen ) $.
-    srafgtr.sr $e |- ( ph -> B e. LFinGen ) $.
-    $( A finitely generated ring extension of a finitely generated ring
-       extension is finitely generated. $)
-    srafgtr $p |- ( ph -> C e. LFinGen ) $=
-      ? $.
-  $}
-
-  ${
     $d ph a b c d e p $.  $d B a b c d e p $.  $d X a b c d e p $.
     $d V a b c d e p $.
     rngunsnply.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
@@ -15947,12 +15905,6 @@ $)
       AUWBPLUWDUWCUWPUWRUXCUXDUXEUVOZYSAUXNEUWAKHEPUVPVAWOWEABUWDUTUXKABUWBUWDB
       UWAUVQVYLYSWEUVRDUWGUWDVNVOVPUVSUVT $.
       $( [30-Nov-2014] $)
-
-    rngunsnpow.l $e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) $.
-    rngunsnpow.p $e |- ( ph -> P = { x | E. i e. NN0 x = ( X ^ i ) } ) $.
-    $( Adjoining one element to a ring results in linear span of powers. $)
-    rngunsnpow $p |- ( ph -> S = ( ( LSpan ` A ) ` P ) ) $=
-      ? $.
   $}
 
   ${
@@ -16083,88 +16035,89 @@ $)
       $( [6-Dec-2014] $)
   $}
 
-  ${
-    $d ph i a b c $.  $d B i a b c $.  $d G i a b c $.  $d F i a b c $.
-    cnplyspn.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    cnplyspn.a $e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) $.
-    cnplyspn.s $e |- ( ph -> S = ( ( LSpan ` A ) ` ran F ) ) $.
-    cnplyspn.f $e |- ( ph -> F = ( j e. ( 0 ... ( K - 1 ) ) |-> ( R ^ j ) ) )
-        $.
-    $( Finite spans of powers are the values of limited-degree polynomials. $)
-    cnplyspn $p |- ( ph -> ( X e. S <->
-        E. f e. ( B Poly< K ) X = ( f ` R ) ) ) $=
-      ? $.
-  $}
+  $(
+  @{
+    @d ph i a b c @.  @d B i a b c @.  @d G i a b c @.  @d F i a b c @.
+    cnplyspn.b @e |- ( ph -> B e. ( SubRing ` CCfld ) ) @.
+    cnplyspn.a @e |- ( ph -> A = ( ( subringAlg ` CCfld ) ` B ) ) @.
+    cnplyspn.s @e |- ( ph -> S = ( ( LSpan ` A ) ` ran F ) ) @.
+    cnplyspn.f @e |- ( ph -> F = ( j e. ( 0 ... ( K - 1 ) ) |-> ( R ^ j ) ) )
+        @.
+    @( Finite spans of powers are the values of limited-degree polynomials. @)
+    cnplyspn @p |- ( ph -> ( X e. S <->
+        E. f e. ( B Poly< K ) X = ( f ` R ) ) ) @=
+      ? @.
+  @}
 
-    $( TODO $)
-    $( Finite spans in terms of limited degree polynomials. $)
-    $( Patch monic definition into itgo. $)
-    $( Transitivity of finite spans. $)
-    $( Forward itgofg. $)
-    $( Reverse using ac6sfi. $)
-    $( itgofg2 and lemmas $)
-    $( start on Noetherian $)
+    @( TODO @)
+    @( Finite spans in terms of limited degree polynomials. @)
+    @( Patch monic definition into itgo. @)
+    @( Transitivity of finite spans. @)
+    @( Forward itgofg. @)
+    @( Reverse using ac6sfi. @)
+    @( itgofg2 and lemmas @)
+    @( start on Noetherian @)
 
-  ${
-    Xitgofglem5.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    Xitgofglem5.x $e |- ( ph -> X e. CC ) $.
-    Xitgofglem5.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
-    Xitgofglem5.d $e |- ( ph -> D e. NN0 ) $.
-    Xitgofglem5.d2 $e |- ( ph -> ( deg ` U ) < D ) $.
-    Xitgofglem5.a $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
-    Xitgofglem5.q $e |- Q = { x | E. i e. ( 0 ... ( D - 1 ) ) x = ( X ^ i ) }
-        $.
-    $( Lemma for ~ itgofg .  The span of the first ` D ` powers of ` X `
-       contains all evaluations of polynomials with degree at most ` D ` . $)
-    Xitgofglem5 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
-      ? $.
-  $}
+  @{
+    Xitgofglem5.b @e |- ( ph -> B e. ( SubRing ` CCfld ) ) @.
+    Xitgofglem5.x @e |- ( ph -> X e. CC ) @.
+    Xitgofglem5.u @e |- ( ph -> U e. ( Poly ` B ) ) @.
+    Xitgofglem5.d @e |- ( ph -> D e. NN0 ) @.
+    Xitgofglem5.d2 @e |- ( ph -> ( deg ` U ) < D ) @.
+    Xitgofglem5.a @e |- A = ( ( subringAlg ` CCfld ) ` B ) @.
+    Xitgofglem5.q @e |- Q = { x | E. i e. ( 0 ... ( D - 1 ) ) x = ( X ^ i ) }
+        @.
+    @( Lemma for ~ itgofg .  The span of the first ` D ` powers of ` X `
+       contains all evaluations of polynomials with degree at most ` D ` . @)
+    Xitgofglem5 @p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) @=
+      ? @.
+  @}
 
-  ${
-    Xitgofglem4.b $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    Xitgofglem4.p $e |- ( ph -> P e. ( Monic ` B ) ) $.
-    Xitgofglem4.x $e |- ( ph -> X e. CC ) $.
-    Xitgofglem4.x0 $e |- ( ph -> ( P ` X ) = 0 ) $.
-    Xitgofglem4.u $e |- ( ph -> U e. ( Poly ` B ) ) $.
-    Xitgofglem4.f $e |- A = ( ( subringAlg ` CCfld ) ` B ) $.
-    Xitgofglem4.g $e |- Q = { x | E. i e. ( 0 ... ( ( deg ` P ) - 1 ) )
-        x = ( X ^ i ) } $.
-    $( Lemma for ~ itgofg .  Use the polynomial identity to inductively prove
-       that the span of Q contains all polynomial evaluations. $)
-    Xitgofglem4 $p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) $=
-      ? $.
-  $}
+  @{
+    Xitgofglem4.b @e |- ( ph -> B e. ( SubRing ` CCfld ) ) @.
+    Xitgofglem4.p @e |- ( ph -> P e. ( Monic ` B ) ) @.
+    Xitgofglem4.x @e |- ( ph -> X e. CC ) @.
+    Xitgofglem4.x0 @e |- ( ph -> ( P ` X ) = 0 ) @.
+    Xitgofglem4.u @e |- ( ph -> U e. ( Poly ` B ) ) @.
+    Xitgofglem4.f @e |- A = ( ( subringAlg ` CCfld ) ` B ) @.
+    Xitgofglem4.g @e |- Q = { x | E. i e. ( 0 ... ( ( deg ` P ) - 1 ) )
+        x = ( X ^ i ) } @.
+    @( Lemma for ~ itgofg .  Use the polynomial identity to inductively prove
+       that the span of Q contains all polynomial evaluations. @)
+    Xitgofglem4 @p |- ( ph -> ( U ` X ) e. ( ( LSpan ` A ) ` Q ) ) @=
+      ? @.
+  @}
 
-  ${
-    Xitgofglem3.a $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    Xitgofglem3.b $e |- ( ph -> P e. ( Monic ` B ) ) $.
-    Xitgofglem3.c $e |- ( ph -> X e. CC ) $.
-    Xitgofglem3.d $e |- ( ph -> ( P ` X ) = 0 ) $.
-    Xitgofglem3.e $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
-    Xitgofglem3.f $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
-    Xitgofglem3.g $e |- Q = { x | E. i e. ( 0 ... ( deg ` P ) )
-        x = ( X ^ i ) } $.
-    $( Lemma for ~ itgofg .  Given a polynomial witnessing the integrality of
-       ` X ` , demonstrate the finite generation of ` A ` . $)
-    Xitgofglem3 $p |- ( ph -> ( ( LSpan ` A ) ` Q ) = S ) $=
-      ? $.
-  $}
+  @{
+    Xitgofglem3.a @e |- ( ph -> B e. ( SubRing ` CCfld ) ) @.
+    Xitgofglem3.b @e |- ( ph -> P e. ( Monic ` B ) ) @.
+    Xitgofglem3.c @e |- ( ph -> X e. CC ) @.
+    Xitgofglem3.d @e |- ( ph -> ( P ` X ) = 0 ) @.
+    Xitgofglem3.e @e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) @.
+    Xitgofglem3.f @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) @.
+    Xitgofglem3.g @e |- Q = { x | E. i e. ( 0 ... ( deg ` P ) )
+        x = ( X ^ i ) } @.
+    @( Lemma for ~ itgofg .  Given a polynomial witnessing the integrality of
+       ` X ` , demonstrate the finite generation of ` A ` . @)
+    Xitgofglem3 @p |- ( ph -> ( ( LSpan ` A ) ` Q ) = S ) @=
+      ? @.
+  @}
 
-  ${
-    Xitgofg.s $e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) $.
-    Xitgofg.a $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) $.
-    $( Lemma for ~ itgofg . $)
-    Xitgofglem2 $p |- ( ( B e. ( SubRing ` CCfld ) /\ A e. LFinGen ) ->
-          X e. ( IntgOver ` B ) ) $=
-      ? $.
+  @{
+    Xitgofg.s @e |- S = ( ( RingSpan ` CCfld ) ` ( B u. { X } ) ) @.
+    Xitgofg.a @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) @.
+    @( Lemma for ~ itgofg . @)
+    Xitgofglem2 @p |- ( ( B e. ( SubRing ` CCfld ) /\ A e. LFinGen ) ->
+          X e. ( IntgOver ` B ) ) @=
+      ? @.
 
-    $( Lemma for ~ itgofg . $)
-    Xitgofglem1 $p |- ( ( B e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` B ) )
+    @( Lemma for ~ itgofg . @)
+    Xitgofglem1 @p |- ( ( B e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` B ) )
         ->
-          A e. LFinGen ) $=
-      ? $.
+          A e. LFinGen ) @=
+      ? @.
 
-    $( An element is finitely generated over a ring if and only adjoining it to
+    @( An element is finitely generated over a ring if and only adjoining it to
        the base ring results in a finitely spanned algebra.
 
        Both directions:  The ring span of a ring R and a singleton is the
@@ -16187,46 +16140,47 @@ $)
        with degree less than N is an R-polynomial with degree less than N, so
        let Q be an R-polynomial such that Q(X) = (X^N) and deg(Q) < N. Then
        (X^N) - Q(X) is a monic R-polynomial with X as a root, i.e.  X is
-       algebraic. $)
-    itgofg $p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
-          A e. LFinGen ) ) $=
-      ? $.
-  $}
+       algebraic. @)
+    itgofg @p |- ( B e. ( SubRing ` CCfld ) -> ( X e. ( IntgOver ` B ) <->
+          A e. LFinGen ) ) @=
+      ? @.
+  @}
 
-  ${
-    rgspnchn.r $e |- ( ph -> R e. Ring ) $.
-    rgspnchn.s $e |- ( ph -> S = ( RingSpan ` R ) ) $.
-    rgspnchn.b $e |- ( ph -> B = ( Base ` R ) ) $.
-    rgspnchn.x $e |- ( ph -> X C_ B ) $.
-    rgspnchn.a $e |- ( ph -> A C_ B ) $.
-    $( Chaining lemma for ring spans. $)
-    rgspnchn $p |- ( ph -> ( R ` ( ( R ` X ) u. A ) ) = ( R ` ( X u. A ) ) ) $=
-      ? $.
-  $}
+  @{
+    rgspnchn.r @e |- ( ph -> R e. Ring ) @.
+    rgspnchn.s @e |- ( ph -> S = ( RingSpan ` R ) ) @.
+    rgspnchn.b @e |- ( ph -> B = ( Base ` R ) ) @.
+    rgspnchn.x @e |- ( ph -> X C_ B ) @.
+    rgspnchn.a @e |- ( ph -> A C_ B ) @.
+    @( Chaining lemma for ring spans. @)
+    rgspnchn @p |- ( ph -> ( R ` ( ( R ` X ) u. A ) ) = ( R ` ( X u. A ) ) ) @=
+      ? @.
+  @}
 
-  ${
-    itgofg2.ba $e |- ( ph -> B e. ( SubRing ` CCfld ) ) $.
-    itgofg2.fi $e |- ( ph -> F e. Fin ) $.
-    itgofg2.ss $e |- ( ph -> F C_ ( IntgOver ` B ) ) $.
-    itgofg2.sp $e |- ( ph -> S = ( ( RingSpan ` CCfld ) ` ( B u. F ) ) ) $.
-    itgofg2.al $e |- ( ph -> A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) ) $.
-    $( Adjoining finitely many integral elements to a ring still gives a finite
-       extension. $)
-    itgofg2 $p |- ( ph -> A e. LFinGen ) $=
-      ? $.
-  $}
+  @{
+    itgofg2.ba @e |- ( ph -> B e. ( SubRing ` CCfld ) ) @.
+    itgofg2.fi @e |- ( ph -> F e. Fin ) @.
+    itgofg2.ss @e |- ( ph -> F C_ ( IntgOver ` B ) ) @.
+    itgofg2.sp @e |- ( ph -> S = ( ( RingSpan ` CCfld ) ` ( B u. F ) ) ) @.
+    itgofg2.al @e |- ( ph -> A = ( ( subringAlg ` ( CCfld |` S ) ) ` B ) ) @.
+    @( Adjoining finitely many integral elements to a ring still gives a finite
+       extension. @)
+    itgofg2 @p |- ( ph -> A e. LFinGen ) @=
+      ? @.
+  @}
 
-  ${
-    itgocllem.a $e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) $.
-    itgocllem.b $e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) $.
-    itgocllem.c $e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) $.
-    itgocllem.d $e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) $.
-    itgocllem.e $e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) $.
-    itgocllem.f $e |- Z e. { ( X + Y ) , ( X x. Y ) } $.
-    $( Integrality is transitive(?). $)
-    itgocllem $p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
-          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) $=
-      ? $.
-  $}
+  @{
+    itgocllem.a @e |- S = ( ( RingSpan ` CCfld ) ` ( R u. { X } ) ) @.
+    itgocllem.b @e |- T = ( ( RingSpan ` CCfld ) ` ( S u. { Y } ) ) @.
+    itgocllem.c @e |- A = ( ( subringAlg ` ( CCfld |` S ) ) ` R ) @.
+    itgocllem.d @e |- B = ( ( subringAlg ` ( CCfld |` T ) ) ` S ) @.
+    itgocllem.e @e |- C = ( ( subringAlg ` ( CCfld |` T ) ) ` R ) @.
+    itgocllem.f @e |- Z e. { ( X + Y ) , ( X x. Y ) } @.
+    @( Integrality is transitive(?). @)
+    itgocllem @p |- ( ( R e. ( SubRing ` CCfld ) /\ X e. ( IntgOver ` R ) /\
+          Y e. ( IntgOver ` R ) ) -> Z e. ( IntgOver ` R ) ) @=
+      ? @.
+  @}
+  $)
 
 $( (End of Stefan O'Rear's mathbox.) $)
