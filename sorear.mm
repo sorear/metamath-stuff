@@ -13498,7 +13498,8 @@ $)
     sralmod0.z $e |- ( ph -> Z = ( 0g ` W ) ) $.
     sralmod0.s $e |- ( ph -> S C_ ( Base ` W ) ) $.
     sralmod0.w $e |- ( ph -> W e. V ) $.
-    $( The subring module inherits a zero from its ring. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( The subring module inherits a zero from its ring.  (Contributed by
+       Stefan O'Rear, 6-Dec-2014.) $)
     sralmod0 $p |- ( ph -> Z = ( 0g ` A ) ) $=
       ( va vb c0g cfv cv cplusg wceq wcel cvv eqid csra wral crio eqidd srabase
       co cbs sraaddg oveqd eqeq1d raleqbidv riotaeqbidv elex grpidval 3syl fvex
@@ -13522,7 +13523,8 @@ $)
 
     ${
       issubgrpd.g $e |- ( ph -> I e. Grp ) $.
-      $( Prove a subgroup by closure (definition version). (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+      $( Prove a subgroup by closure (definition version).  (Contributed by
+         Stefan O'Rear, 7-Dec-2014.) $)
       issubgrpd2 $p |- ( ph -> D e. ( SubGrp ` I ) ) $=
         ( cfv wcel wa eqid csubg cbs wss c0 wne cv cplusg wral cminusg cgrp w3a
         co wb c0g issubg2 syl ne0i wceq oveqd ad2antrr 3expa eqeltrrd ralrimiva
@@ -13532,7 +13534,8 @@ $)
         WCWDDRNVAVBVCOVDVCVE $.
         $( [7-Dec-2014] $)
 
-      $( Prove a subgroup by closure. (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+      $( Prove a subgroup by closure.  (Contributed by Stefan O'Rear,
+         7-Dec-2014.) $)
       issubgrpd $p |- ( ph -> S e. Grp ) $=
         ( cress co cgrp wcel csubg cfv issubgrpd2 eqid subggrp syl eqeltrd ) AF
         GDQRZSIADGUAUBTUHSTABCDEFGHIJKLMNOPUCDGUHUHUDUEUFUG $.
@@ -13541,7 +13544,8 @@ $)
 
     ${
       issubabld.g $e |- ( ph -> I e. Abel ) $.
-      $( Prove an Abelian subgroup by closure. (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+      $( Prove an Abelian subgroup by closure.  (Contributed by Stefan O'Rear,
+         7-Dec-2014.) $)
       issubabld $p |- ( ph -> S e. Abel ) $=
         ( cress co cabel wcel csubg cfv cgrp ablgrp syl issubgrpd2 eqid subgabl
         syl2anc eqeltrd ) AFGDQRZSIAGSTZDGUAUBTUKSTPABCDEFGHIJKLMNOAULGUCTPGUDU
@@ -13557,7 +13561,8 @@ $)
 
       ${
         issubrngd.g $e |- ( ph -> I e. Ring ) $.
-        $( Prove a subring by closure (definition version). (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+        $( Prove a subring by closure (definition version).  (Contributed by
+           Stefan O'Rear, 7-Dec-2014.) $)
         issubrngd2 $p |- ( ph -> D e. ( SubRing ` I ) ) $=
           ( csubrg cfv wcel csubg cur cv cmulr co wral crg w3a wb eqid issubrg2
           cbs syl cgrp rnggrp issubgrpd2 eqeltrrd oveqd adantr 3expb ralrimivva
@@ -13567,7 +13572,8 @@ $)
           AWEVQVHWDAGVPVNVOSVCVDAWBWCWEDUEUAVEVBVFVI $.
           $( [7-Dec-2014] $) $( [30-Nov-2014] $)
 
-        $( Prove a subring by closure. (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+        $( Prove a subring by closure.  (Contributed by Stefan O'Rear,
+           7-Dec-2014.) $)
         issubrngd $p |- ( ph -> S e. Ring ) $=
           ( cress co crg csubrg cfv wcel issubrngd2 eqid subrgrng syl eqeltrd )
           AFHDUCUDZUEKADHUFUGUHUNUEUHABCDEFGHIJKLMNOPQRSTUAUBUIDHUNUNUJUKULUM
@@ -13580,7 +13586,8 @@ $)
 
       ${
         issubdrngd.g $e |- ( ph -> I e. DivRing ) $.
-        $( Prove a sub-division-ring by closure. (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+        $( Prove a sub-division-ring by closure.  (Contributed by Stefan
+           O'Rear, 7-Dec-2014.) $)
         issubdrngd $p |- ( ph -> S e. DivRing ) $=
           ( cress co cdr wcel cv cinvr cfv c0g csn cdif wral wne neeq2d eldifsn
           anbi2d syl6bbr biimpar syldan ralrimiva csubrg crg drngrng issubrngd2
@@ -13600,7 +13607,8 @@ $)
 
     ${
       grpcld.z $e |- ( ph -> Z = ( 0g ` G ) ) $.
-      $( Deduction version of ~ grpidcl . (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+      $( Deduction version of ~ grpidcl .  (Contributed by Stefan O'Rear,
+         30-Nov-2014.) $)
       grpidcld $p |- ( ph -> Z e. B ) $=
         ( wcel c0g cfv cbs cgrp eqid grpidcl syl eleq12d mpbird ) ADBHCIJZCKJZH
         ZACLHTESCRSMRMNOADRBSGFPQ $.
@@ -13610,7 +13618,8 @@ $)
     ${
       grpinvcld.n $e |- ( ph -> N = ( invg ` G ) ) $.
       grpinvcld.x $e |- ( ph -> X e. B ) $.
-      $( Deduction verison of ~ grpinvcl . (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+      $( Deduction verison of ~ grpinvcl .  (Contributed by Stefan O'Rear,
+         30-Nov-2014.) $)
       grpinvcld $p |- ( ph -> ( N ` X ) e. B ) $=
         ( cfv wcel cminusg cgrp eleqtrd eqid grpinvcl syl2anc fveq1d eleq12d
         cbs mpbird ) AEDJZBKECLJZJZCTJZKZACMKEUEKUFFAEBUEIGNUECUCEUEOUCOPQAUBUD
@@ -13621,7 +13630,8 @@ $)
     grpcld.p $e |- ( ph -> P = ( +g ` G ) ) $.
     grpcld.x $e |- ( ph -> X e. B ) $.
     grpcld.y $e |- ( ph -> Y e. B ) $.
-    $( Deduction version of ~ grpcl . (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( Deduction version of ~ grpcl .  (Contributed by Stefan O'Rear,
+       30-Nov-2014.) $)
     grpcld $p |- ( ph -> ( X P Y ) e. B ) $=
       ( co wcel cplusg cfv cbs cgrp eleqtrd eqid grpcl syl3anc eleq12d mpbird
       oveqd ) AEFCLZBMEFDNOZLZDPOZMZADQMEUHMFUHMUIGAEBUHJHRAFBUHKHRUHUFDEFUHSUF
@@ -13635,7 +13645,8 @@ $)
 
     ${
       rngcld.o $e |- ( ph -> O = ( 1r ` R ) ) $.
-      $( Deduction version of ~ rngidcl . (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+      $( Deduction version of ~ rngidcl .  (Contributed by Stefan O'Rear,
+         30-Nov-2014.) $)
       rngidcld $p |- ( ph -> O e. B ) $=
         ( wcel cur cfv cbs crg eqid rngidcl syl eleq12d mpbird ) ADBHCIJZCKJZHZ
         ACLHTESCRSMRMNOADRBSGFPQ $.
@@ -13645,7 +13656,8 @@ $)
     rngcld.t $e |- ( ph -> T = ( .r ` R ) ) $.
     rngcld.x $e |- ( ph -> X e. B ) $.
     rngcld.y $e |- ( ph -> Y e. B ) $.
-    $( Deduction version of ~ rngcl . (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( Deduction version of ~ rngcl .  (Contributed by Stefan O'Rear,
+       30-Nov-2014.) $)
     rngcld $p |- ( ph -> ( X T Y ) e. B ) $=
       ( co wcel cmulr cfv cbs crg eleqtrd eqid rngcl syl3anc eleq12d mpbird
       oveqd ) AEFDLZBMEFCNOZLZCPOZMZACQMEUHMFUHMUIGAEBUHJHRAFBUHKHRUHCUFEFUHSUF
@@ -13671,7 +13683,8 @@ $)
       @( [30-Nov-2014] @)
     $)
 
-    $( The integers are a subring of ` CCfld ` . (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( The integers are a subring of ` CCfld ` .  (Contributed by Stefan
+       O'Rear, 30-Nov-2014.) $)
     cnzring $p |- ( CCfld |`s ZZ ) e. Ring $=
       ( vx vy ccnfld cz cress co crg wcel wtru caddc cmul c1 cc0 eqidd cfv wceq
       a1i cc cv 3adant1 c0g cnfld0 cplusg cnfldadd cbs wss zsscn sseqtri zaddcl
@@ -13689,7 +13702,7 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c LFinGen LNoeM LNoeR homGrp homLM LIdeal LPIR $.
+  $c LFinGen LNoeM LNoeR homGrp homLM LIdeal LPIdeal LPIR $.
 
   $( Extend class notation with the class of finitely generated left
      modules. $)
@@ -13710,11 +13723,14 @@ $)
   $( Ring left-ideal function. $)
   clidl $a class LIdeal $.
 
+  $( Ring left-principal-ideal function. $)
+  clpidl $a class LPIdeal $.
+
   $( Class of left principal ideal rings. $)
   clpir $a class LPIR $.
 
   ${
-    $d w i g $.
+    $d w i g s t x y $.
 
     $( Define the class of finitely generated left modules.  Finite generation
        of subspaces can be intepreted using ` |``s ` . $)
@@ -13725,10 +13741,38 @@ $)
        submodule of the ring viewed as a module over itself. $)
     df-lidl $a |- LIdeal = ( LSubSp o. ringLMod ) $.
 
+    $( Define the class of left principal ideals of a ring, which are ideals
+       with a single generator. $)
+    df-lpidl $a |- LPIdeal = ( w e. Ring |->
+        U_ g e. ( Base ` w ) { ( ( RSpan ` w ) ` { g } ) } ) $.
+
     $( Define the class of left principal ideal rings, rings where every left
        ideal has a single generator. $)
-    df-lpir $a |- LPIR = { w e. Ring | A. i e. ( LIdeal ` w )
-        E. g e. ( Base ` w ) i = ( ( RSpan ` w ) ` { g } ) } $.
+    df-lpir $a |- LPIR = { w e. Ring | ( LIdeal ` w ) = ( LPIdeal ` w ) } $.
+
+    $( A left-module is _Noetherian_ iff it is hereditarily finitely
+       generated. $)
+    df-lnm $a |- LNoeM = { w e. LMod | A. i e. ( LSubSp ` w )
+        ( w |`s i ) e. LFinGen } $.
+
+    $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
+       itself. $)
+    df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
+
+    $( A homomorphism of groups is a map between two structures (not prior
+       assumed to be groups) which preserves the group operation. $)
+    df-hgrp $a |- homGrp = ( s e. _V , t e. _V |-> { g |
+        [ ( Base ` s ) / w ] ( g : w --> ( Base ` t ) /\
+            A. x e. w A. y e. w ( g ` ( x ( +g ` s ) y ) ) =
+                ( g ` x ) ( +g ` t ) ( g ` y ) ) } ) $.
+
+    $( A homomorphism of left modules is a group homomorphism which
+       additionally preserves the scalar product.  This requires both
+       structures to be left modules over the same ring. $)
+    df-hlm $a |- homLM = ( s e. _V , t e. _V |-> { g e. ( s homGrp t ) |
+        [ ( Scalar ` s ) / w ] ( ( Scalar ` t ) = w /\
+          A. x e. ( Base ` w ) A. y e. ( Base ` s )
+          ( g ` ( x ( vsca ` s ) y ) ) = ( x ( vsca ` t ) ( g ` y ) ) ) } ) $.
   $}
 
   ${
@@ -13740,7 +13784,8 @@ $)
     islss2d.t $e |- ( ph -> T = ( vsca ` W ) ) $.
     islss2d.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
     islss2d.w $e |- ( ph -> W e. X ) $.
-    $( Deduction version of ~ islss . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction version of ~ islss .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     islss2d $p |- ( ph -> ( U e. S <-> ( U C_ V /\ U =/= (/) /\
         A. x e. B A. a e. U A. b e. U ( ( x T a ) P b ) e. U ) ) ) $=
       ( clss cfv wcel cbs wss c0 wne cv cvsca co cplusg wral csca wb eqid islss
@@ -13757,7 +13802,8 @@ $)
   ${
     lmodbn0d.b $e |- ( ph -> B = ( Base ` W ) ) $.
     lmodbn0d.w $e |- ( ph -> W e. LMod ) $.
-    $( Deduction for ~ lmodbn0 . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction for ~ lmodbn0 .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lmodbn0d $p |- ( ph -> B =/= (/) ) $=
       ( cbs cfv c0 clmod wcel wne eqid lmodbn0 syl eqnetrd ) ABCFGZHDACIJPHKEPC
       PLMNO $.
@@ -13772,7 +13818,8 @@ $)
     lmodvscld.w $e |- ( ph -> W e. LMod ) $.
     lmodvscld.r $e |- ( ph -> R e. K ) $.
     lmodvscld.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvscl . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction version of ~ lmodvscl .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lmodvscld $p |- ( ph -> ( R S X ) e. V ) $=
       ( co wcel cfv cbs eqid cvsca csca fveq2d eleqtrd lmodvscl syl3anc eleq12d
       clmod eqtrd oveqd mpbird ) ABHCPZFQBHGUARZPZGSRZQZAGUHQBGUBRZSRZQHUOQUPMA
@@ -13791,7 +13838,8 @@ $)
     lmodvsdi1d.r $e |- ( ph -> R e. K ) $.
     lmodvsdi1d.x $e |- ( ph -> X e. V ) $.
     lmodvsdi1d.y $e |- ( ph -> Y e. V ) $.
-    $( Deduction version of ~ lmodvsdi1 . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction version of ~ lmodvsdi1 .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lmodvsdi1d $p |- ( ph -> ( R S ( X A Y ) ) = ( ( R S X ) A ( R S Y ) ) ) $=
       ( co cplusg cfv cvsca clmod wcel csca wceq fveq2d eqtrd eleqtrd lmodvsdi1
       cbs eqid syl112anc eqidd oveqd oveq123d 3eqtr4d ) ACIJHUAUBZTZHUCUBZTZCIV
@@ -13813,7 +13861,8 @@ $)
     lmodvsdi2d.q $e |- ( ph -> Q e. K ) $.
     lmodvsdi2d.r $e |- ( ph -> R e. K ) $.
     lmodvsdi2d.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvsdi2 . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction version of ~ lmodvsdi2 .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lmodvsdi2d $p |- ( ph -> ( ( Q P R ) S X ) = ( ( Q S X ) A ( R S X ) ) ) $=
       ( csca cfv cplusg co cvsca clmod wcel wceq fveq2d eqtrd eleqtrd lmodvsdi2
       cbs eqid syl121anc oveqd eqidd oveq123d 3eqtr4d ) ADEJUBUCZUDUCZUEZKJUFUC
@@ -13834,7 +13883,8 @@ $)
     lmodvsassd.q $e |- ( ph -> Q e. K ) $.
     lmodvsassd.r $e |- ( ph -> R e. K ) $.
     lmodvsassd.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvsass . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction version of ~ lmodvsass .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lmodvsassd $p |- ( ph -> ( ( Q T R ) S X ) = ( Q S ( R S X ) ) ) $=
       ( co csca cfv cmulr cvsca clmod wcel cbs wceq fveq2d eqtrd eqid lmodvsass
       eleqtrd syl121anc oveqd eqidd oveq123d 3eqtr4d ) ABCIUAUBZUCUBZTZJIUDUBZT
@@ -13852,7 +13902,8 @@ $)
     lmodvs1d.u $e |- ( ph -> U = ( 1r ` F ) ) $.
     lmodvs1d.w $e |- ( ph -> W e. LMod ) $.
     lmodvs1d.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvs1 . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Deduction version of ~ lmodvs1 .  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lmodvs1d $p |- ( ph -> ( U S X ) = X ) $=
       ( co csca cfv cur eqtrd wcel eqid cvsca fveq2d eqidd oveq123d cbs eleqtrd
       clmod wceq lmodvs1 syl2anc ) ACGBNFOPZQPZGFUAPZNZGACULGGBUMJACDQPULKADUKQ
@@ -13865,7 +13916,8 @@ $)
     lss0cld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
     lss0cld.w $e |- ( ph -> W e. LMod ) $.
     lss0cld.u $e |- ( ph -> U e. S ) $.
-    $( Membership of the zero vector in a linear subspace (deduction) . (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Membership of the zero vector in a linear subspace (deduction) .
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     lss0cld $p |- ( ph -> Z e. U ) $=
       ( c0g cfv clmod wcel clss eleqtrd eqid lss0cl syl2anc eqeltrd ) AEDJKZCFA
       DLMCDNKZMTCMHACBUAIGOUACDTTPUAPQRS $.
@@ -13879,7 +13931,8 @@ $)
     lssvacld.u $e |- ( ph -> U e. S ) $.
     lssvacld.x $e |- ( ph -> X e. U ) $.
     lssvacld.y $e |- ( ph -> Y e. U ) $.
-    $( Closure of subspaces under addition, deduction. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Closure of subspaces under addition, deduction.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
     lssvacld $p |- ( ph -> ( X P Y ) e. U ) $=
       ( co cplusg cfv oveqd clmod wcel eqid eleqtrd lssvacl syl22anc eqeltrd
       clss ) AFGBNFGEOPZNZDABUFFGHQAERSDEUEPZSFDSGDSUGDSJADCUHKIUALMUFUHDEFGUFT
@@ -13896,7 +13949,8 @@ $)
     lssvscld.u $e |- ( ph -> U e. S ) $.
     lssvscld.x $e |- ( ph -> X e. B ) $.
     lssvscld.y $e |- ( ph -> Y e. U ) $.
-    $( Closure of subspaces under scalar multiplication, deduction. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Closure of subspaces under scalar multiplication, deduction.
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     lssvscld $p |- ( ph -> ( X T Y ) e. U ) $=
       ( cfv wcel eqid co cvsca oveqd clmod clss csca cbs eleqtrd fveq2d lssvscl
       eqtrd syl22anc eqeltrd ) AHIDUAHIGUBRZUAZEADUNHIKUCAGUDSEGUERZSHGUFRZUGRZ
@@ -13910,7 +13964,8 @@ $)
     lssvnegcld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
     lssvnegcld.w $e |- ( ph -> W e. LMod ) $.
     lssvnegcld.x $e |- ( ph -> X e. U ) $.
-    $( A linear subspace contains negatives of all its vectors. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( A linear subspace contains negatives of all its vectors.  (Contributed
+       by Stefan O'Rear, 6-Dec-2014.) $)
     lssvnegcld $p |- ( ph -> ( ( invg ` W ) ` X ) e. U ) $=
       ( csca cfv cur cminusg clmod wcel cbs eqid syl2anc eqidd syl co wceq clss
       cvsca wss eleqtrd lssss sseldd lmodvneg1 cgrp lmodfgrp rngidcld grpinvcld
@@ -13928,7 +13983,7 @@ $)
     islss3.b $e |- ( ph -> V = ( Base ` W ) ) $.
     islss3.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
     $( A linear subspace of a module is a subset which is a module in its own
-       right. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+       right.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     islss3 $p |- ( ph -> ( U e. S <-> ( U C_ V /\ ( W |`s U ) e. LMod ) ) ) $=
       ( vx va vb wcel wa cfv adantr wceq eqid a1i eqidd ad2antrr cress co clmod
       wss cbs clss simpr eleqtrd lssss syl2anc sseqtr4d ex pm4.71rd cplusg csca
@@ -13966,7 +14021,7 @@ $)
     lsslmod.x $e |- ( ph -> X = ( W |`s U ) ) $.
     lsslmod.w $e |- ( ph -> W e. LMod ) $.
     lsslmod.u $e |- ( ph -> U e. ( LSubSp ` W ) ) $.
-    $( A submodule is a module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( A submodule is a module.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     lsslmod $p |- ( ph -> X e. LMod ) $=
       ( cress co clmod cbs cfv wss wcel clss wa eqidd islss3 mpbid simprd
       eqeltrd ) ADCBHIZJEABCKLZMZUBJNZABCOLZNUDUEPGAUFBUCCFAUCQAUFQRSTUA $.
@@ -13979,7 +14034,8 @@ $)
     lsslss.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
     lsslss.t $e |- ( ph -> T = ( LSubSp ` X ) ) $.
     lsslss.u $e |- ( ph -> U e. S ) $.
-    $( The subspaces of a subspace are the smaller subspaces. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( The subspaces of a subspace are the smaller subspaces.  (Contributed by
+       Stefan O'Rear, 6-Dec-2014.) $)
     lsslss $p |- ( ph -> ( V e. T <-> ( V e. S /\ V C_ U ) ) ) $=
       ( wcel cress co clmod wa cbs cfv wceq wss eqidd islss3 mpbid eqeltrd clss
       simprd eleqtrd lssss syl2anc ressbas2 fveq2d eqtr4d sstr2 mpan9 biantrurd
@@ -14001,7 +14057,8 @@ $)
     lsslsp.k $e |- ( ph -> K = ( LSpan ` W ) ) $.
     lsslsp.l $e |- ( ph -> L = ( LSpan ` X ) ) $.
     lsslsp.g $e |- ( ph -> G C_ U ) $.
-    $( Spans in submodules correspond to spans in the containing module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Spans in submodules correspond to spans in the containing module.
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     lsslsp $p |- ( ph -> ( K ` G ) = ( L ` G ) ) $=
       ( cfv clmod wcel wss cbs eqid syl2anc clspn clss wa lsslmod cress co wceq
       lssss idi ressbas2 fveq2d eqtr4d sseqtrd lspcl eqidd lsslss mpbid lspssid
@@ -14022,7 +14079,8 @@ $)
     lspf.v $e |- ( ph -> V = ( Base ` W ) ) $.
     lspf.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
     lspf.n $e |- ( ph -> N = ( LSpan ` W ) ) $.
-    $( The span operator on a left module maps subsets to subsets. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( The span operator on a left module maps subsets to subsets.
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     lspf $p |- ( ph -> N : ~P V --> S ) $=
       ( vs vp cpw wf cfv cv wss wcel clmod adantr eqid cbs clss crab cint wa c0
       cmpt wne ssrab2 a1i wrex lss1 syl elpwi sseq2 rcla4ev syl2an rabn0 sylibr
@@ -14039,7 +14097,8 @@ $)
     $d ph a b $.  $d W a b $.  $d B a b $.
     islmodfg.w $e |- ( ph -> W e. LMod ) $.
     islmodfg.b $e |- ( ph -> B = ( Base ` W ) ) $.
-    $( Property of a finitely generated left module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Property of a finitely generated left module.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
     islmodfg $p |- ( ph -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin /\
           ( ( LSpan ` W ) ` b ) = B ) ) ) $=
       ( va wcel cbs cfv clspn cpw cfn cin cima clmod wceq wa wb eqidd crab wrex
@@ -14060,7 +14119,8 @@ $)
     islssfg.w $e |- ( ph -> W e. LMod ) $.
     islssfg.x $e |- ( ph -> X = ( W |`s S ) ) $.
     islssfg.s $e |- ( ph -> S e. ( LSubSp ` W ) ) $.
-    $( Property of a finitely generated left (sub-)module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Property of a finitely generated left (sub-)module.  (Contributed by
+       Stefan O'Rear, 6-Dec-2014.) $)
     islssfg $p |- ( ph -> ( X e. LFinGen <-> E. b e. ~P S ( b e. Fin /\
         ( ( LSpan ` W ) ` b ) = S ) ) ) $=
       ( wcel clspn cfv wceq wa wrex cbs wss clmod eqid adantr eqidd cfn lsslmod
@@ -14075,13 +14135,15 @@ $)
 
   ${
     $d W a $.
-    $( ` ringLMod ` is a function. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( ` ringLMod ` is a function.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmfn $p |- ringLMod Fn _V $=
       ( va cv cbs cfv csra cvv wcel crglmod wfn df-rgmod fnmpt fvex a1i mprg )
       ABZCDZOEDZDZFGZHFIAFAFRHFAJKSOFGPQLMN $.
       $( [6-Dec-2014] $)
 
-    $( Value of the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Value of the ring module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmval $p |- ( W e. X -> ( ringLMod ` W ) =
         ( ( subringAlg ` W ) ` ( Base ` W ) ) ) $=
       ( va wcel cvv crglmod cfv cbs csra wceq elex fveq2 fveq12d df-rgmod fvmpt
@@ -14089,7 +14151,8 @@ $)
       HLMCNSTQOR $.
       $( [6-Dec-2014] $)
 
-    $( Value of the set of ring ideals. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Value of the set of ring ideals.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lidlval $p |- ( W e. X -> ( LIdeal ` W ) =
         ( LSubSp ` ( ringLMod ` W ) ) ) $=
       ( wcel clidl cfv clss crglmod ccom df-lidl fveq1i cvv wfn wceq rlmfn elex
@@ -14097,7 +14160,8 @@ $)
       $.
       $( [6-Dec-2014] $)
 
-    $( Value of the ring span function. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Value of the ring span function.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rspval $p |- ( W e. X -> ( RSpan ` W ) =
         ( LSpan ` ( ringLMod ` W ) ) ) $=
       ( wcel crsp cfv clspn crglmod ccom df-rsp fveq1i cvv wfn wceq rlmfn fvco4
@@ -14111,7 +14175,8 @@ $)
     grpidprop.y $e |- ( ph -> Y e. W ) $.
     grpidprop.b $e |- ( ph -> ( Base ` X ) = ( Base ` Y ) ) $.
     grpidprop.p $e |- ( ph -> ( +g ` X ) = ( +g ` Y ) ) $.
-    $( Identity depends only on the base and group operation. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Identity depends only on the base and group operation.  (Contributed by
+       Stefan O'Rear, 6-Dec-2014.) $)
     grpidprop $p |- ( ph -> ( 0g ` X ) = ( 0g ` Y ) ) $=
       ( va vb cv cplusg cfv co wceq cbs wral crio eqid oveqd eqeq1d riotaeqbidv
       c0g raleqbidv wcel grpidval syl 3eqtr4d ) AJLZKLZDMNZOZUKPZKDQNZRZJUOSZUJ
@@ -14120,7 +14185,8 @@ $)
       GUHUI $.
       $( [6-Dec-2014] $)
 
-    $( Negation depends only on the base and group operation. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Negation depends only on the base and group operation.  (Contributed by
+       Stefan O'Rear, 6-Dec-2014.) $)
     grpnegprop $p |- ( ph -> ( invg ` X ) = ( invg ` Y ) ) $=
       ( va vb cbs cfv cv cplusg co c0g wceq crio eqid cminusg grpidprop eqeq12d
       cmpt oveqd riotaeqbidv mpteq12dv wcel grpinvfval syl 3eqtr4d ) AJDLMZKNZJ
@@ -14131,43 +14197,50 @@ $)
   $}
 
   ${
-    $( Base set of the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Base set of the ring module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmbase $p |- ( R e. X -> ( Base ` R ) = ( Base ` ( ringLMod ` R ) ) ) $=
       ( wcel crglmod cfv cbs rlmval wss ssid a1i srabase ) ABCZADEAFEZAABGMMHLM
       IJK $.
       $( [6-Dec-2014] $)
 
-    $( Vector addition in the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Vector addition in the ring module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmplusg $p |- ( R e. X -> ( +g ` R ) = ( +g ` ( ringLMod ` R ) ) ) $=
       ( wcel crglmod cfv cbs rlmval wss ssid a1i sraaddg ) ABCZADEAFEZAABGMMHLM
       IJK $.
       $( [6-Dec-2014] $)
 
-    $( Zero vector in the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Zero vector in the ring module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlm0 $p |- ( R e. X -> ( 0g ` R ) = ( 0g ` ( ringLMod ` R ) ) ) $=
       ( wcel crglmod cfv cbs c0g rlmval eqidd wss ssid a1i id sralmod0 ) ABCZAD
       EAFEZBAAGEZABHOQIPPJOPKLOMN $.
       $( [6-Dec-2014] $)
 
-    $( Scalars in the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Scalars in the ring module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmsca $p |- ( R e. X -> R = ( Scalar ` ( ringLMod ` R ) ) ) $=
       ( wcel cbs cfv cress co crglmod csca eqid ressid rlmval wss srasca eqtr3d
       ssid a1i ) ABCZAADEZFGAAHEZIESABSJKRTSAABLSSMRSPQNO $.
       $( [6-Dec-2014] $)
 
-    $( Scalar multiplication in the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Scalar multiplication in the ring module.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
     rlmvsca $p |- ( R e. X -> ( .r ` R ) = ( vsca ` ( ringLMod ` R ) ) ) $=
       ( wcel crglmod cfv cbs rlmval wss ssid a1i sravsca ) ABCZADEAFEZAABGMMHLM
       IJK $.
       $( [6-Dec-2014] $)
 
-    $( The ring module is a module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( The ring module is a module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmlmod $p |- ( R e. Ring -> ( ringLMod ` R ) e. LMod ) $=
       ( crg wcel crglmod cfv cbs csra clmod rlmval eqid subrgid sralmod eqeltrd
       csubrg syl ) ABCZADEAFEZAGEEZHABIPQANECRHCQAQJKRQARJLOM $.
       $( [6-Dec-2014] $)
 
-    $( Vector negation in the ring module. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Vector negation in the ring module.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     rlmvneg $p |- ( R e. X -> ( invg ` R ) = ( invg ` ( ringLMod ` R ) ) ) $=
       ( wcel cvv crglmod cfv id fvex a1i rlmbase rlmplusg grpnegprop ) ABCZBDAA
       EFZMGNDCMAEHIABJABKL $.
@@ -14179,7 +14252,8 @@ $)
     lidlss.b $e |- ( ph -> B = ( Base ` W ) ) $.
     lidlss.i $e |- ( ph -> I = ( LIdeal ` W ) ) $.
     lidlss.u $e |- ( ph -> U e. I ) $.
-    $( An ideal is a subset of the base set. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( An ideal is a subset of the base set.  (Contributed by Stefan O'Rear,
+       6-Dec-2014.) $)
     lidlss $p |- ( ph -> U C_ B ) $=
       ( crglmod cfv cbs cvv wcel clss wceq syl eqtrd eqid clidl lidlval eleqtrd
       wss fvex lssss sylancr rlmbase sseqtr4d ) ACEKLZMLZBAUJNOCUJPLZOCUKUDEKUE
@@ -14194,7 +14268,7 @@ $)
 
     ${
       lidl0cl.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-      $( An ideal contains 0. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( An ideal contains 0.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
       lidl0cl $p |- ( ph -> Z e. I ) $=
         ( clidl cfv crglmod c0g crg wcel wceq rlm0 syl eqtrd clss lidlval clmod
         rlmlmod lss0cld ) ABHIZCBJIZDADBKIZUDKIZGABLMZUEUFNEBLOPQAUGUCUDRINEBLS
@@ -14206,7 +14280,8 @@ $)
       lidlacl.p $e |- ( ph -> P = ( +g ` R ) ) $.
       lidlacl.x $e |- ( ph -> X e. I ) $.
       lidlacl.y $e |- ( ph -> Y e. I ) $.
-      $( An ideal is closed under addition. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( An ideal is closed under addition.  (Contributed by Stefan O'Rear,
+         6-Dec-2014.) $)
       lidlacl $p |- ( ph -> ( X P Y ) e. I ) $=
         ( clidl cfv crglmod cplusg crg wcel wceq rlmplusg syl eqtrd clss clmod
         lidlval rlmlmod lssvacld ) ABCLMZDCNMZEFABCOMZUHOMZIACPQZUIUJRGCPSTUAAU
@@ -14217,7 +14292,8 @@ $)
     ${
       lidlnegcl.x $e |- ( ph -> X e. I ) $.
       lidlnegcl.n $e |- ( ph -> ( ( invg ` R ) ` X ) = N ) $.
-      $( An ideal contains negatives. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( An ideal contains negatives.  (Contributed by Stefan O'Rear,
+         6-Dec-2014.) $)
       lidlnegcl $p |- ( ph -> N e. I ) $=
         ( crglmod cfv cminusg crg wcel wceq rlmvneg syl eqcomd fveq1d eqtrd
         clidl clss lidlval clmod rlmlmod lssvnegcld eqeltrrd ) AEBJKZLKZKZDCAUJ
@@ -14234,7 +14310,7 @@ $)
         lidlmcl.x $e |- ( ph -> X e. B ) $.
         lidlmcl.y $e |- ( ph -> Y e. I ) $.
         $( An ideal is closed under left-multiplication by elements of the full
-           ring. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+           ring.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
         lidlmcl $p |- ( ph -> ( X T Y ) e. I ) $=
           ( clidl cfv crglmod crg wcel wceq syl csca rlmsca cmulr cvsca rlmvsca
           eqtrd clss lidlval clmod rlmlmod lssvscld ) ABCNOZDECCPOZFGACQRZCUMUA
@@ -14246,7 +14322,8 @@ $)
       ${
         $d ph a $.  $d B a $.  $d I a $.  $d O a $.
         lidl1el.o $e |- ( ph -> O = ( 1r ` R ) ) $.
-        $( An ideal contains 1 iff it is the unit ideal. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+        $( An ideal contains 1 iff it is the unit ideal.  (Contributed by
+           Stefan O'Rear, 6-Dec-2014.) $)
         lidl1el $p |- ( ph -> ( O e. I <-> I = B ) ) $=
           ( va wcel wceq wa cfv crg eqidd adantr co ad2antrr eqid wss lidlss cv
           clidl cmulr cur oveq2d cbs eleq2d biimpa rngridm syl2anc eqtrd simplr
@@ -14265,7 +14342,8 @@ $)
     lidl0.r $e |- ( ph -> R e. Ring ) $.
     ${
       lidl0.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-      $( Every ring contains a zero ideal. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( Every ring contains a zero ideal.  (Contributed by Stefan O'Rear,
+         6-Dec-2014.) $)
       lidl0 $p |- ( ph -> { Z } e. ( LIdeal ` R ) ) $=
         ( csn clidl cfv wcel crglmod c0g clss clmod crg rlmlmod syl eqid lsssn0
         wceq rlm0 eqtrd sneqd lidlval eleq12d mpbird ) ACFZBGHZIBJHZKHZFZUHLHZI
@@ -14276,7 +14354,8 @@ $)
 
     ${
       lidl1.z $e |- ( ph -> B = ( Base ` R ) ) $.
-      $( Every ring contains a unit ideal. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( Every ring contains a unit ideal.  (Contributed by Stefan O'Rear,
+         6-Dec-2014.) $)
       lidl1 $p |- ( ph -> B e. ( LIdeal ` R ) ) $=
         ( clidl cfv wcel crglmod cbs clss clmod crg rlmlmod syl eqid lss1 eqtrd
         wceq rlmbase lidlval eleq12d mpbird ) ABCFGZHCIGZJGZUEKGZHZAUELHZUHACMH
@@ -14291,7 +14370,8 @@ $)
     rspcl.r $e |- ( ph -> R e. Ring ) $.
     rspcl.g $e |- ( ph -> G C_ ( Base ` R ) ) $.
     rspcl.i $e |- ( ph -> I = ( ( RSpan ` R ) ` G ) ) $.
-    $( The span of a set of ring elements is an ideal. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( The span of a set of ring elements is an ideal.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
     rspcl $p |- ( ph -> I e. ( LIdeal ` R ) ) $=
       ( clidl cfv wcel crglmod clspn clss clmod cbs wss crg syl wceq eqid lspcl
       rlmlmod rlmbase sseqtrd syl2anc crsp rspval fveq1d lidlval eleq12d mpbird
@@ -14300,7 +14380,8 @@ $)
       UHULAVAUMUQSEBQUIRUJUK $.
       $( [6-Dec-2014] $)
 
-    $( The span of a set of ring elements contains those elements. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( The span of a set of ring elements contains those elements.
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
     rspssid $p |- ( ph -> G C_ I ) $=
       ( crglmod cfv clspn clmod wcel cbs wss crg rlmlmod syl wceq rlmbase eqid
       sseqtrd lspssid syl2anc crsp rspval fveq1d eqtrd sseqtr4d ) ACCBHIZJIZIZD
@@ -14314,7 +14395,8 @@ $)
     rsp0.k $e |- ( ph -> K = ( RSpan ` R ) ) $.
     ${
       rsp0.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-      $( The span of the zero element is the zero ideal. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( The span of the zero element is the zero ideal.  (Contributed by
+         Stefan O'Rear, 6-Dec-2014.) $)
       rsp0 $p |- ( ph -> ( K ` { Z } ) = { Z } ) $=
         ( crglmod cfv c0g csn clspn clmod wcel wceq crg rlmlmod syl eqid eqtrd
         lspsn0 crsp rspval rlm0 sneqd fveq12d 3eqtr4d ) ABHIZJIZKZUHLIZIZUJDKZC
@@ -14326,7 +14408,8 @@ $)
     ${
       rsp1.o $e |- ( ph -> O = ( 1r ` R ) ) $.
       rsp1.b $e |- ( ph -> B = ( Base ` R ) ) $.
-      $( The span of the identity element is the unit ideal. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+      $( The span of the identity element is the unit ideal.  (Contributed by
+         Stefan O'Rear, 6-Dec-2014.) $)
       rsp1 $p |- ( ph -> ( K ` { O } ) = B ) $=
         ( csn cfv wcel wceq wss cbs eqidd rngidcld snssd crsp fveq1d rspssid wb
         snssg syl mpbird rspcl lidl1el mpbid ) AEEJZDKZLZUJBMAUKUIUJNZACUIUJFAE
@@ -14341,7 +14424,8 @@ $)
     drngnidl.r $e |- ( ph -> R e. DivRing ) $.
     drngnidl.b $e |- ( ph -> B = ( Base ` R ) ) $.
     drngnidl.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-    $( A division ring has only the two trivial ideals. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( A division ring has only the two trivial ideals.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
     drngnidl $p |- ( ph -> ( LIdeal ` R ) = { { Z } , B } ) $=
       ( va vb cfv wcel wa wceq simpr wne wss adantr ad2antrr eqidd eqid csn cpr
       clidl cv wo orcd cur wel wn wex wpss crg cdr drngrng syl c0g snssd necomd
@@ -14362,37 +14446,38 @@ $)
       $( [6-Dec-2014] $)
   $}
 
-  ${
-    $d ph r i g $.  $d I r i g $.  $d B r i g $.  $d R r i g $.
-    islpir.i $e |- ( ph -> I = ( LIdeal ` R ) ) $.
-    islpir.b $e |- ( ph -> B = ( Base ` R ) ) $.
-    islpir.k $e |- ( ph -> K = ( RSpan ` R ) ) $.
-    $( Property of a left principal ideal ring. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    islpir $p |- ( ph -> ( R e. LPIR <-> ( R e. Ring /\
-          A. i e. I E. g e. B i = ( K ` { g } ) ) ) ) $=
+  $(
+  @{
+    @d ph r i g @.  @d I r i g @.  @d B r i g @.  @d R r i g @.
+    islpir.i @e |- ( ph -> I = ( LIdeal ` R ) ) @.
+    islpir.b @e |- ( ph -> B = ( Base ` R ) ) @.
+    islpir.k @e |- ( ph -> K = ( RSpan ` R ) ) @.
+    @( Property of a left principal ideal ring. @)
+    islpir @p |- ( ph -> ( R e. LPIR <-> ( R e. Ring /\
+          A. i e. I E. g e. B i = ( K ` { g } ) ) ) ) @=
       ( vr cv cfv wceq wrex wral crsp cbs clidl fveq2 crg wcel csn clpir fveq1d
       wa eqeq2d rexeqbidv raleqbidv anbi2d df-lpir elrab2 syl6rbbr ) ACUAUBZELZ
       DLUCZGMZNZDBOZEFPZUFUNUOUPCQMZMZNZDCRMZOZECSMZPZUFCUDUBAUTVGUNAUSVEEFVFHA
       URVCDBVDIAUQVBUOAUPGVAJUEUGUHUIUJUOUPKLZQMZMZNZDVHRMZOZEVHSMZPVGKCUAUDVHC
-      NZVMVEEVNVFVHCSTVOVKVCDVLVDVHCRTVOVJVBUOVOUPVIVAVHCQTUEUGUHUIKDEUKULUM $.
-      $( [6-Dec-2014] $)
+      NZVMVEEVNVFVHCSTVOVKVCDVLVDVHCRTVOVJVBUOVOUPVIVAVHCQTUEUGUHUIKDEUKULUM @.
+      @( [6-Dec-2014] @)
 
-    islpir2.r $e |- ( ph -> R e. Ring ) $.
-    ${
-      islpir2.g $e |- ( ( ph /\ i e. I ) -> E. g e. B i = ( K ` { g } ) ) $.
-      $( Deduce ` LPIR ` status. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-      islpir2 $p |- ( ph -> R e. LPIR ) $=
+    islpir2.r @e |- ( ph -> R e. Ring ) @.
+    @{
+      islpir2.g @e |- ( ( ph /\ i e. I ) -> E. g e. B i = ( K ` { g } ) ) @.
+      @( Deduce ` LPIR ` status. @)
+      islpir2 @p |- ( ph -> R e. LPIR ) @=
         ( clpir wcel crg cv csn cfv wceq wrex wral islpir ralrimiva mpbir2and )
-        ACMNCONEPDPQGRSDBTZEFUAABCDEFGHIJUBKAUEEFLUCUD $.
-        $( [6-Dec-2014] $)
-    $}
+        ACMNCONEPDPQGRSDBTZEFUAABCDEFGHIJUBKAUEEFLUCUD @.
+        @( [6-Dec-2014] @)
+    @}
 
-    $d K g $.  $d Z g $.
-    islpir3.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-    islpir3.g $e |- ( ( ph /\ i e. I /\ { Z } C. i ) ->
-        E. g e. B i = ( K ` { g } ) ) $.
-    $( Deduce ` LPIR ` status. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    islpir3 $p |- ( ph -> R e. LPIR ) $=
+    @d K g @.  @d Z g @.
+    islpir3.z @e |- ( ph -> Z = ( 0g ` R ) ) @.
+    islpir3.g @e |- ( ( ph /\ i e. I /\ { Z } C. i ) ->
+        E. g e. B i = ( K ` { g } ) ) @.
+    @( Deduce ` LPIR ` status. @)
+    islpir3 @p |- ( ph -> R e. LPIR ) @=
       ( cv wcel csn wceq cfv adantr wa wpss wo wrex wss crg clidl simpr eleqtrd
       c0g lidl0cl snssd sspss sylib 3expia cgrp rnggrp syl grpidcld rsp0 eqcomd
       wi sneq fveq2d eqeq2d rcla4ev syl2anc eqeq1 rexbidv syl5ibcom mpd islpir2
@@ -14400,21 +14485,21 @@ $)
       PHVNVPCVNHACUFPZVOLTVPVNFCUGSZAVOUHAFWGRVOITUIAHCUJSRVOMTUKULVQVNUMUNVPVR
       WEVSAVOVRWENUOAVSWEVBVOAVQWCRZDBUDZVSWEAHBPVQVQGSZRZWIABCHAWFCUPPLCUQURJM
       USAWJVQACGHLKMUTVAWHWKDHBWAHRZWCWJVQWLWBVQGWAHVCVDVEVFVGVSWHWDDBVQVNWCVHV
-      IVJTVMVKVL $.
-      $( [6-Dec-2014] $)
-  $}
+      IVJTVMVKVL @.
+      @( [6-Dec-2014] @)
+  @}
 
-  ${
-    $d R i g a b c d $.
-    $( A left principal ideal ring is a ring. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    lpirrng $p |- ( R e. LPIR -> R e. Ring ) $=
+  @{
+    @d R i g a b c d @.
+    @( A left principal ideal ring is a ring. @)
+    lpirrng @p |- ( R e. LPIR -> R e. Ring ) @=
       ( vi vg clpir wcel crg cv csn crsp cfv wceq wrex clidl wral wa wtru eqidd
       cbs wb islpir trud simplbi ) ADEZAFEZBGCGHAIJZJKCARJZLBAMJZNZUCUDUHOSPUFA
-      CBUGUEPUGQPUFQPUEQTUAUB $.
-      $( [6-Dec-2014] $)
+      CBUGUEPUGQPUFQPUEQTUAUB @.
+      @( [6-Dec-2014] @)
 
-    $( A division ring is a left principal ideal ring. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    drnglpir $p |- ( R e. DivRing -> R e. LPIR ) $=
+    @( A division ring is a left principal ideal ring. @)
+    drnglpir @p |- ( R e. DivRing -> R e. LPIR ) @=
       ( vg vi cdr wcel cbs cfv clidl crsp c0g eqidd drngrng cv csn w3a 3ad2ant1
       wpss wceq wne sylib cur rngidcld wn wo wss df-pss simprbi necomd 3ad2ant3
       wrex df-ne cpr simp2 id drngnidl eleqtrd elpr orel1 sylc rsp1 eqtr4d sneq
@@ -14423,9 +14508,10 @@ $)
       BVJUJVIVSWDWAVIVJAWCVPVNVIWCKZUBPWBVRVJWFWBVRVTRZUCZWMVRVJRZUDZWOWAVIWNVS
       WAVRVTSWNWAVTVRWAVTVRUEVTVRSVTVRUFUGUHVRVTUKTUIWBVRVTVJULZEWPWBVRVKWQVIVS
       WAUMVIVSVKWQRWAVIVJAVMVIUNVNVQUOPUPVRVTVJCVCUQTWMWOURUSVIVSWFVJRWAVIVJAVL
-      WCVPVOWLVNUTPVAWKWGBWCVJWHWCRZWJWFVRWRWIWEVLWHWCVBVDVEVFVGVH $.
-      $( [6-Dec-2014] $)
-  $}
+      WCVPVOWLVNUTPVAWKWGBWCVJWHWCRZWJWFVRWRWIWEVLWHWCVBVDVEVFVGVH @.
+      @( [6-Dec-2014] @)
+  @}
+  $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -14499,7 +14585,8 @@ $)
   ${
     $d S s p $.  $d P s p $.
 
-    $( Property of a monic polynomial. (Contributed by Stefan O'Rear, 5-Dec-2014.) $)
+    $( Property of a monic polynomial.  (Contributed by Stefan O'Rear,
+       5-Dec-2014.) $)
     elmnc $p |- ( P e. ( Monic ` S ) <-> ( P e. ( Poly ` S ) /\
           ( ( coeff ` P ) ` ( deg ` P ) ) = 1 ) ) $=
       ( vs vp cmnc cfv wcel cc wss cply cdgr ccoe c1 wceq wa cdm cpw crab fveq2
@@ -14511,20 +14598,23 @@ $)
       ANZVSVJMWFVQVHVRVIVPALSVPAKSURUSUTVAVB $.
       $( [5-Dec-2014] $)
 
-    $( A monic polynomial is a polynomial. (Contributed by Stefan O'Rear, 5-Dec-2014.) $)
+    $( A monic polynomial is a polynomial.  (Contributed by Stefan O'Rear,
+       5-Dec-2014.) $)
     mncply $p |- ( P e. ( Monic ` S ) -> P e. ( Poly ` S ) ) $=
       ( cmnc cfv wcel cply cdgr ccoe c1 wceq elmnc simplbi ) ABCDEABFDEAGDAHDDI
       JABKL $.
       $( [5-Dec-2014] $)
 
-    $( A monic polynomial has leading coefficient 1. (Contributed by Stefan O'Rear, 5-Dec-2014.) $)
+    $( A monic polynomial has leading coefficient 1.  (Contributed by Stefan
+       O'Rear, 5-Dec-2014.) $)
     mnccoe $p |- ( P e. ( Monic ` S ) -> ( ( coeff ` P ) ` ( deg ` P ) ) = 1 )
         $=
       ( cmnc cfv wcel cply cdgr ccoe c1 wceq elmnc simprbi ) ABCDEABFDEAGDAHDDI
       JABKL $.
       $( [5-Dec-2014] $)
 
-    $( A monic polynomial is not zero. (Contributed by Stefan O'Rear, 5-Dec-2014.) $)
+    $( A monic polynomial is not zero.  (Contributed by Stefan O'Rear,
+       5-Dec-2014.) $)
     mncn0 $p |- ( P e. ( Monic ` S ) -> P =/= 0p ) $=
       ( cmnc cfv wcel cdgr ccoe wceq c0p wne mnccoe cc0 cn0 csn cxp coe0 fveq1i
       c1 0nn0 fveq2 eqeltri elexi fvconst2 ax-mp ax-1ne0 necomi eqnetri fveq12d
@@ -14785,8 +14875,8 @@ $)
       c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUBANTUBUCUDOR $.
       $( [25-Nov-2014] $)
 
-    $( The minimal polynomial of an algebraic number has the number as a root.  (Contributed by Stefan
-       O'Rear, 25-Nov-2014.) $)
+    $( The minimal polynomial of an algebraic number has the number as a root.
+       (Contributed by Stefan O'Rear, 25-Nov-2014.) $)
     mpaaroot $p |- ( A e. AA -> ( ( minPolyAA ` A ) ` A ) = 0 ) $=
       ( caa wcel cmpaa cfv cq cply cdgr cdgraa wceq cc0 ccoe w3a mpaalem simpr2
       c1 wa syl ) ABCADEZFGECZSHEAIEZJZASEKJZUASLEEPJZMQUCANTUBUCUDOR $.
@@ -14898,7 +14988,8 @@ $)
     cnsrexpcl.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
     cnsrexpcl.x $e |- ( ph -> X e. S ) $.
     cnsrexpcl.y $e |- ( ph -> Y e. NN0 ) $.
-    $( Exponentiation is closed in number rings. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( Exponentiation is closed in number rings.  (Contributed by Stefan
+       O'Rear, 30-Nov-2014.) $)
     cnsrexpcl $p |- ( ph -> ( X ^ Y ) e. S ) $=
       ( wcel cexp co wi cc0 c1 wceq oveq2 eleq1d imbi2d cc ccnfld syl va vb cn0
       caddc csubrg cfv wss cnfldbas subrgss sseldd exp0 cnfld1 subrg1cl eqeltrd
@@ -14917,7 +15008,8 @@ $)
     fsumcnsrcl.s $e |- ( ph -> S e. ( SubRing ` CCfld ) ) $.
     fsumcnsrcl.a $e |- ( ph -> A e. Fin ) $.
     fsumcnsrcl.b $e |- ( ( ph /\ k e. A ) -> B e. S ) $.
-    $( Finite sums are closed in number rings. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( Finite sums are closed in number rings.  (Contributed by Stefan O'Rear,
+       30-Nov-2014.) $)
     fsumcnsrcl $p |- ( ph -> sum_ k e. A B e. S ) $=
       ( va vb ccnfld csubrg cfv wcel cc wss syl cv caddc cc0 cnfldbas subrgsubg
       subrgss wa cnfldadd subrgacl 3expb sylan csubg cnfld0 subg0cl fsumcllem
@@ -14932,7 +15024,8 @@ $)
     cnsrplycl.p $e |- ( ph -> P e. ( Poly ` C ) ) $.
     cnsrplycl.x $e |- ( ph -> X e. S ) $.
     cnsrplycl.c $e |- ( ph -> C C_ S ) $.
-    $( Polynomials are closed in number rings. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( Polynomials are closed in number rings.  (Contributed by Stefan O'Rear,
+       30-Nov-2014.) $)
     cnsrplycl $p |- ( ph -> ( P ` X ) e. S ) $=
       ( vk cfv cc0 co wcel cc wss ccnfld syl syl2anc adantr cdgr ccoe cexp cmul
       cfz cv csu cply wceq csubrg cnfldbas subrgss plyss sseldd coeid2 fzfid wa
@@ -14953,7 +15046,8 @@ $)
     rgspnval.ss $e |- ( ph -> A C_ B ) $.
     rgspnval.n $e |- ( ph -> N = ( RingSpan ` R ) ) $.
     rgspnval.sp $e |- ( ph -> U = ( N ` A ) ) $.
-    $( Value of the ring-span of a set of elements in a ring. (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+    $( Value of the ring-span of a set of elements in a ring.  (Contributed by
+       Stefan O'Rear, 7-Dec-2014.) $)
     rgspnval $p |- ( ph -> U = |^| { t e. ( SubRing ` R ) | A C_ t } ) $=
       ( vb va cfv wss cbs wcel cvv wceq crgspn csubrg crab cint fveq1d cpw cmpt
       crg elex fveq2 pweqd rabeq syl inteqd mpteq12dv df-rgspn fvex mptex fvmpt
@@ -14967,7 +15061,8 @@ $)
       BWDWICWBVOVPUNWMVGVQVLVRVS $.
       $( [7-Dec-2014] $) $( [30-Nov-2014] $)
 
-    $( The ring-span of a set is a subring. (Contributed by Stefan O'Rear, 7-Dec-2014.) $)
+    $( The ring-span of a set is a subring.  (Contributed by Stefan O'Rear,
+       7-Dec-2014.) $)
     rgspncl $p |- ( ph -> U e. ( SubRing ` R ) ) $=
       ( vt cv wss csubrg cfv crab cint wcel eqeltrd rgspnval c0 wne ssrab2 wrex
       cbs crg eqid subrgid sseq2 rcla4ev syl2anc rabn0 sylibr subrgint sylancr
@@ -14976,7 +15071,8 @@ $)
       NDVAUOUPT $.
       $( [7-Dec-2014] $) $( [30-Nov-2014] $)
 
-    $( The ring-span of a set contains the set. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( The ring-span of a set contains the set.  (Contributed by Stefan O'Rear,
+       30-Nov-2014.) $)
     rgspnssid $p |- ( ph -> A C_ U ) $=
       ( vt cv wss csubrg cfv crab cint ssintub rgspnval syl5sseqr ) ABLMNLDOPZQ
       RBELBUBSALBCDEFGHIJKTUA $.
@@ -14985,7 +15081,7 @@ $)
     rgspnmin.sr $e |- ( ph -> S e. ( SubRing ` R ) ) $.
     rgspnmin.ss $e |- ( ph -> A C_ S ) $.
     $( The ring-span is contained in all subspaces which contain all the
-       generators. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+       generators.  (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
     rgspnmin $p |- ( ph -> U C_ S ) $=
       ( vt cv wss csubrg cfv wcel crab rgspnval sseq2 elrab sylanbrc intss1 syl
       cint eqsstrd ) AFBOPZQZODRSZUAZUHZEAOBCDFGHIJKLUBAEUMTZUNEQAEULTBEQZUOMNU
@@ -14997,7 +15093,8 @@ $)
     rgspnid.r $e |- ( ph -> R e. Ring ) $.
     rgspnid.sr $e |- ( ph -> A e. ( SubRing ` R ) ) $.
     rgspnid.sp $e |- ( ph -> S = ( ( RingSpan ` R ) ` A ) ) $.
-    $( The span of a subring is itself. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+    $( The span of a subring is itself.  (Contributed by Stefan O'Rear,
+       30-Nov-2014.) $)
     rgspnid $p |- ( ph -> S = A ) $=
       ( cbs cfv crgspn eqidd csubrg wcel wss eqid subrgss syl ssid a1i rgspnmin
       rgspnssid eqssd ) ADBABCHIZCBDCJIZEAUCKZABCLIMBUCNFBUCCUCOPQZAUDKZGFBBNAB
@@ -15013,7 +15110,7 @@ $)
     rngunsnply.s $e |- ( ph -> S = ( ( RingSpan ` CCfld ) `
         ( B u. { X } ) ) ) $.
     $( Adjoining one element to a ring results in a set of polynomial
-       evaluations. (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
+       evaluations.  (Contributed by Stefan O'Rear, 30-Nov-2014.) $)
     rngunsnply $p |- ( ph -> ( V e. S <->
         E. p e. ( Poly ` B ) V = ( p ` X ) ) ) $=
       ( va wcel ccnfld cfv wceq wrex cc syl caddc co cmul vb vc ve vd crgspn cv
@@ -15086,7 +15183,8 @@ $)
     flcidc.s $e |- ( ph -> S e. Fin ) $.
     flcidc.k $e |- ( ph -> K e. S ) $.
     flcidc.b $e |- ( ( ph /\ i e. S ) -> B e. CC ) $.
-    $( Finite linear combinations with an indicator function. (Contributed by Stefan O'Rear, 5-Dec-2014.) $)
+    $( Finite linear combinations with an indicator function.  (Contributed by
+       Stefan O'Rear, 5-Dec-2014.) $)
     flcidc $p |- ( ph -> sum_ i e. S ( ( F ` i ) x. B ) = [_ K / i ]_ B ) $=
       ( cmul wcel wa c1 wceq cc0 cc syl eqtrd vk csn cv cfv co csu csb cif cmpt
       fveq1d adantr snssd sselda eqeq1 ifbid eqid ax-1cn elexi ifex fvmpt elsni
@@ -15117,7 +15215,8 @@ $)
     cnfispn.g $e |- ( ph -> G e. Fin ) $.
     cnfispn.f $e |- ( ph -> F : G --> CC ) $.
     cnfispn.s $e |- ( ph -> S = ( ( LSpan ` A ) ` ran F ) ) $.
-    $( Finite spans of numbers in terms of finite sums. (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    $( Finite spans of numbers in terms of finite sums.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
     cnfispn $p |- ( ph -> ( X e. S <-> E. f e. ( B ^m G ) X =
         sum_ i e. G ( ( f ` i ) x. ( F ` i ) ) ) ) $=
       ( wcel cmul co wceq cc cc0 va vb vc vd vh vg cv cfv csu cmap wrex cab crn
