@@ -13698,7 +13698,7 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Group and left module homomorphisms
+    Elementary theory of group homomorphisms
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
@@ -14011,6 +14011,157 @@ $)
       XBWPWRXBXAEVMTWPXAEVMWNUSXAWPEVMWNVSVMPWTWOVNVSVMVMVTVDSVCVFVGVHVIVJVK $.
       $( [10-Dec-2014] $)
   $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Elementary theory of left module homomorphisms
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    lssvnegcl.s $e |- S = ( LSubSp ` W ) $.
+    lssvnegcl.n $e |- N = ( invg ` W ) $.
+    $( Closure of negative vectors in a subspace. $)
+    lssvnegcl $p |- ( ( W e. LMod /\ U e. S /\ X e. U ) -> ( N ` X ) e. U ) $=
+      ? $.
+  $}
+
+  ${
+    $d F a b c $.  $d W a b c $.  $d B a b c $.  $d V a b c $.  $d T a b c $.
+    $d S a b c $.  $d G a b c $.  $d U a b c $.
+    islss4.f $e |- F = ( Scalar ` W ) $.
+    islss4.b $e |- B = ( Base ` F ) $.
+    islss4.v $e |- V = ( Base ` W ) $.
+    islss4.t $e |- T = ( vsca ` W ) $.
+    islss4.s $e |- S = ( LSubSp ` W ) $.
+    islss4.g $e |- G = ( SubGrp ` W ) $.
+    $( A linear subspace is a subgroup which respects scalar multiplication. $)
+    islss4 $p |- ( W e. LMod -> ( U e. S <-> ( U e. G /\
+          A. a e. B A. b e. U ( a T b ) e. U ) ) ) $=
+      ( wcel wral wa cfv vc clmod cv clss csubg cbs wss wne cplusg cminusg cgrp
+      co c0 w3a wb lmodgrp adantr c0g eqid issubg2 syl eqid1 lssss lssvacl expr
+      ralrimiv jca ralrimiva mpbir3and eleq2i anbi2i 3imtr4i lssvscl ralrimivva
+      lssn0 islss subgss sylbi ad2antrl biimpi subg0cl ne0i 3syl wi subgcl 3exp
+      adantl ralrimdv ralimdv impr impbida ) HUBQZDBQZDFQZIUCZJUCZCULZDQZJDRZIA
+      RZSZWLWMSZWNWTWLDHUDTZQZSZDHUETZQZXBWNXEXGDHUFTZUGZDUMUHZWOWPHUITZULDQZJD
+      RZWOHUJTZTDQZSZIDRZXEHUKQZXGXIXJXQUNUOWLXRXDHUPUQIJXHXKDHXNHURTZXHUSZXSUS
+      ZXKUSZXNUSUTVAXCDXHHUBXTXCVBZVCXCDHUBYCVOXEXPIDXEWODQZSZXMXOYEXLJDXEYDWPD
+      QXLXKXCDHWOWPYBYCVDVEVF?VGVHVIWMXDWLBXCDOVJVKFXFDPVJZVLXBWRIJADABCDEHWOWP
+      KNLOVMVNVGWLXASWMDGUGZXJWQUAUCZXKULDQZUADRZJDRZIARZWLWMYGXJYLUNUOXAIAXKBC
+      DEGHUBJUAKLMYBNOVPUQWNYGWLWTWNXGYGYFGDHMVQVRVSWNXJWLWTWNXGXSDQXJWNXGYFVTD
+      HXSYAWADXSWBWCVSWLWNWTYLWLWNSZWSYKIAYMWRYJJDYMWRYIUADWNWRYHDQZYIWDWDZWLWN
+      XGYOYFXGWRYNYIXKDHWQYHYBWEWFVRWGWHWIWIWJVIWK $.
+  $}
+
+  ${
+    $d S s t f w x y $.  $d T s t f w x y $.  $d L f w x y $.  $d K f w x y $.
+    $d B f w x y $.  $d E f w x y $.  $d M f w x y $.  $d N f w x y $.
+    $d F f x y $.
+    ishlm.k $e |- K = ( Scalar ` S ) $.
+    ishlm.l $e |- L = ( Scalar ` T ) $.
+    ishlm.b $e |- B = ( Base ` K ) $.
+    ishlm.e $e |- E = ( Base ` S ) $.
+    ishlm.m $e |- M = ( vsca ` S ) $.
+    ishlm.n $e |- N = ( vsca ` T ) $.
+    $( Value of a hom-set for left modules. $)
+    hlmval $p |- ( ( S e. V /\ T e. W ) -> ( S homLM T ) =
+        { f e. ( S homGrp T ) | ( L = K /\ A. x e. B A. y e. E
+          ( f ` ( x M y ) ) = ( x N ( f ` y ) ) ) } ) $=
+      ( cfv vs vt vw wcel wa chlm co csca wceq cv cvsca cbs wral chgrp crab cvv
+      elex wsbc oveq1 fvex eqeq2 fveq2 raleqdv sbcie eqeq2d fveq2d oveqd eqeq1d
+      raleqbidv syl5bb rabeqbidv oveq2 2ralbidv df-hlm ovex rabex ovmpt2 syl2an
+      anbi12d eqeq12i fveq2i eqtri raleqi oveqi ralbii bitri anbi12i bicomi a1i
+      wb rabbiia syl6eq ) DLUDZEMUDZUEDEUFUGZEUHTZDUHTZUIZAUJZBUJZDUKTZUGZFUJZT
+      ZWSWTXCTZEUKTZUGZUIZBDULTZUMZAWQULTZUMZUEZFDEUNUGZUOZIHUIZWSWTJUGZXCTZWSX
+      EKUGZUIZBGUMZACUMZUEZFXNUOWMDUPUDEUPUDWOXOUIWNDLUQEMUQUAUBDEUPUPUBUJZUHTZ
+      UCUJZUIZWSWTUAUJZUKTZUGZXCTZWSXEYDUKTZUGZUIZBYHULTZUMZAYFULTZUMZUEZUCYHUH
+      TZURZFYHYDUNUGZUOXOUFYEWQUIZXDYMUIZBXIUMZAXKUMZUEZFDYDUNUGZUOYHDUIZUUAUUG
+      FUUBUUHYHDYDUNUSUUAYEYTUIZYPAYTULTZUMZUEZUUIUUGYSUUMUCYTYHUHUTYFYTUIZYGUU
+      JYRUULYFYTYEVAUUNYPAYQUUKYFYTULVBVCVSVDUUIUUJUUCUULUUFUUIYTWQYEYHDUHVBZVE
+      UUIYPUUEAUUKXKUUIYTWQULUUOVFUUIYNUUDBYOXIYHDULVBUUIYKXDYMUUIYJXBXCUUIYIXA
+      WSWTYHDUKVBVGVFVHVIVIVSVJVKYDEUIZUUGXMFUUHXNYDEDUNVLUUPUUCWRUUFXLUUPYEWPW
+      QYDEUHVBVHUUPUUDXHABXKXIUUPYMXGXDUUPYLXFWSXEYDEUKVBVGVEVMVSVKABUCUBFUAVNX
+      MFXNDEUNVOVPVQVRXMYCFXNXMYCWJXCXNUDYCXMXPWRYBXLIWPHWQONVTYBYAAXKUMXLYAACX
+      KCHULTXKPHWQULNWAWBWCYAXJAXKYAXTBXIUMXJXTBGXIQWCXTXHBXIXRXDXSXGXQXBXCJXAW
+      SWTRWDWAKXFWSXESWDVTWEWFWEWFWGWHWIWKWL $.
+      $( [10-Dec-2014] $)
+
+    $( Property of being a homomorphism of left modules. $)
+    ishlm $p |- ( ( S e. V /\ T e. W ) -> ( F e. ( S homLM T ) <->
+        ( F e. ( S homGrp T ) /\ L = K /\ A. x e. B A. y e. E
+          ( F ` ( x M y ) ) = ( x N ( F ` y ) ) ) ) ) $=
+      ( wcel vf wa chlm co wceq cv cfv wral chgrp crab w3a hlmval eleq2d oveq2d
+      fveq1 eqeq12d 2ralbidv anbi2d elrab 3anass bitr4i syl6bb ) DLTEMTUBZGDEUC
+      UDZTGIHUEZAUFZBUFZJUDZUAUFZUGZVFVGVIUGZKUDZUEZBFUHACUHZUBZUADEUIUDZUJZTZG
+      VPTZVEVHGUGZVFVGGUGZKUDZUEZBFUHACUHZUKZVCVDVQGABCDEUAFHIJKLMNOPQRSULUMVRV
+      SVEWDUBZUBWEVOWFUAGVPVIGUEZVNWDVEWGVMWCABCFWGVJVTVLWBVHVIGUOWGVKWAVFKVGVI
+      GUOUNUPUQURUSVSVEWDUTVAVB $.
+      $( [11-Dec-2014] $)
+  $}
+
+  ${
+    $d F a b $.  $d S a b $.  $d T a b $.  $d K a b $.  $d L a b $.
+    $d W a b $.  $d X a b $.  $d Y a b $.  $d E a b $.  $d B a b $.
+    $d M a b $.  $d N a b $.
+    $( A homomorphism of left modules is a homomorphism of groups. $)
+    hlmhgrp $p |- ( F e. ( S homLM T ) -> F e. ( S homGrp T ) ) $=
+      ( va vb cvv wcel chlm co chgrp wn c0 eleq2d wi wa csca cfv wceq wral eqid
+      noel reldmhlm ovprc1 mtbiri con4i cvsca cbs w3a ishlm simp1 syl6bi anidms
+      cv adantr wb ovprc2 adantl 3imtr4d pm2.61dan mpcom ) AFGZCABHIZGZCABJIZGZ
+      VAVCVAKZVCCLGCUAVFVBLCABHUBUCMUDUEVABFGZVCVENVAVGOVCVEBPQZAPQZRZDUMZEUMZA
+      UFQZICQZVKVLCQZBUFQZIREAUGQZSDVIUGQZSZUHVEDEVRABVQCVIVHVMVPFFVITZVHTVRTZV
+      QTZVMTZVPTUIVEVJVSUJUKVAVGKZOCAAHIZGZCAAJIZGZVCVEVAWFWHNZWDVAWIVAVAOWFWHV
+      IVIRZVNVKVOVMIREVQSDVRSZUHWHDEVRAAVQCVIVIVMVMFFVTVTWAWBWCWCUIWHWJWKUJUKUL
+      UNWDVCWFUOVAWDVBWECABHUPMUQWDVEWHUOVAWDVDWGCABJUPMUQURUSUT $.
+      $( [11-Dec-2014] $)
+
+    ${
+      hlmf.b $e |- B = ( Base ` S ) $.
+      hlmf.c $e |- C = ( Base ` T ) $.
+      $( A homomorphism of left modules is a function. $)
+      hlmf $p |- ( ( F e. ( S homLM T ) /\ T e. V ) -> F : B --> C ) $=
+        ( wcel chlm co wf chgrp hlmhgrp hgrpf sylan2 ancoms ) DFIZECDJKIZABELZS
+        RECDMKITCDENCDEFABGHOPQ $.
+        $( [11-Dec-2014] $)
+    $}
+
+    ${
+      hlmsca.k $e |- K = ( Scalar ` S ) $.
+      hlmsca.l $e |- L = ( Scalar ` T ) $.
+      $( A homomorphism of left modules constrains both modules to the same
+         ring of scalars. $)
+      hlmsca $p |- ( ( F e. ( S homLM T ) /\ T e. V ) -> L = K ) $=
+        ( va vb chlm co wcel wa cvv wceq c0 cv cfv eqid wn noel reldmhlm ovprc1
+        eleq2d mtbiri con4i adantr chgrp cvsca cbs wral w3a ishlm syl6bi ancoms
+        wi simp2 impcom expr mpd ) CABKLZMZBFMZNAOMZEDPZVCVEVDVEVCVEUAZVCCQMCUB
+        VGVBQCABKUCUDUEUFUGUHVCVDVEVFVDVENVCVFVEVDVCVFUQVEVDNVCCABUILMZVFIRZJRZ
+        AUJSZLCSVIVJCSBUJSZLPJAUKSZULIDUKSZULZUMVFIJVNABVMCDEVKVLOFGHVNTVMTVKTV
+        LTUNVHVFVOURUOUPUSUTVA $.
+        $( [11-Dec-2014] $)
+    $}
+
+    ${
+      hlmlinm.k $e |- K = ( Scalar ` S ) $.
+      hlmlinm.b $e |- B = ( Base ` K ) $.
+      hlmlinm.e $e |- E = ( Base ` S ) $.
+      hlmlinm.m $e |- M = ( vsca ` S ) $.
+      hlmlinm.n $e |- N = ( vsca ` T ) $.
+      $( A homomorphism of left modules is ` K ` -linear. $)
+      hlmlinm $p |- ( ( ( F e. ( S homLM T ) /\ T e. V ) /\
+          ( X e. B /\ Y e. E ) ) -> ( F ` ( X M Y ) ) = ( X N ( F ` Y ) ) ) $=
+        ( wcel co cfv wceq va vb wa chlm cv wral cvv wi wn noel reldmhlm ovprc1
+        c0 eleq2d mtbiri con4i chgrp csca w3a eqid ishlm simp3 syl6bi com3r mpd
+        ex imp oveq1 fveq2d eqeq12d oveq2 fveq2 oveq2d rcla42va sylan2 ancoms )
+        JAQKDQUCZEBCUDRZQZCIQZUCZJKGRZESZJKESZHRZTZWAVQUAUEZUBUEZGRZESZWGWHESZH
+        RZTZUBDUFUAAUFZWFVSVTWNVSBUGQZVTWNUHWOVSWOUIZVSEUMQEUJWPVRUMEBCUDUKULUN
+        UOUPWOVTVSWNWOVTVSWNUHWOVTUCVSEBCUQRQZCURSZFTZWNUSWNUAUBABCDEFWRGHUGILW
+        RUTMNOPVAWQWSWNVBVCVFVDVEVGWMWFJWHGRZESZJWKHRZTUAUBJKADWGJTZWJXAWLXBXCW
+        IWTEWGJWHGVHVIWGJWKHVHVJWHKTZXAWCXBWEXDWTWBEWHKJGVKVIXDWKWDJHWHKEVLVMVJ
+        VNVOVP $.
+        $( [11-Dec-2014] $)
+    $}
+  $}
+
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
