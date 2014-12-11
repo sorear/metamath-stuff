@@ -13698,11 +13698,327 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Group and left module homomorphisms
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c homGrp homLM $.
+
+  $( Extend class notation with the generator of group hom-sets. $)
+  chgrp $a class homGrp $.
+
+  $( Extend class notation with the generator of left module hom-sets. $)
+  chlm $a class homLM $.
+
+  ${
+    $d g s t w x y $.
+
+    $( A homomorphism of groups is a map between two structures (not prior
+       assumed to be groups) which preserves the group operation. $)
+    df-hgrp $a |- homGrp = ( s e. _V , t e. _V |-> { g |
+        [ ( Base ` s ) / w ] ( g : w --> ( Base ` t ) /\
+            A. x e. w A. y e. w ( g ` ( x ( +g ` s ) y ) ) =
+                ( ( g ` x ) ( +g ` t ) ( g ` y ) ) ) } ) $.
+
+    $( A homomorphism of left modules is a group homomorphism which
+       additionally preserves the scalar product.  This requires both
+       structures to be left modules over the same ring. $)
+    df-hlm $a |- homLM = ( s e. _V , t e. _V |-> { g e. ( s homGrp t ) |
+        [ ( Scalar ` s ) / w ] ( ( Scalar ` t ) = w /\
+          A. x e. ( Base ` w ) A. y e. ( Base ` s )
+          ( g ` ( x ( vsca ` s ) y ) ) = ( x ( vsca ` t ) ( g ` y ) ) ) } ) $.
+  $}
+
+  ${
+    $d s t w u v f S $.  $d s t w u v f T $.  $d u v f X $.  $d u v f A $.
+    $d u v f Y $.  $d u v f B $.
+    ishgrp.w $e |- X = ( Base ` S ) $.
+    ishgrp.x $e |- Y = ( Base ` T ) $.
+    ishgrp.a $e |- A = ( +g ` S ) $.
+    ishgrp.b $e |- B = ( +g ` T ) $.
+    $( Value of a hom-set of groups. $)
+    hgrpval $p |- ( ( S e. V /\ T e. W ) -> ( S homGrp T ) = { f |
+        ( f : X --> Y /\ A. u e. X A. v e. X ( f ` ( u A v ) ) =
+            ( ( f ` u ) B ( f ` v ) ) ) } ) $=
+      ( cbs cfv wceq wral cvv vs vt vw wcel wa chgrp co cv cplusg cab elex wsbc
+      wf fvex raleq raleqbi1dv anbi12d sbcie fveq2 feq2d oveqd fveq2d raleqbidv
+      feq2 eqeq1d syl5bb abbidv wb feq3 syl eqeq2d 2ralbidv df-hgrp mapex mp2an
+      simpl ss2abi ssexi ovmpt2 syl2an feq23i oveqi eqeq12i ax-mp anbi12i abbii
+      fveq2i a1i syl6eqr ) EHUDZFIUDZUEEFUFUGZEPQZFPQZGUHZUMZBUHZAUHZEUIQZUGZWO
+      QZWQWOQZWRWOQZFUIQZUGZRZAWMSZBWMSZUEZGUJZJKWOUMZWQWRCUGZWOQZXBXCDUGZRZAJS
+      ZBJSZUEZGUJWJETUDFTUDWLXJRWKEHUKFIUKUAUBEFTTUCUHZUBUHZPQZWOUMZWQWRUAUHZUI
+      QZUGZWOQZXBXCXTUIQZUGZRZAXSSZBXSSZUEZUCYCPQZULZGUJXJUFWMYAWOUMZXAYHRZAWMS
+      ZBWMSZUEZGUJYCERZYNYSGYNYMYAWOUMZYIAYMSZBYMSZUEZYTYSYLUUDUCYMYCPUNXSYMRYB
+      UUAYKUUCXSYMYAWOVDYJUUBBXSYMYIAXSYMUOUPUQURYTUUAYOUUCYRYTYMWMYAWOYCEPUSZU
+      TYTUUBYQBYMWMUUEYTYIYPAYMWMUUEYTYFXAYHYTYEWTWOYTYDWSWQWRYCEUIUSVAVBVEVCVC
+      UQVFVGXTFRZYSXIGUUFYOWPYRXHUUFYAWNRYOWPVHXTFPUSYAWNWMWOVIVJUUFYPXFBAWMWMU
+      UFYHXEXAUUFYGXDXBXCXTFUIUSVAVKVLUQVGBAUCUBGUAVMXJWPGUJZWMTUDWNTUDUUGTUDEP
+      UNFPUNWMWNTTGVNVOXIWPGWPXHVPVQVRVSVTXRXIGXKWPXQXHJKWMWNWOLMWAJWMRZXQXHVHL
+      XPXGBJWMXOXFAJWMXOXFVHUUHXMXAXNXEXLWTWOCWSWQWRNWBWGDXDXBXCOWBWCWHUPUPWDWE
+      WFWI $.
+      $( [9-Dec-2014] $)
+
+    $d u v f F $.
+
+    $( Property of being a homomorphism of groups. $)
+    ishgrp $p |- ( ( S e. V /\ T e. W ) -> ( F e. ( S homGrp T ) <->
+        ( F : X --> Y /\ A. u e. X A. v e. X ( F ` ( u A v ) ) =
+            ( ( F ` u ) B ( F ` v ) ) ) ) ) $=
+      ( vf wcel co cfv wral wa chgrp cv wf wceq cab hgrpval eleq2d cvv cbs fvex
+      eqeltri fex mpan2 adantr feq1 fveq1 oveq12d eqeq12d 2ralbidv elab3 syl6bb
+      anbi12d ) EHQFIQUAZGEFUBRZQGJKPUCZUDZBUCZAUCZCRZVFSZVHVFSZVIVFSZDRZUEZAJT
+      BJTZUAZPUFZQJKGUDZVJGSZVHGSZVIGSZDRZUEZAJTBJTZUAZVDVEVRGABCDEFPHIJKLMNOUG
+      UHVQWFPGVSGUIQZWEVSJUIQWGJEUJSUILEUJUKULJKUIGUMUNUOVFGUEZVGVSVPWEJKVFGUPW
+      HVOWDBAJJWHVKVTVNWCVJVFGUQWHVLWAVMWBDVHVFGUQVIVFGUQURUSUTVCVAVB $.
+      $( [9-Dec-2014] $)
+  $}
+
+  ${
+    $d w u v s t g $.
+
+    $( Lemma for ~ hgrpf and ~ hgrplin . $)
+    reldmhgrp $p |- Rel dom homGrp $=
+      ( vs vt vw vg vu vv cvv cv cbs cfv wf cplusg co wceq wral wa wsbc df-hgrp
+      cab chgrp reldmmpt2 ) ABGGCHZBHZIJDHZKEHZFHZAHZLJMUDJUEUDJUFUDJUCLJMNFUBO
+      EUBOPCUGIJQDSTEFCBDARUA $.
+      $( [9-Dec-2014] $)
+
+    $( Lemma for module homomorphisms. $)
+    reldmhlm $p |- Rel dom homLM $=
+      ( vs vt vw vu vv vg cvv cv csca cfv wceq cvsca co wral wa wsbc chgrp crab
+      cbs chlm df-hlm reldmmpt2 ) ABGGBHZIJCHZKDHZEHZAHZLJMFHZJUEUFUHJUCLJMKEUG
+      SJNDUDSJNOCUGIJPFUGUCQMRTDECBFAUAUB $.
+      $( [9-Dec-2014] $)
+  $}
+
+  ${
+    $d X a b $.  $d Y a b $.  $d F a b $.  $d S a b $.  $d T a b $.
+    hgrpf.x $e |- X = ( Base ` S ) $.
+    hgrpf.y $e |- Y = ( Base ` T ) $.
+    $( A homomorphism of groups is a function. $)
+    hgrpf $p |- ( ( T e. V /\ F e. ( S homGrp T ) ) -> F : X --> Y ) $=
+      ( va vb wcel chgrp co wa cv cplusg cfv wral cvv c0 wf wceq noel reldmhgrp
+      simpr wb wn ovprc1 eleq2d mtbiri con4i eqid ishgrp syl2anr mpbid simpld
+      id ) BDKZCABLMZKZNZEFCUAZIOZJOZAPQZMCQVCCQVDCQBPQZMUBJERIERZVAUTVBVGNZURU
+      TUEUTASKZURUTVHUFURVIUTVIUGZUTCTKCUCVJUSTCABLUDUHUIUJUKURUQJIVEVFABCSDEFG
+      HVEULVFULUMUNUOUP $.
+      $( [9-Dec-2014] $)
+  $}
+
+  ${
+    $d ph a b $.  $d U a b $.  $d V a b $.  $d F a b $.  $d S a b $.
+    $d T a b $.  $d A a b $.  $d B a b $.  $d X a b $.
+    hgrplin.x $e |- X = ( Base ` S ) $.
+    hgrplin.a $e |- A = ( +g ` S ) $.
+    hgrplin.b $e |- B = ( +g ` T ) $.
+    $( A homomorphism of groups is linear. $)
+    hgrplin $p |- ( ( ( F e. ( S homGrp T ) /\ T e. W ) /\
+          ( U e. X /\ V e. X ) ) -> ( F ` ( U A V ) ) =
+          ( ( F ` U ) B ( F ` V ) ) ) $=
+      ( va vb chgrp co wcel wa cfv wceq cv wral cbs wf simpl wb wn c0 reldmhgrp
+      cvv noel ovprc1 eleq2d mtbiri con4i eqid ishgrp sylan mpbid simprd fveq2d
+      oveq1 fveq2 oveq1d eqeq12d oveq2 oveq2d rcla42va ancoms ) FCDOPZQZDHQZRZM
+      UAZNUAZAPZFSZVNFSZVOFSZBPZTZNIUBMIUBZEIQGIQRZEGAPZFSZEFSZGFSZBPZTZVMIDUCS
+      ZFUDZWBVMVKWKWBRZVKVLUEVKCUJQZVLVKWLUFWMVKWMUGZVKFUHQFUKWNVJUHFCDOUIULUMU
+      NUONMABCDFUJHIWJJWJUPKLUQURUSUTWCWBWIWAWIEVOAPZFSZWFVSBPZTMNEGIIVNETZVQWP
+      VTWQWRVPWOFVNEVOAVBVAWRVRWFVSBVNEFVCVDVEVOGTZWPWEWQWHWSWOWDFVOGEAVFVAWSVS
+      WGWFBVOGFVCVGVEVHVIUR $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    hgrpid.y $e |- Y = ( 0g ` S ) $.
+    hgrpid.z $e |- Z = ( 0g ` T ) $.
+    $( A homomorphism of groups preserves the identity. $)
+    hgrpid $p |- ( ( F e. ( S homGrp T ) /\ S e. Grp /\ T e. Grp ) ->
+        ( F ` Y ) = Z ) $=
+      ( chgrp co wcel cgrp w3a cfv cplusg wceq cbs simp1 simp3 eqid syl2anc wb
+      grpidcl 3ad2ant2 eqid1 hgrplin syl22anc simp2 grplid fveq2d hgrpf ffvelrn
+      eqtr3d wf grpid mpbid eqcomd ) CABHIJZAKJZBKJZLZEDCMZUTVAVABNMZIZVAOZEVAO
+      ZUTDDANMZIZCMZVCVAUTUQUSDAPMZJZVJVHVCOUQURUSQZUQURUSRZURUQVJUSVIADVISZFUB
+      UCZVNVFVBABDCDKVIVMVFUDZVBSZUEUFUTVGDCUTURVJVGDOUQURUSUGVNVIVFADDVMVOFUHT
+      UIULUTUSVABPMZJZVDVEUAVLUTVIVQCUMZVJVRUTUSUQVSVLVKABCKVIVQVMVQSZUJTVNVIVQ
+      DCUKTVQVBBEVAVTVPGUNTUOUP $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    hgrpinv.b $e |- B = ( Base ` S ) $.
+    hgrpinv.y $e |- M = ( invg ` S ) $.
+    hgrpinv.z $e |- N = ( invg ` T ) $.
+    $( A homomorphism of groups preserves inverses. $)
+    hgrpinv $p |- ( ( ( F e. ( S homGrp T ) /\ S e. Grp /\ T e. Grp ) /\
+          X e. B ) -> ( F ` ( M ` X ) ) = ( N ` ( F ` X ) ) ) $=
+      ( co wcel cgrp cfv wceq cplusg c0g eqid 3ad2antl2 syl2anc chgrp wa fveq2d
+      w3a grprinv simpl1 simpl3 grpinvcl hgrplin syl22anc hgrpid adantr 3eqtr3d
+      simpr cbs wb wf hgrpf ffvelrn grpinvid1 syl3anc mpbird eqcomd ) DBCUAKLZB
+      MLZCMLZUDZGALZUBZGDNZFNZGENZDNZVIVKVMOZVJVMCPNZKZCQNZOZVIGVLBPNZKZDNZBQNZ
+      DNZVPVQVIVTWBDVEVDVHVTWBOVFAVSBEWBGHVSRZWBRZIUESUCVIVDVFVHVLALZWAVPOVDVEV
+      FVHUFZVDVEVFVHUGZVGVHUNZVEVDVHWFVFABEGHIUHSZVSVOBCGDVLMAHWDVORZUIUJVGWCVQ
+      OVHBCDWBVQWEVQRZUKULUMVIVFVJCUONZLZVMWMLZVNVRUPWHVIAWMDUQZVHWNVIVFVDWPWHW
+      GBCDMAWMHWMRZURTZWIAWMGDUSTVIWPWFWOWRWJAWMVLDUSTWMVOCFVQVJVMWQWKWLJUTVAVB
+      VC $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    $d F a b c d e $.  $d S a b c d e $.  $d T a b c d e $.  $d V a b c d e $.
+    $( Use a homomorphism to push forward a group structure, similar to
+       ~ ghgrp . $)
+    hgrprn $p |- ( ( F e. ( S homGrp T ) /\ S e. Grp /\ T e. V ) ->
+        ( T |`s ran F ) e. Grp ) $=
+      ( va vb vc vd ve co wcel cfv wceq wa wral wrex eqid hgrplin syl22anc syl
+      chgrp cgrp w3a cv cplusg crn cress cbs simpl1 simpl3 simpr1 simpr2 wfn wf
+      simp3 simp1 hgrpf syl2anc ffn adantr simpl2 grpcl syl3anc fnfvelrn grpass
+      eqeltrrd 3ad2antl2 fveq2d simpr3 oveq1d oveq2d 3eqtr3d jca ralrimivvva wb
+      eqtrd oveq1 eleq1d eqeq12d anbi12d 2ralbidv ralrn oveq2 ralbidv bitrd wss
+      anbi2d mpbird frn ressbas2 eleq2 anbi1d raleqbi1dv mpbid grpidcl 3ad2ant2
+      c0g simpr grplid eqtr3d cminusg grpinvcl grplinv eqeq1d rcla4ev ralrimiva
+      id rexbidv eqeq2 rexeq rexeqbi1dv ressplusg isgrp2 sylanbrc ) CABUAJKZAUB
+      KZBDKZUCZEUDZFUDZBUELZJZBCUFZUGJZUHLZKZYBGUDZYAJZXSXTYGYAJZYAJZMZNZGYEOZF
+      YEOZEYEOZHUDZXSYAJZXSMZIUDZXSYAJZYPMZIYEPZNZEYEOZHYEPZYDUBKXRYBYCKZYKNZGY
+      COZFYCOZEYCOZYOXRUUJYPCLZYSCLZYAJZYCKZUUMXSCLZYAJZUUKUULUUOYAJZYAJZMZNZEA
+      UHLZOZIUVAOZHUVAOZXRUUTHIEUVAUVAUVAXRYPUVAKZYSUVAKZXSUVAKZUCZNZUUNUUSUVIY
+      PYSAUELZJZCLZUUMYCUVIXOXQUVEUVFUVLUUMMXOXPXQUVHUIZXOXPXQUVHUJZXRUVEUVFUVG
+      UKZXRUVEUVFUVGULZUVJYAABYPCYSDUVAUVAQZUVJQZYAQZRSZUVICUVAUMZUVKUVAKZUVLYC
+      KXRUWAUVHXRUVABUHLZCUNZUWAXRXQXOUWDXOXPXQUOXOXPXQUPABCDUVAUWCUVQUWCQZUQUR
+      ZUVAUWCCUSTZUTUVIXPUVEUVFUWBXOXPXQUVHVAZUVOUVPUVAUVJAYPYSUVQUVRVBVCZUVAUV
+      KCVDURVFUVIUVKXSUVJJZCLZYPYSXSUVJJZUVJJZCLZUUPUURUVIUWJUWMCXPXOUVHUWJUWMM
+      XQUVAUVJAYPYSXSUVQUVRVEVGVHUVIUWKUVLUUOYAJZUUPUVIXOXQUWBUVGUWKUWOMUVMUVNU
+      WIXRUVEUVFUVGVIZUVJYAABUVKCXSDUVAUVQUVRUVSRSUVIUVLUUMUUOYAUVTVJVPUVIUWNUU
+      KUWLCLZYAJZUURUVIXOXQUVEUWLUVAKZUWNUWRMUVMUVNUVOUVIXPUVFUVGUWSUWHUVPUWPUV
+      AUVJAYSXSUVQUVRVBVCUVJYAABYPCUWLDUVAUVQUVRUVSRSUVIUWQUUQUUKYAUVIXOXQUVFUV
+      GUWQUUQMUVMUVNUVPUWPUVJYAABYSCXSDUVAUVQUVRUVSRSVKVPVLVMVNXRUWAUUJUVDVOUWG
+      UWAUUJUUKXTYAJZYCKZUWTYGYAJZUUKYIYAJZMZNZGYCOZFYCOZHUVAOUVDUUIUXGEHUVACXS
+      UUKMZUUGUXEFGYCYCUXHUUFUXAYKUXDUXHYBUWTYCXSUUKXTYAVQZVRUXHYHUXBYJUXCUXHYB
+      UWTYGYAUXIVJXSUUKYIYAVQVSVTWAWBUWAUXGUVCHUVAUWAUXGUUNUUMYGYAJZUUKUULYGYAJ
+      ZYAJZMZNZGYCOZIUVAOUVCUXFUXOFIUVACXTUULMZUXEUXNGYCUXPUXAUUNUXDUXMUXPUWTUU
+      MYCXTUULUUKYAWCZVRUXPUXBUXJUXCUXLUXPUWTUUMYGYAUXQVJUXPYIUXKUUKYAXTUULYGYA
+      VQVKVSVTWDWBUWAUXOUVBIUVAUXNUUTGEUVACYGUUOMZUXMUUSUUNUXRUXJUUPUXLUURYGUUO
+      UUMYAWCUXRUXKUUQUUKYAYGUUOUULYAWCVKVSWGWBWDWEWDWETWHXRYCYEMZUUJYOVOXRYCUW
+      CWFZUXSXRUWDUXTUWFUVAUWCCWITYCUWCYDBYDQZUWEWJTZUUIYNEYCYEUUHYMFYCYEUUGYLG
+      YCYEUXSUUFYFYKYCYEYBWKWLWMWMWMTWNXRYRUUAIYCPZNZEYCOZHYCPZUUEXRAWQLZCLZYCK
+      ZUYHXSYAJZXSMZYTUYHMZIYCPZNZEYCOZUYFXRUWAUYGUVAKZUYIUWGXPXOUYPXQUVAAUYGUV
+      QUYGQZWOZWPUVAUYGCVDURXRUYOUYHXTCLZYAJZUYSMZYSUYSYAJZUYHMZIYCPZNZFUVAOZXR
+      VUEFUVAXRXTUVAKZNZVUAVUDVUHUYGXTUVJJZCLZUYTUYSVUHXOXQUYPVUGVUJUYTMXOXPXQV
+      UGUIZXOXPXQVUGUJZVUHXPUYPXOXPXQVUGVAUYRTXRVUGWRZUVJYAABUYGCXTDUVAUVQUVRUV
+      SRSXPXOVUGVUJUYSMXQXPVUGNVUIXTCUVAUVJAUYGXTUVQUVRUYQWSVHVGWTVUHXTAXALZLZC
+      LZYCKZVUPUYSYAJZUYHMZVUDVUHUWAVUOUVAKZVUQXRUWAVUGUWGUTXPXOVUGVUTXQUVAAVUN
+      XTUVQVUNQZXBVGZUVAVUOCVDURVUHVUOXTUVJJZCLZVURUYHVUHXOXQVUTVUGVVDVURMVUKVU
+      LVVBVUMUVJYAABVUOCXTDUVAUVQUVRUVSRSVUHVVCUYGCXPXOVUGVVCUYGMXQUVAUVJAVUNUY
+      GXTUVQUVRUYQVVAXCVGVHWTVUCVUSIVUPYCYSVUPMVUBVURUYHYSVUPUYSYAVQXDXEURVMXFX
+      RUWAUYOVUFVOUWGUYNVUEEFUVACXSUYSMZUYKVUAUYMVUDVVEUYJUYTXSUYSXSUYSUYHYAWCV
+      VEXGVSVVEUYLVUCIYCVVEYTVUBUYHXSUYSYSYAWCXDXHVTWBTWHUYEUYOHUYHYCYPUYHMZUYD
+      UYNEYCVVFYRUYKUYCUYMVVFYQUYJXSYPUYHXSYAVQXDVVFUUAUYLIYCYPUYHYTXIXHVTWDXEU
+      RXRUXSUYFUUEVOUYBUYEUUDHYCYEUYDUUCEYCYEUXSUYCUUBYRUUAIYCYEXJWGWMXKTWNYEYA
+      HIYDEFGYEQYCYABYDUYAUVSXLXMXN $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    $d B a b $.  $d G a b $.
+    idhgrp.b $e |- B = ( Base ` G ) $.
+    $( The identity homomorphism on a group. $)
+    idhgrp $p |- ( G e. Grp -> ( _I |` B ) e. ( G homGrp G ) ) $=
+      ( va vb cgrp wcel cid cres chgrp co wf cv cplusg cfv wceq wral wa fvresi
+      wb eqid ishgrp anidms wf1o f1oi f1of ax-mp a1i grpcl syl oveqan12d adantl
+      3expb eqtr4d ralrimivva mpbir2and ) BFGZHAIZBBJKGZAAURLZDMZEMZBNOZKZUROZV
+      AUROZVBUROZVCKZPZEAQDAQZUQUSUTVJRTEDVCVCBBURFFAACCVCUAZVKUBUCUTUQAAURUDUT
+      AUEAAURUFUGUHUQVIDEAAUQVAAGZVBAGZRZRZVEVDVHVOVDAGZVEVDPUQVLVMVPAVCBVAVBCV
+      KUIUMAVDSUJVNVHVDPUQVLVMVFVAVGVBVCAVASAVBSUKULUNUOUP $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    $d S a b $.  $d X a b $.  $d F a b $.  $d T a b $.  $d V a b $.
+    $( Restriction of a homomorpism to a subgroup. $)
+    reshgrp $p |- ( ( F e. ( S homGrp T ) /\ X e. ( SubGrp ` S ) /\ T e. V ) ->
+        ( F |` X ) e. ( ( S |`s X ) homGrp T ) ) $=
+      ( va vb chgrp co wcel cfv cress cbs wf wceq wral wa eqid syl fvres w3a cv
+      csubg cres cplusg cvv ovex simp3 ressplusg ishgrp sylancr wss simp1 hgrpf
+      syl2anc subgss 3ad2ant2 fssres ressbas2 eqcomd feq2d mpbird simpl1 simpl3
+      wb sselda adantrr adantrl hgrplin syl22anc simpl2 syl3anc oveq12d 3eqtr4d
+      simprl simprr subgcl ralrimivva raleq raleqbi1dv mpbir2and ) CABHIJZEAUCK
+      JZBDJZUAZCEUDZAELIZBHIJZWGMKZBMKZWFNZFUBZGUBZAUEKZIZWFKZWLWFKZWMWFKZBUEKZ
+      IZOZGWIPZFWIPZWEWGUFJWDWHWKXCQVEAELUGWBWCWDUHZGFWNWSWGBWFUFDWIWJWIRWJRZEW
+      NAWGWGRZWNRZUIWSRZUJUKWEWKEWJWFNZWEAMKZWJCNZEXJULZXIWEWDWBXKXDWBWCWDUMABC
+      DXJWJXJRZXEUNUOWCWBXLWDXJEAXMUPUQZXJWJECURUOWEWIEWJWFWEXLWIEOZXNXLEWIEXJW
+      GAXFXMUSUTSZVAVBWEXCXAGEPZFEPZWEXAFGEEWEWLEJZWMEJZQZQZWOCKZWLCKZWMCKZWSIZ
+      WPWTYBWBWDWLXJJZWMXJJZYCYFOWBWCWDYAVCWBWCWDYAVDWEXSYGXTWEEXJWLXNVFVGWEXTY
+      HXSWEEXJWMXNVFVHWNWSABWLCWMDXJXMXGXHVIVJYBWOEJZWPYCOYBWCXSXTYIWBWCWDYAVKW
+      EXSXTVOZWEXSXTVPZWNEAWLWMXGVQVLWOECTSYBWQYDWRYEWSYBXSWQYDOYJWLECTSYBXTWRY
+      EOYKWMECTSVMVNVRWEXOXCXRVEXPXBXQFWIEXAGWIEVSVTSVBWA $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    $( The image of a subgroup under a homomorphism. $)
+    hgrpima $p |- ( ( F e. ( S homGrp T ) /\ U e. ( SubGrp ` S ) /\
+        T e. Grp ) -> ( F " U ) e. ( SubGrp ` T ) ) $=
+      ( chgrp wcel csubg cfv cgrp w3a cima cbs wss cress simp3 crn imassrn eqid
+      co wf hgrpf ancoms 3adant2 frn syl syl5ss cres wceq df-ima eqcomi reshgrp
+      a1i oveq2d subggrp 3ad2ant2 hgrprn syl3anc eqeltrrd issubg syl3anbrc ) DA
+      BESFZCAGHFZBIFZJZVCDCKZBLHZMBVENSZIFVEBGHFVAVBVCOZVDVEDPZVFDCQVDALHZVFDTZ
+      VIVFMVAVCVKVBVCVAVKABDIVJVFVJRVFRZUAUBUCVJVFDUDUEUFVDBDCUGZPZNSZVGIVDVNVE
+      BNVNVEUHVDVEVNDCUIUJULUMVDVMACNSZBESFVPIFZVCVOIFABDICUKVBVAVQVCCAVPVPRUNU
+      OVHVPBVMIUPUQURVFVEBVLUSUT $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    $d F a b $.  $d V a b $.  $d T a b $.  $d S a b $.
+    $( The inverse image of a subgroup under a homomorphism. $)
+    hgrpiima $p |- ( ( F e. ( S homGrp T ) /\ V e. ( SubGrp ` T ) /\
+        S e. Grp ) -> ( `' F " V ) e. ( SubGrp ` S ) ) $=
+      ( va vb co wcel cfv cgrp wa wb eqid wceq syl2anc elpreima syl3anc eqeltrd
+      syl adantr chgrp csubg w3a ccnv cima cbs wss c0 wne cv cplusg cminusg c0g
+      wral issubg2 3ad2ant3 cdm cnvimass wf subgrcl 3ad2ant2 simp1 fdm syl5sseq
+      hgrpf wfn ffn grpidcl hgrpid subg0cl mpbir2and ne0i simpl3 sselda adantrr
+      simp3 adantrl grpcl simpl1 hgrplin syl22anc simpl2 wfun ffun sylan subgcl
+      fvimacnvi expr ralrimiv grpinvcl hgrpinv syl31anc subginvcl jca ralrimiva
+      mpbir3and ) CABUAGHZDBUBIHZAJHZUCZCUDDUEZAUBIHZXAAUFIZUGZXAUHUIZEUJZFUJZA
+      UKIZGZXAHZFXAUNZXFAULIZIZXAHZKZEXAUNZWSWQXBXDXEXPUCLWREFXCXHXAAXLAUMIZXCM
+      ZXQMZXHMZXLMZUOUPWTCUQZXAXCCDURWTXCBUFIZCUSZYBXCNWTBJHZWQYDWRWQYEWSDBUTVA
+      ZWQWRWSVBZABCJXCYCXRYCMVEOZXCYCCVCSVDZWTXQXAHZXEWTYJXQXCHZXQCIZDHZWTCXCVF
+      ZYJYKYMKLWTYDYNYHXCYCCVGSZXCXQDCPSWSWQYKWRXCAXQXRXSVHUPWTYLBUMIZDWTWQWSYE
+      YLYPNYGWQWRWSVPYFABCXQYPXSYPMZVIQWRWQYPDHWSDBYPYQVJVARVKXAXQVLSWTXOEXAWTX
+      FXAHZKZXKXNYSXJFXAWTYRXGXAHZXJWTYRYTKZKZXJXIXCHZXICIZDHZWTXJUUCUUEKLZUUAW
+      TYNUUFYOXCXIDCPSTUUBWSXFXCHZXGXCHZUUCWQWRWSUUAVMWTYRUUGYTWTXAXCXFYIVNZVOZ
+      WTYTUUHYRWTXAXCXGYIVNVQZXCXHAXFXGXRXTVRQUUBUUDXFCIZXGCIZBUKIZGZDUUBWQYEUU
+      GUUHUUDUUONWQWRWSUUAVSWTYEUUAYFTUUJUUKXHUUNABXFCXGJXCXRXTUUNMZVTWAUUBWRUU
+      LDHZUUMDHZUUODHWQWRWSUUAWBWTYRUUQYTWTCWCZYRUUQWTYDUUSYHXCYCCWDSZXFDCWGWEZ
+      VOWTYTUURYRWTUUSYTUURUUTXGDCWGWEVQUUNDBUULUUMUUPWFQRVKWHWIYSXNXMXCHZXMCIZ
+      DHZWTXNUVBUVDKLZYRWTYNUVEYOXCXMDCPSTYSWSUUGUVBWQWRWSYRVMZUUIXCAXLXFXRYAWJ
+      OYSUVCUULBULIZIZDYSWQWSYEUUGUVCUVHNWQWRWSYRVSUVFWTYEYRYFTUUIXCABCXLUVGXFX
+      RYAUVGMZWKWLYSWRUUQUVHDHWQWRWSYRWBUVADBUVGUULUVIWMORVKWNWOWP $.
+      $( [10-Dec-2014] $)
+  $}
+
+  ${
+    $d G a b $.  $d Z a b $.
+    0subg.z $e |- Z = ( 0g ` G ) $.
+    $( The zero subgroup of an arbitrary group. $)
+    0subg $p |- ( G e. Grp -> { Z } e. ( SubGrp ` G ) ) $=
+      ( va vb wcel csn c0g cfv cv co wral wa eqid fvex wceq elsnc sylibr eleq1d
+      wsbc cgrp csubg sneqi cbs wss c0 wne cplusg cminusg issubg2 grpidcl snssd
+      snnz a1i grplid mpdan ovex grpinvid ralsn oveq1 ralbidv fveq2 sbcie oveq2
+      anbi12d bitri anbi1i 3bitri sylanbrc mpbir3and syl5eqel ) AUAFZBGAHIZGZAU
+      BIZBVMCUCVLVNVOFVNAUDIZUEVNUFUGZDJZEJZAUHIZKZVNFZEVNLZVRAUIIZIZVNFZMZDVNL
+      ZDEVPVTVNAWDBVPNZCVTNZWDNZUJVLVMVPVPAVMWIVMNZUKZULVQVLVMAHOZUMUNVLVMVMVTK
+      ZVNFZVMWDIZVNFZWHVLWOVMPZWPVLVMVPFWSWMVPVTAVMVMWIWJWLUOUPWOVMVMVMVTUQQRVL
+      WQVMPWRAWDVMWLWKURWQVMVMWDOQRWHWGDVMTVMVSVTKZVNFZEVNLZWRMZWPWRMWGDVMWNUSW
+      GXCDVMWNVRVMPZWCXBWFWRXDWBXAEVNXDWAWTVNVRVMVSVTUTSVAXDWEWQVNVRVMWDVBSVEVC
+      XBWPWRXBXAEVMTWPXAEVMWNUSXAWPEVMWNVSVMPWTWOVNVSVMVMVTVDSVCVFVGVHVIVJVK $.
+      $( [10-Dec-2014] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Noetherian rings and left modules
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c LFinGen LNoeM LNoeR homGrp homLM LIdeal LPIdeal LPIR $.
+  $c LFinGen LNoeM LNoeR LIdeal LPIdeal LPIR $.
 
   $( Extend class notation with the class of finitely generated left
      modules. $)
@@ -13714,12 +14030,6 @@ $)
   $( Extend class notation with the class of left Noetherian rings. $)
   clnr $a class LNoeR $.
 
-  $( Extend class notation with the generator of group hom-sets. $)
-  chgrp $a class homGrp $.
-
-  $( Extend class notation with the generator of left module hom-sets. $)
-  chlm $a class homLM $.
-
   $( Ring left-ideal function. $)
   clidl $a class LIdeal $.
 
@@ -13730,7 +14040,7 @@ $)
   clpir $a class LPIR $.
 
   ${
-    $d w i g s t x y $.
+    $d w i g $.
 
     $( Define the class of finitely generated left modules.  Finite generation
        of subspaces can be intepreted using ` |``s ` . $)
@@ -13758,21 +14068,6 @@ $)
     $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
        itself. $)
     df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
-
-    $( A homomorphism of groups is a map between two structures (not prior
-       assumed to be groups) which preserves the group operation. $)
-    df-hgrp $a |- homGrp = ( s e. _V , t e. _V |-> { g |
-        [ ( Base ` s ) / w ] ( g : w --> ( Base ` t ) /\
-            A. x e. w A. y e. w ( g ` ( x ( +g ` s ) y ) ) =
-                ( g ` x ) ( +g ` t ) ( g ` y ) ) } ) $.
-
-    $( A homomorphism of left modules is a group homomorphism which
-       additionally preserves the scalar product.  This requires both
-       structures to be left modules over the same ring. $)
-    df-hlm $a |- homLM = ( s e. _V , t e. _V |-> { g e. ( s homGrp t ) |
-        [ ( Scalar ` s ) / w ] ( ( Scalar ` t ) = w /\
-          A. x e. ( Base ` w ) A. y e. ( Base ` s )
-          ( g ` ( x ( vsca ` s ) y ) ) = ( x ( vsca ` t ) ( g ` y ) ) ) } ) $.
   $}
 
   ${
