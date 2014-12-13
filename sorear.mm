@@ -14012,6 +14012,49 @@ $)
       $( [10-Dec-2014] $)
   $}
 
+  ${
+    hgrpsub.b $e |- B = ( Base ` S ) $.
+    hgrpsub.m $e |- M = ( -g ` S ) $.
+    hgrpsub.n $e |- N = ( -g ` T ) $.
+    $( Linearity of subtraction through a group homomorphism. $)
+    hgrpsub $p |- ( ( ( F e. ( S homGrp T ) /\ S e. Grp /\ T e. Grp ) /\
+        ( U e. B /\ V e. B ) ) -> ( F ` ( U M V ) ) =
+          ( ( F ` U ) N ( F ` V ) ) ) $=
+      ( co wcel cgrp wa cminusg cfv wceq eqid syl2anc chgrp cplusg simpl1 simp2
+      w3a simpl3 simprl grpinvcl syl2an hgrplin syl22anc hgrpinv adantrl oveq2d
+      simpr eqtrd simpl2 simprr grpsubval syl3anc fveq2d cbs simp3 simp1 adantr
+      wf hgrpf ffvelrn 3eqtr4d ) EBCUALMZBNMZCNMZUEZDAMZHAMZOZOZDHBPQZQZBUBQZLZ
+      EQZDEQZHEQZCPQZQZCUBQZLZDHFLZEQWCWDGLZVQWBWCVSEQZWGLZWHVQVJVLVNVSAMZWBWLR
+      VJVKVLVPUCVJVKVLVPUFZVMVNVOUGZVMVKVOWMVPVJVKVLUDVNVOUOABVRHIVRSZUHUIVTWGB
+      CDEVSNAIVTSZWGSZUJUKVQWKWFWCWGVMVOWKWFRVNABCEVRWEHIWPWESZULUMUNUPVQWIWAEV
+      QVKVNVOWIWARVJVKVLVPUQWOVMVNVOURZAVTBVRFNDHIWQWPJUSUTVAVQVLWCCVBQZMZWDXAM
+      ZWJWHRWNVQAXAEVFZVNXBVMXDVPVMVLVJXDVJVKVLVCVJVKVLVDBCENAXAIXASZVGTVEZWOAX
+      ADEVHTVQXDVOXCXFWTAXAHEVHTXAWGCWEGNWCWDXEWRWSKUSUTVI $.
+      $( [11-Dec-2014] $)
+  $}
+
+  ${
+    hgrpeqker.b $e |- B = ( Base ` S ) $.
+    hgrpeqker.k $e |- K = ( `' F " { ( 0g ` T ) } ) $.
+    hgrpeqker.m $e |- M = ( -g ` S ) $.
+    $( Two source points map to the same destination point under a group
+       homomorphism iff their difference belongs to the kernel. $)
+    hgrpeqker $p |- ( ( ( F e. ( S homGrp T ) /\ S e. Grp /\ T e. Grp ) /\
+        ( U e. B /\ V e. B ) ) -> ( ( F ` U ) = ( F ` V ) <->
+          ( U M V ) e. K ) ) $=
+      ( co wcel cgrp wa cfv c0g wceq eqid syl2anc chgrp w3a csg ccnv csn eleq2i
+      cima wfn cvv wb cbs wf simp3 simp1 hgrpf ffn adantr fvex fniniseg sylancl
+      syl syl5bb simpl2 simprl simprr grpsubcl syl3anc biantrurd hgrpsub eqeq1d
+      bitr3d simpl3 ffvelrn grpsubeq0 3bitrrd ) EBCUALMZBNMZCNMZUBZDAMZHAMZOZOZ
+      DHGLZFMZWDAMZWDEPZCQPZRZOZDEPZHEPZCUCPZLZWHRZWKWLRZWEWDEUDWHUEUGZMZWCWJFW
+      QWDJUFWCEAUHZWHUIMWRWJUJVSWSWBVSACUKPZEULZWSVSVRVPXAVPVQVRUMVPVQVRUNBCENA
+      WTIWTSZUOTZAWTEUPVAUQCQURAWHWDEUIUSUTVBWCWIWJWOWCWFWIWCVQVTWAWFVPVQVRWBVC
+      VSVTWAVDZVSVTWAVEZABGDHIKVFVGVHWCWGWNWHABCDEGWMHIKWMSZVIVJVKWCVRWKWTMZWLW
+      TMZWOWPUJVPVQVRWBVLWCXAVTXGVSXAWBXCUQZXDAWTDEVMTWCXAWAXHXIXEAWTHEVMTWTCWM
+      WHWKWLXBWHSXFVNVGVO $.
+      $( [11-Dec-2014] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Elementary theory of left module homomorphisms
@@ -14023,7 +14066,14 @@ $)
     lssvnegcl.n $e |- N = ( invg ` W ) $.
     $( Closure of negative vectors in a subspace. $)
     lssvnegcl $p |- ( ( W e. LMod /\ U e. S /\ X e. U ) -> ( N ` X ) e. U ) $=
-      ? $.
+      ( clmod wcel w3a csca cfv cur cminusg cvsca co cbs eqid syl2anc syl simp1
+      wceq lssel lmodvneg1 simp2 cgrp crg lmodrng 3ad2ant1 rnggrp rngidcl simp3
+      grpinvcl lssvscl syl22anc eqeltrrd ) DHIZBAIZEBIZJZDKLZMLZVANLZLZEDOLZPZE
+      CLZBUTUQEDQLZIVFVGUBUQURUSUAZABVHDEHVHRZFUCVEVBVAVCCVHDEVJGVARZVERZVBRZVC
+      RZUDSUTUQURVDVAQLZIZUSVFBIVIUQURUSUEUTVAUFIZVBVOIZVPUTVAUGIZVQUQURVSUSVAD
+      VKUHUIZVAUJTUTVSVRVTVOVAVBVORZVMUKTVOVAVCVBWAVNUMSUQURUSULVOAVEBVADVDEVKV
+      LWAFUNUOUP $.
+      $( [11-Dec-2014] $)
   $}
 
   ${
@@ -14040,17 +14090,31 @@ $)
           A. a e. B A. b e. U ( a T b ) e. U ) ) ) $=
       ( wcel wral wa cfv vc clmod cv clss csubg cbs wss wne cplusg cminusg cgrp
       co c0 w3a wb lmodgrp adantr c0g eqid issubg2 syl eqid1 lssss lssvacl expr
-      ralrimiv jca ralrimiva mpbir3and eleq2i anbi2i 3imtr4i lssvscl ralrimivva
-      lssn0 islss subgss sylbi ad2antrl biimpi subg0cl ne0i 3syl wi subgcl 3exp
-      adantl ralrimdv ralimdv impr impbida ) HUBQZDBQZDFQZIUCZJUCZCULZDQZJDRZIA
-      RZSZWLWMSZWNWTWLDHUDTZQZSZDHUETZQZXBWNXEXGDHUFTZUGZDUMUHZWOWPHUITZULDQZJD
-      RZWOHUJTZTDQZSZIDRZXEHUKQZXGXIXJXQUNUOWLXRXDHUPUQIJXHXKDHXNHURTZXHUSZXSUS
-      ZXKUSZXNUSUTVAXCDXHHUBXTXCVBZVCXCDHUBYCVOXEXPIDXEWODQZSZXMXOYEXLJDXEYDWPD
-      QXLXKXCDHWOWPYBYCVDVEVF?VGVHVIWMXDWLBXCDOVJVKFXFDPVJZVLXBWRIJADABCDEHWOWP
-      KNLOVMVNVGWLXASWMDGUGZXJWQUAUCZXKULDQZUADRZJDRZIARZWLWMYGXJYLUNUOXAIAXKBC
-      DEGHUBJUAKLMYBNOVPUQWNYGWLWTWNXGYGYFGDHMVQVRVSWNXJWLWTWNXGXSDQXJWNXGYFVTD
-      HXSYAWADXSWBWCVSWLWNWTYLWLWNSZWSYKIAYMWRYJJDYMWRYIUADWNWRYHDQZYIWDWDZWLWN
-      XGYOYFXGWRYNYIXKDHWQYHYBWEWFVRWGWHWIWIWJVIWK $.
+      lssn0 ralrimiv simpll simplr simpr lssvnegcl syl3anc jca ralrimiva eleq2i
+      mpbir3and anbi2i 3imtr4i lssvscl ralrimivva islss subgss ad2antrl subg0cl
+      sylbi biimpi ne0i 3syl subgcl 3exp adantl ralrimdv ralimdv impr impbida
+      wi ) HUBQZDBQZDFQZIUCZJUCZCULZDQZJDRZIARZSZWQWRSZWSXEWQDHUDTZQZSZDHUETZQZ
+      XGWSXJXLDHUFTZUGZDUMUHZWTXAHUITZULDQZJDRZWTHUJTZTDQZSZIDRZXJHUKQZXLXNXOYB
+      UNUOWQYCXIHUPUQIJXMXPDHXSHURTZXMUSZYDUSZXPUSZXSUSZUTVAXHDXMHUBYEXHVBZVCXH
+      DHUBYIVFXJYAIDXJWTDQZSZXRXTYKXQJDXJYJXADQXQXPXHDHWTXAYGYIVDVEVGYKWQXIYJXT
+      WQXIYJVHWQXIYJVIXJYJVJXHDXSHWTXHUSYHVKVLVMVNVPWRXIWQBXHDOVOVQFXKDPVOZVRXG
+      XCIJADABCDEHWTXAKNLOVSVTVMWQXFSWRDGUGZXOXBUAUCZXPULDQZUADRZJDRZIARZWQWRYM
+      XOYRUNUOXFIAXPBCDEGHUBJUAKLMYGNOWAUQWSYMWQXEWSXLYMYLGDHMWBWEWCWSXOWQXEWSX
+      LYDDQXOWSXLYLWFDHYDYFWDDYDWGWHWCWQWSXEYRWQWSSZXDYQIAYSXCYPJDYSXCYOUADWSXC
+      YNDQZYOWPWPZWQWSXLUUAYLXLXCYTYOXPDHXBYNYGWIWJWEWKWLWMWMWNVPWO $.
+      $( [11-Dec-2014] $)
+  $}
+
+  ${
+    $d W a b $.  $d U a b $.  $d S a b $.  $d G a b $.
+    lsssubg.s $e |- S = ( LSubSp ` W ) $.
+    lsssubg.g $e |- G = ( SubGrp ` W ) $.
+    $( All subspaces are subgroups. $)
+    lsssubg $p |- ( ( W e. LMod /\ U e. S ) -> U e. G ) $=
+      ( va vb clmod wcel wa cv cvsca cfv co wral csca cbs eqid islss4 biimpa
+      simpld ) DIJZBAJZKBCJZGLHLDMNZOBJHBPGDQNZRNZPZUCUDUEUIKUHAUFBUGCDRNZDGHUG
+      SUHSUJSUFSEFTUAUB $.
+      $( [11-Dec-2014] $)
   $}
 
   ${
@@ -14162,33 +14226,112 @@ $)
     $}
   $}
 
+  ${
+    $d F a b c $.  $d S a b c $.  $d T a b c $.  $d U a b c $.
+    $( The image of a subspace under a homomorphism. $)
+    hlmima $p |- ( ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) /\
+          U e. ( LSubSp ` S ) ) -> ( F " U ) e. ( LSubSp ` T ) ) $=
+      ( va vb vc co wcel clmod clss cfv wa csubg cv cbs eqid syl syl2anc wceq
+      chlm w3a cima cvsca wral csca wb simpl3 islss4 cgrp simpl1 hlmhgrp simpl2
+      chgrp simpr lsssubg lmodgrp hgrpima syl3anc wrex wfn wss wf ffn lssss jca
+      hlmf fvelimab adantr simpll1 simpll3 hlmsca fveq2d eleq2d adantrr adantrl
+      biimpa sselda hlmlinm syl22anc wfun cdm ffun fdm sseqtr4d simpll2 lssvscl
+      simplr simprr funfvima2 eqeltrrd anassrs oveq2 eleq1d syl5ibcom rexlimdva
+      sylc sylbid impr ralrimivva mpbir2and ) DABUAHIZAJIZBJIZUBZCAKLZIZMZDCUCZ
+      BKLZIZXIBNLZIZEOZFOZBUDLZHZXIIZFXIUEEBUFLZPLZUEZXHXDXKXMYAMUGXBXCXDXGUHZX
+      TXJXPXIXSXLBPLZBEFXSQZXTQYCQZXPQZXJQXLQUIRXHDABUNHIZCANLZIZBUJIZXMXHXBYGX
+      BXCXDXGUKZABDULRXHXCXGYIXBXCXDXGUMZXEXGUOZXFCYHAXFQZYHQUPSXHXDYJYBBUQRABC
+      DURUSXHXREFXTXIXHXNXTIZXOXIIZXRXHYOMZYPGOZDLZXOTZGCUTZXRXHYPUUAUGZYOXHDAP
+      LZVAZCUUCVBZMUUBXHUUDUUEXHUUCYCDVCZUUDXHXBXDUUFYKYBUUCYCABDJUUCQZYEVGSZUU
+      CYCDVDRXHXCXGUUEYLYMXFCUUCAJUUGYNVESZVFGUUCCXODVHRVIYQYTXRGCYQYRCIZMXNYSX
+      PHZXIIZYTXRXHYOUUJUULXHYOUUJMZMZXNYRAUDLZHZDLZUUKXIUUNXBXDXNAUFLZPLZIZYRU
+      UCIZUUQUUKTXBXCXDXGUUMVJXBXCXDXGUUMVKXHYOUUTUUJXHYOUUTXHXTUUSXNXHXSUURPXH
+      XBXDXSUURTYKYBABDUURXSJUURQZYDVLSVMVNVQVOZXHUUJUVAYOXHCUUCYRUUIVRVPUUSABU
+      UCDUURUUOXPJXNYRUVBUUSQZUUGUUOQZYFVSVTUUNDWAZCDWBZVBZMZUUPCIZUUQXIIXHUVIU
+      UMXHUVFUVHXHUUFUVFUUHUUCYCDWCRXHCUUCUVGUUIXHUUFUVGUUCTUUHUUCYCDWDRWEVFVIU
+      UNXCXGUUTUUJUVJXBXCXDXGUUMWFXEXGUUMWHUVCXHYOUUJWIUUSXFUUOCUURAXNYRUVBUVEU
+      VDYNWGVTCUUPDWJWQWKWLYTUUKXQXIYSXOXNXPWMWNWOWPWRWSWTXA $.
+      $( [11-Dec-2014] $)
+
+    $( The inverse image of a subspace under a homomorphism. $)
+    hlmiima $p |- ( ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) /\
+          U e. ( LSubSp ` T ) ) -> ( `' F " U ) e. ( LSubSp ` S ) ) $=
+      ( va vb co wcel clmod clss cfv wa csubg cvsca cbs eqid syl syl2anc wceq
+      cv chlm w3a ccnv cima wral csca wb simpl2 islss4 chgrp cgrp simpl1 simpl3
+      hlmhgrp simpr lsssubg lmodgrp hgrpiima syl3anc wfn wf ffn elpreima adantr
+      hlmf simpll2 simprl cdm cnvimass syl5sseq sselda adantrl lmodvscl simpll1
+      simpll3 hlmlinm syl22anc simplr hlmsca fveq2d eleq2d biimpar adantrr wfun
+      fdm ffun simprr fvimacnvi lssvscl eqeltrd mpbir2and ralrimivva ) DABUAGHZ
+      AIHZBIHZUBZCBJKZHZLZDUCCUDZAJKZHZWTAMKZHZETZFTZANKZGZWTHZFWTUEEAUFKZOKZUE
+      ZWSWNXBXDXLLUGWMWNWOWRUHZXKXAXGWTXJXCAOKZAEFXJPZXKPZXNPZXGPZXAPXCPUIQWSDA
+      BUJGHZCBMKZHZAUKHZXDWSWMXSWMWNWOWRULZABDUNQWSWOWRYAWMWNWOWRUMZWPWRUOWQCXT
+      BWQPZXTPUPRWSWNYBXMAUQQABDCURUSWSXIEFXKWTWSXEXKHZXFWTHZLZLZXIXHXNHZXHDKZC
+      HZWSXIYJYLLUGZYHWSDXNUTZYMWSXNBOKZDVAZYNWSWMWOYPYCYDXNYOABDIXQYOPVERZXNYO
+      DVBQXNXHCDVCQVDYIWNYFXFXNHZYJWMWNWOWRYHVFWSYFYGVGZWSYGYRYFWSWTXNXFWSDVHZW
+      TXNDCVIWSYPYTXNSYQXNYODWEQVJVKVLZXEXGXJXKXNAXFXQXOXRXPVMUSYIYKXEXFDKZBNKZ
+      GZCYIWMWOYFYRYKUUDSWMWNWOWRYHVNWMWNWOWRYHVOZYSUUAXKABXNDXJXGUUCIXEXFXOXPX
+      QXRUUCPZVPVQYIWOWRXEBUFKZOKZHZUUBCHZUUDCHUUEWPWRYHVRWSYFUUIYGWSUUIYFWSUUH
+      XKXEWSUUGXJOWSWMWOUUGXJSYCYDABDXJUUGIXOUUGPZVSRVTWAWBWCYIDWDZYGUUJWSUULYH
+      WSYPUULYQXNYODWFQVDWSYFYGWGXFCDWHRUUHWQUUCCUUGBXEUUBUUKUUFUUHPYEWIVQWJWKW
+      LWK $.
+      $( [11-Dec-2014] $)
+  $}
+
+  ${
+    hlmlsp.v $e |- V = ( Base ` S ) $.
+    hlmlsp.k $e |- K = ( LSpan ` S ) $.
+    hlmlsp.l $e |- L = ( LSpan ` T ) $.
+    $( Homomorphisms preserve spans. $)
+    hlmlsp $p |- ( ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) /\
+          U C_ V ) -> ( F " ( K ` U ) ) = ( L ` ( F " U ) ) ) $=
+      ( wcel clmod wss cfv cima eqid syl2anc syl clss lspcl chlm co w3a wa wfun
+      ccnv cbs wf simpl1 simpl3 hlmf ffun simpl2 crn imassrn frn syl5ss hlmiima
+      simpl cdm cin incom wceq simpr fdm sseqtr4d df-ss sylib syl5eq eqcomd a1i
+      dminss eqsstrd lspssid imass2 sstrd lspssp syl3anc funimass2 simp2 hlmima
+      eqid1 sylan eqssd ) DABUAUBKZALKZBLKZUCZCGMZUDZDCENZOZDCOZFNZWJDUEZWKDUFZ
+      WNOZMZWLWNMWJGBUGNZDUHZWOWJWEWGWTWEWFWGWIUIWEWFWGWIUJZGWSABDLHWSPZUKQZGWS
+      DULRWJWFWQASNZKZCWQMWRWEWFWGWIUMWJWHWNBSNZKZXEWHWIUSZWJWGWMWSMZXGXAWJWMDU
+      NZWSDCUOWJWTXJWSMXCGWSDUPRUQZXFWMFWSBXBXFPZJTQABWNDURQWJCWPWMOZWQWJCDUTZC
+      VAZXMWJXOCWJXOCXNVAZCXNCVBWJCXNMXPCVCWJCGXNWHWIVDWJWTXNGVCXCGWSDVERVFCXNV
+      GVHVIVJXOXMMWJCDVLVKVMWJWMWNMZXMWQMWJWGXIXQXAXKWMFWSBXBJVNQWMWNWPVORVPXDC
+      WQEAXDPIVQVRWKWNDVSQWJWGWLXFKZWMWLMZWNWLMXAWJWHWKXDKZXRXHWHWFWIXTWEWFWGVT
+      ZXDCEGAHXDWBITWCABWKDWAQWJCWKMZXSWHWFWIYBYACEGAHIVNWCCWKDVORXFWMWLFBXLJVQ
+      VRWD $.
+      $( [11-Dec-2014] $)
+  $}
+
+  ${
+    $( The range of a homomorphism is a submodule. $)
+    hlmrnlss $p |- ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) ->
+        ran F e. ( LSubSp ` T ) ) $=
+      ( chlm co wcel clmod w3a cbs cfv cima crn clss wfn wceq eqid hlmf 3adant2
+      wf eqid1 ffn fnima 3syl lss1 3ad2ant2 hlmima mpdan eqeltrrd ) CABDEFZAGFZ
+      BGFZHZCAIJZKZCLZBMJZULUMBIJZCSZCUMNUNUOOUIUKURUJUMUQABCGUMPUQPQRUMUQCUAUM
+      CUBUCULUMAMJZFZUNUPFUJUIUTUKUSUMAUMTUSTUDUEABUMCUFUGUH $.
+      $( [12-Dec-2014] $)
+
+    hlmkerlss.k $e |- K = ( `' F " { Z } ) $.
+    hlmkerlss.z $e |- Z = ( 0g ` T ) $.
+    $( The kernel of a homomorphism is a submodule. $)
+    hlmkerlss $p |- ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) ->
+        K e. ( LSubSp ` S ) ) $=
+      ( chlm co wcel clmod w3a ccnv csn cima clss cfv eqid1 lsssn0 3ad2ant3
+      hlmiima mpdan syl5eqel ) CABHIJZAKJZBKJZLZDCMENZOZAPQZFUGUHBPQZJZUIUJJUFU
+      DULUEUKBEGUKRSTABUHCUAUBUC $.
+      $( [12-Dec-2014] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Noetherian rings and left modules
+    Finitely generated left modules
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c LFinGen LNoeM LNoeR LIdeal LPIdeal LPIR $.
+  $c LFinGen $.
 
   $( Extend class notation with the class of finitely generated left
      modules. $)
   clfig $a class LFinGen $.
-
-  $( Extend class notation with the class of Noetherian left modules. $)
-  clnm $a class LNoeM $.
-
-  $( Extend class notation with the class of left Noetherian rings. $)
-  clnr $a class LNoeR $.
-
-  $( Ring left-ideal function. $)
-  clidl $a class LIdeal $.
-
-  $( Ring left-principal-ideal function. $)
-  clpidl $a class LPIdeal $.
-
-  $( Class of left principal ideal rings. $)
-  clpir $a class LPIR $.
 
   ${
     $d w i g $.
@@ -14197,164 +14340,6 @@ $)
        of subspaces can be intepreted using ` |``s ` . $)
     df-lfig $a |- LFinGen = { w e. LMod | ( Base ` w ) e. ( ( LSpan ` w ) "
         ( ~P ( Base ` w ) i^i Fin ) ) } $.
-
-    $( Define the class of left ideals of a given ring.  An ideal is a
-       submodule of the ring viewed as a module over itself. $)
-    df-lidl $a |- LIdeal = ( LSubSp o. ringLMod ) $.
-
-    $( Define the class of left principal ideals of a ring, which are ideals
-       with a single generator. $)
-    df-lpidl $a |- LPIdeal = ( w e. Ring |->
-        U_ g e. ( Base ` w ) { ( ( RSpan ` w ) ` { g } ) } ) $.
-
-    $( Define the class of left principal ideal rings, rings where every left
-       ideal has a single generator. $)
-    df-lpir $a |- LPIR = { w e. Ring | ( LIdeal ` w ) = ( LPIdeal ` w ) } $.
-
-    $( A left-module is _Noetherian_ iff it is hereditarily finitely
-       generated. $)
-    df-lnm $a |- LNoeM = { w e. LMod | A. i e. ( LSubSp ` w )
-        ( w |`s i ) e. LFinGen } $.
-
-    $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
-       itself. $)
-    df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
-  $}
-
-  ${
-    $d x B $.  $d a b x U $.  $d W a b x $.  $d ph a b x $.
-    islss2d.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    islss2d.b $e |- ( ph -> B = ( Base ` F ) ) $.
-    islss2d.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    islss2d.p $e |- ( ph -> P = ( +g ` W ) ) $.
-    islss2d.t $e |- ( ph -> T = ( vsca ` W ) ) $.
-    islss2d.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    islss2d.w $e |- ( ph -> W e. X ) $.
-    $( Deduction version of ~ islss .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    islss2d $p |- ( ph -> ( U e. S <-> ( U C_ V /\ U =/= (/) /\
-        A. x e. B A. a e. U A. b e. U ( ( x T a ) P b ) e. U ) ) ) $=
-      ( clss cfv wcel cbs wss c0 wne cv cvsca co cplusg wral csca wb eqid islss
-      eleq2d sseq2d fveq2d eqtrd oveqd eqidd oveq123d eleq1d 2ralbidv raleqbidv
-      w3a syl 3anbi13d 3bitr4d ) AGJUAUBZUCZGJUDUBZUEZGUFUGZBUHZLUHZJUIUBZUJZMU
-      HZJUKUBZUJZGUCZMGULLGULZBJUMUBZUDUBZULZVGZGEUCGIUEZVOVPVQFUJZVTDUJZGUCZMG
-      ULLGULZBCULZVGAJKUCVLWHUNTBWFWAVKVRGWEVMJKLMWEUOWFUOVMUOWAUOVRUOVKUOUPVHA
-      EVKGSUQAWIVNWNWGVOAIVMGPURAWMWDBCWFACHUDUBWFOAHWEUDNUSUTAWLWCLMGGAWKWBGAW
-      JVSVTVTDWAQAFVRVPVQRVAAVTVBVCVDVEVFVIVJ $.
-      $( [6-Dec-2014] $)
-  $}
-
-
-  ${
-    lmodbn0d.b $e |- ( ph -> B = ( Base ` W ) ) $.
-    lmodbn0d.w $e |- ( ph -> W e. LMod ) $.
-    $( Deduction for ~ lmodbn0 .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lmodbn0d $p |- ( ph -> B =/= (/) ) $=
-      ( cbs cfv c0 clmod wcel wne eqid lmodbn0 syl eqnetrd ) ABCFGZHDACIJPHKEPC
-      PLMNO $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lmodvscld.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    lmodvscld.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    lmodvscld.s $e |- ( ph -> S = ( vsca ` W ) ) $.
-    lmodvscld.k $e |- ( ph -> K = ( Base ` F ) ) $.
-    lmodvscld.w $e |- ( ph -> W e. LMod ) $.
-    lmodvscld.r $e |- ( ph -> R e. K ) $.
-    lmodvscld.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvscl .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lmodvscld $p |- ( ph -> ( R S X ) e. V ) $=
-      ( co wcel cfv cbs eqid cvsca csca fveq2d eleqtrd lmodvscl syl3anc eleq12d
-      clmod eqtrd oveqd mpbird ) ABHCPZFQBHGUARZPZGSRZQZAGUHQBGUBRZSRZQHUOQUPMA
-      BEURNAEDSRURLADUQSJUCUIUDAHFUOOIUDBUMUQURUOGHUOTUQTUMTURTUEUFAULUNFUOACUM
-      BHKUJIUGUK $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lmodvsdi1d.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    lmodvsdi1d.a $e |- ( ph -> A = ( +g ` W ) ) $.
-    lmodvsdi1d.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    lmodvsdi1d.s $e |- ( ph -> S = ( vsca ` W ) ) $.
-    lmodvsdi1d.k $e |- ( ph -> K = ( Base ` F ) ) $.
-    lmodvsdi1d.w $e |- ( ph -> W e. LMod ) $.
-    lmodvsdi1d.r $e |- ( ph -> R e. K ) $.
-    lmodvsdi1d.x $e |- ( ph -> X e. V ) $.
-    lmodvsdi1d.y $e |- ( ph -> Y e. V ) $.
-    $( Deduction version of ~ lmodvsdi1 .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lmodvsdi1d $p |- ( ph -> ( R S ( X A Y ) ) = ( ( R S X ) A ( R S Y ) ) ) $=
-      ( co cplusg cfv cvsca clmod wcel csca wceq fveq2d eqtrd eleqtrd lmodvsdi1
-      cbs eqid syl112anc eqidd oveqd oveq123d 3eqtr4d ) ACIJHUAUBZTZHUCUBZTZCIV
-      ATZCJVATZUSTZCIJBTZDTCIDTZCJDTZBTAHUDUECHUFUBZULUBZUEIHULUBZUEJVKUEVBVEUG
-      PACFVJQAFEULUBVJOAEVIULMUHUIUJAIGVKRKUJAJGVKSKUJUSCVAVIVJVKHIJVKUMUSUMVIU
-      MVAUMVJUMUKUNACCVFUTDVANACUOABUSIJLUPUQAVGVCVHVDBUSLADVACINUPADVACJNUPUQU
-      R $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lmodvsdi2d.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    lmodvsdi2d.a $e |- ( ph -> A = ( +g ` W ) ) $.
-    lmodvsdi2d.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    lmodvsdi2d.s $e |- ( ph -> S = ( vsca ` W ) ) $.
-    lmodvsdi2d.k $e |- ( ph -> K = ( Base ` F ) ) $.
-    lmodvsdi2d.p $e |- ( ph -> P = ( +g ` F ) ) $.
-    lmodvsdi2d.w $e |- ( ph -> W e. LMod ) $.
-    lmodvsdi2d.q $e |- ( ph -> Q e. K ) $.
-    lmodvsdi2d.r $e |- ( ph -> R e. K ) $.
-    lmodvsdi2d.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvsdi2 .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lmodvsdi2d $p |- ( ph -> ( ( Q P R ) S X ) = ( ( Q S X ) A ( R S X ) ) ) $=
-      ( csca cfv cplusg co cvsca clmod wcel wceq fveq2d eqtrd eleqtrd lmodvsdi2
-      cbs eqid syl121anc oveqd eqidd oveq123d 3eqtr4d ) ADEJUBUCZUDUCZUEZKJUFUC
-      ZUEZDKVDUEZEKVDUEZJUDUCZUEZDECUEZKFUEDKFUEZEKFUEZBUEAJUGUHDVAUNUCZUHEVMUH
-      KJUNUCZUHVEVIUIRADHVMSAHGUNUCVMPAGVAUNNUJUKZULAEHVMTVOULAKIVNUALULVHVBDEV
-      DVAVMVNJKVNUOVHUOVAUOVDUOVMUOVBUOUMUPAVJVCKKFVDOACVBDEACGUDUCVBQAGVAUDNUJ
-      UKUQAKURUSAVKVFVLVGBVHMAFVDDKOUQAFVDEKOUQUSUT $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lmodvsassd.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    lmodvsassd.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    lmodvsassd.s $e |- ( ph -> S = ( vsca ` W ) ) $.
-    lmodvsassd.k $e |- ( ph -> K = ( Base ` F ) ) $.
-    lmodvsassd.t $e |- ( ph -> T = ( .r ` F ) ) $.
-    lmodvsassd.w $e |- ( ph -> W e. LMod ) $.
-    lmodvsassd.q $e |- ( ph -> Q e. K ) $.
-    lmodvsassd.r $e |- ( ph -> R e. K ) $.
-    lmodvsassd.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvsass .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lmodvsassd $p |- ( ph -> ( ( Q T R ) S X ) = ( Q S ( R S X ) ) ) $=
-      ( co csca cfv cmulr cvsca clmod wcel cbs wceq fveq2d eqtrd eqid lmodvsass
-      eleqtrd syl121anc oveqd eqidd oveq123d 3eqtr4d ) ABCIUAUBZUCUBZTZJIUDUBZT
-      ZBCJVBTZVBTZBCETZJDTBCJDTZDTAIUEUFBUSUGUBZUFCVHUFJIUGUBZUFVCVEUHPABGVHQAG
-      FUGUBVHNAFUSUGLUIUJZUMACGVHRVJUMAJHVISKUMBCVBUTUSVHVIIJVIUKUSUKVBUKVHUKUT
-      UKULUNAVFVAJJDVBMAEUTBCAEFUCUBUTOAFUSUCLUIUJUOAJUPUQABBVGVDDVBMABUPADVBCJ
-      MUOUQUR $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lmodvs1d.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    lmodvs1d.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    lmodvs1d.s $e |- ( ph -> S = ( vsca ` W ) ) $.
-    lmodvs1d.u $e |- ( ph -> U = ( 1r ` F ) ) $.
-    lmodvs1d.w $e |- ( ph -> W e. LMod ) $.
-    lmodvs1d.x $e |- ( ph -> X e. V ) $.
-    $( Deduction version of ~ lmodvs1 .  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lmodvs1d $p |- ( ph -> ( U S X ) = X ) $=
-      ( co csca cfv cur eqtrd wcel eqid cvsca fveq2d eqidd oveq123d cbs eleqtrd
-      clmod wceq lmodvs1 syl2anc ) ACGBNFOPZQPZGFUAPZNZGACULGGBUMJACDQPULKADUKQ
-      IUBRAGUCUDAFUGSGFUEPZSUNGUHLAGEUOMHUFUMULUKUOFGUOTUKTUMTULTUIUJR $.
-      $( [6-Dec-2014] $)
   $}
 
   ${
@@ -14423,161 +14408,337 @@ $)
   $}
 
   ${
-    $d ph a b x d e f $.  $d W a b x d e f $.  $d U a b x d e f $.
-    $d V a b x d e f $.  $d S a b x d e f $.
-    islss3.w $e |- ( ph -> W e. LMod ) $.
-    islss3.b $e |- ( ph -> V = ( Base ` W ) ) $.
-    islss3.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
+    $d W a b x d e f $.  $d U a b x d e f $.  $d V a b x d e f $.
+    $d S a b x d e f $.
+    islss3.v $e |- V = ( Base ` W ) $.
+    islss3.s $e |- S = ( LSubSp ` W ) $.
     $( A linear subspace of a module is a subset which is a module in its own
-       right.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    islss3 $p |- ( ph -> ( U e. S <-> ( U C_ V /\ ( W |`s U ) e. LMod ) ) ) $=
-      ( vx va vb wcel wa cfv adantr wceq eqid a1i eqidd ad2antrr cress co clmod
-      wss cbs clss simpr eleqtrd lssss syl2anc sseqtr4d ex pm4.71rd cplusg csca
-      cvsca cur sseqtrd ressbas2 syl ressplusg resssca ressvsca crg lmodrng c0g
-      cmulr lss0cld cv w3a simp1ll simp1r simp2 simp3 lssvacld simplr ad3antrrr
-      lssvnegcld cgrp lmodgrp 3ad2ant1 lssvscld simpr1 simpr2 sseldd lmodvsdi1d
-      issubgrpd simpr3 lmodvsdi2d lmodvsassd sselda lmodvs1d islmodd c0 wral wb
-      islss2d lmodbn0d ad2antlr lmodvscld grpcld ralrimivvva mpbir3and pm5.32da
-      wne impbida bitrd ) ACBLZCDUDZXHMXIECUAUBZUCLZMAXHXIAXHXIAXHMZCEUENZDXLEU
-      CLZCEUFNZLCXMUDZAXNXHFOXLCBXOAXHUGABXOPZXHHOUHXOCXMEUCXMQZXOQUIUJADXMPZXH
-      GOUKULUMAXIXHXKAXIMZXHXKXTXHMZIJKEUNNZEUONZUENZYCUNNZEUPNZYCVGNZYCUQNZYCC
-      XJXTCXJUENPZXHXTXPYIXTCDXMAXIUGAXSXIGOURZCXMXJEXJQZXRUSUTZOYBXJUNNPZYACYB
-      EXJYKYBQVAZRYCXJUONPZYACYCEXJYKYCQZVBZRYFXJUPNPZYACYFEXJYKYFQVCZRYAYDSYAY
-      ESYAYGSYAYHSAYCVDLZXIXHAXNYTFYCEYPVEUTTYAJKCYBXJEEVFNZYAXJSYAUUASZYAYBSXT
-      XPXHYJOZYABCEUUAUUBAXQXIXHHTZAXNXIXHFTZXTXHUGVHYAJVIZCLZKVIZCLZVJZYBBCEUU
-      FUUHUUJYBSUUJAXQAXIXHUUGUUIVKZHUTUUJAXNUUKFUTXTXHUUGUUIVLYAUUGUUIVMYAUUGU
-      UIVNVOYAUUGMBCEUUFXTXHUUGVPAXQXIXHUUGHVQAXNXIXHUUGFVQYAUUGUGVRAEVSLZXIXHA
-      XNUULFEVTUTTWGYAIVIZYDLZUUGVJZYDBYFCYCEUUMUUFUUOYCSUUOYFSUUOYDSYAUUNXQUUG
-      UUDWAYAUUNXNUUGUUEWAXTXHUUNUUGVLYAUUNUUGVMYAUUNUUGVNWBYAUUNUUGUUIVJZMZYBU
-      UMYFYCYDXMEUUFUUHUUQXMSUUQYBSUUQYCSUUQYFSUUQYDSAXNXIXHUUPFVQYAUUNUUGUUIWC
-      UUQCXMUUFYAXPUUPUUCOZYAUUNUUGUUIWDWEUUQCXMUUHUURYAUUNUUGUUIWHWEWFYAUUNUUF
-      YDLZUUIVJZMZYBYEUUMUUFYFYCYDXMEUUHUVAXMSZUVAYBSUVAYCSZUVAYFSZUVAYDSZUVAYE
-      SAXNXIXHUUTFVQZYAUUNUUSUUIWCZYAUUNUUSUUIWDZUVACXMUUHYAXPUUTUUCOYAUUNUUSUU
-      IWHWEZWIUVAUUMUUFYFYGYCYDXMEUUHUVBUVCUVDUVEUVAYGSUVFUVGUVHUVIWJYAUUMCLZMZ
-      YFYHYCXMEUUMUVKXMSUVKYCSUVKYFSUVKYHSAXNXIXHUVJFVQYACXMUUMUUCWKWLWMXTXKMZX
-      HXICWNXEZUUMUUFYFUBZUUHYBUBCLZKCWOJCWOIYDWOZAXHXIUVMUVPVJWPXIXKAIYDYBBYFC
-      YCDEUCJKAYCSAYDSGAYBSAYFSHFWQTAXIXKVPUVLCXJXTYIXKYLOXTXKUGWRUVLUVOIJKYDCC
-      UVLUUPMZCYBXJUVNUUHXKXJVSLXTUUPXJVTWSXTYIXKUUPYLTZYMUVQYNRUVQUUMYFYCYDCXJ
-      UUFUVRYOUVQYQRYRUVQYSRUVQYDSXTXKUUPVPUVLUUNUUGUUIWCUVLUUNUUGUUIWDWTUVLUUN
-      UUGUUIWHXAXBXCXFXDXG $.
-      $( [6-Dec-2014] $)
+       right. $)
+    islss3 $p |- ( W e. LMod -> ( U e. S <->
+          ( U C_ V /\ ( W |`s U ) e. LMod ) ) ) $=
+      ( vx va vb clmod wcel wa co cplusg cfv wceq eqid eqidd w3a simplll wss ex
+      cress lssss pm4.71rd csca cbs cvsca cmulr cur ressbas2 ad2antlr ressplusg
+      a1i resssca ressvsca crg lmodrng ad2antrr adantlr eqid1 lss0cl cv simp1ll
+      c0g simp1r simp2 simp3 lssvacl syl22anc cminusg simplr simpr syl3anc cgrp
+      lssvnegcl lmodgrp issubgrpd lssvscl simpr1 adantr simpr2 sseldd lmodvsdi1
+      simpr3 syl112anc lmodvsdi2 syl121anc lmodvsass lmodvs1 syl2anc islmodd c0
+      sselda wne wral wb islss lmodbn0 adantl eqnetrd eleqtrd lmodvscl eleqtrrd
+      grpcl ralrimivvva mpbir3and impbida pm5.32da bitrd ) DJKZBAKZBCUAZXLLXMDB
+      UCMZJKZLXKXLXMXKXLXMABCDJEFUDUBUEXKXMXLXOXKXMLZXLXOXPXLLZGHIDNOZDUFOZUGOZ
+      XSNOZDUHOZXSUIOZXSUJOZXSBXNXMBXNUGOZPZXKXLBCXNDXNQZEUKZULXRXNNOPXQBXRDXNY
+      GXRQZUMZUNXSXNUFOPXQBXSDXNYGXSQZUOZUNYBXNUHOPXQBYBDXNYGYBQZUPZUNXQXTRXQYA
+      RXQYCRXQYDRXKXSUQKXMXLXSDYKURUSXQHIBXRXNDDVEOZXQXNRXQYORXQXRRXKXLBDUGOZUA
+      ZXMABYPDJYPQZFUDUTZXKXLYOBKXMABDYOYOVAFVBUTXQHVCZBKZIVCZBKZSXKXLUUAUUCYTU
+      UBXRMZBKXKXMXLUUAUUCVDXPXLUUAUUCVFXQUUAUUCVGXQUUAUUCVHXRABDYTUUBYIFVIVJXQ
+      UUALXKXLUUAYTDVKOZOBKXKXMXLUUATXPXLUUAVLXQUUAVMABUUEDYTFUUEQVPVNXKDVOKXMX
+      LDVQUSVRXQGVCZXTKZUUASXKXLUUGUUAUUFYTYBMZBKXKXMXLUUGUUAVDXPXLUUGUUAVFXQUU
+      GUUAVGXQUUGUUAVHXTAYBBXSDUUFYTYKYMXTQZFVSVJXQUUGUUAUUCSZLZXKUUGYTYPKUUBYP
+      KZUUFUUDYBMUUHUUFUUBYBMZXRMPXKXMXLUUJTXQUUGUUAUUCVTUUKBYPYTXQYQUUJYSWAZXQ
+      UUGUUAUUCWBWCUUKBYPUUBUUNXQUUGUUAUUCWEWCXRUUFYBXSXTYPDYTUUBYRYIYKYMUUIWDW
+      FXQUUGYTXTKZUUCSZLZXKUUGUUOUULUUFYTYAMUUBYBMUUMYTUUBYBMZXRMPXKXMXLUUPTZXQ
+      UUGUUOUUCVTZXQUUGUUOUUCWBZUUQBYPUUBXQYQUUPYSWAXQUUGUUOUUCWEWCZXRYAUUFYTYB
+      XSXTYPDUUBYRYIYKYMUUIYAQWGWHUUQXKUUGUUOUULUUFYTYCMUUBYBMUUFUURYBMPUUSUUTU
+      VAUVBUUFYTYBYCXSXTYPDUUBYRYKYMUUIYCQWIWHXQUUFBKZLXKUUFYPKYDUUFYBMUUFPXKXM
+      XLUVCTXQBYPUUFYSWNYBYDXSYPDUUFYRYKYMYDQWJWKWLXPXOLZXLXMBWMWOZUUHUUBXRMZBK
+      ZIBWPHBWPGXTWPZXKXLXMUVEUVHSWQXMXOGXTXRAYBBXSCDJHIYKUUIEYIYMFWRUSXKXMXOVL
+      UVDBYEWMXMYFXKXOYHULZXOYEWMWOXPYEXNYEQZWSWTXAUVDUVGGHIXTBBUVDUUJLZUVFYEBU
+      VKXNVOKZUUHYEKZUUBYEKUVFYEKXOUVLXPUUJXNVQULUVKXOUUGYTYEKUVMXPXOUUJVLUVDUU
+      GUUAUUCVTUVKYTBYEUVDUUGUUAUUCWBUVDYFUUJUVIWAZXBUUFYBXSXTYEXNYTUVJYLYNUUIX
+      CVNUVKUUBBYEUVDUUGUUAUUCWEUVNXBYEXRXNUUHUUBUVJYJXEVNUVNXDXFXGXHXIXJ $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
-    lsslmod.x $e |- ( ph -> X = ( W |`s U ) ) $.
-    lsslmod.w $e |- ( ph -> W e. LMod ) $.
-    lsslmod.u $e |- ( ph -> U e. ( LSubSp ` W ) ) $.
-    $( A submodule is a module.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    lsslmod $p |- ( ph -> X e. LMod ) $=
-      ( cress co clmod cbs cfv wss wcel clss wa eqidd islss3 mpbid simprd
-      eqeltrd ) ADCBHIZJEABCKLZMZUBJNZABCOLZNUDUEPGAUFBUCCFAUCQAUFQRSTUA $.
-      $( [6-Dec-2014] $)
+    lsslmod.x $e |- X = ( W |`s U ) $.
+    lsslmod.s $e |- S = ( LSubSp ` W ) $.
+    $( A submodule is a module. $)
+    lsslmod $p |- ( ( W e. LMod /\ U e. S ) -> X e. LMod ) $=
+      ( clmod wcel wa cress co cbs cfv wss eqid islss3 simplbda syl5eqel ) CGHZ
+      BAHZIDCBJKZGESTBCLMZNUAGHABUBCUBOFPQR $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
-    lsslss.w $e |- ( ph -> W e. LMod ) $.
-    lsslss.x $e |- ( ph -> X = ( W |`s U ) ) $.
-    lsslss.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    lsslss.t $e |- ( ph -> T = ( LSubSp ` X ) ) $.
-    lsslss.u $e |- ( ph -> U e. S ) $.
-    $( The subspaces of a subspace are the smaller subspaces.  (Contributed by
-       Stefan O'Rear, 6-Dec-2014.) $)
-    lsslss $p |- ( ph -> ( V e. T <-> ( V e. S /\ V C_ U ) ) ) $=
-      ( wcel cress co clmod wa cbs cfv wceq wss eqidd islss3 mpbid eqeltrd clss
-      simprd eleqtrd lssss syl2anc ressbas2 fveq2d eqtr4d sstr2 mpan9 biantrurd
-      eqid syl cin oveq1d adantr cvv ssexg sylan2 ancoms ressress simpr sseqin2
-      sylib oveq2d 3eqtrd eleq1d wb 3bitr4d pm5.32da ancom syl6bb bitrd ) AECME
-      DUAZGENOZPMZQZEBMZVSQZACEDGAGFDNOZPIADFRSZUAZWEPMZADBMZWGWHQLABDWFFHAWFUB
-      ZJUCUDUGUEADWERSZGRSAWGDWKTAFPMDFUFSZMWGHADBWLLJUHWLDWFFPWFUQZWLUQUIUJZDW
-      FWEFWEUQWMUKURAGWERIULUMKUCAWBVSWCQWDAVSWAWCAVSQZFENOZPMZEWFUAZWQQZWAWCWO
-      WRWQAWGVSWRWNEDWFUNUOUPWOVTWPPWOVTWEENOZFDEUSZNOZWPAVTWTTVSAGWEENIUTVAWOW
-      IEVBMZWTXBTAWIVSLVAVSAXCAVSWIXCLEDBVCVDVEDEFBVBVFUJWOXAEFNWOVSXAETAVSVGED
-      VHVIVJVKVLAWCWSVMVSABEWFFHWJJUCVAVNVOVSWCVPVQVR $.
-      $( [6-Dec-2014] $)
+    lsslss.x $e |- X = ( W |`s U ) $.
+    lsslss.s $e |- S = ( LSubSp ` W ) $.
+    lsslss.t $e |- T = ( LSubSp ` X ) $.
+    $( The subspaces of a subspace are the smaller subspaces. $)
+    lsslss $p |- ( ( W e. LMod /\ U e. S ) ->
+        ( V e. T <-> ( V e. S /\ V C_ U ) ) ) $=
+      ( clmod wcel wa cbs cfv wss cress co wb eqid wceq lsslmod islss3 ressbas2
+      syl lssss sseq2d anbi1d sstr2 mpan9 biantrurd oveq1i cin cvv simplr simpr
+      ssexg syl2anc ressress incom biimpi syl5eq oveq2d adantl ad2antrr 3bitr4d
+      df-ss eqtrd eleq1d pm5.32da ancom syl6bb 3bitr2d ) EJKZCAKZLZDBKZDFMNZOZF
+      DPQZJKZLZDCOZVTLZDAKZWBLZVOFJKVPWARACEFGHUABDVQFVQSIUBUDVOWBVRVTVOCVQDVOC
+      EMNZOZCVQTACWFEJWFSZHUEZCWFFEGWHUCUDUFUGVOWCWBWDLWEVOWBVTWDVOWBLZEDPQZJKZ
+      DWFOZWLLZVTWDWJWMWLVOWGWBWMWIDCWFUHUIUJWJVSWKJWJVSECPQZDPQZWKFWODPGUKWJWP
+      ECDULZPQZWKWJVNDUMKZWPWRTVMVNWBUNZWJWBVNWSVOWBUOWTDCAUPUQCDEAUMURUQWBWRWK
+      TVOWBWQDEPWBWQDCULZDCDUSWBXADTDCVFUTVAVBVCVGVAVHVMWDWNRVNWBADWFEWHHUBVDVE
+      VIWBWDVJVKVL $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
-    lsslsp.w $e |- ( ph -> W e. LMod ) $.
-    lsslsp.u $e |- ( ph -> U e. ( LSubSp ` W ) ) $.
-    lsslsp.x $e |- ( ph -> X = ( W |`s U ) ) $.
-    lsslsp.k $e |- ( ph -> K = ( LSpan ` W ) ) $.
-    lsslsp.l $e |- ( ph -> L = ( LSpan ` X ) ) $.
-    lsslsp.g $e |- ( ph -> G C_ U ) $.
-    $( Spans in submodules correspond to spans in the containing module.
-       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    lsslsp $p |- ( ph -> ( K ` G ) = ( L ` G ) ) $=
-      ( cfv clmod wcel wss cbs eqid syl2anc clspn clss wa lsslmod cress co wceq
-      lssss idi ressbas2 fveq2d eqtr4d sseqtrd lspcl eqidd lsslss mpbid lspssid
-      syl simpld lspssp syl3anc sstrd mpbir2and eqssd fveq1d 3eqtr4d ) ACFUANZN
-      ZCGUANZNZCDNCENAVIVKAFOPZVKFUBNZPZCVKQZVIVKQHAVNVKBQZAVKGUBNZPZVNVPUCAGOP
-      ZCGRNZQZVRABFGJHIUDZACBVTMABFBUEUFZRNZVTABFRNZQZBWDUGAVLBVMPZWFHIVMBWEFOW
-      ESZVMSZUHTZBWEWCFWCSWEWEUGWHUIUJUSAGWCRJUKULUMZVQCVJVTGVTSZVQSZVJSZUNTAVM
-      VQBVKFGHJAVMUOZAVQUOZIUPUQUTAVSWAVOWBWKCVJVTGWLWNURTVMCVKVHFWIVHSZVAVBAVS
-      VIVQPZCVIQZVKVIQWBAWRVIVMPZVIBQZAVMVQBVIFGHJWOWPIUPAVLCWEQZWTHACBWEMWJVCZ
-      VMCVHWEFWHWIWQUNTAVLWGCBQXAHIMVMCBVHFWIWQVAVBVDAVLXBWSHXCCVHWEFWHWQURTVQC
-      VIVJGWMWNVAVBVEACDVHKVFACEVJLVFVG $.
-      $( [6-Dec-2014] $)
+    lsslsp.s $e |- S = ( LSubSp ` W ) $.
+    lsslsp.x $e |- X = ( W |`s U ) $.
+    lsslsp.k $e |- K = ( LSpan ` W ) $.
+    lsslsp.l $e |- L = ( LSpan ` X ) $.
+    $( Spans in submodules correspond to spans in the containing module. $)
+    lsslsp $p |- ( ( W e. LMod /\ U e. S /\ G C_ U ) ->
+        ( K ` G ) = ( L ` G ) ) $=
+      ( clmod wcel wss cfv wa 3adant3 eqid syl2anc lspssp w3a simp1 cbs lsslmod
+      clss simp3 wceq lssss ressbas2 syl sseqtrd lspcl wb lsslss simpld lspssid
+      mpbid syl3anc sstrd mpbir2and eqssd ) FLMZBAMZCBNZUAZCDOZCEOZVEVBVGAMZCVG
+      NZVFVGNVBVCVDUBZVEVHVGBNZVEVGGUEOZMZVHVKPZVEGLMZCGUCOZNZVMVBVCVOVDABFGIHU
+      DQZVECBVPVBVCVDUFZVEBFUCOZNZBVPUGVBVCWAVDABVTFLVTRZHUHQZBVTGFIWBUIUJUKZVL
+      CEVPGVPRZVLRZKULSVBVCVMVNUMVDAVLBVGFGIHWFUNQUQUOVEVOVQVIVRWDCEVPGWEKUPSAC
+      VGDFHJTURVEVOVFVLMZCVFNZVGVFNVRVEWGVFAMZVFBNZVBVCWGWIWJPUMVDAVLBVFFGIHWFU
+      NQVEVBCVTNZWIVJVECBVTVSWCUSZACDVTFWBHJULSACBDFHJTUTVEVBWKWHVJWLCDVTFWBJUP
+      SVLCVFEGWFKTURVA $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
     $d V s p $.  $d ph s p $.  $d N s p $.  $d W s p $.  $d S s p $.
-    lspf.w $e |- ( ph -> W e. LMod ) $.
-    lspf.v $e |- ( ph -> V = ( Base ` W ) ) $.
-    lspf.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    lspf.n $e |- ( ph -> N = ( LSpan ` W ) ) $.
-    $( The span operator on a left module maps subsets to subsets.
-       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    lspf $p |- ( ph -> N : ~P V --> S ) $=
-      ( vs vp cpw wf cfv cv wss wcel clmod adantr eqid cbs clss crab cint wa c0
-      cmpt wne ssrab2 a1i wrex lss1 syl elpwi sseq2 rcla4ev syl2an rabn0 sylibr
-      lssintcl syl3anc wceq eleqtrrd fmptd pweqd feq2d mpbird clspn eqtrd feq1d
-      lspfval ) ADLZBCMVLBJEUANZLZJOZKOZPZKEUBNZUCZUDZUGZMZAWBVNBWAMAJVNVTBWAAV
-      OVNQZUEZVTVRBWDERQZVSVRPZVSUFUHZVTVRQAWEWCFSWFWDVQKVRUIUJWDVQKVRUKZWGAVMV
-      RQZVOVMPZWHWCAWEWIFVRVMEVMTZVRTZULUMVOVMUNVQWJKVMVRVPVMVOUOUPUQVQKVRURUSV
-      SVREWLUTVAABVRVBWCHSVCWATVDAVLVNBWAADVMGVEVFVGAVLBCWAACEVHNZWAIAWEWMWAVBF
-      KVRWMVMERJWKWLWMTVKUMVIVJVG $.
-      $( [6-Dec-2014] $)
+    lspf.v $e |- V = ( Base ` W ) $.
+    lspf.s $e |- S = ( LSubSp ` W ) $.
+    lspf.n $e |- N = ( LSpan ` W ) $.
+    $( The span operator on a left module maps subsets to subsets. $)
+    lspf $p |- ( W e. LMod -> N : ~P V --> S ) $=
+      ( vs vp clmod wcel cpw wf cv wss crab cint cmpt wa c0 wne ssrab2 a1i wrex
+      simpl lss1 elpwi sseq2 rcla4ev syl2an rabn0 sylibr lssintcl syl3anc fmptd
+      eqid lspfval feq1d mpbird ) DJKZCLZABMVAAHVAHNZINZOZIAPZQZRZMUTHVAVFAVGUT
+      VBVAKZSZUTVEAOZVETUAZVFAKUTVHUEVJVIVDIAUBUCVIVDIAUDZVKUTCAKVBCOZVLVHACDEF
+      UFVBCUGVDVMICAVCCVBUHUIUJVDIAUKULVEADFUMUNVGUPUOUTVAABVGIABCDJHEFGUQURUS
+      $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
     $d ph a b $.  $d W a b $.  $d B a b $.
-    islmodfg.w $e |- ( ph -> W e. LMod ) $.
-    islmodfg.b $e |- ( ph -> B = ( Base ` W ) ) $.
-    $( Property of a finitely generated left module.  (Contributed by Stefan
-       O'Rear, 6-Dec-2014.) $)
-    islmodfg $p |- ( ph -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin /\
+    islmodfg.b $e |- B = ( Base ` W ) $.
+    $( Property of a finitely generated left module. $)
+    islmodfg $p |- ( W e. LMod -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin /\
           ( ( LSpan ` W ) ` b ) = B ) ) ) $=
-      ( va wcel cbs cfv clspn cpw cfn cin cima clmod wceq wa wb eqidd crab wrex
-      clfig df-lfig eleq2i a1i fveq2 imaeq1d pweqd ineq1d imaeq2d eqtrd eleq12d
-      cv elrab3 syl wfn wss clss wf lspf ffn inss1 fvelimab sylancl elin anbi1i
-      anass bitri eleq2d eqeq2d anbi12d syl5rbbr rexbidv2 bitrd 3bitrd ) ACUCHZ
-      CGUNZIJZVRKJZVSLZMNZOZHZGPUAZHZCIJZCKJZWGLZMNZOZHZDUNZMHZWMWHJZBQZRZDBLZU
-      BZVQWFSAUCWECGUDUEUFACPHWFWLSEWDWLGCPVRCQZVSWGWCWKVRCIUGZWTWCWHWBOWKWTVTW
-      HWBVRCKUGUHWTWBWJWHWTWAWIMWTVSWGXAUIUJUKULUMUOUPAWLWOWGQZDWJUBZWSAWHWIUQZ
-      WJWIURWLXCSAWICUSJZWHUTXDAXEWHWGCEAWGTAXETAWHTVAWIXEWHVBUPWIMVCDWIWJWGWHV
-      DVEAXBWQDWJWRWMWRHZWQRZWMWRMNZHZWPRZAWMWJHZXBRXJXFWNRZWPRXGXIXLWPWMWRMVFV
-      GXFWNWPVHVIAXIXKWPXBAXHWJWMAWRWIMABWGFUIUJVJABWGWOFVKVLVMVNVOVP $.
-      $( [6-Dec-2014] $)
+      ( va clmod wcel clfig cv cbs cfv clspn cpw cfn cin cima wceq wa wb eqid
+      crab wrex df-lfig eleq2i fveq2 imaeq1d pweqd ineq1d imaeq2d eqtrd eleq12d
+      a1i elrab3 wfn wss clss wf lspf ffn syl inss1 fvelimab sylancl elin pweqi
+      eqcomi anbi1i bitri eqeq2i anbi12i anass rexbii2 bitrd 3bitrd ) BFGZBHGZB
+      EIZJKZVQLKZVRMZNOZPZGZEFUAZGZBJKZBLKZWFMZNOZPZGZCIZNGZWLWGKZAQZRZCAMZUBZV
+      PWESVOHWDBEUCUDULWCWKEBFVQBQZVRWFWBWJVQBJUEZWSWBWGWAPWJWSVSWGWAVQBLUEUFWS
+      WAWIWGWSVTWHNWSVRWFWTUGUHUIUJUKUMVOWKWNWFQZCWIUBZWRVOWGWHUNZWIWHUOWKXBSVO
+      WHBUPKZWGUQXCXDWGWFBWFTXDTWGTURWHXDWGUSUTWHNVACWHWIWFWGVBVCXBWRSVOXAWPCWI
+      WQWLWIGZXARWLWQGZWMRZWORXFWPRXEXGXAWOXEWLWHGZWMRXGWLWHNVDXHXFWMWHWQWLWFAA
+      WFDVFZVEUDVGVHWFAWNXIVIVJXFWMWOVKVHVLULVMVN $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
-    $d ph a b $.  $d W a b $.  $d X a b $.  $d S a b $.
-    islssfg.w $e |- ( ph -> W e. LMod ) $.
-    islssfg.x $e |- ( ph -> X = ( W |`s S ) ) $.
-    islssfg.s $e |- ( ph -> S e. ( LSubSp ` W ) ) $.
-    $( Property of a finitely generated left (sub-)module.  (Contributed by
-       Stefan O'Rear, 6-Dec-2014.) $)
-    islssfg $p |- ( ph -> ( X e. LFinGen <-> E. b e. ~P S ( b e. Fin /\
-        ( ( LSpan ` W ) ` b ) = S ) ) ) $=
-      ( wcel clspn cfv wceq wa wrex cbs wss clmod eqid adantr eqidd cfn lsslmod
-      clfig cv cpw cress clss lssss syl2anc ressbas2 syl fveq2d eqtr4d islmodfg
-      co elpwi adantl lsslsp eqeq1d anbi2d rexbidva bitr4d ) ADUCIEUDZUAIZVCDJK
-      ZKZBLZMZEBUEZNVDVCCJKZKZBLZMZEVINABDEABCDGFHUBABCBUFUOZOKZDOKABCOKZPZBVOL
-      ACQIZBCUGKZIZVQFHVSBVPCQVPRZVSRUHUIBVPVNCVNRWAUJUKADVNOGULUMUNAVMVHEVIAVC
-      VIIZMZVLVGVDWCVKVFBWCBVCVJVECDAVRWBFSAVTWBHSADVNLWBGSWCVJTWCVETWBVCBPAVCB
-      UPUQURUSUTVAVB $.
-      $( [6-Dec-2014] $)
+    $d ph a b $.  $d W a b $.  $d X a b $.  $d S a b $.  $d U a b $.
+    islssfg.x $e |- X = ( W |`s U ) $.
+    islssfg.s $e |- S = ( LSubSp ` W ) $.
+    $( Property of a finitely generated left (sub-)module. $)
+    islssfg $p |- ( ( W e. LMod /\ U e. S ) -> ( X e. LFinGen <->
+          E. b e. ~P U ( b e. Fin /\ ( ( LSpan ` W ) ` b ) = U ) ) ) $=
+      ( clmod wcel wa cv clspn cfv cbs wceq cpw wrex wss eqid syl clfig rexeqdv
+      cfn lssss ressbas2 pweqd elpwi eqid1 lsslsp 3expa sylan2 eqeq12d rexbidva
+      adantr anbi2d wb lsslmod islmodfg 3bitr4rd ) CHIZBAIZJZEKZUCIZVCDLMZMZDNM
+      ZOZJZEBPZQVIEVGPZQZVDVCCLMZMZBOZJZEVJQDUAIZVBVIEVJVKVBBVGVBBCNMZRBVGOZABV
+      RCHVRSZGUDBVRDCFVTUETZUFUBVBVPVIEVJVBVCVJIZJZVOVHVDWCVNVFBVGWBVBVCBRZVNVF
+      OZVCBUGUTVAWDWEABVCVMVECDGFVMUHVESUIUJUKVBVSWBWAUNULUOUMVBDHIVQVLUPABCDFG
+      UQVGDEVGSURTUS $.
+      $( [12-Dec-2014] $)
   $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Noetherian left modules I
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c LNoeM $.
+
+  $( Extend class notation with the class of Noetherian left modules. $)
+  clnm $a class LNoeM $.
+
+  ${
+    $d i w $.
+
+    $( A left-module is _Noetherian_ iff it is hereditarily finitely
+       generated. $)
+    df-lnm $a |- LNoeM = { w e. LMod | A. i e. ( LSubSp ` w )
+        ( w |`s i ) e. LFinGen } $.
+  $}
+
+  ${
+    $d w i M $.  $d w i S $.
+    islnm.s $e |- S = ( LSubSp ` M ) $.
+    $( Property of being a Noetherian left module. $)
+    islnm $p |- ( M e. LNoeM <-> ( M e. LMod /\
+        A. i e. S ( M |`s i ) e. LFinGen ) ) $=
+      ( vw cv cress co clfig wcel clss wral clmod clnm wceq fveq2 syl6eqr oveq1
+      cfv eleq1d raleqbidv df-lnm elrab2 ) EFZBFZGHZIJZBUDKSZLCUEGHZIJZBALECMNU
+      DCOZUGUJBUHAUKUHCKSAUDCKPDQUKUFUIIUDCUEGRTUAEBUBUC $.
+      $( [12-Dec-2014] $)
+  $}
+
+  ${
+    $d M a $.  $d U a $.  $d S a $.
+    $( A Noetherian left module is a left module. $)
+    lnmlmod $p |- ( M e. LNoeM -> M e. LMod ) $=
+      ( va clnm wcel clmod cv cress co clfig clss cfv wral eqid islnm simplbi )
+      ACDAEDABFGHIDBAJKZLPBAPMNO $.
+      $( [12-Dec-2014] $)
+
+    ${
+      lnmlssfg.s $e |- S = ( LSubSp ` M ) $.
+      $( A submodule of Noetherian module is finitely generated. $)
+      lnmlssfg $p |- ( ( M e. LNoeM /\ U e. S ) -> ( M |`s U ) e. LFinGen ) $=
+        ( va clnm wcel cv cress co clfig wral clmod islnm simprbi eleq1d rcla4v
+        wceq oveq2 mpan9 ) CFGZCEHZIJZKGZEALZBAGCBIJZKGZUACMGUEAECDNOUDUGEBAUBB
+        RUCUFKUBBCISPQT $.
+        $( [12-Dec-2014] $)
+
+      $( All submodules of a Noetherian module are Noetherian. $)
+      lnmlsslnm $p |- ( ( M e. LNoeM /\ U e. S ) -> ( M |`s U ) e. LNoeM ) $=
+        ( eqid islnm sylanbrc ) ??????????EFG $.
+    $}
+
+    $( A Noetherian left module is finitely generated. $)
+    lnmfg $p |- ( M e. LNoeM -> M e. LFinGen ) $=
+      ? $.
+  $}
+
+  ${
+    $d ph a b c $.  $d F a b c $.  $d S a b c $.  $d T a b c $.  $d A a b c $.
+    $d B a b c $.  $d K a b c $.
+    hlmfgsplitlem.f $e |- ( ph -> F e. ( S homLM T ) ) $.
+    hlmfgsplitlem.s $e |- ( ph -> S e. LMod ) $.
+    hlmfgsplitlem.t $e |- ( ph -> T e. LMod ) $.
+    hlmfgsplitlem.k $e |- K = ( `' F " { ( 0g ` T ) } ) $.
+    hlmfgsplitlem.af $e |- ( ph -> A e. Fin ) $.
+    hlmfgsplitlem.as $e |- ( ph -> A C_ K ) $.
+    hlmfgsplitlem.ak $e |- ( ph -> ( ( LSpan ` S ) ` A ) = K ) $.
+    hlmfgsplitlem.bf $e |- ( ph -> B e. Fin ) $.
+    hlmfgsplitlem.bs $e |- ( ph -> B C_ ran F ) $.
+    hlmfgsplitlem.bk $e |- ( ph -> ( ( LSpan ` T ) ` B ) = ran F ) $.
+    $( Lemma for ~ hlmfgsplit . $)
+    hlmfgsplitlem $p |- ( ph -> S e. LFinGen ) $=
+      ( wceq cfv wcel va vb vc cv cima cbs cpw cfn cin clfig wfn cvv crn wss wf
+      wrex chlm co clmod eqid hlmf syl2anc ffn syl fvex fipreima syl22anc wa wi
+      a1i elin vex elpw anbi1i bitri w3a clspn cun simp2l ccnv c0g csn cnvimass
+      cdm fdm syl5sseq syl5eqss sstrd 3ad2ant1 unssd elpw2 sylibr simp2r lspssv
+      unfi fnfvelrn sylan hlmlsp syl31anc simp3 fveq2d 3eqtrd eleqtrrd fvelimab
+      adantr wb mpbid csg cplusg lmodgrp ad2antrr simplr simprl sseldd grpnpcan
+      cgrp syl3anc clss lspcl ssun2 lspss eqsstrd eqcom chgrp hlmhgrp hgrpeqker
+      eqcomd 3jca sselda syl12anc syl5bb biimpd ssun1 lssvacl eqeltrrd rexlimdv
+      impr exp32 mpd ex ssrdv eqssd eleq1 fveq2 eqeq1d anbi12d rcla4ev islmodfg
+      mpbird 3exp syl5bi ) AFUAUDZUEZCRZUADUFSZUGZUHUIZUPZDUJTZAFUUOUKZUUOULTZC
+      FUMZUNCUHTUURAUUOEUFSZFUOZUUTAFDEUQURTZEUSTZUVDHJUUOUVCDEFUSUUOUTZUVCUTVA
+      VBZUUOUVCFVCVDZUVAADUFVEZVJPOCUUOFULUAVFVGAUUNUUSUAUUQUULUUQTZUULUUOUNZUU
+      LUHTZVHZAUUNUUSVIUVKUULUUPTZUVMVHUVNUULUUPUHVKUVOUVLUVMUULUUOUAVLVMVNVOAU
+      VNUUNUUSAUVNUUNVPZUUSUBUDZUHTZUVQDVQSZSZUUORZVHZUBUUPUPZUVPUULBVRZUUPTZUW
+      DUHTZUWDUVSSZUUORZUWCUVPUWDUUOUNZUWEUVPUULBUUOAUVLUVMUUNVSZAUVNBUUOUNUUNA
+      BGUUOMAGFVTEWASWBZUEZUUOKAFWDZUWLUUOFUWKWCAUVDUWMUUORUVHUUOUVCFWEVDWFWGWH
+      WIWJZUWDUUOUVJWKWLUVPUVMBUHTZUWFAUVLUVMUUNWMAUVNUWOUUNLWIUULBWOVBUVPUWGUU
+      OUVPDUSTZUWIUWGUUOUNAUVNUWPUUNIWIZUWNUWDUVSUUODUVGUVSUTZWNVBUVPUBUUOUWGUV
+      PUVQUUOTZUVQUWGTZUVPUWSVHZUCUDZFSZUVQFSZRZUCUULUVSSZUPZUWTUXAUXDFUXFUEZTZ
+      UXGUXAUXDUVBUXHUVPUUTUWSUXDUVBTAUVNUUTUUNUVIWIZUUOUVQFWPWQUVPUXHUVBRUWSUV
+      PUXHUUMEVQSZSZCUXKSZUVBUVPUVEUWPUVFUVLUXHUXLRAUVNUVEUUNHWIUWQAUVNUVFUUNJW
+      IUWJDEUULFUVSUXKUUOUVGUWRUXKUTWRWSUVPUUMCUXKAUVNUUNWTXAAUVNUXMUVBRUUNQWIX
+      BXEXCUXAUUTUXFUUOUNZUXIUXGXFUVPUUTUWSUXJXEUVPUXNUWSUVPUWPUVLUXNUWQUWJUULU
+      VSUUODUVGUWRWNVBZXEZUCUUOUXFUXDFXDVBXGUXAUXEUWTUCUXFUXAUXBUXFTZUXEUWTUXAU
+      XQUXEVHZVHZUVQUXBDXHSZURZUXBDXISZURZUVQUWGUXSDXPTZUWSUXBUUOTZUYCUVQRUVPUY
+      DUWSUXRUVPUWPUYDUWQDXJZVDXKUVPUWSUXRXLUXSUXFUUOUXBUVPUXNUWSUXRUXOXKUXAUXQ
+      UXEXMZXNUUOUYBDUXTUVQUXBUVGUYBUTZUXTUTZXOXQUXSUWPUWGDXRSZTZUYAUWGTUXBUWGT
+      UYCUWGTUVPUWPUWSUXRUWQXKUVPUYKUWSUXRUVPUWPUWIUYKUWQUWNUYJUWDUVSUUODUVGUYJ
+      UTZUWRXSVBXKUXSGUWGUYAUVPGUWGUNUWSUXRUVPGBUVSSZUWGAUVNGUYMRUUNAUYMGNYGWIU
+      VPUWPUWIBUWDUNZUYMUWGUNUWQUWNUYNUVPBUULXTVJBUWDUVSUUODUVGUWRYAXQYBXKUXAUX
+      QUXEUYAGTZUXAUXQVHZUXEUYOUXEUXDUXCRZUYPUYOUXCUXDYCUYPFDEYDURTZUYDEXPTZVPZ
+      UWSUYEUYQUYOXFUVPUYTUWSUXQAUVNUYTUUNAUYRUYDUYSAUVEUYRHDEFYEVDAUWPUYDIUYFV
+      DAUVFUYSJEXJVDYHWIXKUVPUWSUXQXLUXAUXFUUOUXBUXPYIUUODEUVQFGUXTUXBUVGKUYIYF
+      YJYKYLYQXNUXSUXFUWGUXBUVPUXFUWGUNZUWSUXRUVPUWPUWIUULUWDUNZVUAUWQUWNVUBUVP
+      UULBYMVJUULUWDUVSUUODUVGUWRYAXQXKUYGXNUYBUYJUWGDUYAUXBUYHUYLYNVGYOYRYPYSY
+      TUUAUUBUWBUWFUWHVHUBUWDUUPUVQUWDRZUVRUWFUWAUWHUVQUWDUHUUCVUCUVTUWGUUOUVQU
+      WDUVSUUDUUEUUFUUGYJUVPUWPUUSUWCXFUWQUUODUBUVGUUHVDUUIUUJUUKYPYS $.
+      $( [11-Dec-2014] $)
+  $}
+
+  ${
+    $d F a b $.  $d S a b $.  $d T a b $.  $d K a b $.
+    hlmfgsplit.k $e |- K = ( `' F " { ( 0g ` T ) } ) $.
+    $( If the kernel and range of a homomorphism of left modules are finitely
+       generated, then so is the domain. $)
+    hlmfgsplit $p |- ( ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) /\
+        ( ( S |`s K ) e. LFinGen /\ ( T |`s ran F ) e. LFinGen ) ) ->
+          S e. LFinGen ) $=
+      ( va vb co wcel clmod cress clfig wa cv cfn clspn cfv wceq cpw eqid simp2
+      chlm w3a crn wrex clss c0g eqid1 hlmkerlss islssfg syl2anc simp3 hlmrnlss
+      wb anbi12d simpll1 simpll2 simpll3 simprrl adantr wss simplrl syl simprrr
+      wi elpwi ad2antrl hlmfgsplitlem exp32 rexlimdv imp3a sylbid imp ) CABUBHI
+      ZAJIZBJIZUCZADKHZLIZBCUDZKHZLIZMZALIZVQWCFNZOIZWEAPQQDRZMZFDSZUEZGNZOIZWK
+      BPQQVTRZMZGVTSZUEZMWDVQVSWJWBWPVQVODAUFQZIVSWJUNVNVOVPUAABCDBUGQZEWRUHUIW
+      QDAVRFVRTWQTUJUKVQVPVTBUFQZIWBWPUNVNVOVPULABCUMWSVTBWAGWATWSTUJUKUOVQWJWP
+      WDVQWHWPWDVEZFWIVQWEWIIZWHWTVQXAWHMZMZWNWDGWOXCWKWOIZWNWDXCXDWNMZMZWEWKAB
+      CDVNVOVPXBXEUPVNVOVPXBXEUQVNVOVPXBXEUREXCWFXEVQXAWFWGUSUTXFXAWEDVAVQXAWHX
+      EVBWEDVFVCXCWGXEVQXAWFWGVDUTXCXDWLWMUSXDWKVTVAXCWNWKVTVFVGXCXDWLWMVDVHVIV
+      JVIVJVKVLVM $.
+      $( [12-Dec-2014] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Direct sum and free left modules
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Elementary theory of ideals, examples of PIDs
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Noetherian rings and left modules II
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c LNoeR LIdeal LPIdeal LPIR $.
+
+  $( Extend class notation with the class of left Noetherian rings. $)
+  clnr $a class LNoeR $.
+
+  $( Ring left-ideal function. $)
+  clidl $a class LIdeal $.
+
+  $( Ring left-principal-ideal function. $)
+  clpidl $a class LPIdeal $.
+
+  $( Class of left principal ideal rings. $)
+  clpir $a class LPIR $.
+
+  ${
+    $d w i g $.
+
+    $( Define the class of left ideals of a given ring.  An ideal is a
+       submodule of the ring viewed as a module over itself. $)
+    df-lidl $a |- LIdeal = ( LSubSp o. ringLMod ) $.
+
+    $( Define the class of left principal ideals of a ring, which are ideals
+       with a single generator. $)
+    df-lpidl $a |- LPIdeal = ( w e. Ring |->
+        U_ g e. ( Base ` w ) { ( ( RSpan ` w ) ` { g } ) } ) $.
+
+    $( Define the class of left principal ideal rings, rings where every left
+       ideal has a single generator. $)
+    df-lpir $a |- LPIR = { w e. Ring | ( LIdeal ` w ) = ( LPIdeal ` w ) } $.
+
+    $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
+       itself. $)
+    df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
+  $}
+
 
   ${
     $d W a $.
