@@ -14321,6 +14321,31 @@ $)
       $( [12-Dec-2014] $)
   $}
 
+  ${
+    $d S a b $.  $d X a b $.  $d F a b $.  $d T a b $.  $d V a b $.
+    $( Restriction of a homomorpism to a subspace. $)
+    reshlm $p |- ( ( ( F e. ( S homLM T ) /\ S e. LMod /\
+          X e. ( LSubSp ` S ) ) /\ T e. V ) ->
+        ( F |` X ) e. ( ( S |`s X ) homLM T ) ) $=
+      ( va vb chlm co wcel clmod cfv w3a wa cress chgrp wceq cbs eqid syl cvsca
+      clss cres csca cv wral cvv ovex resssca ressvsca ishlm mpan adantl simpl1
+      wb hlmhgrp simpl2 simpl3 lsssubg syl2anc reshgrp syl3anc hlmsca 3ad2antl1
+      csubg simpr simpll1 simplr simprl 3adant1 ad2antrr adantr ressbas2 eleq2d
+      wss lssss biimpar adantrl sseldd hlmlinm syl22anc simpll2 simpll3 lssvscl
+      fvres oveq2d 3eqtr4d ralrimivva mpbir3and ) CABHIJZAKJZEAUBLZJZMZBDJZNZCE
+      UCZAEOIZBHIJZWQWRBPIJZBUDLZAUDLZQZFUEZGUEZAUALZIZWQLZXDXEWQLZBUALZIZQZGWR
+      RLZUFFXBRLZUFZWOWSWTXCXOMUOZWNWRUGJWOXPAEOUHFGXNWRBXMWQXBXAXFXJUGDEXBAWRW
+      RSZXBSZUIXASZXNSZXMSEXFAWRXQXFSZUJXJSZUKULUMWPCABPIJZEAVELZJZWOWTWPWJYCWJ
+      WKWMWOUNABCUPTWPWKWMYEWJWKWMWOUQWJWKWMWOURWLEYDAWLSZYDSUSUTWNWOVFABCDEVAV
+      BWJWKWOXCWMABCXBXADXRXSVCVDWPXLFGXNXMWPXDXNJZXEXMJZNZNZXGCLZXDXECLZXJIZXH
+      XKYJWJWOYGXEARLZJYKYMQWJWKWMWOYIVGWNWOYIVHWPYGYHVIZYJEYNXEWNEYNVOZWOYIWKW
+      MYPWJWLEYNAKYNSZYFVPVJZVKWPYHXEEJZYGWPYSYHWPEXMXEWPYPEXMQWNYPWOYRVLEYNWRA
+      XQYQVMTVNVQVRZVSXNABYNCXBXFXJDXDXEXRXTYQYAYBVTWAYJXGEJZXHYKQYJWKWMYGYSUUA
+      WJWKWMWOYIWBWJWKWMWOYIWCYOYTXNWLXFEXBAXDXEXRYAXTYFWDWAXGECWETYJXIYLXDXJYJ
+      YSXIYLQYTXEECWETWFWGWHWI $.
+      $( [12-Dec-2014] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Finitely generated left modules
@@ -14601,12 +14626,25 @@ $)
 
       $( All submodules of a Noetherian module are Noetherian. $)
       lnmlsslnm $p |- ( ( M e. LNoeM /\ U e. S ) -> ( M |`s U ) e. LNoeM ) $=
-        ( eqid islnm sylanbrc ) ??????????EFG $.
+        ( va clnm wcel wa cress clmod clfig cfv sylan cin wceq cvv wss cbs eqid
+        co cv clss wral lnmlmod eqid1 lsslmod vex ressress mpan2 ad2antlr incom
+        simpll ovex lssss mpan adantl ressbas2 syl adantr sseqtr4d df-ss syl5eq
+        sylib lsslss simprbda eqeltrd lnmlssfg syl2anc ralrimiva islnm sylanbrc
+        wb ) CFGZBAGZHZCBITZJGZVPEUAZITZKGZEVPUBLZUCVPFGVMCJGZVNVQCUDZABCVPVPUE
+        ZDUFMVOVTEWAVOVRWAGZHZVSCBVRNZITZKVNVSWHOZVMWEVNVRPGWIEUGBVRCAPUHUIUJWF
+        VMWGAGWHKGVMVNWEULWFWGVRAWFWGVRBNZVRBVRUKWFVRBQZWJVROWFVRVPRLZBWEVRWLQZ
+        VOVPPGWEWMCBIUMWAVRWLVPPWLSWASZUNUOUPVOBWLOZWEVOBCRLZQWOABWPCFWPSZDUNBW
+        PVPCVPSWQUQURUSUTVRBVAVCVBVOWEVRAGZWKVMWBVNWEWRWKHVLWCAWABVRCVPWDDWNVDM
+        VEVFAWGCDVGVHVFVIWAEVPWNVJVK $.
+        $( [12-Dec-2014] $)
     $}
 
     $( A Noetherian left module is finitely generated. $)
     lnmfg $p |- ( M e. LNoeM -> M e. LFinGen ) $=
-      ? $.
+      ( clnm wcel cbs cfv cress co clfig eqid ressid clss lnmlmod lss1 lnmlssfg
+      clmod syl mpdan eqeltrrd ) ABCZAADEZFGZAHTABTIZJSTAKEZCZUAHCSAOCUDALUCTAU
+      BUCIZMPUCTAUENQR $.
+      $( [12-Dec-2014] $)
   $}
 
   ${
@@ -14683,6 +14721,36 @@ $)
       CDVNVOVPXBXEUPVNVOVPXBXEUQVNVOVPXBXEUREXCWFXEVQXAWFWGUSUTXFXAWEDVAVQXAWHX
       EVBWEDVFVCXCWGXEVQXAWFWGVDUTXCXDWLWMUSXDWKVTVAXCWNWKVTVFVGXCXDWLWMVDVHVIV
       JVIVJVKVLVM $.
+      $( [12-Dec-2014] $)
+
+    $( If the kernel and range of a homomorphism of left modules are
+       Noetherian, then so is the domain. $)
+    hlmlnmsplit $p |- ( ( ( F e. ( S homLM T ) /\ S e. LMod /\ T e. LMod ) /\
+        ( ( S |`s K ) e. LNoeM /\ ( T |`s ran F ) e. LNoeM ) ) ->
+          S e. LNoeM ) $=
+      ( va co wcel clmod cress wa clfig clss cfv eqid syl2anc cin wceq cvv a1i
+      chlm w3a clnm crn cv wral simpl2 cres ccnv c0g cima simpll1 simpll2 simpr
+      simpll3 reshlm syl31anc lsslmod cnvresima eqcomi ineq1i eqtri incom inidm
+      csn oveq2i ineq2i 3eqtr4i in12 vex inex2 ressress cnvexg imaexg syl inex1
+      syl5eqel 3eqtr4a syl5eq simplrl wb hlmkerlss syl3anc lsslss lssincl inss2
+      wss mpbir2and lnmlssfg eqeltrd rnexg resss rnss ax-mp df-ss mpbi syl6reqr
+      resexg simplrr hlmrnlss hlmfgsplit syl32anc ralrimiva islnm sylanbrc ) CA
+      BUAGZHZAIHZBIHZUBZADJGZUCHZBCUDZJGZUCHZKZKZXHAFUEZJGZLHZFAMNZUFAUCHXGXHXI
+      XPUGXQXTFYAXQXRYAHZKZCXRUHZXSBUAGHZXSIHZXIXSYDUIBUJNZVEZUKZJGZLHBYDUDZJGZ
+      LHXTYCXGXHYBXIYEXGXHXIXPYBULZXGXHXIXPYBUMZXQYBUNZXGXHXIXPYBUOZABCIXRUPUQZ
+      YCXHYBYFYNYOYAXRAXSXSOYAOZURPZYPYCYJXKXRDQZJGZLYCYJXSDXRQZJGZUUAYIUUBXSJY
+      ICUIZYHUKZXRQUUBXRYHCUSUUEDXRDUUEEUTVAVBVFYCXGUUCUUARYMXGAXRUUBQZJGZADYTQ
+      ZJGZUUCUUAUUFUUHAJDXRXRQZQZXRDDQZQZUUFUUHUUBYTUUKUUMDXRVCUUJXRDXRVDVGUULD
+      XRDVDVGVHXRDXRVIDXRDVIVHVFXGXRSHZUUBSHZUUCUUGRUUNXGFVJZTUUOXGXRDUUPVKTXRU
+      UBASSVLPXGDSHYTSHZUUAUUIRXGDUUESEXGUUDSHUUESHCXFVMUUDYHSVNVOVQUUQXGXRDUUP
+      VPTDYTASSVLPVRVOVSYCXLYTXKMNZHZUUALHXJXLXOYBVTYCUUSYTYAHZYTDWGZYCXHDYAHZU
+      USUUTUVAKWAYNYCXGXHXIUVBYMYNYPABCDYGEYGOWBWCZYAUURDYTAXKXKOYRUUROZWDPYCXH
+      YBUVBUUTYNYOUVCYAXRDAYRWEWCUVAYCXRDWFTWHUURYTXKUVDWIPWJYCYLXNYKJGZLYCXGYL
+      UVERYMXGUVEBXMYKQZJGZYLXGXMSHYKSHZUVEUVGRCXFWKXGYDSHUVHCXRXFWRYDSWKVOXMYK
+      BSSVLPYKUVFBJUVFYKUVFYKXMQZYKXMYKVCYKXMWGZUVIYKRYDCWGUVJCXRWLYDCWMWNZYKXM
+      WOWPVBUTVFWQVOYCXOYKXNMNZHZUVELHXJXLXOYBWSYCUVMYKBMNZHZUVJYCXIXMUVNHZUVMU
+      VOUVJKWAYPYCXGXHXIUVPYMYNYPABCWTWCUVNUVLXMYKBXNXNOUVNOUVLOZWDPYCYEYFXIUVO
+      YQYSYPXSBYDWTWCUVJYCUVKTWHUVLYKXNUVQWIPWJXSBYDYIYIOXAXBXCYAFAYRXDXE $.
       $( [12-Dec-2014] $)
   $}
 
