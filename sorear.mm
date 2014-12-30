@@ -13464,7 +13464,8 @@ $)
     sralmod0.z $e |- ( ph -> Z = ( 0g ` W ) ) $.
     sralmod0.s $e |- ( ph -> S C_ ( Base ` W ) ) $.
     sralmod0.w $e |- ( ph -> W e. V ) $.
-    $( The subring module inherits a zero from its ring. $)
+    $( The subring module inherits a zero from its ring.  (Contributed by
+       Stefan O'Rear, 27-Dec-2014.) $)
     sralmod0 $p |- ( ph -> Z = ( 0g ` A ) ) $=
       ( va vb c0g cfv cbs cv cplusg co wcel cvv eqidd srabase wa sraaddg adantr
       wceq oveqd elex syl csra fvex syl6eqel grpidpropd eqtrd ) AFEMNBMNHAKLEON
@@ -14794,7 +14795,7 @@ $)
     lidlval $p |- ( W e. X -> ( LIdeal ` W ) =
         ( LSubSp ` ( ringLMod ` W ) ) ) $=
       ( wcel clidl cfv clss crglmod ccom df-lidl fveq1i cvv wfn wceq rlmfn elex
-      fvco4 sylancr syl5eq ) ABCZADEAFGHZEZAGEFEZADTIJSGKLAKCUAUBMNABOKFGAPQR
+      fvco2 sylancr syl5eq ) ABCZADEAFGHZEZAGEFEZADTIJSGKLAKCUAUBMNABOKFGAPQR
       $.
       $( [6-Dec-2014] $)
 
@@ -14802,86 +14803,61 @@ $)
        6-Dec-2014.) $)
     rspval $p |- ( W e. X -> ( RSpan ` W ) =
         ( LSpan ` ( ringLMod ` W ) ) ) $=
-      ( wcel crsp cfv clspn crglmod ccom df-rsp fveq1i cvv wfn wceq rlmfn fvco4
+      ( wcel crsp cfv clspn crglmod ccom df-rsp fveq1i cvv wfn wceq rlmfn fvco2
       elex sylancr syl5eq ) ABCZADEAFGHZEZAGEFEZADTIJSGKLAKCUAUBMNABPKFGAOQR $.
       $( [6-Dec-2014] $)
   $}
 
+  $( Base set of the ring module.  (Contributed by Stefan O'Rear,
+     6-Dec-2014.) $)
+  rlmbase $p |- ( R e. X -> ( Base ` R ) = ( Base ` ( ringLMod ` R ) ) ) $=
+    ( wcel crglmod cfv cbs rlmval wss ssid a1i srabase ) ABCZADEAFEZAABGMMHLMIJ
+    K $.
+    $( [6-Dec-2014] $)
+
+  $( Vector addition in the ring module.  (Contributed by Stefan O'Rear,
+     6-Dec-2014.) $)
+  rlmplusg $p |- ( R e. X -> ( +g ` R ) = ( +g ` ( ringLMod ` R ) ) ) $=
+    ( wcel crglmod cfv cbs rlmval wss ssid a1i sraaddg ) ABCZADEAFEZAABGMMHLMIJ
+    K $.
+    $( [6-Dec-2014] $)
+
+  $( Zero vector in the ring module.  (Contributed by Stefan O'Rear,
+     6-Dec-2014.) $)
+  rlm0 $p |- ( R e. X -> ( 0g ` R ) = ( 0g ` ( ringLMod ` R ) ) ) $=
+    ( wcel crglmod cfv cbs c0g rlmval eqidd wss ssid a1i id sralmod0 ) ABCZADEA
+    FEZBAAGEZABHOQIPPJOPKLOMN $.
+    $( [6-Dec-2014] $)
+
+  $( Scalars in the ring module.  (Contributed by Stefan O'Rear,
+     6-Dec-2014.) $)
+  rlmsca $p |- ( R e. X -> R = ( Scalar ` ( ringLMod ` R ) ) ) $=
+    ( wcel cbs cfv cress co crglmod csca eqid ressid rlmval wss ssid a1i srasca
+    eqtr3d ) ABCZAADEZFGAAHEZIESABSJKRTSAABLSSMRSNOPQ $.
+    $( [6-Dec-2014] $)
+
+  $( Scalar multiplication in the ring module.  (Contributed by Stefan O'Rear,
+     6-Dec-2014.) $)
+  rlmvsca $p |- ( R e. X -> ( .r ` R ) = ( vsca ` ( ringLMod ` R ) ) ) $=
+    ( wcel crglmod cfv cbs rlmval wss ssid a1i sravsca ) ABCZADEAFEZAABGMMHLMIJ
+    K $.
+    $( [6-Dec-2014] $)
+
+  $( The ring module is a module.  (Contributed by Stefan O'Rear,
+     6-Dec-2014.) $)
+  rlmlmod $p |- ( R e. Ring -> ( ringLMod ` R ) e. LMod ) $=
+    ( crg wcel crglmod cfv cbs csra clmod rlmval csubrg subrgid sralmod eqeltrd
+    eqid syl ) ABCZADEAFEZAGEEZHABIPQAJECRHCQAQNKRQARNLOM $.
+    $( [6-Dec-2014] $)
+
   ${
-    $d ph a b $.  $d X a b $.  $d Y a b $.
-    grpidprop.x $e |- ( ph -> X e. V ) $.
-    grpidprop.y $e |- ( ph -> Y e. W ) $.
-    grpidprop.b $e |- ( ph -> ( Base ` X ) = ( Base ` Y ) ) $.
-    grpidprop.p $e |- ( ph -> ( +g ` X ) = ( +g ` Y ) ) $.
-    $( Identity depends only on the base and group operation.  (Contributed by
-       Stefan O'Rear, 6-Dec-2014.) $)
-    grpidprop $p |- ( ph -> ( 0g ` X ) = ( 0g ` Y ) ) $=
-      ( va vb cv cplusg cfv co wceq cbs wral crio eqid oveqd eqeq1d riotaeqbidv
-      c0g raleqbidv wcel grpidval syl 3eqtr4d ) AJLZKLZDMNZOZUKPZKDQNZRZJUOSZUJ
-      UKEMNZOZUKPZKEQNZRZJVASZDUDNZEUDNZAUPVBJUOVAHAUNUTKUOVAHAUMUSUKAULURUJUKI
-      UAUBUEUCADBUFVDUQPFKUOULJDVDBUOTULTVDTUGUHAECUFVEVCPGKVAURJEVECVATURTVETU
-      GUHUI $.
-      $( [6-Dec-2014] $)
-
-    $( Negation depends only on the base and group operation.  (Contributed by
-       Stefan O'Rear, 6-Dec-2014.) $)
-    grpnegprop $p |- ( ph -> ( invg ` X ) = ( invg ` Y ) ) $=
-      ( va vb cbs cfv cv cplusg co c0g wceq crio eqid cminusg grpidprop eqeq12d
-      cmpt oveqd riotaeqbidv mpteq12dv wcel grpinvfval syl 3eqtr4d ) AJDLMZKNZJ
-      NZDOMZPZDQMZRZKULSZUDZJELMZUMUNEOMZPZEQMZRZKVASZUDZDUAMZEUAMZAJULUSVAVFHA
-      URVEKULVAHAUPVCUQVDAUOVBUMUNIUEABCDEFGHIUBUCUFUGADBUHVHUTRFJKULUODVHUQBUL
-      TUOTUQTVHTUIUJAECUHVIVGRGJKVAVBEVIVDCVATVBTVDTVITUIUJUK $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    $( Base set of the ring module.  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    rlmbase $p |- ( R e. X -> ( Base ` R ) = ( Base ` ( ringLMod ` R ) ) ) $=
-      ( wcel crglmod cfv cbs rlmval wss ssid a1i srabase ) ABCZADEAFEZAABGMMHLM
-      IJK $.
-      $( [6-Dec-2014] $)
-
-    $( Vector addition in the ring module.  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    rlmplusg $p |- ( R e. X -> ( +g ` R ) = ( +g ` ( ringLMod ` R ) ) ) $=
-      ( wcel crglmod cfv cbs rlmval wss ssid a1i sraaddg ) ABCZADEAFEZAABGMMHLM
-      IJK $.
-      $( [6-Dec-2014] $)
-
-    $( Zero vector in the ring module.  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    rlm0 $p |- ( R e. X -> ( 0g ` R ) = ( 0g ` ( ringLMod ` R ) ) ) $=
-      ( wcel crglmod cfv cbs c0g rlmval eqidd wss ssid a1i id sralmod0 ) ABCZAD
-      EAFEZBAAGEZABHOQIPPJOPKLOMN $.
-      $( [6-Dec-2014] $)
-
-    $( Scalars in the ring module.  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    rlmsca $p |- ( R e. X -> R = ( Scalar ` ( ringLMod ` R ) ) ) $=
-      ( wcel cbs cfv cress co crglmod csca eqid ressid rlmval wss srasca eqtr3d
-      ssid a1i ) ABCZAADEZFGAAHEZIESABSJKRTSAABLSSMRSPQNO $.
-      $( [6-Dec-2014] $)
-
-    $( Scalar multiplication in the ring module.  (Contributed by Stefan
-       O'Rear, 6-Dec-2014.) $)
-    rlmvsca $p |- ( R e. X -> ( .r ` R ) = ( vsca ` ( ringLMod ` R ) ) ) $=
-      ( wcel crglmod cfv cbs rlmval wss ssid a1i sravsca ) ABCZADEAFEZAABGMMHLM
-      IJK $.
-      $( [6-Dec-2014] $)
-
-    $( The ring module is a module.  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    rlmlmod $p |- ( R e. Ring -> ( ringLMod ` R ) e. LMod ) $=
-      ( crg wcel crglmod cfv cbs csra clmod rlmval eqid subrgid sralmod eqeltrd
-      csubrg syl ) ABCZADEAFEZAGEEZHABIPQANECRHCQAQJKRQARJLOM $.
-      $( [6-Dec-2014] $)
-
+    $d x y R $.  $d x y X $.
     $( Vector negation in the ring module.  (Contributed by Stefan O'Rear,
        6-Dec-2014.) $)
     rlmvneg $p |- ( R e. X -> ( invg ` R ) = ( invg ` ( ringLMod ` R ) ) ) $=
-      ( wcel cvv crglmod cfv id fvex a1i rlmbase rlmplusg grpnegprop ) ABCZBDAA
-      EFZMGNDCMAEHIABJABKL $.
+      ( vx vy wcel cbs cfv crglmod eqidd rlmbase cv cplusg co wa rlmplusg oveqd
+      wceq adantr elex cvv fvex a1i grpinvpropd ) ABEZCDAFGZAAHGZUDUEIABJUDCKZD
+      KZALGZMUGUHUFLGZMQUGUEEUHUEENUDUIUJUGUHABOPRABSUFTEUDAHUAUBUC $.
       $( [6-Dec-2014] $)
   $}
 
@@ -15002,7 +14978,6 @@ $)
         $( [6-Dec-2014] $)
     $}
   $}
-
 
   ${
     rspcl.r $e |- ( ph -> R e. Ring ) $.
@@ -15828,18 +15803,18 @@ $)
       fveq1d adantr snssd sselda eqeq1 ifbid eqid ax-1cn elexi ifex fvmpt elsni
       weq 0cn iftrue adantl oveq1d syldan mulid2 sumeq2dv keepel syl6eqel mulcl
       syl2anc cdif eldifi wn eldifn sylnib iffalse mul02 fsumss wi eleq1 anbi2d
-      elsn csbeq1 eleq1d imbi12d ax-17 vex wel hbcsb1 hbel csbeq1a chvar vtoclg
-      hbim anabsi7 mpdan sumsns 3eqtr3d ) AGUBZDUCZFUDZBLUEZDUFXBBDUFZCXEDUFDGB
-      UGZAXBXEBDAXCXBMZNZXEOBLUEZBXIXDOBLXIXDXCGPZOQUHZOXIXDXCECEUCZGPZOQUHZUIZ
-      UDZXLAXDXQPZXHAXCFXPHUJZUKXIXCCMZXQXLPZAXBCXCAGCJULZUMZEXCXOXLCXPEDVBXNXK
-      OQXMXCGUNUOXPUPXKOQORUQURQRVCURUSUTZSTZXHXLOPZAXHXKYFXCGVAXKOQVDSVETVFXIB
-      RMZXJBPAXHXTYGYCKVGZBVHSTVIAXBCXEDYBXIXDRMYGXERMXIXDXLRYEXKOQRUQVCVJVKYHX
-      DBVLVMAXCCXBVNMZNZXEQBLUEZQYJXDQBLYJXDXLQYJXDXQXLAXRYIXSUKYJXTYAYIXTAXCCX
-      BVOVEZYDSTYIXLQPZAYIXKVPYMYIXHXKXCCXBVQDGWEVRXKOQVSSVETVFYJYGYKQPAYIXTYGY
-      LKVGBVTSTIWAAGCMZXGRMZXFXGPJAYNYOJAYNYOAXMCMZNZDXMBUGZRMZWBZAYNNZYOWBEGCX
-      NYQUUAYSYOXNYPYNAXMGCWCWDXNYRXGRDXMGBWFWGWHAXTNZYGWBYTDEYQYSDYQDWIDUAEYRR
-      DUAXMBEWJUAEWKDWIWLXMRMDWIWMWQDEVBZUUBYQYGYSUUCXTYPAXCXMCWCWDUUCBYRRDXMBW
-      NWGWHKWOWPWRWSBDGCWTVMXA $.
+      elsn csbeq1 eleq1d imbi12d ax-17 hbcsb1 hbel csbeq1a chvar vtoclg anabsi7
+      wel hbim mpdan sumsns 3eqtr3d ) AGUBZDUCZFUDZBLUEZDUFXABDUFZCXDDUFDGBUGZA
+      XAXDBDAXBXAMZNZXDOBLUEZBXHXCOBLXHXCXBGPZOQUHZOXHXCXBECEUCZGPZOQUHZUIZUDZX
+      KAXCXPPZXGAXBFXOHUJZUKXHXBCMZXPXKPZAXACXBAGCJULZUMZEXBXNXKCXOEDVBXMXJOQXL
+      XBGUNUOXOUPXJOQORUQURQRVCURUSUTZSTZXGXKOPZAXGXJYEXBGVAXJOQVDSVETVFXHBRMZX
+      IBPAXGXSYFYBKVGZBVHSTVIAXACXDDYAXHXCRMYFXDRMXHXCXKRYDXJOQRUQVCVJVKYGXCBVL
+      VMAXBCXAVNMZNZXDQBLUEZQYIXCQBLYIXCXKQYIXCXPXKAXQYHXRUKYIXSXTYHXSAXBCXAVOV
+      EZYCSTYHXKQPZAYHXJVPYLYHXGXJXBCXAVQDGWEVRXJOQVSSVETVFYIYFYJQPAYHXSYFYKKVG
+      BVTSTIWAAGCMZXFRMZXEXFPJAYMYNJAYMYNAXLCMZNZDXLBUGZRMZWBZAYMNZYNWBEGCXMYPY
+      TYRYNXMYOYMAXLGCWCWDXMYQXFRDXLGBWFWGWHAXSNZYFWBYSDEYPYRDYPDWIDUAEYQRDUAXL
+      BUAEWPDWIWJXLRMDWIWKWQDEVBZUUAYPYFYRUUBXSYOAXBXLCWCWDUUBBYQRDXLBWLWGWHKWM
+      WNWOWRBDGCWSVMWT $.
       $( [5-Dec-2014] $)
   $}
 
