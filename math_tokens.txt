@@ -73,9 +73,6 @@ htmldef "degAA" as "deg<SUB>AA</SUB>";
 htmldef "minPolyAA" as "minPolyAA";
   althtmldef "minPolyAA" as "minPolyAA";
   latexdef "minPolyAA" as "{\rm minPolyAA}";
-htmldef "SubRing" as "SubRing";
-  althtmldef "SubRing" as "SubRing";
-  latexdef "SubRing" as "{\rm SubRing}";
 htmldef "RingSpan" as "RingSpan";
   althtmldef "RingSpan" as "RingSpan";
   latexdef "RingSpan" as "{\rm RingSpan}";
@@ -112,9 +109,6 @@ htmldef "homGrp" as " homGrp ";
 htmldef "homLM" as " homLM ";
   althtmldef "homLM" as " homLM ";
   latexdef "homLM" as "{\rm homLM}";
-htmldef "RSpan" as "RSpan";
-  althtmldef "RSpan" as "RSpan";
-  latexdef "RSpan" as "{\rm RSpan}";
 htmldef "LIdeal" as "LIdeal";
   althtmldef "LIdeal" as "LIdeal";
   latexdef "LIdeal" as "{\rm LIdeal}";
@@ -124,6 +118,9 @@ htmldef "LPIR" as "LPIR";
 htmldef "Poly<" as " Poly<sub>&lt;</sub> ";
   althtmldef "Poly<" as " Poly<sub>&lt;</sub> ";
   latexdef "Poly<" as "{\rm Poly<}";
-
+htmldef "Monic" as
+    " <IMG SRC='_monic.gif' WIDTH=38 HEIGHT=19 TITLE='Monic' ALIGN=TOP> ";
+  althtmldef "Monic" as " Monic ";
+  latexdef "Monic" as "{\rm Monic}";
 /* End of mathbox of Stefan O'Rear */
 
