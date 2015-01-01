@@ -15025,9 +15025,10 @@ $)
 
   ${
     $d ph a b $.  $d W a b $.  $d B a b $.
-    islmodfg.b $e |- B = ( Base ` W ) $.
+    islmodfgOLD.b $e |- B = ( Base ` W ) $.
     $( Property of a finitely generated left module. $)
-    islmodfg $p |- ( W e. LMod -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin /\
+    islmodfgOLD $p |- ( W e. LMod -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin
+        /\
           ( ( LSpan ` W ) ` b ) = B ) ) ) $=
       ( va clmod wcel clfig cv cbs cfv clspn cpw cfn cin cima wceq wa wb eqid
       crab wrex df-lfig eleq2i fveq2 imaeq1d pweqd ineq1d imaeq2d eqtrd eleq12d
@@ -15044,19 +15045,58 @@ $)
 
   ${
     $d ph a b $.  $d W a b $.  $d X a b $.  $d S a b $.  $d U a b $.
-    islssfg.x $e |- X = ( W |`s U ) $.
-    islssfg.s $e |- S = ( LSubSp ` W ) $.
+    islssfgOLD.x $e |- X = ( W |`s U ) $.
+    islssfgOLD.s $e |- S = ( LSubSp ` W ) $.
     $( Property of a finitely generated left (sub-)module. $)
-    islssfg $p |- ( ( W e. LMod /\ U e. S ) -> ( X e. LFinGen <->
+    islssfgOLD $p |- ( ( W e. LMod /\ U e. S ) -> ( X e. LFinGen <->
           E. b e. ~P U ( b e. Fin /\ ( ( LSpan ` W ) ` b ) = U ) ) ) $=
       ( clmod wcel wa cv clspn cfv cbs wceq cpw wrex wss eqid syl clfig rexeqdv
       cfn lssss ressbas2 pweqd elpwi eqid1 lsslsp 3expa sylan2 eqeq12d rexbidva
-      adantr anbi2d wb lsslmod islmodfg 3bitr4rd ) CHIZBAIZJZEKZUCIZVCDLMZMZDNM
+      adantr anbi2d wb lsslmod islmodfgOLD 3bitr4rd ) CHIZBAIZJZEKZUCIZVCDLMZMZDNM
       ZOZJZEBPZQVIEVGPZQZVDVCCLMZMZBOZJZEVJQDUAIZVBVIEVJVKVBBVGVBBCNMZRBVGOZABV
       RCHVRSZGUDBVRDCFVTUETZUFUBVBVPVIEVJVBVCVJIZJZVOVHVDWCVNVFBVGWBVBVCBRZVNVF
       OZVCBUGUTVAWDWEABVCVMVECDGFVMUHVESUIUJUKVBVSWBWAUNULUOUMVBDHIVQVLUPABCDFG
       UQVGDEVGSURTUS $.
       $( [12-Dec-2014] $)
+  $}
+
+  ${
+    $d ph a b $.  $d W a b $.  $d B a b $.  $d N a b $.
+    islmodfg.b $e |- B = ( Base ` W ) $.
+    islmodfg.n $e |- N = ( LSpan ` W ) $.
+    $( Property of a finitely generated left module. $)
+    islmodfg $p |- ( W e. LMod -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin /\
+          ( N ` b ) = B ) ) ) $=
+      ( va clmod wcel clfig cv cbs cfv clspn cpw cfn cin cima wceq wa crab wrex
+      wb df-lfig eleq2i fveq2 syl6eqr imaeq1d pweqd ineq1d imaeq2d eqtrd elrab3
+      a1i eleq12d wfn wss clss wf eqid lspf ffn syl inss1 fvelimab sylancl elin
+      eqcomi pweqi anbi1i bitri eqeq2i anbi12i anass rexbii2 syl6bb 3bitrd ) CH
+      IZCJIZCGKZLMZVTNMZWAOZPQZRZIZGHUAZIZCLMZBWIOZPQZRZIZDKZPIZWNBMZASZTZDAOZU
+      BZVSWHUCVRJWGCGUDUEUNWFWMGCHVTCSZWAWIWEWLVTCLUFZXAWEBWDRWLXAWBBWDXAWBCNMB
+      VTCNUFFUGUHXAWDWKBXAWCWJPXAWAWIXBUIUJUKULUOUMVRWMWPWISZDWKUBZWTVRBWJUPZWK
+      WJUQWMXDUCVRWJCURMZBUSXEXFBWICWIUTXFUTFVAWJXFBVBVCWJPVDDWJWKWIBVEVFXCWRDW
+      KWSWNWKIZXCTWNWSIZWOTZWQTXHWRTXGXIXCWQXGWNWJIZWOTXIWNWJPVGXJXHWOWJWSWNWIA
+      AWIEVHZVIUEVJVKWIAWPXKVLVMXHWOWQVNVKVOVPVQ $.
+      $( [1-Jan-2015] $)
+  $}
+
+  ${
+    $d ph a b $.  $d W a b $.  $d X a b $.  $d S a b $.  $d U a b $.
+    $d N a b $.
+    islssfg.x $e |- X = ( W |`s U ) $.
+    islssfg.s $e |- S = ( LSubSp ` W ) $.
+    islssfg.n $e |- N = ( LSpan ` W ) $.
+    $( Property of a finitely generated left (sub-)module. $)
+    islssfg $p |- ( ( W e. LMod /\ U e. S ) -> ( X e. LFinGen <->
+          E. b e. ~P U ( b e. Fin /\ ( N ` b ) = U ) ) ) $=
+      ( clmod wcel wa cfv cbs wceq cpw wrex wss eqid syl cv clspn clfig rexeqdv
+      cfn lssss ressbas2 pweqd elpwi lsslsp 3expa sylan2 adantr anbi2d rexbidva
+      eqeq12d wb lsslmod eqid1 islmodfg 3bitr4rd ) DJKZBAKZLZFUAZUEKZVEEUBMZMZE
+      NMZOZLZFBPZQVKFVIPZQZVFVECMZBOZLZFVLQEUCKZVDVKFVLVMVDBVIVDBDNMZRBVIOZABVS
+      DJVSSZHUFBVSEDGWAUGTZUHUDVDVQVKFVLVDVEVLKZLZVPVJVFWDVOVHBVIWCVDVEBRZVOVHO
+      ZVEBUIVBVCWEWFABVECVGDEHGIVGSZUJUKULVDVTWCWBUMUPUNUOVDEJKVRVNUQABDEGHURVI
+      VGEFVIUSWGUTTVA $.
+      $( [1-Jan-2015] $)
   $}
 
 $(
@@ -15092,7 +15132,7 @@ $)
   $}
 
   ${
-    $d M a $.  $d U a $.  $d S a $.
+    $d M a $.  $d U a $.  $d S a $.  $d R a $.
     $( A Noetherian left module is a left module. $)
     lnmlmod $p |- ( M e. LNoeM -> M e. LMod ) $=
       ( va clnm wcel clmod cv cress co clfig clss cfv wral eqid islnm simplbi )
@@ -15100,34 +15140,46 @@ $)
       $( [12-Dec-2014] $)
 
     ${
-      lnmlssfg.s $e |- S = ( LSubSp ` M ) $.
+      lnmlssfgOLD.s $e |- S = ( LSubSp ` M ) $.
       $( A submodule of Noetherian module is finitely generated. $)
-      lnmlssfg $p |- ( ( M e. LNoeM /\ U e. S ) -> ( M |`s U ) e. LFinGen ) $=
+      lnmlssfgOLD $p |- ( ( M e. LNoeM /\ U e. S ) -> ( M |`s U ) e. LFinGen )
+          $=
         ( va clnm wcel cv cress co clfig wral clmod islnm simprbi eleq1d rcla4v
         wceq oveq2 mpan9 ) CFGZCEHZIJZKGZEALZBAGCBIJZKGZUACMGUEAECDNOUDUGEBAUBB
         RUCUFKUBBCISPQT $.
         $( [12-Dec-2014] $)
+    $}
+
+    ${
+      lnmlssfg.s $e |- S = ( LSubSp ` M ) $.
+      lnmlssfg.r $e |- R = ( M |`s U ) $.
+      $( A submodule of Noetherian module is finitely generated. $)
+      lnmlssfg $p |- ( ( M e. LNoeM /\ U e. S ) -> R e. LFinGen ) $=
+        ( va clnm wcel cv cress co clfig wral clmod islnm simprbi oveq2 syl6eqr
+        wceq eleq1d rcla4v mpan9 ) DHIZDGJZKLZMIZGBNZCBIAMIZUDDOIUHBGDEPQUGUIGC
+        BUECTZUFAMUJUFDCKLAUECDKRFSUAUBUC $.
+        $( [1-Jan-2015] $)
 
       $( All submodules of a Noetherian module are Noetherian. $)
-      lnmlsslnm $p |- ( ( M e. LNoeM /\ U e. S ) -> ( M |`s U ) e. LNoeM ) $=
-        ( va clnm wcel wa cress clmod clfig cfv sylan cin wceq cvv wss cbs eqid
-        co cv clss wral lnmlmod eqid1 lsslmod vex ressress mpan2 ad2antlr incom
-        simpll ovex lssss mpan adantl ressbas2 syl adantr sseqtr4d df-ss syl5eq
-        sylib lsslss simprbda eqeltrd lnmlssfg syl2anc ralrimiva islnm sylanbrc
-        wb ) CFGZBAGZHZCBITZJGZVPEUAZITZKGZEVPUBLZUCVPFGVMCJGZVNVQCUDZABCVPVPUE
-        ZDUFMVOVTEWAVOVRWAGZHZVSCBVRNZITZKVNVSWHOZVMWEVNVRPGWIEUGBVRCAPUHUIUJWF
-        VMWGAGWHKGVMVNWEULWFWGVRAWFWGVRBNZVRBVRUKWFVRBQZWJVROWFVRVPRLZBWEVRWLQZ
-        VOVPPGWEWMCBIUMWAVRWLVPPWLSWASZUNUOUPVOBWLOZWEVOBCRLZQWOABWPCFWPSZDUNBW
-        PVPCVPSWQUQURUSUTVRBVAVCVBVOWEVRAGZWKVMWBVNWEWRWKHVLWCAWABVRCVPWDDWNVDM
-        VEVFAWGCDVGVHVFVIWAEVPWNVJVK $.
-        $( [12-Dec-2014] $)
+      lnmlsslnm $p |- ( ( M e. LNoeM /\ U e. S ) -> R e. LNoeM ) $=
+        ( va clnm wcel wa clmod cress co clfig cfv sylan wceq cvv wss eqid clss
+        cv lnmlmod lsslmod cin vex oveq1i ressress syl5eq mpan2 ad2antlr simpll
+        wral incom cbs ovex eqeltri lssss mpan adantl ressbas2 syl adantr df-ss
+        sseqtr4d sylib lsslss simprbda eqeltrd lnmlssfg syl2anc ralrimiva islnm
+        wb sylanbrc ) DHIZCBIZJZAKIZAGUBZLMZNIZGAUAOZUMAHIVPDKIZVQVSDUCZBCDAFEU
+        DPVRWBGWCVRVTWCIZJZWADCVTUEZLMZNVQWAWIQZVPWFVQVTRIZWJGUFVQWKJWADCLMZVTL
+        MWIAWLVTLFUGCVTDBRUHUIUJUKWGVPWHBIWINIVPVQWFULWGWHVTBWGWHVTCUEZVTCVTUNW
+        GVTCSZWMVTQWGVTAUOOZCWFVTWOSZVRARIWFWPAWLRFDCLUPUQWCVTWOARWOTWCTZURUSUT
+        VRCWOQZWFVRCDUOOZSWRBCWSDHWSTZEURCWSADFWTVAVBVCVEVTCVDVFUIVRWFVTBIZWNVP
+        WDVQWFXAWNJVNWEBWCCVTDAFEWQVGPVHVIWIBWHDEWITVJVKVIVLWCGAWQVMVO $.
+        $( [1-Jan-2015] $)
     $}
 
     $( A Noetherian left module is finitely generated. $)
     lnmfg $p |- ( M e. LNoeM -> M e. LFinGen ) $=
       ( clnm wcel cbs cfv cress co clfig eqid ressid clss lnmlmod lss1 lnmlssfg
       clmod syl mpdan eqeltrrd ) ABCZAADEZFGZAHTABTIZJSTAKEZCZUAHCSAOCUDALUCTAU
-      BUCIZMPUCTAUENQR $.
+      BUCIZMPUAUCTAUEUAINQR $.
       $( [12-Dec-2014] $)
   $}
 
@@ -15154,7 +15206,7 @@ $)
       adantr wb mpbid csg cplusg lmodgrp ad2antrr simplr simprl sseldd grpnpcan
       cgrp syl3anc clss lspcl ssun2 lspss eqsstrd eqcom chgrp hlmhgrp hgrpeqker
       eqcomd 3jca sselda syl12anc syl5bb biimpd ssun1 lssvacl eqeltrrd rexlimdv
-      impr exp32 mpd ex ssrdv eqssd eleq1 fveq2 eqeq1d anbi12d rcla4ev islmodfg
+      impr exp32 mpd ex ssrdv eqssd eleq1 fveq2 eqeq1d anbi12d rcla4ev islmodfgOLD
       mpbird 3exp syl5bi ) AFUAUDZUEZCRZUADUFSZUGZUHUIZUPZDUJTZAFUUOUKZUUOULTZC
       FUMZUNCUHTUURAUUOEUFSZFUOZUUTAFDEUQURTZEUSTZUVDHJUUOUVCDEFUSUUOUTZUVCUTVA
       VBZUUOUVCFVCVDZUVAADUFVEZVJPOCUUOFULUAVFVGAUUNUUSUAUUQUULUUQTZUULUUOUNZUU
@@ -15195,7 +15247,7 @@ $)
         ( ( S |`s K ) e. LFinGen /\ ( T |`s ran F ) e. LFinGen ) ) ->
           S e. LFinGen ) $=
       ( va vb co wcel clmod cress clfig wa cv cfn clspn cfv wceq cpw eqid simp2
-      chlm w3a crn wrex clss c0g eqid1 hlmkerlss islssfg syl2anc simp3 hlmrnlss
+      chlm w3a crn wrex clss c0g eqid1 hlmkerlss islssfgOLD syl2anc simp3 hlmrnlss
       wb anbi12d simpll1 simpll2 simpll3 simprrl adantr wss simplrl syl simprrr
       wi elpwi ad2antrl hlmfgsplitlem exp32 rexlimdv imp3a sylbid imp ) CABUBHI
       ZAJIZBJIZUCZADKHZLIZBCUDZKHZLIZMZALIZVQWCFNZOIZWEAPQQDRZMZFDSZUEZGNZOIZWK
@@ -15217,7 +15269,7 @@ $)
       simpll3 reshlm syl31anc lsslmod cnvresima eqcomi ineq1i eqtri incom inidm
       csn oveq2i ineq2i 3eqtr4i in12 vex inex2 ressress cnvexg imaexg syl inex1
       syl5eqel 3eqtr4a syl5eq simplrl wb hlmkerlss syl3anc lsslss lssincl inss2
-      wss mpbir2and lnmlssfg eqeltrd rnexg resss rnss ax-mp df-ss mpbi syl6reqr
+      wss mpbir2and lnmlssfgOLD eqeltrd rnexg resss rnss ax-mp df-ss mpbi syl6reqr
       resexg simplrr hlmrnlss hlmfgsplit syl32anc ralrimiva islnm sylanbrc ) CA
       BUAGZHZAIHZBIHZUBZADJGZUCHZBCUDZJGZUCHZKZKZXHAFUEZJGZLHZFAMNZUFAUCHXGXHXI
       XPUGXQXTFYAXQXRYAHZKZCXRUHZXSBUAGHZXSIHZXIXSYDUIBUJNZVEZUKZJGZLHBYDUDZJGZ
