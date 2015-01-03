@@ -13730,8 +13730,6 @@ $)
     $d B a b $.  $d G a b $.
     idghm.b $e |- B = ( Base ` G ) $.
     $( The identity homomorphism on a group. $)
-
-    $( The identity homomorphism on a group. $)
     idghm $p |- ( G e. Grp -> ( _I |` B ) e. ( G GrpHom G ) ) $=
       ( va vb cgrp wcel cid cres cghm co wa wf cplusg cfv wceq wral eqid fvresi
       cv isghm jca grpcl 3expb syl oveqan12d adantl eqtr4d ralrimivva wf1o f1oi
@@ -14584,38 +14582,6 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Commutative rings.  Divisibility in the integers.
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  $c ComRing $.
-
-  $( The class of commutative rings. $)
-  ccrng $a class ComRing $.
-
-  ${
-    $d r x y $.
-
-    $( A ring is said to be commutative iff its multiplication operation is. $)
-    df-crng $a |- ComRing = { r e. Ring | A. x e. ( Base ` r )
-        A. y e. ( Base ` r ) ( x ( .r ` r ) y ) = ( y ( .r ` r ) x ) } $.
-  $}
-
-  $( Property of a commutative ring. $)
-
-  $( Commutative rings are rings. $)
-
-  $( Commutative rings are commutative. $)
-
-  $( Subrings of commutative rings are commutative. $)
-
-  $( Divisibility in the integers. $)
-
-  $( Divisibility as a ring property. $)
-
-  $( Right divisibility in a commutative ring. $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
