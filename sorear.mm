@@ -14448,23 +14448,6 @@ $)
   $}
 
   ${
-    lssvnegcld.u $e |- ( ph -> U e. S ) $.
-    lssvnegcld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    lssvnegcld.w $e |- ( ph -> W e. LMod ) $.
-    lssvnegcld.x $e |- ( ph -> X e. U ) $.
-    $( A linear subspace contains negatives of all its vectors.  (Contributed
-       by Stefan O'Rear, 6-Dec-2014.) $)
-    lssvnegcld $p |- ( ph -> ( ( invg ` W ) ` X ) e. U ) $=
-      ( csca cfv cur cminusg clmod wcel cbs eqid syl2anc eqidd syl co wceq clss
-      cvsca wss eleqtrd lssss sseldd lmodvneg1 cgrp lmodfgrp rngidcld grpinvcld
-      crg lmodrng lssvscld eqeltrrd ) ADJKZLKZURMKZKZEDUDKZUAZEDMKZKZCADNOZEDPK
-      ZOVCVEUBHACVGEAVFCDUCKZOCVGUEHACBVHFGUFVHCVGDNVGQZVHQUGRIUHVBUSURUTVDVGDE
-      VIVDQURQZVBQUSQUTQUIRAURPKZBVBCURDVAEAURSAVBSAVKSZGHFAVKURUTUSAVFURUJOHUR
-      DVJUKTVLAUTSAVKURUSAVFURUNOHURDVJUOTVLAUSSULUMIUPUQ $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
     lsslss.x $e |- X = ( W |`s U ) $.
     lsslss.s $e |- S = ( LSubSp ` W ) $.
     lsslss.t $e |- T = ( LSubSp ` X ) $.
@@ -14790,6 +14773,39 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Commutative rings.  Divisibility in the integers.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c ComRing $.
+
+  $( The class of commutative rings. $)
+  ccrng $a class ComRing $.
+
+  ${
+    $d r x y $.
+
+    $( A ring is said to be commutative iff its multiplication operation is. $)
+    df-crng $a |- ComRing = { r e. Ring | A. x e. ( Base ` r )
+        A. y e. ( Base ` r ) ( x ( .r ` r ) y ) = ( y ( .r ` r ) x ) } $.
+  $}
+
+  $( Property of a commutative ring. $)
+
+  $( Commutative rings are rings. $)
+
+  $( Commutative rings are commutative. $)
+
+  $( Subrings of commutative rings are commutative. $)
+
+  $( Divisibility in the integers. $)
+
+  $( Divisibility as a ring property. $)
+
+  $( Right divisibility in a commutative ring. $)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Elementary theory of ideals, examples of PIDs
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -15086,96 +15102,203 @@ $)
   $}
 
   ${
+    $d I x $.  $d Z x $.
+    lidlnz.u $e |- U = ( LIdeal ` R ) $.
+    lidlnz.z $e |- Z = ( 0g ` R ) $.
+    $( A nonzero ideal contains a nonzero element. $)
+    lidlnz $p |- ( ( R e. Ring /\ I e. U /\ I =/= { Z } ) ->
+        E. x e. I x =/= Z ) $=
+      ( crg wcel csn wne w3a cv wn wa wex wrex wpss wss lidl0cl necomd sylanbrc
+      snssd 3adant3 simp3 df-pss pssnel syl elsn necon3bbii anbi2i exbii df-rex
+      bitr4i sylib ) BHIZDCIZDEJZKZLZAMZDIZVAURIZNZOZAPZVAEKZADQZUTURDRZVFUTURD
+      SZURDKVIUPUQVJUSUPUQOEDBCDEFGTUCUDUTDURUPUQUSUEUAURDUFUBAURDUGUHVFVBVGOZA
+      PVHVEVKAVDVGVBVCVAEAEUIUJUKULVGADUMUNUO $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
     $d U a b $.  $d R a b $.  $d B a b $.  $d Z a b $.
     drngnidl.b $e |- B = ( Base ` R ) $.
     drngnidl.z $e |- Z = ( 0g ` R ) $.
     drngnidl.u $e |- U = ( LIdeal ` R ) $.
     $( A division ring has only the two trivial ideals. $)
     drngnidl $p |- ( R e. DivRing -> U = { { Z } , B } ) $=
-      ( va vb cdr wcel cv wa wceq simpr wne cfv wss adantr eqid csn cpr wo orcd
-      cur wel wn wex wpss crg drngrng sylan snssd necomd df-pss sylanbrc pssnel
-      lidl0cl syl wi cinvr cmulr co simpll lidlss adantrr elsn biimpri necon3bi
-      sselda ad2antll drnginvrl syl3anc ad2antrr simplr simprl lidlmcl syl22anc
-      drnginvrcl eqeltrrd ex exlimdv mpd lidl1el mpbid olcd pm2.61dane vex elpr
-      wb sylibr ssrdv lidl0 lidl1 snex cbs cvv fvex eqeltri prss bicomi eqssd )
-      BJKZCDUAZAUBZXCHCXEXCHLZCKZXFXEKZXCXGMZXFXDNZXFANZUCZXHXIXLXFXDXIXJMXJXKX
-      IXJOUDXIXFXDPZMZXKXJXNBUEQZXFKZXKXNIHUFZILZXDKZUGZMZIUHZXPXNXDXFUIZYBXNXD
-      XFRXDXFPYCXNDXFXIDXFKZXMXCBUJKZXGYDBUKZBCXFDGFURULSUMXNXFXDXIXMOUNXDXFUOU
-      PIXDXFUQUSXIYBXPUTXMXIYAXPIXIYAXPXIYAMZXRBVAQZQZXRBVBQZVCZXOXFYGXCXRAKZXR
-      DPZYKXONXCXGYAVDZXIXQYLXTXIXFAXRAXFCJBEGVEVJVFZXTYMXIXQXSXRDXSXRDNIDVGVHV
-      IVKZABYJXOYHXRDEFYJTZXOTZYHTZVLVMYGYEXGYIAKZXQYKXFKXCYEXGYAYFVNXCXGYAVOYG
-      XCYLYMYTYNYOYPABYHXRDEFYSVSVMXIXQXTVPABYJCXFYIXRGEYQVQVRVTWAWBSWCXIXPXKWJ
-      ZXMXCYEXGUUAYFABCXFXOGEYRWDULSWEWFWGXFXDAHWHWIWKWAWLXCYEXECRZYFYEXDCKZACK
-      ZUUBBCDGFWMABCGEWNUUCUUDMUUBXDACDWOABWPQWQEBWPWRWSWTXAUPUSXB $.
+      ( va vb cdr wcel cv wa wceq simpr wne cfv ad2antrr syl3anc eqid orcd wrex
+      csn cpr wo cur crg drngrng simplr lidlnz wel cinvr cmulr co simpll lidlss
+      sselda adantrr simprr drnginvrl drnginvrcl simprl syl22anc eqeltrrd exp32
+      lidlmcl rexlimdv imp syldan wb lidl1el sylan adantr mpbid olcd pm2.61dane
+      vex elpr sylibr ex ssrdv wss lidl0 lidl1 snex cbs cvv fvex eqeltri bicomi
+      prss sylanbrc syl eqssd ) BJKZCDUCZAUDZWOHCWQWOHLZCKZWRWQKZWOWSMZWRWPNZWR
+      ANZUEZWTXAXDWRWPXAXBMXBXCXAXBOUAXAWRWPPZMZXCXBXFBUFQZWRKZXCXAXEILZDPZIWRU
+      BZXHXFBUGKZWSXEXKWOXLWSXEBUHZRWOWSXEUIXAXEOIBCWRDGFUJSXAXKXHXAXJXHIWRXAIH
+      UKZXJXHXAXNXJMZMZXIBULQZQZXIBUMQZUNZXGWRXPWOXIAKZXJXTXGNWOWSXOUOZXAXNYAXJ
+      XAWRAXIAWRCJBEGUPUQURZXAXNXJUSZABXSXGXQXIDEFXSTZXGTZXQTZUTSXPXLWSXRAKZXNX
+      TWRKWOXLWSXOXMRWOWSXOUIXPWOYAXJYHYBYCYDABXQXIDEFYGVASXAXNXJVBABXSCWRXRXIG
+      EYEVFVCVDVEVGVHVIXAXHXCVJZXEWOXLWSYIXMABCWRXGGEYFVKVLVMVNVOVPWRWPAHVQVRVS
+      VTWAWOXLWQCWBZXMXLWPCKZACKZYJBCDGFWCABCGEWDYKYLMYJWPACDWEABWFQWGEBWFWHWIW
+      KWJWLWMWN $.
       $( [3-Jan-2015] $)
   $}
 
-  $(
-  @{
-    @d ph r i g @.  @d I r i g @.  @d B r i g @.  @d R r i g @.
-    islpir.i @e |- ( ph -> I = ( LIdeal ` R ) ) @.
-    islpir.b @e |- ( ph -> B = ( Base ` R ) ) @.
-    islpir.k @e |- ( ph -> K = ( RSpan ` R ) ) @.
-    @( Property of a left principal ideal ring. @)
-    islpir @p |- ( ph -> ( R e. LPIR <-> ( R e. Ring /\
-          A. i e. I E. g e. B i = ( K ` { g } ) ) ) ) @=
-      ( vr cv cfv wceq wrex wral crsp cbs clidl fveq2 crg wcel csn clpir fveq1d
-      wa eqeq2d rexeqbidv raleqbidv anbi2d df-lpir elrab2 syl6rbbr ) ACUAUBZELZ
-      DLUCZGMZNZDBOZEFPZUFUNUOUPCQMZMZNZDCRMZOZECSMZPZUFCUDUBAUTVGUNAUSVEEFVFHA
-      URVCDBVDIAUQVBUOAUPGVAJUEUGUHUIUJUOUPKLZQMZMZNZDVHRMZOZEVHSMZPVGKCUAUDVHC
-      NZVMVEEVNVFVHCSTVOVKVCDVLVDVHCRTVOVJVBUOVOUPVIVAVHCQTUEUGUHUIKDEUKULUM @.
-      @( [6-Dec-2014] @)
+  $( All function values are either null or in the range. $)
+  fvelrn0 $p |- ( F ` X ) e. ( ran F u. { (/) } ) $=
+    ( cvv wcel cfv crn c0 csn cun wbr wceq wo fvbr0 wa simpr fvex simpl brelrng
+    a1i syl3anc elun1 syl 0ex snid elun2 ax-mp eleq1 mpbiri adantr jaoian fvprc
+    mpan wn syl6eqel pm2.61i ) BCDZBAEZAFZGHZIZDZBUQAJZUQGKZLUPVAABMVBUPVAVCVBU
+    PNZUQURDZVAVDUPUQCDZVBVEVBUPOVFVDBAPSVBUPQBUQACCRTUQURUSUAUBVCVAUPVCVAGUTDZ
+    GUSDVGGUCUDGUSURUEUFZUQGUTUGUHUIUJULUPUMUQGUTBAUKVHUNUO $.
+    $( [3-Jan-2015] $)
 
-    islpir2.r @e |- ( ph -> R e. Ring ) @.
-    @{
-      islpir2.g @e |- ( ( ph /\ i e. I ) -> E. g e. B i = ( K ` { g } ) ) @.
-      @( Deduce ` LPIR ` status. @)
-      islpir2 @p |- ( ph -> R e. LPIR ) @=
-        ( clpir wcel crg cv csn cfv wceq wrex wral islpir ralrimiva mpbir2and )
-        ACMNCONEPDPQGRSDBTZEFUAABCDEFGHIJUBKAUEEFLUCUD @.
-        @( [6-Dec-2014] @)
-    @}
+  ${
+    $d R r g $.  $d P r g $.  $d B r g $.  $d r K g $.  $d U g $.  $d I g $.
+    $d Z g $.  $d B g $.
+    lpival.p $e |- P = ( LPIdeal ` R ) $.
+    ${
+      lpival.k $e |- K = ( RSpan ` R ) $.
+      lpival.b $e |- B = ( Base ` R ) $.
+      $( Value of the set of principal ideals. $)
+      lpival $p |- ( R e. Ring -> P = U_ g e. B { ( K ` { g } ) } ) $=
+        ( vr crg wcel clpidl cfv cbs cv csn crsp ciun wceq fveq2 wral ralrimivw
+        fveq1d sneqd iuneq1 iuneq2 sylan9eq syl2anc df-lpidl crn fvex rnex p0ex
+        c0 cun unex wss iunss fvelrn0 snssi ax-mp a1i mprgbir ssexi fvmpt sneqi
+        fveq1i iuneq2i eqtri 3eqtr4g ) CJKCLMDCNMZDOZPZCQMZMZPZRZBDAVMEMZPZRZIC
+        DIOZNMZVMWAQMZMZPZRZVQJLWACSZWBVKSZWEVPSZDVKUAZWFVQSWACNTWGWIDVKWGWDVOW
+        GVMWCVNWACQTUCUDUBWHWJWFDVKWERVQDWBVKWEUEDVKWEVPUFUGUHIDUIVQVNUJZUNPZUO
+        ZWKWLVNCQUKULUMUPVQWMUQVPWMUQZDVKDVKVPWMURWNVLVKKZVOWMKWNVNVMUSVOWMUTVA
+        VBVCVDVEFVTDVKVSRZVQAVKSVTWPSHDAVKVSUEVADVKVSVPVSVPSWOVRVOVMEVNGVGVFVBV
+        HVIVJ $.
+        $( [3-Jan-2015] $)
 
-    @d K g @.  @d Z g @.
-    islpir3.z @e |- ( ph -> Z = ( 0g ` R ) ) @.
-    islpir3.g @e |- ( ( ph /\ i e. I /\ { Z } C. i ) ->
-        E. g e. B i = ( K ` { g } ) ) @.
-    @( Deduce ` LPIR ` status. @)
-    islpir3 @p |- ( ph -> R e. LPIR ) @=
-      ( cv wcel csn wceq cfv adantr wa wpss wo wrex wss crg clidl simpr eleqtrd
-      c0g lidl0clOLD snssd sspss sylib 3expia cgrp rnggrp syl grpidcld rsp0OLD eqcomd
-      wi sneq fveq2d eqeq2d rcla4ev syl2anc eqeq1 rexbidv syl5ibcom mpd islpir2
-      jaod ) ABCDEFGIJKLAEOZFPZUAZHQZVNUBZVQVNRZUCZVNDOZQZGSZRZDBUDZVPVQVNUEVTV
-      PHVNVPCVNHACUFPZVOLTVPVNFCUGSZAVOUHAFWGRVOITUIAHCUJSRVOMTUKULVQVNUMUNVPVR
-      WEVSAVOVRWENUOAVSWEVBVOAVQWCRZDBUDZVSWEAHBPVQVQGSZRZWIABCHAWFCUPPLCUQURJM
-      USAWJVQACGHLKMUTVAWHWKDHBWAHRZWCWJVQWLWBVQGWAHVCVDVEVFVGVSWHWDDBVQVNWCVHV
-      IVJTVMVKVL @.
-      @( [6-Dec-2014] @)
-  @}
+      $( Property of being a principal ideal. $)
+      islpidl $p |- ( R e. Ring -> ( I e. P <-> E. g e. B
+          I = ( K ` { g } ) ) ) $=
+        ( crg wcel cv csn cfv ciun wceq wrex lpival eleq2d eliun elsnc2 rexbii
+        fvex bitri syl6bb ) CJKZEBKEDADLMZFNZMZOZKZEUHPZDAQZUFBUJEABCDFGHIRSUKE
+        UIKZDAQUMDEAUITUNULDAEUHUGFUCUAUBUDUE $.
+        $( [3-Jan-2015] $)
+    $}
 
-  @{
-    @d R i g a b c d @.
-    @( A left principal ideal ring is a ring. @)
-    lpirrng @p |- ( R e. LPIR -> R e. Ring ) @=
-      ( vi vg clpir wcel crg cv csn crsp cfv wceq wrex clidl wral wa wtru eqidd
-      cbs wb islpir trud simplbi ) ADEZAFEZBGCGHAIJZJKCARJZLBAMJZNZUCUDUHOSPUFA
-      CBUGUEPUGQPUFQPUEQTUAUB @.
-      @( [6-Dec-2014] @)
+    ${
+      lpi0.z $e |- Z = ( 0g ` R ) $.
+      $( The zero ideal is always principal. $)
+      lpi0 $p |- ( R e. Ring -> { Z } e. P ) $=
+        ( vg crg wcel csn crsp cfv wceq cbs wrex eqid rng0cl rsp0 eqcomd sneq
+        cv fveq2d eqeq2d rcla4ev syl2anc islpidl mpbird ) BGHZCIZAHUHFTZIZBJKZK
+        ZLZFBMKZNZUGCUNHUHUHUKKZLZUOUNBCUNOZEPUGUPUHBUKCUKOZEQRUMUQFCUNUICLZULU
+        PUHUTUJUHUKUICSUAUBUCUDUNABFUHUKDUSURUEUF $.
+        $( [3-Jan-2015] $)
+    $}
 
-    @( A division ring is a left principal ideal ring. @)
-    drnglpir @p |- ( R e. DivRing -> R e. LPIR ) @=
-      ( vg vi cdr wcel cbs cfv clidl crsp c0g eqidd drngrng cv csn w3a 3ad2ant1
-      wpss wceq wne sylib cur rngidcld wn wo wss df-pss simprbi necomd 3ad2ant3
-      wrex df-ne cpr simp2 id drngnidlOLD eleqtrd elpr orel1 sylc rsp1OLD eqtr4d sneq
-      vex fveq2d eqeq2d rcla4ev syl2anc islpir3 ) ADEZAFGZABCAHGZAIGZAJGZVIVKKV
-      IVJKZVIVLKZALZVIVMKZVICMZVKEZVMNZVRQZOZAUAGZVJEZVRWCNZVLGZRZVRBMZNZVLGZRZ
-      BVJUJVIVSWDWAVIVJAWCVPVNVIWCKZUBPWBVRVJWFWBVRVTRZUCZWMVRVJRZUDZWOWAVIWNVS
-      WAVRVTSWNWAVTVRWAVTVRUEVTVRSVTVRUFUGUHVRVTUKTUIWBVRVTVJULZEWPWBVRVKWQVIVS
-      WAUMVIVSVKWQRWAVIVJAVMVIUNVNVQUOPUPVRVTVJCVCUQTWMWOURUSVIVSWFVJRWAVIVJAVL
-      WCVPVOWLVNUTPVAWKWGBWCVJWHWCRZWJWFVRWRWIWEVLWHWCVBVDVEVFVGVH @.
-      @( [6-Dec-2014] @)
-  @}
-  $)
+    ${
+      lpi1.b $e |- B = ( Base ` R ) $.
+      $( The unit ideal is always principal. $)
+      lpi1 $p |- ( R e. Ring -> B e. P ) $=
+        ( vg crg wcel csn crsp cfv wceq wrex cur eqid rngidcl rsp1 eqcomd sneq
+        cv fveq2d eqeq2d rcla4ev syl2anc islpidl mpbird ) CGHZABHAFTZIZCJKZKZLZ
+        FAMZUGCNKZAHAUNIZUJKZLZUMACUNEUNOZPUGUPAACUJUNUJOZEURQRULUQFUNAUHUNLZUK
+        UPAUTUIUOUJUHUNSUAUBUCUDABCFAUJDUSEUEUF $.
+        $( [3-Jan-2015] $)
+    $}
+
+    ${
+      $d U r $.
+      lpiss.u $e |- U = ( LIdeal ` R ) $.
+      $( Principal ideal rings are where all ideals are principal. $)
+      islpir $p |- ( R e. LPIR <-> ( R e. Ring /\ U = P ) ) $=
+        ( vr cv clidl cfv clpidl wceq crg clpir eqeq12d eqeq12i syl6bbr df-lpir
+        fveq2 elrab2 ) FGZHIZTJIZKZCAKZFBLMTBKZUCBHIZBJIZKUDUEUAUFUBUGTBHRTBJRN
+        CUFAUGEDOPFQS $.
+        $( [3-Jan-2015] $)
+
+      $d P a g $.  $d U a g $.  $d R a g $.
+      $( Principal ideals are a subclass of ideal. $)
+      lpiss $p |- ( R e. Ring -> P C_ U ) $=
+        ( va vg crg wcel cv csn crsp cfv wceq cbs wrex eqid islpidl wa wss
+        snssi eqid1 rspcl sylan2 eleq1 syl5ibrcom rexlimdva sylbid ssrdv ) BHIZ
+        FACUJFJZAIUKGJZKZBLMZMZNZGBOMZPUKCIZUQABGUKUNDUNQUQQZRUJUPURGUQUJULUQIZ
+        SURUPUOCIZUTUJUMUQTVAULUQUAUQBCUMUNUNUBUSEUCUDUKUOCUEUFUGUHUI $.
+        $( [3-Jan-2015] $)
+
+      $( Principal ideal rings are where all ideals are principal. $)
+      islpir2 $p |- ( R e. LPIR <-> ( R e. Ring /\ U C_ P ) ) $=
+        ( clpir wcel crg wceq wa wss lpiss biantrud eqss syl6rbbr pm5.32i bitri
+        islpir ) BFGBHGZCAIZJSCAKZJABCDERSTUASUAUAACKZJTSUBUAABCDELMCANOPQ $.
+        $( [3-Jan-2015] $)
+    $}
+  $}
+
+  $( Division rings are principal ideal. $)
+  drnglpir $p |- ( R e. DivRing -> R e. LPIR ) $=
+    ( cdr wcel crg clidl cfv clpidl wss clpir drngrng c0g csn cbs eqid drngnidl
+    cpr lpi0 lpi1 wa sylanbrc snex fvex prss bicomi syl eqsstrd islpir2 ) ABCZA
+    DCZAEFZAGFZHAICAJZUHUJAKFZLZAMFZPZUKUOAUJUMUONZUMNZUJNZOUHUIUPUKHZULUIUNUKC
+    ZUOUKCZUTUKAUMUKNZURQUOUKAVCUQRVAVBSUTUNUOUKUMUAAMUBUCUDTUEUFUKAUJVCUSUGT
+    $.
+    $( [3-Jan-2015] $)
+
+  $( An element generates an ideal iff it is contained in the ideal and all elements are right-divided by it. $)
+
+  $( An ideal is principal iff it contains an element which right-divides all elements. $)
+
+  ${
+    $d Z a $.  $d I a $.  $d ph a $.  $d X a $.  $d G a $.
+    zlpirlem.z $e |- Z = ( CCfld |`s ZZ ) $.
+    zlpirlem.i $e |- ( ph -> I e. ( LIdeal ` Z ) ) $.
+    zlpirlem.n0 $e |- ( ph -> I =/= { 0 } ) $.
+    $( Lemma for ~ zlpir .  A nonzero ideal of integers contains some positive
+       integers. $)
+    zlpirlem1 $p |- ( ph -> ( I i^i NN ) =/= (/) ) $=
+      ( va cc0 wne cn wcel cfv cz ccnfld zsubrg ax-mp eqid wceq cc adantr cv c0
+      cin crg clidl csn csubrg subrgrng a1i c0g cnfld0 subrg0 lidlnz syl3anc wa
+      wrex cabs wo cr wss cbs zsscn cnfldbas ressbas2 lidlss sylancr sselda zre
+      cneg absor 3syl eleq1 syl5ibrcom cminusg csubg subrgsubg subginv cnfldneg
+      simplr zcn eqtr3d simpr lidlnegcl eqeltrrd jaod mpd nnabscl elin sylanbrc
+      sylan ne0i syl ex rexlimdva ) AGUAZHIZGBUPZBJUCZUBIZACUDKZBCUELZKZBHUFIWQ
+      WTAMNUGLKZWTOMNCDUHPZUIEFGCXABHXAQZXCHCUJLROMNCHDUKULPUMUNAWPWSGBAWOBKZUO
+      ZWPWSXGWPUOZWOUQLZWRKZWSXHXIBKZXIJKZXJXHXIWORZXIWOVIZRZURZXKXGXPWPXGWOMKZ
+      WOUSKXPABMWOAWTXBBMUTXDEMBXAUDCMSUTMCVALRVBMSCNDVCVDPXEVEVFVGZWOVHWOVJVKT
+      XHXMXKXOXHXKXMXFAXFWPVSXIWOBVLVMXHXKXOXNBKZXGXSWPXGWOCVNLZLZXNBXGWONVNLZL
+      ZYAXNXGMNVOLKZXQYCYARXCYDOMNVPPXRMNCYBXTWODYBQXTQZVQVFXGXQWOSKYCXNRXRWOVT
+      WOVRVKWAXGWTXBXFYABKWTXGXDUIAXBXFETAXFWBCXABXTWOXEYEWCUNWDTXIXNBVLVMWEWFX
+      GXQWPXLXRWOWGWJXIBJWHWIWRXIWKWLWMWNWF $.
+      $( [3-Jan-2015] $)
+
+    zlpirlem.g $e |- G = sup ( ( I i^i NN ) , RR , `' < ) $.
+    $( Lemma for ~ zlpir .  A nonzero ideal of integers contains a least
+       positive element. $)
+    zlpirlem2 $p |- ( ph -> G e. I ) $=
+      ( cn cin cr clt ccnv csup inss1 c1 cuz cfv wss c0 wcel inss2 nnuz sseqtri
+      wne zlpirlem1 infmssuzcl sylancr sseldi syl5eqel ) ABCIJZKLMNZCHAUKCULCIO
+      AUKPQRZSUKTUEULUKUAUKIUMCIUBUCUDACDEFGUFUKPUGUHUIUJ $.
+      $( [3-Jan-2015] $)
+
+    zlpirlem.x $e |- ( ph -> X e. I ) $.
+    $( Lemma for ~ zlpir .  All elements of a nonzero ideal of integers are divided by the least one. $)
+    zlpirlem3 $p |- ( ph -> G || X ) $=
+      ( co wceq cn wcel cr cz cfv cc syl2anc syl cdivides wbr cmo cc0 wn wo cle
+      clt crp crg clidl wss ccnfld csubrg subrgrng ax-mp a1i cbs zsscn cnfldbas
+      zsubrg ressbas2 eqid lidlss sseldd zre cin inss2 ccnv csup c1 cuz c0 nnuz
+      sseqtri zlpirlem1 infmssuzcl sylancr syl5eqel sseldi nnrp modlt wb zmodcl
+      wne cn0 nn0re nnre ltnle mpbid cdiv cfl cneg cmul caddc cmin nncn redivcl
+      nnne0 syl3anc flcl mulcl negsub znegcl mulcom mulneg2 eqtrd oveq2d modval
+      wa 3eqtr4rd zlpirlem2 cnfldmul ressmulr lidlmcl syl22anc cnfldadd lidlacl
+      ressplusg eqeltrd adantr simpr elin sylanbrc infmssuzle mtand elnn0 sylib
+      syl5eqbr orel1 sylc divides3 mpbird ) ABDUAUBZDBUCKZUDLZAYOMNZUEYQYPUFZYP
+      AYQBYOUGUBZAYOBUHUBZYSUEZADONZBUINZYTADPNZUUBACPDAEUJNZCEUKQZNZCPULUUEAPU
+      MUNQNUUEVAPUMEFUOUPUQZGPCUUFUJEPRULPEURQLUSPREUMFUTVBUPZUUFVCZVDSJVEZDVFT
+      ZABMNZUUCACMVGZMBCMVHZABUUNOUHVIVJZUUNIAUUNVKVLQZULZUUNVMWEUUPUUNNUUNMUUQ
+      UUOVNVOZACEFGHVPUUNVKVQVRVSVTZBWATZDBWBSAYOONZBONZYTUUAWCAYOWFNZUVBAUUDUU
+      MUVDUUKUUTDBWDSZYOWGTAUUMUVCUUTBWHTZYOBWISWJAYQXJZBUUPYOUGIUVGUURYOUUNNZU
+      UPYOUGUBUUSUVGYOCNZYQUVHAUVIYQAYODDBWKKZWLQZWMZBWNKZWOKZCADBUVKWNKZWMZWOK
+      ZDUVOWPKZUVNYOADRNUVORNZUVQUVRLAPRDUSUUKVTABRNZUVKRNZUVSAUUMUVTUUTBWQTZAP
+      RUVKUSAUVJONZUVKPNZAUUBUVCBUDWEZUWCUULUVFAUUMUWEUUTBWSTDBWRWTUVJXATZVTZBU
+      VKXBSDUVOXCSAUVMUVPDWOAUVMBUVLWNKZUVPAUVLRNUVTUVMUWHLAPRUVLUSAUWDUVLPNZUW
+      FUVKXDTZVTUWBUVLBXESAUVTUWAUWHUVPLUWBUWGBUVKXFSXGXHAUUBUUCYOUVRLUULUVADBX
+      ISXKAUUEUUGDCNUVMCNZUVNCNUUHGJAUUEUUGUWIBCNUWKUUHGUWJABCEFGHIXLPEWNUUFCUV
+      LBUUJUUIPUMEWNFXMXNXOXPWOEUUFCDUVMUUJPWOUMEFXQXSXRXPXTYAAYQYBYOCMYCYDYOUU
+      NVKYEVRYIYFAUVDYRUVEYOYGYHYQYPYJYKAUUMUUDYNYPWCUUTUUKBDYLSYM $.
+      $( [3-Jan-2015] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
