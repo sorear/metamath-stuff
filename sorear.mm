@@ -13792,7 +13792,6 @@ $)
     ghmlin.x $e |- X = ( Base ` S ) $.
     ghmlin.a $e |- A = ( +g ` S ) $.
     ghmlin.b $e |- B = ( +g ` T ) $.
-
     $( A homomorphism of groups is linear. $)
     ghmlin $p |- ( ( ( F e. ( S GrpHom T ) /\ T e. W ) /\
           ( U e. X /\ V e. X ) ) -> ( F ` ( U A V ) ) =
@@ -13809,7 +13808,6 @@ $)
   ${
     ghmid.y $e |- Y = ( 0g ` S ) $.
     ghmid.z $e |- Z = ( 0g ` T ) $.
-
     $( A homomorphism of groups preserves the identity. $)
     ghmid $p |- ( ( F e. ( S GrpHom T ) /\ T e. V ) -> ( F ` Y ) = Z ) $=
       ( cghm co wcel wa cfv cplusg wceq cbs simpl cgrp eqid syl2anc ghmgrp1 syl
@@ -13826,7 +13824,6 @@ $)
     ghminv.b $e |- B = ( Base ` S ) $.
     ghminv.y $e |- M = ( invg ` S ) $.
     ghminv.z $e |- N = ( invg ` T ) $.
-
     $( A homomorphism of groups preserves inverses. $)
     ghminv $p |- ( ( F e. ( S GrpHom T ) /\ T e. V /\ X e. B ) ->
         ( F ` ( M ` X ) ) = ( N ` ( F ` X ) ) ) $=
@@ -13971,7 +13968,6 @@ $)
     ghmsub.b $e |- B = ( Base ` S ) $.
     ghmsub.m $e |- M = ( -g ` S ) $.
     ghmsub.n $e |- N = ( -g ` T ) $.
-
     $( Linearity of subtraction through a group homomorphism. $)
     ghmsub $p |- ( ( ( F e. ( S GrpHom T ) /\ T e. W ) /\
         ( U e. B /\ V e. B ) ) -> ( F ` ( U M V ) ) =
@@ -14127,17 +14123,14 @@ $)
   ${
     $d S s t f w x y $.  $d T s t f w x y $.  $d L f w x y $.  $d K f w x y $.
     $d B f w x y $.  $d E f w x y $.  $d M f w x y $.  $d N f w x y $.
-    $d F f x y $.
-    $d F s $.  $d F t $.  $d K t $.  $d E t $.  $d B t $.  $d M t $.  $d N t $.
-    $d L t $.
-
+    $d F f x y $.  $d F s $.  $d F t $.  $d K t $.  $d E t $.  $d B t $.
+    $d M t $.  $d N t $.  $d L t $.
     islmhm.k $e |- K = ( Scalar ` S ) $.
     islmhm.l $e |- L = ( Scalar ` T ) $.
     islmhm.b $e |- B = ( Base ` K ) $.
     islmhm.e $e |- E = ( Base ` S ) $.
     islmhm.m $e |- M = ( vsca ` S ) $.
     islmhm.n $e |- N = ( vsca ` T ) $.
-
     $( Property of being a homomorphism of left modules. $)
     islmhm $p |- ( T e. V -> ( F e. ( S LMHom T ) <->
         ( ( S e. LMod /\ T e. LMod ) /\ ( F e. ( S GrpHom T ) /\ L = K /\
@@ -14933,201 +14926,188 @@ $)
   $}
 
   ${
-    lidlss.w $e |- ( ph -> W e. X ) $.
-    lidlss.b $e |- ( ph -> B = ( Base ` W ) ) $.
-    lidlss.i $e |- ( ph -> I = ( LIdeal ` W ) ) $.
-    lidlss.u $e |- ( ph -> U e. I ) $.
-    $( An ideal is a subset of the base set.  (Contributed by Stefan O'Rear,
-       6-Dec-2014.) $)
-    lidlss $p |- ( ph -> U C_ B ) $=
-      ( crglmod cfv cbs cvv wcel clss wceq syl eqtrd eqid clidl lidlval eleqtrd
-      wss fvex lssss sylancr rlmbase sseqtr4d ) ACEKLZMLZBAUJNOCUJPLZOCUKUDEKUE
-      ACDULJADEUALZULIAEFOZUMULQGEFUBRSUCULCUKUJNUKTULTUFUGABEMLZUKHAUNUOUKQGEF
-      UHRSUI $.
-      $( [6-Dec-2014] $)
+    lidlss.b $e |- B = ( Base ` W ) $.
+    lidlss.i $e |- I = ( LIdeal ` W ) $.
+    $( An ideal is a subset of the base set. $)
+    lidlss $p |- ( ( W e. V /\ U e. I ) -> U C_ B ) $=
+      ( wcel wa crglmod cfv cbs cvv clss wss fvex clidl lidlval syl5eq eqid
+      eleq2d biimpa lssss sylancr wceq rlmbase adantr sseqtr4d ) EDHZBCHZIZBEJK
+      ZLKZAUKULMHBULNKZHZBUMOEJPUIUJUOUICUNBUICEQKUNGEDRSUAUBUNBUMULMUMTUNTUCUD
+      UIAUMUEUJUIAELKUMFEDUFSUGUH $.
+      $( [3-Jan-2015] $)
   $}
 
   ${
-    lidlcl.r $e |- ( ph -> R e. Ring ) $.
-    lidlcl.i $e |- ( ph -> I e. ( LIdeal ` R ) ) $.
+    lidlcl.u $e |- U = ( LIdeal ` R ) $.
 
     ${
-      lidl0cl.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-      $( An ideal contains 0.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-      lidl0cl $p |- ( ph -> Z e. I ) $=
-        ( clidl cfv crglmod c0g crg wcel wceq rlm0 syl eqtrd clss lidlval clmod
-        rlmlmod lss0cld ) ABHIZCBJIZDADBKIZUDKIZGABLMZUEUFNEBLOPQAUGUCUDRINEBLS
-        PAUGUDTMEBUAPFUB $.
-        $( [6-Dec-2014] $)
+      lidl0cl.z $e |- Z = ( 0g ` R ) $.
+      $( An ideal contains 0. $)
+      lidl0cl $p |- ( ( R e. Ring /\ I e. U ) -> Z e. I ) $=
+        ( crg wcel wa crglmod cfv c0g wceq rlm0 syl5eq adantr clss rlmlmod eqid
+        clmod clidl lidlval eleq2d biimpa lss0cl syl2anc eqeltrd ) AGHZCBHZIZDA
+        JKZLKZCUHDULMUIUHDALKULFAGNOPUJUKTHZCUKQKZHZULCHUHUMUIARPUHUIUOUHBUNCUH
+        BAUAKUNEAGUBOUCUDUNCUKULULSUNSUEUFUG $.
+        $( [3-Jan-2015] $)
     $}
 
     ${
-      lidlacl.p $e |- ( ph -> P = ( +g ` R ) ) $.
-      lidlacl.x $e |- ( ph -> X e. I ) $.
-      lidlacl.y $e |- ( ph -> Y e. I ) $.
-      $( An ideal is closed under addition.  (Contributed by Stefan O'Rear,
-         6-Dec-2014.) $)
-      lidlacl $p |- ( ph -> ( X P Y ) e. I ) $=
-        ( clidl cfv crglmod cplusg crg wcel wceq rlmplusg syl eqtrd clss clmod
-        lidlval rlmlmod lssvacld ) ABCLMZDCNMZEFABCOMZUHOMZIACPQZUIUJRGCPSTUAAU
-        KUGUHUBMRGCPUDTAUKUHUCQGCUETHJKUF $.
-        $( [6-Dec-2014] $)
+      lidlacl.p $e |- P = ( +g ` R ) $.
+      $( An ideal is closed under addition. $)
+      lidlacl $p |- ( ( ( R e. Ring /\ I e. U ) /\ ( X e. I /\ Y e. I ) ) ->
+          ( X P Y ) e. I ) $=
+        ( crg wcel wa co crglmod cfv cplusg wceq rlmplusg syl5eq oveqd eqid jca
+        ad2antrr clmod rlmlmod adantr clidl lidlval eleq2d biimpa lssvacl sylan
+        clss eqeltrd ) BIJZDCJZKZEDJFDJKZKEFALZEFBMNZONZLZDUNURVAPUOUQUNAUTEFUN
+        ABONUTHBIQRSUBUPUSUCJZDUSULNZJZKUQVADJUPVBVDUNVBUOBUDUEUNUOVDUNCVCDUNCB
+        UFNVCGBIUGRUHUIUAUTVCDUSEFUTTVCTUJUKUM $.
+        $( [3-Jan-2015] $)
     $}
 
     ${
-      lidlnegcl.x $e |- ( ph -> X e. I ) $.
-      lidlnegcl.n $e |- ( ph -> ( ( invg ` R ) ` X ) = N ) $.
-      $( An ideal contains negatives.  (Contributed by Stefan O'Rear,
-         6-Dec-2014.) $)
-      lidlnegcl $p |- ( ph -> N e. I ) $=
-        ( crglmod cfv cminusg crg wcel wceq rlmvneg syl eqcomd fveq1d eqtrd
-        clidl clss lidlval clmod rlmlmod lssvnegcld eqeltrrd ) AEBJKZLKZKZDCAUJ
-        EBLKZKDAEUIUKAUKUIABMNZUKUIOFBMPQRSITABUAKZCUHEGAULUMUHUBKOFBMUCQAULUHU
-        DNFBUEQHUFUG $.
-        $( [6-Dec-2014] $)
+      lidlnegcl.n $e |- N = ( invg ` R ) $.
+      $( An ideal contains negatives. $)
+      lidlnegcl $p |- ( ( R e. Ring /\ I e. U /\ X e. I ) ->
+          ( N ` X ) e. I ) $=
+        ( crg wcel w3a cfv crglmod cminusg rlmvneg syl5eq fveq1d 3ad2ant1 clmod
+        wceq eqid rlmlmod clidl lidlval eleq2d biimpa 3adant3 lssvnegcl syl3anc
+        clss simp3 eqeltrd ) AHIZCBIZECIZJZEDKZEALKZMKZKZCULUMUPUSSUNULEDURULDA
+        MKURGAHNOPQUOUQRIZCUQUIKZIZUNUSCIULUMUTUNAUAQULUMVBUNULUMVBULBVACULBAUB
+        KVAFAHUCOUDUEUFULUMUNUJVACURUQEVATURTUGUHUK $.
+        $( [3-Jan-2015] $)
     $}
 
     ${
-      lidlcl.b $e |- ( ph -> B = ( Base ` R ) ) $.
+      lidlcl.b $e |- B = ( Base ` R ) $.
 
       ${
-        lidlmcl.t $e |- ( ph -> T = ( .r ` R ) ) $.
-        lidlmcl.x $e |- ( ph -> X e. B ) $.
-        lidlmcl.y $e |- ( ph -> Y e. I ) $.
+        lidlmcl.t $e |- T = ( .r ` R ) $.
         $( An ideal is closed under left-multiplication by elements of the full
-           ring.  (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-        lidlmcl $p |- ( ph -> ( X T Y ) e. I ) $=
-          ( clidl cfv crglmod crg wcel wceq syl csca rlmsca cmulr cvsca rlmvsca
-          eqtrd clss lidlval clmod rlmlmod lssvscld ) ABCNOZDECCPOZFGACQRZCUMUA
-          OSHCQUBTADCUCOZUMUDOZKAUNUOUPSHCQUETUFJAUNULUMUGOSHCQUHTAUNUMUIRHCUJT
-          ILMUK $.
-          $( [6-Dec-2014] $)
+           ring. $)
+        lidlmcl $p |- ( ( ( R e. Ring /\ I e. U ) /\ ( X e. B /\ Y e. I ) ) ->
+            ( X T Y ) e. I ) $=
+          ( crg wcel wa co cfv syl5eq ad2antrr cbs eleq2d eqid cvsca wceq cmulr
+          crglmod rlmvsca oveqd clmod clss rlmlmod lidlval biimpa adantr rlmsca
+          csca clidl fveq2d ad2ant2r simprr lssvscl syl22anc eqeltrd ) BKLZEDLZ
+          MZFALZGELZMZMZFGCNZFGBUDOZUAOZNZEVBVIVLUBVCVGVBCVKFGVBCBUCOVKJBKUEPUF
+          QVHVJUGLZEVJUHOZLZFVJUNOZROZLZVFVLELVBVMVCVGBUIQVDVOVGVBVCVOVBDVNEVBD
+          BUOOVNHBKUJPSUKULVBVEVRVCVFVBVEVRVBAVQFVBABROVQIVBBVPRBKUMUPPSUKUQVDV
+          EVFURVQVNVKEVPVJFGVPTVKTVQTVNTUSUTVA $.
+          $( [3-Jan-2015] $)
       $}
 
       ${
-        $d ph a $.  $d B a $.  $d I a $.  $d O a $.
-        lidl1el.o $e |- ( ph -> O = ( 1r ` R ) ) $.
-        $( An ideal contains 1 iff it is the unit ideal.  (Contributed by
-           Stefan O'Rear, 6-Dec-2014.) $)
-        lidl1el $p |- ( ph -> ( O e. I <-> I = B ) ) $=
-          ( va wcel wceq wa cfv crg eqidd adantr co ad2antrr eqid wss lidlss cv
-          clidl cmulr cur oveq2d cbs eleq2d biimpa rngridm syl2anc eqtrd simplr
-          simpr lidlmcl eqeltrrd ssrdv eqssd rngidcld eleq2 syl5ibrcom impbid
-          ex ) AEDKZDBLZAVEVFAVEMZDBADBUAVEABDCUDNZCOFHAVHPGUBQVGJBDVGJUCZBKZVI
-          DKVGVJMZVIECUENZRZVIDVKVMVICUFNZVLRZVIVKEVNVIVLAEVNLVEVJISUGVKCOKZVIC
-          UHNZKZVOVILAVPVEVJFSZVGVJVRVGBVQVIABVQLZVEHQUIUJVQCVLVNVIVQTVLTVNTUKU
-          LUMVKBCVLDVIEVSADVHKVEVJGSAVTVEVJHSVKVLPVGVJUOAVEVJUNUPUQVDURUSVDAVEV
-          FEBKABCEFHIUTDBEVAVBVC $.
-          $( [6-Dec-2014] $)
+        $d B a $.  $d I a $.  $d O a $.  $d R a $.  $d U a $.
+        lidl1el.o $e |- O = ( 1r ` R ) $.
+        $( An ideal contains 1 iff it is the unit ideal. $)
+        lidl1el $p |- ( ( R e. Ring /\ I e. U ) -> ( O e. I <-> I = B ) ) $=
+          ( va crg wcel wa wceq wss lidlss adantr cv cmulr cfv co eqid eqeltrrd
+          rngridm ad2ant2rl lidlmcl ancom2s expr ssrdv eqssd rngidcl syl5ibrcom
+          ex eleq2 impbid ) BJKZDCKZLZEDKZDAMZUQURUSUQURLZDAUQDANURADCJBGFOPUTI
+          ADUQURIQZAKZVADKUQURVBLLVAEBRSZTZVADUOVBVDVAMUPURABVCEVAGVCUAZHUCUDUQ
+          VBURVDDKABVCCDVAEFGVEUEUFUBUGUHUIULUQURUSEAKZUOVFUPABEGHUJPDAEUMUKUN
+          $.
+          $( [3-Jan-2015] $)
       $}
     $}
   $}
 
   ${
-    lidl0.r $e |- ( ph -> R e. Ring ) $.
+    lidl0.u $e |- U = ( LIdeal ` R ) $.
     ${
-      lidl0.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-      $( Every ring contains a zero ideal.  (Contributed by Stefan O'Rear,
-         6-Dec-2014.) $)
-      lidl0 $p |- ( ph -> { Z } e. ( LIdeal ` R ) ) $=
-        ( csn clidl cfv wcel crglmod c0g clss clmod crg rlmlmod syl eqid lsssn0
-        wceq rlm0 eqtrd sneqd lidlval eleq12d mpbird ) ACFZBGHZIBJHZKHZFZUHLHZI
-        ZAUHMIZULABNIZUMDBOPUKUHUIUIQUKQRPAUFUJUGUKACUIACBKHZUIEAUNUOUISDBNTPUA
-        UBAUNUGUKSDBNUCPUDUE $.
-        $( [6-Dec-2014] $)
+      lidl0.z $e |- Z = ( 0g ` R ) $.
+      $( Every ring contains a zero ideal. $)
+      lidl0 $p |- ( R e. Ring -> { Z } e. U ) $=
+        ( crg wcel csn crglmod cfv c0g clss rlmlmod eqid lsssn0 syl rlm0 syl5eq
+        clmod sneqd clidl lidlval eleq12d mpbird ) AFGZCHZBGAIJZKJZHZUGLJZGZUEU
+        GSGUKAMUJUGUHUHNUJNOPUEUFUIBUJUECUHUECAKJUHEAFQRTUEBAUAJUJDAFUBRUCUD $.
+        $( [3-Jan-2015] $)
     $}
 
     ${
-      lidl1.z $e |- ( ph -> B = ( Base ` R ) ) $.
-      $( Every ring contains a unit ideal.  (Contributed by Stefan O'Rear,
-         6-Dec-2014.) $)
-      lidl1 $p |- ( ph -> B e. ( LIdeal ` R ) ) $=
-        ( clidl cfv wcel crglmod cbs clss clmod crg rlmlmod syl eqid lss1 eqtrd
-        wceq rlmbase lidlval eleq12d mpbird ) ABCFGZHCIGZJGZUEKGZHZAUELHZUHACMH
-        ZUIDCNOUGUFUEUFPUGPQOABUFUDUGABCJGZUFEAUJUKUFSDCMTORAUJUDUGSDCMUAOUBUC
-        $.
-        $( [6-Dec-2014] $)
+      lidl1.b $e |- B = ( Base ` R ) $.
+      $( Every ring contains a unit ideal. $)
+      lidl1 $p |- ( R e. Ring -> B e. U ) $=
+        ( crg wcel crglmod cfv cbs clss clmod rlmlmod eqid rlmbase syl5eq clidl
+        lss1 syl lidlval eleq12d mpbird ) BFGZACGBHIZJIZUDKIZGZUCUDLGUGBMUFUEUD
+        UENUFNRSUCAUECUFUCABJIUEEBFOPUCCBQIUFDBFTPUAUB $.
+        $( [3-Jan-2015] $)
     $}
   $}
 
   ${
-    rspcl.r $e |- ( ph -> R e. Ring ) $.
-    rspcl.g $e |- ( ph -> G C_ ( Base ` R ) ) $.
-    rspcl.i $e |- ( ph -> I = ( ( RSpan ` R ) ` G ) ) $.
-    $( The span of a set of ring elements is an ideal.  (Contributed by Stefan
-       O'Rear, 6-Dec-2014.) $)
-    rspcl $p |- ( ph -> I e. ( LIdeal ` R ) ) $=
-      ( clidl cfv wcel crglmod clspn clss clmod cbs wss crg syl wceq eqid lspcl
-      rlmlmod rlmbase sseqtrd syl2anc crsp rspval fveq1d lidlval eleq12d mpbird
-      eqtrd ) ADBHIZJCBKIZLIZIZUNMIZJZAUNNJZCUNOIZPURABQJZUSEBUBRACBOIZUTFAVAVB
-      UTSEBQUCRUDUQCUOUTUNUTTUQTUOTUAUEADUPUMUQADCBUFIZIUPGACVCUOAVAVCUOSEBQUGR
-      UHULAVAUMUQSEBQUIRUJUK $.
-      $( [6-Dec-2014] $)
-
-    $( The span of a set of ring elements contains those elements.
-       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    rspssid $p |- ( ph -> G C_ I ) $=
-      ( crglmod cfv clspn clmod wcel cbs wss crg rlmlmod syl wceq rlmbase eqid
-      sseqtrd lspssid syl2anc crsp rspval fveq1d eqtrd sseqtr4d ) ACCBHIZJIZIZD
-      AUIKLZCUIMIZNCUKNABOLZULEBPQACBMIZUMFAUNUOUMREBOSQUACUJUMUIUMTUJTUBUCADCB
-      UDIZIUKGACUPUJAUNUPUJREBOUEQUFUGUH $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    rsp0.r $e |- ( ph -> R e. Ring ) $.
-    rsp0.k $e |- ( ph -> K = ( RSpan ` R ) ) $.
+    rspcl.k $e |- K = ( RSpan ` R ) $.
     ${
-      rsp0.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-      $( The span of the zero element is the zero ideal.  (Contributed by
-         Stefan O'Rear, 6-Dec-2014.) $)
-      rsp0 $p |- ( ph -> ( K ` { Z } ) = { Z } ) $=
-        ( crglmod cfv c0g csn clspn clmod wcel wceq crg rlmlmod syl eqid eqtrd
-        lspsn0 crsp rspval rlm0 sneqd fveq12d 3eqtr4d ) ABHIZJIZKZUHLIZIZUJDKZC
-        IUMAUHMNZULUJOABPNZUNEBQRUKUHUIUISUKSUARAUMUJCUKACBUBIZUKFAUOUPUKOEBPUC
-        RTADUIADBJIZUIGAUOUQUIOEBPUDRTUEZUFURUG $.
-        $( [6-Dec-2014] $)
+      rspcl.b $e |- B = ( Base ` R ) $.
+      ${
+        rspcl.u $e |- U = ( LIdeal ` R ) $.
+        $( The span of a set of ring elements is an ideal. $)
+        rspcl $p |- ( ( R e. Ring /\ G C_ B ) -> ( K ` G ) e. U ) $=
+          ( crg wcel wss wa cfv crglmod clspn cbs adantr syl5eq eqid wceq clmod
+          clss rlmlmod rlmbase sseq2d biimpa syl2anc crsp rspval fveq1d lidlval
+          lspcl clidl eleq12d mpbird ) BIJZDAKZLZDEMZCJDBNMZOMZMZUTUBMZJZURUTUA
+          JZDUTPMZKZVDUPVEUQBUCQUPUQVGUPAVFDUPABPMVFGBIUDRUEUFVCDVAVFUTVFSVCSVA
+          SULUGURUSVBCVCUPUSVBTUQUPDEVAUPEBUHMVAFBIUIRUJQUPCVCTUQUPCBUMMVCHBIUK
+          RQUNUO $.
+          $( [3-Jan-2015] $)
+      $}
+
+      $( The span of a set of ring elements contains those elements. $)
+      rspssid $p |- ( ( R e. Ring /\ G C_ B ) -> G C_ ( K ` G ) ) $=
+        ( crg wcel wss cfv crglmod clspn clmod cbs rlmlmod adantr syl5eq sseq2d
+        wa eqid rlmbase biimpa lspssid syl2anc wb crsp rspval fveq1d mpbird ) B
+        GHZCAIZSZCCDJZIZCCBKJZLJZJZIZULUOMHZCUONJZIZURUJUSUKBOPUJUKVAUJAUTCUJAB
+        NJUTFBGUAQRUBCUPUTUOUTTUPTUCUDUJUNURUEUKUJUMUQCUJCDUPUJDBUFJUPEBGUGQUHR
+        PUI $.
+        $( [3-Jan-2015] $)
+
+      ${
+        rsp1.o $e |- O = ( 1r ` R ) $.
+        $( The span of the identity element is the unit ideal. $)
+        rsp1 $p |- ( R e. Ring -> ( K ` { O } ) = B ) $=
+          ( crg wcel csn cfv wceq wss rngidcl snssd rspssid mpdan cur cvv fvex
+          eqeltri snss sylibr clidl wb eqid rspcl lidl1el mpbid ) BHIZDDJZCKZIZ
+          ULALZUJUKULMZUMUJUKAMZUOUJDAABDFGNOZABUKCEFPQDULDBRKSGBRTUAUBUCUJULBU
+          DKZIZUMUNUEUJUPUSUQABURUKCEFURUFZUGQABURULDUTFGUHQUI $.
+          $( [3-Jan-2015] $)
+      $}
     $}
 
     ${
-      rsp1.o $e |- ( ph -> O = ( 1r ` R ) ) $.
-      rsp1.b $e |- ( ph -> B = ( Base ` R ) ) $.
-      $( The span of the identity element is the unit ideal.  (Contributed by
-         Stefan O'Rear, 6-Dec-2014.) $)
-      rsp1 $p |- ( ph -> ( K ` { O } ) = B ) $=
-        ( csn cfv wcel wceq wss cbs eqidd rngidcld snssd crsp fveq1d rspssid wb
-        snssg syl mpbird rspcl lidl1el mpbid ) AEEJZDKZLZUJBMAUKUIUJNZACUIUJFAE
-        COKZAUMCEFAUMPHQZRZAUIDCSKGTZUAAEUMLUKULUBUNEUJUMUCUDUEABCUJEFACUIUJFUO
-        UPUFIHUGUH $.
-        $( [6-Dec-2014] $)
+      rsp0.z $e |- Z = ( 0g ` R ) $.
+      $( The span of the zero element is the zero ideal. $)
+      rsp0 $p |- ( R e. Ring -> ( K ` { Z } ) = { Z } ) $=
+        ( crg wcel csn cfv wceq crglmod c0g clspn clmod rlmlmod eqid lspsn0 syl
+        crsp syl5eq rspval rlm0 sneqd fveq12d eqeq12d mpbird ) AFGZCHZBIZUHJAKI
+        ZLIZHZUJMIZIZULJZUGUJNGUOAOUMUJUKUKPUMPQRUGUIUNUHULUGUHULBUMUGBASIUMDAF
+        UATUGCUKUGCALIUKEAFUBTUCZUDUPUEUF $.
+        $( [3-Jan-2015] $)
     $}
   $}
 
   ${
-    $d ph a b $.  $d R a b $.  $d B a b $.  $d Z a b $.
-    drngnidl.r $e |- ( ph -> R e. DivRing ) $.
-    drngnidl.b $e |- ( ph -> B = ( Base ` R ) ) $.
-    drngnidl.z $e |- ( ph -> Z = ( 0g ` R ) ) $.
-    $( A division ring has only the two trivial ideals.  (Contributed by Stefan
-       O'Rear, 6-Dec-2014.) $)
-    drngnidl $p |- ( ph -> ( LIdeal ` R ) = { { Z } , B } ) $=
-      ( va vb cfv wcel wa wceq simpr wne wss adantr ad2antrr eqidd eqid csn cpr
-      clidl cv wo orcd cur wel wn wex wpss crg cdr drngrng syl c0g snssd necomd
-      lidl0cl df-pss sylanbrc pssnel wi cinvr cmulr co cbs lidlss simprl sseldd
-      elsn biimpri necon3bi neeqtrd drnginvrl syl3anc simplr drnginvrcl lidlmcl
-      ad2antll eqeltrrd ex exlimdv mpd lidl1el mpbid olcd pm2.61dane vex sylibr
-      elpr ssrdv lidl0 lidl1 prssg ibi syl2anc eqssd ) ACUCJZDUAZBUBZAHWSXAAHUD
-      ZWSKZXBXAKZAXCLZXBWTMZXBBMZUEZXDXEXHXBWTXEXFLXFXGXEXFNUFXEXBWTOZLZXGXFXJC
-      UGJZXBKZXGXJIHUHZIUDZWTKZUIZLZIUJZXLXJWTXBUKZXRXJWTXBPWTXBOXSXJDXBXEDXBKX
-      IXECXBDACULKZXCACUMKZXTECUNUOZQAXCNZADCUPJZMZXCGQUSQUQXJXBWTXEXINURWTXBUT
-      VAIWTXBVBUOXEXRXLVCXIXEXQXLIXEXQXLXEXQLZXNCVDJZJZXNCVEJZVFZXKXBYFYAXNCVGJ
-      ZKZXNYDOZYJXKMAYAXCXQERZYFXBYKXNXEXBYKPXQXEYKXBWSCUMAYAXCEQXEYKSXEWSSYCVH
-      QXEXMXPVIZVJZYFXNDYDXPXNDOXEXMXOXNDXOXNDMIDVKVLVMVTAYEXCXQGRVNZYKCYIXKYGX
-      NYDYKTZYDTZYITXKTYGTZVOVPYFYKCYIXBYHXNAXTXCXQYBRAXCXQVQYFYKSYFYISYFYAYLYM
-      YHYKKYNYPYQYKCYGXNYDYRYSYTVRVPYOVSWAWBWCQWDXJBCXBXKAXTXCXIYBRAXCXIVQABYKM
-      XCXIFRXJXKSWEWFWGWHXBWTBHWIWKWJWBWLAWTWSKZBWSKZXAWSPZACDYBGWMABCYBFWNUUAU
-      UBLUUCWTBWSWSWSWOWPWQWR $.
-      $( [6-Dec-2014] $)
+    $d U a b $.  $d R a b $.  $d B a b $.  $d Z a b $.
+    drngnidl.b $e |- B = ( Base ` R ) $.
+    drngnidl.z $e |- Z = ( 0g ` R ) $.
+    drngnidl.u $e |- U = ( LIdeal ` R ) $.
+    $( A division ring has only the two trivial ideals. $)
+    drngnidl $p |- ( R e. DivRing -> U = { { Z } , B } ) $=
+      ( va vb cdr wcel cv wa wceq simpr wne cfv wss adantr eqid csn cpr wo orcd
+      cur wel wn wex wpss crg drngrng sylan snssd necomd df-pss sylanbrc pssnel
+      lidl0cl syl wi cinvr cmulr co simpll lidlss adantrr elsn biimpri necon3bi
+      sselda ad2antll drnginvrl syl3anc ad2antrr simplr simprl lidlmcl syl22anc
+      drnginvrcl eqeltrrd ex exlimdv mpd lidl1el mpbid olcd pm2.61dane vex elpr
+      wb sylibr ssrdv lidl0 lidl1 snex cbs cvv fvex eqeltri prss bicomi eqssd )
+      BJKZCDUAZAUBZXCHCXEXCHLZCKZXFXEKZXCXGMZXFXDNZXFANZUCZXHXIXLXFXDXIXJMXJXKX
+      IXJOUDXIXFXDPZMZXKXJXNBUEQZXFKZXKXNIHUFZILZXDKZUGZMZIUHZXPXNXDXFUIZYBXNXD
+      XFRXDXFPYCXNDXFXIDXFKZXMXCBUJKZXGYDBUKZBCXFDGFURULSUMXNXFXDXIXMOUNXDXFUOU
+      PIXDXFUQUSXIYBXPUTXMXIYAXPIXIYAXPXIYAMZXRBVAQZQZXRBVBQZVCZXOXFYGXCXRAKZXR
+      DPZYKXONXCXGYAVDZXIXQYLXTXIXFAXRAXFCJBEGVEVJVFZXTYMXIXQXSXRDXSXRDNIDVGVHV
+      IVKZABYJXOYHXRDEFYJTZXOTZYHTZVLVMYGYEXGYIAKZXQYKXFKXCYEXGYAYFVNXCXGYAVOYG
+      XCYLYMYTYNYOYPABYHXRDEFYSVSVMXIXQXTVPABYJCXFYIXRGEYQVQVRVTWAWBSWCXIXPXKWJ
+      ZXMXCYEXGUUAYFABCXFXOGEYRWDULSWEWFWGXFXDAHWHWIWKWAWLXCYEXECRZYFYEXDCKZACK
+      ZUUBBCDGFWMABCGEWNUUCUUDMUUBXDACDWOABWPQWQEBWPWRWSWTXAUPUSXB $.
+      $( [3-Jan-2015] $)
   $}
 
   $(
@@ -15163,7 +15143,7 @@ $)
     @( Deduce ` LPIR ` status. @)
     islpir3 @p |- ( ph -> R e. LPIR ) @=
       ( cv wcel csn wceq cfv adantr wa wpss wo wrex wss crg clidl simpr eleqtrd
-      c0g lidl0cl snssd sspss sylib 3expia cgrp rnggrp syl grpidcld rsp0 eqcomd
+      c0g lidl0clOLD snssd sspss sylib 3expia cgrp rnggrp syl grpidcld rsp0OLD eqcomd
       wi sneq fveq2d eqeq2d rcla4ev syl2anc eqeq1 rexbidv syl5ibcom mpd islpir2
       jaod ) ABCDEFGIJKLAEOZFPZUAZHQZVNUBZVQVNRZUCZVNDOZQZGSZRZDBUDZVPVQVNUEVTV
       PHVNVPCVNHACUFPZVOLTVPVNFCUGSZAVOUHAFWGRVOITUIAHCUJSRVOMTUKULVQVNUMUNVPVR
@@ -15186,7 +15166,7 @@ $)
     drnglpir @p |- ( R e. DivRing -> R e. LPIR ) @=
       ( vg vi cdr wcel cbs cfv clidl crsp c0g eqidd drngrng cv csn w3a 3ad2ant1
       wpss wceq wne sylib cur rngidcld wn wo wss df-pss simprbi necomd 3ad2ant3
-      wrex df-ne cpr simp2 id drngnidl eleqtrd elpr orel1 sylc rsp1 eqtr4d sneq
+      wrex df-ne cpr simp2 id drngnidlOLD eleqtrd elpr orel1 sylc rsp1OLD eqtr4d sneq
       vex fveq2d eqeq2d rcla4ev syl2anc islpir3 ) ADEZAFGZABCAHGZAIGZAJGZVIVKKV
       IVJKZVIVLKZALZVIVMKZVICMZVKEZVMNZVRQZOZAUAGZVJEZVRWCNZVLGZRZVRBMZNZVLGZRZ
       BVJUJVIVSWDWAVIVJAWCVPVNVIWCKZUBPWBVRVJWFWBVRVTRZUCZWMVRVJRZUDZWOWAVIWNVS
