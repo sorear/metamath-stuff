@@ -13449,13 +13449,6 @@ $)
       KXCXTWHKLYAYBYCYDWFCWHXCXDXLWLWRVSSWDXAXGWIXCWHKXCLXBWFCWHWIXCWLWRWSVTWAW
       B $.
       $( [27-Nov-2014] $)
-
-    $(
-    @( The subring algebra is a left vector space. @)
-    sralvec @p |- ( ( W e. Ring /\ S e. ( SubRing ` W ) /\
-        ( W |`s S ) e. DivRing ) -> A e. LVec ) @=
-      ? @.
-    $)
   $}
 
   ${
@@ -13507,17 +13500,6 @@ $)
     $}
 
     ${
-      issubabld.g $e |- ( ph -> I e. Abel ) $.
-      $( Prove an Abelian subgroup by closure.  (Contributed by Stefan O'Rear,
-         7-Dec-2014.) $)
-      issubabld $p |- ( ph -> S e. Abel ) $=
-        ( cress co cabel wcel csubg cfv cgrp ablgrp syl issubgrpd2 eqid subgabl
-        syl2anc eqeltrd ) AFGDQRZSIAGSTZDGUAUBTUKSTPABCDEFGHIJKLMNOAULGUCTPGUDU
-        EUFDGUKUKUGUHUIUJ $.
-        $( [7-Dec-2014] $) $( [30-Nov-2014] $)
-    $}
-
-    ${
       issubrngd.o $e |- ( ph -> O = ( 1r ` I ) ) $.
       issubrngd.t $e |- ( ph -> T = ( .r ` I ) ) $.
       issubrngd.ocl $e |- ( ph -> O e. D ) $.
@@ -13535,129 +13517,8 @@ $)
           KLMNOPQAVTHUSUEUBHUTURVAAIVLDRTVBAVRBCDDAVNDUEZVODUEZVGZVGVNVOGUJZVQD
           AWEVQVHWDAGVPVNVOSVCVDAWBWCWEDUEUAVEVBVFVI $.
           $( [7-Dec-2014] $) $( [30-Nov-2014] $)
-
-        $( Prove a subring by closure.  (Contributed by Stefan O'Rear,
-           7-Dec-2014.) $)
-        issubrngd $p |- ( ph -> S e. Ring ) $=
-          ( cress co crg csubrg cfv wcel issubrngd2 eqid subrgrng syl eqeltrd )
-          AFHDUCUDZUEKADHUFUGUHUNUEUHABCDEFGHIJKLMNOPQRSTUAUBUIDHUNUNUJUKULUM
-          $.
-          $( [7-Dec-2014] $) $( [30-Nov-2014] $)
-      $}
-
-      issubdrngd.rcl $e |- ( ( ph /\ ( x e. D /\ x =/= Z ) ) ->
-          ( ( invr ` I ) ` x ) e. D ) $.
-
-      ${
-        issubdrngd.g $e |- ( ph -> I e. DivRing ) $.
-        $( Prove a sub-division-ring by closure.  (Contributed by Stefan
-           O'Rear, 7-Dec-2014.) $)
-        issubdrngd $p |- ( ph -> S e. DivRing ) $=
-          ( cress co cdr wcel cv cinvr cfv c0g csn cdif wral wne neeq2d eldifsn
-          anbi2d syl6bbr biimpar syldan ralrimiva csubrg crg drngrng issubrngd2
-          wa wb syl eqid issubdrg syl2anc mpbird eqeltrd ) AFHDUDUEZUFKAVOUFUGZ
-          BUHZHUIUJZUJDUGZBDHUKUJZULUMZUNZAVSBWAAVQWAUGZVQDUGZVQJUOZVGZVSAWFWCA
-          WFWDVQVTUOZVGWCAWEWGWDAJVTVQLUPURVQDVTUQUSUTUBVAVBAHUFUGZDHVCUJUGVPWB
-          VHUCABCDEFGHIJKLMNOPQRSTUAAWHHVDUGUCHVEVIVFBDHVOVRVTVOVJVTVJVRVJVKVLV
-          MVN $.
-          $( [7-Dec-2014] $) $( [30-Nov-2014] $)
       $}
     $}
-  $}
-
-  ${
-    grpcld.r $e |- ( ph -> G e. Grp ) $.
-    grpcld.b $e |- ( ph -> B = ( Base ` G ) ) $.
-
-    ${
-      grpcld.z $e |- ( ph -> Z = ( 0g ` G ) ) $.
-      $( Deduction version of ~ grpidcl .  (Contributed by Stefan O'Rear,
-         30-Nov-2014.) $)
-      grpidcld $p |- ( ph -> Z e. B ) $=
-        ( wcel c0g cfv cbs cgrp eqid grpidcl syl eleq12d mpbird ) ADBHCIJZCKJZH
-        ZACLHTESCRSMRMNOADRBSGFPQ $.
-        $( [30-Nov-2014] $)
-    $}
-
-    ${
-      grpinvcld.n $e |- ( ph -> N = ( invg ` G ) ) $.
-      grpinvcld.x $e |- ( ph -> X e. B ) $.
-      $( Deduction verison of ~ grpinvcl .  (Contributed by Stefan O'Rear,
-         30-Nov-2014.) $)
-      grpinvcld $p |- ( ph -> ( N ` X ) e. B ) $=
-        ( cfv wcel cminusg cgrp eleqtrd eqid grpinvcl syl2anc fveq1d eleq12d
-        cbs mpbird ) AEDJZBKECLJZJZCTJZKZACMKEUEKUFFAEBUEIGNUECUCEUEOUCOPQAUBUD
-        BUEAEDUCHRGSUA $.
-        $( [30-Nov-2014] $)
-    $}
-
-    grpcld.p $e |- ( ph -> P = ( +g ` G ) ) $.
-    grpcld.x $e |- ( ph -> X e. B ) $.
-    grpcld.y $e |- ( ph -> Y e. B ) $.
-    $( Deduction version of ~ grpcl .  (Contributed by Stefan O'Rear,
-       30-Nov-2014.) $)
-    grpcld $p |- ( ph -> ( X P Y ) e. B ) $=
-      ( co wcel cplusg cfv cbs cgrp eleqtrd eqid grpcl syl3anc eleq12d mpbird
-      oveqd ) AEFCLZBMEFDNOZLZDPOZMZADQMEUHMFUHMUIGAEBUHJHRAFBUHKHRUHUFDEFUHSUF
-      STUAAUEUGBUHACUFEFIUDHUBUC $.
-      $( [30-Nov-2014] $)
-  $}
-
-  ${
-    rngcld.r $e |- ( ph -> R e. Ring ) $.
-    rngcld.b $e |- ( ph -> B = ( Base ` R ) ) $.
-
-    ${
-      rngcld.o $e |- ( ph -> O = ( 1r ` R ) ) $.
-      $( Deduction version of ~ rngidcl .  (Contributed by Stefan O'Rear,
-         30-Nov-2014.) $)
-      rngidcld $p |- ( ph -> O e. B ) $=
-        ( wcel cur cfv cbs crg eqid rngidcl syl eleq12d mpbird ) ADBHCIJZCKJZHZ
-        ACLHTESCRSMRMNOADRBSGFPQ $.
-        $( [30-Nov-2014] $)
-    $}
-
-    rngcld.t $e |- ( ph -> T = ( .r ` R ) ) $.
-    rngcld.x $e |- ( ph -> X e. B ) $.
-    rngcld.y $e |- ( ph -> Y e. B ) $.
-    $( Deduction version of ~ rngcl .  (Contributed by Stefan O'Rear,
-       30-Nov-2014.) $)
-    rngcld $p |- ( ph -> ( X T Y ) e. B ) $=
-      ( co wcel cmulr cfv cbs crg eleqtrd eqid rngcl syl3anc eleq12d mpbird
-      oveqd ) AEFDLZBMEFCNOZLZCPOZMZACQMEUHMFUHMUIGAEBUHJHRAFBUHKHRUHCUFEFUHSUF
-      STUAAUEUGBUHADUFEFIUDHUBUC $.
-      $( [30-Nov-2014] $)
-  $}
-
-  ${
-    $d x y z $.
-
-    $(
-    @( The rationals are a sub-division-ring of ` CCfld ` . @)
-    cnqdrng @p |- ( CCfld |`s QQ ) e. DivRing @=
-      ( vx vy ccnfld cq co cdr wcel wtru caddc cmul c1 cc0 cfv wceq cc cz ax-mp
-      a1i zq cv cress eqidd c0g cnfld0 cplusg cnfldadd cbs wss cnfldbas sseqtri
-      0z qaddcl 3adant1 cminusg cneg qcn cnfldneg syl qnegcl eqeltrd adantl cur
-      qsscn cnfld1 cmulr cnfldmul 1z qmulcl wa cinvr cdiv cnfldrec sylan qreccl
-      wne cndrng issubdrngd trud ) CDUAEZFGHABDIVSJCKLHVSUBLCUCMNHUDRICUEMNHUFR
-      DCUGMZUHHDOVTVCUIUJRLDGZHLPGWAUKLSQRATZDGZBTZDGZWBWDIEDGHWBWDULUMWCWBCUNM
-      MZDGHWCWFWBUOZDWCWBOGZWFWGNWBUPZWBUQURWBUSUTVAKCVBMNHVDRJCVEMNHVFRKDGZHKP
-      GWJVGKSQRWCWEWBWDJEDGHWBWDVHUMWCWBLVOZVIZWBCVJMMZDGHWLWMKWBVKEZDWCWHWKWMW
-      NNWIWBVLVMWBVNUTVACFGHVPRVQVR @.
-      @( [30-Nov-2014] @)
-    $)
-
-    $( The integers are a subring of ` CCfld ` .  (Contributed by Stefan
-       O'Rear, 30-Nov-2014.) $)
-    cnzring $p |- ( CCfld |`s ZZ ) e. Ring $=
-      ( vx vy ccnfld cz cress co crg wcel wtru caddc cmul c1 cc0 eqidd cfv wceq
-      a1i cc cv 3adant1 c0g cnfld0 cplusg cnfldadd cbs wss zsscn sseqtri zaddcl
-      cnfldbas 0z cminusg cneg zcn cnfldneg syl znegcl eqeltrd adantl cur cmulr
-      cnfld1 cnfldmul 1z zmulcl cnrng issubrngd trud ) CDEFZGHIABDJVIKCLMIVINMC
-      UAOPIUBQJCUCOPIUDQDCUEOZUFIDRVJUGUJUHQMDHIUKQASZDHZBSZDHZVKVMJFDHIVKVMUIT
-      VLVKCULOOZDHIVLVOVKUMZDVLVKRHVOVPPVKUNVKUOUPVKUQURUSLCUTOPIVBQKCVAOPIVCQL
-      DHIVDQVLVNVKVMKFDHIVKVMVETCGHIVFQVGVH $.
-      $( [30-Nov-2014] $)
   $}
 
 $(
@@ -14397,54 +14258,6 @@ $)
        of subspaces can be intepreted using ` |``s ` . $)
     df-lfig $a |- LFinGen = { w e. LMod | ( Base ` w ) e. ( ( LSpan ` w ) "
         ( ~P ( Base ` w ) i^i Fin ) ) } $.
-  $}
-
-  ${
-    lss0cld.z $e |- ( ph -> Z = ( 0g ` W ) ) $.
-    lss0cld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    lss0cld.w $e |- ( ph -> W e. LMod ) $.
-    lss0cld.u $e |- ( ph -> U e. S ) $.
-    $( Membership of the zero vector in a linear subspace (deduction) .
-       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    lss0cld $p |- ( ph -> Z e. U ) $=
-      ( c0g cfv clmod wcel clss eleqtrd eqid lss0cl syl2anc eqeltrd ) AEDJKZCFA
-      DLMCDNKZMTCMHACBUAIGOUACDTTPUAPQRS $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lssvacld.p $e |- ( ph -> P = ( +g ` W ) ) $.
-    lssvacld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    lssvacld.w $e |- ( ph -> W e. LMod ) $.
-    lssvacld.u $e |- ( ph -> U e. S ) $.
-    lssvacld.x $e |- ( ph -> X e. U ) $.
-    lssvacld.y $e |- ( ph -> Y e. U ) $.
-    $( Closure of subspaces under addition, deduction.  (Contributed by Stefan
-       O'Rear, 6-Dec-2014.) $)
-    lssvacld $p |- ( ph -> ( X P Y ) e. U ) $=
-      ( co cplusg cfv oveqd clmod wcel eqid eleqtrd lssvacl syl22anc eqeltrd
-      clss ) AFGBNFGEOPZNZDABUFFGHQAERSDEUEPZSFDSGDSUGDSJADCUHKIUALMUFUHDEFGUFT
-      UHTUBUCUD $.
-      $( [6-Dec-2014] $)
-  $}
-
-  ${
-    lssvscld.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
-    lssvscld.t $e |- ( ph -> T = ( vsca ` W ) ) $.
-    lssvscld.b $e |- ( ph -> B = ( Base ` F ) ) $.
-    lssvscld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
-    lssvscld.w $e |- ( ph -> W e. LMod ) $.
-    lssvscld.u $e |- ( ph -> U e. S ) $.
-    lssvscld.x $e |- ( ph -> X e. B ) $.
-    lssvscld.y $e |- ( ph -> Y e. U ) $.
-    $( Closure of subspaces under scalar multiplication, deduction.
-       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
-    lssvscld $p |- ( ph -> ( X T Y ) e. U ) $=
-      ( cfv wcel eqid co cvsca oveqd clmod clss csca cbs eleqtrd fveq2d lssvscl
-      eqtrd syl22anc eqeltrd ) AHIDUAHIGUBRZUAZEADUNHIKUCAGUDSEGUERZSHGUFRZUGRZ
-      SIESUOESNAECUPOMUHAHBURPABFUGRURLAFUQUGJUIUKUHQURUPUNEUQGHIUQTUNTURTUPTUJ
-      ULUM $.
-      $( [6-Dec-2014] $)
   $}
 
   ${
@@ -16125,6 +15938,54 @@ $)
       BUAEWPDWIWJXLRMDWIWKWQDEVBZUUAYPYFYRUUBXSYOAXBXLCWCWDUUBBYQRDXLBWLWGWHKWM
       WNWOWRBDGCWSVMWT $.
       $( [5-Dec-2014] $)
+  $}
+
+  ${
+    lss0cld.z $e |- ( ph -> Z = ( 0g ` W ) ) $.
+    lss0cld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
+    lss0cld.w $e |- ( ph -> W e. LMod ) $.
+    lss0cld.u $e |- ( ph -> U e. S ) $.
+    $( Membership of the zero vector in a linear subspace (deduction) .
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    lss0cld $p |- ( ph -> Z e. U ) $=
+      ( c0g cfv clmod wcel clss eleqtrd eqid lss0cl syl2anc eqeltrd ) AEDJKZCFA
+      DLMCDNKZMTCMHACBUAIGOUACDTTPUAPQRS $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
+    lssvacld.p $e |- ( ph -> P = ( +g ` W ) ) $.
+    lssvacld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
+    lssvacld.w $e |- ( ph -> W e. LMod ) $.
+    lssvacld.u $e |- ( ph -> U e. S ) $.
+    lssvacld.x $e |- ( ph -> X e. U ) $.
+    lssvacld.y $e |- ( ph -> Y e. U ) $.
+    $( Closure of subspaces under addition, deduction.  (Contributed by Stefan
+       O'Rear, 6-Dec-2014.) $)
+    lssvacld $p |- ( ph -> ( X P Y ) e. U ) $=
+      ( co cplusg cfv oveqd clmod wcel eqid eleqtrd lssvacl syl22anc eqeltrd
+      clss ) AFGBNFGEOPZNZDABUFFGHQAERSDEUEPZSFDSGDSUGDSJADCUHKIUALMUFUHDEFGUFT
+      UHTUBUCUD $.
+      $( [6-Dec-2014] $)
+  $}
+
+  ${
+    lssvscld.f $e |- ( ph -> F = ( Scalar ` W ) ) $.
+    lssvscld.t $e |- ( ph -> T = ( vsca ` W ) ) $.
+    lssvscld.b $e |- ( ph -> B = ( Base ` F ) ) $.
+    lssvscld.s $e |- ( ph -> S = ( LSubSp ` W ) ) $.
+    lssvscld.w $e |- ( ph -> W e. LMod ) $.
+    lssvscld.u $e |- ( ph -> U e. S ) $.
+    lssvscld.x $e |- ( ph -> X e. B ) $.
+    lssvscld.y $e |- ( ph -> Y e. U ) $.
+    $( Closure of subspaces under scalar multiplication, deduction.
+       (Contributed by Stefan O'Rear, 6-Dec-2014.) $)
+    lssvscld $p |- ( ph -> ( X T Y ) e. U ) $=
+      ( cfv wcel eqid co cvsca oveqd clmod clss csca cbs eleqtrd fveq2d lssvscl
+      eqtrd syl22anc eqeltrd ) AHIDUAHIGUBRZUAZEADUNHIKUCAGUDSEGUERZSHGUFRZUGRZ
+      SIESUOESNAECUPOMUHAHBURPABFUGRURLAFUQUGJUIUKUHQURUPUNEUQGHIUQTUNTURTUPTUJ
+      ULUM $.
+      $( [6-Dec-2014] $)
   $}
 
   ${
