@@ -14806,51 +14806,18 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Elementary theory of ideals, examples of PIDs
+    Elementary theory of ideals
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Noetherian rings and left modules II
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  $c LNoeR LIdeal LPIdeal LPIR $.
-
-  $( Extend class notation with the class of left Noetherian rings. $)
-  clnr $a class LNoeR $.
+  $c LIdeal $.
 
   $( Ring left-ideal function. $)
   clidl $a class LIdeal $.
 
-  $( Ring left-principal-ideal function. $)
-  clpidl $a class LPIdeal $.
-
-  $( Class of left principal ideal rings. $)
-  clpir $a class LPIR $.
-
-  ${
-    $d w i g $.
-
-    $( Define the class of left ideals of a given ring.  An ideal is a
-       submodule of the ring viewed as a module over itself. $)
-    df-lidl $a |- LIdeal = ( LSubSp o. ringLMod ) $.
-
-    $( Define the class of left principal ideals of a ring, which are ideals
-       with a single generator. $)
-    df-lpidl $a |- LPIdeal = ( w e. Ring |->
-        U_ g e. ( Base ` w ) { ( ( RSpan ` w ) ` { g } ) } ) $.
-
-    $( Define the class of left principal ideal rings, rings where every left
-       ideal has a single generator. $)
-    df-lpir $a |- LPIR = { w e. Ring | ( LIdeal ` w ) = ( LPIdeal ` w ) } $.
-
-    $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
-       itself. $)
-    df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
-  $}
-
+  $( Define the class of left ideals of a given ring.  An ideal is a submodule
+     of the ring viewed as a module over itself. $)
+  df-lidl $a |- LIdeal = ( LSubSp o. ringLMod ) $.
 
   ${
     $d W a $.
@@ -15099,6 +15066,18 @@ $)
         UATUGCUKUGCALIUKEAFUBTUCZUDUPUEUF $.
         $( [3-Jan-2015] $)
     $}
+
+    ${
+      rspssp.u $e |- U = ( LIdeal ` R ) $.
+      $( PLEASE PUT DESCRIPTION HERE. $)
+      rspssp $p |- ( ( R e. Ring /\ I e. U /\ G C_ I ) -> ( K ` G ) C_ I ) $=
+        ( crg wcel wss w3a crglmod clspn wceq crsp rspval syl5eq 3ad2ant1 eqid
+        cfv fveq1d clmod clss rlmlmod clidl lidlval eleq2d biimpa 3adant3 simp3
+        lspssp syl3anc eqsstrd ) AHIZDBIZCDJZKZCETZCALTZMTZTZDUNUOURVANUPUNCEUT
+        UNEAOTUTFAHPQUARUQUSUBIZDUSUCTZIZUPVADJUNUOVBUPAUDRUNUOVDUPUNUOVDUNBVCD
+        UNBAUETVCGAHUFQUGUHUIUNUOUPUJVCCDUTUSVCSUTSUKULUM $.
+        $( [3-Jan-2015] $)
+    $}
   $}
 
   ${
@@ -15139,6 +15118,34 @@ $)
       KWJWLWMWN $.
       $( [3-Jan-2015] $)
   $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Principal ideal rings.  Divisibility in the integers
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c LPIdeal LPIR $.
+
+  $( Ring left-principal-ideal function. $)
+  clpidl $a class LPIdeal $.
+
+  $( Class of left principal ideal rings. $)
+  clpir $a class LPIR $.
+
+  ${
+    $d w i g $.
+
+    $( Define the class of left principal ideals of a ring, which are ideals
+       with a single generator. $)
+    df-lpidl $a |- LPIdeal = ( w e. Ring |->
+        U_ g e. ( Base ` w ) { ( ( RSpan ` w ) ` { g } ) } ) $.
+
+    $( Define the class of left principal ideal rings, rings where every left
+       ideal has a single generator. $)
+    df-lpir $a |- LPIR = { w e. Ring | ( LIdeal ` w ) = ( LPIdeal ` w ) } $.
+  $}
+
 
   $( All function values are either null or in the range. $)
   fvelrn0 $p |- ( F ` X ) e. ( ran F u. { (/) } ) $=
@@ -15236,9 +15243,102 @@ $)
     $.
     $( [3-Jan-2015] $)
 
-  $( An element generates an ideal iff it is contained in the ideal and all elements are right-divided by it. $)
+  ${
+    $d x y D $.  $d x z R y $.  $d x T y z $.  $d x B y z $.  $d z R $.
+    $d z T $.  $d z X $.  $d z Y $.  $d z B $.
+    dvdsrvalNEW.a $e |- B = ( Base ` R ) $.
+    dvdsrvalNEW.b $e |- D = ( ||r ` R ) $.
+    dvdsrvalNEW.c $e |- T = ( .r ` R ) $.
+    $( Mario says this is the new definition of ` ||r ` $)
+    dvdsrvalNEW $p |- ( R e. V -> D = { <. x , y >. | ( x e. B /\
+        E. z e. B ( z T x ) = y ) } ) $=
+      ? $.
 
-  $( An ideal is principal iff it contains an element which right-divides all elements. $)
+    $( Mario says this is the new definition of ` ||r ` $)
+    dvdsr2NEW $p |- ( ( X e. B /\ Y e. V ) -> ( X D Y <->
+        E. z e. B ( z T X ) = Y ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d a x R $.  $d G a x $.  $d B a x $.  $d K a x $.  $d D a x $.
+    rspsn.b $e |- B = ( Base ` R ) $.
+    rspsn.k $e |- K = ( RSpan ` R ) $.
+    rspsn.d $e |- D = ( ||r ` R ) $.
+    $( Membership in principal ideals is closely related to divisibility. $)
+    rspsn $p |- ( ( R e. Ring /\ G e. B ) ->
+        ( K ` { G } ) = { x | G D x } ) $=
+      ( va crg wcel cfv cv co wceq cbs wrex adantr eqid csn crglmod clspn cvsca
+      wa csca cab crsp rspval syl5eq fveq1d clmod rlmlmod rlmbase eleq2d biimpa
+      wbr lspsn syl2anc cmulr cvv wb eleq2i biimpi adantl vex dvdsr2NEW sylancl
+      eqid1 rlmsca fveq2d rlmvsca eqeq2d syl5bb rexeqbidv bitr2d abbidv 3eqtrd
+      eqcom oveqd ) DKLZEBLZUEZEUAZFMWDDUBMZUCMZMZANZJNZEWEUDMZOZPZJWEUFMZQMZRZ
+      AUGZEWHCUQZAUGWCWDFWFWCFDUHMZWFHWAWRWFPWBDKUISUJUKWCWEULLZEWEQMZLZWGWPPWA
+      WSWBDUMSWAWBXAWABWTEWABDQMZWTGDKUNUJUOUPAWJJWMWNWFWTWEEWMTWNTWTTWJTWFTURU
+      SWCWOWQAWCWQWIEDUTMZOZWHPZJXBRZWOWCEXBLZWHVALWQXFVBWBXGWAWBXGBXBEGVCVDVEA
+      VFJXBCDXCVAEWHXBTIXCVIVGVHWAXFWOVBWBWAXEWLJXBWNWADWMQDKVJVKXEWHXDPWAWLXDW
+      HVSWAXDWKWHWAXCWJWIEDKVLVTVMVNVOSVPVQVR $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d U x y $.  $d B x y $.  $d D x y $.  $d R x y $.  $d I x y $.
+    $d K x y $.  $d G x y $.
+    lidldvgen.b $e |- B = ( Base ` R ) $.
+    lidldvgen.u $e |- U = ( LIdeal ` R ) $.
+    lidldvgen.k $e |- K = ( RSpan ` R ) $.
+    lidldvgen.d $e |- D = ( ||r ` R ) $.
+    $( An element generates an ideal iff it is contained in the ideal and all
+       elements are right-divided by it. $)
+    lidldvgen $p |- ( ( R e. Ring /\ I e. U /\ G e. B ) ->
+        ( I = ( K ` { G } ) <-> ( G e. I /\ A. x e. I G D x ) ) ) $=
+      ( vy wcel wceq cv wbr wral wa wss crg w3a csn simp1 simp3 rspssid syl2anc
+      cfv snssd snssg 3ad2ant3 mpbird cab rspsn 3adant2 eleq2d vex breq2 syl6bb
+      wb elab biimpd ralrimiv jca eleq2 raleq anbi12d syl5ibrcom wi df-ral ssab
+      bitr4i biimpi ad2antll adantr sseqtr4d simpl1 simpl2 snssi adantl syl3anc
+      wal rspssp adantrr eqssd ex impbid ) DUANZGENZFBNZUBZGFUCZHUHZOZFGNZFAPZC
+      QZAGRZSZWKWSWNFWMNZWQAWMRZSWKWTXAWKWTWLWMTZWKWHWLBTXBWHWIWJUDWKFBWHWIWJUE
+      UIBDWLHKIUFUGWJWHWTXBUTWIFWMBUJUKULWKWQAWMWKWPWMNZWQWKXCWPFMPZCQZMUMZNWQW
+      KWMXFWPWHWJWMXFOWIMBCDFHIKLUNUOUPXEWQMWPAUQXDWPFCURVAUSVBVCVDWNWOWTWRXAGW
+      MFVEWQAGWMVFVGVHWKWSWNWKWSSZGWMXGGWQAUMZWMWRGXHTZWKWOWRXIWRWPGNWQVIAWBXIW
+      QAGVJWQAGVKVLVMVNWKWMXHOZWSWHWJXJWIABCDFHIKLUNUOVOVPWKWOWMGTZWRWKWOSWHWIW
+      LGTZXKWHWIWJWOVQWHWIWJWOVRWOXLWKFGVSVTDEWLGHKJWCWAWDWEWFWG $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d R x y $.  $d I x y $.  $d U x y $.  $d P x y $.  $d D x y $.
+    lpigen.u $e |- U = ( LIdeal ` R ) $.
+    lpigen.p $e |- P = ( LPIdeal ` R ) $.
+    lpigen.d $e |- D = ( ||r ` R ) $.
+    $( An ideal is principal iff it contains an element which right-divides all
+       elements. $)
+    lpigen $p |- ( ( R e. Ring /\ I e. U ) -> ( I e. P <->
+        E. x e. I A. y e. I x D y ) ) $=
+      ( crg wcel wa cv csn crsp cfv wrex wb eqid wceq cbs wbr islpidl lidldvgen
+      adantr 3expa rexbidva simpr lidlss sseld adantrd impbid2 rexbidv2 3bitrd
+      wral ancrd ) EKLZGFLZMZGDLZGANZOEPQZQUAZAEUBQZRZVBGLZVBBNCUCBGUPZMZAVERVH
+      AGRURVAVFSUSVEDEAGVCIVCTZVETZUDUFUTVDVIAVEURUSVBVELZVDVISBVECEFVBGVCVKHVJ
+      JUEUGUHUTVIVHAVEGUTVLVIMVIVLVIUIUTVIVLUTVGVLVHUTGVEVBVEGFKEVKHUJUKULUQUMU
+      NUO $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d Z x y z $.
+    dvdsrz.z $e |- Z = ( CCfld |`s ZZ ) $.
+    $( Ring divisibility in ` ZZ ` corresponds to ordinary divisibility. $)
+    dvdsrz $p |- || = ( ||r ` Z ) $=
+      ( vx vy vz cv cz wcel wa cmul co wceq copab cfv simpl cvv ccnfld cress cc
+      ax-mp wrex cdivides cdsr anim1i zmulcl ancoms eleq1 syl5ibcom simpr jca31
+      rexlimdva imp impbii opabbii df-divides eqeltri wss cbs cnfldbas ressbas2
+      ovex zsscn eqid cnfldmul ressmulr dvdsrvalNEW 3eqtr4i ) CFZGHZDFZGHZIZEFZ
+      VHJKZVJLZEGUAZIZCDMVIVPIZCDMZUBAUCNZVQVRCDVQVRVLVIVPVIVKOUDVRVIVKVPVIVPOV
+      IVPVKVIVOVKEGVIVMGHZIVNGHZVOVKWAVIWBVMVHUEUFVNVJGUGUHUKULVIVPUIUJUMUNCDEU
+      OAPHVTVSLAQGRKPBQGRVAUPCDEGVTAJPGSUQGAURNLVBGSAQBUSUTTVTVCGQAJBVDVEVFTVG
+      $.
+      $( [3-Jan-2015] $)
+  $}
 
   ${
     $d Z a $.  $d I a $.  $d ph a $.  $d X a $.  $d G a $.
@@ -15273,7 +15373,8 @@ $)
       $( [3-Jan-2015] $)
 
     zlpirlem.x $e |- ( ph -> X e. I ) $.
-    $( Lemma for ~ zlpir .  All elements of a nonzero ideal of integers are divided by the least one. $)
+    $( Lemma for ~ zlpir .  All elements of a nonzero ideal of integers are
+       divided by the least one. $)
     zlpirlem3 $p |- ( ph -> G || X ) $=
       ( co wceq cn wcel cr cz cfv cc syl2anc syl cdivides wbr cmo cc0 wn wo cle
       clt crp crg clidl wss ccnfld csubrg subrgrng ax-mp a1i cbs zsscn cnfldbas
@@ -15299,6 +15400,40 @@ $)
       NVKYEVRYIYFAUVDYRUVEYOYGYHYQYPYJYKAUUMUUDYNYPWCUUTUUKBDYLSYM $.
       $( [3-Jan-2015] $)
   $}
+
+  ${
+    $d Z x y z $.
+    zlpir.z $e |- Z = ( CCfld |`s ZZ ) $.
+    $( The integers are a principal ideal ring but not a field. $)
+    zlpir $p |- Z e. LPIR $=
+      ( vx vy vz wcel cfv eqid cz ccnfld zsubrg ax-mp cv cc0 wceq cdivides wral
+      wa wbr simpr clpir crg clidl clpidl islpir2 csubrg subrgrng cnfld0 subrg0
+      wss csn c0g lpi0 a1i eleq1 syl5ibrcom imp wne wrex cn cin ccnv csup simpl
+      clt zlpirlem2 wel simpll simplr zlpirlem3 ralrimiva breq1 ralbidv rcla4ev
+      cr syl2anc wb eqid1 dvdsrz lpigen adantr mpbird pm2.61dane ssriv mpbir2an
+      mpan ) AUAFAUBFZAUCGZAUDGZUJWIAWHWIHZWHHUEIJUFGFZWGKIJABUGLZCWHWICMZWHFZW
+      MWIFZWMNUKZWNWMWPOZWOWNWOWQWPWIFZWRWNWGWRWLWIANWJWKNAULGOKIJANBUHUILUMLUN
+      WMWPWIUOUPUQWNWMWPURZRZWODMZEMZPSZEWMQZDWMUSZWTWMUTVAVOVEVBVCZWMFXFXBPSZE
+      WMQZXEWTXFWMABWNWSVDWNWSTXFHZVFWTXGEWMWTECVGZRXFWMXBABWNWSXJVHWNWSXJVIXIW
+      TXJTVJVKXDXHDXFWMXAXFOXCXGEWMXAXFXBPVLVMVNVPWNWOXEVQZWSWGWNXKWLDEPWIAWHWM
+      WHVRWIVRABVSVTWFWAWBWCWDWE $.
+      $( [3-Jan-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Noetherian rings and left modules II
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c LNoeR $.
+
+  $( Extend class notation with the class of left Noetherian rings. $)
+  clnr $a class LNoeR $.
+
+  $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
+     itself. $)
+  df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
