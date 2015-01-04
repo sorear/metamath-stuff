@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 28-Dec-2014 $)
+$[ set_clean.mm $] $( set.mm - Version of 28-Dec-2014/rename GrpHom to GrpOpHom $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -14574,6 +14574,585 @@ $)
       UWQUURUWTYOBUUAUDYBTUWLYTUWMWOXIUWFUWNUUFFUXAUWFRXJTXKYOBUUEUUAUUDUUGGHUU
       DRUUERUUGRYCVQYDYQUAAUUQYFYG $.
       $( [1-Jan-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Definition of the structure product
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c Xm_ Xs_ tP ^s $.
+
+  $( The function constructing module products. $)
+  cprdm $a class Xm_ $.
+
+  $( The function constructing structure products. $)
+  cprd $a class Xs_ $.
+
+  $( The function constructing structure powers. $)
+  cpws $a class ^s $.
+
+  $( Extend class notation with a function whose value is a product
+     topology. $)
+  cpt $a class tP $.
+
+  ${
+    $d s r x v f g $.
+
+    $( Define a module product, which is a structure product with an externally
+       specified ring of scalars.  This can be a product of groups, rings,
+       modules, or ordered topological fields; any unused components will have
+       garbage in them but this usually not relevant for the purpos of
+       inheriting the structures present in the factors. $)
+    df-prdm $a |- Xm_ = ( s e. _V , r e. _V |->
+      [_ X_ x e. dom r ( Base ` ( r ` x ) ) / v ]_
+      ( ( { <. ( Base ` ndx ) , v >. ,
+        <. ( +g ` ndx ) , ( f e. v , g e. v |-> ( x e. dom r |->
+          ( ( f ` x ) ( +g ` ( r ` x ) ) ( g ` x ) ) ) ) >. ,
+        <. ( .r ` ndx ) , ( f e. v , g e. v |-> ( x e. dom r |->
+          ( ( f ` x ) ( .r ` ( r ` x ) ) ( g ` x ) ) ) ) >. } u.
+      { <. ( Scalar ` ndx ) , s >. ,
+        <. ( vsca ` ndx ) , ( f e. ( Base ` s ) , g e. v |->
+        ( x e. dom r |-> ( f ( vsca ` ( r ` x ) ) ( g ` x ) ) ) ) >. } ) u.
+      { <. ( TopOpen ` ndx ) , ( tP ` ( TopOpen o. r ) ) >. ,
+        <. ( le ` ndx ) , { <. f , g >. | ( { f , g } C_ v /\
+        A. x e. dom r ( f ` x ) ( le ` ( r ` x ) ) ( g ` x ) ) } >. ,
+        <. ( dist ` ndx ) , ( f e. v , g e. v |-> sup ( ran ( x e. dom r |->
+       ( ( f ` x ) ( dist ` ( r ` x ) ) ( g ` x ) ) ) , RR* , < ) ) >. } ) ) $.
+
+    $( Define a structure product.  This is defined in terms of the module
+       product, but the scalar ring is ignored so we can set it to anything
+       (here we use the empty set). $)
+    df-prd $a |- Xs_ = ( r e. _V |-> ( (/) Xm_ r ) ) $.
+
+    $d r i $.
+    $( Define a structure power, which is just a structure product where all
+       the factors are the same. $)
+    df-pws $a |- ^s = ( r e. _V , i e. _V |->
+      ( ( Scalar ` r ) Xm_ ( i X. { r } ) ) ) $.
+  $}
+
+  $( Structure definition utility lemma.  To prove that an explicit function is
+     a function using O(n) steps, exploit the order properties of the index
+     set.  Zero-pair case. $)
+  strlemor0 $p |- ( Fun (/) /\ dom (/) C_ ( 1 ... 0 ) ) $=
+    ( c0 wfun cdm c1 cc0 cfz co wss fun0 dm0 0ss eqsstri pm3.2i ) ABACZDEFGZHIN
+    AOJOKLM $.
+    $( [3-Jan-2015] $)
+
+  ${
+    strlemor.o $e |- I < J $.
+    strlemor.i $e |- I e. NN0 $.
+    strlemor.j $e |- J e. NN $.
+    strlemor.f $e |- ( Fun F /\ dom F C_ ( 1 ... I ) ) $.
+
+    ${
+      strlemor1.g $e |- G = ( F u. { <. J , X >. } ) $.
+      $( Add one element to the end of a structure. $)
+      strlemor1 $p |- ( Fun G /\ dom G C_ ( 1 ... J ) ) $=
+        ( wfun cdm c1 cfz co wss csn c0 wcel wbr cop cun wa cin simpli cn elexi
+        wceq funsn pm3.2i dmsnop ineq2i wn cle nn0rei nnrei ltnlei mpbi elfzle2
+        clt mto simpri sseli disjsn mpbir eqtri funun mp2an funeqi dmun cuz cfv
+        dmeqi eluz2 nn0zi nnzi ltleii mpbir3an fzss2 ax-mp sstri elfz1end snssi
+        cz eqsstri unssi ) BKZBLZMDNOZPWGADEUAQZUBZKZAKZWJKZUCALZWJLZUDZRUHWLWM
+        WNWMWOMCNOZPZIUEDEDUFHUGUIUJWQWODQZUDZRWPWTWODEUKZULXARUHDWOSZUMXCDWRSZ
+        XDDCUNTZCDUTTXEUMFCDCGUOZDHUPZUQURDMCUSVAWOWRDWMWSIVBZVCVAWODVDVEVFAWJV
+        GVHBWKJVIVEWHWOWPUBZWIWHWKLXIBWKJVMAWJVJVFWOWPWIWOWRWIXHDCVKVLSZWRWIPXJ
+        CWDSDWDSCDUNTCDVNCGVODHVPCDXFXGFVQVRCMDVSVTWAWPWTWIXBDWISZWTWIPDUFSXKHD
+        WBURDWIWCVTWEWFWEUJ $.
+        $( [3-Jan-2015] $)
+    $}
+
+    strlemor2.o $e |- J < K $.
+    strlemor2.k $e |- K e. NN $.
+
+    ${
+      strlemor2.g $e |- G = ( F u. { <. J , X >. , <. K , Y >. } ) $.
+      $( Add one element to the end of a structure. $)
+      strlemor2 $p |- ( Fun G /\ dom G C_ ( 1 ... K ) ) $=
+        ( cop csn cun nnnn0i eqid strlemor1 cpr df-pr uneq2i unass 3eqtr4i ) AD
+        FOZPZQZBDEGLDJRMAUHCDFHIJKUHSTAUFEGOZUAZQAUGUIPZQZQBUHUKQUJULAUFUIUBUCN
+        AUGUKUDUET $.
+        $( [3-Jan-2015] $)
+    $}
+
+    strlemor3.o $e |- K < L $.
+    strlemor3.l $e |- L e. NN $.
+
+    ${
+      strlemor3.g $e |- G = ( F u. { <. J , X >. , <. K , Y >. ,
+          <. L , Z >. } ) $.
+      $( Add three elements to the end of a structure. $)
+      strlemor3 $p |- ( Fun G /\ dom G C_ ( 1 ... L ) ) $=
+        ( cop cun cpr nnnn0i strlemor2 ctp df-tp uneq2i unass 3eqtr4i strlemor1
+        eqid csn ) ADGSZEHSZUAZTZBEFIPEOUBQAUOCDEGHJKLMNOUOUJUCAULUMFISZUDZTAUN
+        UPUKZTZTBUOURTUQUSAULUMUPUEUFRAUNURUGUHUI $.
+        $( [3-Jan-2015] $)
+    $}
+  $}
+
+  ${
+    $d S s r x v f g $.  $d R s r x v f g $.  $d W s r x v f g $.
+    $d Z s r x v f g $.  $d B s r v f g $.  $d A s r v $.  $d T s r v $.
+    $d M s r v $.  $d O s r x v f g $.  $d L s r v $.  $d D s r v $.
+    $d U s r v $.
+    prdmval.b $e |- B = X_ x e. dom R ( Base ` ( R ` x ) ) $.
+    $( Lemma for structure products. $)
+    prdmbaseex $p |- ( R e. W -> B e. _V ) $=
+      ( wcel cdm cv cfv cbs cixp cvv wral dmexg fvex rgenw a1i syl2anc syl5eqel
+      ixpexg ) CDFZBACGZAHCIZJIZKZLEUAUBLFUDLFZAUBMZUELFCDNUGUAUFAUBUCJOPQAUBUD
+      LLTRS $.
+      $( [3-Jan-2015] $)
+
+    prdmval.a $e |- A = ( f e. B , g e. B |-> ( x e. dom R |->
+        ( ( f ` x ) ( +g ` ( R ` x ) ) ( g ` x ) ) ) ) $.
+    prdmval.t $e |- T = ( f e. B , g e. B |-> ( x e. dom R |->
+        ( ( f ` x ) ( .r ` ( R ` x ) ) ( g ` x ) ) ) ) $.
+    prdmval.m $e |- M = ( f e. ( Base ` S ) , g e. B |-> ( x e. dom R |->
+        ( f ( vsca ` ( R ` x ) ) ( g ` x ) ) ) ) $.
+    prdmval.o $e |- O = ( tP ` ( TopOpen o. R ) ) $.
+    prdmval.l $e |- L = { <. f , g >. | ( { f , g } C_ B /\
+        A. x e. dom R ( f ` x ) ( le ` ( R ` x ) ) ( g ` x ) ) } $.
+    prdmval.d $e |- D = ( f e. B , g e. B |-> sup ( ran ( x e. dom R |->
+        ( ( f ` x ) ( dist ` ( R ` x ) ) ( g ` x ) ) ) , RR* , < ) ) $.
+    prdmval.u $e |- U = ( ( { <. ( Base ` ndx ) , B >. ,
+        <. ( +g ` ndx ) , A >. , <. ( .r ` ndx ) , T >. } u.
+        { <. ( Scalar ` ndx ) , S >. , <. ( vsca ` ndx ) , M >. } ) u.
+        { <. ( TopOpen ` ndx ) , O >. , <. ( le ` ndx ) , L >. ,
+        <. ( dist ` ndx ) , D >. } ) $.
+    $( Value of the structure product. $)
+    prdmval $p |- ( ( S e. W /\ R e. Z ) -> ( S Xm_ R ) = U ) $=
+      ( vs vr vv wcel cvv cprdm co wceq elex cv cdm cfv cbs cixp cnx cop cplusg
+      cmpt cmpt2 cmulr ctp csca cvsca cpr cun cts ccom cpt cple wss wbr wral wa
+      copab cds crn cxr clt csup csb ixpeq1 fveq1 fveq2d ralrimivw ixpeq2 eqtrd
+      dmeq syl syl6eqr adantl csbeq1d vex eleq1 mpbii prdmbaseex opeq2 mpt2eq12
+      anidms opeq2d tpeq123d eqid mpan preq2d uneq12d eqidd sseq2 anbi1d csbied
+      opabbidv oveqd 3ad2ant1 mpt2eq3dva adantr fveq2 mpt2eq123dv preq12d coeq2
+      mpteq12dv breqd raleqbidv rneqd supeq1d df-prdm tpex prex eqeltri ovmpt2a
+      anbi2d unex syl2an ) FNUGFUHUGEUHUGZFEUIUJHUKEOUGFNULEOULUDUEFEUHUHUFAUEU
+      MZUNZAUMZYOUOZUPUOZUQZURUPUOZUFUMZUSZURUTUOZIJUUBUUBAYPYQIUMZUOZYQJUMZUOZ
+      YRUTUOZUJZVAZVBZUSZURVCUOZIJUUBUUBAYPUUFUUHYRVCUOZUJZVAZVBZUSZVDZURVEUOZU
+      DUMZUSZURVFUOZIJUVBUPUOZUUBAYPUUEUUHYRVFUOZUJZVAZVBZUSZVGZVHZURVIUOZVIYOV
+      JZVKUOZUSZURVLUOZUUEUUGVGZUUBVMZUUFUUHYRVLUOZVNZAYPVOZVPZIJVQZUSZURVRUOZI
+      JUUBUUBAYPUUFUUHYRVRUOZUJZVAZVSZVTWAWBZVBZUSZVDZVHZWCZHUIUVBFUKZYOEUKZVPZ
+      UWPUFCUWOWCZHUWSUFYTCUWOUWRYTCUKUWQUWRYTAEUNZYQEUOZUPUOZUQZCUWRYTAUXAYSUQ
+      ZUXDUWRYPUXAUKYTUXEUKYOEWJZAYPUXAYSWDWKUWRYSUXCUKZAUXAVOUXEUXDUKUWRUXGAUX
+      AUWRYRUXBUPYQYOEWEZWFWGAUXAYSUXCWHWKWIPWLWMWNUWSUWTUUACUSZUUDIJCCUUKVBZUS
+      ZUUNIJCCUUQVBZUSZVDZUVCUVDIJUVECUVHVBZUSZVGZVHZUVPUVQUVRCVMZUWBVPZIJVQZUS
+      ZUWFIJCCUWKVBZUSZVDZVHZHUWSUFCUWOUYFUHUWSYNCUHUGUWRYNUWQUWRYOUHUGYNUEWOYO
+      EUHWPWQWMACEUHPWRWKUUBCUKZUWOUYFUKUWSUYGUVLUXRUWNUYEUYGUUTUXNUVKUXQUYGUUC
+      UXIUUMUXKUUSUXMUUBCUUAWSUYGUULUXJUUDUYGUULUXJUKIJUUBUUBCCUUKWTXAXBUYGUURU
+      XLUUNUYGUURUXLUKIJUUBUUBCCUUQWTXAXBXCUYGUVJUXPUVCUYGUVIUXOUVDUVEUVEUKUYGU
+      VIUXOUKUVEXDIJUVEUUBUVECUVHWTXEXBXFXGUYGUVPUVPUWEUYBUWMUYDUYGUVPXHUYGUWDU
+      YAUVQUYGUWCUXTIJUYGUVSUXSUWBUUBCUVRXIXJXLXBUYGUWLUYCUWFUYGUWLUYCUKIJUUBUU
+      BCCUWKWTXAXBXCXGWMXKUWSUYFUXIUUDBUSZUUNGUSZVDZUVAFUSZUVDLUSZVGZVHZUVMMUSZ
+      UVQKUSZUWFDUSZVDZVHZHUWSUXRUYNUYEUYRUWSUXNUYJUXQUYMUWSUXIUXIUXKUYHUXMUYIU
+      WSUXIXHUWSUXJBUUDUWRUXJBUKUWQUWRUXJIJCCAUXAUUFUUHUXBUTUOZUJZVAZVBBUWRIJCC
+      UUKVUBUWRUUECUGZUUKVUBUKUUGCUGZUWRAYPUUJUXAVUAUXFUWRUUIUYTUUFUUHUWRYRUXBU
+      TUXHWFXMYAXNXOQWLWMXBUWSUXLGUUNUWRUXLGUKUWQUWRUXLIJCCAUXAUUFUUHUXBVCUOZUJ
+      ZVAZVBGUWRIJCCUUQVUGUWRVUCUUQVUGUKVUDUWRAYPUUPUXAVUFUXFUWRUUOVUEUUFUUHUWR
+      YRUXBVCUXHWFXMYAXNXORWLWMXBXCUWSUVCUYKUXPUYLUWQUVCUYKUKUWRUVBFUVAWSXPUWSU
+      XOLUVDUWSUXOIJFUPUOZCAUXAUUEUUHUXBVFUOZUJZVAZVBLUWSIJUVECUVHVUHCVUKUWQUVE
+      VUHUKUWRUVBFUPXQXPUWSCXHUWRUVHVUKUKUWQUWRAYPUVGUXAVUJUXFUWRUVFVUIUUEUUHUW
+      RYRUXBVFUXHWFXMYAWMXRSWLXBXSXGUWSUVPUYOUYBUYPUYDUYQUWSUVOMUVMUWRUVOMUKUWQ
+      UWRUVOVIEVJZVKUOMUWRUVNVULVKYOEVIXTWFTWLWMXBUWRUYBUYPUKUWQUWRUYAKUVQUWRUY
+      AUXSUUFUUHUXBVLUOZVNZAUXAVOZVPZIJVQKUWRUXTVUPIJUWRUWBVUOUXSUWRUWAVUNAYPUX
+      AUXFUWRUVTVUMUUFUUHUWRYRUXBVLUXHWFYBYCYKXLUAWLXBWMUWSUYCDUWFUWSUYCIJCCAUX
+      AUUFUUHUXBVRUOZUJZVAZVSZVTWAWBZVBDUWSIJCCUWKVVAUWSVUCUWKVVAUKZVUDUWRVVBUW
+      QUWRVTUWJVUTWAUWRUWIVUSUWRAYPUWHUXAVURUXFUWRUWGVUQUUFUUHUWRYRUXBVRUXHWFXM
+      YAYDYEWMXNXOUBWLXBXCXGUCWLWIWIAUFIJUDUEYFHUYSUHUCUYNUYRUYJUYMUXIUYHUYIYGU
+      YKUYLYHYLUYOUYPUYQYGYLYIYJYM $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product value exists. $)
+    prdmvalex $p |- U e. _V $=
+      ( cnx cbs cfv cop cmulr ctp csca cvsca cpr cun cts cple cds cvv tpex prex
+      cplusg unex eqeltri ) HUBUCUDCUEZUBURUDBUEZUBUFUDGUEZUGZUBUHUDFUEZUBUIUDL
+      UEZUJZUKZUBULUDMUEZUBUMUDKUEZUBUNUDDUEZUGZUKUOUAVHVLVDVGVAVBVCUPVEVFUQUSV
+      IVJVKUPUSUT $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product value is a function. $)
+    prdmvalfun $p |- Fun U $=
+      ( wfun cdm c1 c10 c2 caddc cfz wss cnx cbs cfv cop cplusg cmulr ctp cvsca
+      co csca cpr cun c6 c9 c8 clt wbr 6lt8 8lt9 6re 8re 9re lttri mp2an nnnn0i
+      6nn 9nn c3 c5 3lt5 3nn0 5nn cc0 lt01 0nn0 1nn strlemor0 1lt2 2nn 2lt3 3nn
+      c0 un0 wceq wtru basendx opeq1i a1i df-plusg ndxarg df-mulr tpeq123d trud
+      uncom 3eqtr4ri strlemor3 5lt6 df-sca df-vsca uneq2i strlemor2 ltp1i df-10
+      preq12i breqtrri 10nn cr wcel crp 10re 2re 2pos elrpii ltaddrp cn nnaddcl
+      cts cple cds df-topset df-ple df-ds eqtri simpli ) HUBHUCUDUEUFUGURZUHURU
+      IUJUKULZCUMZUJUNULZBUMZUJUOULZGUMZUPZUJUSULZFUMZUJUQULZLUMZUTZVAZHVBVCUEY
+      NMKDVBVDVEVFVDVCVEVFVBVCVEVFVGVHVBVDVCVIVJVKVLVMVBVOVNVPUUAUUGVQVRVBFLVSV
+      TWAWKUUAWBUDUFVQCBGWCWDWEWFWGWHWIWJUDCUMZUFBUMZVQGUMZUPZWKVAUUKWKUUKVAUUA
+      UUKWLWKUUKXCUUAUUKWMWNYPUUHYRUUIYTUUJYPUUHWMWNYOUDCWOWPWQYRUUIWMWNYQUFBUN
+      UFAAWRWHWSWPWQYTUUJWMWNYSVQGUOVQAAWTWJWSWPWQXAXBXDXEXFVOUUFVRFUMZVBLUMZUT
+      UUAUUCUULUUEUUMUUBVRFUSVRAAXGWAWSWPUUDVBLUQVBAAXHVOWSWPXMXIXJVCVCUDUGURUE
+      VEVCVKXKXLXNXOUEXPXQUFXRXQUEYNVEVFXSUFXTYAYBUEUFYCVMUEYDXQUFYDXQYNYDXQXOW
+      HUEUFYEVMZHUUGUJYFULZMUMZUJYGULZKUMZUJYHULZDUMZUPZVAUUGVCMUMZUEKUMZYNDUMZ
+      UPZVAUAUVAUVEUUGUVAUVEWMWNUUPUVBUURUVCUUTUVDUUPUVBWMWNUUOVCMYFVCAAYIVPWSW
+      PWQUURUVCWMWNUUQUEKYGUEAAYJXOWSWPWQUUTUVDWMWNUUSYNDYHYNAAYKUUNWSWPWQXAXBX
+      IYLXEYM $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product base set. $)
+    prdmbaselem $p |- ( ( S e. W /\ R e. Z ) -> B = ( Base ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cbs cfv cprdm co wceq prdmbaseex prdmvalex prdmvalfun baseid
+      cvv elex cnx cop cplusg cmulr ctp csca cvsca cpr cun cts cple tpid1 elun1
+      cds opex mp2b eleqtrri strfv 3syl adantl prdmval fveq2d eqtr4d ) FNUEZEOU
+      EZUFZCHUGUHZFEUIUJZUGUHWBCWDUKZWAWBEUPUECUPUEWFEOUQACEUPPULCHUGUPUDABCDEF
+      GHIJKLMPQRSTUAUBUCUMABCDEFGHIJKLMPQRSTUAUBUCUNUDUOURUGUHZCUSZWHURUTUHBUSZ
+      URVAUHGUSZVBZURVCUHFUSURVDUHLUSVEZVFZURVGUHMUSURVHUHKUSURVKUHDUSVBZVFZHWH
+      WKUEWHWMUEWHWOUEWHWIWJWGCVLVIWHWKWLVJWHWMWNVJVMUCVNVOVPVQWCWEHUGABCDEFGHI
+      JKLMNOPQRSTUAUBUCVRVSVT $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product addition. $)
+    prdmplusglem $p |- ( ( S e. W /\ R e. Z ) -> A = ( +g ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cplusg cfv cprdm cvv wceq prdmbaseex cdm cmpt mpt2exg anidms
+      co cv syl adantl prdmvalex prdmvalfun plusgid cnx cop cbs cmulr ctp cvsca
+      csca cpr cun cts cple opex tpid2 elun1 mp2b eleqtrri strfv prdmval fveq2d
+      cds eqtr4d ) FNUEZEOUEZUFZBHUGUHZFEUIUQZUGUHWGBUJUEZBWHUKWFWJWEWFCUJUEZWJ
+      ACEOPULWKWJIJCCAEUMAURZIURUHWLJURUHWLEUHUGUHUQUNUJUJBQUOUPUSUTBHUGUJUDABC
+      DEFGHIJKLMPQRSTUAUBUCVAABCDEFGHIJKLMPQRSTUAUBUCVBUDVCVDUGUHZBVEZVDVFUHCVE
+      ZWNVDVGUHGVEZVHZVDVJUHFVEVDVIUHLVEVKZVLZVDVMUHMVEVDVNUHKVEVDWCUHDVEVHZVLZ
+      HWNWQUEWNWSUEWNXAUEWOWNWPWMBVOVPWNWQWRVQWNWSWTVQVRUCVSVTUSWGWIHUGABCDEFGH
+      IJKLMNOPQRSTUAUBUCWAWBWD $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product multiplication. $)
+    prdmmulrlem $p |- ( ( S e. W /\ R e. Z ) -> T = ( .r ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cmulr cfv cprdm co cvv wceq prdmbaseex adantl cdm cv mpt2exg
+      cmpt anidms syl prdmvalex prdmvalfun mulrid cnx cop cbs cplusg csca cvsca
+      ctp cpr cun cts cple opex tpid3 elun1 mp2b eleqtrri prdmval fveq2d eqtr4d
+      cds strfv ) FNUEZEOUEZUFZGHUGUHZFEUIUJZUGUHWGGUKUEZGWHULWGCUKUEZWJWFWKWEA
+      CEOPUMUNWKWJIJCCAEUOAUPZIUPUHWLJUPUHWLEUHUGUHUJURUKUKGRUQUSUTGHUGUKUDABCD
+      EFGHIJKLMPQRSTUAUBUCVAABCDEFGHIJKLMPQRSTUAUBUCVBUDVCVDUGUHZGVEZVDVFUHCVEZ
+      VDVGUHBVEZWNVJZVDVHUHFVEVDVIUHLVEVKZVLZVDVMUHMVEVDVNUHKVEVDWCUHDVEVJZVLZH
+      WNWQUEWNWSUEWNXAUEWOWPWNWMGVOVPWNWQWRVQWNWSWTVQVRUCVSWDUTWGWIHUGABCDEFGHI
+      JKLMNOPQRSTUAUBUCVTWAWB $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product scalars. $)
+    prdmscalem $p |- ( ( S e. W /\ R e. Z ) ->
+        S = ( Scalar ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa csca cfv cprdm wceq simpl prdmvalex prdmvalfun scaid cnx cop
+      co cbs cplusg cmulr ctp cvsca cpr cun cts cple cds opex prid1 elun2 elun1
+      mp2b eleqtrri strfv syl prdmval fveq2d eqtr4d ) FNUEZEOUEZUFZFHUGUHZFEUIU
+      QZUGUHWAVSFWBUJVSVTUKFHUGNUDABCDEFGHIJKLMPQRSTUAUBUCULABCDEFGHIJKLMPQRSTU
+      AUBUCUMUDUNUOUGUHZFUPZUOURUHCUPUOUSUHBUPUOUTUHGUPVAZWEUOVBUHLUPZVCZVDZUOV
+      EUHMUPUOVFUHKUPUOVGUHDUPVAZVDZHWEWHUEWEWIUEWEWKUEWEWGWDFVHVIWEWHWFVJWEWIW
+      JVKVLUCVMVNVOWAWCHUGABCDEFGHIJKLMNOPQRSTUAUBUCVPVQVR $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product scalar multiplication. $)
+    prdmvscalem $p |- ( ( S e. W /\ R e. Z ) ->
+        M = ( vsca ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cvsca cfv cprdm co wceq cvv prdmbaseex cbs fvex cmpt mpt2exg
+      cdm cv mpan prdmvalex prdmvalfun vscaid cnx cop cplusg cmulr ctp csca cpr
+      cun cts cple cds opex prid2 elun2 elun1 mp2b eleqtrri 3syl adantl prdmval
+      strfv fveq2d eqtr4d ) FNUEZEOUEZUFZLHUGUHZFEUIUJZUGUHWHLWJUKZWGWHCULUEZLU
+      LUEZWLACEOPUMFUNUHZULUEWMWNFUNUOIJWOCAEURIUSAUSZJUSUHWPEUHUGUHUJUPULULLSU
+      QUTLHUGULUDABCDEFGHIJKLMPQRSTUAUBUCVAABCDEFGHIJKLMPQRSTUAUBUCVBUDVCVDUGUH
+      ZLVEZVDUNUHCVEVDVFUHBVEVDVGUHGVEVHZVDVIUHFVEZWRVJZVKZVDVLUHMVEVDVMUHKVEVD
+      VNUHDVEVHZVKZHWRXAUEWRXBUEWRXDUEWTWRWQLVOVPWRXAWSVQWRXBXCVRVSUCVTWDWAWBWI
+      WKHUGABCDEFGHIJKLMNOPQRSTUAUBUCWCWEWF $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product topology. $)
+    prdmtopsetlem $p |- ( ( S e. W /\ R e. Z ) ->
+        O = ( TopOpen ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cprdm co cts cfv prdmval fveq2d cvv wceq ccom fvex prdmvalex
+      cpt eqeltri prdmvalfun topsetid cnx cop cbs cplusg cmulr ctp csca cpr cun
+      cvsca cple cds opex tpid1 elun2 ax-mp eleqtrri strfv syl6reqr ) FNUEEOUEU
+      FZFEUGUHZUIUJHUIUJZMWAWBHUIABCDEFGHIJKLMNOPQRSTUAUBUCUKULMUMUEMWCUNMUIEUO
+      ZURUJUMTWDURUPUSMHUIUMUDABCDEFGHIJKLMPQRSTUAUBUCUQABCDEFGHIJKLMPQRSTUAUBU
+      CUTUDVAVBUIUJZMVCZVBVDUJCVCVBVEUJBVCVBVFUJGVCVGVBVHUJFVCVBVKUJLVCVIVJZWFV
+      BVLUJKVCZVBVMUJDVCZVGZVJZHWFWJUEWFWKUEWFWHWIWEMVNVOWFWJWGVPVQUCVRVSVQVT
+      $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product weak ordering. $)
+    prdmlelem $p |- ( ( S e. W /\ R e. Z ) -> L = ( le ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cple cfv cprdm co cvv wceq cxp wss cv cpr wbr cdm wral copab
+      vex prss biimpri adantr ssopab2i df-xp 3sstr4i prdmbaseex xpexg syl ssexg
+      anidms sylancr adantl prdmvalex prdmvalfun pleid cnx cop cbs cplusg cmulr
+      ctp csca cvsca cun cts cds opex tpid2 elun2 ax-mp eleqtrri prdmval fveq2d
+      strfv eqtr4d ) FNUEZEOUEZUFZKHUGUHZFEUIUJZUGUHWTKUKUEZKXAULWSXCWRWSKCCUMZ
+      UNXDUKUEZXCIUOZJUOZUPCUNZAUOZXFUHXIXGUHXIEUHUGUHUQAEURUSZUFZIJUTXFCUEXGCU
+      EUFZIJUTKXDXKXLIJXHXLXJXLXHXFXGCIVAJVAVBVCVDVEUAIJCCVFVGWSCUKUEZXEACEOPVH
+      XMXECCUKUKVIVLVJKXDUKVKVMVNKHUGUKUDABCDEFGHIJKLMPQRSTUAUBUCVOABCDEFGHIJKL
+      MPQRSTUAUBUCVPUDVQVRUGUHZKVSZVRVTUHCVSVRWAUHBVSVRWBUHGVSWCVRWDUHFVSVRWEUH
+      LVSUPWFZVRWGUHMVSZXOVRWHUHDVSZWCZWFZHXOXSUEXOXTUEXQXOXRXNKWIWJXOXSXPWKWLU
+      CWMWPVJWTXBHUGABCDEFGHIJKLMNOPQRSTUAUBUCWNWOWQ $.
+      $( [3-Jan-2015] $)
+
+    $( Structure product metric. $)
+    prdmdistlem $p |- ( ( S e. W /\ R e. Z ) -> D = ( dist ` ( S Xm_ R ) ) ) $=
+      ( vr wcel wa cds cfv cprdm co cvv wceq prdmbaseex adantl cdm cmpt crn cxr
+      cv clt csup mpt2exg anidms prdmvalex prdmvalfun dsid cnx cop cplusg cmulr
+      cbs ctp csca cvsca cpr cun cts cple opex tpid3 elun2 ax-mp eleqtrri strfv
+      3syl prdmval fveq2d eqtr4d ) FNUEZEOUEZUFZDHUGUHZFEUIUJZUGUHWKCUKUEZDUKUE
+      ZDWLULWJWNWIACEOPUMUNWNWOIJCCAEUOAUSZIUSUHWPJUSUHWPEUHUGUHUJUPUQURUTVAUKU
+      KDUBVBVCDHUGUKUDABCDEFGHIJKLMPQRSTUAUBUCVDABCDEFGHIJKLMPQRSTUAUBUCVEUDVFV
+      GUGUHZDVHZVGVKUHCVHVGVIUHBVHVGVJUHGVHVLVGVMUHFVHVGVNUHLVHVOVPZVGVQUHMVHZV
+      GVRUHKVHZWRVLZVPZHWRXBUEWRXCUEWTXAWRWQDVSVTWRXBWSWAWBUCWCWDWEWKWMHUGABCDE
+      FGHIJKLMNOPQRSTUAUBUCWFWGWH $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d P x f g $.  $d S x f g $.  $d R x f g $.  $d B x f g $.
+    prdmbase.p $e |- P = ( S Xm_ R ) $.
+    $( Base set of a structure product. $)
+    prdmbase $p |- ( ( S e. V /\ R e. W ) ->
+        X_ x e. dom R ( Base ` ( R ` x ) ) = ( Base ` P ) ) $=
+      ( vf vg wcel cvv cv cfv cbs co cmpt cmpt2 cnx cop eqid cdm cixp wceq elex
+      wa cprdm cplusg cds crn cxr clt csup cmulr ctp csca cvsca cpr cun cts cpt
+      ccom cple wss wbr wral copab prdmbaselem fveq2i syl6eqr syl2an ) DEJDKJZC
+      KJZACUAZALZCMZNMUBZBNMZUCCFJDEUDCFUDVKVLUEVPDCUFOZNMVQAHIVPVPAVMVNHLZMZVN
+      ILZMZVOUGMOPQZVPHIVPVPAVMVTWBVOUHMOPUIUJUKULQZCDHIVPVPAVMVTWBVOUMMOPQZRNM
+      VPSRUGMWCSRUMMWESUNRUOMDSRUPMHIDNMVPAVMVSWBVOUPMOPQZSUQURRUSMUSCVAUTMZSRV
+      BMVSWAUQVPVCVTWBVOVBMVDAVMVEUEHIVFZSRUHMWDSUNURZHIWHWFWGKKVPTWCTWETWFTWGT
+      WHTWDTWITVGBVRNGVHVIVJ $.
+      $( [3-Jan-2015] $)
+
+    prdmplusg.b $e |- B = ( Base ` P ) $.
+    $( Addition in a structure product. $)
+    prdmplusg $p |- ( ( S e. V /\ R e. W ) ->
+        ( f e. B , g e. B |-> ( x e. dom R |->
+          ( ( f ` x ) ( +g ` ( R ` x ) ) ( g ` x ) ) ) ) = ( +g ` P ) ) $=
+      ( wcel cvv cfv cplusg co cmpt2 cnx cop eqid cdm cv cmpt wceq elex wa cixp
+      cbs cprdm cds crn cxr clt csup cmulr ctp csca cvsca cpr cun cts ccom cple
+      cpt wss wral copab prdmplusglem prdmbase syl6reqr mpt2eq12 syl2anc fveq2i
+      wbr a1i 3eqtr4d syl2an ) EHLEMLZDMLZFGBBADUAZAUBZFUBZNZWAGUBZNZWADNZONPUC
+      ZQZCONZUDDILEHUEDIUEVRVSUFZFGAVTWFUHNUGZWKWGQZEDUIPZONZWHWIAWLWKFGWKWKAVT
+      WCWEWFUJNPUCUKULUMUNQZDEFGWKWKAVTWCWEWFUONPUCQZRUHNWKSRONWLSRUONWPSUPRUQN
+      ESRURNFGEUHNWKAVTWBWEWFURNPUCQZSUSUTRVANVADVBVDNZSRVCNWBWDUSWKVEWCWEWFVCN
+      VNAVTVFUFFGVGZSRUJNWOSUPUTZFGWSWQWRMMWKTWLTWPTWQTWRTWSTWOTWTTVHWJBWKUDZXA
+      WHWLUDWJWKCUHNBACDEMMJVIKVJZXBFGBBWKWKWGVKVLWIWNUDWJCWMOJVMVOVPVQ $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d S x f g $.  $d R x f g $.  $d B x f g $.  $d G x f g $.  $d F x f g $.
+    $d Y x f g $.
+    prdmplusgval.b $e |- B = ( Base ` Y ) $.
+    prdmplusgval.p $e |- P = ( +g ` Y ) $.
+    prdmplusgval.y $e |- Y = ( S Xm_ R ) $.
+    $( Value of addition in a structure product. $)
+    prdmplusgval $p |- ( ( ( S e. V /\ R e. W ) /\ ( F e. B /\ G e. B ) ) ->
+        ( F P G ) = ( x e. dom R |->
+          ( ( F ` x ) ( +g ` ( R ` x ) ) ( G ` x ) ) ) ) $=
+      ( vf vg wcel wa cvv cfv wceq co cdm cv cplusg cmpt elex anim12i prdmplusg
+      cmpt2 adantr eqcomd syl5eq oveqan12d adantl mpteq2dv simprl simprr mptexg
+      fveq1 dmexg syl ad2antlr ovmpt2d sylan ) EHPZDIPZQERPZDRPZQZFBPZGBPZQZFGC
+      UAADUBZAUCZFSZVNGSZVNDSUDSZUAZUEZTVEVGVFVHEHUFDIUFUGVIVLQZNOFGBBAVMVNNUCZ
+      SZVNOUCZSZVQUAZUEZVSCRVTCJUDSZNOBBWFUIZLVTWHWGVIWHWGTVLABJDENORRMKUHUJUKU
+      LVTWAFTZWCGTZQZQAVMWEVRWKWEVRTVTWIWJWBVOWDVPVQVNWAFUSVNWCGUSUMUNUOVIVJVKU
+      PVIVJVKUQVHVSRPZVGVLVHVMRPWLDRUTAVMVRRURVAVBVCVD $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d P y z $.  $d S x y z $.  $d I x y z $.  $d R y z $.
+    prdmbase2.p $e |- P = ( S Xm_ ( x e. I |-> R ) ) $.
+    $( Base set of a structure product, explicit function. $)
+    prdmbase2 $p |- ( ( S e. V /\ I e. W /\ A. x e. I R e. Z ) ->
+        X_ x e. I ( Base ` R ) = ( Base ` P ) ) $=
+      ( vy vz wcel cvv wral cbs cfv cixp wceq elex cv ralimi w3a cmpt cdm simp3
+      wfn eqid fnmpt fndm 3syl ixpeq1 syl simp1 3ad2ant2 prdmbase syl2anc ax-17
+      mptexg hbmpt1 wel hbfv weq fveq2d cbvixp wa fvmpt2 ralimiaa ixpeq2 syl5eq
+      fveq2 3ad2ant3 3eqtr3rd syl3an ) DFLDMLZEGLEMLZCHLZAENCMLZAENZAECOPZQZBOP
+      ZRDFSEGSVPVQAECHSUAVNVOVRUBZJAECUCZUDZJTZWCPZOPZQZJEWGQZWAVTWBWDERZWHWIRW
+      BVRWCEUFWJVNVOVRUEAECWCMWCUGZUHEWCUIUJJWDEWGUKULWBVNWCMLZWHWARVNVOVRUMVOV
+      NWLVRAECMURUNJBWCDMMIUOUPVRVNWIVTRVOVRWIAEATZWCPZOPZQZVTJAKKEWGWOAKWFOKTZ
+      OLAUQAKWEWCAKECUSKJUTAUQVAVAWQWOLJUQJAVBWFWNOWEWMWCVJVCVDVRWOVSRZAENWPVTR
+      VQWRAEWMELVQVEWNCOAECMWCWKVFVCVGAEWOVSVHULVIVKVLVM $.
+      $( [3-Jan-2015] $)
+  $}
+
+  ${
+    $d x F $.
+    $( Indexed cross product elements are functions. $)
+    ixpfn $p |- ( F e. X_ x e. I J -> F Fn I ) $=
+      ( cixp wcel cvv wfn cv cfv wral elixp2 simp2bi ) BACDEFBGFBCHAIBJDFACKACD
+      BLM $.
+      $( [4-Jan-2015] $)
+  $}
+
+  ${
+    $d I x y z $.  $d J y z $.  $d K y z $.
+    $( Condition for an explicit member of an indexed product. $)
+    mptelixpg $p |- ( I e. V -> ( ( x e. I |-> J ) e. X_ x e. I K <->
+          A. x e. I J e. K ) ) $=
+      ( vy vz wcel cvv cmpt cixp wral cv cfv wa ax-17 fvmpt2 ralimiaa wi syl wb
+      wfn csb w3a hbcsb1 csbeq1a cbvixp eleq2i elixp2 3anass 3bitri eqid1 fnmpt
+      elex wel simpr eqeltrd jca wf dffn2 eqid eleq1d biimpd ralim sylbir sylbi
+      fmpt imp impbii hbmpt1 hbfv hbel fveq2 eleq12d cbvral anbi2i bitri mptexg
+      weq biantrurd syl5rbb syl5bb ) BEHBIHZABCJZABDKZHZCDHZABLZUABEUNWFWDIHZWD
+      BUBZFMZWDNZAWKDUCZHZFBLZOZOZWCWHWFWDFBWMKZHWIWJWOUDWQWEWRWDAFGGBDWMGMDHFP
+      AGWKDGFUOAPZUEZAWKDUFZUGUHFBWMWDUIWIWJWOUJUKWHWPWCWQWHWJAMZWDNZDHZABLZOZW
+      PWHXFWHWJXEABCWDDWDULZUMWGXDABXBBHZWGOXCCDABCDWDXGQXHWGUPUQRURWJXEWHWJBIW
+      DUSZXEWHSZBWDUTXICIHZABLZXJABICWDWDVAVGXLXDWGSZABLXJXKXMABXHXKOZXDWGXNXCC
+      DABCIWDXGQVBVCRXDWGABVDTVEVFVHVIXEWOWJXDWNAFBXDFPAGGWLWMAGWKWDAGBCVJWSVKW
+      TVLAFVSXCWLDWMXBWKWDVMXAVNVOVPVQWCWIWPABCIVRVTWAWBT $.
+      $( [4-Jan-2015] $)
+  $}
+
+  ${
+    $d F x y $.  $d S x y $.  $d R x y $.  $d U y $.  $d V y $.  $d G x y $.
+    $d P x y $.  $d Z x y $.  $d H x y $.  $d N x y $.  $d B x y $.
+    prdmgrplem1.s $e |- S e. _V $.
+    prdmgrplem1.r $e |- R e. _V $.
+    prdmgrplem1.b $e |- B = X_ x e. dom R ( Base ` ( R ` x ) ) $.
+
+    ${
+      prdmgrplem5.z $e |- Z = ( x e. dom R |-> ( 0g ` ( R ` x ) ) ) $.
+      $( Lemma for ~ prdmgrp . $)
+      prdmgrplem5 $p |- ( A. x e. dom R ( R ` x ) e. Grp -> Z e. B ) $=
+        ( cv cfv cgrp wcel cdm wral c0g cbs eqid1 grpidcl cvv cmpt cixp eleq12i
+        ralimi wb dmex mptelixpg ax-mp bitri sylibr ) AJCKZLMZACNZOUKPKZUKQKZMZ
+        AUMOZEBMZULUPAUMUOUKUNUORUNRSUDURAUMUNUAZAUMUOUBZMZUQEUSBUTIHUCUMTMVAUQ
+        UECGUFAUMUNUOTUGUHUIUJ $.
+        $( [4-Jan-2015] $)
+    $}
+
+    ${
+      prdmgrplem2.a $e |- P = ( +g ` ( S Xm_ R ) ) $.
+      $( Lemma for ~ prdmgrp . $)
+      prdmgrplem2 $p |- ( ( F e. B /\ G e. B ) -> ( F P G ) =
+          ( x e. dom R |-> ( ( F ` x ) ( +g ` ( R ` x ) ) ( G ` x ) ) ) ) $=
+        ( vy wcel wa co cfv cplusg cvv wceq fveq2 cdm cv cmpt wi cprdm cbs cixp
+        eqid prdmbase mp2an eqtri prdmplusgval ex fveq2d oveq123d cbvmptv eqtrd
+        weq a1i ) FBMGBMNZFGCOZLDUAZLUBZFPZVCGPZVCDPZQPZOZUCZAVBAUBZFPZVJGPZVJD
+        PZQPZOZUCZERMZDRMZUTVAVISZUDHIVQVRNUTVSLBCDEFGRREDUEOZBAVBVMUFPUGZVTUFP
+        ZJVQVRWAWBSHIAVTDERRVTUHZUIUJUKKWCULUMUJVIVPSUTLAVBVHVOLAURZVDVKVEVLVGV
+        NWDVFVMQVCVJDTUNVCVJFTVCVJGTUOUPUSUQ $.
+        $( [4-Jan-2015] $)
+
+      $( Lemma for ~ prdmgrp . $)
+      prdmgrplem3 $p |- ( ( A. x e. dom R ( R ` x ) e. Grp /\
+          ( F e. B /\ G e. B ) ) -> ( F P G ) e. B ) $=
+        ( cfv wcel wral wa co cvv wfn elixp2 simp3bi cv cgrp cplusg prdmgrplem2
+        cdm cmpt wceq adantl cbs eleq2s anim12i r19.26 eqid1 grpcl 3expb ralimi
+        cixp sylbir sylan2br sylan2 wb mptelixpg ax-mp sylibr syl6eleqr eqeltrd
+        dmex ) AUAZDLZUBMZADUEZNZFBMZGBMZOZOZFGCPZAVKVHFLZVHGLZVIUCLZPZUFZBVOVQ
+        WBUGVLABCDEFGHIJKUDUHVPWBAVKVIUILZUQZBVPWAWCMZAVKNZWBWDMZVOVLVRWCMZAVKN
+        ZVSWCMZAVKNZOZWFVMWIVNWKWIFWDBFWDMFQMFVKRWIAVKWCFSTJUJWKGWDBGWDMGQMGVKR
+        WKAVKWCGSTJUJUKWLVLWHWJOZAVKNZWFWHWJAVKULVLWNOVJWMOZAVKNWFVJWMAVKULWOWE
+        AVKVJWHWJWEWCVTVIVRVSWCUMVTUMUNUOUPURUSUTVKQMWGWFVADIVGAVKWAWCQVBVCVDJV
+        EVF $.
+        $( [4-Jan-2015] $)
+
+      $( Lemma for ~ prdmgrp . $)
+      prdmgrplem6 $p |- ( ( A. x e. dom R ( R ` x ) e. Grp /\
+          ( F e. B /\ G e. B /\ H e. B ) ) -> ( ( F P G ) P H ) =
+            ( F P ( G P H ) ) ) $=
+        ( cfv wcel wral co cmpt wceq ra4 cvv cv cgrp cdm w3a cplusg hbra1 ax-17
+        wa hban cbs imp adantlr wi cixp wfn elixp2 simp3bi syl eleq2s 3anim123d
+        com12 impcom adantll eqid grpass ovex fvmpt2 mpan2 adantl oveq1d oveq2d
+        syl2anc 3eqtr4d mpteq2da prdmgrplem2 3adant3 fveq1d 3adant1 prdmgrplem3
+        mpteq2dv 3adantr3 simpr3 simpr1 3adantr1 ) AUAZDMZUBNZADUCZOZFBNZGBNZHB
+        NZUDZUHZAWHWEFGCPZMZWEHMZWFUEMZPZQZAWHWEFMZWEGHCPZMZWRPZQZWOHCPZFXBCPZW
+        NAWHWEAWHXAWEGMZWRPZQZMZWQWRPZQZAWHXAWEAWHXHWQWRPZQZMZWRPZQZWTXEWNAWHXL
+        XQWIWMAWGAWHUFWMAUGUIWNWEWHNZUHZXIWQWRPZXAXNWRPZXLXQXTWGXAWFUJMZNZXHYCN
+        ZWQYCNZUDZYAYBRWIXSWGWMWIXSWGWGAWHSUKULWMXSYGWIXSWMYGXSWJYDWKYEWLYFWJXS
+        YDXSYDUMZFAWHYCUNZBFYINZYDAWHOZYHYJFTNFWHUOYKAWHYCFUPUQYDAWHSURKUSVAWKX
+        SYEXSYEUMZGYIBGYINZYEAWHOZYLYMGTNGWHUOYNAWHYCGUPUQYEAWHSURKUSVAWLXSYFXS
+        YFUMZHYIBHYINZYFAWHOZYOYPHTNHWHUOYQAWHYCHUPUQYFAWHSURKUSVAUTVBVCYCWRWFX
+        AXHWQYCVDWRVDVEVLXTXKXIWQWRXSXKXIRZWNXSXITNYRXAXHWRVFAWHXITXJXJVDVGVHVI
+        VJXTXPXNXAWRXSXPXNRZWNXSXNTNYSXHWQWRVFAWHXNTXOXOVDVGVHVIVKVMVNWMWTXMRWI
+        WMAWHWSXLWMWPXKWQWRWMWEWOXJWJWKWOXJRWLABCDEFGIJKLVOVPVQVJVTVIWMXEXRRWIW
+        MAWHXDXQWMXCXPXAWRWMWEXBXOWKWLXBXORWJABCDEGHIJKLVOVRVQVKVTVIVMWNWOBNZWL
+        XFWTRWIWJWKYTWLABCDEFGIJKLVSWAWIWJWKWLWBABCDEWOHIJKLVOVLWNWJXBBNZXGXERW
+        IWJWKWLWCWIWKWLUUAWJABCDEGHIJKLVSWDABCDEFXBIJKLVOVLVM $.
+        $( [4-Jan-2015] $)
+
+      prdmgrplem4.z $e |- Z = ( x e. dom R |-> ( 0g ` ( R ` x ) ) ) $.
+      $( Lemma for ~ prdmgrp . $)
+      prdmgrplem4 $p |- ( ( A. x e. dom R ( R ` x ) e. Grp /\ F e. B ) ->
+          ( Z P F ) = F ) $=
+        ( cfv wcel wral wa co wceq cvv eqid cv cgrp cdm cplusg cmpt hbra1 ax-17
+        hban c0g fvex fvmpt2 mpan2 adantl oveq1d cbs ra4 adantlr wi cixp elixp2
+        imp wfn simp3bi syl eleq2s adantll grplid eqtrd prdmgrplem5 prdmgrplem2
+        syl2anc mpteq2da sylan ixpfn dffn5v sylib 3eqtr4d ) AUAZDMZUBNZADUCZOZF
+        BNZPZAWAVRGMZVRFMZVSUDMZQZUEZAWAWFUEZGFCQZFWDAWAWHWFWBWCAVTAWAUFWCAUGUH
+        WDVRWANZPZWHVSUIMZWFWGQZWFWMWEWNWFWGWLWEWNRZWDWLWNSNWPVSUIUJAWAWNSGLUKU
+        LUMUNWMVTWFVSUOMZNZWOWFRWBWLVTWCWBWLVTVTAWAUPVAUQWCWLWRWBWCWLWRWLWRURZF
+        AWAWQUSZBFWTNZWRAWAOZWSXAFSNFWAVBZXBAWAWQFUTVCWRAWAUPVDJVEVAVFWQWGVSWNW
+        FWQTWGTWNTVGVKVHVLWBGBNWCWKWIRABDEGHIJLVIABCDEGFHIJKVJVMWCFWJRZWBXDFWTB
+        XAXCXDAFWAWQVNAWAFVOVPJVEUMVQ $.
+        $( [4-Jan-2015] $)
+
+      ${
+        prdmgrplem7.n $e |- N = ( x e. dom R |-> ( ( invg ` ( R ` x ) ) `
+            ( F ` x ) ) ) $.
+        $( Lemma for ~ prdmgrp . $)
+        prdmgrplem7 $p |- ( ( A. x e. dom R ( R ` x ) e. Grp /\ F e. B ) ->
+            N e. B ) $=
+          ( cfv wcel wral wa cvv eqid1 cv cgrp cdm cminusg cbs cixp wfn simp3bi
+          elixp2 eleq2s r19.26 grpinvcl ralimi sylbir cmpt eleq12i wb mptelixpg
+          sylan2 dmex ax-mp bitri sylibr ) AUAZDOZUBPZADUCZQZFBPZRVDFOZVEUDOZOZ
+          VEUEOZPZAVGQZGBPZVIVHVJVMPZAVGQZVOVRFAVGVMUFZBFVSPFSPFVGUGVRAVGVMFUIU
+          HKUJVHVRRVFVQRZAVGQVOVFVQAVGUKVTVNAVGVMVEVKVJVMTVKTULUMUNUSVPAVGVLUOZ
+          VSPZVOGWABVSNKUPVGSPWBVOUQDJUTAVGVLVMSURVAVBVC $.
+          $( [4-Jan-2015] $)
+
+        $( Lemma for ~ prdmgrp . $)
+        prdmgrplem8 $p |- ( ( A. x e. dom R ( R ` x ) e. Grp /\ F e. B ) ->
+            ( N P F ) = Z ) $=
+          ( cfv wcel co cmpt wceq cvv cv cgrp wa cplusg prdmgrplem7 prdmgrplem2
+          cdm wral sylancom c0g hbra1 ax-17 hban cminusg fveq1i fvex eqid mpan2
+          fvmpt2 adantl syl5eq oveq1d cbs ra4 imp adantlr wi wfn elixp2 simp3bi
+          cixp syl eleq2s adantll eqid1 grplinv syl2anc eqtrd mpteq2da syl6eqr
+          ) AUAZDOZUBPZADUGZUHZFBPZUCZGFCQZAWDWAGOZWAFOZWBUDOZQZRZHWEWFGBPWHWMS
+          ABCDEFGHIJKLMNUEABCDEGFIJKLUFUIWGWMAWDWBUJOZRHWGAWDWLWNWEWFAWCAWDUKWF
+          AULUMWGWAWDPZUCZWLWJWBUNOZOZWJWKQZWNWPWIWRWJWKWPWIWAAWDWRRZOZWRWAGWTN
+          UOWOXAWRSZWGWOWRTPXBWJWQUPAWDWRTWTWTUQUSURUTVAVBWPWCWJWBVCOZPZWSWNSWE
+          WOWCWFWEWOWCWCAWDVDVEVFWFWOXDWEWFWOXDWOXDVGZFAWDXCVKZBFXFPZXDAWDUHZXE
+          XGFTPFWDVHXHAWDXCFVIVJXDAWDVDVLKVMVEVNXCWKWBWQWNWJXCUQWKVOWNVOWQUQVPV
+          QVRVSMVTVR $.
+          $( [4-Jan-2015] $)
+      $}
+    $}
+  $}
+
+  ${
+    $d R a b c x $.  $d Z a b c x $.  $d N a b x $.  $d B a b c x $.
+    $d S a b c x $.
+    prdmgrplem.r $e |- R e. _V $.
+    prdmgrplem.s $e |- S e. _V $.
+    prdmgrplem.b $e |- B = X_ x e. dom R ( Base ` ( R ` x ) ) $.
+    prdmgrplem.z $e |- Z = ( x e. dom R |-> ( 0g ` ( R ` x ) ) ) $.
+    prdmgrplem.n $e |- N = ( x e. dom R |->
+        ( ( invg ` ( R ` x ) ) ` ( c ` x ) ) ) $.
+    $( Lemma for ~ prdmgrp . $)
+    prdmgrplem $p |- ( A. x e. dom R ( R ` x ) e. Grp ->
+      ( S Xm_ R ) e. Grp ) $=
+      ( vb va cv cfv wcel cprdm co cvv cgrp wral cplusg wceq cixp eqid prdmbase
+      cdm cbs mp2an eqtri eqidd prdmgrplem3 prdmgrplem6 prdmgrplem5 prdmgrplem4
+      a1i ovex 3impb prdmgrplem7 prdmgrplem8 isgrpd ) AOCPZUAQACUHZUBZGMNBDCRSZ
+      UCPZVFEFBVFUIPZUDVEBAVDVCUIPUEZVHJDTQCTQVIVHUDIHAVFCDTTVFUFUGUJUKUQVEVGUL
+      VFTQVEDCRURUQVEGOZBQMOZBQVJVKVGSBQABVGCDVJVKIHJVGUFZUMUSABVGCDVJVKNOIHJVL
+      UNABCDFIHJKUOABVGCDVJFIHJVLKUPABVGCDVJEFIHJVLKLUTABVGCDVJEFIHJVLKLVAVB $.
+      $( [4-Jan-2015] $)
+  $}
+
+  ${
+    $d S a b x y z $.  $d R a b x y z $.
+    $( The product of a family of groups is a group. $)
+    prdmgrp $p |- ( ( S e. V /\ R e. W /\ A. x e. dom R ( R ` x ) e. Grp ) ->
+        ( S Xm_ R ) e. Grp ) $=
+      ( vb va vy wcel cv cfv cgrp cprdm co wi eleq1d cbs cminusg c0g fveq2d cdm
+      vz wral wceq oveq1 imbi2d dmeq fveq1 raleqbidv oveq2 imbi12d cixp vex weq
+      cmpt fveq2 cbvixpv cbvmptv fveq12d prdmgrplem vtocl2g 3impia ) CDIBEIAJZB
+      KZLIZABUAZUCZCBMNZLIZVCFJZKZLIZAVJUAZUCZGJZVJMNZLIZOVNCVJMNZLIZOVGVIOGFCB
+      DEVOCUDZVQVSVNVTVPVRLVOCVJMUEPUFVJBUDZVNVGVSVIWAVLVEAVMVFVJBUGWAVKVDLVCVJ
+      BUHPUIWAVRVHLVJBCMUJPUKAHVMHJZVJKZQKZULVJVOHVMWBUBJZKZWCRKZKZUOHVMWCSKZUO
+      UBFUMGUMHAVMWDVKQKHAUNZWCVKQWBVCVJUPZTUQHAVMWIVKSKWJWCVKSWKTURHAVMWHVCWEK
+      ZVKRKZKWJWFWLWGWMWJWCVKRWKTWBVCWEUPUSURUTVAVB $.
+      $( [4-Jan-2015] $)
   $}
 
 $(
