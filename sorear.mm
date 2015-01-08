@@ -10562,6 +10562,19 @@ $)
       NBOZPUPUPFURUTSTUMUQAUOVAABUAULUPUBUMUQRUKUOUCULUPFUDUJUEUSBDBUFUGUHUI $.
       $( [4-Nov-2014] $)
 
+    $( Compact quantifier-free version of the standard definition ~ df-fin . $)
+    dffin1-5 $p |- Fin = ( ~~ " om ) $=
+      ( vx vy cv cen wbr com wrex cab cfn cima ensym impbii rexbii abbii df-fin
+      vex dfima2 3eqtr4i ) ACZBCZDEZBFGZAHTSDEZBFGZAHIDFJUBUDAUAUCBFUAUCSTBPKTS
+      APKLMNABOBADFQR $.
+      $( [6-Jan-2015] $)
+
+    $( Characterization of choice similar to ~ dffin1-5 . $)
+    axac10 $p |- ( ~~ " On ) = _V $=
+      ( vx vy cen con0 cima cvv ssv cv wcel wbr wrex numth2 vex elima mpbir a1i
+      ssriv eqssi ) CDEZFSGAFSAHZSIZTFIUABHTCJBDKBTLBTCDAMNOPQR $.
+      $( [6-Jan-2015] $)
+
     $( Every II-finite set (every chain of subsets has a maximal element) is
        III-finite (has no denumerable collection of subsets).  The proof here
        is the only one I could find, from
@@ -14697,6 +14710,16 @@ $)
     $d Z s r x v f g $.  $d B s r v f g $.  $d A s r v $.  $d T s r v $.
     $d M s r v $.  $d O s r x v f g $.  $d L s r v $.  $d D s r v $.
     $d U s r v $.
+    $( The structure product is a well-behaved binary operator. $)
+    reldmprdm $p |- Rel dom Xm_ $=
+      ( vs vr vv vx vf vg cvv cv cfv cbs cnx cop cplusg co cmpt cmpt2 cmulr ctp
+      cvsca cpr cdm cixp csca cun cts ccom cpt cple wss wbr wral wa cds crn cxr
+      copab clt csup csb cprdm df-prdm reldmmpt2 ) ABGGCDBHZUAZDHZVCIZJIUBKJICH
+      ZLKMIEFVGVGDVDVEEHZIZVEFHZIZVFMINOPLKQIEFVGVGDVDVIVKVFQINOPLRKUCIAHZLKSIE
+      FVLJIVGDVDVHVKVFSINOPLTUDKUEIUEVCUFUGILKUHIVHVJTVGUIVIVKVFUHIUJDVDUKULEFU
+      PLKUMIEFVGVGDVDVIVKVFUMINOUNUOUQURPLRUDUSUTDCEFABVAVB $.
+      $( [7-Jan-2015] $)
+
     prdmval.b $e |- B = X_ x e. dom R ( Base ` ( R ` x ) ) $.
     $( Lemma for structure products. $)
     prdmbaseex $p |- ( R e. W -> B e. _V ) $=
@@ -15334,6 +15357,74 @@ $(
     Direct sum and free left modules
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
+
+  $c (+)m $.
+
+  $( Class of module direct sum generator. $)
+  cdsmm $a class (+)m $.
+
+  ${
+    $d s r f x $.
+    $( The direct sum of a family of Abelian groups or left modules is the
+       induced group structure on finite linear combinations of elements, here
+       represented as functions with finite support. $)
+    df-dsmm $a |- (+)m = ( s e. _V , r e. _V |-> ( ( s Xm_ r ) |`s
+        { f e. X_ x e. dom r ( Base ` ( r ` x ) ) |
+          { x e. dom r | ( f ` x ) =/= ( 0g ` ( r ` x ) ) } e. Fin } ) ) $.
+  $}
+
+  ${
+    $d S s r f x $.  $d R s r f x $.  $d B s r $.
+    $( The direct sum is a well-behaved binary operator. $)
+    reldmdsmm $p |- Rel dom (+)m $=
+      ( vs vr vx vf cvv cv cprdm cfv c0g wne cdm crab cfn wcel cixp cress cdsmm
+      co cbs df-dsmm reldmmpt2 ) ABEEAFBFZGRCFZDFHUCUBHZIHJCUBKZLMNDCUEUDSHOLPR
+      QCDABTUA $.
+      $( [7-Jan-2015] $)
+
+    dsmmval.b $e |- B = { f e. ( Base ` ( S Xm_ R ) ) |
+        { x e. dom R | ( f ` x ) =/= ( 0g ` ( R ` x ) ) } e. Fin } $.
+    $( Value of the module direct sum. $)
+    dsmmval $p |- ( R e. V -> ( S (+)m R ) = ( ( S Xm_ R ) |`s B ) ) $=
+      ( vs vr wcel cvv co cprdm cress wceq cv cfv crab cbs c0 cdsmm c0g wne cdm
+      elex cfn cixp oveq1 vex eqid prdmbase mp2an fveq2d syl5eq rabeq syl oveq2
+      oveq12d dmeq fveq1 neeq2d rabeqbidv eleq1d syl6eqr df-dsmm ovex ovmpt2 wn
+      ress0 eqcomi reldmdsmm ovprc1 reldmprdm oveq1d 3eqtr4a adantr pm2.61ian )
+      CFJCKJZDCUALZDCMLZBNLZOZCFUEDKJZVRWBHIDCKKHPZIPZMLZAPZEPQZWGWEQZUBQZUCZAW
+      EUDZRZUFJZEAWLWISQUGZRZNLWAUADWEMLZWNEWQSQZRZNLWDDOZWFWQWPWSNWDDWEMUHZWTW
+      OWROWPWSOWTWOWFSQZWRWDKJWEKJWOXBOHUIIUIAWFWEWDKKWFUJUKULWTWFWQSXAUMUNWNEW
+      OWRUOUPURWECOZWQVTWSBNWECDMUQZXCWSWHWGCQZUBQZUCZACUDZRZUFJZEVTSQZRBXCWNXJ
+      EWRXKXCWQVTSXDUMXCWMXIUFXCWKXGAWLXHWECUSXCWJXFWHXCWIXEUBWGWECUTUMVAVBVCVB
+      GVDURAEHIVEVTBNVFVGWCVHZWBVRXLTTBNLZVSWAXMTBVIVJDCUAVKVLXLVTTBNDCMVMVLVNV
+      OVPVQUP $.
+      $( [7-Jan-2015] $)
+
+    $( Base set of the module direct sum. $)
+    dsmmbase $p |- ( R e. V -> B = ( Base ` ( S (+)m R ) ) ) $=
+      ( wcel cvv cdsmm co cbs cfv wceq elex cprdm cress cv crab eqid fveq2d wss
+      dsmmval c0g wne cdm cfn ssrab2 eqsstri ressbas2 ax-mp syl6reqr syl ) CFHC
+      IHZBDCJKZLMZNCFOUNUPDCPKZBQKZLMZBUNUOURLABCDEIGUCUABUQLMZUBBUSNBARZERMVAC
+      MUDMUEACUFSUGHZEUTSUTGVBEUTUHUIBUTURUQURTUTTUJUKULUM $.
+      $( [7-Jan-2015] $)
+  $}
+
+  ${
+    $d S s r f x $.  $d R s r f x $.  $d B s r $.
+    dsmmval2.b $e |- B = ( Base ` ( S (+)m R ) ) $.
+    $( Self-referential definition of the module direct sum. $)
+    dsmmval2 $p |- ( S (+)m R ) = ( ( S Xm_ R ) |`s B ) $=
+      ( vx vf cdsmm co cprdm cbs cfv cress cvv wcel wceq crab oveq2i 3eqtr4a c0
+      eqid cv c0g wne cdm cfn ssrab2 ressbas2 ax-mp dsmmval fveq2d oveq2d ress0
+      wn eqcomi reldmdsmm ovprc1 reldmprdm oveq1d pm2.61i ovprc2 oveq12d eqtr4i
+      wss ) CBGHZCBIHZVDJKZLHZVEALHBMNZVDVGOVHVEEUAZFUAKZVIBKUBKUCEBUDPUENZFVEJ
+      KZPZLHZVEVNJKZLHVDVGVMVOVELVMVLVCVMVOOVKFVLUFVMVLVNVEVNTVLTUGUHQEVMBCFMVM
+      TUIZVHVFVOVELVHVDVNJVPUJUKRVHUMZCCGHZCCIHZVRJKZLHZVDVGCMNZVRWAOWBVSVJVICK
+      UBKUCECUDPUENZFVSJKZPZLHZVSWFJKZLHVRWAWEWGVSLWEWDVCWEWGOWCFWDUFWEWDWFVSWF
+      TWDTUGUHQEWECCFMWETUIZWBVTWGVSLWBVRWFJWHUJUKRWBUMZSSVTLHZVRWAWJSVTULUNCCG
+      UOUPWIVSSVTLCCIUQUPURRUSCBGUTZVQVEVSVFVTLCBIUTVQVDVRJWKUJVARUSAVFVELDQVB
+      $.
+      $( [7-Jan-2015] $)
+  $}
 
 
 $(
@@ -16956,5 +17047,125 @@ $)
       ? @.
   @}
   $)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Miscellaneous topology
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c Top1c Top2c TopSep TopLnd $.
+
+  $( The class of first-countable topologies. $)
+  ctop1c $a class Top1c $.
+
+  $( The class of second-countable topologies. $)
+  ctop2c $a class Top2c $.
+
+  $( The class of separable toplogies. $)
+  ctopsep $a class TopSep $.
+
+  $( The class of Lindel&ouml;f toplogies. $)
+  ctoplnd $a class TopLnd $.
+
+  ${
+    $d j x y z $.
+    $( A topology is _first-countable_ iff the neighborhoods of each point have
+       a countable base. $)
+    df-top1c $a |- Top1c = { j e. Top | A. x e. U. j ( ( nei ` { j } ) ` x ) e.
+        ( filGen " { y e. fBas | y ~<_ om } ) } $.
+
+    $( A topology is _second-countable_ iff it is generated by some countable
+       basis. $)
+    df-top2c $a |- Top2c = ( topGen " { j e. TopBases | j ~<_ om } ) $.
+
+    $( A topology is _separable_ iff it has a countable dense subset. $)
+    df-topsep $a |- TopSep = { j e. Top | E. x e. ~P U. j ( x ~<_ om /\
+        ( ( cls ` j ) ` x ) = U. j ) } $.
+
+    $( A topology is _Lindel&ouml;f_ iff every open cover has a countable
+       subcover. $)
+    df-toplnd $a |- TopLnd = { x e. Top | A. y e. ~P x ( U. x = U. y ->
+        E. z e. ~P x ( z ~<_ om /\ U. x = U. z ) ) } $.
+  $}
+
+  $( Expand definitions $)
+  $( RR is separable $)
+  $( A set is dense iff it meets every open set $)
+  $( A set is dense iff it meets every basis element $)
+  $( Lindelof criterion for subspaces $)
+  $( Lindelof for closed subspaces $)
+  $( A countable union of Lindelof subspaces $)
+  $( In a general space, open Lindelof <=> all families of open sets have
+     countable subfamilies with the same union $)
+  $( Both of the above are equivalent to hereditary Lindelof above $)
+  $( Hereditary Lindelof => Lindelof $)
+  $( 2nd countable => hered Lindelof; RR is h Lind $)
+  $( 2nd countable => separable $)
+  $( Expansions of first-countability $)
+  $( Metric spaces are first-countable: use balls of (1/NN) or QQ+ radius $)
+  $( Binary products preserve second-countability $)
+  $( Binary products preserve first-countability $)
+
+  $( The Sorgenfrey line basis is a basis $)
+  $( A set is Sorgenfrey-dense iff it is RR-dense $)
+  $( SorgenfreyLine is separable $)
+  $( The Sorgenfrey line is a topology on RR $)
+  $( The Sorgenfrey line is finer than the usual line $)
+  $( A topology finer than a Hausdorff topology is Hausdorff; Sorgenfrey line
+     is Hausdorff $)
+  $( Hereditary Lindelof proof: there may be a simpler one $)
+    $( Basis sets are Lindelof: close/open advancing argument like icccmp $)
+    $( Open intervals are countable unions of half-open $)
+    $( Open intervals are Lindelof in the SL $)
+    $( A Lindelof open set is equal to the union of its maximal intervals $)
+    $( A union of half-open intervals sharing a point is a half-open or open
+       interval $)
+    $( Each maximal interval is a half-open or open interval $)
+    $( Each maximal interval is disjoint $)
+    $( There are countably many disjoint intervals $)
+    $( All open sets are Lindelof $)
+  $( Sorgenfrey line is first-countable: [x,x+q) or [x,x+(1/n)) is a countable
+     neighborhood base $)
+
+  $( Natural open sets in the Sorgenfrey plane $)
+  $( Antidiagonal is closed $)
+  $( Antidiagonal is discrete $)
+  $( Sorgenfrey plane is NOT Lindelof, despite h. Lindelof of the line $)
+  $( This proves that the Sorgenfrey line is NOT 2c $)
+    $( alternate direct proof: a point is "special" in an open set if the point
+       is in the open set and the open set contains no interval around it.  The
+       special points of a union is at most the special points of the elements.
+       An element of the standard basis has at most one special point.  The
+       special points of every open set are countable.  Given a countable
+       collection of open sets, find a point which is not special for any
+       element; [x,x+1) thus has a special point which is not in the union, and
+       so cannot be a union of elements of the countable set. $)
+
+  $( Define the general order topology and the lexicographic order $)
+    $( does it make sense to first define poset infinity and intervals? $)
+  $( Define ordinal spaces or at least their ordering $)
+  $( Redefine CCfld with a topology and an order $)
+  $( Define the closed long ray (CLR) $)
+  $( A Lindelof subset of the CLR is not cofinal $)
+  $( The CLR is not Lindelof $)
+  $( A countable ordinal can be continuously order-embedded in QQ $)
+    $( this is also the key step for Aronsjazn trees $)
+    $( an ordinal is countable iff it can be embedded in RR $)
+  $( An continuous embedding extends to a homomorphism of a long line initial
+     segment which "fixes" 0 $)
+  $( Initial segments of the CLR are homeomorph to [0,1) $)
+  $( CLR is connected $)
+  $( Intial segments of the OLR are homeomorph to (0,1), thus RR $)
+  $( OLR is connected $)
+  $( Every Lindelof subset of OLR is contained in a homeomorph of RR $)
+  $( Define LL $)
+  $( Every Lindelof subset of LL is contained in a homeomorph of RR $)
+  $( LL contains CLR as a closed set and OLR as open $)
+  $( LL is not Lindelof $)
+  $( LL has a reversing homeomorphism $)
+  $( A homeomorphism of interval-connected ordered spaces is monotone $)
+  $( OLR has downward cofinal sequences but not upward cofinal $)
+  $( All OLR homeomorphisms are monotone increasing $)
 
 $( (End of Stefan O'Rear's mathbox.) $)
