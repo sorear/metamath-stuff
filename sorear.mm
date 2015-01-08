@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 28-Dec-2014/rename GrpHom to GrpOpHom $)
+$[ set_mario_20150107.mm $] $( set.mm - Version of 28-Dec-2014/rename GrpHom to GrpOpHom $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -1739,7 +1739,7 @@ $)
     sbcrot3g $p |- ( ( A e. D /\ B e. E /\ A. b C e. F ) -> ( [ A / a ] [ B / b
         ] [ C / c ] ph <-> [ B / b ] [ C / c ] [ A / a ] ph ) ) $=
       ( wcel cvv wal wsbc wb elex alimi w3a sbccomg 3adant3 wa simp2 ax-17 hba1
-      3simpb hban ax-4 sylan2 sbcbid syl2anc bitrd syl3an ) BEKBLKZCFKCLKZDGKZI
+      3simpb hban ax-4 sylan2 sbcbidg syl2anc bitrd syl3an ) BEKBLKZCFKCLKZDGKZI
       MDLKZIMZAJDNZICNHBNZAHBNJDNZICNZOBEPCFPUOUPIDGPQUMUNUQRZUSURHBNZICNZVAUMU
       NUSVDOUQURHIBCLLSTVBUMUQUAZUNVDVAOUMUNUQUEUMUNUQUBVEVCUTICLUMUQIUMIUCUPIU
       DUFUQUMUPVCUTOUPIUGAHJBDLLSUHUIUJUKUL $.
@@ -1777,7 +1777,7 @@ $)
     sbccomieg $p |- ( ( A e. V /\ C e. W ) -> ( [ A / a ] [ B / b ] ph <-> [ C
         / b ] [ A / a ] ph ) ) $=
       ( vc wcel wa cvv wsbc wal wi cv wceq wb ax-17 elex adantr hbsbc1g hbsbcgd
-      adantl a17d alrimiv syl2anc dfsbcq syl sbceq1a sbcbidv ancoms ex sbciegft
+      adantl a17d alrimiv syl2anc dfsbcq syl sbceq1a sbcbidgv ancoms ex sbciegft
       bitrd syl3anc ) BEKZDFKZLZBMKZAGBNZHDNZVCGOPZGOZGQBRZAHCNZVCSZPZGOZVGGBNV
       CSURVAUSBEUAUBZUTVADMKZVEVKUSVLURDFUAUEZVAVLLVDGVAVBGHJDMVAGTVAHTVAJQZDKG
       UFAGJBMVNBKGTUCUDUGUHUTVLVJVMVLVIGVLVFVHVLVFLZVGAHDNZVCVOCDRZVGVPSVFVQVLI
@@ -1805,7 +1805,7 @@ $)
       ( va vb vc cn0 wcel wa wceq wsbc wb c1 cfz cmap crab cdioph cfv wrex cres
       co cv cab wsb df-rab sbequ cbvrexv anbi2i r19.42v bitr4i cop simpll simpr
       csn cun simplr mapfzcons syl3anc adantrr mapfzcons2 eqcomd dfsbcq syl cvv
-      mapfzcons1 sbcbidv mpan2 bitrd biimpd fveq1 reseq1 eqeq2d anbi12d rcla4ev
+      mapfzcons1 sbcbidgv mpan2 bitrd biimpd fveq1 reseq1 eqeq2d anbi12d rcla4ev
       fvex impr syl12anc ex rexlimdva wf ovex elmapi cn caddc syl5eqel elfz1end
       nn0p1nn sylib ffvelrn syl2anr adantr simprr mapfzcons1cl eqeltrd ad2antll
       mpan simprl mpbird anbi2d impbid syl5bb abbidv syl5eq ax-17 hbs1 hbsb weq
@@ -1857,7 +1857,7 @@ $)
         ( NN0 ^m ( 1 ... N ) ) | E. v e. NN0 ph } e. ( Dioph ` N ) ) $=
       ( vb va vc cn0 wcel cv cfv wsbc co crab wrex wsb ax-17 c1 cfz cres cdioph
       cmap wa hbs1 hbrex weq cbvrexsv sbequ12 rexbidv syl5bb cbvrab wceq cvv wb
-      vex dfsbcq sbcbidv mpan2 rexrabdioph syl5eqel ) FKLABEDMZNZOZCVDUAFUBPZUC
+      vex dfsbcq sbcbidgv mpan2 rexrabdioph syl5eqel ) FKLABEDMZNZOZCVDUAFUBPZUC
       ZOZDKUAEUBPUEPQEUDNLUFABKRZCKVGUEPZQABHSZCISZHKRZIVKQFUDNVJVNCIJVKJMVKLZC
       TVOITVJITVMCHKHMZKLCTVLCIUGUHVJVLHKRCIUIZVNABHKUJVQVLVMHKVLCIUKULUMUNVIVM
       VFCISZHIDEFGVPVEUOZIMZUPLVMVRUQIURVSVLVFCVTUPABVPVEUSUTVAVFCVTVHUSVBVC $.
@@ -1875,7 +1875,7 @@ $)
       wa resex fvex 2sbcrex a1i rabbiia caddc peano2nn0 syl5eqel adantr sbcrot3
       sbcbiii reseq1 sbccomieg mp2an wss fzssp1 oveq2i syl6sseqr resabs1 dfsbcq
       wceq 3syl wal ax-gen fveq1 sbcco3g cn nn0p1nn elfz1end sylib fvres syl5bb
-      sbcbidv mpan2 syl5rbb rabbidv eleq1d biimpa rexfrabdioph syl2anc syldan
+      sbcbidgv mpan2 syl5rbb rabbidv eleq1d biimpa rexfrabdioph syl2anc syldan
       bitrd ) HLMZABFEUAZNZOZCGWLNZOZDWLPHQRZUBZOZELPFQRUCRZUDZFUENZMZABLUFZCGK
       UAZNZODXEWQUBZOZKLPGQRZUCRZUDZGUENZMXDCLUFDLWQUCRUDHUENMWKXCUHZXKACXFODXG
       OZBLUFZKXJUDZXLXHXOKXJXHXOSXEXJMAXGXFLDCBXEWQKUGUIZGXEUJZUKULUMXMGLMZXNBW
@@ -1901,7 +1901,7 @@ $)
       wb resex fvex sbc2rexg ax-mp sbcbiii bitri rabbiia caddc nn0p1nn syl5eqel
       a1i cn nnnn0 syl adantr sbcrot3 reseq1 sbccomieg mp2an wceq fzssp1 oveq2i
       wss syl6sseqr resabs1 dfsbcq 3syl wal ax-gen fveq1 sbcco3g elfz1end sylib
-      fvres syl5bb sbcbidv syl5bbr rabbidv eleq1d biimpar 2rexfrabdioph syl2anc
+      fvres syl5bb sbcbidgv syl5bbr rabbidv eleq1d biimpar 2rexfrabdioph syl2anc
       mpan2 bitrd rexfrabdioph syldan ) JOPZABGFUAZQZRCHWSQZRZDIWSQZRZEWSUBJUCS
       ZUDZRZFOUBGUCSUESZUFZGUGQZPZABOUHCOUHZDINUAZQZRZEXMXEUDZRZNOUBIUCSZUESZUF
       ZIUGQZPXLDOUHEOXEUESUFJUGQPWRXKUIZXTADXNRZEXPRZBOUHCOUHZNXSUFZYAXQYENXSXQ
@@ -1931,7 +1931,7 @@ $)
       a1i nn0p1nn syl5eqel peano2nn nnnn0 adantr sbcrot3 bitr3i sbccomieg mp2an
       syl reseq1 wss wceq fzssp1 oveq2i syl6sseqr eqeltri eqcomi sseqtri syl6ss
       ovex resabs1 dfsbcq 3syl fveq1 elfz1end sylib sseldi fvres ax-gen sbcco3g
-      syl5bb sbcbidv mpan2 rabbidv eleq1d biimpar 2rexfrabdioph syl2anc syldan
+      syl5bb sbcbidgv mpan2 rabbidv eleq1d biimpar 2rexfrabdioph syl2anc syldan
       wal bitrd ) LQRZACHGUBZUCZSZBIXJUCZSZDJXJUCZSZEKXJUCZSZFXJUDLUEUFZUGZSZGQ
       UDHUEUFUHUFZUIZHUJUCZRZACQUKZBQUKZDJUAUBZUCZSEKYHUCZSZFYHXSUGZSZUAQUDJUEU
       FZUHUFZUIZJUJUCZRYGDQUKEQUKFQXSUHUFUILUJUCRXIYEULZYPADYISEYJSZFYLSZCQUKZB
@@ -1970,7 +1970,7 @@ $)
       wrex fvex cvv sbc4rexg ax-mp sbcbiii bitri rabbiia caddc nn0p1nn syl5eqel
       a1i cn peano2nn syl nnnn0 adantr sbcrot5 reseq1 sbccomieg wss wceq fzssp1
       mp2an oveq2i syl6sseqr eqeltri syl6ss resabs1 dfsbcq fveq1 elfz1end sylib
-      ovex sseldi fvres wal ax-gen sbcco3g syl5bb sbcbidv mpan2 syl5bbr rabbidv
+      ovex sseldi fvres wal ax-gen sbcco3g syl5bb sbcbidgv mpan2 syl5bbr rabbidv
       3syl bitrd eleq1d biimpar 4rexfrabdioph syl2anc 2rexfrabdioph syldan ) OU
       DUEZAPIHUFZUGZUHDJXMUGZUHCKXMUGZUHBLXMUGZUHZEMXMUGZUHZFNXMUGZUHZGXMUIOUJU
       KZULZUHZHUDUIIUJUKUMUKZUNZIUOUGZUEZAPUDUTDUDUTCUDUTBUDUTZEMUCUFZUGZUHZFNY
@@ -2012,7 +2012,7 @@ $)
       wrex cvv sbc2rexg ax-mp sbc4rexg 2rexbii bitri sbcbiii 3bitri a1i rabbiia
       fvex cn caddc nn0p1nn syl5eqel nnnn0 syl adantr sbcrot3 sbcrot5 sbccomieg
       reseq1 mp2an wss wceq fzssp1 oveq2i syl6sseqr resabs1 dfsbcq ax-gen fveq1
-      3syl wal sbcco3g elfz1end sylib fvres sbcbidv mpan2 bitrd syl5bbr rabbidv
+      3syl wal sbcco3g elfz1end sylib fvres sbcbidgv mpan2 bitrd syl5bbr rabbidv
       syl5bb eleq1d biimpar 6rexfrabdioph syl2anc rexfrabdioph syldan ) PUGUHZA
       QIHUIZUJZUKRJXOUJZUKDKXOUJZUKCLXOUJZUKZBMXOUJZUKENXOUJZUKZFOXOUJZUKZGXOUL
       PUMUNZUOZUKZHUGULIUMUNUPUNZUQZIURUJZUHZAQUGVCRUGVCDUGVCCUGVCZBUGVCEUGVCZF
@@ -9090,7 +9090,7 @@ $)
         ( vy vu cv wcel wsb wn wral wa notbid ax-17 cpw cdif crab wi weq difeq2
         wrex eleq1d elrab w3a wsbc wel wss difss vex elpw2 mpbir a1i wceq elpwi
         simp2r sselda syl dfss4 sylib simpr eqeltrd 3ad2antl1 simpl3 cvv dfsbcq
-        sylanbrc sbcbidv mpan2 rcla4va syl2anc simplrl con3d 3adantl3 ralrimiva
+        sylanbrc sbcbidgv mpan2 rcla4va syl2anc simplrl con3d 3adantl3 ralrimiva
         adantlr mpd ralbidv rcla4ev 3exp syl5bi rexlimdv hbs1 hbn hbral sbequ12
         wb cbvral syl5bb cbvrex 3imtr4g ) HMZGMZUAZUANZAEKOZDCOZPZKWRIMZUBZWQNZ
         IWSUCZQZCXGUGBEFOZDLOZPZFWQQZLWQUGZAPZEXGQZDXGUGBPZEWQQZDWQUGWTXHXMCXGC
@@ -13272,90 +13272,6 @@ $(
 $)
 
   ${
-    algpart.a $e |- A = ( { <. ( Base ` ndx ) , B >. , <. ( +g ` ndx ) , P >. ,
-        <. ( .r ` ndx ) , T >. } u. { <. ( Scalar ` ndx ) , S >. ,
-          <. ( vsca ` ndx ) , M >. } ) $.
-
-    ${
-      algpart.b $e |- D = ( { ( Base ` ndx ) , ( +g ` ndx ) , ( .r ` ndx ) } u.
-          { ( Scalar ` ndx ) , ( vsca ` ndx ) } ) $.
-      $( Lemma to shorten proofs of ~ algbase through ~ algvsca .  (Contributed
-         by Stefan O'Rear, 27-Nov-2014.) $)
-      algfn $p |- A Fn D $=
-        ( va cnx cfv cun wcel c5 wceq wne ltneii neeqtrri c6 cbs cmulr ctp csca
-        cplusg csn cop cvsca fvex eqid eqid1 rngfn w3o w3a 1re 5re 1lt5 basendx
-        wn c1 c2 2re 2lt5 df-plusg 2nn ndxarg 3re 3lt5 df-mulr 3pm3.2i ne3anior
-        c3 3nn mpbi df-sca eleq1i cn elexi eltp bitri mtbir fnunsn df-pr uneq2i
-        5nn cpr unass 3eqtr4i 6re 1lt6 2lt6 3lt6 6nn 5lt6 elsnc nemtbir pm3.2ni
-        wo df-vsca elun ) KUALZKUELZKUBLZUCZKUDLZUFZMZCXABUGXBDUGXCFUGUCZXEEUGZ
-        UFZMZAKUHLZGKUHUIXDXGXHXKXEEKUDUIBXDDXHFXHUJXDUKULXKUJXGUJXEXDNZOXAPOXB
-        POXCPUMZOXAQZOXBQZOXCQZUNXNUSXOXPXQOUTXAUTOUOUPUQRURSOVAXBVAOVBUPVCRUEV
-        AJJVDVEVFZSOVLXCVLOVGUPVHRUBVLJJVIVMVFZSVJOXAOXBOXCVKVNXMOXDNXNXEOXDUDO
-        JJVOWEVFZVPOXAXBXCOVQWEVRVSVTWAWBXHXIXLGUGZWFZMXHXJYAUFZMZMAXKYCMYBYDXH
-        XIYAWCWDHXHXJYCWGWHXDXEXLWFZMXDXFXLUFZMZMCXGYFMYEYGXDXEXLWCWDIXDXFYFWGW
-        HXLXGNZTXDNZTXFNZWRZYIYJYITXAPTXBPTXCPUMZTXAQZTXBQZTXCQZUNYLUSYMYNYOTUT
-        XAUTTUOWIWJRURSTVAXBVATVBWIWKRXRSTVLXCVLTVGWIWLRXSSVJTXATXBTXCVKVNTXAXB
-        XCTVQWMVRZVSWAYJTXETOXEOTUPWIWNRXTSTXEYPWOWPWQYHTXGNYKXLTXGUHTJJWSWMVFV
-        PTXDXFWTVTWAWB $.
-        $( [27-Nov-2014] $)
-    $}
-
-    $( Lemma to shorten proofs of ~ algbase through ~ algvsca .  (Contributed
-       by Stefan O'Rear, 27-Nov-2014.) $)
-    algfun $p |- Fun A $=
-      ( cnx cbs cfv cplusg cmulr ctp csca cvsca cpr cun wfn wfun eqid algfn
-      fnfun ax-mp ) AHIJHKJHLJMHNJHOJPQZRASABUDCDEFGUDTUAUDAUBUC $.
-      $( [27-Nov-2014] $)
-
-    $d A a $.  $d B a $.  $d P a $.  $d T a $.  $d S a $.  $d M a $.
-
-    $( The base set of a constructed algebra.  (Contributed by Stefan O'Rear,
-       27-Nov-2014.) $)
-    algbase $p |- ( B e. V -> B = ( Base ` A ) ) $=
-      ( va cbs cnx cfv cop cplusg cmulr ctp csca cvsca cpr wcel cun cvv eqeltri
-      tpex prex unex algfun baseid opex tpid1 elun1 ax-mp eleqtrri strfv ) BAJG
-      IAKJLZBMZKNLCMZKOLEMZPZKQLDMZKRLFMZSZUAZUBHUSVBUPUQURUDUTVAUEUFUCABCDEFHU
-      GIUHUPVCAUPUSTUPVCTUPUQURUOBUIUJUPUSVBUKULHUMUN $.
-      $( [27-Nov-2014] $)
-
-    $( The additive operation of a constructed algebra.  (Contributed by Stefan
-       O'Rear, 27-Nov-2014.) $)
-    algaddg $p |- ( P e. V -> P = ( +g ` A ) ) $=
-      ( va cplusg cnx cbs cfv cop cmulr ctp csca cvsca cpr wcel cun cvv eqeltri
-      tpex prex unex algfun plusgid opex tpid2 elun1 ax-mp eleqtrri strfv ) CAJ
-      GIAKLMBNZKJMZCNZKOMENZPZKQMDNZKRMFNZSZUAZUBHUSVBUOUQURUDUTVAUEUFUCABCDEFH
-      UGIUHUQVCAUQUSTUQVCTUOUQURUPCUIUJUQUSVBUKULHUMUN $.
-      $( [27-Nov-2014] $)
-
-    $( The multiplicative operation of a constructed algebra.  (Contributed by
-       Stefan O'Rear, 27-Nov-2014.) $)
-    algmulr $p |- ( T e. V -> T = ( .r ` A ) ) $=
-      ( va cmulr cnx cbs cfv cop cplusg ctp csca cvsca cpr wcel cun cvv eqeltri
-      tpex prex unex algfun mulrid opex tpid3 elun1 ax-mp eleqtrri strfv ) EAJG
-      IAKLMBNZKOMCNZKJMZENZPZKQMDNZKRMFNZSZUAZUBHUSVBUOUPURUDUTVAUEUFUCABCDEFHU
-      GIUHURVCAURUSTURVCTUOUPURUQEUIUJURUSVBUKULHUMUN $.
-      $( [27-Nov-2014] $)
-
-    $( The set of scalars of a constructed algebra.  (Contributed by Stefan
-       O'Rear, 27-Nov-2014.) $)
-    algsca $p |- ( S e. V -> S = ( Scalar ` A ) ) $=
-      ( va csca cnx cbs cfv cop cplusg cmulr ctp cvsca cpr wcel cun cvv eqeltri
-      tpex prex unex algfun scaid opex prid1 elun2 ax-mp eleqtrri strfv ) DAJGI
-      AKLMBNZKOMCNZKPMENZQZKJMZDNZKRMFNZSZUAZUBHURVBUOUPUQUDUTVAUEUFUCABCDEFHUG
-      IUHUTVCAUTVBTUTVCTUTVAUSDUIUJUTVBURUKULHUMUN $.
-      $( [27-Nov-2014] $)
-
-    $( The scalar product operation of a constructed algebra.  (Contributed by
-       Stefan O'Rear, 27-Nov-2014.) $)
-    algvsca $p |- ( M e. V -> M = ( vsca ` A ) ) $=
-      ( va cvsca cnx cbs cfv cop cplusg cmulr ctp csca cpr wcel cun cvv eqeltri
-      tpex prex unex algfun vscaid opex prid2 elun2 ax-mp eleqtrri strfv ) FAJG
-      IAKLMBNZKOMCNZKPMENZQZKRMDNZKJMZFNZSZUAZUBHURVBUOUPUQUDUSVAUEUFUCABCDEFHU
-      GIUHVAVCAVAVBTVAVCTUSVAUTFUIUJVAVBURUKULHUMUN $.
-      $( [27-Nov-2014] $)
-  $}
-
-  ${
     $d W w s $.  $d S w s $.  $d ph w s a $.
     $( Lemma for ~ srabase through ~ sravsca . $)
     sraval $p |- ( ( W e. V /\ S C_ ( Base ` W ) ) ->
@@ -13589,7 +13505,7 @@ $)
 
   ${
     $d s t w u v f S $.  $d s t w u v f T $.  $d u v f t s X $.
-    $d u v f s t A $.  $d u v f t Y $.  $d u v f t B $.  $d F f u v $.
+    $d u v f s t A $.  $d u v f s t Y $.  $d u v f s t B $.  $d F f u v $.
     isghm.w $e |- X = ( Base ` S ) $.
     isghm.x $e |- Y = ( Base ` T ) $.
     isghm.a $e |- A = ( +g ` S ) $.
@@ -15867,23 +15783,6 @@ $)
     $( [3-Jan-2015] $)
 
   ${
-    $d x y D $.  $d x z R y $.  $d x T y z $.  $d x B y z $.  $d z R $.
-    $d z T $.  $d z X $.  $d z Y $.  $d z B $.
-    dvdsrvalNEW.a $e |- B = ( Base ` R ) $.
-    dvdsrvalNEW.b $e |- D = ( ||r ` R ) $.
-    dvdsrvalNEW.c $e |- T = ( .r ` R ) $.
-    $( Mario says this is the new definition of ` ||r ` $)
-    dvdsrvalNEW $p |- ( R e. V -> D = { <. x , y >. | ( x e. B /\
-        E. z e. B ( z T x ) = y ) } ) $=
-      ? $.
-
-    $( Mario says this is the new definition of ` ||r ` $)
-    dvdsr2NEW $p |- ( ( X e. B /\ Y e. V ) -> ( X D Y <->
-        E. z e. B ( z T X ) = Y ) ) $=
-      ? $.
-  $}
-
-  ${
     $d a x R $.  $d G a x $.  $d B a x $.  $d K a x $.  $d D a x $.
     rspsn.b $e |- B = ( Base ` R ) $.
     rspsn.k $e |- K = ( RSpan ` R ) $.
@@ -15893,7 +15792,7 @@ $)
         ( K ` { G } ) = { x | G D x } ) $=
       ( va crg wcel cfv cv co wceq cbs wrex adantr eqid csn crglmod clspn cvsca
       wa csca cab crsp rspval syl5eq fveq1d clmod rlmlmod rlmbase eleq2d biimpa
-      wbr lspsn syl2anc cmulr cvv wb eleq2i biimpi adantl vex dvdsr2NEW sylancl
+      wbr lspsn syl2anc cmulr cvv wb eleq2i biimpi adantl vex dvdsr2 sylancl
       eqid1 rlmsca fveq2d rlmvsca eqeq2d syl5bb rexeqbidv bitr2d abbidv 3eqtrd
       eqcom oveqd ) DKLZEBLZUEZEUAZFMWDDUBMZUCMZMZANZJNZEWEUDMZOZPZJWEUFMZQMZRZ
       AUGZEWHCUQZAUGWCWDFWFWCFDUHMZWFHWAWRWFPWBDKUISUJUKWCWEULLZEWEQMZLZWGWPPWA
@@ -15955,7 +15854,7 @@ $)
       ( vx vy vz cv cz wcel wa cmul co wceq copab cfv simpl cvv ccnfld cress cc
       ax-mp wrex cdivides cdsr anim1i zmulcl ancoms eleq1 syl5ibcom simpr jca31
       rexlimdva imp impbii opabbii df-divides eqeltri wss cbs cnfldbas ressbas2
-      ovex zsscn eqid cnfldmul ressmulr dvdsrvalNEW 3eqtr4i ) CFZGHZDFZGHZIZEFZ
+      ovex zsscn eqid cnfldmul ressmulr dvdsrval 3eqtr4i ) CFZGHZDFZGHZIZEFZ
       VHJKZVJLZEGUAZIZCDMVIVPIZCDMZUBAUCNZVQVRCDVQVRVLVIVPVIVKOUDVRVIVKVPVIVPOV
       IVPVKVIVOVKEGVIVMGHZIVNGHZVOVKWAVIWBVMVHUEUFVNVJGUGUHUKULVIVPUIUJUMUNCDEU
       OAPHVTVSLAQGRKPBQGRVAUPCDEGVTAJPGSUQGAURNLVBGSAQBUSUTTVTVCGQAJBVDVEVFTVG
