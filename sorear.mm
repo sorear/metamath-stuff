@@ -14596,7 +14596,7 @@ $)
 
     ${
       strlemor2.g $e |- G = ( F u. { <. J , X >. , <. K , Y >. } ) $.
-      $( Add one element to the end of a structure.  (Contributed by Stefan
+      $( Add two elements to the end of a structure.  (Contributed by Stefan
          O'Rear, 3-Jan-2015.) $)
       strlemor2 $p |- ( Fun G /\ dom G C_ ( 1 ... K ) ) $=
         ( cop csn cun nnnn0i eqid strlemor1 cpr df-pr uneq2i unass 3eqtr4i ) AD
