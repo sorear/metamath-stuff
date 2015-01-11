@@ -14853,12 +14853,23 @@ $)
   $}
 
   ${
-    $d x F $.
+    $d y z F $.  $d x y z I $.  $d y z J $.
     $( Indexed cross product elements are functions. $)
     ixpfn $p |- ( F e. X_ x e. I J -> F Fn I ) $=
-      ( cixp wcel cvv wfn cv cfv wral elixp2 simp2bi ) BACDEFBGFBCHAIBJDFACKACD
-      BLM $.
+      ( vy vz wfn cv csb cixp wcel cvv cfv wral elixp2 simp2bi ax-17 wel hbcsb1
+      csbeq1a cbvixp eleq2s ) BCGZBECAEHZDIZJZACDJBUFKBLKUCUDBMUEKECNECUEBOPAEF
+      FCDUEFHDKEQAFUDDFERAQSAUDDTUAUB $.
       $( [4-Jan-2015] $)
+  $}
+
+  ${
+    $d a b c $.
+    $( The group zero extractor is a function. $)
+    fn0g $p |- 0g Fn _V $=
+      ( vb vc va cv cplusg cfv co wceq wa cbs wral crio cvv c0g wfn df-0g fnmpt
+      wcel riotaex a1i mprg ) ADZBDZCDZEFZGUCHUCUBUEGUCHIBUDJFZKZAUFLZMRZNMOCMC
+      MUHNMBACPQUIUDMRUGAUFSTUA $.
+      $( [10-Jan-2015] $)
   $}
 
   ${
@@ -14913,6 +14924,212 @@ $)
   $}
 
   ${
+    $d x y z I $.  $d x y z S $.  $d x y z V $.  $d x y z W $.  $d x y z X $.
+    $d x y z ph $.  $d x y z T $.  $d x y z J $.  $d x y z R $.  $d x y z Y $.
+    $d x y z B $.  $d y z U $.  $d x y z K $.  $d x y z P $.  $d x y z F $.
+    $d x y z G $.  $d Z x y z $.  $d N x z $.
+    prdmbasempt2.y $e |- Y = ( S Xm_ R ) $.
+    prdmbasempt2.b $e |- B = ( Base ` Y ) $.
+
+    ${
+      prdmbasempt2.s $e |- ( ph -> S e. V ) $.
+      prdmbasempt2.i $e |- ( ph -> I e. W ) $.
+      prdmbasempt2.r $e |- ( ph -> R Fn I ) $.
+      $( Experimental variant of ~ prdmbase . $)
+      prdmbase2 $p |- ( ph -> X_ x e. I ( Base ` ( R ` x ) ) = B ) $=
+        ( cfv cbs cixp wceq syl wcel cdm wfn fndm eqcomd ixpeq1 cvv fnex prdmbase
+        cv syl2anc eqtrd syl6eqr ) ABFBUIDOPOZQZIPOZCAUNBDUAZUMQZUOAFUPRUNUQRAUPF
+        ADFUBZUPFRNFDUCSUDBFUPUMUESAEGTDUFTZUQUORLAURFHTUSNMFHDUGUJBIDEGUFJUHUJUK
+        KUL $.
+        $( [10-Jan-2015] $)
+
+      $( Experimental variant of ~ prdmbasempt . $)
+      prdmbasempt2 $p |- ( ph -> ( ( x e. I |-> U ) e. B <->
+          A. x e. I U e. ( Base ` ( R ` x ) ) ) ) $=
+        ( cmpt cv cfv cbs wcel cixp wral prdmbase2 eleq2d wb mptelixpg syl bitr3d
+        ) ABGFPZBGBQDRSRZUAZTZUICTFUJTBGUBZAUKCUIABCDEGHIJKLMNOUCUDAGITULUMUENBGF
+        UJIUFUGUH $.
+        $( [10-Jan-2015] $)
+
+      ${
+        prdmbasempt2.t $e |- ( ph -> T e. B ) $.
+        $( Experimental variant of ~ prdmbasefn . $)
+        prdmbasefn2 $p |- ( ph -> T Fn I ) $=
+          ( vx cv cfv cbs cixp wcel wfn prdmbase2 eleqtrrd ixpfn syl ) AEPFPQCRSR
+          ZTZUAEFUBAEBUHOAPBCDFGHIJKLMNUCUDPEFUGUEUF $.
+          $( [10-Jan-2015] $)
+
+        prdmbaseprj2.j $e |- ( ph -> J e. I ) $.
+        $( Experimental variant of ~ prdmbaseprj . $)
+        prdmbaseprj2 $p |- ( ph -> ( T ` J ) e. ( Base ` ( R ` J ) ) ) $=
+          ( vx wcel cfv cv cbs wral prdmbase2 eleqtrrd cvv wfn elixp2 simp3bi syl
+          cixp wceq fveq2 fveq2d eleq12d rcla4va syl2anc ) AGFSRUAZETZURCTZUBTZSZ
+          RFUCZGETZGCTZUBTZSZQAERFVAUKZSZVCAEBVHPARBCDFHIJKLMNOUDUEVIEUFSEFUGVCRF
+          VAEUHUIUJVBVGRGFURGULZUSVDVAVFURGEUMVJUTVEUBURGCUMUNUOUPUQ $.
+          $( [10-Jan-2015] $)
+      $}
+
+      $d F x y z $.  $d G x y z $.  $d P x y z $.  $d T x y z $.
+      ${
+        prdmplusgval2.f $e |- ( ph -> F e. B ) $.
+        prdmplusgval2.g $e |- ( ph -> G e. B ) $.
+        ${
+          prdmplusgval2.p $e |- P = ( +g ` Y ) $.
+          $( Experimental variant of ~ prdmplusgval . $)
+          prdmplusgval2 $p |- ( ph -> ( F P G ) = ( x e. I |-> ( ( F ` x )
+              ( +g ` ( R ` x ) ) ( G ` x ) ) ) ) $=
+            ( vy vz cdm cv cfv cplusg cmpt cvv cmpt2 wcel wceq wfn fnex prdmplusg
+            co syl2anc eqcomd syl5eq wa fndm syl adantr fveq1 oveqan12d mpteq12dv
+            adantl mptexg ovmpt2d ) AUAUBGHCCBEUCZBUDZUAUDZUEZVJUBUDZUEZVJEUEUFUE
+            ZUOZUGZBIVJGUEZVJHUEZVOUOZUGZDUHADLUFUEZUAUBCCVQUIZTAWCWBAFJUJEUHUJZW
+            CWBUKOAEIULZIKUJZWDQPIKEUMUPBCLEFUAUBJUHMNUNUPUQURAVKGUKZVMHUKZUSZUSB
+            VIVPIVTAVIIUKZWIAWEWJQIEUTVAVBWIVPVTUKAWGWHVLVRVNVSVOVJVKGVCVJVMHVCVD
+            VFVERSAWFWAUHUJPBIVTKVGVAVH $.
+            $( [10-Jan-2015] $)
+
+          prdmplusgfval2.j $e |- ( ph -> J e. I ) $.
+          $( Experimental variant of ~ prdmplusgval . $)
+          prdmplusgfval2 $p |- ( ph -> ( ( F P G ) ` J ) = ( ( F ` J )
+              ( +g ` ( R ` J ) ) ( G ` J ) ) ) $=
+            ( vx co cfv cplusg cmpt prdmplusgval2 fveq1d wcel wceq fveq2 fveq2d
+            cv oveq123d eqid ovex fvmpt syl eqtrd ) AIFGCUCZUDIUBHUBUMZFUDZVAGU
+            DZVADUDZUEUDZUCZUFZUDZIFUDZIGUDZIDUDZUEUDZUCZAIUTVGAUBBCDEFGHJKLMNO
+            PQRSTUGUHAIHUIVHVMUJUAUBIVFVMHVGVAIUJZVBVIVCVJVEVLVNVDVKUEVAIDUKULV
+            AIFUKVAIGUKUNVGUOVIVJVLUPUQURUS $.
+            $( [10-Jan-2015] $)
+        $}
+      $}
+    $}
+
+    ${
+      prdmplusgcl2.p $e |- P = ( +g ` Y ) $.
+      prdmplusgcl2.s $e |- ( ph -> S e. V ) $.
+      prdmplusgcl2.i $e |- ( ph -> I e. W ) $.
+      ${
+        prdmplusgcl2.r $e |- ( ph -> R : I --> Mnd ) $.
+        ${
+          prdmplusgcl2.f $e |- ( ph -> F e. B ) $.
+          prdmplusgcl2.g $e |- ( ph -> G e. B ) $.
+          $( Experimental variant of ~ prdmplusgval . $)
+          prdmplusgcl2 $p |- ( ph -> ( F P G ) e. B ) $=
+            ( wcel vx co cv cfv cplusg cmpt cmnd wfn ffn syl prdmplusgval2 cbs wral
+            wf ffvelrn sylan adantr simpr prdmbaseprj2 eqid mndcl syl3anc ralrimiva
+            wa prdmbasempt2 mpbird eqeltrd ) AFGCUBUAHUAUCZFUDZVHGUDZVHDUDZUEUDZUBZ
+            UFZBAUABCDEFGHIJKLMOPAHUGDUNZDHUHZQHUGDUIUJZRSNUKAVNBTVMVKULUDZTZUAHUMA
+            VSUAHAVHHTZVDZVKUGTZVIVRTVJVRTVSAVOVTWBQHUGVHDUOUPWABDEFHVHIJKLMAEITVTO
+            UQZAHJTVTPUQZAVPVTVQUQZAFBTVTRUQAVTURZUSWABDEGHVHIJKLMWCWDWEAGBTVTSUQWF
+            USVRVLVKVIVJVRUTVLUTVAVBVCAUABDEVMHIJKLMOPVQVEVFVG $.
+            $( [10-Jan-2015] $)
+        $}
+
+        prdmidlem2.z $e |- Z = ( 0g o. R ) $.
+        $( Characterization of identity in a structure product. $)
+        prdmidlem2 $p |- ( ph -> ( Z e. B /\ A. x e. B ( ( Z P x ) = x /\
+            ( x P Z ) = x ) ) ) $=
+          ( vy wcel cv co wceq wa wral cfv c0g cmpt ccom cvv wf fn0g dffn2 mpbi
+          wfn a1i cmnd wss ssv fss sylancl fcompt syl2anc syl5eq cbs sylan eqid
+          ffvelrn mndidcl syl ralrimiva ffn mpbird eqeltrd cplusg fveq1i adantr
+          prdmbasempt2 simpr adantlr oveq1d ad2antrr simplr prdmbaseprj2 mndlid
+          fvco2 eqtrd mpteq2dva prdmplusgval2 prdmbasefn2 dffn5v 3eqtr4d oveq2d
+          sylib mndrid jca ) AKCTZKBUAZDUBZWRUCZWRKDUBZWRUCZUDZBCUEAKSGSUAZEUFZ
+          UGUFZUHZCAKUGEUIZXGRAUJUJUGUKZGUJEUKZXHXGUCXIAUGUJUOXIULUJUGUMUNUPAGU
+          QEUKZUQUJURXJQUQUSGUQUJEUTVASUGEGUJUJVBVCVDAXGCTXFXEVEUFZTZSGUEAXMSGA
+          XDGTZUDZXEUQTZXMAXKXNXPQGUQXDEVHZVFXLXEXFXLVGZXFVGZVIVJVKASCEFXFGHIJL
+          MOPAXKEGUOZQGUQEVLVJZVRVMVNZAXCBCAWRCTZUDZWTXBYDSGXDKUFZXDWRUFZXEVOUF
+          ZUBZUHSGYFUHZWSWRYDSGYHYFYDXNUDZYHXFYFYGUBZYFYJYEXFYFYGAXNYEXFUCYCXOY
+          EXDXHUFZXFXDKXHRVPXOXTXNYLXFUCAXTXNYAVQAXNVSGUGEXDWFVCVDVTZWAYJXPYFXL
+          TZYKYFUCYDXKXNXPAXKYCQVQXQVFZYJCEFWRGXDHIJLMAFHTZYCXNOWBAGITZYCXNPWBA
+          XTYCXNYAWBAYCXNWCYDXNVSWDZXLYGXEXFYFXRYGVGZXSWEVCWGWHYDSCDEFKWRGHIJLM
+          AYPYCOVQZAYQYCPVQZAXTYCYAVQZAWQYCYBVQZAYCVSZNWIYDWRGUOWRYIUCYDCEFWRGH
+          IJLMYTUUAUUBUUDWJSGWRWKWNZWLYDSGYFYEYGUBZUHYIXAWRYDSGUUFYFYJUUFYFXFYG
+          UBZYFYJYEXFYFYGYMWMYJXPYNUUGYFUCYOYRXLYGXEXFYFXRYSXSWOVCWGWHYDSCDEFWR
+          KGHIJLMYTUUAUUBUUDUUCNWIUUEWLWPVKWP $.
+          $( [10-Jan-2015] $)
+      $}
+
+      prdminvlem2.r $e |- ( ph -> R : I --> Grp ) $.
+      prdminvlem2.f $e |- ( ph -> F e. B ) $.
+      prdminvlem2.z $e |- Z = ( 0g o. R ) $.
+      prdminvlem2.n $e |- N = ( y e. I |->
+          ( ( invg ` ( R ` y ) ) ` ( F ` y ) ) ) $.
+      $( Characterization of inverses in a structure product. $)
+      prdminvlem2 $p |- ( ph -> ( N e. B /\ ( N P F ) = Z ) ) $=
+        ( vx wcel co wceq cv cfv cminusg cmpt cbs wral wa cgrp wf ffvelrn sylan
+        adantr wfn ffn syl prdmbaseprj2 grpinvcl syl2anc ralrimiva prdmbasempt2
+        simpr eqid mpbird syl5eqel cplusg c0g grplinv fveq2 fveq2d fveq12d fvex
+        fvmpt adantl oveq1d fveq1i fvco2 syl5eq 3eqtr4d mpteq2dva prdmplusgval2
+        weq ccom cvv crn wss fn0g a1i ssv fnco syl3anc fneq1i sylibr dffn5v jca
+        sylib ) AICUDIGDUEZMUFAIBHBUGZGUHZXCEUHZUIUHZUHZUJZCUBAXHCUDXGXEUKUHZUD
+        ZBHULAXJBHAXCHUDZUMZXEUNUDZXDXIUDXJAHUNEUOZXKXMSHUNXCEUPUQXLCEFGHXCJKLN
+        OAFJUDZXKQURAHKUDZXKRURAEHUSZXKAXNXQSHUNEUTVAZURAGCUDZXKTURAXKVGVBXIXEX
+        FXDXIVHXFVHVCVDVEABCEFXGHJKLNOQRXRVFVIVJZAUCHUCUGZIUHZYAGUHZYAEUHZVKUHZ
+        UEZUJUCHYAMUHZUJZXBMAUCHYFYGAYAHUDZUMZYCYDUIUHZUHZYCYEUEZYDVLUHZYFYGYJY
+        DUNUDZYCYDUKUHZUDYMYNUFAXNYIYOSHUNYAEUPUQYJCEFGHYAJKLNOAXOYIQURAXPYIRUR
+        AXQYIXRURZAXSYITURAYIVGZVBYPYEYDYKYNYCYPVHYEVHYNVHYKVHVMVDYJYBYLYCYEYIY
+        BYLUFABYAXGYLHIBUCWGZXDYCXFYKYSXEYDUIXCYAEVNVOXCYAGVNVPUBYCYKVQVRVSVTYJ
+        YGYAVLEWHZUHZYNYAMYTUAWAYJXQYIUUAYNUFYQYRHVLEYAWBVDWCWDWEAUCCDEFIGHJKLN
+        OQRXRXTTPWFAMHUSZMYHUFAYTHUSZUUBAVLWIUSZXQEWJZWIWKZUUCUUDAWLWMXRUUFAUUE
+        WNWMWIHVLEWOWPHMYTUAWQWRUCHMWSXAWDWT $.
+        $( [10-Jan-2015] $)
+    $}
+
+    ${
+      prdmvscaval2.t $e |- T = ( vsca ` Y ) $.
+      prdmvscaval2.k $e |- K = ( Base ` S ) $.
+      prdmvscaval2.s $e |- ( ph -> S e. Ring ) $.
+      prdmvscaval2.i $e |- ( ph -> I e. W ) $.
+      prdmvscaval2.r $e |- ( ph -> R Fn I ) $.
+      prdmvscaval2.f $e |- ( ph -> F e. K ) $.
+      prdmvscaval2.g $e |- ( ph -> G e. B ) $.
+      $( Experimental variant of ~ prdmvscaval . $)
+      prdmvscaval2 $p |- ( ph -> ( F T G ) = ( x e. I |->
+          ( F ( vsca ` ( R ` x ) ) ( G ` x ) ) ) ) $=
+        ( vy vz cdm cv cfv cvsca cmpt cvv cmpt2 crg wcel wceq wfn fnex prdmvsca
+        co syl2anc eqcomd syl5eq wa syl adantr fveq1 oveqan12d adantl mpteq12dv
+        fndm id mptexg ovmpt2d ) AUBUCGHJCBDUDZUBUEZBUEZUCUEZUFZVNDUFUGUFZUQZUH
+        ZBIGVNHUFZVQUQZUHZFUIAFLUGUFZUBUCJCVSUJZOAWDWCAEUKULDUIULZWDWCUMQADIUNZ
+        IKULZWESRIKDUOURBCLDEUBUCJUKUIMNPUPURUSUTAVMGUMZVOHUMZVAZVABVLVRIWAAVLI
+        UMZWJAWFWKSIDVHVBVCWJVRWAUMAWHWIVMGVPVTVQWHVIVNVOHVDVEVFVGTUAAWGWBUIULR
+        BIWAKVJVBVK $.
+        $( [10-Jan-2015] $)
+
+      prdmvscafval2.j $e |- ( ph -> J e. I ) $.
+      $( Experimental variant of ~ prdmvscaval . $)
+      prdmvscafval2 $p |- ( ph -> ( ( F T G ) ` J ) =
+          ( F ( vsca ` ( R ` J ) ) ( G ` J ) ) ) $=
+        ( vx wcel cfv cvsca co cvv wceq id ovex a1i cv ax-17 fveq2 fveq2d eqidd
+        oveq123d adantl prdmvscaval2 fvmptd syl3anc ) AAIHUDFIGUEZICUEZUFUEZUGZ
+        UHUDZIFGEUGZUEVFUIAUJUBVGAFVCVEUKULAUCIFUCUMZGUEZVICUEZUFUEZUGZVFHVHUHA
+        UCUNVIIUIZVMVFUIAVNFFVJVCVLVEVNVKVDUFVIICUOUPVNFUQVIIGUOURUSAUCBCDEFGHJ
+        KLMNOPQRSTUAUTVAVB $.
+        $( [10-Jan-2015] $)
+    $}
+
+    ${
+      prdmvscacl2.t $e |- T = ( vsca ` Y ) $.
+      prdmvscacl2.k $e |- K = ( Base ` S ) $.
+      prdmvscacl2.s $e |- ( ph -> S e. Ring ) $.
+      prdmvscacl2.i $e |- ( ph -> I e. W ) $.
+      prdmvscacl2.r $e |- ( ph -> R : I --> LMod ) $.
+      prdmvscacl2.f $e |- ( ph -> F e. K ) $.
+      prdmvscacl2.g $e |- ( ph -> G e. B ) $.
+      prdmvscacl2.sr $e |- ( ( ph /\ x e. I ) -> ( Scalar ` ( R ` x ) ) = S )
+          $.
+      $( Experimental variant of ~ prdmvscaval . $)
+      prdmvscacl2 $p |- ( ph -> ( F T G ) e. B ) $=
+        ( co cv cfv cvsca cmpt clmod wf wfn ffn syl prdmvscaval2 wcel wral csca
+        cbs ffvelrn sylan adantr fveq2d syl6eqr eleqtrrd crg simpr prdmbaseprj2
+        wa eqid lmodvscl syl3anc ralrimiva prdmbasempt2 mpbird eqeltrd ) AGHFUC
+        BIGBUDZHUEZVODUEZUFUEZUCZUGZCABCDEFGHIJKLMNOPQRAIUHDUIZDIUJZSIUHDUKULZT
+        UAUMAVTCUNVSVQUQUEZUNZBIUOAWEBIAVOIUNZVGZVQUHUNZGVQUPUEZUQUEZUNVPWDUNWE
+        AWAWFWHSIUHVODURUSWGGJWJAGJUNWFTUTWGWJEUQUEJWGWIEUQUBVAPVBVCWGCDEHIVOVD
+        KLMNAEVDUNWFQUTAIKUNWFRUTAWBWFWCUTAHCUNWFUAUTAWFVEVFGVRWIWJWDVQVPWDVHWI
+        VHVRVHWJVHVIVJVKABCDEVSIVDKLMNQRWCVLVMVN $.
+        $( [10-Jan-2015] $)
+    $}
+  $}
+
+  ${
     $d S x f g $.  $d R x f g $.  $d B x f g $.  $d G x f g $.  $d F x f g $.
     $d Y x f g $.
     prdmplusgval.b $e |- B = ( Base ` Y ) $.
@@ -14949,7 +15166,6 @@ $)
 
     $d I x f g $.  $d N x g $.
     prdmidlem.i $e |- I = ( x e. dom R |-> ( 0g ` ( R ` x ) ) ) $.
-
     $( Characterization of identity in a structure product. $)
     prdmidlem $p |- ( ( S e. V /\ R e. W /\
         A. x e. dom R ( R ` x ) e. Mnd ) ->
@@ -15032,26 +15248,172 @@ $)
   $}
 
   ${
-    $d P y z $.  $d S x y z $.  $d I x y z $.  $d R y z $.
-    prdmbase2.p $e |- P = ( S Xm_ ( x e. I |-> R ) ) $.
-    $( Base set of a structure product, explicit function. $)
-    prdmbase2 $p |- ( ( S e. V /\ I e. W /\ A. x e. I R e. Z ) ->
-        X_ x e. I ( Base ` R ) = ( Base ` P ) ) $=
-      ( vy vz wcel cvv wral cbs cfv cixp wceq elex cv ralimi w3a cmpt cdm simp3
-      wfn eqid fnmpt fndm 3syl ixpeq1 syl simp1 3ad2ant2 prdmbase syl2anc ax-17
-      mptexg hbmpt1 wel hbfv weq fveq2d cbvixp wa fvmpt2 ralimiaa ixpeq2 syl5eq
-      fveq2 3ad2ant3 3eqtr3rd syl3an ) DFLDMLZEGLEMLZCHLZAENCMLZAENZAECOPZQZBOP
-      ZRDFSEGSVPVQAECHSUAVNVOVRUBZJAECUCZUDZJTZWCPZOPZQZJEWGQZWAVTWBWDERZWHWIRW
-      BVRWCEUFWJVNVOVRUEAECWCMWCUGZUHEWCUIUJJWDEWGUKULWBVNWCMLZWHWARVNVOVRUMVOV
-      NWLVRAECMURUNJBWCDMMIUOUPVRVNWIVTRVOVRWIAEATZWCPZOPZQZVTJAKKEWGWOAKWFOKTZ
-      OLAUQAKWEWCAKECUSKJUTAUQVAVAWQWOLJUQJAVBWFWNOWEWMWCVJVCVDVRWOVSRZAENWPVTR
-      VQWRAEWMELVQVEWNCOAECMWCWKVFVCVGAEWOVSVHULVIVKVLVM $.
-      $( [3-Jan-2015] $)
-  $}
-
-  ${
     $d S a b c x y z $.  $d R a b c x y z $.  $d X a b c x y z $.
-    $d ph a b c y z $.
+    $d ph a b c y z $.  $d Y a b c x y z $.  $d I a b c x y z $.
+
+    ${
+      prdmmndd2.y $e |- Y = ( S Xm_ R ) $.
+      prdmmndd2.i $e |- ( ph -> I e. W ) $.
+      prdmmndd2.s $e |- ( ph -> S e. V ) $.
+      ${
+        prdmmndd2.r $e |- ( ph -> R : I --> Mnd ) $.
+        $( The product of a family of monoids is a monoid. $)
+        prdmmndd2 $p |- ( ph -> Y e. Mnd ) $=
+          ( va vy cfv wcel co wa cvv eqid adantr vb vc cbs cplusg ccom eqidd cv
+          c0g elex syl cmnd wf simprl simprr prdmplusgcl2 w3a cmpt wceq ffvelrn
+          3impb sylan adantlr ad2antrr wfn simplr1 prdmbaseprj2 simplr2 simplr3
+          simpr mndass syl13anc prdmplusgfval2 oveq1d oveq2d mpteq2dva 3adantr3
+          ffn 3eqtr4d simpr3 prdmplusgval2 simpr1 simpr2 wral prdmidlem2 simpld
+          simprd r19.21bi ismndd ) ALUAUBGUCNZGUDNZGUHBUEZAWIUFAWJUFALUGZWIOZUA
+          UGZWIOZWLWNWJPZWIOZAWMWOQZQWIWJBCWLWNDRRGHWISZWJSZACROZWRACEOXAJCEUIU
+          JZTADROZWRADFOXCIDFUIUJZTADUKBULZWRKTAWMWOUMAWMWOUNUOZUTAWMWOUBUGZWIO
+          ZUPZQZMDMUGZWPNZXKXGNZXKBNZUDNZPZUQMDXKWLNZXKWNXGWJPZNZXOPZUQWPXGWJPW
+          LXRWJPXJMDXPXTXJXKDOZQZXQXKWNNZXOPZXMXOPZXQYCXMXOPZXOPZXPXTYBXNUKOZXQ
+          XNUCNZOYCYIOXMYIOYEYGURAYAYHXIAXEYAYHKDUKXKBUSVAVBYBWIBCWLDXKRRGHWSAX
+          AXIYAXBVCZAXCXIYAXDVCZABDVDZXIYAAXEYLKDUKBVQUJZVCZWMWOXHAYAVEZXJYAVIZ
+          VFYBWIBCWNDXKRRGHWSYJYKYNWMWOXHAYAVGZYPVFYBWIBCXGDXKRRGHWSYJYKYNWMWOX
+          HAYAVHZYPVFYIXOXNXQYCXMYISXOSVJVKYBXLYDXMXOYBWIWJBCWLWNDXKRRGHWSYJYKY
+          NYOYQWTYPVLVMYBXSYFXQXOYBWIWJBCWNXGDXKRRGHWSYJYKYNYQYRWTYPVLVNVRVOXJM
+          WIWJBCWPXGDRRGHWSAXAXIXBTZAXCXIXDTZAYLXIYMTZAWMWOWQXHXFVPAWMWOXHVSZWT
+          VTXJMWIWJBCWLXRDRRGHWSYSYTUUAAWMWOXHWAXJWIWJBCWNXGDRRGHWSWTYSYTAXEXIK
+          TAWMWOXHWBUUBUOWTVTVRAWKWIOZWKWLWJPWLURZWLWKWJPWLURZQZLWIWCZALWIWJBCD
+          RRGWKHWSWTXBXDKWKSWDZWEAWMQZUUDUUEAUUFLWIAUUCUUGUUHWFWGZWEUUIUUDUUEUU
+          JWFWH $.
+          $( [10-Jan-2015] $)
+
+        $( Zero in a product of monoids. $)
+        prdm0g2 $p |- ( ph -> ( 0g o. R ) = ( 0g ` Y ) ) $=
+          ( vb va cfv wcel co wceq wa cvv eqid1 c0g ccom cbs cv cplusg wral syl
+          elex prdmidlem2 eqid cmnd wrex prdmmndd2 mndid ismgmid mpbid eqcomd )
+          AGUANZUABUBZAUSGUCNZOUSLUDZGUENZPVAQVAUSVBPVAQRLUTUFRURUSQALUTVBBCDSS
+          GUSHUTTZVBTACEOCSOJCEUHUGADFODSOIDFUHUGKUSTUIALUTVBUSMGURVCURUJVBUJZA
+          GUKOMUDZVAVBPVAQVAVEVBPVAQRLUTUFMUTULABCDEFGHIJKUMLMUTVBGUTUJVDUNUGUO
+          UPUQ $.
+          $( [10-Jan-2015] $)
+      $}
+
+      ${
+        prdmcmnd2.r $e |- ( ph -> R : I --> CMnd ) $.
+        $( The product of a family of commutative monoids is commutative. $)
+        prdmcmnd2 $p |- ( ph -> Y e. CMnd ) $=
+          ( va vc cfv ccmn cmnd wcel co 3ad2ant1 cvv vb cbs cplusg eqidd wf wss
+          cv cmnmnd ssriv fss sylancl prdmmndd2 w3a cmpt wa ffvelrn sylan eqid1
+          wceq elex syl adantr wfn simpl2 simpr prdmbaseprj2 simpl3 eqid cmncom
+          ffn syl3anc mpteq2dva simp2 simp3 prdmplusgval2 3eqtr4d iscmnd ) ALUA
+          GUBNZGUCNZGAVRUDAVSUDABCDEFGHIJADOBUEZOPUFDPBUEKLOPLUGZUHUIDOPBUJUKUL
+          AWAVRQZUAUGZVRQZUMZMDMUGZWANZWFWCNZWFBNZUCNZRZUNMDWHWGWJRZUNWAWCVSRWC
+          WAVSRWEMDWKWLWEWFDQZUOZWIOQZWGWIUBNZQWHWPQWKWLUSWEVTWMWOAWBVTWDKSDOWF
+          BUPUQWNVRBCWADWFTTGHVRURZWECTQZWMAWBWRWDACEQWRJCEUTVASZVBZWEDTQZWMAWB
+          XAWDADFQXAIDFUTVASZVBZWEBDVCZWMAWBXDWDAVTXDKDOBVJVASZVBZAWBWDWMVDWEWM
+          VEZVFWNVRBCWCDWFTTGHWQWTXCXFAWBWDWMVGXGVFWPWJWIWGWHWPVHWJVHVIVKVLWEMV
+          RVSBCWAWCDTTGHWQWSXBXEAWBWDVMZAWBWDVNZVSURZVOWEMVRVSBCWCWADTTGHWQWSXB
+          XEXIXHXJVOVPVQ $.
+          $( [10-Jan-2015] $)
+      $}
+
+      ${
+        prdmgrpd2.r $e |- ( ph -> R : I --> Grp ) $.
+        $( The product of a family of groups is a group. $)
+        prdmgrpd2 $p |- ( ph -> Y e. Grp ) $=
+          ( va vb cfv cgrp cmnd wcel cvv eqid adantr cbs cplusg cv cminusg cmpt
+          c0g ccom eqidd wf wss grpmnd ssriv fss sylancl prdm0g2 prdmmndd2 wceq
+          wa co elex syl simpr prdminvlem2 simpld simprd isgrpd2 ) ALGUANZGUBNZ
+          GMDMUCZLUCZNVIBNUDNNUEZUFBUGZAVGUHAVHUHABCDEFGHIJADOBUIZOPUJDPBUIKLOP
+          VJUKULDOPBUMUNZUOABCDEFGHIJVNUPAVJVGQZURZVKVGQZVKVJVHUSVLUQZVPMVGVHBC
+          VJDVKRRGVLHVGSVHSACRQZVOACEQVSJCEUTVATADRQZVOADFQVTIDFUTVATAVMVOKTAVO
+          VBVLSVKSVCZVDVPVQVRWAVEVF $.
+          $( [10-Jan-2015] $)
+
+        $d B x $.  $d ph x $.
+        prdminvgd2.b $e |- B = ( Base ` Y ) $.
+        prdminvgd2.n $e |- N = ( invg ` Y ) $.
+        prdminvgd2.x $e |- ( ph -> X e. B ) $.
+        $( Negation in a product of groups. $)
+        prdminvgd2 $p |- ( ph -> ( N ` X ) = ( x e. I |->
+            ( ( invg ` ( R ` x ) ) ` ( X ` x ) ) ) ) $=
+          ( cfv wcel va cv cminusg cmpt wceq cplusg co c0g ccom cvv prdminvlem2
+          eqid elex syl simprd cgrp cmnd wss grpmnd ssriv sylancl prdm0g2 eqtrd
+          wf fss wb prdmgrpd2 simpld grpinvid2 syl3anc mpbird ) AJGSBFBUBZJSVLD
+          SUCSSUDZUEZVMJKUFSZUGZKUHSZUEZAVPUHDUIZVQAVMCTZVPVSUEZABCVODEJFVMUJUJ
+          KVSLPVOULZAEHTEUJTNEHUMUNAFITFUJTMFIUMUNORVSULVMULUKZUOADEFHIKLMNAFUP
+          DVDUPUQURFUQDVDOUAUPUQUAUBUSUTFUPUQDVEVAVBVCAKUPTJCTVTVNVRVFADEFHIKLM
+          NOVGRAVTWAWCVHCVOKGVQJVMPWBVQULQVIVJVK $.
+          $( [10-Jan-2015] $)
+      $}
+
+      ${
+        prdmgabld2.r $e |- ( ph -> R : I --> Abel ) $.
+        $( The product of a family of Abelian groups is an Abelian group. $)
+        prdmabld2 $p |- ( ph -> Y e. Abel ) $=
+          ( va cgrp wcel ccmn cabel wf wss ssriv fss cv ablgrp prdmgrpd2 ablcmn
+          sylancl prdmcmnd2 isabl sylanbrc ) AGMNGONGPNABCDEFGHIJADPBQZPMRDMBQK
+          LPMLUAZUBSDPMBTUEUCABCDEFGHIJAUIPORDOBQKLPOUJUDSDPOBTUEUFGUGUH $.
+          $( [10-Jan-2015] $)
+      $}
+    $}
+
+    ${
+      prdmlmodd2.y $e |- Y = ( S Xm_ R ) $.
+      prdmlmodd2.s $e |- ( ph -> S e. Ring ) $.
+      prdmlmodd2.i $e |- ( ph -> I e. V ) $.
+      prdmlmodd2.rm $e |- ( ph -> R : I --> LMod ) $.
+      prdmlmodd2.rs $e |- ( ( ph /\ y e. I ) -> ( Scalar ` ( R ` y ) ) = S ) $.
+      $( The product of a family of left modules is a left module. $)
+      prdmlmodd2 $p |- ( ph -> Y e. LMod ) $=
+        ( cfv crg wcel cvv co wa eqid adantr va vb cplusg cbs cvsca cmulr eqidd
+        vc cur csca wceq clmod wf fex syl2anc prdmsca cgrp wss cv lmodgrp ssriv
+        fss sylancl prdmgrpd2 eqid1 syl simprl simprr adantlr prdmvscacl2 3impb
+        elex w3a cmpt ad2antrr wfn simplr2 simplr3 simpr prdmplusgfval2 ffvelrn
+        ffn oveq2d simplr1 fveq2d eleqtrrd prdmbaseprj2 lmodvsdi1 prdmvscafval2
+        sylan syl112anc oveq12d eqcomd 3eqtrd simpr1 simpr2 simpr3 prdmvscaval2
+        mpteq2dva grpcl syl3anc 3adantr3 3adantr2 prdmplusgval2 lmodvsdi2 oveqd
+        3eqtr4d syl121anc oveq1d 3eqtr2rd rngacl lmodvsass rngcl simplr lmodvs1
+        eqtr3d rngidcl prdmbasefn2 dffn5v sylib islmodd ) AUAUBUHGUCMZDUDMZDUCM
+        ZGUEMZDUFMZDUIMZDGUDMZGAYHUGAYBUGADNOZCPOZDGUJMUKIAEULCUMZEFOZYJKJEULFC
+        UNUOGCDNPHUPUOAYEUGAYCUGAYDUGAYFUGAYGUGIACDENFGHJIAYKULUQUREUQCUMKUAULU
+        QUAUSZUTVAEULUQCVBVCVDZAYMYCOZUBUSZYHOZYMYPYEQZYHOZAYOYQRZRBYHCDYEYMYPE
+        YCPGHYHVEZYESZYCVEZAYIYTITAEPOZYTAYLUUDJEFVLVFZTAYKYTKTAYOYQVGAYOYQVHAB
+        USZEOZUUFCMZUJMZDUKZYTLVIVJZVKAYOYQUHUSZYHOZVMZRZBEYMUUFYPUULYBQZMZUUHU
+        EMZQZVNBEUUFYRMZUUFYMUULYEQZMZUUHUCMZQZVNYMUUPYEQYRUVAYBQUUOBEUUSUVDUUO
+        UUGRZUUSYMUUFYPMZUUFUULMZUVCQZUURQZYMUVFUURQZYMUVGUURQZUVCQZUVDUVEUUQUV
+        HYMUURUVEYHYBCDYPUULEUUFNPGHUUAAYIUUNUUGIVOZAUUDUUNUUGUUEVOZACEVPZUUNUU
+        GAYKUVOKEULCWBVFZVOZYOYQUUMAUUGVQZYOYQUUMAUUGVRZYBSZUUOUUGVSZVTWCUVEUUH
+        ULOZYMUUIUDMZOZUVFUUHUDMZOUVGUWEOZUVIUVLUKAUUGUWBUUNAYKUUGUWBKEULUUFCWA
+        WJZVIUVEYMYCUWCYOYQUUMAUUGWDZAUUGUWCYCUKZUUNAUUGRZUUIDUDLWEZVIWFUVEYHCD
+        YPEUUFNPGHUUAUVMUVNUVQUVRUWAWGUVEYHCDUULEUUFNPGHUUAUVMUVNUVQUVSUWAWGUVC
+        YMUURUUIUWCUWEUUHUVFUVGUWESZUVCSZUUISZUURSZUWCSZWHWKUVEUVDUVLUVEUUTUVJU
+        VBUVKUVCUVEYHCDYEYMYPEUUFYCPGHYHSZUUBYCSZUVMUVNUVQUWHUVRUWAWIUVEYHCDYEY
+        MUULEUUFYCPGHUWQUUBUWRUVMUVNUVQUWHUVSUWAWIWLWMWNWSUUOBYHCDYEYMUUPEYCPGH
+        UUAUUBUUCAYIUUNITZAUUDUUNUUETZAUVOUUNUVPTZAYOYQUUMWOUUOGUQOZYQUUMUUPYHO
+        AUXBUUNYNTAYOYQUUMWPAYOYQUUMWQYHYBGYPUULUWQUVTWTXAWRUUOBYHYBCDYRUVAENPG
+        HUUAUWSUWTUXAAYOYQYSUUMUUKXBAYOUUMUVAYHOZYQAYOUUMRZRBYHCDYEYMUULEYCPGHU
+        WQUUBUWRAYIUXDITAUUDUXDUUETAYKUXDKTAYOUUMVGAYOUUMVHAUUGUUJUXDLVIVJZXCYB
+        VEZXDXGAYOYPYCOZUUMVMZRZBEYMYPYDQZUVGUURQZVNBEUVBUUFYPUULYEQZMZUVCQZVNU
+        XJUULYEQUVAUXLYBQUXIBEUXKUXNUXIUUGRZUXNUVKYPUVGUURQZUVCQZYMYPUUIUCMZQZU
+        VGUURQZUXKUXOUVBUVKUXMUXPUVCUXOYHCDYEYMUULEUUFYCPGHUWQUUBUWRAYIUXHUUGIV
+        OZAUUDUXHUUGUUEVOZAUVOUXHUUGUVPVOZYOUXGUUMAUUGWDZYOUXGUUMAUUGVRZUXIUUGV
+        SZWIUXOYHCDYEYPUULEUUFYCPGHUWQUUBUWRUYAUYBUYCYOUXGUUMAUUGVQZUYEUYFWIZWL
+        UXOUWBUWDYPUWCOZUWFUXTUXQUKAUUGUWBUXHUWGVIZUXOYMYCUWCUYDAUUGUWIUXHUWKVI
+        ZWFZUXOYPYCUWCUYGUYKWFZUXOYHCDUULEUUFNPGHUUAUYAUYBUYCUYEUYFWGZUVCUXRYMY
+        PUURUUIUWCUWEUUHUVGUWLUWMUWNUWOUWPUXRSXEXHUXOUXSUXJUVGUURUXOUXRYDYMYPUX
+        OUUIDUCAUUGUUJUXHLVIZWEXFXIXJWSUXIBYHCDYEUXJUULEYCPGHUUAUUBUUCAYIUXHITZ
+        AUUDUXHUUETZAUVOUXHUVPTZUXIYIYOUXGUXJYCOUYPAYOUXGUUMWOZAYOUXGUUMWPZYCYD
+        DYMYPUWRYDSXKXAAYOUXGUUMWQZWRUXIBYHYBCDUVAUXLENPGHUUAUYPUYQUYRAYOUUMUXC
+        UXGUXEXCUXIBYHCDYEYPUULEYCPGHUUAUUBUWRUYPUYQAYKUXHKTUYTVUAUYOVJZUXFXDXG
+        UXIBEYMYPYFQZUVGUURQZVNBEYMUXMUURQZVNVUCUULYEQYMUXLYEQUXIBEVUDVUEUXOVUE
+        YMUXPUURQZYMYPUUIUFMZQZUVGUURQZVUDUXOUXMUXPYMUURUYHWCUXOUWBUWDUYIUWFVUI
+        VUFUKUYJUYLUYMUYNYMYPUURVUGUUIUWCUWEUUHUVGUWLUWNUWOUWPVUGSXLXHUXOVUHVUC
+        UVGUURUXOVUGYFYMYPUXOUUIDUFUYOWEXFXIXJWSUXIBYHCDYEVUCUULEYCPGHUWQUUBUWR
+        UYPUYQUYRUXIYIYOUXGVUCYCOUYPUYSUYTYCDYFYMYPUWRYFSXMXAVUAWRUXIBYHCDYEYMU
+        XLEYCPGHUUAUUBUUCUYPUYQUYRUYSVUBWRXGAYMYHOZRZBEYGUUFYMMZUURQZVNBEVULVNZ
+        YGYMYEQYMVUKBEVUMVULVUKUUGRZUUIUIMZVULUURQZVUMVULVUOVUPYGVULUURAUUGVUPY
+        GUKVUJUWJUUIDUILWEVIXIVUOUWBVULUWEOVUQVULUKAUUGUWBVUJUWGVIVUOYHCDYMEUUF
+        NPGHUWQAYIVUJUUGIVOAUUDVUJUUGUUEVOAUVOVUJUUGUVPVOAVUJUUGXNVUKUUGVSWGUUR
+        VUPUUIUWEUUHVULUWLUWNUWOVUPSXOUOXPWSVUKBYHCDYEYGYMEYCPGHUWQUUBUWRAYIVUJ
+        ITZAUUDVUJUUETZAUVOVUJUVPTZAYGYCOZVUJAYIVVAIYCDYGUWRYGSXQVFTAVUJVSZWRVU
+        KYMEVPYMVUNUKVUKYHCDYMENPGHUWQVURVUSVUTVVBXRBEYMXSXTXGYA $.
+        $( [10-Jan-2015] $)
+    $}
 
     ${
       prdmmndd.s $e |- ( ph -> S e. V ) $.
@@ -15162,15 +15524,6 @@ $)
       UMWHWOWLQZVSVPVJVKVMUPHZAVOMXEVNXFAVOVMUNUQABCDIIURUSUTVAWIVQLHZVSWPWGWMV
       BWHXGVSACDIIVCUTWHVSVDWIWPWQXDVFVRWJVQVTWLGWFWRWSWLTVTTVEVGVHVI $.
       $( [4-Jan-2015] $)
-
-    $( The product of a family of Abelian groups is Abelian. $)
-    prdmabl $p |- ( ( S e. V /\ R e. W /\ A. x e. dom R ( R ` x ) e. Abel ) ->
-        ( S Xm_ R ) e. Abel ) $=
-      ( wcel cv cfv cabel cdm wral w3a cprdm co cgrp ccmn simp1 ralimi 3ad2ant3
-      simp2 ablgrp prdmgrpd ablcmn prdmcmnd isabl sylanbrc ) CDFZBEFZAGBHZIFZAB
-      JZKZLZCBMNZOFUNPFUNIFUMABCDEUGUHULQZUGUHULTZULUGUIOFZAUKKUHUJUQAUKUIUARSU
-      BUMABCDEUOUPULUGUIPFZAUKKUHUJURAUKUIUCRSUDUNUEUF $.
-      $( [5-Jan-2015] $)
 
     ${
       prdmlmodd.s $e |- ( ph -> S e. Ring ) $.
