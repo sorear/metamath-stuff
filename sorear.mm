@@ -15352,7 +15352,7 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Direct sum and free left modules
+    Direct sum of left modules
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
@@ -15427,6 +15427,224 @@ $)
       $.
       $( [7-Jan-2015] $)
   $}
+
+  ${
+    $d S a b $.  $d R a b $.  $d X a b $.  $d I a b $.
+    dsmmelbas.p $e |- P = ( S Xm_ R ) $.
+    dsmmelbas.c $e |- C = ( S (+)m R ) $.
+    dsmmelbas.b $e |- B = ( Base ` P ) $.
+    dsmmelbas.h $e |- H = ( Base ` C ) $.
+    dsmmelbas.i $e |- ( ph -> I e. V ) $.
+    dsmmelbas.r $e |- ( ph -> R Fn I ) $.
+    $( Membership in the finitely supported hull of a structure product in
+       terms of the index set. $)
+    dsmmelbas $p |- ( ph -> ( X e. H <-> ( X e. B /\ { a e. I |
+          ( X ` a ) =/= ( 0g ` ( R ` a ) ) } e. Fin ) ) ) $=
+      ( wcel cfv cbs vb cv c0g wne cdm crab cfn cprdm co wa cdsmm cvv wceq fnex
+      wfn syl2anc eqid dsmmbase syl fveq2i eqtri syl6reqr eleq2d neeq1d rabbidv
+      fveq1 eleq1d elrab eqtr2i eleq2i a1i fndm rabeq 3syl anbi12d syl5bb bitrd
+      wb ) AJGRJKUBZUAUBZSZVSESUCSZUDZKEUEZUFZUGRZUAFEUHUIZTSZUFZRZJBRZVSJSZWBU
+      DZKHUFZUGRZUJZAGWIJAWIFEUKUIZTSZGAEULRZWIWRUMAEHUOZHIRWSQPHIEUNUPKWIEFUAU
+      LWIUQURUSGCTSWROCWQTMUTVAVBVCWJJWHRZWMKWDUFZUGRZUJAWPWFXCUAJWHVTJUMZWEXBU
+      GXDWCWMKWDXDWAWLWBVSVTJVFVDVEVGVHAXAWKXCWOXAWKVRAWHBJBDTSWHNDWGTLUTVIVJVK
+      AXBWNUGAWTWDHUMXBWNUMQHEVLWMKWDHVMVNVGVOVPVQ $.
+      $( [11-Jan-2015] $)
+  $}
+
+  ${
+    $d ph a b $.  $d P a b $.  $d S a b $.  $d R a b $.  $d Z a b $.
+    $d A a b $.  $d J a b $.  $d K a b $.  $d I a $.
+    dsmmcl.p $e |- P = ( S Xm_ R ) $.
+    dsmmcl.h $e |- H = ( Base ` ( S (+)m R ) ) $.
+    dsmmcl.i $e |- ( ph -> I e. W ) $.
+    dsmmcl.s $e |- ( ph -> S e. V ) $.
+    dsmmcl.r $e |- ( ph -> R : I --> Mnd ) $.
+    ${
+      dsmm0cl.z $e |- Z = ( 0g ` P ) $.
+      $( The all-zero vector is contained in the finite hull, since its support
+         is empty and therefore finite.  This theorem along with the next one
+         effectively proves that the finite hull is a "submonoid", although
+         that does not exist as a defined concept yet. $)
+      dsmm0cl $p |- ( ph -> Z e. H ) $=
+        ( va wcel cfv c0g wceq cbs cv wne crab cfn cmnd prdmmndd mndidcl syl c0
+        eqid wn wral wa ccom prdm0g syl6eqr adantr fveq1d wf fvco2 sylan eqtr3d
+        wfn ffn sylibr ralrimiva rabeq0 0fin syl6eqel cdsmm dsmmelbas mpbir2and
+        nne co ) AIEQIBUARZQZPUBZIRZVRCRSRZUCZPFUDZUEQABUFQVQACDFGHBJLMNUGVPBIV
+        PUKZOUHUIAWBUJUEAWAULZPFUMWBUJTAWDPFAVRFQZUNZVSVTTWDWFVRSCUOZRZVSVTWFVR
+        WGIAWGITWEAWGBSRIACDFGHBJLMNUPOUQURUSACFVDZWEWHVTTAFUFCUTWINFUFCVEUIZFS
+        CVRVAVBVCVSVTVNVFVGWAPFVHVFVIVJAVPDCVKVOZBCDEFHIPJWKUKWCKLWJVLVM $.
+        $( [11-Jan-2015] $)
+    $}
+
+    ${
+      dsmmacl.j $e |- ( ph -> J e. H ) $.
+      dsmmacl.k $e |- ( ph -> K e. H ) $.
+      dsmmacl.a $e |- A = ( +g ` P ) $.
+      $( The finite hull is closed under addition. $)
+      dsmmacl $p |- ( ph -> ( J A K ) e. H ) $=
+        ( wcel va co cbs cfv cv c0g wne crab cfn cmnd prdmmndd wa cdsmm eqid wf
+        wfn ffn dsmmelbas mpbid simpld mndcl syl3anc cplusg simpr prdmplusgfval
+        syl adantr neeq1d rabbidva cun wss simprd unfi syl2anc wo wceq wn sylan
+        ffvelrn mndidcl mndlid oveq12 eqeq1d syl5ibrcom neorian con1bii 3imtr4g
+        bicomi nne con4d ss2rabdv unrab syl6sseqr ssfi eqeltrd mpbir2and ) AHIB
+        UBZFTWQCUCUDZTZUAUEZWQUDZWTDUDZUFUDZUGZUAGUHZUITACUJTHWRTZIWRTZWSADEGJK
+        CLNOPUKAXFWTHUDZXCUGZUAGUHZUITZAHFTXFXKULQAWREDUMUBZCDEFGKHUALXLUNZWRUN
+        ZMNAGUJDUOZDGUPZPGUJDUQVFZURUSZUTZAXGWTIUDZXCUGZUAGUHZUITZAIFTXGYCULRAW
+        RXLCDEFGKIUALXMXNMNXQURUSZUTZWRBCHIXNSVAVBAXEXHXTXBVCUDZUBZXCUGZUAGUHZU
+        IAXDYHUAGAWTGTZULZXAYGXCYKWRBDEHIGWTJKCLXNAEJTYJOVGAGKTYJNVGAXPYJXQVGAX
+        FYJXSVGAXGYJYEVGSAYJVDVEVHVIAXJYBVJZUITZYIYLVKYIUITAXKYCYMAXFXKXRVLAXGY
+        CYDVLXJYBVMVNAYIXIYAVOZUAGUHYLAYHYNUAGYKYNYHYKXHXCVPXTXCVPULZYGXCVPZYNV
+        QYHVQYKYPYOXCXCYFUBZXCVPZYKXBUJTZXCXBUCUDZTZYRAXOYJYSPGUJWTDVSVRZYKYSUU
+        AUUBYTXBXCYTUNZXCUNZVTVFYTYFXBXCXCUUCYFUNUUDWAVNYOYGYQXCXHXCXTXCYFWBWCW
+        DYOYNYNYOVQXHXCXTXCWEWHWFYGXCWIWGWJWKXIYAUAGWLWMYLYIWNVNWOAWRXLCDEFGKWQ
+        UALXMXNMNXQURWP $.
+        $( [11-Jan-2015] $)
+    $}
+  $}
+
+  ${
+    $d x S $.  $d x R $.  $d x X $.  $d x Y $.  $d x I $.  $d x B $.
+    $d ph x $.  $d J x $.
+    prdminvgd2.y $e |- Y = ( S Xm_ R ) $.
+    prdminvgd2.i $e |- ( ph -> I e. W ) $.
+    prdminvgd2.s $e |- ( ph -> S e. V ) $.
+    prdminvgd2.r $e |- ( ph -> R : I --> Grp ) $.
+    prdminvgd2.b $e |- B = ( Base ` Y ) $.
+    prdminvgd2.n $e |- N = ( invg ` Y ) $.
+    prdminvgd2.x $e |- ( ph -> X e. B ) $.
+    prdminvgd2.j $e |- ( ph -> J e. I ) $.
+    $( Negation of a single coordinate in a structure product. $)
+    prdminvgd2 $p |- ( ph -> ( ( N ` X ) ` J ) =
+        ( ( invg ` ( R ` J ) ) ` ( X ` J ) ) ) $=
+      ( cfv vx cminusg cmpt prdminvgd fveq1d wcel wceq fveq2d fveq12d eqid fvex
+      cv fveq2 fvmpt syl eqtrd ) AFJGTZTFUAEUAULZJTZURCTZUBTZTZUCZTZFJTZFCTZUBT
+      ZTZAFUQVCAUABCDEGHIJKLMNOPQRUDUEAFEUFVDVHUGSUAFVBVHEVCURFUGZUSVEVAVGVIUTV
+      FUBURFCUMUHURFJUMUIVCUJVEVGUKUNUOUP $.
+      $( [11-Jan-2015] $)
+  $}
+
+  ${
+    $d H a b $.  $d P a b $.  $d S a b $.  $d R a b $.  $d I b $.  $d ph a b $.
+    dsmmsubg.p $e |- P = ( S Xm_ R ) $.
+    dsmmsubg.h $e |- H = ( Base ` ( S (+)m R ) ) $.
+    dsmmsubg.i $e |- ( ph -> I e. W ) $.
+    dsmmsubg.s $e |- ( ph -> S e. V ) $.
+    dsmmsubg.r $e |- ( ph -> R : I --> Grp ) $.
+    $( The finite hull of a product of groups is additionally closed under
+       negation and thus is a subgroup of the product. $)
+    dsmmsubg $p |- ( ph -> H e. ( SubGrp ` P ) ) $=
+      ( va vb cfv wcel wceq cgrp eqid cplusg cress co c0g eqidd cdsmm cbs cprdm
+      cv wne cdm crab cfn cvv wf fex syl2anc dsmmbase syl eqcomd wss ssrab2 a1i
+      eqsstrd fveq2i syl6sseqr syl5eqss cmnd ssriv fss sylancl dsmm0cl 3ad2ant1
+      grpmnd w3a simp2 simp3 dsmmacl wa cminusg prdmgrpd adantr sselda grpinvcl
+      simpr wfn ffn dsmmelbas mpbid simprd ad2antrr prdminvgd2 adantrr ad2antll
+      fveq2 ffvelrn sylan adantlr grpinvid expr necon3d ss2rabdv ssfi mpbir2and
+      3eqtrd issubgrpd2 ) ANOEBUAPZBEUBUCZBBUDPZAXHUEAXIUEAXGUEAEDCUFUCZUGPZBUG
+      PZJAXKDCUHUCZUGPZXLAXKOUIZNUIZPZXOCPZUDPZUJZOCUKULUMQZNXNULZXNAYBXKACUNQZ
+      YBXKRAFSCUOZFHQZYCMKFSHCUPUQOYBCDNUNYBTURUSUTYBXNVAAYANXNVBVCVDBXMUGIVEVF
+      VGZABCDEFGHXIIJKLAYDSVHVAFVHCUOZMNSVHXPVNVIFSVHCVJVKZXITVLAXPEQZXOEQZVOXG
+      BCDEFXPXOGHIJAYIYEYJKVMAYIDGQZYJLVMAYIYGYJYHVMAYIYJVPAYIYJVQXGTVRAYIVSZXP
+      BVTPZPZEQYNXLQZXOYNPZXSUJZOFULZUMQZYLBSQZXPXLQZYOAYTYIACDFGHBIKLMWAZWBAEX
+      LXPYFWCZXLBYMXPXLTZYMTZWDUQYLXTOFULZUMQZYRUUFVAYSYLUUAUUGYLYIUUAUUGVSAYIW
+      EYLXLXJBCDEFHXPOIXJTZUUDJAYEYIKWBZACFWFZYIAYDUUJMFSCWGUSWBZWHWIWJYLYQXTOF
+      YLXOFQZVSZXQXSYPXSYLUULXQXSRZYPXSRYLUULUUNVSVSYPXQXRVTPZPZXSUUOPZXSYLUULY
+      PUUPRUUNUUMXLCDFXOYMGHXPBIAYEYIUULKWKAYKYIUULLWKAYDYIUULMWKUUDUUEYLUUAUUL
+      UUCWBYLUULWEWLWMUUNUUPUUQRYLUULXQXSUUOWOWNYLUULUUQXSRZUUNUUMXRSQZUURAUULU
+      USYIAYDUULUUSMFSXOCWPWQWRXRUUOXSXSTUUOTWSUSWMXEWTXAXBUUFYRXCUQYLXLXJBCDEF
+      HYNOIUUHUUDJUUIUUKWHXDUUBXF $.
+      $( [11-Jan-2015] $)
+  $}
+
+  ${
+    $d ph a b x $.  $d S a b x $.  $d R a b x $.  $d I a b x $.  $d P a b x $.
+    $d U a b $.  $d H a b x $.
+    dsmmlss.i $e |- ( ph -> I e. W ) $.
+    dsmmlss.s $e |- ( ph -> S e. Ring ) $.
+    dsmmlss.r $e |- ( ph -> R : I --> LMod ) $.
+    dsmmlss.k $e |- ( ( ph /\ x e. I ) -> ( Scalar ` ( R ` x ) ) = S ) $.
+
+    ${
+      dsmmlss.p $e |- P = ( S Xm_ R ) $.
+      dsmmlss.u $e |- U = ( LSubSp ` P ) $.
+      dsmmlss.h $e |- H = ( Base ` ( S (+)m R ) ) $.
+      $( The finite hull of a product of modules is additionally closed under
+         scalar multiplication and thus is a linear subspace of the product. $)
+      dsmmlss $p |- ( ph -> H e. U ) $=
+        ( wcel cfv clmod eqid va vb csubg cv cvsca co wral csca cbs crg wf cgrp
+        wss lmodgrp ssriv fss sylancl dsmmsubg wa c0g wne crab prdmlmodd adantr
+        cfn simprl simprr wb cdsmm wfn ffn syl dsmmelbas mpbid lmodvscl syl3anc
+        simpld simprd wceq ad2antrr cvv fex syl2anc prdmsca fveq2d eleq2d simpr
+        biimpar adantrr prdmvscafval ffvelrn sylan adantlr eqtrd eleqtrrd oveq2
+        simplrl lmodvs0 eqeq1d syl5ibrcom impr expr necon3d ss2rabdv ralrimivva
+        ssfi mpbir2and islss4 ) AGFQZGCUCRZQZUAUDZUBUDZCUERZUFZGQZUBGUGUACUHRZU
+        IRZUGZACDEGHUJINPJKAHSDUKZSULUMHULDUKLUASULXLUNUOHSULDUPUQURAXPUAUBXRGA
+        XLXRQZXMGQZUSZUSZXPXOCUIRZQZBUDZXORZYGDRZUTRZVAZBHVBZVEQZYDCSQZYAXMYEQZ
+        YFAYNYCABDEHICNKJLMVCZVDAYAYBVFYDYOYGXMRZYJVAZBHVBZVEQZYDYBYOYTUSZAYAYB
+        VGAYBUUAVHYCAYEEDVIUFZCDEGHIXMBNUUBTZYETZPJAXTDHVJZLHSDVKVLZVMVDVNZVQZX
+        LXNXQXRYECXMUUDXQTZXNTZXRTZVOVPYDYTYLYSUMYMYDYOYTUUGVRYDYKYRBHYDYGHQZUS
+        ZYQYJYHYJYDUULYQYJVSZYHYJVSYDUULUUNUSUSYHXLYQYIUERZUFZYJYDUULYHUUPVSUUN
+        UUMYEDEXNXLXMHYGEUIRZICNUUDUUJUUQTAEUJQZYCUULKVTAHIQZYCUULJVTAUUEYCUULU
+        UFVTYDXLUUQQZUULAYAUUTYBAUUTYAAUUQXRXLAEXQUIAUURDWAQZEXQVSZKAXTUUSUVALJ
+        HSIDWBWCCDEUJWANWDWCZWEWFWHWIVDYDYOUULUUHVDYDUULWGWJWIYDUULUUNUUPYJVSZU
+        UMUVDUUNXLYJUUOUFZYJVSZUUMYISQZXLYIUHRZUIRZQUVFAUULUVGYCAXTUULUVGLHSYGD
+        WKWLWMUUMXLXRUVIAYAYBUULWQAUULUVIXRVSYCAUULUSZUVHXQUIUVJUVHEXQMAUVBUULU
+        VCVDWNWEWMWOUUOUVHUVIYIXLYJUVHTUUOTUVITYJTWRWCUUNUUPUVEYJYQYJXLUUOWPWSW
+        TXAWNXBXCXDYSYLXFWCAXPYFYMUSVHYCAYEUUBCDEGHIXOBNUUCUUDPJUUFVMVDXGXEAYNX
+        IXKXSUSVHYPXRFXNGXQXJYECUAUBUUIUUKUUDUUJOXJTXHVLXG $.
+        $( [11-Jan-2015] $)
+    $}
+
+    ${
+      dsmmlmod.c $e |- C = ( S (+)m R ) $.
+      $( The direct sum of a family of modules is a module. $)
+      dsmmlmod $p |- ( ph -> C e. LMod ) $=
+        ( cprdm co clmod wcel cdsmm cbs cfv eqid prdmlmodd cress dsmmval2 eqtri
+        clss dsmmlss lsslmod syl2anc ) AEDMNZOPEDQNZRSZUIUESZPCOPABDEFGUIUITZIH
+        JKUAABUIDEULUKFGHIJKUMULTZUKTZUFULUKUICCUJUIUKUBNLUKDEUOUCUDUNUGUH $.
+        $( [11-Jan-2015] $)
+    $}
+  $}
+
+  $( direct sum coincides with products for finite $)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Free modules
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c freeLMod unitVec $.
+
+  $( Class of free module generator. $)
+  cfrlm $a class freeLMod $.
+
+  $( Class of basic unit vectors for an explicit free module. $)
+  cuvc $a class unitVec $.
+
+  ${
+    $d r i j k $.
+
+    $( The ` i ` -dimensional free module over a ring ` r ` is the product of
+       ` i ` -many copies of the ring with componentwise addition and
+       multiplication.  If ` i ` is infinite, the allowed vectors are
+       restricted to those with finitely many nonzero cooerdinates; this
+       ensures that the resulting module is actually spanned by its vectors. $)
+    df-frlm $a |- freeLMod = ( r e. _V , i e. _V |->
+        ( r (+)m ( i X. { ( ringLMod ` r ) } ) ) ) $.
+
+    $( ` ( ( R unitVec I ) `` i ) ` is the unit vector in ` ( R freeLMod I ) `
+       along the ` i ` axis. $)
+    df-uvc $a |- unitVec = ( r e. _V , i e. _V |-> ( j e. i |->
+        ( k e. i |-> if ( k = j , ( 1r ` r ) , ( 0g ` r ) ) ) ) ) $.
+  $}
+
+  $( value of free module $)
+  $( demonstrate base set and operations for pedagogic value, including finite and infinite case, using oF and o. $)
+  $( free module is spanned by basis vectors $)
+  $( evaluation map from a free module to any other module: a map on basis extends (uniquely) to the whole $)
+  $( use span preservation to show that the free module maps onto a span $)
+  $( this allows for neat representation of spans: ellspd $)
+  $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
 
   ${
     $d M a b c f $.  $d B a b c f $.  $d N a b c f $.  $d K a b c f $.
@@ -15739,8 +15957,8 @@ $)
 
     ${
       rspssp.u $e |- U = ( LIdeal ` R ) $.
-      $( PLEASE PUT DESCRIPTION HERE. (Contributed by Stefan O'Rear,
-         3-Jan-2015.) $)
+      $( The ideal span of a set of elements in a ring is contained in any
+         subring which contains those elements. $)
       rspssp $p |- ( ( R e. Ring /\ I e. U /\ G C_ I ) -> ( K ` G ) C_ I ) $=
         ( crg wcel wss w3a crglmod clspn wceq crsp rspval syl5eq 3ad2ant1 eqid
         cfv fveq1d clmod clss rlmlmod clidl lidlval eleq2d biimpa 3adant3 simp3
