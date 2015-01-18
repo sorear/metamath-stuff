@@ -8700,131 +8700,166 @@ $)
         sup ( B , A , `' R ) e. B ) $=
       ? $.
 
-    $( No element of a subset of a well-ordered set is less than the infimum. $)
+    $( No element of a subset of a well-ordered set is less than the
+       infimum. $)
     weinfmnlt $p |- ( ( R We A /\ B C_ A /\ X e. B ) ->
         -. X R sup ( B , A , `' R ) ) $=
       ? $.
   $}
 
   ${
-    $d A x y z a b c d $.  $d R x y z a b c d $.  $d S x y z a b c d $.
-    $d P x y z a b c d $.  $d Q x y z a b c d $.  $d B a b c d $.
-    $d X x y z a b c d $.  $d T a b c d $.
-    wemapso.t $e |- T = { <. x , y >. | ( x =/= y /\
-        [ sup ( dom ( x \ y ) , A , `' R ) / z ] ( x ` z ) S ( y ` z ) ) } $.
+    $d A x y z w a b c d $.  $d R x y z w a b c d $.  $d S x y z w a b c d $.
+    $d P x y z w a b c d $.  $d Q x y z w a b c d $.  $d B a b c d $.
+    $d X x y z w a b c d $.  $d T a b c d $.
+    wemapso.t $e |- T = { <. x , y >. | E. z e. A ( ( x ` z ) S ( y ` z ) /\
+        A. w e. A ( w R z -> ( x ` w ) = ( y ` w ) ) ) } $.
 
     ${
-      wemapso1.a $e |- ( ph -> A e. _V ) $.
-      wemapso1.p $e |- ( ph -> P e. ( B ^m A ) ) $.
-      wemapso1.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
-      wemapso1.r $e |- ( ph -> R We A ) $.
-      wemapso1.s $e |- ( ph -> S Or B ) $.
       $( Value of the lexicographic order on a sequence space. $)
-      wemapso1 $p |- ( ph -> ( P T Q <-> E. a e. A ( ( P ` a ) S ( Q ` a ) /\
-          A. b e. A ( b R a -> ( P ` b ) = ( Q ` b ) ) ) ) ) $=
-        ? $.
-    $}
-
-    ${
-      wemapso2.p $e |- ( ph -> P e. ( B ^m A ) ) $.
-      wemapso2.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
-      wemapso2.x $e |- ( ph -> X e. A ) $.
-      wemapso2.o1 $e |- ( ( ph /\ a e. A /\ a R X ) ->
-          ( P ` a ) = ( Q ` a ) ) $.
-      wemapso2.o2 $e |- ( ph -> ( P ` X ) S ( Q ` X ) ) $.
-      wemapso2.r $e |- ( ph -> R We A ) $.
-      wemapso2.s $e |- ( ph -> S Or B ) $.
-      $( Infer ordering of two sequences from a point of difference. $)
-      wemapso2 $p |- ( ph -> P T Q ) $=
-        ? $.
+      wemapso1 $p |- ( ( P e. V /\ Q e. W ) -> ( P T Q <->
+          E. a e. A ( ( P ` a ) S ( Q ` a ) /\
+            A. b e. A ( b R a -> ( P ` b ) = ( Q ` b ) ) ) ) ) $=
+        ( cv cfv wbr wceq wi wral wrex fveq1 breqan12d eqeqan12d imbi2d ralbidv
+        wa anbi12d rexbidv weq fveq2 breq12d breq2 imbi1d breq1 eqeq12d imbi12d
+        cbvralv syl6bb cbvrexv brabga ) CPZAPZQZVCBPZQZIRZDPZVCHRZVIVDQZVIVFQZS
+        ZTZDEUAZUHZCEUBZMPZFQZVRGQZIRZNPZVRHRZWBFQZWBGQZSZTZNEUAZUHZMEUBZABFGJK
+        LVDFSZVFGSZUHZVQVCFQZVCGQZIRZVJVIFQZVIGQZSZTZDEUAZUHZCEUBWJWMVPXBCEWMVH
+        WPVOXAWKWLVEWNVGWOIVCVDFUCVCVFGUCUDWMVNWTDEWMVMWSVJWKWLVKWQVLWRVIVDFUCV
+        IVFGUCUEUFUGUIUJXBWICMECMUKZWPWAXAWHXCWNVSWOVTIVCVRFULVCVRGULUMXCXAVIVR
+        HRZWSTZDEUAWHXCWTXEDEXCVJXDWSVCVRVIHUNUOUGXEWGDNEDNUKZXDWCWSWFVIWBVRHUP
+        XFWQWDWRWEVIWBFULVIWBGULUQURUSUTUIVAUTOVB $.
+        $( [18-Jan-2015] $)
     $}
 
     ${
       $d ph d $.
-      wemapso3.a $e |- ( ph -> A e. _V ) $.
-      wemapso3.p $e |- ( ph -> P e. ( B ^m A ) ) $.
-      wemapso3.x $e |- ( ph -> X e. ( B ^m A ) ) $.
-      wemapso3.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
-      wemapso3.px $e |- ( ph -> P T X ) $.
-      wemapso3.xq $e |- ( ph -> X T Q ) $.
-      wemapso3.r $e |- ( ph -> R We A ) $.
-      wemapso3.s $e |- ( ph -> S Or B ) $.
+      wemapso2.a $e |- ( ph -> A e. _V ) $.
+      wemapso2.p $e |- ( ph -> P e. ( B ^m A ) ) $.
+      wemapso2.x $e |- ( ph -> X e. ( B ^m A ) ) $.
+      wemapso2.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
+      wemapso2.r $e |- ( ph -> R Or A ) $.
+      wemapso2.s $e |- ( ph -> S Po B ) $.
       ${
-        wemapso4.px1 $e |- ( ph -> a e. A ) $.
-        wemapso4.px2 $e |- ( ph -> ( P ` a ) S ( X ` a ) ) $.
-        wemapso4.px3 $e |- ( ph -> A. c e. A ( c R a ->
+        wemapso2.px1 $e |- ( ph -> a e. A ) $.
+        wemapso2.px2 $e |- ( ph -> ( P ` a ) S ( X ` a ) ) $.
+        wemapso2.px3 $e |- ( ph -> A. c e. A ( c R a ->
             ( P ` c ) = ( X ` c ) ) ) $.
-        wemapso4.xq1 $e |- ( ph -> b e. A ) $.
-        wemapso4.xq2 $e |- ( ph -> ( X ` b ) S ( Q ` b ) ) $.
-        wemapso4.xq3 $e |- ( ph -> A. c e. A ( c R b ->
+        wemapso2.xq1 $e |- ( ph -> b e. A ) $.
+        wemapso2.xq2 $e |- ( ph -> ( X ` b ) S ( Q ` b ) ) $.
+        wemapso2.xq3 $e |- ( ph -> A. c e. A ( c R b ->
             ( X ` c ) = ( Q ` c ) ) ) $.
-        $( Lemma for ~ wemapso .  Transitivity. $)
-        wemapso4 $p |- ( ph -> P T Q ) $=
-          ( vd wbr cv cfv wceq wi wral wa wrex cif wcel syl2anc weq w3o wor wwe
-          ifcl weso syl solin syl12anc adantr breq1 eqeq12d imbi12d rcla4va imp
-          fveq2 breq2d mpbid wb iftrue fveq2d breq12d adantl mpbird w3a wf cmap
-          cvv co elmapi ffvelrn 3jca syl5ibcom sotr syl22anc ifid syl6eq breq1d
-          ifeq1 wn wpo sopo po2nr nan mpbi iffalse 3jaodan r19.26 sylanbrc prth
-          mpdan eqtr imim2i ralimi simpl1 simpl2 simpl3 soltmin syl13anc biimpd
-          simpr imim1d ralimdva syl5 mpd breq2 ralbidv anbi12d rcla4ev wemapso1
-          jca imbi1d ) AGHKULUKUMZGUNZYOHUNZJULZOUMZYOIULZYSGUNZYSHUNZUOZUPZOEU
-          QZURZUKEUSZAMUMZNUMZIULZUUHUUIUTZEVAZUUKGUNZUUKHUNZJULZYSUUKIULZUUCUP
-          ZOEUQZURZUUGAUUHEVAZUUIEVAZUULUEUHUUJUUHUUIEVGVBAUUOUURAUUJMNVCZUUIUU
-          HIULZVDZUUOAEIVEZUUTUVAUVDAEIVFUVEUCEIVHVIZUEUHEUUHUUIIVJVKAUUJUUOUVB
-          UVCAUUJURZUUOUUHGUNZUUHHUNZJULZUVGUVHUUHLUNZJULZUVJAUVLUUJUFVLUVGUVKU
-          VIUVHJAUUJUVKUVIUOZAUUTYSUUIIULZYSLUNZUUBUOZUPZOEUQZUUJUVMUPZUEUJUVQU
-          VSOUUHEOMVCZUVNUUJUVPUVMYSUUHUUIIVMUVTUVOUVKUUBUVIYSUUHLVRYSUUHHVRVNV
-          OVPVBVQVSVTUUJUUOUVJWAAUUJUUMUVHUUNUVIJUUJUUKUUHGUUJUUHUUIWBZWCUUJUUK
-          UUHHUWAWCWDWEWFAUVBURZUUOUUIGUNZUUIHUNZJULZUWBFJVEZUWCFVAZUUILUNZFVAZ
-          UWDFVAZWGZUWCUWHJULZUWHUWDJULZUWEAUWFUVBUDVLAUWKUVBAUWGUWIUWJAEFGWHZU
-          VAUWGAEWJVAZGFEWIWKZVAUWNQRGFEWLVBUHEFUUIGWMVBAEFLWHZUVAUWIAUWOLUWPVA
-          UWQQSLFEWLVBUHEFUUILWMVBAEFHWHZUVAUWJAUWOHUWPVAUWRQTHFEWLVBUHEFUUIHWM
-          VBWNVLAUVBUWLAUVLUVBUWLUFUVBUVHUWCUVKUWHJUUHUUIGVRUUHUUILVRWDWOVQAUWM
-          UVBUIVLUWFUWKURUWLUWMURUWEFUWCUWHUWDJWPVQWQUVBUUOUWEWAZAUVBUUMUWCUUNU
-          WDJUVBUUKUUIGUVBUUKUUJUUIUUIUTUUIUUJUUHUUIUUIXAUUJUUIWRWSZWCUVBUUKUUI
-          HUWTWCWDWEWFAUVCURZUUOUWEUXAUWEUWMAUWMUVCUIVLUXAUWCUWHUWDJAUVCUWCUWHU
-          OZAUVAYSUUHIULZUUAUVOUOZUPZOEUQZUVCUXBUPZUHUGUXEUXGOUUIEONVCZUXCUVCUX
-          DUXBYSUUIUUHIVMUXHUUAUWCUVOUWHYSUUIGVRYSUUILVRVNVOVPVBVQWTWFUXAUUJXBZ
-          UWSAUVCUUJURXBZUPUXAUXIUPAEIXCZUVAUUTUXJAUVEUXKUVFEIXDVIUHUEEUUIUUHIX
-          EVKAUVCUUJXFXGUXIUUMUWCUUNUWDJUXIUUKUUIGUUJUUHUUIXHZWCUXIUUKUUIHUXLWC
-          WDVIWFXIXMAUXEUVQURZOEUQZUURAUXFUVRUXNUGUJUXEUVQOEXJXKUXNUXCUVNURZUUC
-          UPZOEUQZAUURUXMUXPOEUXMUXOUXDUVPURZUPUXPUXCUXDUVNUVPXLUXRUUCUXOUUAUVO
-          UUBXNXOVIXPAUVEUUTUVAWGZUXQUURUPAUVEUUTUVAUVFUEUHWNUXSUXPUUQOEUXSYSEV
-          AZURZUUPUXOUUCUYAUUPUXOUYAUVEUXTUUTUVAUUPUXOWAUVEUUTUVAUXTXQUXSUXTYCU
-          VEUUTUVAUXTXRUVEUUTUVAUXTXSYSUUHUUIIEXTYAYBYDYEVIYFYGYMUUFUUSUKUUKEYO
-          UUKUOZYRUUOUUEUURUYBYPUUMYQUUNJYOUUKGVRYOUUKHVRWDUYBUUDUUQOEUYBYTUUPU
-          UCYOUUKYSIYHYNYIYJYKVBABCDEFGHIJKUKOPQRTUCUDYLWF $.
+        $( Lemma for ~ Owemapso .  Transitivity. $)
+        wemapso2 $p |- ( ph -> P T Q ) $=
+          ( vd wbr cv cfv wceq wi wral wrex cif wcel ifcl syl2anc weq w3o solin
+          wa wor syl12anc adantr breq1 fveq2 eqeq12d imbi12d rcla4va breqtrd wb
+          imp iftrue fveq2d breq12d adantl mpbird wpo w3a wf cvv cmap co elmapi
+          ffvelrn 3jca syl5ibcom potr syl22anc ifeq1 ifid syl6eq eqbrtrd wn syl
+          sopo po2nr nan mpbi iffalse 3jaodan mpdan r19.26 sylanbrc prth ralimi
+          eqtr syl6 simpl1 simpr simpl2 simpl3 soltmin syl13anc biimpd ralimdva
+          imim1d syl2im mpd breq2 imbi1d ralbidv anbi12d rcla4ev wemapso1 ) AHI
+          LUKZUJULZHUMZYKIUMZKUKZPULZYKJUKZYOHUMZYOIUMZUNZUOZPFUPZVEZUJFUQZANUL
+          ZOULZJUKZUUDUUEURZFUSZUUGHUMZUUGIUMZKUKZYOUUGJUKZYSUOZPFUPZUUCAUUDFUS
+          ZUUEFUSZUUHUDUGUUFUUDUUEFUTVAAUUFNOVBZUUEUUDJUKZVCZUUKAFJVFZUUOUUPUUS
+          UBUDUGFUUDUUEJVDVGAUUFUUKUUQUURAUUFVEZUUKUUDHUMZUUDIUMZKUKZUVAUVBUUDM
+          UMZUVCKAUVBUVEKUKZUUFUEVHAUUFUVEUVCUNZAUUOYOUUEJUKZYOMUMZYRUNZUOZPFUP
+          ZUUFUVGUOZUDUIUVKUVMPUUDFPNVBZUVHUUFUVJUVGYOUUDUUEJVIUVNUVIUVEYRUVCYO
+          UUDMVJYOUUDIVJVKVLVMVAVPVNUUFUUKUVDVOAUUFUUIUVBUUJUVCKUUFUUGUUDHUUFUU
+          DUUEVQZVRUUFUUGUUDIUVOVRVSVTWAAUUQVEZUUKUUEHUMZUUEIUMZKUKZUVPGKWBZUVQ
+          GUSZUUEMUMZGUSZUVRGUSZWCZUVQUWBKUKZUWBUVRKUKZUVSAUVTUUQUCVHAUWEUUQAUW
+          AUWCUWDAFGHWDZUUPUWAAFWEUSZHGFWFWGZUSZUWHRSHGFWHVAUGFGUUEHWIVAAFGMWDZ
+          UUPUWCAUWIMUWJUSUWLRTMGFWHVAUGFGUUEMWIVAAFGIWDZUUPUWDAUWIIUWJUSZUWMRU
+          AIGFWHVAUGFGUUEIWIVAWJVHAUUQUWFAUVFUUQUWFUEUUQUVBUVQUVEUWBKUUDUUEHVJU
+          UDUUEMVJVSWKVPAUWGUUQUHVHUVTUWEVEUWFUWGVEUVSGUVQUWBUVRKWLVPWMUUQUUKUV
+          SVOZAUUQUUIUVQUUJUVRKUUQUUGUUEHUUQUUGUUFUUEUUEURUUEUUFUUDUUEUUEWNUUFU
+          UEWOWPZVRUUQUUGUUEIUWPVRVSVTWAAUURVEZUUKUVSUWQUVQUWBUVRKAUURUVQUWBUNZ
+          AUUPYOUUDJUKZYQUVIUNZUOZPFUPZUURUWRUOZUGUFUXAUXCPUUEFPOVBZUWSUURUWTUW
+          RYOUUEUUDJVIUXDYQUVQUVIUWBYOUUEHVJYOUUEMVJVKVLVMVAVPAUWGUURUHVHWQUWQU
+          UFWRZUWOAUURUUFVEWRZUOUWQUXEUOAFJWBZUUPUUOUXFAUUTUXGUBFJWTWSUGUDFUUEU
+          UDJXAVGAUURUUFXBXCUXEUUIUVQUUJUVRKUXEUUGUUEHUUFUUDUUEXDZVRUXEUUGUUEIU
+          XHVRVSWSWAXEXFAUXAUVKVEZPFUPZUUNAUXBUVLUXJUFUIUXAUVKPFXGXHAUUTUUOUUPW
+          CZUXJUWSUVHVEZYSUOZPFUPUUNAUUTUUOUUPUBUDUGWJUXIUXMPFUXIUXLUWTUVJVEYSU
+          WSUWTUVHUVJXIYQUVIYRXKXLXJUXKUXMUUMPFUXKYOFUSZVEZUULUXLYSUXOUULUXLUXO
+          UUTUXNUUOUUPUULUXLVOUUTUUOUUPUXNXMUXKUXNXNUUTUUOUUPUXNXOUUTUUOUUPUXNX
+          PYOUUDUUEJFXQXRXSYAXTYBYCUUBUUKUUNVEUJUUGFYKUUGUNZYNUUKUUAUUNUXPYLUUI
+          YMUUJKYKUUGHVJYKUUGIVJVSUXPYTUUMPFUXPYPUULYSYKUUGYOJYDYEYFYGYHVGAUWKU
+          WNYJUUCVOSUABCDEFHIJKLUWJUWJUJPQYIVAWA $.
           $( [17-Jan-2015] $)
       $}
 
       $d ph a b c $.
-
+      wemapso3.px $e |- ( ph -> P T X ) $.
+      wemapso3.xq $e |- ( ph -> X T Q ) $.
       $( Lemma for ~ wemapso .  Transitivity. $)
       wemapso3 $p |- ( ph -> P T Q ) $=
-        ( vb vc va cv cfv wbr wceq wi wral wa wrex wemapso1 mpbid wcel ad2antrr
-        cvv cmap co wwe wor simplrl simp2rl 3expa simprr simprl simprrl simprrr
-        ad2antlr wemapso4 expr rexlimdva mpd ) AUBUEZLUFVNHUFJUGZUCUEZVNIUGVPLU
-        FZVPHUFUHUIUCEUJZUKZUBEULZGHKUGZALHKUGZVTSABCDEFLHIJKUBUCMNPQTUAUMUNAUD
-        UEZGUFWCLUFJUGZVPWCIUGVPGUFVQUHUIUCEUJZUKZUDEULZVTWAUIZAGLKUGZWGRABCDEF
-        GLIJKUDUCMNOPTUAUMUNAWFWHUDEAWCEUOZWFWHAWJWFUKZUKZVSWAUBEWLVNEUOZVSWAWL
-        WMVSUKZUKBCDEFGHIJKLUDUBUCMAEUQUOWKWNNUPAGFEURUSZUOWKWNOUPALWOUOWKWNPUP
-        AHWOUOWKWNQUPAWIWKWNRUPAWBWKWNSUPAEIUTWKWNTUPAFJVAWKWNUAUPAWJWFWNVBAWKW
-        NWDWDWEWJAWNVCVDWKWEAWNWJWDWEVEVIWLWMVSVFWLWMVOVRVGWLWMVOVRVHVJVKVLVKVL
-        VMVM $.
+        ( va vc vb cv cfv wceq wi wral wa wrex cmap co wcel wb wemapso1 syl2anc
+        wbr mpbid cvv ad2antrr wor simplrl simp2rl 3expa simprr ad2antlr simprl
+        wpo simprrl simprrr wemapso2 expr rexlimdva mp2d ) AUCUFZHUGVQMUGKUSZUD
+        UFZVQJUSVSHUGVSMUGZUHUIUDFUJZUKZUCFULZUEUFZMUGWDIUGKUSZVSWDJUSVTVSIUGUH
+        UIUDFUJZUKZUEFULZHILUSZAHMLUSZWCUAAHGFUMUNZUOZMWKUOZWJWCUPPQBCDEFHMJKLW
+        KWKUCUDNUQURUTAMILUSZWHUBAWMIWKUOZWNWHUPQRBCDEFMIJKLWKWKUEUDNUQURUTAWBW
+        HWIUIZUCFAVQFUOZWBWPAWQWBUKZUKZWGWIUEFWSWDFUOZWGWIWSWTWGUKZUKBCDEFGHIJK
+        LMUCUEUDNAFVAUOWRXAOVBAWLWRXAPVBAWMWRXAQVBAWOWRXARVBAFJVCWRXASVBAGKVJWR
+        XATVBAWQWBXAVDAWRXAVRVRWAWQAXAVEVFWRWAAXAWQVRWAVGVHWSWTWGVIWSWTWEWFVKWS
+        WTWEWFVLVMVNVOVNVOVP $.
         $( [17-Jan-2015] $)
     $}
 
     $( Construct lexicographic order on a function space based on a
+       well-ordering of the indexes and a total ordering of the values.
+
+       Without totality on the values or least differing indexes, the best we
+       can prove here is a partial order. $)
+    wemappo $p |- ( ( A e. V /\ R Or A /\ S Po B ) -> T Po ( B ^m A ) ) $=
+      ( va vb vc wcel cvv wpo cv wa wbr wor cmap co elex w3a cfv wceq wral wrex
+      wi wn simpll3 wf elmapi 3ad2antl1 ffvelrn sylan poirr syl2anc intnanrd wb
+      nrexdv vex wemapso1 mp2an sylnibr simpll1 simplr1 simplr2 simplr3 simpll2
+      simprl simprr wemapso3 ex ispod syl3an1 ) EJOEPOZEGUAZFHQZFEUBUCZIQEJUDVR
+      VSVTUEZLMNWAIWBLRZWAOZSZMRZWCUFZWGHTZNRZWFGTWIWCUFZWJUGUJNEUHZSZMEUIZWCWC
+      ITZWEWLMEWEWFEOZSZWHWKWPVTWGFOZWHUKVRVSVTWDWOULWEEFWCUMZWOWQVRVSWDWRVTWCF
+      EUNUOEFWFWCUPUQFWGHURUSUTVBWCPOZWSWNWMVALVCZWTABCDEWCWCGHIPPMNKVDVEVFWBWD
+      WFWAOZWIWAOZUEZSZWCWFITZWFWIITZSZWCWIITXDXGSABCDEFWCWIGHIWFKVRVSVTXCXGVGW
+      DXAXBWBXGVHWDXAXBWBXGVIWDXAXBWBXGVJVRVSVTXCXGVKVRVSVTXCXGULXDXEXFVLXDXEXF
+      VMVNVOVPVQ $.
+      $( [18-Jan-2015] $)
+
+    $( Construct lexicographic order on a function space based on a
        well-ordering of the indexes and a total ordering of the values. $)
     wemapso $p |- ( ( A e. V /\ R We A /\ S Or B ) -> T Or ( B ^m A ) ) $=
-      ( va vb vc wcel wor w3a cv wbr wral wa cvv wwe cmap co elex wpo weq wn wi
-      simpll1 simplr1 simplr2 simplr3 simprl simprr simpll2 simpll3 wemapso3 ex
-      w3o jca ralrimivvva df-po sylibr df-so sylanbrc syl3an1 ) DINDUANZDFUBZEG
-      OZEDUCUDZHOZDIUEVHVIVJPZVKHUFZKQZLQZHRZKLUGVPVOHRUTLVKSKVKSVLVMVOVOHRUHZV
-      QVPMQZHRZTZVOVSHRZUIZTZMVKSLVKSKVKSVNVMWDKLMVKVKVKVMVOVKNZVPVKNZVSVKNZPZT
-      ZVRWC?WIWAWBWIWATABCDEVOVSFGHVPJVHVIVJWHWAUJWEWFWGVMWAUKWEWFWGVMWAULWEWFW
-      GVMWAUMWIVQVTUNWIVQVTUOVHVIVJWHWAUPVHVIVJWHWAUQURUSVAVBKLMVKHVCVD?KLVKHVE
-      VFVG $.
+      ( vc vd wcel cvv wa wo cfv wceq wi va wwe wor cmap elex w3a wpo weso sopo
+      vb co wemappo syl3an cv weq wbr w3o wn wne df-ne wral wrex cdm wfr wss c0
+      cdif difss dmss ax-mp wfn simpl1 simprll elmapi syl2anc ffn fndm syl5sseq
+      syl ssexg simpl2 wefr simprr simprlr fndmdifeq0 necon3bid mpbird syl22anc
+      wf fri crab fndmdif eleq2d necom bitri fveq2 eqeq12d notbid syl5bb syl6bb
+      wb elrab imbi1d impexp con34b imbi2i bitr4i ralbidv2 anass rexbidv2 mpbid
+      anbi12d simpll3 ffvelrn sylan sotrieq con2bid biimprd syl12anc anim1d mpd
+      reximdva vex mp2an orbi12i r19.43 andir eqcom ralbii anbi2i orbi2i bitr2i
+      wemapso1 rexbii 3bitr2i sylibr expr syl5bir orrd 3orrot 3orass syl3an1
+      sylib issod ) EJNEONZEGUBZFHUCZFEUDUKZIUCEJUEUUEUUFUUGUFZUAUJUUHIUUEUUEUU
+      FEGUCUUGFHUGUUHIUGEOUEEGUHFHUIABCDEFGHIOKULUMUUIUAUNZUUHNZUJUNZUUHNZPZPZU
+      AUJUOZUULUUJIUPZUUJUULIUPZQZQZUURUUPUUQUQZUUOUUPUUSUUPURUUJUULUSZUUOUUSUU
+      JUULUTUUIUUNUVBUUSUUIUUNUVBPZPZLUNZUULRZUVEUUJRZHUPZUVGUVFHUPZQZMUNZUVEGU
+      PZUVKUULRZUVKUUJRZSZTZMEVAZPZLEVBZUUSUVDUVFUVGSZURZUVQPZLEVBZUVSUVDUVLURZ
+      MUUJUULVGZVCZVAZLUWFVBZUWCUVDUWFONZEGVDZUWFEVEZUWFVFUSZUWHUVDUWKUUEUWIUVD
+      UUJVCZUWFEUWEUUJVEUWFUWMVEUUJUULVHUWEUUJVIVJUVDUUJEVKZUWMESUVDEFUUJWIZUWN
+      UVDUUEUUKUWOUUEUUFUUGUVCVLZUUIUUKUUMUVBVMUUJFEVNVOZEFUUJVPVSZEUUJVQVSVRZU
+      WPUWFEOVTVOUVDUUFUWJUUEUUFUUGUVCWAEGWBVSUWSUVDUWLUVBUUIUUNUVBWCUVDUWFVFUU
+      JUULUVDUWNUULEVKZUWFVFSUUPXAUWRUVDEFUULWIZUWTUVDUUEUUMUXAUWPUUIUUKUUMUVBW
+      DUULFEVNVOZEFUULVPVSZEUUJUULWEVOWFWGLMEUWFOGWJWHUVDUWGUWBLUWFEUVDUVEUWFNZ
+      UWGPUVEENZUWAPZUVQPUXEUWBPUVDUXDUXFUWGUVQUVDUXDUVEAUNZUUJRZUXGUULRZUSZAEW
+      KZNUXFUVDUWFUXKUVEUVDUWNUWTUWFUXKSUWRUXCAEUUJUULWLVOZWMUXJUWAAUVEEUXJUXIU
+      XHSZURZALUOZUWAUXJUXIUXHUSUXNUXHUXIWNUXIUXHUTWOZUXOUXMUVTUXOUXIUVFUXHUVGU
+      XGUVEUULWPUXGUVEUUJWPWQWRWSXBWTUVDUWDUVPMUWFEUVDUVKUWFNZUWDTUVKENZUVOURZP
+      ZUWDTZUXRUVPTZUVDUXQUXTUWDUVDUXQUVKUXKNUXTUVDUWFUXKUVKUXLWMUXJUXSAUVKEUXJ
+      UXNAMUOZUXSUXPUYCUXMUVOUYCUXIUVMUXHUVNUXGUVKUULWPUXGUVKUUJWPWQWRWSXBWTXCU
+      YAUXRUXSUWDTZTUYBUXRUXSUWDXDUVPUYDUXRUVLUVOXEXFXGWTXHXLUXEUWAUVQXIWTXJXKU
+      VDUWBUVRLEUVDUXEPZUWAUVJUVQUYEUUGUVFFNZUVGFNZUWAUVJTUUEUUFUUGUVCUXEXMUVDU
+      XAUXEUYFUXBEFUVEUULXNXOUVDUWOUXEUYGUWQEFUVEUUJXNXOUUGUYFUYGPPZUVJUWAUYHUV
+      TUVJFUVFUVGHXPXQXRXSXTYBYAUUSUVHUVQPZLEVBZUVIUVLUVNUVMSZTZMEVAZPZLEVBZQUY
+      IUYNQZLEVBUVSUUQUYJUURUYOUULONZUUJONZUUQUYJXAUJYCZUAYCZABCDEUULUUJGHIOOLM
+      KYMYDUYRUYQUURUYOXAUYTUYSABCDEUUJUULGHIOOLMKYMYDYEUYIUYNLEYFUYPUVRLEUVRUY
+      IUVIUVQPZQUYPUVHUVIUVQYGVUAUYNUYIUVQUYMUVIUVPUYLMEUVOUYKUVLUVMUVNYHXFYIYJ
+      YKYLYNYOYPYQYRYSUVAUUPUUQUURUQUUTUURUUPUUQYTUUPUUQUURUUAYLUUCUUDUUB $.
+      $( [18-Jan-2015] $)
   $}
 
   ${
