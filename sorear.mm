@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 9-Jan-2015 $)
+$[ set_clean.mm $] $( set.mm - Version of 9-Jan-2015/s[GrpIso][GrpOpIso] $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -8414,6 +8414,43 @@ $)
     GUQURT $.
     $( [19-Sep-2014] $)
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    More equivalents of the Axiom of Choice
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c CHOICE $.
+
+  $( Wff for an abbreviation of the axiom of choice. $)
+  wchoi $a wff CHOICE $.
+
+  ${
+    $d x y $.
+
+    $( The expression ` CHOICE ` will be used as a readable shorthand for any
+       form of the axiom of choice; all concrete forms are long, cryptic, have
+       dummy variables, or all three, making it useful to have a short name. $)
+    df-ac $a |- ( CHOICE <-> A. x E. y y We x ) $.
+  $}
+
+  ${
+    $d x y z $.
+    $( Axiom of Choice equivalent: every set is equinumerous to an ordinal. $)
+    dfac10 $p |- ( CHOICE <-> A. x E. y e. On y ~~ x ) $=
+      ( vz wchoi cv wwe wex wal cen wbr con0 wrex df-ac cvv wcel vex ween ax-mp
+      wb albii bitri ) DAEZCEFCGZAHBEUBIJBKLZAHACMUCUDAUBNOUCUDSAPBUBNCQRTUA $.
+      $( [17-Jan-2015] $)
+
+    $( Axiom of Choice equivalent: every set is equinumerous to an ordinal
+       (quantifier-free short cryptic version alluded to in ~ df-ac ). $)
+    dfac10b $p |- ( CHOICE <-> ( ~~ " On ) = _V ) $=
+      ( vy vx cv cen wbr con0 wrex wal cima wcel wchoi cvv wceq vex elima albii
+      bicomi dfac10 eqv 3bitr4i ) ACBCZDEAFGZBHUADFIZJZBHKUCLMUBUDBUDUBAUADFBNO
+      QPBARBUCST $.
+      $( [17-Jan-2015] $)
+  $}
+
   ${
     $d a b c d e f g h i j k l m $.  $d A a b c $.  $d B a b c $.
     $d C a b c $.
@@ -8521,14 +8558,387 @@ $)
 
     $( Tarski's theorem about choice: ~ infxpidm is equivalent to ~ ax-ac .
        (Contributed by Stefan O'Rear, 4-Nov-2014.) $)
-    ttac $p |- ( A. a E. b b We a <-> A. c ( om ~<_ c -> ( c X. c ) ~~ c ) ) $=
-      ( vd cv wwe wex wal cen wbr con0 wrex com cdom cxp cvv wcel vex alrimiv
-      wi wb ween ax-mp albii cfn wn weq breq2 rexbidv domnsym isfinite3 sylnibr
-      a4v csdm infxpidm2 ex syl2im ttaclem8 impbii bitri ) AEZBEFBGZAHDEZVAIJZD
-      KLZAHZMCEZNJZVGVGOVGIJZTZCHZVBVEAVAPQVBVEUAARDVAPBUBUCUDVFVKVFVJCVFVCVGIJ
-      ZDKLZVHVGUEQZUFZVIVEVMACACUGVDVLDKVAVGVCIUHUIUMVHVGMUNJVNMVGUJVGUKULVMVOV
-      IDVGCRUOUPUQSVKVEAADCURSUSUT $.
-      $( [4-Nov-2014] $)
+    ttac $p |- ( CHOICE <-> A. c ( om ~<_ c -> ( c X. c ) ~~ c ) ) $=
+      ( va vb wchoi wwe wex wal cen wbr con0 wrex com cdom cxp cvv wcel alrimiv
+      cv wi vex df-ac wb ween ax-mp albii cfn wn weq breq2 rexbidv csdm domnsym
+      a4v isfinite3 sylnibr infxpidm2 ex syl2im ttaclem8 impbii 3bitri ) DBRZAR
+      ZEAFZBGCRZVBHIZCJKZBGZLVCMIZVCVCNVCHIZSZAGZBAUAVDVGBVBOPVDVGUBBTCVBOAUCUD
+      UEVHVLVHVKAVHVEVCHIZCJKZVIVCUFPZUGZVJVGVNBABAUHVFVMCJVBVCVEHUIUJUMVIVCLUK
+      IVOLVCULVCUNUOVNVPVJCVCATUPUQURQVLVGBBCAUSQUTVA $.
+      $( [17-Jan-2015] $)
+  $}
+
+  $( No class is unequal to itself.  (Contributed by Stefan O'Rear,
+     1-Jan-2015.) $)
+  neirr $p |- -. A =/= A $=
+    ( wne wn wceq eqid nne mpbir ) AABCAADAEAAFG $.
+    $( [1-Jan-2015] $)
+
+  ${
+    $d ph z w $.  $d ps z w $.  $d x y z w $.
+    $( The difference of two ordered-pair abstractions. $)
+    difopab $p |- ( { <. x , y >. | ph } \ { <. x , y >. | ps } ) =
+        { <. x , y >. | ( ph /\ -. ps ) } $=
+      ( vz vw copab cdif wn wa wrel relopabOLD cv wcel wsb sban sbn sbbii bitri
+      opelopabsb reldif ax-mp cop anbi2i notbii anbi12i eldif 3bitr4i eqrelriiv
+      3bitr4ri ) EFACDGZBCDGZHZABIZJZCDGZUKKUMKACDLUKULUAUBUOCDLEMFMUCZUKNZUQUL
+      NZIZJZUOCEOZDFOZUQUMNUQUPNACEOZUNCEOZJZDFOZVDDFOZBCEOZDFOZIZJZVCVAVGVHVED
+      FOZJVLVDVEDFPVMVKVHVMVIIZDFOVKVEVNDFBCEQRVIDFQSUDSVBVFDFAUNCEPRURVHUTVKAC
+      DEFTUSVJBCDEFTUEUFUJUQUKULUGUOCDEFTUHUI $.
+      $( [17-Jan-2015] $)
+  $}
+
+  ${
+    $d F x y $.  $d G x y $.  $d A x y $.
+    $( Two ways to express the locus of differences between two functions. $)
+    fndmdif $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F \ G ) =
+          { x e. A | ( F ` x ) =/= ( G ` x ) } ) $=
+      ( vy wfn wa cdif cdm cv cfv wceq copab dffn5 biimpi wn wex cab wi annim
+      wcel wne crab adantr adantl difeq12d dmeqd difopab dmopab imdistan bicomi
+      dmeqi notbii anbi2i bitr2i 3bitri exbii 19.42v eqeq1 notbid ceqsexv df-ne
+      fvex bitr4i abbii df-rab eqtr4i 3eqtri syl6eq ) CBFZDBFZGZCDHZIAJZBUAZEJZ
+      VNCKZLZGZAEMZVOVPVNDKZLZGZAEMZHZIZVQWAUBZABUCZVLVMWEVLCVTDWDVJCVTLZVKVJWI
+      AEBCNOUDVKDWDLZVJVKWJAEBDNOUEUFUGWFVSWCPGZAEMZIWKEQZARZWHWEWLVSWCAEUHULWK
+      AEUIWNVOWGGZARWHWMWOAWMVOVRWBPZGZGZEQVOWQEQZGWOWKWREWKVSWCSZPVOVRWBSZSZPZ
+      WRVSWCTWTXBXBWTVOVRWBUJUKUMWRVOXAPZGXCWQXDVOVRWBTUNVOXATUOUPUQVOWQEURWSWG
+      VOWSVQWALZPZWGWPXFEVQVNCVCVRWBXEVPVQWAUSUTVAVQWAVBVDUNUPVEWGABVFVGVHVI $.
+      $( [17-Jan-2015] $)
+
+    $( The difference set between two functions is commutative. $)
+    fndmdifcom $p |- ( ( F Fn A /\ G Fn A ) ->
+        dom ( F \ G ) = dom ( G \ F ) ) $=
+      ( vx wfn wa cv cfv wne crab cdif cdm wb wcel necom rabbiia fndmdif ancoms
+      a1i wceq 3eqtr4a ) BAEZCAEZFDGZBHZUDCHZIZDAJUFUEIZDAJZBCKLCBKLZUGUHDAUGUH
+      MUDANUEUFOSPDABCQUCUBUJUITDACBQRUA $.
+      $( [17-Jan-2015] $)
+
+    $( The difference set of two functions is empty if and only if the
+       functions are equal. $)
+    fndmdifeq0 $p |- ( ( F Fn A /\ G Fn A ) ->
+        ( dom ( F \ G ) = (/) <-> F = G ) ) $=
+      ( vx wfn wa cv cfv wne crab c0 wceq wral cdif cdm wb wn rabeq0 nne ralbii
+      bitri a1i fndmdif eqeq1d eqfnfv2 3bitr4d ) BAECAEFZDGZBHZUHCHZIZDAJZKLZUI
+      UJLZDAMZBCNOZKLBCLUMUOPUGUMUKQZDAMUOUKDARUQUNDAUIUJSTUAUBUGUPULKDABCUCUDD
+      ABCUEUF $.
+      $( [17-Jan-2015] $)
+
+    $( Two ways to express the locus of equality between two functions. $)
+    fndmin $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F i^i G ) =
+          { x e. A | ( F ` x ) = ( G ` x ) } ) $=
+      ( vy wfn wa cin cdm wcel cfv wceq copab crab dffn5 biimpi syl6eq wex cab
+      cv ineqan12d inopab dmeqd 19.42v anandi exbii fvex ceqsexv anbi2i 3bitr3i
+      eqeq1 abbii dmopab df-rab 3eqtr4i ) CBFZDBFZGZCDHZIATZBJZETZUTCKZLZGZVAVB
+      UTDKZLZGZGZAEMZIZVCVFLZABNZURUSVJURUSVEAEMZVHAEMZHVJUPUQCVNDVOUPCVNLAEBCO
+      PUQDVOLAEBDOPUAVEVHAEUBQUCVIERZASVAVLGZASVKVMVPVQAVAVDVGGZGZERVAVRERZGVPV
+      QVAVREUDVSVIEVAVDVGUEUFVTVLVAVGVLEVCUTCUGVBVCVFUKUHUIUJULVIAEUMVLABUNUOQ
+      $.
+      $( [17-Jan-2015] $)
+  $}
+
+  ${
+    $( Express "less than or equals" for general strict orders. $)
+    poleloe $p |- ( B e. V -> ( A ( R u. _I ) B <-> ( A R B \/ A = B ) ) ) $=
+      ( cid cun wbr wo wcel wceq brun ideqg orbi2d syl5bb ) ABCEFGABCGZABEGZHBD
+      IZOABJZHABCEKQPROABDLMN $.
+      $( [17-Jan-2015] $)
+
+    $( Transitive law for general strict orders. $)
+    poltletr $p |- ( ( R Po X /\ ( A e. X /\ B e. X /\ C e. X ) ) ->
+        ( ( A R B /\ B ( R u. _I ) C ) -> A R C ) ) $=
+      ( wpo wcel w3a wa wbr cid wceq wo wb poleloe 3ad2ant3 adantl anbi2d com12
+      cun wi potr breq2 biimpac a1d jaodan sylbid ) EDFZAEGZBEGZCEGZHZIZABDJZBC
+      DKTJZIUNBCDJZBCLZMZIZACDJZUMUOURUNULUOURNZUHUKUIVAUJBCDEOPQRUSUMUTUNUPUMU
+      TUAUQUMUNUPIUTEABCDUBSUNUQIUTUMUQUNUTBCADUCUDUEUFSUG $.
+      $( [17-Jan-2015] $)
+
+    $( Property of a minimum in a strict order. $)
+    somin1 $p |- ( ( R Or X /\ ( A e. X /\ B e. X ) ) ->
+        if ( A R B , A , B ) ( R u. _I ) A ) $=
+      ( wor wcel wa wbr cif cid cun wceq wo iftrue olcd adantl wn sotric mpbird
+      wb orcom eqcom orbi2i bitri notbii syl6bb con2bid biimpar iffalse orbi12d
+      breq1 eqeq1 syl pm2.61dan poleloe ad2antrl ) DCEZADFZBDFZGGZABCHZABIZACJK
+      HZVBACHZVBALZMZUTVAVFVAVFUTVAVEVDVAABNOPUTVAQZGVFBACHZBALZMZUTVJVGUTVAVJU
+      TVAABLZVHMZQVJQDABCRVLVJVLVHVKMVJVKVHUAVKVIVHABUBUCUDUEUFUGUHVGVFVJTZUTVG
+      VBBLZVMVAABUIVNVDVHVEVIVBBACUKVBBAULUJUMPSUNURVCVFTUQUSVBACDUOUPS $.
+      $( [17-Jan-2015] $)
+
+    $( Commutativity of minimum in a total order. $)
+    somincom $p |- ( ( R Or X /\ ( A e. X /\ B e. X ) ) ->
+        if ( A R B , A , B ) = if ( B R A , B , A ) ) $=
+      ( wor wcel wa wbr cif wceq iftrue adantl wn so2nr nan mpbi iffalse eqcomd
+      wi eqtrd syl sotric con2bid ifeq2 ifid syl6req jaoi syl6bir imp pm2.61dan
+      wo ) DCEADFBDFGGZABCHZUMABIZBACHZBAIZJULUMGZUNAUPUMUNAJULUMABKLUQUPAUQUOM
+      ZUPAJULUMUOGMSUQURSDABCNULUMUOOPUOBAQUARTULUMMZGUNBUPUSUNBJULUMABQLULUSBU
+      PJZULUSABJZUOUKZUTULUMVBDABCUBUCVAUTUOVAUPUOBBIBUOABBUDUOBUEUFUOUPBUOBAKR
+      UGUHUITUJ $.
+      $( [17-Jan-2015] $)
+
+    $( Property of a minimum in a strict order. $)
+    somin2 $p |- ( ( R Or X /\ ( A e. X /\ B e. X ) ) ->
+        if ( A R B , A , B ) ( R u. _I ) B ) $=
+      ( wor wcel wa wbr cif cid cun somin1 ancom2s somincom breq1d mpbird ) DCE
+      ZADFZBDFZGGZABCHABIZBCJKZHBACHBAIZBUBHZQSRUDBACDLMTUAUCBUBABCDNOP $.
+      $( [17-Jan-2015] $)
+
+    $( Being less than a minimum, for a general total order. $)
+    soltmin $p |- ( ( R Or X /\ ( A e. X /\ B e. X /\ C e. X ) ) ->
+        ( A R if ( B R C , B , C ) <-> ( A R B /\ A R C ) ) ) $=
+      ( wor wcel w3a wa wbr cif wpo cid cun 3jca syl12anc poltletr imp syl22anc
+      breq2 ad2antrr simplr1 simplr2 simplr3 syl2anc simpr simpll somin1 somin2
+      sopo ifcl jca ex ifboth impbid1 ) EDFZAEGZBEGZCEGZHZIZABCDJZBCKZDJZABDJZA
+      CDJZIZVAVDVGVAVDIZVEVFVHEDLZUQVCEGZURHZVDVCBDMNZJZVEUPVIUTVDEDUJUAZVHUQVJ
+      URUQURUSUPVDUBZVHURUSVJUQURUSUPVDUCZUQURUSUPVDUDZVBBCEUKUEZVPOVAVDUFZVHUP
+      URUSVMUPUTVDUGZVPVQBCDEUHPVIVKIVDVMIVEAVCBDEQRSVHVIUQVJUSHZVDVCCVLJZVFVNV
+      HUQVJUSVOVRVQOVSVHUPURUSWBVTVPVQBCDEUIPVIWAIVDWBIVFAVCCDEQRSULUMVBVEVFVDB
+      CBVCADTCVCADTUNUO $.
+      $( [17-Jan-2015] $)
+  $}
+
+  ${
+    $( A nonempty subset of a well-ordered set contains its infimum. $)
+    weinfmcl $p |- ( ( R We A /\ B C_ A /\ B =/= (/) ) ->
+        sup ( B , A , `' R ) e. B ) $=
+      ? $.
+
+    $( No element of a subset of a well-ordered set is less than the infimum. $)
+    weinfmnlt $p |- ( ( R We A /\ B C_ A /\ X e. B ) ->
+        -. X R sup ( B , A , `' R ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d A x y z a b c d $.  $d R x y z a b c d $.  $d S x y z a b c d $.
+    $d P x y z a b c d $.  $d Q x y z a b c d $.  $d B a b c d $.
+    $d X x y z a b c d $.  $d T a b c d $.
+    wemapso.t $e |- T = { <. x , y >. | ( x =/= y /\
+        [ sup ( dom ( x \ y ) , A , `' R ) / z ] ( x ` z ) S ( y ` z ) ) } $.
+
+    ${
+      wemapso1.a $e |- ( ph -> A e. _V ) $.
+      wemapso1.p $e |- ( ph -> P e. ( B ^m A ) ) $.
+      wemapso1.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
+      wemapso1.r $e |- ( ph -> R We A ) $.
+      wemapso1.s $e |- ( ph -> S Or B ) $.
+      $( Value of the lexicographic order on a sequence space. $)
+      wemapso1 $p |- ( ph -> ( P T Q <-> E. a e. A ( ( P ` a ) S ( Q ` a ) /\
+          A. b e. A ( b R a -> ( P ` b ) = ( Q ` b ) ) ) ) ) $=
+        ? $.
+    $}
+
+    ${
+      wemapso2.p $e |- ( ph -> P e. ( B ^m A ) ) $.
+      wemapso2.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
+      wemapso2.x $e |- ( ph -> X e. A ) $.
+      wemapso2.o1 $e |- ( ( ph /\ a e. A /\ a R X ) ->
+          ( P ` a ) = ( Q ` a ) ) $.
+      wemapso2.o2 $e |- ( ph -> ( P ` X ) S ( Q ` X ) ) $.
+      wemapso2.r $e |- ( ph -> R We A ) $.
+      wemapso2.s $e |- ( ph -> S Or B ) $.
+      $( Infer ordering of two sequences from a point of difference. $)
+      wemapso2 $p |- ( ph -> P T Q ) $=
+        ? $.
+    $}
+
+    ${
+      $d ph d $.
+      wemapso3.a $e |- ( ph -> A e. _V ) $.
+      wemapso3.p $e |- ( ph -> P e. ( B ^m A ) ) $.
+      wemapso3.x $e |- ( ph -> X e. ( B ^m A ) ) $.
+      wemapso3.q $e |- ( ph -> Q e. ( B ^m A ) ) $.
+      wemapso3.px $e |- ( ph -> P T X ) $.
+      wemapso3.xq $e |- ( ph -> X T Q ) $.
+      wemapso3.r $e |- ( ph -> R We A ) $.
+      wemapso3.s $e |- ( ph -> S Or B ) $.
+      ${
+        wemapso4.px1 $e |- ( ph -> a e. A ) $.
+        wemapso4.px2 $e |- ( ph -> ( P ` a ) S ( X ` a ) ) $.
+        wemapso4.px3 $e |- ( ph -> A. c e. A ( c R a ->
+            ( P ` c ) = ( X ` c ) ) ) $.
+        wemapso4.xq1 $e |- ( ph -> b e. A ) $.
+        wemapso4.xq2 $e |- ( ph -> ( X ` b ) S ( Q ` b ) ) $.
+        wemapso4.xq3 $e |- ( ph -> A. c e. A ( c R b ->
+            ( X ` c ) = ( Q ` c ) ) ) $.
+        $( Lemma for ~ wemapso .  Transitivity. $)
+        wemapso4 $p |- ( ph -> P T Q ) $=
+          ( vd wbr cv cfv wceq wi wral wa wrex cif wcel syl2anc weq w3o wor wwe
+          ifcl weso syl solin syl12anc adantr breq1 eqeq12d imbi12d rcla4va imp
+          fveq2 breq2d mpbid wb iftrue fveq2d breq12d adantl mpbird w3a wf cmap
+          cvv co elmapi ffvelrn 3jca syl5ibcom sotr syl22anc ifid syl6eq breq1d
+          ifeq1 wn wpo sopo po2nr nan mpbi iffalse 3jaodan r19.26 sylanbrc prth
+          mpdan eqtr imim2i ralimi simpl1 simpl2 simpl3 soltmin syl13anc biimpd
+          simpr imim1d ralimdva syl5 mpd breq2 ralbidv anbi12d rcla4ev wemapso1
+          jca imbi1d ) AGHKULUKUMZGUNZYOHUNZJULZOUMZYOIULZYSGUNZYSHUNZUOZUPZOEU
+          QZURZUKEUSZAMUMZNUMZIULZUUHUUIUTZEVAZUUKGUNZUUKHUNZJULZYSUUKIULZUUCUP
+          ZOEUQZURZUUGAUUHEVAZUUIEVAZUULUEUHUUJUUHUUIEVGVBAUUOUURAUUJMNVCZUUIUU
+          HIULZVDZUUOAEIVEZUUTUVAUVDAEIVFUVEUCEIVHVIZUEUHEUUHUUIIVJVKAUUJUUOUVB
+          UVCAUUJURZUUOUUHGUNZUUHHUNZJULZUVGUVHUUHLUNZJULZUVJAUVLUUJUFVLUVGUVKU
+          VIUVHJAUUJUVKUVIUOZAUUTYSUUIIULZYSLUNZUUBUOZUPZOEUQZUUJUVMUPZUEUJUVQU
+          VSOUUHEOMVCZUVNUUJUVPUVMYSUUHUUIIVMUVTUVOUVKUUBUVIYSUUHLVRYSUUHHVRVNV
+          OVPVBVQVSVTUUJUUOUVJWAAUUJUUMUVHUUNUVIJUUJUUKUUHGUUJUUHUUIWBZWCUUJUUK
+          UUHHUWAWCWDWEWFAUVBURZUUOUUIGUNZUUIHUNZJULZUWBFJVEZUWCFVAZUUILUNZFVAZ
+          UWDFVAZWGZUWCUWHJULZUWHUWDJULZUWEAUWFUVBUDVLAUWKUVBAUWGUWIUWJAEFGWHZU
+          VAUWGAEWJVAZGFEWIWKZVAUWNQRGFEWLVBUHEFUUIGWMVBAEFLWHZUVAUWIAUWOLUWPVA
+          UWQQSLFEWLVBUHEFUUILWMVBAEFHWHZUVAUWJAUWOHUWPVAUWRQTHFEWLVBUHEFUUIHWM
+          VBWNVLAUVBUWLAUVLUVBUWLUFUVBUVHUWCUVKUWHJUUHUUIGVRUUHUUILVRWDWOVQAUWM
+          UVBUIVLUWFUWKURUWLUWMURUWEFUWCUWHUWDJWPVQWQUVBUUOUWEWAZAUVBUUMUWCUUNU
+          WDJUVBUUKUUIGUVBUUKUUJUUIUUIUTUUIUUJUUHUUIUUIXAUUJUUIWRWSZWCUVBUUKUUI
+          HUWTWCWDWEWFAUVCURZUUOUWEUXAUWEUWMAUWMUVCUIVLUXAUWCUWHUWDJAUVCUWCUWHU
+          OZAUVAYSUUHIULZUUAUVOUOZUPZOEUQZUVCUXBUPZUHUGUXEUXGOUUIEONVCZUXCUVCUX
+          DUXBYSUUIUUHIVMUXHUUAUWCUVOUWHYSUUIGVRYSUUILVRVNVOVPVBVQWTWFUXAUUJXBZ
+          UWSAUVCUUJURXBZUPUXAUXIUPAEIXCZUVAUUTUXJAUVEUXKUVFEIXDVIUHUEEUUIUUHIX
+          EVKAUVCUUJXFXGUXIUUMUWCUUNUWDJUXIUUKUUIGUUJUUHUUIXHZWCUXIUUKUUIHUXLWC
+          WDVIWFXIXMAUXEUVQURZOEUQZUURAUXFUVRUXNUGUJUXEUVQOEXJXKUXNUXCUVNURZUUC
+          UPZOEUQZAUURUXMUXPOEUXMUXOUXDUVPURZUPUXPUXCUXDUVNUVPXLUXRUUCUXOUUAUVO
+          UUBXNXOVIXPAUVEUUTUVAWGZUXQUURUPAUVEUUTUVAUVFUEUHWNUXSUXPUUQOEUXSYSEV
+          AZURZUUPUXOUUCUYAUUPUXOUYAUVEUXTUUTUVAUUPUXOWAUVEUUTUVAUXTXQUXSUXTYCU
+          VEUUTUVAUXTXRUVEUUTUVAUXTXSYSUUHUUIIEXTYAYBYDYEVIYFYGYMUUFUUSUKUUKEYO
+          UUKUOZYRUUOUUEUURUYBYPUUMYQUUNJYOUUKGVRYOUUKHVRWDUYBUUDUUQOEUYBYTUUPU
+          UCYOUUKYSIYHYNYIYJYKVBABCDEFGHIJKUKOPQRTUCUDYLWF $.
+          $( [17-Jan-2015] $)
+      $}
+
+      $d ph a b c $.
+
+      $( Lemma for ~ wemapso .  Transitivity. $)
+      wemapso3 $p |- ( ph -> P T Q ) $=
+        ( vb vc va cv cfv wbr wceq wi wral wa wrex wemapso1 mpbid wcel ad2antrr
+        cvv cmap co wwe wor simplrl simp2rl 3expa simprr simprl simprrl simprrr
+        ad2antlr wemapso4 expr rexlimdva mpd ) AUBUEZLUFVNHUFJUGZUCUEZVNIUGVPLU
+        FZVPHUFUHUIUCEUJZUKZUBEULZGHKUGZALHKUGZVTSABCDEFLHIJKUBUCMNPQTUAUMUNAUD
+        UEZGUFWCLUFJUGZVPWCIUGVPGUFVQUHUIUCEUJZUKZUDEULZVTWAUIZAGLKUGZWGRABCDEF
+        GLIJKUDUCMNOPTUAUMUNAWFWHUDEAWCEUOZWFWHAWJWFUKZUKZVSWAUBEWLVNEUOZVSWAWL
+        WMVSUKZUKBCDEFGHIJKLUDUBUCMAEUQUOWKWNNUPAGFEURUSZUOWKWNOUPALWOUOWKWNPUP
+        AHWOUOWKWNQUPAWIWKWNRUPAWBWKWNSUPAEIUTWKWNTUPAFJVAWKWNUAUPAWJWFWNVBAWKW
+        NWDWDWEWJAWNVCVDWKWEAWNWJWDWEVEVIWLWMVSVFWLWMVOVRVGWLWMVOVRVHVJVKVLVKVL
+        VMVM $.
+        $( [17-Jan-2015] $)
+    $}
+
+    $( Construct lexicographic order on a function space based on a
+       well-ordering of the indexes and a total ordering of the values. $)
+    wemapso $p |- ( ( A e. V /\ R We A /\ S Or B ) -> T Or ( B ^m A ) ) $=
+      ( va vb vc wcel wor w3a cv wbr wral wa cvv wwe cmap co elex wpo weq wn wi
+      simpll1 simplr1 simplr2 simplr3 simprl simprr simpll2 simpll3 wemapso3 ex
+      w3o jca ralrimivvva df-po sylibr df-so sylanbrc syl3an1 ) DINDUANZDFUBZEG
+      OZEDUCUDZHOZDIUEVHVIVJPZVKHUFZKQZLQZHRZKLUGVPVOHRUTLVKSKVKSVLVMVOVOHRUHZV
+      QVPMQZHRZTZVOVSHRZUIZTZMVKSLVKSKVKSVNVMWDKLMVKVKVKVMVOVKNZVPVKNZVSVKNZPZT
+      ZVRWC?WIWAWBWIWATABCDEVOVSFGHVPJVHVIVJWHWAUJWEWFWGVMWAUKWEWFWGVMWAULWEWFW
+      GVMWAUMWIVQVTUNWIVQVTUOVHVIVJWHWAUPVHVIVJWHWAUQURUSVAVBKLMVKHVCVD?KLVKHVE
+      VFVG $.
+  $}
+
+  ${
+    $d S x y a b c $.  $d R x y a b c $.  $d A x y a b c $.  $d p x y $.
+    $d q x y $.
+    wepwso.s $e |- S = { <. x , y >. | ( ( x C_ A /\ y C_ A ) /\ ( x =/= y /\
+        sup ( ( ( x \ y ) u. ( y \ x ) ) , A , `' R ) e. y ) ) } $.
+    $( Lemma for ~ wepwso . $)
+    wepwsoval $p |- ( ( p C_ A /\ q C_ A ) -> ( p S q <-> ( p =/= q /\
+        sup ( ( ( p \ q ) u. ( q \ p ) ) , A , `' R ) e. q ) ) ) $=
+      ( cv wss wa wne cdif cun csup wcel vex weq sseq1 difeq12 ccnv simpl simpr
+      bi2anan9 neeq12d wceq ancoms uneq12d supeq1d eleq12d anbi12d braba baib
+      wbr ) GIZFIZEUNUOCJZUPCJZKZUOUPLZUOUPMZUPUOMZNZCDUAZOZUPPZKZAIZCJZBIZCJZK
+      ZVHVJLZVHVJMZVJVHMZNZCVDOZVJPZKZKUSVGKABUOUPEGQFQAGRZBFRZKZVLUSVSVGVTVIUQ
+      WAVKURVHUOCSVJUPCSUDWBVMUTVRVFWBVHUOVJUPVTWAUBVTWAUCZUEWBVQVEVJUPWBCVPVCV
+      DWBVNVAVOVBVHUOVJUPTWAVTVOVBUFVJUPVHUOTUGUHUIWCUJUKUKHULUM $.
+      $( [17-Jan-2015] $)
+
+    $( A well-ordering induces a strict ordering on the power set. $)
+    wepwso $p |- ( R We A -> S Or ~P A ) $=
+      ( va vb vc cv wbr wral wa wcel wss vex elpw cun wb wo wwe cpw wpo weq w3o
+      wor wn w3a 3anbi123i wne cdif ccnv csup intnanr wepwsoval anidms 3ad2ant1
+      wi mtbiri adantl jca sylan2b ralrimivvva df-po sylibr anbi12i df-ne uncom
+      elun supeq1i eleq1i orbi2i bitri sylib ancoms orbi12d necom biimpi bicomd
+      ibar syl sylan9bb mpbird expr orrd 3orrot 3orass bitr2i sylanb ralrimivva
+      syl5bir df-so sylanbrc ) CDUAZCUBZEUCZGJZHJZEKZGHUDZWRWQEKZUEZHWOLGWOLWOE
+      UFWNWQWQEKZUGZWSWRIJZEKMWQXEEKURZMZIWOLHWOLGWOLWPWNXGGHIWOWOWOWQWONZWRWON
+      ZXEWONZUHWNWQCOZWRCOZXECOZUHZXGXHXKXIXLXJXMWQCGPQZWRCHPQZXECIPQUIWNXNMXDX
+      FXNXDWNXKXLXDXMXKXCWQWQUJZWQWQUKZXRRCDULZUMWQNZMZXQXT?UNXKXCYASABCDEGGFUO
+      UPUSUQUT?VAVBVCGHIWOEVDVEWNXBGHWOWOXHXIMZWNXBYBXKXLMZWNXBXHXKXIXLXOXPVFYC
+      WNMZWTXAWSTZTZXBYDWTYEWTUGWQWRUJZYDYEWQWRVGYCWNYGYEYCWNYGMZMZYEWRWQUKZWQW
+      RUKZRZCXSUMZWQNZYKYJRZCXSUMZWRNZTZYIYMWQWRRNZYR?YSYNYMWRNZTYRYMWQWRVIYTYQ
+      YNYMYPWRCYLYOXSYJYKVHVJVKVLVMVNYCYEWRWQUJZYNMZYGYQMZTZYHYRYCXAUUBWSUUCXLX
+      KXAUUBSABCDEGHFUOVOABCDEHGFUOVPYGUUDYRSWNYGYRUUDYGYNUUBYQUUCYGUUAYNUUBSYG
+      UUAWQWRVQVRUUAYNVTWAYGYQVTVPVSUTWBWCWDWKWEXBWTXAWSUEYFWSWTXAWFWTXAWSWGWHV
+      NWIVOWJGHWOEWLWM $.
+  $}
+
+  ${
+    dnnumch.f $e |- F = U. { f | E. x e. On ( f Fn x /\ A. y e. x ( f ` y ) = (
+        G ` ( f |` y ) ) ) } $.
+    dnnumch.g $e |- G = { <. f , y >. | y = ( g ` ( A \ ran f ) ) } $.
+    dnnumch.a $e |- ( ph -> A e. V ) $.
+    dnnumch.e $e |- ( ph -> A. y e. ~P A ( y =/= (/) -> ( g ` y ) e. y ) ) $.
+    $( Define an enumeration of a set from a choice function. _EDITORIAL:
+       overlaps ~ aceq8a _ $)
+    dnnumch1 $p |- ( ph -> E. x e. On ( F |` x ) -1-1-onto-> A ) $=
+      ? $.
+
+    $( Define an enumeration (weak dominance version) of a set from a choice
+       function. $)
+    dnnumch2 $p |- ( ph -> A C_ ran F ) $=
+      ? $.
+
+    dnwech.h $e |- H = { <. x , y >. | ( ( x e. A /\ y e. A ) /\ |^| ( `' F " {
+        x } ) e. |^| ( `' F " { y } ) ) } $.
+    $( Define a well-ordering from a choice function. $)
+    dnwech $p |- ( ph -> H We A ) $=
+      ? $.
+  $}
+
+  $(
+    $e |- M = { <. l , m >. | ( ( l C_ ( R1 ` U. dom d ) /\ m C_ ( R1 ` U. dom d ) ) /\ ( l =/= m /\ sup ( ( ( l \ m ) u. ( m \ l ) ) , ( R1 ` U. dom d ) , `' ( d ` U. dom d ) ) e. m ) ) }
+    $e |- L = ( k e. ~P ( R1 ` dom d ) |-> sup ( ( E ` k ) , ( R1 ` dom d ) , `' M ) )
+    $e |- K = ( j e. _V |-> ( L ` ( ( R1 ` dom d ) \ ran j ) ) )
+    $e |- J = U. { g | E. h e. On ( g Fn h /\ A. i e. h ( g ` i ) = ( K ` ( g |` i ) ) ) }
+    d free.  successor case
+    $e |- I = { <. x , y >. | ( ( x e. ( R1 ` dom d ) /\ y e. ( R1 ` dom d ) ) /\ |^| ( `' J " { x } ) e. |^| ( `' J " { y } ) ) } $.
+    limit case, patch together well-orderings
+    $e |- H = { <. e , f >. | ( ( e e. ( R1 ` dom d ) /\ f e. ( R1 ` dom d ) ) /\ ( ( rank ` e ) _E ( rank ` f ) \/ ( ( rank ` e ) = ( rank ` f ) /\ e ( d ` ( rank ` e ) ) f ) ) ) } $>
+    case switcher for transfinite recursion
+    $e |- G = ( d e. _V |-> if ( ( Lim dom d \/ d = (/) ) , H , I ) ) $.
+      $e |- -. dom d = U. dom d
+      $e |- dom d e. On
+        $e |- x e. dom d -> ( d ` x ) We ( R1 ` x )
+          $p |- M Or ( R1 ` dom d )
+        $e |- dom d C_ ?
+        $e |- ( ph -> A. y e. ( ~P ? \ { (/) } ) ( E ` y ) e. ( ( ~P y i^i Fin ) \ { (/) } ) ) $.
+          $e |- k C_ ( R1 ` dom d )
+          $e |- k =/= (/)
+          $p |- ( L ` k ) e. k
+      $p |- I We ( R1 ` dom d )
+
+      $e |- dom d = U. dom d
+      $e |- dom d e. On
+      $p |- H We ( R1 ` dom d )
+
+      $e |- dom d e. On
+      $e |- dom d C_ ?
+      $e |- x e. dom d -> ( d ` x ) We ( R1 ` x )
+      $p |-
+    using transfinite recursion, build up the well-orderings.  (F`a) well-orders (R1`a)
+    $e |- F = U. { a | E. b e. On ( a Fn b /\ A. c e. b ( a ` c ) = ( G ` ( a |` c ) ) ) } $.
+
+    $p |- ( X e. U. ( R1 " On ) -> E. r r We X ) $.
+  $)
+
+
+  ${
+    $d x z f $.
+    $( The right hand side of this theorem (compare with ~ ac4 ), sometimes
+       known as the "axiom of multiple choice", is a choice equivalent.
+       Curiously, this statement cannot be proved without ~ ax-reg , despite
+       not mentioning the cumulative hierarchy in any way as most consequences
+       of regularity do.
+
+       A multiple choice function allows any total order to be extended to a
+       choice function, which in turn defines a well ordering.  Since a well
+       ordering on a set defines a simple ordering of the power set, this
+       allows the trivial well-ordering of the empty set to be transfinitely
+       bootstrapped up the cumulative hierarchy to any desired level. $)
+    dfac11 $p |- ( CHOICE <-> A. x E. f A. z e. x ( z =/= (/) ->
+        ( f ` z ) e. ( ( ~P z i^i Fin ) \ { (/) } ) ) ) $=
+      ? $.
   $}
 
 $(
@@ -13458,13 +13868,25 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c GrpHom LMHom $.
+  $c GrpHom LMHom GrpIso LMIso ~=g ~=m $.
 
   $( Extend class notation with the generator of group hom-sets. $)
   cghm $a class GrpHom $.
 
   $( Extend class notation with the generator of left module hom-sets. $)
   clmhm $a class LMHom $.
+
+  $( The class of group isomorphism sets. $)
+  cgim $a class GrpIso $.
+
+  $( The class of left module isomorphism sets. $)
+  clmim $a class LMIso $.
+
+  $( The class of the group isomorphism relation. $)
+  cgic $a class ~=g $.
+
+  $( The class of the left module isomorphism relation. $)
+  clmic $a class ~=m $.
 
   ${
     $d g s t w x y $.
@@ -13480,11 +13902,34 @@ $)
 
     $( A homomorphism of left modules is a group homomorphism which
        additionally preserves the scalar product.  This requires both
-       structures to be left modules over the same ring. $)
+       structures to be left modules over the same ring.
+
+       This is also frequently called a linear map. $)
     df-lmhm $a |- LMHom = ( s e. LMod , t e. LMod |-> { g e. ( s GrpHom t ) |
         [ ( Scalar ` s ) / w ] ( ( Scalar ` t ) = w /\
           A. x e. ( Base ` w ) A. y e. ( Base ` s )
           ( g ` ( x ( vsca ` s ) y ) ) = ( x ( vsca ` t ) ( g ` y ) ) ) } ) $.
+
+    $( An isomorphism of groups is a homomorphism which is also a bijection,
+       i.e. it preserves equality as well as the group operation. $)
+    df-gim $a |- GrpIso = ( s e. Grp , t e. Grp |-> { g e. ( s GrpHom t ) |
+        g : ( Base ` s ) -1-1-onto-> ( Base ` t ) } ) $.
+
+    $( An isomorphism of modules is a homomorphism which is also a bijection,
+       i.e. it preserves equality as well as the group and scalar
+       operations. $)
+    df-lmim $a |- LMIso = ( s e. LMod , t e. LMod |-> { g e. ( s LMHom t ) |
+        g : ( Base ` s ) -1-1-onto-> ( Base ` t ) } ) $.
+
+    $( Two groups are said to be isomorphic iff they are connected by at least
+       one isomorphism.  Isomophic groups share all global group properties,
+       but to relate local properties requires knowledge of a specific
+       isomorphism. $)
+    df-gic $a |- ~=g = { <. s , t >. | ( s GrpIso t ) =/= (/) } $.
+
+    $( Two modules are said to be isomorphic iff they are connected by at least
+       one isomorphism. $)
+    df-lmic $a |- ~=m = { <. s , t >. | ( s LMIso t ) =/= (/) } $.
   $}
 
   ${
@@ -14201,6 +14646,132 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Isomorphisms of groups and left modules
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d F a b $.  $d R a b $.  $d S a b $.
+    isgim.b $e |- B = ( Base ` R ) $.
+    isgim.c $e |- C = ( Base ` S ) $.
+    $( An isomorphism of groups is a bijective homomorphism. $)
+    isgim $p |- ( S e. V -> ( F e. ( R GrpIso S ) <-> ( F e. ( R GrpHom S ) /\
+          F : B -1-1-onto-> C ) ) ) $=
+      ? $.
+
+    $( An isomorphism of groups is a bijection. $)
+    gimf1o $p |- ( ( F e. ( R GrpIso S ) /\ S e. V ) ->
+          F : B -1-1-onto-> C ) $=
+      ? $.
+  $}
+
+  ${
+    $( An isomorphism of groups is a homomorphism. $)
+    gimghm $p |- ( F e. ( R GrpIso S ) -> F e. ( R GrpHom S ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
+    $( Behavior of subgroups under isomorphism. $)
+    subggim $p |- ( F e. ( R GrpIso S ) -> ( A e. ( SubGrp ` R ) <->
+        ( F " A ) e. ( SubGrp ` S ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d R f r s $.  $d S f r s $.  $d F f r s $.
+    $( The relation "is isomorphic to" for groups. $)
+    brgic $p |- ( R ~=g S <-> E. f f e. ( R GrpIso S ) ) $=
+      ? $.
+
+    $( Prove isomorphic by an explicit isomorphism. $)
+    brgici $p |- ( F e. ( R GrpIso S ) -> R ~=g S ) $=
+      ? $.
+
+    $( Isomorphism implies the left side is a group. $)
+    giclcl $p |- ( R ~=g S -> R e. Grp ) $=
+      ? $.
+
+    gicen.b $e |- B = ( Base ` R ) $.
+    gicen.c $e |- C = ( Base ` S ) $.
+    $( Isomorphic groups have equinumerous base sets. $)
+    gicen $p |- ( ( R ~=g S /\ S e. V ) -> B ~~ C ) $=
+      ? $.
+  $}
+
+  ${
+    $d R a b c $.  $d S a b c $.
+    $( A less trivial example of a group invariant: cardinality of the subgroup
+       lattice. $)
+    gicsubgen $p |- ( ( R ~=g S /\ S e. V ) -> ( SubGrp ` R ) ~~
+        ( SubGrp ` S ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d F a b $.  $d R a b $.  $d S a b $.
+    islmim.b $e |- B = ( Base ` R ) $.
+    islmim.c $e |- C = ( Base ` S ) $.
+    $( An isomorphism of left modules is a bijective homomorphism. $)
+    islmim $p |- ( S e. V -> ( F e. ( R LMIso S ) <-> ( F e. ( R LMHom S ) /\
+          F : B -1-1-onto-> C ) ) ) $=
+      ? $.
+
+    $( An isomorphism of left modules is a bijection. $)
+    lmimf1o $p |- ( ( F e. ( R LMIso S ) /\ S e. V ) ->
+          F : B -1-1-onto-> C ) $=
+      ? $.
+  $}
+
+  ${
+    $( An isomorphism of modules is a homomorphism. $)
+    lmimlmhm $p |- ( F e. ( R LMIso S ) -> F e. ( R LMHom S ) ) $=
+      ? $.
+
+    $( An isomorphism of modules is an isomorphism of groups. $)
+    lmimgim $p |- ( F e. ( R LMIso S ) -> F e. ( R GrpIso S ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
+    lsslmim.u $e |- U = ( LSubSp ` R ) $.
+    lsslmim.v $e |- V = ( LSubSp ` S ) $.
+    $( Behavior of subspaces under isomorphism. $)
+    lsslmim $p |- ( F e. ( R LMIso S ) -> ( A e. U <-> ( F " A ) e. V ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
+    lsplmim.m $e |- M = ( LSpan ` R ) $.
+    lsplmim.n $e |- N = ( LSpan ` S ) $.
+    lsplmim.b $e |- B = ( Base ` R ) $.
+    $( Behavior of spans under isomorphism. $)
+    lsplmim $p |- ( ( F e. ( R LMIso S ) /\ X C_ B ) ->
+          ( F " ( M ` B ) ) = ( N ` ( F " B ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d R f r s $.  $d S f r s $.  $d F f r s $.
+    $( The relation "is isomorphic to" for modules. $)
+    brlmic $p |- ( R ~=m S <-> E. f f e. ( R LMIso S ) ) $=
+      ? $.
+
+    $( Prove isomorphic by an explicit isomorphism. $)
+    brlmici $p |- ( F e. ( R LMIso S ) -> R ~=m S ) $=
+      ? $.
+
+    $( Isomorphism implies the left side is a module. $)
+    lmiclcl $p |- ( R ~=m S -> R e. LMod ) $=
+      ? $.
+  $}
+
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Finitely generated left modules
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -14348,6 +14919,14 @@ $)
     eqsstri sseli ) CDACBEZFGZSHGTIJKLMZBDNDBOUABDPQR $.
     $( [1-Jan-2015] $)
 
+  ${
+    $d R a b c $.  $d S a b c $.
+    $( Finite generation is an invariant property of modules. $)
+    fglmic $p |- ( ( R ~=m S /\ S e. V ) ->
+        ( R e. LFinGen <-> S e. LFinGen ) ) $=
+      ? $.
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Noetherian left modules I
@@ -14425,12 +15004,6 @@ $)
       BUCIZMPUAUCTAUEUAINQR $.
       $( [12-Dec-2014] $)
   $}
-
-  $( No class is unequal to itself.  (Contributed by Stefan O'Rear,
-     1-Jan-2015.) $)
-  neirr $p |- -. A =/= A $=
-    ( wne wn wceq eqid nne mpbir ) AABCAADAEAAFG $.
-    $( [1-Jan-2015] $)
 
   ${
     $d ph a b c $.  $d F a b c $.  $d S a b c $.  $d T a b c $.  $d A a b c $.
@@ -14551,6 +15124,14 @@ $)
       YBTUWPUWNUUMUUFBFKUWPRUWNRZXHTXIUWFUWNUUFFUXAUWFRXJTXKYOBUUEUUAUUDUUGGHUU
       DRUUERUUGRYCVQYDYQUAAUUQYFYG $.
       $( [1-Jan-2015] $)
+  $}
+
+  ${
+    $d R a b c $.  $d S a b c $.
+    $( Noetherian is an invariant property of modules. $)
+    lnmlmic $p |- ( ( R ~=m S /\ S e. V ) ->
+        ( R e. LNoeM <-> S e. LNoeM ) ) $=
+      ? $.
   $}
 
 $(
@@ -15350,6 +15931,35 @@ $)
     $}
   $}
 
+  ${
+    prdmsplit1.h $e |- H = ( x e. E |-> ( x |` A ) ) $.
+    prdmsplit1.d $e |- D = ( S Xm_ R ) $.
+    prdmsplit1.c $e |- C = ( S Xm_ ( R |` A ) ) $.
+    prdmsplit1.e $e |- E = ( Base ` D ) $.
+    prdmsplit1.a $e |- ( ph -> A C_ B ) $.
+    prdmsplit1.b $e |- ( ph -> B e. _V ) $.
+    prdmsplit1.s $e |- ( ph -> S e. _V ) $.
+    prdmsplit1.r $e |- ( ph -> R : B --> Grp ) $.
+    $( Restriction is a homomorphism on products of groups. $)
+    prdmsplit1 $p |- ( ph -> H e. ( D GrpHom C ) ) $=
+      ? $.
+  $}
+
+  ${
+    prdmsplit2.h $e |- H = ( x e. E |-> ( x |` A ) ) $.
+    prdmsplit2.d $e |- D = ( S Xm_ R ) $.
+    prdmsplit2.c $e |- C = ( S Xm_ ( R |` A ) ) $.
+    prdmsplit2.e $e |- E = ( Base ` D ) $.
+    prdmsplit2.a $e |- ( ph -> A C_ B ) $.
+    prdmsplit2.b $e |- ( ph -> B e. _V ) $.
+    prdmsplit2.s $e |- ( ph -> S e. Ring ) $.
+    prdmsplit2.r $e |- ( ph -> R : B --> LMod ) $.
+    prdmsplit2.rs $e |- ( ( ph /\ y e. B ) -> ( Scalar ` ( R ` y ) ) = S ) $.
+    $( Restriction is a homomorphism on products of modules. $)
+    prdmsplit2 $p |- ( ph -> H e. ( D GrpHom C ) ) $=
+      ? $.
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Direct sum of left modules
@@ -15607,6 +16217,34 @@ $)
 
   $( direct sum coincides with products for finite $)
 
+  ${
+    dsmmsplit.c $e |- C = ( S (+)m R ) $.
+    dsmmsplit.d $e |- D = ( S (+)m ( R |` A ) ) $.
+    dsmmsplit.e $e |- E = ( S (+)m ( R |` B ) ) $.
+    dsmmsplit.u $e |- U = ( Base ` C ) $.
+    dsmmsplit.v $e |- V = ( Base ` D ) $.
+    dsmmsplit.f $e |- F = ( x e. U |-> ( x |` A ) ) $.
+    dsmmsplit.g $e |- G = ( y e. K |-> ( y |` B ) ) $.
+    dsmmsplit.z $e |- Z = ( 0g ` D ) $.
+    dsmmsplit.k $e |- K = ( `' F " { Z } ) $.
+    dsmmsplit.w $e |- W = ( C |`s K ) $.
+    dsmmsplit.a $e |- ( ph -> A e. _V ) $.
+    dsmmsplit.b $e |- ( ph -> B e. _V ) $.
+    dsmmsplit.r $e |- ( ph -> R : ( A u. B ) --> LMod ) $.
+    dsmmsplit.rs $e |- ( ( ph /\ z e. ( A u. B ) ) ->
+        ( Scalar ` ( R ` z ) ) = S ) $.
+    dsmmsplit.s $e |- ( ph -> S e. Ring ) $.
+    dsmmsplit.ab $e |- ( ph -> ( A i^i B ) = (/) ) $.
+    $( For any division of the coordinates of a free module, the module can be
+       split into two by a short exact sequence, i.e. there is a homomorphism
+       onto the first factor whose kernel is isomorphic to the second
+       factor. $)
+    dsmmsplit $p |- ( ph -> ( F e. ( C LMHom D ) /\ F : U -onto-> V /\
+        G e. ( W LMIso E ) ) ) $=
+      ? $.
+  $}
+
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Free modules
@@ -15628,7 +16266,8 @@ $)
        ` i ` -many copies of the ring with componentwise addition and
        multiplication.  If ` i ` is infinite, the allowed vectors are
        restricted to those with finitely many nonzero cooerdinates; this
-       ensures that the resulting module is actually spanned by its vectors. $)
+       ensures that the resulting module is actually spanned by its unit
+       vectors. $)
     df-frlm $a |- freeLMod = ( r e. _V , i e. _V |->
         ( r (+)m ( i X. { ( ringLMod ` r ) } ) ) ) $.
 
@@ -15645,6 +16284,30 @@ $)
   $( use span preservation to show that the free module maps onto a span $)
   $( this allows for neat representation of spans: ellspd $)
   $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
+
+  ${
+    frlmsplit.c $e |- C = ( R freeLMod ( A u. B ) ) $.
+    frlmsplit.d $e |- D = ( R freeLMod A ) $.
+    frlmsplit.e $e |- E = ( R freeLMod B ) $.
+    frlmsplit.u $e |- U = ( Base ` C ) $.
+    frlmsplit.v $e |- V = ( Base ` D ) $.
+    frlmsplit.f $e |- F = ( x e. U |-> ( x |` A ) ) $.
+    frlmsplit.g $e |- G = ( y e. K |-> ( y |` B ) ) $.
+    frlmsplit.z $e |- Z = ( 0g ` D ) $.
+    frlmsplit.k $e |- K = ( `' F " { Z } ) $.
+    frlmsplit.w $e |- W = ( C |`s K ) $.
+    frlmsplit.a $e |- ( ph -> A e. _V ) $.
+    frlmsplit.b $e |- ( ph -> B e. _V ) $.
+    frlmsplit.r $e |- ( ph -> R e. Ring ) $.
+    frlmsplit.ab $e |- ( ph -> ( A i^i B ) = (/) ) $.
+    $( For any division of the coordinates of a free module, the module can be
+       split into two by a short exact sequence, i.e. there is a homomorphism
+       onto the first factor whose kernel is isomorphic to the second
+       factor. $)
+    frlmsplit $p |- ( ph -> ( F e. ( C LMHom D ) /\ F : U -onto-> V /\
+        G e. ( W LMIso E ) ) ) $=
+      ? $.
+  $}
 
   ${
     $d M a b c f $.  $d B a b c f $.  $d N a b c f $.  $d K a b c f $.
