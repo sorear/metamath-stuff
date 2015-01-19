@@ -8414,6 +8414,75 @@ $)
     GUQURT $.
     $( [19-Sep-2014] $)
 
+  ${
+    $d a b c d e $.
+    $( Lemma for ~ rpnnen3 . $)
+    rpnnen3lem $p |- ( ( ( a e. RR /\ b e. RR ) /\ a < b ) ->
+        { c e. QQ | c < a } =/= { c e. QQ | c < b } ) $=
+      ( vd cv cr wcel clt wbr cq crab wne w3a wa wrex qbtwnre simp2 breq1 elrab
+      wn simp3r sylanbrc simp11 qre 3ad2ant2 simp3l ltnsym sylc intnand sylnibr
+      jca nelne1 syl2anc necomd 3exp rexlimdv mpd 3expa ) AEZFGZBEZFGZUSVAHIZCE
+      ZUSHIZCJKZVDVAHIZCJKZLZUTVBVCMZUSDEZHIZVKVAHIZNZDJOVIDUSVAPVJVNVIDJVJVKJG
+      ZVNVIVJVOVNMZVHVFVPVKVHGZVKVFGZTVHVFLVPVOVMVQVJVOVNQVJVOVLVMUAVGVMCVKJVDV
+      KVAHRSUBVPVOVKUSHIZNVRVPVSVOVPUTVKFGZNVLVSTVPUTVTUTVBVCVOVNUCVOVJVTVNVKUD
+      UEUKVJVOVLVMUFUSVKUGUHUIVEVSCVKJVDVKUSHRSUJVKVHVFULUMUNUOUPUQUR $.
+      $( [18-Jan-2015] $)
+
+    $( Dedekind cut injection of ` RR ` into ` ~P QQ ` . $)
+    rpnnen3 $p |- RR ~<_ ~P QQ $=
+      ( va vb vc cq cpw cvv wcel cr cdom wbr qex pwex cv clt crab wss ssrab2 wa
+      wne rpnnen3lem elpw2 mpbir a1i weq wo lttri2 ancom1s necomd jaodan sylbid
+      wceq ex necon4d breq2 rabbidv impbid1 dom3 ax-mp ) DEZFGHUSIJDKLABHUSCMZA
+      MZNJZCDOZUTBMZNJZCDOZFVCUSGZVAHGZVGVCDPVBCDQVCDKUAUBUCVHVDHGZRZVCVFUKABUD
+      ZVJVAVDVCVFVJVAVDSVAVDNJZVDVANJZUEZVCVFSZVAVDUFVJVNVOVJVLVOVMABCTVJVMRVFV
+      CVIVHVMVFVCSBACTUGUHUIULUJUMVKVBVECDVAVDUTNUNUOUPUQUR $.
+      $( [18-Jan-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    "Strong" transfinite recursion
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c recs $.
+
+  $( Notation for a function defined by strong transfinite recursion. $)
+  crecs $a class recs ( F ) $.
+
+  ${
+    $d F f x y $.
+    $( Define a function ` recs ( F ) ` on ` On ` , the class of ordinal
+       numbers, by transfinite recursion given a rule ` F ` which sets the next
+       value given all values so far.  See ~ df-rdg for more details on why
+       this definition is desirable.  Unlike ~ df-rdg which restricts the
+       update rule to use only the previous value, this version allows the
+       update rule to use _all_ previous values, which is why it is described
+       as "strong", although it is actually more primitive.  See ~ recsfnon and
+       ~ recsval for the primary contract of this definition.
+
+       _EDITORIAL_: there are several existing versions of this construction
+       without the definition, notably in ~ ordtype , ~ zorn2 , and
+       ~ aceq8alem . $)
+    df-recs $a |- recs ( F ) = U. { f | E. x e. On ( f Fn x /\
+        A. y e. x ( f ` y ) = ( F ` ( f |` y ) ) ) } $.
+  $}
+
+  ${
+    $d F a b c y $.  $d G a b c y $.  $d x y a b c $.
+    $( Equality theorem for ` recs ` . $)
+    recseq $p |- ( F = G -> recs ( F ) = recs ( G ) ) $=
+      ? $.
+
+    hbrecs.f $e |- ( y e. F -> A. x y e. F ) $.
+    $( Bound-variable hypothesis builder for ` recs ` . $)
+    hbrecs $p |- ( y e. recs ( F ) -> A. x y e. recs ( F ) ) $=
+      ? $.
+  $}
+
+  ${
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     More equivalents of the Axiom of Choice
@@ -8865,7 +8934,9 @@ $)
   ${
     $d A x y z w a $.  $d X x y $.  $d Y x y $.
     pw2f1o.f $e |- F = ( x e. ( 2o ^m A ) |-> ( `' x " { 1o } ) ) $.
-    $( Define a bijection between characteristic functions and subsets. $)
+    $( Define a bijection between characteristic functions and subsets.
+       _EDITORIAL_: extracted from ~ pw2en , which can be easily reproved in
+       terms of this. $)
     pw2f1o $p |- ( A e. V -> F : ( 2o ^m A ) -1-1-onto-> ~P A ) $=
       ( va vy vz vw wcel c2o cv c1o wf1o wceq wb c0 cvv adantl wa cmap cpw ccnv
       csn cima cmpt oveq2 mpteq1 syl f1oeq1 pweq f1oeq23 syl2anc bitrd wtru wel
@@ -8904,7 +8975,8 @@ $)
       $.
       $( [18-Jan-2015] $)
 
-    $( Function value of the ~ pw2f1o bijection.  TODO: first ant actually unneeded $)
+    $( Function value of the ~ pw2f1o bijection.  TODO: first ant actually
+       unneeded. $)
     pw2f1oval $p |- ( ( A e. V /\ X e. ( 2o ^m A ) ) ->
         ( F ` X ) = ( `' X " { 1o } ) ) $=
       ( c2o cmap co wcel cfv ccnv c1o csn cima wceq cvv id1 cnvexg imaexg cnveq
@@ -9034,7 +9106,9 @@ $)
         $( [18-Jan-2015] $)
     $}
 
-    $( A well-ordering induces a strict ordering on the power set. $)
+    $( A well-ordering induces a strict ordering on the power set.
+       _EDITORIAL_ : when well-orderings are set like, this can be strengthened
+       to remove ` A e. V ` $)
     wepwso $p |- ( ( A e. V /\ R We A ) -> T Or ~P A ) $=
       ( va wcel wwe wa c2o cv cfv cep wbr wor eqid cmap co wceq wral wrex copab
       cpw word com 2onn nnord ax-mp ordwe weso mp2b wemapso mp3an3 cvv ccnv c1o
@@ -9046,23 +9120,41 @@ $)
   $}
 
   ${
-    dnnumch.f $e |- F = U. { f | E. x e. On ( f Fn x /\ A. y e. x ( f ` y ) = (
-        G ` ( f |` y ) ) ) } $.
-    dnnumch.g $e |- G = { <. f , y >. | y = ( g ` ( A \ ran f ) ) } $.
+    $d G x y f z w v a b c $.  $d A x y f z w v a b c $.
+    $d F x f y w v z a b c $.
+    dnnumch.f $e |- F = U. { f | E. x e. On ( f Fn x /\ A. y e. x ( f ` y ) =
+        ( G ` ( A \ ran ( f |` y ) ) ) ) } $.
+    $( Define an enumeration of a set from a choice function: rearrangement for
+       transfinite recursion. $)
+    dnnumch1 $p |- F = U. { f | E. x e. On ( f Fn x /\ A. y e. x ( f ` y ) =
+        ( ( z e. _V |-> ( G ` ( A \ ran z ) ) ) ` ( f |` y ) ) ) } $=
+      ? $.
+
+    $( Define an enumeration of a set from a choice function: we have a
+       function on the ordinals. $)
+    dnnumch2 $p |- F Fn On $=
+      ? $.
+
     dnnumch.a $e |- ( ph -> A e. V ) $.
-    dnnumch.e $e |- ( ph -> A. y e. ~P A ( y =/= (/) -> ( g ` y ) e. y ) ) $.
-    $( Define an enumeration of a set from a choice function. _EDITORIAL:
-       overlaps ~ aceq8a _ $)
-    dnnumch1 $p |- ( ph -> E. x e. On ( F |` x ) -1-1-onto-> A ) $=
+    dnnumch.h $e |- ( ph -> A. v e. ~P A ( y =/= (/) -> ( G ` y ) e. y ) ) $.
+    $( Define an enumeration of a set from a choice function; second part, it
+       restricts to a bijection. _EDITORIAL: overlaps ~ aceq8a _ $)
+    dnnumch3 $p |- ( ph -> E. w e. On ( F |` w ) -1-1-onto-> A ) $=
       ? $.
 
     $( Define an enumeration (weak dominance version) of a set from a choice
        function. $)
-    dnnumch2 $p |- ( ph -> A C_ ran F ) $=
+    dnnumch4 $p |- ( ph -> A C_ ran F ) $=
       ? $.
 
-    dnwech.h $e |- H = { <. x , y >. | ( ( x e. A /\ y e. A ) /\ |^| ( `' F " {
-        x } ) e. |^| ( `' F " { y } ) ) } $.
+    $( Define an injection from a set into the ordinals using a choice
+       function. $)
+    dnnumch5 $p |- ( ph -> ( z e. A |-> |^| ( `' F " { z } ) )
+            : A -1-1-> On ) $=
+      ? $.
+
+    dnwech.h $e |- H = { <. v , w >. | |^| ( `' F " { v } ) e.
+        |^| ( `' F " { w } ) } $.
     $( Define a well-ordering from a choice function. $)
     dnwech $p |- ( ph -> H We A ) $=
       ? $.
