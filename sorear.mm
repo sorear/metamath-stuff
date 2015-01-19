@@ -9239,6 +9239,97 @@ $)
       $( [18-Jan-2015] $)
   $}
 
+  ${
+    $d z y a b c d $.
+    aomclem1.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
+        ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
+          ( d ( z ` U. dom z ) c -> ( d e. a <-> d e. b ) ) ) } $.
+    aomclem1.on $e |- ( ph -> dom z e. On ) $.
+    aomclem1.su $e |- ( ph -> dom z = suc U. dom z ) $.
+    aomclem1.we $e |- ( ph -> A. a e. dom z ( z ` a ) We ( R1 ` a ) ) $.
+    $( Lemma for ~ dfac11 .  This is the beginning of the proof that multiple
+       choice is equivalent to choice.  Our goal is to construct, by
+       transfinite recursion, a well-ordering of ` ( R1 `` A ) ` .  In what
+       follows, ` A ` is the index of the rank we wish to well-order, ` z ` is
+       the collection of well orderings constructed so far, ` dom z ` is the
+       set of ordinal indexes of constructed ranks i.e. the next rank to
+       construct, and ` y ` is a postulated multiple-choice function.
+
+       Successor case 1, define a simple ordering from the well-ordered
+       predecessor. $)
+    aomclem1 $p |- ( ph -> B Or ( R1 ` dom z ) ) $=
+      ( cv cr1 cfv wor wcel wwe wceq wb syl cdm cuni cpw cvv fvex wral csuc vex
+      dmex uniex sucid syl5eleqr fveq2 weeq1 weeq2 bitrd rcla4va syl2anc wepwso
+      sylancr fveq2d con0 onuni r1suc eqtrd soeq2 mpbird ) ABLZUAZMNZCOZVIUBZMN
+      ZUCZCOZAVMUDPVMVLVHNZQZVOVLMUEAVLVIPDLZMNZVRVHNZQZDVIUFVQAVLVLUGZVIVLVIVH
+      BUHUIUJUKJULKWAVQDVLVIVRVLRZWAVSVPQZVQWCVTVPRWAWDSVRVLVHUMVSVTVPUNTWCVSVM
+      RWDVQSVRVLMUMVSVMVPUOTUPUQURDEFGVMVPCUDHUSUTAVJVNRVKVOSAVJWBMNZVNAVIWBMJV
+      AAVLVBPZWEVNRAVIVBPWFIVIVCTVLVDTVEVJVNCVFTVG $.
+      $( [18-Jan-2015] $)
+  $}
+
+  ${
+    $d z y a b c d $.  $d ph a $.
+    aomclem2.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
+        ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
+          ( d ( z ` U. dom z ) c -> ( d e. a <-> d e. b ) ) ) } $.
+    aomclem2.c $e |- C = ( a e. _V |->
+        sup ( ( y ` a ) , ( R1 ` dom z ) , B ) ) $.
+    aomclem2.on $e |- ( ph -> dom z e. On ) $.
+    aomclem2.su $e |- ( ph -> dom z = suc U. dom z ) $.
+    aomclem2.we $e |- ( ph -> A. a e. dom z ( z ` a ) We ( R1 ` a ) ) $.
+    aomclem2.a $e |- ( ph -> A e. On ) $.
+    aomclem2.za $e |- ( ph -> dom z C_ A ) $.
+    aomclem2.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
+        ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
+    $( Lemma for ~ dfac11 .  Successor case 2, a choice function for subsets of
+       ` ( R1 `` dom z ) ` . $)
+    aomclem2 $p |- ( ph -> A. a e. ~P ( R1 ` dom z ) ( a =/= (/) ->
+          ( C ` a ) e. a ) ) $=
+      ( wcel wss cv c0 wne cfv wi cdm cr1 cpw w3a csup cvv wceq vex cfn cin csn
+      cdif wral con0 jca r1ord3 sylc sspwb sylib sseld ra4 sylsyld eldifi inss1
+      wa 3imp sseli elpwi syl 3syl wor aomclem1 3ad2ant1 inss2 eldifsn 3ad2ant2
+      simprbi sstrd fisup2g syl13anc sseldd fvmpt2 sylancr eqeltrd ralrimiv
+      3exp ) AGUAZUBUCZWLFUDZWLSZUEGCUAUFZUGUDZUHZAWLWRSZWMWOAWSWMUIZWNWLBUAUDZ
+      WQEUJZWLWTWLUKSXBWLSWNXBULGUMWTXAWLXBWTXAWLUHZUNUOZUBUPZUQSZXAXDSZXAWLTZA
+      WSWMXFAWMXFUEZGDUGUDZUHZURWSWLXKSXIRAWRXKWLAWQXJTZWRXKTAWPUSSZDUSSZVJWPDT
+      XLAXMXNMPUTQWPDVAVBWQXJVCVDVEXIGXKVFVGVKZXAXDXEVHZXGXAXCSXHXDXCXAXCUNVIVL
+      XAWLVMVNVOZWTWQEVPZXAUNSZXAUBUCZXAWQTXBXASAWSXRWMACEGHIJKMNOVQVRWTXFXGXSX
+      OXPXDUNXAXCUNVSVLVOWTXFXTXOXFXGXTXAXDUBVTWBVNWTXAWLWQXQWSAWLWQTWMWLWQVMWA
+      WCWQXAEWDWEWFZGUKXBWLFLWGWHYAWIWKWJ $.
+      $( [18-Jan-2015] $)
+  $}
+
+  ${
+    $d z y a b c d $.  $d ph a b $.  $d C a b c d $.  $d D a b c d $.
+    aomclem3.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
+        ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
+          ( d ( z ` U. dom z ) c -> ( d e. a <-> d e. b ) ) ) } $.
+    aomclem3.c $e |- C = ( a e. _V |->
+        sup ( ( y ` a ) , ( R1 ` dom z ) , B ) ) $.
+    aomclem3.d $e |- D = recs ( ( a e. _V |->
+        ( C ` ( ( R1 ` dom z ) \ ran a ) ) ) ) $.
+    aomclem3.e $e |- E = { <. a , b >. | |^| ( `' D " { a } ) e.
+        |^| ( `' D " { b } ) } $.
+    aomclem3.on $e |- ( ph -> dom z e. On ) $.
+    aomclem3.su $e |- ( ph -> dom z = suc U. dom z ) $.
+    aomclem3.we $e |- ( ph -> A. a e. dom z ( z ` a ) We ( R1 ` a ) ) $.
+    aomclem3.a $e |- ( ph -> A e. On ) $.
+    aomclem3.za $e |- ( ph -> dom z C_ A ) $.
+    aomclem3.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
+        ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
+    $( Lemma for ~ dfac11 .  Successor case 3, our required well-ordering. $)
+    aomclem3 $p |- ( ph -> E We ( R1 ` dom z ) ) $=
+      ( cv cdm cr1 cfv cvv crn cdif cmpt crecs wceq rneq difeq2d fveq2d cbvmptv
+      weq recseq ax-mp eqtri wcel fvex a1i c0 wne cpw wral aomclem2 neeq1 fveq2
+      wi id1 eleq12d imbi12d cbvralv sylib dnwech ) ALKJICUCUDZUEUFZGFHUGGIUGVS
+      IUCZUHZUIZFUFZUJZUKZKUGVSKUCZUHZUIZFUFZUJZUKZOWDWJULWEWKULIKUGWCWIIKUQZWB
+      WHFWLWAWGVSVTWFUMUNUOUPWDWJURUSUTVSUGVAAVRUEVBVCAVTVDVEZVTFUFZVTVAZVKZIVS
+      VFZVGLUCZVDVEZWRFUFZWRVAZVKZLWQVGABCDEFIJKLMNQRSTUAUBVHWPXBILWQILUQZWMWSW
+      OXAVTWRVDVIXCWNWTVTWRVTWRFVJXCVLVMVNVOVPPVQ $.
+      $( [19-Jan-2015] $)
+  $}
+
   $(
     $e |- M = { <. l , m >. | ( ( l C_ ( R1 ` U. dom d ) /\ m C_ ( R1 ` U. dom d ) ) /\ ( l =/= m /\ sup ( ( ( l \ m ) u. ( m \ l ) ) , ( R1 ` U. dom d ) , `' ( d ` U. dom d ) ) e. m ) ) }
     $e |- L = ( k e. ~P ( R1 ` dom d ) |-> sup ( ( E ` k ) , ( R1 ` dom d ) , `' M ) )
