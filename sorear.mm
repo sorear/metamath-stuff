@@ -8472,15 +8472,38 @@ $)
     $d F a b c y $.  $d G a b c y $.  $d x y a b c $.
     $( Equality theorem for ` recs ` . $)
     recseq $p |- ( F = G -> recs ( F ) = recs ( G ) ) $=
-      ? $.
+      ( va vb vc wceq cv wfn cfv cres wral wa con0 wrex cuni crecs fveq1 eqeq2d
+      cab df-recs ralbidv anbi2d rexbidv abbidv unieqd 3eqtr4g ) ABFZCGZDGZHZEG
+      ZUHIZUHUKJZAIZFZEUIKZLZDMNZCSZOUJULUMBIZFZEUIKZLZDMNZCSZOAPBPUGUSVEUGURVD
+      CUGUQVCDMUGUPVBUJUGUOVAEUIUGUNUTULUMABQRUAUBUCUDUEDECATDECBTUF $.
+      $( [18-Jan-2015] $)
 
     hbrecs.f $e |- ( y e. F -> A. x y e. F ) $.
     $( Bound-variable hypothesis builder for ` recs ` . $)
     hbrecs $p |- ( y e. recs ( F ) -> A. x y e. recs ( F ) ) $=
-      ? $.
+      ( va vb vc crecs cv wfn cfv cres wceq wral wa con0 wrex cab wcel ax-17
+      cuni df-recs wel hbfv hbeq hbral hban hbrex hbab hbuni hbxfreq ) ABCHEIZF
+      IZJZGIZULKZULUOLZCKZMZGUMNZOZFPQZERZUAFGECUBABVCVBAEBVAAFPUMPSATUNUTAUNAT
+      USAGUMGFUCATABBUPURBIZUPSATABUQCDVDUQSATUDUEUFUGUHUIUJUK $.
+      $( [18-Jan-2015] $)
   $}
 
   ${
+    $d F a b c d e f g $.  $d A g $.
+    $( Strong transfinite recursion defines a function on ordinals. $)
+    recsfnon $p |- recs ( F ) Fn On $=
+      ( ve vf va vb vc vd cv wfn cfv cres wceq wral con0 wrex cab crecs rdglem1
+      wa df-recs tfr1 ) BCDHZEHZIFHZUBJUBUDKAJLFUCMSENODPGAQAEFBCDGAREFDATUA $.
+      $( [18-Jan-2015] $)
+
+    $( Strong transfinite recursion in terms of all previous values. $)
+    recsval $p |- ( A e. On -> ( recs ( F ) ` A ) =
+          ( F ` ( recs ( F ) |` A ) ) ) $=
+      ( vg ve vf va vb vc vd cv crecs cfv cres wceq fveq2 reseq2 fveq2d eqeq12d
+      con0 wfn wral wa wrex cab rdglem1 df-recs tfr2 vtoclga ) CJZBKZLZUJUIMZBL
+      ZNAUJLZUJAMZBLZNCASUIANZUKUNUMUPUIAUJOUQULUOBUIAUJPQRDECFJZGJZTHJZURLURUT
+      MBLNHUSUAUBGSUCFUDIUJBGHDEFIBUEGHFBUFUGUH $.
+      $( [18-Jan-2015] $)
   $}
 
 $(
@@ -9120,44 +9143,100 @@ $)
   $}
 
   ${
-    $d G x y f z w v a b c $.  $d A x y f z w v a b c $.
-    $d F x f y w v z a b c $.
-    dnnumch.f $e |- F = U. { f | E. x e. On ( f Fn x /\ A. y e. x ( f ` y ) =
-        ( G ` ( A \ ran ( f |` y ) ) ) ) } $.
-    $( Define an enumeration of a set from a choice function: rearrangement for
-       transfinite recursion. $)
-    dnnumch1 $p |- F = U. { f | E. x e. On ( f Fn x /\ A. y e. x ( f ` y ) =
-        ( ( z e. _V |-> ( G ` ( A \ ran z ) ) ) ` ( f |` y ) ) ) } $=
-      ? $.
+    $d F a b $.  $d A a b $.
+    $( Non-emptyness of an initial segment in terms of range. $)
+    inisegn0 $p |- ( A e. ran F <-> ( `' F " { A } ) =/= (/) ) $=
+      ( va vb crn wcel cvv ccnv csn cima c0 wne elex wn wceq snprc imaeq2d ima0
+      biimpi cv syl6eq necon1ai eleq1 sneq neeq1d wbr cab wex abn0 iniseg ax-mp
+      vex neeq1i elrn 3bitr4ri vtoclbg pm5.21nii ) ABEZFZAGFZBHZAIZJZKLZAURMUTV
+      CKUTNZVCVAKJKVEVBKVAVEVBKOAPSQVARUAUBCTZURFZVAVFIZJZKLZUSVDCAGVFAURUCVFAO
+      ZVIVCKVKVHVBVAVFAUDQUEDTVFBUFZDUGZKLVLDUHVJVGVLDUIVIVMKVFGFVIVMOCULZDBVFG
+      UJUKUMDVFBVNUNUOUPUQ $.
+      $( [18-Jan-2015] $)
+  $}
 
-    $( Define an enumeration of a set from a choice function: we have a
-       function on the ordinals. $)
-    dnnumch2 $p |- F Fn On $=
-      ? $.
-
+  ${
+    $d F v w x y $.  $d G v w x y z $.  $d A v w x y z $.  $d ph v x w $.
+    dnnumch.f $e |- F = recs ( ( z e. _V |-> ( G ` ( A \ ran z ) ) ) ) $.
     dnnumch.a $e |- ( ph -> A e. V ) $.
-    dnnumch.h $e |- ( ph -> A. v e. ~P A ( y =/= (/) -> ( G ` y ) e. y ) ) $.
+    dnnumch.g $e |- ( ph -> A. y e. ~P A ( y =/= (/) -> ( G ` y ) e. y ) ) $.
     $( Define an enumeration of a set from a choice function; second part, it
        restricts to a bijection. _EDITORIAL: overlaps ~ aceq8a _ $)
-    dnnumch3 $p |- ( ph -> E. w e. On ( F |` w ) -1-1-onto-> A ) $=
-      ? $.
+    dnnumch1 $p |- ( ph -> E. x e. On ( F |` x ) : x -1-1-onto-> A ) $=
+      ( vw wcel cv cdif c0 cfv con0 wceq cvv cima wne wi wral cres wf1o wrex wa
+      crn cmpt crecs recsval fveq1i wfun wfn fneq1i mpbir fnfun ax-mp resfunexg
+      recsfnon vex mp2an rneq df-ima syl6eqr difeq2d fveq2d weq cbvmptv reseq1i
+      fvex fvmpt fveq2i eqtr3i 3eqtr4g ad2antlr cpw wss difss elpw2g syl mpbiri
+      wb neeq1 fveq2 id eleq12d imbi12d rcla4va syl2anc adantr imp ex ralrimiva
+      eqeltrd tz7.49c ) AEHMZEFBNZUAZOZPUBZWSFQZXAMZUCZBRUDWSEFWSUEZUFBRUGJAXEB
+      RAWSRMZUHZXBXDXHXBUHXCXAGQZXAXGXCXISAXBXGWSDTEDNZUIZOZGQZUJZUKZQXOWSUEZXN
+      QZXCXIWSXNULWSFXOIUMXFXNQZXIXQXFTMZXRXISFUNZWSTMXSFRUOZXTYAXORUOXNVARFXOI
+      UPUQZRFURUSBVBFWSTUTVCLXFELNZUIZOZGQZXITXNYCXFSZYEXAGYGYDWTEYGYDXFUIWTYCX
+      FVDFWSVEVFVGVHDLTXMYFDLVIZXLYEGYHXKYDEXJYCVDVGVHVJXAGVLVMUSXFXPXNFXOWSIVK
+      VNVOVPVQXHXBXIXAMZAXBYIUCZXGAXAEVRZMZCNZPUBZYMGQZYMMZUCZCYKUDYJAYLXAEVSZE
+      WTVTAWRYLYRWDJXAEHWAWBWCKYQYJCXAYKYMXASZYNXBYPYIYMXAPWEYSYOXIYMXAYMXAGWFY
+      SWGWHWIWJWKWLWMWPWNWOBEHFYBWQWK $.
+      $( [18-Jan-2015] $)
 
     $( Define an enumeration (weak dominance version) of a set from a choice
        function. $)
-    dnnumch4 $p |- ( ph -> A C_ ran F ) $=
-      ? $.
+    dnnumch2 $p |- ( ph -> A C_ ran F ) $=
+      ( vx cv cres wf1o con0 wrex crn wss dnnumch1 a1i wi wceq f1ofo forn resss
+      wfo syl rnss ax-mp eqsstr3d rexlimdvw mpd ) AKLZDEUMMZNZKOPDEQZRZAKBCDEFG
+      HIJSAUOUQKOUOUQUAAUODUNQZUPUOUMDUNUFURDUBUMDUNUCUMDUNUDUGURUPRZUOUNERUSEU
+      MUEUNEUHUITUJTUKUL $.
+      $( [18-Jan-2015] $)
+
+    $( Value of the ordinal injection function. $)
+    dnnumch3lem $p |- ( ( ph /\ w e. A ) ->
+        ( ( x e. A |-> |^| ( `' F " { x } ) ) ` w ) = |^| ( `' F " { w } ) ) $=
+      ( cv wcel csn cima cint con0 cmpt cfv wa ccnv wceq simpr wss wne cnvimass
+      c0 cdm wfn cvv cdif crecs recsfnon fneq1i mpbir fndm ax-mp sseqtri adantr
+      crn a1i dnnumch2 sselda inisegn0 sylib oninton syl2anc weq imaeq2d inteqd
+      sneq eqid fvmptg ) AEMZFNZUAZVPGUBZVOOZPZQZRNZVOBFVRBMZOZPZQZSZTWAUCAVPUD
+      VQVTRUEZVTUHUFZWBAWHVPWHAVTGUIZRGVSUGGRUJZWJRUCWKDUKFDMVAULHTSZUMZRUJWLUN
+      RGWMJUOUPRGUQURUSVBUTVQVOGVAZNWIAFWNVOACDFGHIJKLVCVDVOGVEVFVTVGVHBVOWFWAF
+      RWGBEVIZWEVTWOWDVSVRWCVOVLVJVKWGVMVNVH $.
+      $( [18-Jan-2015] $)
 
     $( Define an injection from a set into the ordinals using a choice
        function. $)
-    dnnumch5 $p |- ( ph -> ( z e. A |-> |^| ( `' F " { z } ) )
+    dnnumch3 $p |- ( ph -> ( x e. A |-> |^| ( `' F " { x } ) )
             : A -1-1-> On ) $=
-      ? $.
+      ( vv vw con0 cv cfv wceq wcel wa cvv ccnv csn cima cint cmpt weq wral wf1
+      wf wi wss wne cdm cnvimass wfn crn cdif crecs recsfnon fneq1i mpbir ax-mp
+      c0 fndm sseqtri dnnumch2 sselda inisegn0 sylib oninton sylancr eqid fmptd
+      dnnumch3lem adantrr adantrl eqeq12d fveq2 adantl onint vex fniniseg mp2an
+      wb simprbi syl adantr 3eqtr3d ex sylbid ralrimivva dff13 sylanbrc ) AENBE
+      FUAZBOZUBZUCZUDZUEZUILOZWSPZMOZWSPZQZLMUFZUJZMEUGLEUGENWSUHABEWRNWSAWOERS
+      ZWQNUKWQVCULZWRNRWQFUMZNFWPUNFNUOZXINQXJDTEDOUPUQGPUEZURZNUOXKUSNFXLIUTVA
+      ZNFVDVBZVEXGWOFUPZRXHAEXOWOACDEFGHIJKVFZVGWOFVHVIWQVJVKWSVLVMAXFLMEEAWTER
+      ZXBERZSSZXDWNWTUBZUCZUDZWNXBUBZUCZUDZQZXEXSXAYBXCYEAXQXAYBQXRABCDLEFGHIJK
+      VNVOAXRXCYEQXQABCDMEFGHIJKVNVPVQXSYFXEXSYFSYBFPZYEFPZWTXBYFYGYHQXSYBYEFVR
+      VSXSYGWTQZYFAXQYIXRAXQSZYBYARZYIYJYANUKYAVCULZYKYAXINFXTUNXNVEYJWTXORYLAE
+      XOWTXPVGWTFVHVIYAVTVKYKYBNRZYIXJWTTRYKYMYISWDXMLWANWTYBFTWBWCWEWFVOWGXSYH
+      XBQZYFAXRYNXQAXRSZYEYDRZYNYOYDNUKYDVCULZYPYDXINFYCUNXNVEYOXBXORYQAEXOXBXP
+      VGXBFVHVIYDVTVKYPYENRZYNXJXBTRYPYRYNSWDXMMWANXBYEFTWBWCWEWFVPWGWHWIWJWKLM
+      ENWSWLWM $.
+      $( [18-Jan-2015] $)
 
     dnwech.h $e |- H = { <. v , w >. | |^| ( `' F " { v } ) e.
         |^| ( `' F " { w } ) } $.
     $( Define a well-ordering from a choice function. $)
     dnwech $p |- ( ph -> H We A ) $=
-      ? $.
+      ( vx wwe cep copab con0 cin ccnv csn cima cint cmpt cfv wbr wf1o dnnumch3
+      cv crn wf1 f1f1orn syl wss wf f1f frn 3syl epweon wess ee10 eqid sylc cxp
+      f1owe wceq wb wcel fvex epelc dnnumch3lem adantrr adantrl eleq12d syl5rbb
+      pm5.32da opabbidv incom df-xp ineq12i inopab 3eqtri ineq1i 3eqtr4g weinxp
+      wa weeq1 3bitr4g mpbird ) AFIPZFEUJZOFGUAZOUJUBUCUDUEZUFZDUJZWNUFZQUGZEDR
+      ZPZAFWNUKZWNUHZXAQPZWTAFSWNULZXBAOBCFGHJKLMUIZFSWNUMUNAXASUOZSQPXCAXDFSWN
+      UPXFXEFSWNUQFSWNURUSUTXASQVAVBEDFXAWSQWNWSVCVFVDAFIFFVEZTZPZFWSXGTZPZWKWT
+      AXHXJVGXIXKVHAWLFVIZWPFVIZWGZWMWLUBUCUDZWMWPUBUCUDZVIZWGZEDRZXNWRWGZEDRZX
+      HXJAXRXTEDAXNXQWRWRWOWQVIAXNWGZXQWOWQWLWNVJWPWNVJVKYBWOXOWQXPAXLWOXOVGXMA
+      OBCEFGHJKLMVLVMAXMWQXPVGXLAOBCDFGHJKLMVLVNVOVPVQVRXHXGITXNEDRZXQEDRZTXSIX
+      GVSXGYCIYDEDFFVTZNWAXNXQEDWBWCXJXGWSTYCWSTYAWSXGVSXGYCWSYEWDXNWREDWBWCWEF
+      XHXJWHUNFIWFFWSWFWIWJ $.
+      $( [18-Jan-2015] $)
   $}
 
   $(
