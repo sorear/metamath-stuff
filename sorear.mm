@@ -9240,6 +9240,141 @@ $)
   $}
 
   ${
+    $d U y z a b c d e f $.  $d S x y a b c d e f g $.  $d R x y a b c d e f $.
+    $d ph x y z c d e f g $.  $d A x y z a b c d e f g $.
+    $d F x y z a b c d e f g $.  $d T a b c d e f $.  $d B a b c d e f $.
+    fnwe2.su $e |- ( z = ( F ` x ) -> S = U ) $.
+    fnwe2.t $e |- T = { <. x , y >. | ( ( F ` x ) R ( F ` y ) \/
+        ( ( F ` x ) = ( F ` y ) /\ x U y ) ) } $.
+    $( Lemma for ~ fnwe2 .  Substitute variables. $)
+    fnwe2val $p |- ( a T b <-> ( ( F ` a ) R ( F ` b ) \/
+        ( ( F ` a ) = ( F ` b ) /\ a [_ ( F ` a ) / z ]_ S b ) ) ) $=
+      ( cv cfv wbr wceq wa wo csb vex fveq2 breqan12d eqeqan12d simpl fvex wcel
+      ax-17 csbief csbeq1d syl5eqr adantr simpr breq123d anbi12d orbi12d braba
+      weq ) AMZHNZBMZHNZDOZUSVAPZURUTGOZQZRIMZHNZJMZHNZDOZVGVIPZVFVHCVGESZOZQZR
+      ABVFVHFITJTAIUQZBJUQZQZVBVJVEVNVOVPUSVGVAVIDURVFHUAZUTVHHUAZUBVQVCVKVDVMV
+      OVPUSVGVAVIVRVSUCVQURVFUTVHGVLVOVPUDVOGVLPVPVOGCUSESVLCIUSEGURHUEVFGUFCUG
+      KUHVOCUSVGEVRUIUJUKVOVPULUMUNUOLUP $.
+      $( [19-Jan-2015] $)
+
+    fnwe2.s $e |- ( ( ph /\ x e. A ) ->
+        U We { y e. A | ( F ` y ) = ( F ` x ) } ) $.
+    $( Lemma for ~ fnwe2 .  Substitution in well-ordering hypothesis. $)
+    fnwe2lem1 $p |- ( ( ph /\ a e. A ) ->
+        [_ ( F ` a ) / z ]_ S We { y e. A | ( F ` y ) = ( F ` a ) } ) $=
+      ( cv wcel cfv wceq wwe ax-17 crab csb wral wi ralrimiva weq fveq2 csbeq1d
+      wb fvex csbief syl6eq weeq1 syl eqeq2d rabbidv weeq2 bitrd cbvral biimpri
+      ra4 3syl imp ) AKOZEPZCOJQZVDJQZRZCEUAZDVGGUBZSZAVFBOZJQZRZCEUAZISZBEUCZV
+      KKEUCZVEVKUDAVPBENUEVRVQVKVPKBEVKBTVPKTKBUFZVKVIISZVPVSVJIRVKVTUIVSVJDVMG
+      UBIVSDVGVMGVDVLJUGZUHDKVMGIVLJUJVDIPDTLUKULVIVJIUMUNVSVIVORVTVPUIVSVHVNCE
+      VSVGVMVFWAUOUPVIVOIUQUNURUSUTVKKEVAVBVC $.
+      $( [19-Jan-2015] $)
+
+    fnwe2.f $e |- ( ph -> ( F |` A ) : A --> B ) $.
+    fnwe2.r $e |- ( ph -> R We B ) $.
+
+    ${
+      $d ph b $.
+      fnwe2lem2.a $e |- ( ph -> a C_ A ) $.
+      fnwe2lem2.n0 $e |- ( ph -> a =/= (/) ) $.
+      $( Lemma for ~ fnwe2 .  An element which is in a minimal fiber and
+         minimal within its fiber is minimal globally; thus ` T ` is
+         well-founded. $)
+      fnwe2lem2 $p |- ( ph -> E. b e. a A. c e. a -. c T b ) $=
+        ( ve vd vf vg cv wbr wn cres cima wral wrex cvv wcel wfr wss c0 wf wfun
+        wne ffun vex funimaex 3syl wwe syl crn imassrn frn syl5ss cdm cin incom
+        wefr wceq fdm sseqtr4d df-ss sylib syl5eq eqnetrd imadisj necon3bii fri
+        sylibr syl22anc cfv wb df-ima rexeq ax-mp wfn ffn fnssres syl2anc breq2
+        notbid ralbidv rexrn syl5bb wel wa raleqi breq1 adantr resabs1 ad2antrr
+        ralrn fveq1d fvres adantl eqtrd ad2antlr breq12d ralbidva rexbidva crab
+        bitrd csb inex1 a1i sselda fnwe2lem1 syldan adantrr simprl fveq2 eqeq1d
+        weq elrab sylanbrc elin wi anbi2i bitri rcla4va expr ex syl5bi mpd ne0i
+        inss2 eqidd imbi1i impexp ralbii2 simplrl simplrr breq1d simprrr breq2d
+        wo mtbird ad3antrrr simprr simplr anbi12d imbi12d mp2and eqtr2d csbeq1d
+        simpr eleq1 breqd mtbid imnan ioran fnwe2val sylnibr ralrimiva rexlimdv
+        rcla4ev rexlimdva sylbid ) AUBUFZUCUFZGUGZUHZUBKEUIZLUFZUJZUKZUCUWAULZN
+        UFZMUFZIUGZUHZNUVTUKZMUVTULZAUWAUMUNZFGUOZUWAFUPUWAUQUTZUWCAEFUVSURZUVS
+        USUWJREFUVSVAUVSUVTLVBZVCVDAFGVEUWKSFGVNVFAUWAUVSVGZFUVSUVTVHAUWMUWOFUP
+        REFUVSVIVFVJAUVSVKZUVTVLZUQUTUWLAUWQUVTUQAUWQUVTUWPVLZUVTUWPUVTVMAUVTUW
+        PUPUWRUVTVOAUVTEUWPTAUWMUWPEVOREFUVSVPVFVQUVTUWPVRVSVTUAWAUWAUQUWQUQUVS
+        UVTWBWCWEUCUBFUWAUMGWDWFAUWCUVPKWGZUDUFZKWGZGUGZUHZUCUVTUKZUDUVTULZUWIA
+        UWCUVOUWTUVSUVTUIZWGZGUGZUHZUBUWAUKZUDUVTULZUXEUWCUWBUCUXFVGZULZAUXKUWA
+        UXLVOUWCUXMWHUVSUVTWIZUWBUCUWAUXLWJWKAUXFUVTWLZUXMUXKWHAUVSEWLZUVTEUPZU
+        XOAUWMUXPREFUVSWMVFTEUVTUVSWNWOZUWBUXJUCUDUVTUXFUVPUXGVOZUVRUXIUBUWAUXS
+        UVQUXHUVPUXGUVOGWPWQWRWSVFWTAUXJUXDUDUVTAUDLXAZXBZUXJUVPUXFWGZUXGGUGZUH
+        ZUCUVTUKZUXDAUXJUYEWHUXTUXJUXIUBUXLUKZAUYEUXIUBUWAUXLUXNXCAUXOUYFUYEWHU
+        XRUXIUYDUBUCUVTUXFUVOUYBVOUXHUYCUVOUYBUXGGXDWQXHVFWTXEUYAUYDUXCUCUVTUYA
+        UCLXAZXBZUYCUXBUYHUYBUWSUXGUXAGUYHUYBUVPKUVTUIZWGZUWSUYHUVPUXFUYIAUXFUY
+        IVOZUXTUYGAUXQUYKTKUVTEXFVFXGZXIUYGUYJUWSVOUYAUVPUVTKXJXKXLUYHUXGUWTUYI
+        WGZUXAUYHUWTUXFUYIUYLXIUXTUYMUXAVOAUYGUWTUVTKXJXMXLXNWQXOXRXPXRAUXDUWIU
+        DUVTAUXTUXDUWIAUXTUXDXBZXBZUEUFZUVODUXAHXSZUGZUHZUEUVTCUFZKWGZUXAVOZCEX
+        QZVLZUKZUBVUDULZUWIUYOVUDUMUNZVUCUYQUOZVUDVUCUPZVUDUQUTZVUFVUGUYOUVTVUC
+        UWNXTYAAUXTVUHUXDAUXTUWTEUNZVUHAUVTEUWTTYBZAVUKXBVUCUYQVEVUHABCDEGHIJKU
+        DOPQYCVUCUYQVNVFYDYEVUIUYOUVTVUCUUBYAUYOUWTVUDUNZVUJUYOUXTUWTVUCUNZVUMA
+        UXTUXDYFUYOVUKUXAUXAVOZVUNAUXTVUKUXDVULYEUYOUXAUUCVUBVUOCUWTECUDYIVUAUX
+        AUXAUYTUWTKYGYHYJYKUWTUVTVUCYLYKVUDUWTUUAVFUBUEVUCVUDUMUYQWDWFUYOVUEUWI
+        UBVUDUVOVUDUNZUBLXAZUVOEUNZUVOKWGZUXAVOZXBZXBZUYOVUEUWIYMZVUPVUQUVOVUCU
+        NZXBVVBUVOUVTVUCYLVVDVVAVUQVUBVUTCUVOECUBYIVUAVUSUXAUYTUVOKYGYHYJYNYOUY
+        OVVBVVCVUEUYPEUNZUYPKWGZUXAVOZXBZUYSYMZUEUVTUKZUYOVVBXBZUWIUYSVVIUEVUDU
+        VTUYPVUDUNZUYSYMUELXAZVVHXBZUYSYMVVMVVIYMVVLVVNUYSVVLVVMUYPVUCUNZXBVVNU
+        YPUVTVUCYLVVOVVHVVMVUBVVGCUYPECUEYIVUAVVFUXAUYTUYPKYGYHYJYNYOUUDVVMVVHU
+        YSUUEYOUUFVVKVVJUWIVVKVVJXBZVUQUWDUVOIUGZUHZNUVTUKZUWIUYOVUQVVAVVJUUGVV
+        PVVRNUVTVVPNLXAZXBZUWDKWGZVUSGUGZVWBVUSVOZUWDUVODVWBHXSZUGZXBZUULZVVQVW
+        AVWCUHVWGUHZVWHUHVWAVWCVWBUXAGUGZVWAVVTUXDVWJUHZVVPVVTUVBVVKUXDVVJVVTAU
+        XTUXDVVBUUHXGUXCVWKUCUWDUVTUCNYIZUXBVWJVWLUWSVWBUXAGUVPUWDKYGUUIWQYPWOV
+        WAVUSUXAVWBGVVKVUTVVJVVTUYOVUQVURVUTUUJZXGUUKUUMVWAVWDVWFUHZYMVWIVVPVVT
+        VWDVWNVVPVVTVWDXBZXBZUWDUVOUYQUGZVWFVWPUWDEUNZVWBUXAVOZVWQUHZVVPVVTVWRV
+        WDVVPUVTEUWDAUXQUYNVVBVVJTUUNYBYEVWPVWBVUSUXAVVPVVTVWDUUOZVVKVUTVVJVWOV
+        WMXGZXLVWPVVTVVJVWRVWSXBZVWTYMZVVPVVTVWDYFVVKVVJVWOUUPVVIVXDUEUWDUVTUEN
+        YIZVVHVXCUYSVWTVXEVVEVWRVVGVWSUYPUWDEUVCVXEVVFVWBUXAUYPUWDKYGYHUUQVXEUY
+        RVWQUYPUWDUVOUYQXDWQUURYPWOUUSVWPUYQVWEUWDUVOVWPDUXAVWBHVWPVWBVUSUXAVXA
+        VXBUUTUVAUVDUVEYQVWDVWFUVFVSVWCVWGUVGYKBCDGHIJKNUBOPUVHUVIUVJUWHVVSMUVO
+        UVTMUBYIZUWGVVRNUVTVXFUWFVVQUWEUVOUWDIWPWQWRUVLWOYRYSYRYSUVKYTYQUVMUVNY
+        T $.
+        $( [19-Jan-2015] $)
+    $}
+
+    ${
+      fnwe2lem3.a $e |- ( ph -> a e. A ) $.
+      fnwe2lem3.b $e |- ( ph -> b e. A ) $.
+      $( Lemma for ~ fnwe2 .  Trichotomy. $)
+      fnwe2lem3 $p |- ( ph -> ( a T b \/ a = b \/ b T a ) ) $=
+        ( cfv wbr wceq w3o weq wor wcel wwe weso syl cres fvres ffvelrn syl2anc
+        cv wf eqeltrrd solin syl12anc wa csb wo orc adantl fnwe2val sylibr crab
+        3mix1 fnwe2lem1 mpdan adantr eqidd fveq2 eqeq1d elrab eqcomd simplr jca
+        sylanbrc simpr olcd 3mix2 csbeq1 breqd biimpa 3mix3 3jaodan ) ALUOZKUAZ
+        MUOZKUAZGUBZWIWKUCZWKWIGUBZUDZWHWJIUBZLMUEZWJWHIUBZUDZAFGUFZWIFUGWKFUGW
+        OAFGUHWTRFGUIUJAWHKEUKZUAZWIFAWHEUGZXBWIUCSWHEKULUJAEFXAUPZXCXBFUGQSEFW
+        HXAUMUNUQAWJXAUAZWKFAWJEUGZXEWKUCTWJEKULUJAXDXFXEFUGQTEFWJXAUMUNUQFWIWK
+        GURUSAWLWSWMWNAWLUTZWPWSXGWLWMWHWJDWIHVAZUBZUTZVBZWPWLXKAWLXJVCVDBCDGHI
+        JKLMNOVEZVFWPWQWRVHZUJAWMUTZXIWQWJWHXHUBZUDZWSXNCUOZKUAZWIUCZCEVGZXHUFZ
+        WHXTUGZWJXTUGZXPAYAWMAXTXHUHZYAAXCYDSABCDEGHIJKLNOPVIVJXTXHUIUJVKXNXCWI
+        WIUCZYBAXCWMSVKXNWIVLXSYECWHECLUEXRWIWIXQWHKVMVNVOVSXNXFWKWIUCZYCAXFWMT
+        VKXNWIWKAWMVTVPXSYFCWJECMUEXRWKWIXQWJKVMVNVOVSXTWHWJXHURUSXNXIWSWQXOXNX
+        IUTZWPWSYGXKWPYGXJWLYGWMXIAWMXIVQXNXIVTVRWAXLVFXMUJWQWSXNWQWPWRWBVDXNXO
+        UTZWRWSYHWNYFWJWHDWKHVAZUBZUTZVBZWRYHYKWNYHYFYJYHWIWKAWMXOVQVPXNXOYJXNX
+        HYIWJWHWMXHYIUCADWIWKHWCVDWDWEVRWABCDGHIJKMLNOVEZVFWRWPWQWFZUJWGVJAWNUT
+        ZWRWSYOYLWRWNYLAWNYKVCVDYMVFYNUJWGVJ $.
+        $( [19-Jan-2015] $)
+    $}
+
+    $d ph a b $.
+    $( A well-ordering can be constructed on a partitioned set by patching
+       together well-orderings on each partition using a well-ordering on the
+       partitions themselves.  Similar to ~ fnwe but does not require the
+       within-partition ordering to be globally well. $)
+    fnwe2 $p |- ( ph -> T We A ) $=
+      ( va vb vd cv vc wfr wbr weq w3o wral wwe wss c0 wne wa wrex wal wcel cfv
+      wn wi wceq crab adantlr cres wf adantr simprl simprr fnwe2lem2 ex alrimiv
+      df-fr sylibr fnwe2lem3 ralrimivva dfwe2 sylanbrc ) AEIUBZQTZRTZIUCQRUDVQV
+      PIUCUEZREUFQEUFEIUGAVPEUHZVPUIUJZUKZSTUATIUCUPSVPUFUAVPULZUQZQUMVOAWCQAWA
+      WBAWAUKBCDEFGHIJKQUASLMABTZEUNZCTKUOWDKUOURCEUSJUGZWANUTAEFKEVAVBZWAOVCAF
+      GUGZWAPVCAVSVTVDAVSVTVEVFVGVHQUASEIVIVJAVRQREEAVPEUNZVQEUNZUKZUKBCDEFGHIJ
+      KQRLMAWEWFWKNUTAWGWKOVCAWHWKPVCAWIWJVDAWIWJVEVKVLQREIVMVN $.
+      $( [19-Jan-2015] $)
+  $}
+
+  ${
     $d z y a b c d $.
     aomclem1.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
         ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
@@ -9330,45 +9465,89 @@ $)
       $( [19-Jan-2015] $)
   $}
 
-  $(
-    $e |- M = { <. l , m >. | ( ( l C_ ( R1 ` U. dom d ) /\ m C_ ( R1 ` U. dom d ) ) /\ ( l =/= m /\ sup ( ( ( l \ m ) u. ( m \ l ) ) , ( R1 ` U. dom d ) , `' ( d ` U. dom d ) ) e. m ) ) }
-    $e |- L = ( k e. ~P ( R1 ` dom d ) |-> sup ( ( E ` k ) , ( R1 ` dom d ) , `' M ) )
-    $e |- K = ( j e. _V |-> ( L ` ( ( R1 ` dom d ) \ ran j ) ) )
-    $e |- J = U. { g | E. h e. On ( g Fn h /\ A. i e. h ( g ` i ) = ( K ` ( g |` i ) ) ) }
-    d free.  successor case
-    $e |- I = { <. x , y >. | ( ( x e. ( R1 ` dom d ) /\ y e. ( R1 ` dom d ) ) /\ |^| ( `' J " { x } ) e. |^| ( `' J " { y } ) ) } $.
-    limit case, patch together well-orderings
-    $e |- H = { <. e , f >. | ( ( e e. ( R1 ` dom d ) /\ f e. ( R1 ` dom d ) ) /\ ( ( rank ` e ) _E ( rank ` f ) \/ ( ( rank ` e ) = ( rank ` f ) /\ e ( d ` ( rank ` e ) ) f ) ) ) } $>
-    case switcher for transfinite recursion
-    $e |- G = ( d e. _V |-> if ( ( Lim dom d \/ d = (/) ) , H , I ) ) $.
-      $e |- -. dom d = U. dom d
-      $e |- dom d e. On
-        $e |- x e. dom d -> ( d ` x ) We ( R1 ` x )
-          $p |- M Or ( R1 ` dom d )
-        $e |- dom d C_ ?
-        $e |- ( ph -> A. y e. ( ~P ? \ { (/) } ) ( E ` y ) e. ( ( ~P y i^i Fin ) \ { (/) } ) ) $.
-          $e |- k C_ ( R1 ` dom d )
-          $e |- k =/= (/)
-          $p |- ( L ` k ) e. k
-      $p |- I We ( R1 ` dom d )
-
-      $e |- dom d = U. dom d
-      $e |- dom d e. On
-      $p |- H We ( R1 ` dom d )
-
-      $e |- dom d e. On
-      $e |- dom d C_ ?
-      $e |- x e. dom d -> ( d ` x ) We ( R1 ` x )
-      $p |-
-    using transfinite recursion, build up the well-orderings.  (F`a) well-orders (R1`a)
-    $e |- F = U. { a | E. b e. On ( a Fn b /\ A. c e. b ( a ` c ) = ( G ` ( a |` c ) ) ) } $.
-
-    $p |- ( X e. U. ( R1 " On ) -> E. r r We X ) $.
-  $)
-
+  ${
+    $d z y a b c d $.  $d ph a b c $.
+    aomclem4.f $e |- F = { <. a , b >. | ( ( rank ` a ) _E ( rank ` b ) \/
+        ( ( rank ` a ) = ( rank ` b ) /\ a ( z ` suc ( rank ` a ) ) b ) ) } $.
+    aomclem4.on $e |- ( ph -> dom z e. On ) $.
+    aomclem4.su $e |- ( ph -> dom z = U. dom z ) $.
+    aomclem4.we $e |- ( ph -> A. a e. dom z ( z ` a ) We ( R1 ` a ) ) $.
+    $( Lemma for ~ dfac11 .  Limit case.  Patch together well-orderings
+       constructed so far using ~ fnwe2 to cover the limit rank. $)
+    aomclem4 $p |- ( ph -> F We ( R1 ` dom z ) ) $=
+      ( vc cv cdm cr1 cfv con0 cep csuc crnk wf a1i wceq suceq fveq2d cima cuni
+      wss cres rankf fssres syl2anc wwe epweon fnwe2 ) ADEJBKZLMNZOPJKZQZUNNCDK
+      RNZQZUNNRUPURUAUQUSUNUPURUBUCF?AMOUDUEZORSZUOUTUFUOORUOUGSVAAUHT?UTOUORUI
+      UJOPUKAULTUM $.
+  $}
 
   ${
-    $d x z f $.
+    $d z y a b c d $.  $d ph a b $.  $d C a b c d $.  $d D a b c d $.
+    aomclem5.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
+        ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
+          ( d ( z ` U. dom z ) c -> ( d e. a <-> d e. b ) ) ) } $.
+    aomclem5.c $e |- C = ( a e. _V |->
+        sup ( ( y ` a ) , ( R1 ` dom z ) , B ) ) $.
+    aomclem5.d $e |- D = recs ( ( a e. _V |->
+        ( C ` ( ( R1 ` dom z ) \ ran a ) ) ) ) $.
+    aomclem5.e $e |- E = { <. a , b >. | |^| ( `' D " { a } ) e.
+        |^| ( `' D " { b } ) } $.
+    aomclem5.f $e |- F = { <. a , b >. | ( ( rank ` a ) _E ( rank ` b ) \/
+        ( ( rank ` a ) = ( rank ` b ) /\ a ( z ` suc ( rank ` a ) ) b ) ) } $.
+    aomclem5.g $e |- G = ( if ( dom z = U. dom z , F , E ) i^i
+        ( ( R1 ` dom z ) X. ( R1 ` dom z ) ) ) $.
+    aomclem5.on $e |- ( ph -> dom z e. On ) $.
+    aomclem5.we $e |- ( ph -> A. a e. dom z ( z ` a ) We ( R1 ` a ) ) $.
+    aomclem5.a $e |- ( ph -> A e. On ) $.
+    aomclem5.za $e |- ( ph -> dom z C_ A ) $.
+    aomclem5.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
+        ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
+    $( Lemma for ~ dfac11 .  Combine the successor case with the limit case. $)
+    aomclem5 $p |- ( ph -> G We ( R1 ` dom z ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d z y a b c d $.  $d ph a b $.  $d C a b c d $.  $d D a b c d $.
+    aomclem6.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
+        ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
+          ( d ( z ` U. dom z ) c -> ( d e. a <-> d e. b ) ) ) } $.
+    aomclem6.c $e |- C = ( a e. _V |->
+        sup ( ( y ` a ) , ( R1 ` dom z ) , B ) ) $.
+    aomclem6.d $e |- D = recs ( ( a e. _V |->
+        ( C ` ( ( R1 ` dom z ) \ ran a ) ) ) ) $.
+    aomclem6.e $e |- E = { <. a , b >. | |^| ( `' D " { a } ) e.
+        |^| ( `' D " { b } ) } $.
+    aomclem6.f $e |- F = { <. a , b >. | ( ( rank ` a ) _E ( rank ` b ) \/
+        ( ( rank ` a ) = ( rank ` b ) /\ a ( z ` suc ( rank ` a ) ) b ) ) } $.
+    aomclem6.g $e |- G = ( if ( dom z = U. dom z , F , E ) i^i
+        ( ( R1 ` dom z ) X. ( R1 ` dom z ) ) ) $.
+    aomclem6.h $e |- H = recs ( ( z e. _V |-> G ) ) $.
+    aomclem6.a $e |- ( ph -> A e. On ) $.
+    aomclem6.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
+        ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
+    $( Lemma for ~ dfac11 .  Transfinite induction, close over ` z ` . $)
+    aomclem6 $p |- ( ph -> ( G ` A ) We ( R1 ` A ) ) $=
+      ? $.
+
+    $( Lemma for ~ dfac11 . ` ( R1 `` A ) ` is well-orderable. $)
+    aomclem7 $p |- ( ph -> E. b b We ( R1 ` A ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d ph b c d e f g h i j k l y $.  $d A a b c d e f g h i j k l y $.
+    aomclem8.a $e |- ( ph -> A e. On ) $.
+    aomclem8.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
+        ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
+    $( Lemma for ~ dfac11 .  Perform variable substitutions.  This is the most
+       we can say without invoking regularity. $)
+    aomclem8 $p |- ( ph -> E. b b We ( R1 ` A ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d x z f a b $.
     $( The right hand side of this theorem (compare with ~ ac4 ), sometimes
        known as the "axiom of multiple choice", is a choice equivalent.
        Curiously, this statement cannot be proved without ~ ax-reg , despite
