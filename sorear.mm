@@ -8787,19 +8787,6 @@ $)
   $}
 
   ${
-    $( A nonempty subset of a well-ordered set contains its infimum. $)
-    weinfmcl $p |- ( ( R We A /\ B C_ A /\ B =/= (/) ) ->
-        sup ( B , A , `' R ) e. B ) $=
-      ? $.
-
-    $( No element of a subset of a well-ordered set is less than the
-       infimum. $)
-    weinfmnlt $p |- ( ( R We A /\ B C_ A /\ X e. B ) ->
-        -. X R sup ( B , A , `' R ) ) $=
-      ? $.
-  $}
-
-  ${
     $d A x y z w a b c d $.  $d R x y z w a b c d $.  $d S x y z w a b c d $.
     $d P x y z w a b c d $.  $d Q x y z w a b c d $.  $d B a b c d $.
     $d X x y z w a b c d $.  $d T a b c d $.
@@ -9682,7 +9669,8 @@ $)
   $}
 
   ${
-    $d ph b c d e f g h i j k l y $.  $d A a b c d e f g h i j k l y $.
+    $d ph c d e f g h i j k l b $.  $d A a b c d e f g h i j k l $.
+    $d y a c d e f g h i j k l b $.
     aomclem8.a $e |- ( ph -> A e. On ) $.
     aomclem8.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
         ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
@@ -9741,7 +9729,7 @@ $)
   $}
 
   ${
-    $d x z f a b $.
+    $d x z f a b c d $.
     $( The right hand side of this theorem (compare with ~ ac4 ), sometimes
        known as the "axiom of multiple choice", is a choice equivalent.
        Curiously, this statement cannot be proved without ~ ax-reg , despite
@@ -9755,7 +9743,25 @@ $)
        bootstrapped up the cumulative hierarchy to any desired level. $)
     dfac11 $p |- ( CHOICE <-> A. x E. f A. z e. x ( z =/= (/) ->
         ( f ` z ) e. ( ( ~P z i^i Fin ) \ { (/) } ) ) ) $=
-      ? $.
+      ( va vb vd vc cv wex wal c0 wne cfv cfn csn wcel wi wral weq wceq wwe cpw
+      wchoi cin cdif df-ac aceq8 raleq exbidv cbvalv cmpt neeq1 eleq12d imbi12d
+      fveq2 cbvralv wel w3a sneqd eqid snex fvmpt 3ad2ant1 wss simp3 snssd elpw
+      id sylibr snfi a1i elin sylanbrc fvex snnz eldifsn eqeltrd 3exp a2d sylbi
+      ralimia vex mptex fveq1 eleq1d imbi2d ralbidv cla4ev syl exlimiv crnk cr1
+      alimi pwex cla4v rankon aomclem8 cvv r1rankid ax-mp eximdv alrimiv impbii
+      con0 wess bitri ) UCDHZEHZUAZEIZDJZBHZKLZXLCHZMZXLUBZNUDZKOUEZPZQZBAHZRZC
+      IZAJZDEUFXKYDXKFHZKLZYEGHZMZYEPZQZFXGRZGIZDJZYDDFGEUGYMYJFYARZGIZAJYDYLYO
+      DADASYKYNGYJFXGYAUHUIUJYOYCAYNYCGYNXMXLEYAXHYGMZOZUKZMZXRPZQZBYARZYCYNXMX
+      LYGMZXLPZQZBYARUUBYJUUEFBYAFBSZYFXMYIUUDYEXLKULUUFYHUUCYEXLYEXLYGUOUUFVHU
+      MUNUPUUEUUABYABAUQZXMUUDYTUUGXMUUDYTUUGXMUUDURZYSUUCOZXRUUGXMYSUUITUUDEXL
+      YQUUIYAYREBSYPUUCXHXLYGUOUSYRUTUUCVAZVBVCUUHUUIXQPZUUIKLZUUIXRPUUHUUIXPPZ
+      UUINPZUUKUUHUUIXLVDUUMUUHUUCXLUUGXMUUDVEVFUUIXLUUJVGVIUUNUUHUUCVJVKUUIXPN
+      VLVMUULUUHUUCXLYGVNVOVKUUIXQKVPVMVQVRVSWAVTYBUUBCYREYAYQAWBWCXNYRTZXTUUAB
+      YAUUOXSYTXMUUOXOYSXRXLXNYRWDWEWFWGWHWIWJWMVTVTYDXJDYDXGWKMZWLMZXHUAZEIZXJ
+      YDXTBUUQUBZRZCIZUUSYCUVBAUUTUUQUUPWLVNWNYAUUTTYBUVACXTBYAUUTUHUIWOUVAUUSC
+      UVACUUPBEUUPXDPUVAXGWPVKUVAVHWQWJWIXGUUQVDZUUSXJQXGWRPUVCDWBXGWRWSWTUVCUU
+      RXIEXGUUQXHXEXAWTWIXBXCXF $.
+      $( [20-Jan-2015] $)
   $}
 
 $(
