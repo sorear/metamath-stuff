@@ -9073,6 +9073,41 @@ $)
   $}
 
   ${
+    weeq12d.l $e |- ( ph -> R = S ) $.
+    weeq12d.r $e |- ( ph -> A = B ) $.
+    $( Equality deduction for total orderings. $)
+    soeq12d $p |- ( ph -> ( R Or A <-> S Or B ) ) $=
+      ( wor wceq wb soeq1 syl soeq2 bitrd ) ABDHZBEHZCEHZADEIOPJFBDEKLABCIPQJGB
+      CEMLN $.
+      $( [19-Jan-2015] $)
+
+    $( Equality deduction for founded relations. $)
+    freq12d $p |- ( ph -> ( R Fr A <-> S Fr B ) ) $=
+      ( wfr wceq wb freq1 syl freq2 bitrd ) ABDHZBEHZCEHZADEIOPJFBDEKLABCIPQJGB
+      CEMLN $.
+      $( [19-Jan-2015] $)
+
+    $( Equality deduction for well-orders. $)
+    weeq12d $p |- ( ph -> ( R We A <-> S We B ) ) $=
+      ( wwe wceq wb weeq1 syl weeq2 bitrd ) ABDHZBEHZCEHZADEIOPJFBDEKLABCIPQJGB
+      CEMLN $.
+      $( [19-Jan-2015] $)
+  $}
+
+  ${
+    $d A x $.  $d B x $.
+
+    $( Limit ordinals in the sense inclusive of zero contain all successors of
+       their members. $)
+    limsuc2 $p |- ( ( Ord A /\ A = U. A ) -> ( B e. A <-> suc B e. A ) ) $=
+      ( vx word cuni wceq wa wcel csuc cv wral ordunisuc2 biimpa suceq rcla4cva
+      eleq1d sylan ex wi wtr ordtr trsuc syl adantr impbid ) ADZAAEFZGZBAHZBIZA
+      HZUHUIUKUHCJZIZAHZCAKZUIUKUFUGUOCALMUNUKCBAULBFUMUJAULBNPOQRUFUKUISZUGUFA
+      TZUPAUAUQUKUIABUBRUCUDUE $.
+      $( [20-Jan-2015] $)
+  $}
+
+  ${
     $d R x y z w a b c $.  $d A x y z w a b c $.  $d F x y z w b c $.
     $d T a b c $.  $d U a b c $.
     wepwso.t $e |- T = { <. x , y >. | E. z e. A ( ( z e. y /\ -. z e. x ) /\
@@ -9475,10 +9510,21 @@ $)
     $( Lemma for ~ dfac11 .  Limit case.  Patch together well-orderings
        constructed so far using ~ fnwe2 to cover the limit rank. $)
     aomclem4 $p |- ( ph -> F We ( R1 ` dom z ) ) $=
-      ( vc cv cdm cr1 cfv con0 cep csuc crnk wf a1i wceq suceq fveq2d cima cuni
-      wss cres rankf fssres syl2anc wwe epweon fnwe2 ) ADEJBKZLMNZOPJKZQZUNNCDK
-      RNZQZUNNRUPURUAUQUSUNUPURUBUCF?AMOUDUEZORSZUOUTUFUOORUOUGSVAAUHT?UTOUORUI
-      UJOPUKAULTUM $.
+      ( cv cr1 cfv con0 csuc crnk wceq wcel wa wwe fveq2 vc cdm cep fveq2d crab
+      suceq wss cab cima cuni wfun wfn r1fnon fnfun ax-mp fndm pm3.2i funfvima2
+      eqimss2i mpsyl elssuni syl sselda rankidb eleq2d syl5ibcom expimpd df-rab
+      ss2abdv abid2 eqcomi 3sstr4g adantr wral rankr1ai adantl wb eloni limsuc2
+      word syl2anc mpbid weq weeq12d cbvralv sylib rcla4va wess sylc cres rankf
+      wf a1i fssres epweon fnwe2 ) ADEUABJZUBZKLZMUCUAJZNZWQLCDJZOLZNZWQLZOWTXC
+      PXAXDWQWTXCUFUDFAXBWSQZRZEJZOLZXCPZEWSUEZXDKLZUGZXLXESZXKXESAXMXFAXHWSQZX
+      JRZEUHXHXLQZEUHZXKXLAXPXQEAXOXJXQAXORZXHXINZKLZQZXJXQXSXHKMUIZUJZQYBAWSYD
+      XHAWSYCQZWSYDUGZKUKZMKUBZUGZRAWRMQZYEYGYIKMULZYGUMMKUNUOYHMYKYHMPUMMKUPUO
+      USUQGMWRKURUTWSYCVAVBZVCXHVDVBXJYAXLXHXJXTXDKXIXCUFUDVEVFVGVIXJEWSVHXRXLE
+      XLVJVKVLVMXGXDWRQZXHKLZXHWQLZSZEWRVNZXNXGXCWRQZYMXFYRAXBWRVOVPAYRYMVQZXFA
+      WRVTZWRWRUJPYSAYJYTGWRVRVBHWRXCVSWAVMWBAYQXFAXBKLZXBWQLZSZDWRVNYQIUUCYPDE
+      WRDEWCUUAYNUUBYOXBXHWQTXBXHKTWDWEWFVMYPXNEXDWRXHXDPYNXLYOXEXHXDWQTXHXDKTW
+      DWGWAXKXLXEWHWIAYDMOWLZYFWSMOWSWJWLUUDAWKWMYLYDMWSOWNWAMUCSAWOWMWP $.
+      $( [20-Jan-2015] $)
   $}
 
   ${
@@ -9504,11 +9550,56 @@ $)
         ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
     $( Lemma for ~ dfac11 .  Combine the successor case with the limit case. $)
     aomclem5 $p |- ( ph -> G We ( R1 ` dom z ) ) $=
-      ? $.
+      ( cv cdm cr1 cfv cuni wceq cif cxp cin wwe wa con0 wcel adantr simpr wral
+      aomclem4 iftrue adantl eqidd weeq12d mpbird wn csuc word orduniorsuc 3syl
+      wo eloni orcanai wss c0 wne cpw cfn csn cdif wi aomclem3 pm2.61dan weinxp
+      iffalse sylib wb weeq1 ax-mp sylibr ) ACUFZUGZUHUIZWNWNUJZUKZIHULZWOWOUMU
+      NZUOZWOJUOZAWOWRUOZWTAWQXBAWQUPZXBWOIUOXCCIKLSAWNUQURZWQUAUSAWQUTAKUFZUHU
+      IXEWMUIUOKWNVAZWQUBUSVBXCWOWOWRIWQWRIUKAWQIHVCVDXCWOVEVFVGAWQVHZUPZXBWOHU
+      OXHBCDEFGHKLMNOPQRAXDXGUAUSAWQWNWPVIUKZAXDWNVJWQXIVMUAWNVNWNVKVLVOAXFXGUB
+      USADUQURXGUCUSAWNDVPXGUDUSAXEVQVRXEBUFUIXEVSVTUNVQWAWBURWCKDUHUIVSVAXGUEU
+      SWDXHWOWOWRHXGWRHUKAWQIHWGVDXHWOVEVFVGWEWOWRWFWHJWSUKXAWTWITWOJWSWJWKWL
+      $.
+      $( [20-Jan-2015] $)
   $}
 
   ${
-    $d z y a b c d $.  $d ph a b $.  $d C a b c d $.  $d D a b c d $.
+    $d y R a b c $.  $d y A a b c $.  $d x y a b c $.
+    hbpo.r $e |- ( y e. R -> A. x y e. R ) $.
+    hbpo.a $e |- ( y e. A -> A. x y e. A ) $.
+    $( Bound-variable hypothesis builder for partial orders.
+
+       _EDITORIAL_: is $d x y $. actually needed? $)
+    hbpo $p |- ( R Po A -> A. x R Po A ) $=
+      ( va vb vc wpo cv wbr wn wa wral hblem ax17el hbbr hban hbral wi hbn hbim
+      df-po hbxfrbi ) CDJGKZUFDLZMZUFHKZDLZUIIKZDLZNZUFUKDLZUAZNZICOZHCOZGCOAGH
+      ICDUDURAGCABGCFPUQAHCABHCFPUPAICABICFPUHUOAUGAABUFUFDBGAQZEUSRUBUMUNAUJUL
+      AABUFUIDUSEBHAQZRABUIUKDUTEBIAQZRSABUFUKDUSEVARUCSTTTUE $.
+      $( [20-Jan-2015] $)
+    $( Bound-variable hypothesis builder for total orders. $)
+    hbso $p |- ( R Or A -> A. x R Or A ) $=
+      ( va vb wor wpo cv wbr weq w3o wral wa hblem ax17el hbbr hbral df-so hbpo
+      ax17eq hb3or hban hbxfrbi ) CDICDJZGKZHKZDLZGHMZUIUHDLZNZHCOZGCOZPAGHCDUA
+      UGUOAABCDEFUBUNAGCABGCFQUMAHCABHCFQUJUKULAABUHUIDBGARZEBHARZSGHAUCABUIUHD
+      UQEUPSUDTTUEUF $.
+      $( [20-Jan-2015] $)
+    $( Bound-variable hypothesis builder for well-founded relations. $)
+    hbfr $p |- ( R Fr A -> A. x R Fr A ) $=
+      ( va vc vb wfr cv wss c0 wne wa wbr wn wral wrex ax17el wi wal df-fr hbss
+      ax-17 hban hbbr hbn hbral hbrex hbim hbal hbxfrbi ) CDJGKZCLZUNMNZOZHKZIK
+      ZDPZQZHUNRZIUNSZUAZGUBAGIHCDUCVDAGUQVCAUOUPAABUNCBGATFUDUPAUEUFVBAIUNIGAT
+      VAAHUNHGATUTAABURUSDBHATEBIATUGUHUIUJUKULUM $.
+      $( [20-Jan-2015] $)
+    $( Bound-variable hypothesis builder for well-orderings. $)
+    hbwe $p |- ( R We A -> A. x R We A ) $=
+      ( wwe wfr wor wa df-we hbfr hbso hban hbxfrbi ) CDGCDHZCDIZJACDKPQAABCDEF
+      LABCDEFMNO $.
+      $( [20-Jan-2015] $)
+  $}
+
+  ${
+    $d z y a b c d $.  $d ph a b c d z $.  $d C a b c d $.  $d D a b c d $.
+    $d A a b c d z $.  $d H a b c d z $.  $d G d $.
     aomclem6.b $e |- B = { <. a , b >. | E. c e. ( R1 ` U. dom z )
         ( ( c e. b /\ -. c e. a ) /\ A. d e. ( R1 ` U. dom z )
           ( d ( z ` U. dom z ) c -> ( d e. a <-> d e. b ) ) ) } $.
@@ -9527,12 +9618,67 @@ $)
     aomclem6.y $e |- ( ph -> A. a e. ~P ( R1 ` A ) ( a =/= (/) ->
         ( y ` a ) e. ( ( ~P a i^i Fin ) \ { (/) } ) ) ) $.
     $( Lemma for ~ dfac11 .  Transfinite induction, close over ` z ` . $)
-    aomclem6 $p |- ( ph -> ( G ` A ) We ( R1 ` A ) ) $=
-      ? $.
+    aomclem6 $p |- ( ph -> ( H ` A ) We ( R1 ` A ) ) $=
+      ( wss cr1 cfv wwe ssid con0 wcel wa adantr cv wi weq sseq1 anbi2d weeq12d
+      fveq2 imbi12d wceq wral w3a cres csb wsbc wsb wal dmeq adantl simpl1 onss
+      cdm wfn cvv cmpt crecs recsfnon fneq1i mpbir fnssres mpan fndm 3syl eqtrd
+      syl eqeltrd wel eleq2d biimpa simpll2 simpl3l imp simpl3r eqsstrd rcla4va
+      onelss sstrd syl22anc fveq1 ad2antlr fvres weeq1 mpbird ralrimiva wne cpw
+      wb c0 cfn cin cdif aomclem5 fveq2d weeq2 mpbid ex alrimiv ax-17 hbs1 hbim
+      csn eqeq1 sbceq1a cbval sylib hbsbc1 wfun fnfun ax-mp vex resfunexg mp2an
+      ceqsal sbccog hbcsb1 hbwe a1i csbeq1a sbciegf recsval fveq1i cuni cif cxp
+      fvex xpex eqeltri eqid fvmpts reseq1i fveq2i eqtr3i 3eqtr4g 3ad2ant1 3exp
+      inex2 tfis3 mpcom mpan2 ) ADDUEZDUFUGZDKUGZUHZDUIDUJUKZAUVBULZUVEAUVFUVBU
+      CUMANUNZDUEZULZUVHUFUGZUVHKUGZUHZUOAOUNZDUEZULZUVNUFUGZUVNKUGZUHZUOZUVGUV
+      EUONODNOUPZUVJUVPUVMUVSUWAUVIUVOAUVHUVNDUQURUWAUVKUVQUVLUVRUVHUVNKUTUVHUV
+      NUFUTUSVAUVHDVBZUVJUVGUVMUVEUWBUVIUVBAUVHDDUQURUWBUVKUVCUVLUVDUVHDKUTUVHD
+      UFUTUSVAUVHUJUKZUVTOUVHVCZUVJUVMUWCUWDUVJVDZUVMUVKCKUVHVEZJVFZUHZUWEUVKJU
+      HZCUWFVGZUWHUWEUWICOVHZOUWFVGZUWJUWEUVNUWFVBZUWKUOZOVIZUWLUWECUNZUWFVBZUW
+      IUOZCVIUWOUWEUWRCUWEUWQUWIUWEUWQULZUWPVNZUFUGZJUHZUWIUWSBCDEFGHIJLMNOPQRS
+      TUAUWSUWTUVHUJUWSUWTUWFVNZUVHUWQUWTUXCVBUWEUWPUWFVJVKUWSUWCUXCUVHVBZUWCUW
+      DUVJUWQVLZUWCUVHUJUEZUWFUVHVOZUXDUVHVMKUJVOZUXFUXGUXHCVPJVQZVRZUJVOUXIVSU
+      JKUXJUBVTWAZUJUVHKWBWCUVHUWFWDWEWGWFZUXEWHZUWSLUNZUFUGZUXNUWPUGZUHZLUWTUW
+      SUXNUWTUKZULZUXQUXOUXNKUGZUHZUXSLNWIZUWDAUXNDUEZUYAUWSUXRUYBUWSUWTUVHUXNU
+      XLWJWKZUWCUWDUVJUWQUXRWLUWSAUXRAUVIUWCUWDUWQWMZUMUXSUXNUWTDUWSUXRUXNUWTUE
+      ZUWSUWTUJUKUXRUYFUOUXMUWTUXNWRWGWNUWSUWTDUEUXRUWSUWTUVHDUXLAUVIUWCUWDUWQW
+      OWPZUMWSUYBUWDULAUYCULZUYAUVTUYHUYAUOOUXNUVHOLUPZUVPUYHUVSUYAUYIUVOUYCAUV
+      NUXNDUQURUYIUVQUXOUVRUXTUVNUXNKUTUVNUXNUFUTUSVAWQWNWTUXSUXPUXTVBUXQUYAXIU
+      XSUXPUXNUWFUGZUXTUWQUXPUYJVBUWEUXRUXNUWPUWFXAXBUXSUYBUYJUXTVBUYDUXNUVHKXC
+      WGWFUXOUXPUXTXDWGXEXFUWSAUVFUYEUCWGUYGUWSAUXNXJXGUXNBUNUGUXNXHXKXLXJYCXMU
+      KUOLUVCXHVCUYEUDWGXNUWSUXAUVKVBUXBUWIXIUWSUWTUVHUFUXLXOUXAUVKJXPWGXQXRXSU
+      WRUWNCOUWROXTUWMUWKCUWMCXTUWICOYAYBCOUPUWQUWMUWIUWKUWPUVNUWFYDUWICUVNYEVA
+      YFYGUWKUWLOUWFUWKOMUWFMUNUWFUKOXTYHKYIZUVHVPUKUWFVPUKZUXHUYKUXKUJKYJYKNYL
+      KUVHVPYMYNZUWKOUWFYEYOYGUYLUWLUWJXIUYMUWICOUWFVPYPYKYGUYLUWJUWHXIUYMUWIUW
+      HCUWFVPUWHUWHCVIUOUYLCOUVKUWGCOUWFJUVNUWFUKCXTYQUVNUVKUKCXTYRYSUWQJUWGVBU
+      WIUWHXICUWFJYTUVKJUWGXDWGUUAYKYGUWCUWDUVMUWHXIZUVJUWCUVLUWGVBUYNUWCUVHUXJ
+      UGUXJUVHVEZUXIUGZUVLUWGUVHUXIUUBUVHKUXJUBUUCUWFUXIUGZUWGUYPUYLUYQUWGVBUYM
+      CUWFJVPUXIJUWTUWTUUDVBIHUUEZUXAUXAUUFZXLVPUAUYSUYRUXAUXAUWTUFUUGZUYTUUHUU
+      RUUIUXIUUJUUKYKUWFUYOUXIKUXJUVHUBUULUUMUUNUUOUVKUVLUWGXDWGUUPXEUUQUUSUUTU
+      VA $.
+      $( [20-Jan-2015] $)
 
     $( Lemma for ~ dfac11 . ` ( R1 `` A ) ` is well-orderable. $)
     aomclem7 $p |- ( ph -> E. b b We ( R1 ` A ) ) $=
-      ? $.
+      ( cr1 cfv wwe cv wex aomclem6 fvex weeq1 cla4ev syl ) ADUEUFZDKUFZUGZUOMU
+      HZUGZMUIABCDEFGHIJKLMNOPQRSTUAUBUCUDUJUSUQMUPDKUKUOURUPULUMUN $.
+      $( [20-Jan-2015] $)
+  $}
+
+  ${
+    $d A x y z $.  $d B x y z $.  $d C x y z $.  $d D x y z $.  $d E x y z $.
+    $d F x y z $.  $d ph x y z $.
+    supeq123d.a $e |- ( ph -> A = D ) $.
+    supeq123d.b $e |- ( ph -> B = E ) $.
+    supeq123d.c $e |- ( ph -> C = F ) $.
+    $( Equality deduction for supremum. $)
+    supeq123d $p |- ( ph -> sup ( A , B , C ) = sup ( D , E , F ) ) $=
+      ( vx vy vz cv wbr wn wral wrex wi breqd wa crab cuni csup imbi12d anbi12d
+      notbid raleqbidv rexeqbidv rabeqbidv unieqd df-sup 3eqtr4g ) AKNZLNZDOZPZ
+      LBQZUOUNDOZUOMNZDOZMBRZSZLCQZUAZKCUBZUCUNUOGOZPZLEQZUOUNGOZUOUTGOZMERZSZL
+      FQZUAZKFUBZUCBCDUDEFGUDAVFVPAVEVOKCFIAURVIVDVNAUQVHLBEHAUPVGADGUNUOJTUGUH
+      AVCVMLCFIAUSVJVBVLADGUOUNJTAVAVKMBEHADGUOUTJTUIUEUHUFUJUKKLMBCDULKLMEFGUL
+      UM $.
+      $( [20-Jan-2015] $)
   $}
 
   ${
@@ -9543,7 +9689,55 @@ $)
     $( Lemma for ~ dfac11 .  Perform variable substitutions.  This is the most
        we can say without invoking regularity. $)
     aomclem8 $p |- ( ph -> E. b b We ( R1 ` A ) ) $=
-      ? $.
+      ( vi vh vg vj vc vk wel cv cfv cvv wcel wceq ax-17 ve vl vd vf wn wa cuni
+      cdm wbr wb wi cr1 wral wrex copab csup cmpt crn cdif crecs ccnv cima cint
+      csn crnk cep csuc cif cxp cin weq eleq2 notbid bi2anan9r bi2bian9 ralbidv
+      wo imbi2d anbi12d rexbidv eleq1 breq2 imbi1d breq1 bibi12d imbi12d syl6bb
+      cbvralv cbvrexv cbvopabv hbopab1 hbsup supeq1d cbvmpt hbmpt1 hbfv difeq2d
+      fveq2 rneq fveq2d recseq ax-mp hbrecs hbcnv hbima hbint hbel hbopab2 sneq
+      hbmpt imaeq2d inteqd eleq12 syl2an breqan12d eqeqan12d simpl suceq adantr
+      cbvopab syl simpr breq123d orbi12d eqid dmeq unieqd breqd anbi2d opabbidv
+      eqeq12d fveq12d mpteq2dv difeq1d imaeq1d eleq12d c0 wne cpw cfn orbi2d id
+      fveq1 eqidd raleqbidv rexeqbidv supeq123d ifbieq12d xpeq12d ineq12d neeq1
+      cnveqd cbvmptv pweq ineq1d sylib aomclem7 ) ABUACHINZHJNZUEZUFZKOZHOZUAOZ
+      UHZUGZUVDPZUIZKJNZKINZUJZUKZKUVFULPZUMZUFZHUVMUNZJIUOZJQJOZBOZPZUVEULPZUV
+      QUPZUQZJQUWAUVRURZUSZUWCPZUQZUTZUWHVAZUVRVDZVBZVCZUWIIOZVDZVBZVCZRZJIUOZU
+      VRVEPZUWMVEPZVFUIZUWSUWTSZUVRUWMUWSVGZUVDPZUIZUFZVQZJIUOZUVEUVFSZUXHUWRVH
+      ZUWAUWAVIZVJZUBQUBOZUHZUXNUGZSZUXAUXBUVRUWMUXCUXMPZUIZUFZVQZJIUOZJQUXNULP
+      ZUWDUSZJQUVTUYBUVAUVBUVCUXOUXMPZUIZUVKUKZKUXOULPZUMZUFZHUYGUNZJIUOZUPZUQZ
+      PZUQZUTZVAZUWJVBZVCZUYQUWNVBZVCZRZJIUOZVHZUYBUYBVIZVJZUQZUTZLEUCUDUVPUCEN
+      ZUCLNZUEZUFZUDOZUCOZUVGUIZUDLNZUDENZUJZUKZUDUVMUMZUFZUCUVMUNZJILEJLVKZIEV
+      KZUFZUVPHENZHLNZUEZUFZUVHKLNZKENZUJZUKZKUVMUMZUFZHUVMUNVVBVVEUVOVVOHUVMVV
+      EUVAVVIUVNVVNVVDUURVVFVVCUUTVVHUWMEOZUVCVLVVCUUSVVGUVRLOZUVCVLVMVNVVEUVLV
+      VMKUVMVVEUVKVVLUVHVVCUVIVVJVVDUVJVVKUVRVVQUVBVLUWMVVPUVBVLVOVRVPVSVTVVOVV
+      AHUCUVMHUCVKZVVIVULVVNVUTVVRVVFVUIVVHVUKUVCVUNVVPWAVVRVVGVUJUVCVUNVVQWAVM
+      VSVVRVVNUVBVUNUVGUIZVVLUKZKUVMUMVUTVVRVVMVVTKUVMVVRUVHVVSVVLUVCVUNUVBUVGW
+      BWCVPVVTVUSKUDUVMKUDVKZVVSVUOVVLVURUVBVUMVUNUVGWDVWAVVJVUPVVKVUQUVBVUMVVQ
+      WAUVBVUMVVPWAWEWFWHWGVSWIWGWJJLMQUWBVVQUVSPZUWAUVQUPMOZUWBRLTJMVWBUWAUVQV
+      WCVWBRJTVWCUWARZJTUVPJIMWKWLVVCUWAUVTVWBUVQUVRVVQUVSWRWMWNUWGLQUWAVVQURZU
+      SZUWCPZUQZSUWHVWHUTSJLMQUWFVWGVWCUWFRLTJMVWFUWCJMQUWBWOVWCVWFRJTWPVVCUWEV
+      WFUWCVVCUWDVWEUWAUVRVVQWSWQWTWNUWGVWHXAXBUWQUWIVVQVDZVBZVCZUWIVVPVDZVBZVC
+      ZRZJILEUWQLTUWQETJMMVWKVWNJMVWJJMUWIVWIJMUWHJMUWGJMQUWFWOXCXDZVWCVWIRZJTX
+      EXFJMVWMJMUWIVWLVWPVWCVWLRZJTXEXFXGIMMVWKVWNIMVWJIMUWIVWIIMUWHIMUWGIJMQUW
+      FVWCQRITZIMUWEUWCIJMQUWBVWSIMUVTUWAUVQVWCUVTRITVWDITUVPJIMXHWLXJVWCUWERIT
+      WPXJXCXDZVWQITXEXFIMVWMIMUWIVWLVWTVWRITXEXFXGVVCUWLVWKSUWPVWNSUWQVWOUJVVD
+      VVCUWKVWJVVCUWJVWIUWIUVRVVQXIXKXLVVDUWOVWMVVDUWNVWLUWIUWMVVPXIXKXLUWLVWKU
+      WPVWNXMXNXTUXGVVQVEPZVVPVEPZVFUIZVXAVXBSZVVQVVPVXAVGZUVDPZUIZUFZVQJILEVVE
+      UXAVXCUXFVXHVVCVVDUWSVXAUWTVXBVFUVRVVQVEWRZUWMVVPVEWRZXOVVEUXBVXDUXEVXGVV
+      CVVDUWSVXAUWTVXBVXIVXJXPVVEUVRVVQUWMVVPUXDVXFVVCVVDXQVVEUXCVXEUVDVVCUXCVX
+      ESZVVDVVCUWSVXASVXKVXIUWSVXAXRYAXSWTVVCVVDYBYCVSYDWJUXLYEVUGUAQUXLUQZSVUH
+      VXLUTSUBUAQVUFUXLUBUAVKZVUDUXJVUEUXKVXMUXPUXIUYAVUCUXHUWRVXMUXNUVEUXOUVFU
+      XMUVDYFZVXMUXNUVEVXNYGZYKVXMUXTUXGJIVXMUXSUXFUXAVXMUXRUXEUXBVXMUXQUXDUVRU
+      WMUXCUXMUVDUUCYHYIUUAYJVXMVUBUWQJIVXMUYSUWLVUAUWPVXMUYRUWKVXMUYQUWIUWJVXM
+      UYPUWHVXMUYOUWGSUYPUWHSVXMJQUYNUWFVXMUYCUWEUYMUWCVXMJQUYLUWBVXMUVTUYBUYKU
+      VTUWAUVQVXMUVTUUDVXMUXNUVEULVXNWTZVXMUYJUVPJIVXMUYIUVOHUYGUVMVXMUXOUVFULV
+      XOWTZVXMUYHUVNUVAVXMUYFUVLKUYGUVMVXQVXMUYEUVHUVKVXMUYDUVGUVBUVCVXMUXOUVFU
+      XMUVDVXMUUBVXOYLYHWCUUEYIUUFYJUUGYMVXMUYBUWAUWDVXPYNYLYMUYOUWGXAYAUULZYOX
+      LVXMUYTUWOVXMUYQUWIUWNVXRYOXLYPYJUUHVXMUYBUWAUYBUWAVXPVXPUUIUUJUUMVUGVXLX
+      AXBFADOZYQYRZVXSUVSPZVXSYSZYTVJZYQVDZUSZRZUKZDCULPYSZUMVVQYQYRZVWBVVQYSZY
+      TVJZVYDUSZRZUKZLVYHUMGVYGVYNDLVYHDLVKZVXTVYIVYFVYMVXSVVQYQUUKVYOVYAVWBVYE
+      VYLVXSVVQUVSWRVYOVYCVYKVYDVYOVYBVYJYTVXSVVQUUNUUOYNYPWFWHUUPUUQ $.
+      $( [20-Jan-2015] $)
   $}
 
   ${
