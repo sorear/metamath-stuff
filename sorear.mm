@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 9-Jan-2015:s/GrpOpIso/GrpOpIso/ $)
+$[ set_clean.mm $] $( set.mm - Version of 9-Jan-2015:MC=a9f8ea3:s/GrpOpIso/GrpOpIso/ $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -14674,31 +14674,83 @@ $)
   $}
 
   ${
-    $d F a b $.  $d R a b $.  $d S a b $.
+    $d A a b $.  $d B a b $.  $d E a b $.  $d F a b $.  $d X a b $.
+    $d Y a b $.  $d V a b $.
+    elovmpt2.d $e |- D = ( a e. A , b e. B |-> C ) $.
+    elovmpt2.c $e |- C e. _V $.
+    elovmpt2.e $e |- ( ( a = X /\ b = Y ) -> C = E ) $.
+    $( Utility lemma for two-parameter classes. $)
+    elovmpt2 $p |- ( Y e. V -> ( F e. ( X D Y ) <-> ( X e. A /\ Y e. B /\ F e.
+        E ) ) ) $=
+      ( wcel wa eleq2i cvv wceq wal co w3a cop cxp cfv cdm elfvdm dmmpt2 bicomi
+      df-ov 3imtr4i opelxpg biimpa sylan2 3simpa adantl gen2 eleq1d cla42gv mpi
+      cv ovmpt2ga mpd3an3 eleq2d df-3an baibr bitrd pm5.21nd ) IGOZFHIDUAZOZHAO
+      ZIBOZFEOZUBZVLVMPZVKVIHIUCZABUDZOZVPFVQDUEZOVQDUFZOZVKVSFVQDUGVJVTFHIDUJQ
+      WBVSWAVRVQJKABCDLMUHQUIUKVIVSVPHIABGULUMUNVOVPVIVLVMVNUOUPVPVKVNVOVPVJEFV
+      LVMEROZVJESVPCROZKTJTWCWDJKMUQWDWCJKHIABJVAHSKVAISPCERNURUSUTJKHIABCEDRNL
+      VBVCVDVOVPVNVLVMVNVEVFVGVH $.
+      $( [21-Jan-2015] $)
+  $}
+
+  ${
+    $d F x y $.  $d A x y $.  $d B x y $.  $d X x y $.  $d Y x y $.
+    gimlem2.r $e |- Rel dom A $.
+    gimlem2.i $e |- ( F e. ( x A y ) -> F e. ( x B y ) ) $.
+    $( Proper class lemma for implications of two-parameter classes. $)
+    gimlem2 $p |- ( F e. ( X A Y ) -> F e. ( X B Y ) ) $=
+      ( cvv wcel co wn c0 eleq2d cv wi wceq imbi12d oveq2 noel ovprc1 con4i weq
+      mtbiri oveq1 vtoclg chvarv ovprc2 mpbiri pm2.61i mpcom ) FJKZEFGCLZKZEFGD
+      LZKZUMUOUMMZUOENKEUAURUNNEFGCHUBOUEUCEAPZGCLZKZEUSGDLZKZQZUOUQQAFJUSFRZVA
+      UOVCUQVEUTUNEUSFGCUFOVEVBUPEUSFGDUFOSGJKZVDEUSBPZCLZKZEUSVGDLZKZQZVDBGJVG
+      GRZVIVAVKVCVMVHUTEVGGUSCTOVMVJVBEVGGUSDTOSIUGVFMZVDEUSUSCLZKZEUSUSDLZKZQZ
+      VLVSBABAUDZVIVPVKVRVTVHVOEVGUSUSCTOVTVJVQEVGUSUSDTOSIUHVNVAVPVCVRVNUTVOEU
+      SGCUIOVNVBVQEUSGDUIOSUJUKUGUL $.
+      $( [21-Jan-2015] $)
+  $}
+
+  ${
+    $d F a b c $.  $d R a b c $.  $d S a b c $.  $d B a b c $.  $d C a b c $.
+    $d V a b c $.
     isgim.b $e |- B = ( Base ` R ) $.
     isgim.c $e |- C = ( Base ` S ) $.
     $( An isomorphism of groups is a bijective homomorphism. $)
     isgim $p |- ( S e. V -> ( F e. ( R GrpIso S ) <-> ( F e. ( R GrpHom S ) /\
           F : B -1-1-onto-> C ) ) ) $=
-      ? $.
+      ( vc va vb wcel co cgrp cv wf1o cghm cbs cfv wceq cgim crab w3a wa df-gim
+      ovex rabex oveq12 wb fveq2 syl6eqr syl2an rabeqbidv elovmpt2 f1oeq1 elrab
+      f1oeq23 3anbi3i simp3 ghmgrp1 ad2antrl ghmgrp2 adantrr simpr 3jca impbid2
+      ancoms ex syl5bb bitrd ) DFLZECDUAMLCNLZDNLZEABIOZPZICDQMZUBZLZUCZEVPLZAB
+      EPZUDZNNJOZRSZKOZRSZVNPZIWCWEQMZUBUAVQEFCDJKKIJUEWGIWHWCWEQUFUGWCCTZWEDTZ
+      UDWGVOIWHVPWCCWEDQUHWIWDATWFBTWGVOUIWJWIWDCRSAWCCRUJGUKWJWFDRSBWEDRUJHUKW
+      DAWFBVNUQULUMUNVSVLVMWBUCZVKWBVRWBVLVMVOWAIEVPABVNEUOUPURVKWKWBVLVMWBUSVK
+      WBWKVKWBUDVLVMWBVTVLVKWACDEUTVAVKVTVMWAVTVKVMCDEFVBVGVCVKWBVDVEVHVFVIVJ
+      $.
+      $( [21-Jan-2015] $)
 
     $( An isomorphism of groups is a bijection. $)
     gimf1o $p |- ( ( F e. ( R GrpIso S ) /\ S e. V ) ->
           F : B -1-1-onto-> C ) $=
-      ? $.
+      ( wcel cgim co wf1o cghm wa isgim simpr syl6bi impcom ) DFIZECDJKIZABELZS
+      TECDMKIZUANUAABCDEFGHOUBUAPQR $.
+      $( [21-Jan-2015] $)
   $}
 
   ${
+    $d F a b $.  $d R a b $.  $d S a b $.  $d a b c $.
     $( An isomorphism of groups is a homomorphism. $)
     gimghm $p |- ( F e. ( R GrpIso S ) -> F e. ( R GrpHom S ) ) $=
-      ? $.
+      ( va vb vc cgim cghm cgrp cv cbs cfv wf1o crab df-gim reldmmpt2 wcel eqid
+      co cvv wa wb vex isgim ax-mp simpl sylbi gimlem2 ) DEGHCABDEIIDJZKLZEJZKL
+      ZFJMFUIUKHSZNGEFDOPCUIUKGSQZCUMQZUJULCMZUAZUOUKTQUNUQUBEUCUJULUIUKCTUJRUL
+      RUDUEUOUPUFUGUH $.
+      $( [21-Jan-2015] $)
   $}
 
   ${
     $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
     $( Behavior of subgroups under isomorphism. $)
-    subggim $p |- ( F e. ( R GrpIso S ) -> ( A e. ( SubGrp ` R ) <->
-        ( F " A ) e. ( SubGrp ` S ) ) ) $=
+    subggim $p |- ( ( F e. ( R GrpIso S ) /\ S e. V ) ->
+        ( A e. ( SubGrp ` R ) <-> ( F " A ) e. ( SubGrp ` S ) ) ) $=
       ? $.
   $}
 
@@ -14733,28 +14785,48 @@ $)
   $}
 
   ${
-    $d F a b $.  $d R a b $.  $d S a b $.
+    $d F a b c $.  $d R a b c $.  $d S a b c $.  $d B a b c $.  $d C a b c $.  $d V a b c $.
     islmim.b $e |- B = ( Base ` R ) $.
     islmim.c $e |- C = ( Base ` S ) $.
     $( An isomorphism of left modules is a bijective homomorphism. $)
     islmim $p |- ( S e. V -> ( F e. ( R LMIso S ) <-> ( F e. ( R LMHom S ) /\
           F : B -1-1-onto-> C ) ) ) $=
-      ? $.
+      ( vc va vb wcel co clmod cv wf1o clmhm cbs cfv wceq clmim crab wa df-lmim
+      w3a ovex rabex oveq12 wb syl6eqr f1oeq23 syl2an rabeqbidv elovmpt2 f1oeq1
+      fveq2 elrab 3anbi3i simp3 lmhmlmod1 ad2antrr lmhmlmod2 adantlr simpl 3jca
+      expcom impbid2 syl5bb bitrd ) DFLZECDUAMLCNLZDNLZEABIOZPZICDQMZUBZLZUEZEV
+      OLZABEPZUCZNNJOZRSZKOZRSZVMPZIWBWDQMZUBUAVPEFCDJKKIJUDWFIWGWBWDQUFUGWBCTZ
+      WDDTZUCWFVNIWGVOWBCWDDQUHWHWCATWEBTWFVNUIWIWHWCCRSAWBCRUPGUJWIWEDRSBWDDRU
+      PHUJWCAWEBVMUKULUMUNVRVKVLWAUEZVJWAVQWAVKVLVNVTIEVOABVMEUOUQURVJWJWAVKVLW
+      AUSWAVJWJWAVJUCVKVLWAVSVKVTVJCDEUTVAVSVJVLVTCDEFVBVCWAVJVDVEVFVGVHVI $.
+      $( [21-Jan-2015] $)
 
     $( An isomorphism of left modules is a bijection. $)
     lmimf1o $p |- ( ( F e. ( R LMIso S ) /\ S e. V ) ->
           F : B -1-1-onto-> C ) $=
-      ? $.
+      ( wcel clmim co wf1o clmhm wa islmim simpr syl6bi impcom ) DFIZECDJKIZABE
+      LZSTECDMKIZUANUAABCDEFGHOUBUAPQR $.
+      $( [21-Jan-2015] $)
   $}
 
   ${
+    $d F a b $.  $d R a b $.  $d S a b $.  $d a b c $.
     $( An isomorphism of modules is a homomorphism. $)
     lmimlmhm $p |- ( F e. ( R LMIso S ) -> F e. ( R LMHom S ) ) $=
-      ? $.
+      ( va vb vc clmim clmhm clmod cbs cfv wf1o crab df-lmim reldmmpt2 wcel cvv
+      cv co eqid wa wb vex islmim ax-mp simplbi gimlem2 ) DEGHCABDEIIDRZJKZERZJ
+      KZFRLFUHUJHSZMGEFDNOCUHUJGSPZCULPZUIUKCLZUJQPUMUNUOUAUBEUCUIUKUHUJCQUITUK
+      TUDUEUFUG $.
+      $( [21-Jan-2015] $)
 
     $( An isomorphism of modules is an isomorphism of groups. $)
     lmimgim $p |- ( F e. ( R LMIso S ) -> F e. ( R GrpIso S ) ) $=
-      ? $.
+      ( va vb vc clmim cgim clmod cv cbs cfv wf1o co wcel wa cvv wb eqid ax-mp
+      clmhm crab df-lmim reldmmpt2 cghm lmghm anim1i vex islmim 3imtr4i gimlem2
+      isgim ) DEGHCABDEIIDJZKLZEJZKLZFJMFUMUOUANZUBGEFDUCUDCUQOZUNUPCMZPZCUMUOU
+      ENOZUSPZCUMUOGNOZCUMUOHNOZURVAUSUMUOCUFUGUOQOZVCUTREUHZUNUPUMUOCQUNSZUPSZ
+      UITVEVDVBRVFUNUPUMUOCQVGVHULTUJUK $.
+      $( [21-Jan-2015] $)
   $}
 
   ${
@@ -14762,7 +14834,8 @@ $)
     lsslmim.u $e |- U = ( LSubSp ` R ) $.
     lsslmim.v $e |- V = ( LSubSp ` S ) $.
     $( Behavior of subspaces under isomorphism. $)
-    lsslmim $p |- ( F e. ( R LMIso S ) -> ( A e. U <-> ( F " A ) e. V ) ) $=
+    lsslmim $p |- ( ( F e. ( R LMIso S ) /\ S e. W ) ->
+        ( A e. U <-> ( F " A ) e. V ) ) $=
       ? $.
   $}
 
