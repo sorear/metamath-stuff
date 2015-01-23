@@ -14679,7 +14679,9 @@ $)
     elovmpt2.d $e |- D = ( a e. A , b e. B |-> C ) $.
     elovmpt2.c $e |- C e. _V $.
     elovmpt2.e $e |- ( ( a = X /\ b = Y ) -> C = E ) $.
-    $( Utility lemma for two-parameter classes. $)
+    $( Utility lemma for two-parameter classes.
+
+       _EDITORIAL_: can simplify ~ isghm , ~ islmhm. $)
     elovmpt2 $p |- ( Y e. V -> ( F e. ( X D Y ) <-> ( X e. A /\ Y e. B /\ F e.
         E ) ) ) $=
       ( wcel wa eleq2i cvv wceq wal co w3a cop cxp cfv cdm elfvdm dmmpt2 bicomi
@@ -14696,7 +14698,8 @@ $)
     $d F x y $.  $d A x y $.  $d B x y $.  $d X x y $.  $d Y x y $.
     gimlem2.r $e |- Rel dom A $.
     gimlem2.i $e |- ( F e. ( x A y ) -> F e. ( x B y ) ) $.
-    $( Proper class lemma for implications of two-parameter classes. $)
+    $( Proper class lemma for implications of two-parameter classes.
+       _EDITORIAL_: use this for ~ lmghm . $)
     gimlem2 $p |- ( F e. ( X A Y ) -> F e. ( X B Y ) ) $=
       ( cvv wcel co wn c0 eleq2d cv wi wceq imbi12d oveq2 noel ovprc1 con4i weq
       mtbiri oveq1 vtoclg chvarv ovprc2 mpbiri pm2.61i mpcom ) FJKZEFGCLZKZEFGD
@@ -14747,11 +14750,70 @@ $)
   $}
 
   ${
+    $d ph y $.  $d ps x $.  $d F x y $.  $d B x y $.  $d A x y $.
+    rexima.x $e |- ( x = ( F ` y ) -> ( ph <-> ps ) ) $.
+    $( Existential quantification under an image in terms of the base set.
+       _EDITORIAL_: usable in ~ fnwe2lem2 . $)
+    rexima $p |- ( ( F Fn A /\ B C_ A ) ->
+        ( E. x e. ( F " B ) ph <-> E. y e. B ps ) ) $=
+      ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
+      wb adantl rexxfr2d ) GEIFEJKZABCDDLZGMZGFNZFUGGOUFCLZUIPUHUJQZDFRUJUHQZDF
+      RDEFUJGSUKULDFUHUJTUAUBULABUCUFHUDUE $.
+      $( [21-Jan-2015] $)
+
+    $( Universal quantification under an image in terms of the base set.
+       _EDITORIAL_: duplicates ~ raleqfn , but with interface consistency with
+       ~ rexrn . $)
+    ralima $p |- ( ( F Fn A /\ B C_ A ) ->
+        ( A. x e. ( F " B ) ph <-> A. y e. B ps ) ) $=
+      ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
+      wb adantl ralxfr2d ) GEIFEJKZABCDDLZGMZGFNZFUGGOUFCLZUIPUHUJQZDFRUJUHQZDF
+      RDEFUJGSUKULDFUHUJTUAUBULABUCUFHUDUE $.
+      $( [21-Jan-2015] $)
+  $}
+
+  $( Images under a function never map nonempty sets to empty sets.
+     _EDITORIAL_: usable in ~ fnwe2lem2 . $)
+  fnimaeq0 $p |- ( ( F Fn A /\ B C_ A ) ->
+      ( ( F " B ) = (/) <-> B = (/) ) ) $=
+    ( cima c0 wceq cdm cin wfn wa imadisj incom fndm sseq2d biimpar df-ss sylib
+    wss syl5eq eqeq1d syl5bb ) CBDEFCGZBHZEFCAIZBARZJZBEFCBKUFUCBEUFUCBUBHZBUBB
+    LUFBUBRZUGBFUDUHUEUDUBABACMNOBUBPQSTUA $.
+    $( [21-Jan-2015] $)
+
+  ${
     $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
+    $d B a b c d $.  $d V a b c d $.
+    subgim.b $e |- B = ( Base ` R ) $.
     $( Behavior of subgroups under isomorphism. $)
-    subggim $p |- ( ( F e. ( R GrpIso S ) /\ S e. V ) ->
+    subggim $p |- ( ( F e. ( R GrpIso S ) /\ S e. V /\ A C_ B ) ->
         ( A e. ( SubGrp ` R ) <-> ( F " A ) e. ( SubGrp ` S ) ) ) $=
-      ? $.
+      ( va vb vd co wcel c0 cfv wral wa wceq wb syl2anc adantr cgim wss w3a wne
+      vc cv cplusg cminusg cima cbs csubg simp3 crn imassrn wf1o gimf1o 3adant3
+      wfo eqid f1ofo forn 3syl syl5sseq wfn f1ofn syl fnimaeq0 bicomd necon3bid
+      2thd wf1 f1of1 cgrp cghm gimghm 3ad2ant1 ghmgrp1 wi ssel anim12d 3ad2ant3
+      imp grpcl 3expb simpl3 f1elima syl3anc simp2 ghmlin eleq1d bitr3d anassrs
+      jca ralbidva oveq2 ralima bitr4d 3ad2antl3 grpinvcl simpl2 ghminv anbi12d
+      ssel2 oveq1 ralbidv fveq2 3anbi123d issubg2 ghmgrp2 3bitr4d ) ECDUAKLZDFL
+      ZABUBZUCZXMAMUDZHUFZIUFZCUGNZKZALZIAOZXPCUHNZNZALZPZHAOZUCZEAUIZDUJNZUBZY
+      HMUDZUEUFZJUFZDUGNZKZYHLZJYHOZYLDUHNZNZYHLZPZUEYHOZUCZACUKNLZYHDUKNLZXNXM
+      YJXOYKYFUUBXNXMYJXKXLXMULZXNEUMZYHYIEAUNXNBYIEUOZBYIEURUUGYIQXKXLUUHXMBYI
+      CDEFGYIUSZUPUQZBYIEUTBYIEVAVBVCVJXNAMYHMXNYHMQZAMQZXNEBVDZXMUUKUULRXNUUHU
+      UMUUJBYIEVEVFZUUFBAEVGSVHVIXNYFXPENZYMYNKZYHLZJYHOZUUOYRNZYHLZPZHAOZUUBXN
+      YEUVAHAXNXPALZPZYAUURYDUUTUVDYAUUOXQENZYNKZYHLZIAOZUURUVDXTUVGIAXNUVCXQAL
+      ZXTUVGRXNUVCUVIPZPZXSENZYHLZXTUVGUVKBYIEVKZXSBLZXMUVMXTRXNUVNUVJXNUUHUVNU
+      UJBYIEVLVFZTUVKCVMLZXPBLZXQBLZPZUVOXNUVQUVJXNECDVNKLZUVQXKXLUWAXMCDEVOVPZ
+      CDEVQVFZTXNUVJUVTXMXKUVJUVTVRXLXMUVCUVRUVIUVSABXPVSABXQVSVTWAWBZUVQUVRUVS
+      UVOBXRCXPXQGXRUSZWCWDSXKXLXMUVJWEBYIEXSAWFWGUVKUVLUVFYHUVKUWAXLPZUVTUVLUV
+      FQXNUWFUVJXNUWAXLUWBXKXLXMWHZWMTUWDXRYNCDXPEXQFBGUWEYNUSZWISWJWKWLWNXNUUR
+      UVHRZUVCXNUUMXMUWIUUNUUFUUQUVGJIBAEYMUVEQUUPUVFYHYMUVEUUOYNWOWJWPSTWQUVDY
+      CENZYHLZYDUUTUVDUVNYCBLZXMUWKYDRXNUVNUVCUVPTUVDUVQUVRUWLXNUVQUVCUWCTXMXKU
+      VCUVRXLABXPXCWRZBCYBXPGYBUSZWSSXKXLXMUVCWEBYIEYCAWFWGUVDUWJUUSYHUVDUWAXLU
+      VRUWJUUSQXNUWAUVCUWBTXKXLXMUVCWTUWMBCDEYBYRFXPGUWNYRUSZXAWGWJWKXBWNXNUUMX
+      MUUBUVBRUUNUUFUUAUVAUEHBAEYLUUOQZYQUURYTUUTUWPYPUUQJYHUWPYOUUPYHYLUUOYMYN
+      XDWJXEUWPYSUUSYHYLUUOYRXFWJXBWPSWQXGXNUVQUUDYGRUWCHIBXRACYBGUWEUWNXHVFXND
+      VMLZUUEUUCRXNUWAXLUWQUWBUWGCDEFXISUEJYIYNYHDYRUUIUWHUWOXHVFXJ $.
+      $( [21-Jan-2015] $)
   $}
 
   ${
@@ -14785,7 +14847,8 @@ $)
   $}
 
   ${
-    $d F a b c $.  $d R a b c $.  $d S a b c $.  $d B a b c $.  $d C a b c $.  $d V a b c $.
+    $d F a b c $.  $d R a b c $.  $d S a b c $.  $d B a b c $.  $d C a b c $.
+    $d V a b c $.
     islmim.b $e |- B = ( Base ` R ) $.
     islmim.c $e |- C = ( Base ` S ) $.
     $( An isomorphism of left modules is a bijective homomorphism. $)
@@ -14831,10 +14894,11 @@ $)
 
   ${
     $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
+    $d U a b c d $.  $d V a b c d $.  $d B a b c d $.
     lsslmim.u $e |- U = ( LSubSp ` R ) $.
     lsslmim.v $e |- V = ( LSubSp ` S ) $.
     $( Behavior of subspaces under isomorphism. $)
-    lsslmim $p |- ( ( F e. ( R LMIso S ) /\ S e. W ) ->
+    lsslmim $p |- ( ( F e. ( R LMIso S ) /\ S e. W /\ A C_ B ) ->
         ( A e. U <-> ( F " A ) e. V ) ) $=
       ? $.
   $}
