@@ -7,26 +7,37 @@ use Time::ParseDate;
 use File::Slurp qw( read_file read_dir );
 use HTML::Entities;
 
-my @versions = grep { /set\.mm/ } read_dir(".");
-
-my %mtime;
-my %offtime;
-for (@versions) {
-    $offtime{$_} = parsedate(/([0-9]{4}-[0-9]{2}-[0-9]{2})/ ? $1 : '1990-01-01', GMT => 1);
-    $mtime{$_} = (stat($_))[9];
+if (@ARGV == 2) {
+    my ($file, $name) = @ARGV;
+    my $time = parsedate(($name =~ /([0-9]{4}-[0-9]{2}-[0-9]{2})/) ? $1 : '1990-01-01', GMT => 1);
+    scrape($time, $time, $name, $file, 1);
 }
+else {
+    my @versions = grep { /set\.mm/ } read_dir(".");
 
-@versions = sort { ($offtime{$a} <=> $offtime{$b}) || ($mtime{$a} <=> $mtime{$b}) } @versions;
+    my %mtime;
+    my %offtime;
+    for (@versions) {
+        $offtime{$_} = parsedate(/([0-9]{4}-[0-9]{2}-[0-9]{2})/ ? $1 : '1990-01-01', GMT => 1);
+        $mtime{$_} = (stat($_))[9];
+    }
+
+    @versions = sort { ($offtime{$a} <=> $offtime{$b}) || ($mtime{$a} <=> $mtime{$b}) } @versions;
+
+    for my $v (@versions) {
+        my $mtime = $mtime{$v};
+        my $offtime = $offtime{$v};
+        scrape($mtime, $offtime, $v, $v);
+    }
+}
 
 my %breaks = ( '######' => 1, '#*#*#*' => 2, '=-=-=-' => 3 );
 
-for my $v (@versions) {
-    my $mtime = $mtime{$v};
-    my $offtime = $offtime{$v};
-    my $text = read_file($v);
-
+sub scrape {
+    my ($mtime, $offtime, $v, $file, $continue) = @_;
     print "progress ** $v $mtime $offtime\n";
 
+    my $text = read_file($file);
     $text =~ s/\r//g;
     my @lines = split /^/m, $text;
 
@@ -137,6 +148,7 @@ README
     print "committer <unknown> $mtime +0000\n";
     my $cmsg = "extracted revision from file $v\n";
     print "data ",length($cmsg),"\n",$cmsg,"\n";
+    print "from refs/heads/master^0\n";
     print "deleteall\n";
     for my $p (sort keys %filedata) {
         print "M 644 inline $p\ndata ",length($filedata{$p}),"\n",$filedata{$p},"\n";
