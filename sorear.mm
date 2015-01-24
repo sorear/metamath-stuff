@@ -14952,27 +14952,6 @@ $)
   $}
 
   ${
-    $d ph a b $.  $d W a b $.  $d B a b $.
-    islmodfgOLD.b $e |- B = ( Base ` W ) $.
-    $( Property of a finitely generated left module.  (Contributed by Stefan
-       O'Rear, 12-Dec-2014.) $)
-    islmodfgOLD $p |- ( W e. LMod -> ( W e. LFinGen <-> E. b e. ~P B ( b e. Fin
-        /\
-          ( ( LSpan ` W ) ` b ) = B ) ) ) $=
-      ( va clmod wcel clfig cv cbs cfv clspn cpw cfn cin cima wceq wa wb eqid
-      crab wrex df-lfig eleq2i fveq2 imaeq1d pweqd ineq1d imaeq2d eqtrd eleq12d
-      a1i elrab3 wfn wss clss wf lspf ffn syl inss1 fvelimab sylancl elin pweqi
-      eqcomi anbi1i bitri eqeq2i anbi12i anass rexbii2 bitrd 3bitrd ) BFGZBHGZB
-      EIZJKZVQLKZVRMZNOZPZGZEFUAZGZBJKZBLKZWFMZNOZPZGZCIZNGZWLWGKZAQZRZCAMZUBZV
-      PWESVOHWDBEUCUDULWCWKEBFVQBQZVRWFWBWJVQBJUEZWSWBWGWAPWJWSVSWGWAVQBLUEUFWS
-      WAWIWGWSVTWHNWSVRWFWTUGUHUIUJUKUMVOWKWNWFQZCWIUBZWRVOWGWHUNZWIWHUOWKXBSVO
-      WHBUPKZWGUQXCXDWGWFBWFTXDTWGTURWHXDWGUSUTWHNVACWHWIWFWGVBVCXBWRSVOXAWPCWI
-      WQWLWIGZXARWLWQGZWMRZWORXFWPRXEXGXAWOXEWLWHGZWMRXGWLWHNVDXHXFWMWHWQWLWFAA
-      WFDVFZVEUDVGVHWFAWNXIVIVJXFWMWOVKVHVLULVMVN $.
-      $( [12-Dec-2014] $)
-  $}
-
-  ${
     $d ph a b $.  $d W a b $.  $d B a b $.  $d N a b $.
     islmodfg.b $e |- B = ( Base ` W ) $.
     islmodfg.n $e |- N = ( LSpan ` W ) $.
@@ -14995,7 +14974,7 @@ $)
 
   ${
     $d ph a b $.  $d W a b $.  $d X a b $.  $d S a b $.  $d U a b $.
-    $d N a b $.
+    $d N a b $.  $d B a $.
     islssfg.x $e |- X = ( W |`s U ) $.
     islssfg.s $e |- S = ( LSubSp ` W ) $.
     islssfg.n $e |- N = ( LSpan ` W ) $.
@@ -15011,6 +14990,38 @@ $)
       IWDVDVEBSZVPVHOZVEBUJVBVCWFWGBVEACVGDEGIVGTZHUKULUMVCWAVBWDWCUNUOUQURVDEJ
       KVSVORABDEGHUSVIVGEFVITWHUTUPVA $.
       $( [1-Jan-2015] $)
+
+    islssfg2.b $e |- B = ( Base ` W ) $.
+    $( Property of a finitely generated left (sub-)module, with a relaxed
+       constraint on the spanning vectors. $)
+    islssfg2 $p |- ( ( W e. LMod /\ U e. S ) -> ( X e. LFinGen <->
+          E. b e. ( ~P B i^i Fin ) ( N ` b ) = U ) ) $=
+      ( wcel wa cfn cpw wrex wb wi wss elpw clmod clfig cv cfv wceq cin islssfg
+      lssss adantl sstr2 mpan9 lspssid adantlr impbida vex 3bitr4g eleq1 anbi2d
+      pweq eleq2d bibi1d imbi12d mpbii com12 adantld pm5.32rd elin anbi1i anass
+      bitr2i syl6bb rexbidv2 bitrd ) EUALZCBLZMZFUBLGUCZNLZVQDUDZCUEZMZGCOZPVTG
+      AOZNUFZPBCDEFGHIJUGVPWAVTGWBWDVPVQWBLZWAMVQWCLZWAMZVQWDLZVTMZVPWAWEWFVPVT
+      WEWFQZVRVTVPWJVTVNVSBLZMZVQVSOZLZWFQZRVPWJRWLVQVSSZVQASZWNWFWLWPWQWLVSASZ
+      WPWQWKWRVNBVSAEKIUHUIVQVSAUJUKVNWQWPWKVQDAEKJULUMUNVQVSGUOZTVQAWSTUPVTWLV
+      PWOWJVTWKVOVNVSCBUQURVTWNWEWFVTWMWBVQVSCUSUTVAVBVCVDVEVFWIWFVRMZVTMWGWHWT
+      VTVQWCNVGVHWFVRVTVIVJVKVLVM $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d W a $.  $d N a $.  $d W a $.  $d V a $.  $d X a $.  $d B a $.
+    islssfgi.n $e |- N = ( LSpan ` W ) $.
+    islssfgi.v $e |- V = ( Base ` W ) $.
+    islssfgi.x $e |- X = ( W |`s ( N ` B ) ) $.
+    $( Finitely spanned subspaces are finitely generated. $)
+    islssfgi $p |- ( ( W e. LMod /\ B C_ V /\ B e. Fin ) -> X e. LFinGen ) $=
+      ( va clmod wcel wss cfn w3a clfig cv cfv wceq cbs eqid cpw cin wrex elpw2
+      cvv fvex eqeltri biimpri 3ad2ant2 simp3 elin fveq2 eqeq1d rcla4ev sylancl
+      sylanbrc clss wb simp1 lspcl 3adant3 islssfg2 syl2anc mpbird ) DJKZACLZAM
+      KZNZEOKZIPZBQZABQZRZICUAZMUBZUCZVHAVOKZVLVLRZVPVHAVNKZVGVQVFVEVSVGVSVFACC
+      DSQUEGDSUFUGUDUHUIVEVFVGUJAVNMUKUPVLTVMVRIAVOVJARVKVLVLVJABULUMUNUOVHVEVL
+      DUQQZKZVIVPURVEVFVGUSVEVFWAVGVTABCDGVTTZFUTVACVTVLBDEIHWBFGVBVCVD $.
+      $( [24-Jan-2015] $)
   $}
 
   $( Finitely generated left modules are left modules.  (Contributed by Stefan
@@ -15019,6 +15030,38 @@ $)
     ( va clfig clmod cv cbs cfv clspn cpw cfn cin cima wcel crab df-lfig ssrab2
     eqsstri sseli ) CDACBEZFGZSHGTIJKLMZBDNDBOUABDPQR $.
     $( [1-Jan-2015] $)
+
+  ${
+    $d ph a b $.  $d D a b $.  $d E a b $.  $d F a b $.  $d A a b $.
+    $d B a b $.  $d W a b $.  $d P a b $.  $d U a b $.
+    lsmfgcl.u $e |- U = ( LSubSp ` W ) $.
+    lsmfgcl.p $e |- P = ( LSSum ` W ) $.
+    lsmfgcl.d $e |- D = ( W |`s A ) $.
+    lsmfgcl.e $e |- E = ( W |`s B ) $.
+    lsmfgcl.f $e |- F = ( W |`s ( A P B ) ) $.
+    lsmfgcl.w $e |- ( ph -> W e. LMod ) $.
+    lsmfgcl.a $e |- ( ph -> A e. U ) $.
+    lsmfgcl.b $e |- ( ph -> B e. U ) $.
+    lsmfgcl.df $e |- ( ph -> D e. LFinGen ) $.
+    lsmfgcl.ef $e |- ( ph -> E e. LFinGen ) $.
+    $( The sum of two finitely generated submodules is finitely generated. $)
+    lsmfgcl $p |- ( ph -> F e. LFinGen ) $=
+      ( wcel va vb co cress clfig cv clspn cfv wceq cbs cpw cfn wrex clmod eqid
+      cin wb islssfg2 syl2anc mpbid adantr cun wss inss1 sseli elpwi syl lsmsp2
+      syl3an 3expb oveq2d unss biimpi syl2an adantl inss2 unfi islssfgi syl3anc
+      wa eqeltrd anassrs oveq2 eleq1d syl5ibcom rexlimdva mpd oveq1 syl5eqel )
+      AHIBCEUCZUDUCZUENAUAUFZIUGUHZUHZBUIZUAIUJUHZUKZULUPZUMZWKUETZADUETZWSRAIU
+      NTZBFTXAWSUQOPWPFBWMIDUALJWMUOZWPUOZURUSUTAWOWTUAWRAWLWRTZVTZIWNCEUCZUDUC
+      ZUETZWOWTXFUBUFZWMUHZCUIZUBWRUMZXIAXMXEAGUETZXMSAXBCFTXNXMUQOQWPFCWMIGUBM
+      JXCXDURUSUTVAXFXLXIUBWRXFXJWRTZVTIWNXKEUCZUDUCZUETZXLXIAXEXOXRAXEXOVTZVTZ
+      XQIWLXJVBZWMUHZUDUCZUEXTXPYBIUDAXEXOXPYBUIZAXBXEWLWPVCZXOXJWPVCZYDOXEWLWQ
+      TYEWRWQWLWQULVDZVEWLWPVFVGZXOXJWQTYFWRWQXJYGVEXJWPVFVGZEWLXJWMWPIXDXCKVHV
+      IVJVKXTXBYAWPVCZYAULTZYCUETAXBXSOVAXSYJAXEYEYFYJXOYHYIYEYFVTYJWLXJWPVLVMV
+      NVOXSYKAXEWLULTXJULTYKXOWRULWLWQULVPZVEWRULXJYLVEWLXJVQVNVOYAWMWPIYCXCXDY
+      CUOVRVSWAWBXLXQXHUEXLXPXGIUDXKCWNEWCVKWDWEWFWGWOXHWKUEWOXGWJIUDWNBCEWHVKW
+      DWEWFWGWI $.
+      $( [24-Jan-2015] $)
+  $}
 
   ${
     $d R a b c $.  $d S a b c $.
@@ -15107,58 +15150,38 @@ $)
   $}
 
   ${
-    $d ph a b c $.  $d F a b c $.  $d S a b c $.  $d T a b c $.  $d A a b c $.
-    $d B a b c $.  $d K a b c $.
-    lmhmfgsplitlem.f $e |- ( ph -> F e. ( S LMHom T ) ) $.
-    lmhmfgsplitlem.s $e |- ( ph -> S e. LMod ) $.
-    lmhmfgsplitlem.t $e |- ( ph -> T e. LMod ) $.
-    lmhmfgsplitlem.k $e |- K = ( `' F " { ( 0g ` T ) } ) $.
-    lmhmfgsplitlem.af $e |- ( ph -> A e. Fin ) $.
-    lmhmfgsplitlem.as $e |- ( ph -> A C_ K ) $.
-    lmhmfgsplitlem.ak $e |- ( ph -> ( ( LSpan ` S ) ` A ) = K ) $.
-    lmhmfgsplitlem.bf $e |- ( ph -> B e. Fin ) $.
-    lmhmfgsplitlem.bs $e |- ( ph -> B C_ ran F ) $.
-    lmhmfgsplitlem.bk $e |- ( ph -> ( ( LSpan ` T ) ` B ) = ran F ) $.
-    $( Lemma for ~ lmhmfgsplit . $)
-    lmhmfgsplitlem $p |- ( ph -> S e. LFinGen ) $=
-      ( wceq cfv wcel va vb vc cv cima cbs cpw cfn cin clfig wfn cvv crn wss wf
-      wrex clmhm co clmod eqid eqid1 syl2anc ffn syl fvex a1i fipreima syl22anc
-      lmhmf wa elin vex elpw anbi1i bitri w3a clspn cun simp2l ccnv c0g csn cdm
-      wi cnvimass fdm syl5sseq syl5eqss sstrd 3ad2ant1 unssd sylibr simp2r unfi
-      elpw2 lspssv fnfvelrn sylan lmhmlsp syl3anc fveq2d 3eqtrd adantr eleqtrrd
-      simp3 wb fvelimab mpbid cplusg cgrp lmodgrp ad2antrr simplr simprl sseldd
-      grpnpcan clss lspcl eqcomd ssun2 lspss eqsstrd eqcom cghm sselda ghmeqker
-      csg lmghm syl5bb biimpd impr ssun1 lssvacl eqeltrrd exp32 rexlimdv mpd ex
-      ssrdv eqssd eleq1 eqeq1d anbi12d rcla4ev syl12anc islmodfgOLD mpbird 3exp
-      fveq2 syl5bi ) AFUAUDZUEZCRZUADUFSZUGZUHUIZUPZDUJTZAFUUNUKZUUNULTZCFUMZUN
-      CUHTUUQAUUNEUFSZFUOZUUSAFDEUQURTZEUSTZUVCHJUUNUVBDEFUSUUNUTZUVBVAVIVBZUUN
-      UVBFVCVDZUUTADUFVEZVFPOCUUNFULUAVGVHAUUMUURUAUUPUUKUUPTZUUKUUNUNZUUKUHTZV
-      JZAUUMUURWDUVJUUKUUOTZUVLVJUVMUUKUUOUHVKUVNUVKUVLUUKUUNUAVLVMVNVOAUVMUUMU
-      URAUVMUUMVPZUURUBUDZUHTZUVPDVQSZSZUUNRZVJZUBUUOUPZUVOUUKBVRZUUOTZUWCUHTZU
-      WCUVRSZUUNRZUWBUVOUWCUUNUNZUWDUVOUUKBUUNAUVKUVLUUMVSZAUVMBUUNUNUUMABGUUNM
-      AGFVTEWASZWBZUEZUUNKAFWCZUWLUUNFUWKWEAUVCUWMUUNRUVGUUNUVBFWFVDWGWHWIWJWKZ
-      UWCUUNUVIWOWLUVOUVLBUHTZUWEAUVKUVLUUMWMAUVMUWOUUMLWJUUKBWNVBUVOUWFUUNUVOD
-      USTZUWHUWFUUNUNAUVMUWPUUMIWJZUWNUWCUVRUUNDUVFUVRUTZWPVBUVOUBUUNUWFUVOUVPU
-      UNTZUVPUWFTZUVOUWSVJZUCUDZFSZUVPFSZRZUCUUKUVRSZUPZUWTUXAUXDFUXFUEZTZUXGUX
-      AUXDUVAUXHUVOUUSUWSUXDUVATAUVMUUSUUMUVHWJZUUNUVPFWQWRUVOUXHUVARUWSUVOUXHU
-      ULEVQSZSZCUXKSZUVAUVOUVDUVEUVKUXHUXLRAUVMUVDUUMHWJAUVMUVEUUMJWJZUWIDEUUKF
-      UVRUXKUUNUSUVFUWRUXKUTWSWTUVOUULCUXKAUVMUUMXEXAAUVMUXMUVARUUMQWJXBXCXDUXA
-      UUSUXFUUNUNZUXIUXGXFUVOUUSUWSUXJXCUVOUXOUWSUVOUWPUVKUXOUWQUWIUUKUVRUUNDUV
-      FUWRWPVBZXCZUCUUNUXFUXDFXGVBXHUXAUXEUWTUCUXFUXAUXBUXFTZUXEUWTUXAUXRUXEVJZ
-      VJZUVPUXBDYGSZURZUXBDXISZURZUVPUWFUXTDXJTZUWSUXBUUNTZUYDUVPRUVOUYEUWSUXSU
-      VOUWPUYEUWQDXKVDXLUVOUWSUXSXMUXTUXFUUNUXBUVOUXOUWSUXSUXPXLUXAUXRUXEXNZXOU
-      UNUYCDUYAUVPUXBUVFUYCUTZUYAUTZXPWTUXTUWPUWFDXQSZTZUYBUWFTUXBUWFTUYDUWFTUV
-      OUWPUWSUXSUWQXLUVOUYKUWSUXSUVOUWPUWHUYKUWQUWNUYJUWCUVRUUNDUVFUYJUTZUWRXRV
-      BXLUXTGUWFUYBUVOGUWFUNUWSUXSUVOGBUVRSZUWFAUVMGUYMRUUMAUYMGNXSWJUVOUWPUWHB
-      UWCUNZUYMUWFUNUWQUWNUYNUVOBUUKXTVFBUWCUVRUUNDUVFUWRYAWTYBXLUXAUXRUXEUYBGT
-      ZUXAUXRVJZUXEUYOUXEUXDUXCRZUYPUYOUXCUXDYCUYPFDEYDURTZUVEUWSUYFUYQUYOXFUVO
-      UYRUWSUXRAUVMUYRUUMAUVDUYRHDEFYHVDWJXLUVOUVEUWSUXRUXNXLUVOUWSUXRXMUXAUXFU
-      UNUXBUXQYEUUNDEUVPFGUYAUXBUSUWJUVFUWJUTKUYIYFVHYIYJYKXOUXTUXFUWFUXBUVOUXF
-      UWFUNZUWSUXSUVOUWPUWHUUKUWCUNZUYSUWQUWNUYTUVOUUKBYLVFUUKUWCUVRUUNDUVFUWRY
-      AWTXLUYGXOUYCUYJUWFDUYBUXBUYHUYLYMVHYNYOYPYQYRYSYTUWAUWEUWGVJUBUWCUUOUVPU
-      WCRZUVQUWEUVTUWGUVPUWCUHUUAVUAUVSUWFUUNUVPUWCUVRUUIUUBUUCUUDUUEUVOUWPUURU
-      WBXFUWQUUNDUBUVFUUFVDUUGUUHUUJYPYQ $.
-      $( [11-Dec-2014] $)
+    $d ph a b c $.  $d S a b c $.  $d U a b c $.  $d T a b c $.  $d F a b c $.
+    $d D a b c $.  $d V a b c $.  $d P a b c $.  $d Z a b c $.  $d K a b c $.
+    $d B a b c $.
+    kercvrlsm.u $e |- U = ( LSubSp ` S ) $.
+    kercvrlsm.p $e |- P = ( LSSum ` S ) $.
+    kercvrlsm.z $e |- Z = ( 0g ` T ) $.
+    kercvrlsm.k $e |- K = ( `' F " { Z } ) $.
+    kercvrlsm.b $e |- B = ( Base ` S ) $.
+    kercvrlsm.f $e |- ( ph -> F e. ( S LMHom T ) ) $.
+    kercvrlsm.t $e |- ( ph -> T e. V ) $.
+    kercvrlsm.d $e |- ( ph -> D e. U ) $.
+    kercvrlsm.cv $e |- ( ph -> ( F " D ) = ran F ) $.
+    $( The domain of a linear function is the subspace sum of the kernel and
+       any subspace which covers the range. $)
+    kercvrlsm $p |- ( ph -> ( K P D ) = B ) $=
+      ( va vb co wss clmod clmhm lmhmlmod1 syl lmhmkerlss syl2anc lsmcl syl3anc
+      wcel lssss cv wa cfv wceq wrex cima crn wfn cbs eqid lmhmf fnfvelrn sylan
+      wf ffn adantr eleqtrrd wb fvelimab mpbid wi csg cplusg cgrp simprl sselda
+      lmodgrp adantrl grpnpcan ad2antrr eqcom cghm lmghm ghmeqker syl5bb biimpa
+      syl22anc simplrr lsmelvalix syl32anc eqeltrrd anassrs rexlimdva mpd ssrdv
+      ex eqssd ) AICDUCZBAXBGUMZXBBUDAEUEUMZIGUMZCGUMZXCAHEFUFUCUMZXDQEFHUGUHZA
+      XGFJUMZXEQREFGHIJKONLUIUJZSDGICELMUKULGXBBEPLUNUHAUABXBAUAUOZBUMZXKXBUMZA
+      XLUPZUBUOZHUQZXKHUQZURZUBCUSZXMXNXQHCUTZUMZXSXNXQHVAZXTAHBVBZXLXQYBUMABFV
+      CUQZHVHZYCAXGXIYEQRBYDEFHJPYDVDVEUJBYDHVIUHZBXKHVFVGAXTYBURXLTVJVKXNYCCBU
+      DZYAXSVLAYCXLYFVJAYGXLAXFYGSGCBEPLUNUHZVJUBBCXQHVMUJVNXNXRXMUBCAXLXOCUMZX
+      RXMVOAXLYIUPZUPZXRXMYKXRUPZXKXOEVPUQZUCZXOEVQUQZUCZXKXBYKYPXKURZXRYKEVRUM
+      ZXLXOBUMZYQAYRYJAXDYRXHEWAUHVJAXLYIVSZAYIYSXLACBXOYHVTWBZBYOEYMXKXOPYOVDZ
+      YMVDZWCULVJYLXDIBUDZYGYNIUMZYIYPXBUMAXDYJXRXHWDAUUDYJXRAXEUUDXJGIBEPLUNUH
+      WDAYGYJXRYHWDYKXRUUEXRXQXPURZYKUUEXPXQWEYKHEFWFUCUMZXIXLYSUUFUUEVLAUUGYJA
+      XGUUGQEFHWGUHVJAXIYJRVJYTUUABEFXKHIYMXOJKPNOUUCWHWKWIWJAXLYIXRWLYODICBEYN
+      XOPUUBMWMWNWOWTWPWQWRWTWSXA $.
+      $( [24-Jan-2015] $)
   $}
 
   ${
@@ -15173,22 +15196,32 @@ $)
        1-Jan-2015.) $)
     lmhmfgsplit $p |- ( ( F e. ( S LMHom T ) /\ U e. LFinGen /\
           V e. LFinGen ) -> S e. LFinGen ) $=
-      ( va vb cvv wcel clfig c0 wa cfv eqid clmhm co w3a wne neirr clmod fglmod
-      wn cgrp lmodgrp grpn0 mto crn cress reldmress ovprc1 syl5eq eleq1d mtbiri
-      3syl con4i 3ad2ant3 wi cv cfn clspn wceq cpw wrex wb lmhmlmod1 lmhmkerlss
-      clss adantr islssfg syl2anc lmhmlmod2 lmhmrnlss anbi12d simplll ad3antrrr
-      ad2antrr ccnv csn cima c0g sneqi imaeq2i eqtri ad2antlr wss simplrl elpwi
-      simprl syl simprr simprrl ad2antrl simprrr lmhmfgsplitlem rexlimdv sylbid
-      exp32 imp3a ancoms exp4b 3impd mpcom ) BNOZDABUAUBOZCPOZFPOZUCAPOZXLXJXIX
-      KXIXLXIUHZXLQPOZXOQQUDZQUEXOQUFOQUIOXPQUGQUJQUKUTULXNFQPXNFBDUMZUNUBQKBXQ
-      UNUOUPUQURUSVAVBXIXJXKXLXMXIXJXKXLXMXJXIXKXLRZXMVCXJXIRZXRLVDZVEOZXTAVFSZ
-      SEVGZRZLEVHZVIZMVDZVEOZYGBVFSZSXQVGZRZMXQVHZVIZRXMXSXKYFXLYMXSAUFOZEAVMSZ
-      OXKYFVJXJYNXIABDVKZVNABYODENGIHYOTZVLYOEYBACLJYQYBTVOVPXSBUFOZXQBVMSZOXLY
-      MVJABDNVQZABDNVRYSXQYIBFMKYSTYITVOVPVSXSYFYMXMXSYDYMXMVCZLYEXSXTYEOZYDUUA
-      XSUUBYDRZRZYKXMMYLUUDYGYLOZYKXMUUDUUEYKRZRZXTYGABDEXJXIUUCUUFVTXJYNXIUUCU
-      UFYPWAXSYRUUCUUFYTWBEDWCZGWDZWEUUHBWFSZWDZWEIUUIUUKUUHGUUJHWGWHWIUUCYAXSU
-      UFUUBYAYCWNWJUUGUUBXTEWKXSUUBYDUUFWLXTEWMWOUUCYCXSUUFUUBYAYCWPWJUUDUUEYHY
-      JWQUUEYGXQWKUUDYKYGXQWMWRUUDUUEYHYJWSWTXCXAXCXAXDXBXEXFXGXH $.
+      ( cvv wcel co clfig c0 cress wa cfv eqid va vb clmhm w3a neirr clmod cgrp
+      wn wne fglmod lmodgrp grpn0 mto crn reldmress ovprc1 syl5eq eleq1d mtbiri
+      3syl con4i 3ad2ant3 cv cfn clspn wceq cpw wrex simprr wb lmhmlmod2 ancoms
+      clss adantr lmhmrnlss islssfg syl2anc mpbid cima cbs cin wfn wss wf lmhmf
+      ffn syl ad2antrr fvex a1i ad2antrl simprrl fipreima syl22anc clsm simp1lr
+      elpwi 3expa simp1ll lmhmlmod1 ad2antlr inss1 sseli lspcl lmhmlsp ad2antll
+      syl3anc fveq2 simp2rr 3eqtrd kercvrlsm oveq2d ressid eqtr2d simp1rl inss2
+      lmhmkerlss islssfgi lsmfgcl eqeltrd expr rexlimdva mpd exp43 3impd mpcom
+      ) BLMZDABUCNMZCOMZFOMZUDAOMZYJYHYGYIYGYJYGUHZYJPOMZYMPPUIZPUEYMPUFMPUGMYN
+      PUJPUKPULUTUMYLFPOYLFBDUNZQNPKBYOQUOUPUQURUSVAVBYGYHYIYJYKYGYHYIYJYKYGYHR
+      ZYIYJRZRZUAVCZVDMZYSBVESZSZYOVFZRZUAYOVGZVHZYKYRYJUUFYPYIYJVIYRBUFMZYOBVM
+      SZMZYJUUFVJYPUUGYQYHYGUUGABDLVKVLVNYPUUIYQYHYGUUIABDLVOVLVNUUHYOUUABFUAKU
+      UHTUUATZVPVQVRYRUUDYKUAUUEYRYSUUEMZUUDYKYRUUKUUDRZRZDUBVCZVSZYSVFZUBAVTSZ
+      VGZVDWAZVHZYKUUMDUUQWBZUUQLMZYSYOWCZYTUUTYPUVAYQUULYHYGUVAYHYGRUUQBVTSZDW
+      DUVAUUQUVDABDLUUQTZUVDTWEUUQUVDDWFWGVLWHUVBUUMAVTWIWJUUKUVCYRUUDYSYOWQWKY
+      RUUKYTUUCWLYSUUQDLUBWMWNUUMUUPYKUBUUSUUMUUNUUSMZUUPYKUUMUVFUUPRZRZAAEUUNA
+      VESZSZAWOSZNZQNZOUVHUVMAUUQQNZAUVHUVLUUQAQUVHUUQUVJUVKABAVMSZDELGUVOTZUVK
+      TZHIUVEYRUULUVGYHYGYHYQUULUVGWPWRZYRUULUVGYGYGYHYQUULUVGWSWRZUVHAUFMZUUNU
+      UQWCZUVJUVOMYRUVTUULUVGYHUVTYGYQABDWTXAZWHZUVFUWAUUMUUPUVFUUNUURMUWAUUSUU
+      RUUNUURVDXBXCUUNUUQWQWGWKZUVOUUNUVIUUQAUVEUVPUVITZXDVQZUVHDUVJVSZUUOUUASZ
+      UUBYOUVHYHYGUWAUWGUWHVFUVRUVSUWDABUUNDUVIUUAUUQLUVEUWEUUJXEXGUUPUWHUUBVFU
+      UMUVFUUOYSUUAXHXFYRUULUVGUUCYTUUCUUKYRUVGXIWRXJXKXLYRUVNAVFZUULUVGYRUVTUW
+      IUWBUUQAUFUVEXMWGWHXNUVHEUVJCUVKUVOAUVJQNZUVMAUVPUVQJUWJTZUVMTUWCYREUVOMZ
+      UULUVGYPUWLYQYHYGUWLABUVODELGIHUVPXQVLVNWHUWFYRUULUVGYIYIYJYPUULUVGXOWRUV
+      HUVTUWAUUNVDMZUWJOMUWCUWDUVFUWMUUMUUPUUSVDUUNUURVDXPXCWKUUNUVIUUQAUWJUWEU
+      VEUWKXRXGXSXTYAYBYCYAYBYCYDYEYF $.
       $( [1-Jan-2015] $)
 
     $( If the kernel and range of a homomorphism of left modules are
