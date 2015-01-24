@@ -5524,11 +5524,6 @@ $)
     mpanr2 $p |- ( ( ph /\ ps ) -> th ) $=
       ( wa jctr sylan2 ) BABCGDBCEHFI $.
       $( [7-Apr-2013] $) $( [3-May-1994] $)
-
-    $( Obsolete proof of ~ mpanr2 as of 7-Apr-2013.) $)
-    mpanr2OLD $p |- ( ( ph /\ ps ) -> th ) $=
-      ( wa expr mpi ) ABGCDEABCDFHI $.
-      $( [12-May-2011] $) $( [3-May-1994] $)
   $}
 
   ${
@@ -11027,29 +11022,29 @@ $(
 $)
 
   $( --- Start of patch to prevent connective overloading $)
-  $c class $.
+  $c exp $.
   $( This syntax construction states that a variable ` x ` , which has been
      declared to be a set variable by $f statement vx, is also a class
      expression.  This can be justified informally as follows.  We know that
-     the class builder ` { y | y e. x } ` is a class by ~ cab .  Since (when
-     ` y ` is distinct from ` x ` ) we have ` x = { y | y e. x } ` by
-     ~ cvjust , we can argue that that the syntax " ` class x ` " can be viewed
-     as an abbreviation for " ` class { y | y e. x } ` ".  See the discussion
-     under the definition of class in [Jech] p. 4 showing that "Every set can
-     be considered to be a class."
+     the exp builder ` { y | y e. x } ` is a exp by ~ cab .  Since (when ` y `
+     is distinct from ` x ` ) we have ` x = { y | y e. x } ` by ~ cvjust , we
+     can argue that that the syntax " ` exp x ` " can be viewed as an
+     abbreviation for " ` exp { y | y e. x } ` ".  See the discussion under the
+     definition of exp in [Jech] p. 4 showing that "Every set can be considered
+     to be a class."
 
      While it is tempting and perhaps occasionally useful to view ~ cv as a
-     "type conversion" from a set variable to a class variable, keep in mind
-     that ~ cv is intrinsically no different from any other class-building
-     syntax such as ~ cab , ~ cun , or ~ c0 .
+     "type conversion" from a set variable to a exp variable, keep in mind that
+     ~ cv is intrinsically no different from any other class-building syntax
+     such as ~ cab , ~ cun , or ~ c0 .
 
      (The description above applies to set theory, not predicate calculus.  The
-     purpose of introducing ` class x ` here, and not in set theory where it
+     purpose of introducing ` exp x ` here, and not in set theory where it
      belongs, is to allow us to express i.e.  "prove" the ~ weq of predicate
      calculus from the ~ wceq of set theory, so that we don't "overload" the
      ` = ` connective with two syntax definitions.  This is done to prevent
      ambiguity that would complicate some Metamath parsers.) $)
-  cv $a class x $.
+  cv $a exp x $.
   $( --- End of patch to prevent connective overloading $)
 
   $( --- Start of old code before overloading prevention patch. $)
@@ -11063,9 +11058,9 @@ $)
   ${
     $v A $.
     $v B $.
-    wceq.cA $f class A $.
-    wceq.cB $f class B $.
-    $( Extend wff definition to include class equality.
+    wceq.cA $f exp A $.
+    wceq.cB $f exp B $.
+    $( Extend wff definition to include exp equality.
 
        (The purpose of introducing ` wff A = B ` here, and not in set theory
        where it belongs, is to allow us to express i.e.  "prove" the ~ weq of
@@ -11075,7 +11070,7 @@ $)
        parsers.  For example, some parsers - although not the Metamath program
        - stumble on the fact that the ` = ` in ` x = y ` could be the ` = ` of
        either ~ weq or ~ wceq , although mathematically it makes no
-       difference.  The class variables ` A ` and ` B ` are introduced
+       difference.  The exp variables ` A ` and ` B ` are introduced
        temporarily for the purpose of this definition but otherwise not used in
        predicate calculus.  See ~ df-cleq for more information on the set
        theory usage of ~ wceq .) $)
@@ -11117,8 +11112,8 @@ $)
   ${
     $v A $.
     $v B $.
-    wcel.cA $f class A $.
-    wcel.cB $f class B $.
+    wcel.cA $f exp A $.
+    wcel.cB $f exp B $.
     $( Extend wff definition to include the membership connective between
        classes.
 
@@ -11126,7 +11121,7 @@ $)
        express i.e.  "prove" the ~ wel of predicate calculus in terms of the
        ~ wceq of set theory, so that we don't "overload" the ` e. ` connective
        with two syntax definitions.  This is done to prevent ambiguity that
-       would complicate some Metamath parsers.  The class variables ` A ` and
+       would complicate some Metamath parsers.  The exp variables ` A ` and
        ` B ` are introduced temporarily for the purpose of this definition but
        otherwise not used in predicate calculus.  See ~ df-clab for more
        information on the set theory usage of ~ wcel .) $)
@@ -12837,19 +12832,19 @@ $)
   $( --- Start of patch to prevent connective overloading $)
   ${
     $v A $.
-    wsbc.cA $f class A $.
-    $( Extend wff notation to include the proper substitution of a class for a
-       set.  Read this notation as "the proper substitution of class ` A ` for
+    wsbc.cA $f exp A $.
+    $( Extend wff notation to include the proper substitution of a exp for a
+       set.  Read this notation as "the proper substitution of exp ` A ` for
        set variable ` x ` in wff ` ph ` ."
 
        (The purpose of introducing ` wff [ A / x ] ph ` here is to allow us to
        express i.e.  "prove" the ~ wsb of predicate calculus in terms of the
        ~ wsbc of set theory, so that we don't "overload" its connectives with
        two syntax definitions.  This is done to prevent ambiguity that would
-       complicate some Metamath parsers.  The class variable ` A ` is
-       introduced temporarily for the purpose of this definition but otherwise
-       not used in predicate calculus.  See ~ df-sbc for more information on
-       the set theory usage of ~ wsbc .) $)
+       complicate some Metamath parsers.  The exp variable ` A ` is introduced
+       temporarily for the purpose of this definition but otherwise not used in
+       predicate calculus.  See ~ df-sbc for more information on the set theory
+       usage of ~ wsbc .) $)
     wsbc $a wff [ A / x ] ph $.
   $}
 
@@ -14421,19 +14416,6 @@ $)
     chvarv $p |- ps $=
       ( a4v mpg ) ABCABCDEGFH $.
       $( [20-Apr-1994] $)
-  $}
-
-  ${
-    $d x z $.  $d y z $.
-    $( When the class variables in definition ~ df-clel are replaced with set
-       variables, this theorem of predicate calculus is the result.  This
-       theorem provides part of the justification for the consistency of that
-       definition, which "overloads" the set variables in ~ wel with the class
-       variables in ~ wcel . $)
-    cleljust $p |- ( x e. y <-> E. z ( z = x /\ z e. y ) ) $=
-      ( weq wel wa wex ax-17 elequ1 equsex bicomi ) CADCBEZFCGABEZLMCAMCHCABIJK
-      $.
-      $( [28-Jan-2004] $)
   $}
 
 
@@ -16037,4 +16019,614 @@ $(
 ###############################################################################
 $)
 
+$(
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+                           Theory of definitions
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+$)
 
+  $c io. $.
+  $v a b c d e f g h i j k l m n o p q r s t $.
+  $v A B C D E F G H I J K L M N O P Q R S T U V W X Y Z $.
+  eA $f exp A $.
+  eB $f exp B $.
+  eC $f exp C $.
+  eD $f exp D $.
+  eE $f exp E $.
+  eF $f exp F $.
+  eG $f exp G $.
+  eH $f exp H $.
+  eI $f exp I $.
+  eJ $f exp J $.
+  eK $f exp K $.
+  eL $f exp L $.
+  eM $f exp M $.
+  eN $f exp N $.
+  eO $f exp O $.
+  eP $f exp P $.
+  eQ $f exp Q $.
+  eR $f exp R $.
+  eS $f exp S $.
+  eT $f exp T $.
+  eU $f exp U $.
+  eV $f exp V $.
+  eW $f exp W $.
+  eX $f exp X $.
+  eY $f exp Y $.
+  eZ $f exp Z $.
+
+
+  va $f set a $.
+  vb $f set b $.
+  vc $f set c $.
+  vd $f set d $.
+  ve $f set e $.
+  vf $f set f $.
+  vg $f set g $.
+  vh $f set h $.
+  vi $f set i $.
+  vj $f set j $.
+  vk $f set k $.
+  vl $f set l $.
+  vm $f set m $.
+  vn $f set n $.
+  vo $f set o $.
+  vp $f set p $.
+  vq $f set q $.
+  vr $f set r $.
+  vs $f set s $.
+  vt $f set t $.
+  $( PLEASE PUT DESCRIPTION HERE. $)
+  cio $a exp ( io. x ph ) $.
+
+  ${
+    $d x A $.
+    $( This expresses the fact that in yapeano.mm, unlike in set.mm, expression
+       variables cannot fail to refer. $)
+    ax-ex $a |- E! x x = A $.
+  $}
+
+  ${
+    $d z X $.  $d z Y $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    df-exeq $a |- ( X = Y <-> A. z ( z = X <-> z = Y ) ) $.
+  $}
+
+  ${
+    $d X a $.  $d Y a $.  $d Z a $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    eqcom $p |- ( X = Y <-> Y = X ) $=
+      ( va cv wceq wb wal bicom albii df-exeq 3bitr4i ) CDZAEZLBEZFZCGNMFZCGABE
+      BAEOPCMNHICABJCBAJK $.
+    $( [24-Jan-2015] $)
+    eqid $p |- X = X $=
+      ( va wceq cv wb df-exeq biid mpgbir ) AACBDACZIEBBAAFIGH $.
+      $( [24-Jan-2015] $)
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    eqtr $p |- ( ( X = Y /\ Y = Z ) -> X = Z ) $=
+      ( va cv wceq wb wal wa 19.26 bitr alimi sylbir df-exeq anbi12i 3imtr4i )
+      DEZAFZQBFZGZDHZSQCFZGZDHZIZRUBGZDHZABFZBCFZIACFUETUCIZDHUGTUCDJUJUFDRSUBK
+      LMUHUAUIUDDABNDBCNODACNP $.
+      $( [24-Jan-2015] $)
+  $}
+
+  $( Class identity law with antecedent. $)
+  eqidd $p |- ( ph -> A = A ) $=
+    ( wceq eqid a1i ) BBCABDE $.
+    $( [21-Aug-2008] $)
+
+  ${
+    eqcoms.1 $e |- ( A = B -> ph ) $.
+    $( Inference applying commutative law for class equality to an
+       antecedent. $)
+    eqcoms $p |- ( B = A -> ph ) $=
+      ( wceq eqcom sylbi ) CBEBCEACBFDG $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqcomi.1 $e |- A = B $.
+    $( Inference from commutative law for class equality. $)
+    eqcomi $p |- B = A $=
+      ( wceq eqcom mpbi ) ABDBADCABEF $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqcomd.1 $e |- ( ph -> A = B ) $.
+    $( Deduction from commutative law for class equality. $)
+    eqcomd $p |- ( ph -> B = A ) $=
+      ( wceq eqcom sylib ) ABCECBEDBCFG $.
+      $( [15-Aug-1994] $)
+  $}
+
+  ${
+    $d x A $.  $d x B $.  $d x C $.
+    $( Equality implies equivalence of equalities. $)
+    eqeq1 $p |- ( A = B -> ( A = C <-> B = C ) ) $=
+      ( wceq eqcom eqtr sylanb impbida ) ABDZACDZBCDZIBADJKABEBACFGABCFH $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    eqeq1i.1 $e |- A = B $.
+    $( Inference from equality to equivalence of equalities. $)
+    eqeq1i $p |- ( A = C <-> B = C ) $=
+      ( wceq wb eqeq1 ax-mp ) ABEACEBCEFDABCGH $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqeq1d.1 $e |- ( ph -> A = B ) $.
+    $( Deduction from equality to equivalence of equalities. $)
+    eqeq1d $p |- ( ph -> ( A = C <-> B = C ) ) $=
+      ( wceq wb eqeq1 syl ) ABCFBDFCDFGEBCDHI $.
+      $( [27-Dec-1993] $)
+  $}
+
+  $( Equality implies equivalence of equalities. $)
+  eqeq2 $p |- ( A = B -> ( C = A <-> C = B ) ) $=
+    ( wceq eqeq1 eqcom 3bitr4g ) ABDACDBCDCADCBDABCECAFCBFG $.
+    $( [5-Aug-1993] $)
+
+  ${
+    eqeq2i.1 $e |- A = B $.
+    $( Inference from equality to equivalence of equalities. $)
+    eqeq2i $p |- ( C = A <-> C = B ) $=
+      ( wceq wb eqeq2 ax-mp ) ABECAECBEFDABCGH $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqeq2d.1 $e |- ( ph -> A = B ) $.
+    $( Deduction from equality to equivalence of equalities. $)
+    eqeq2d $p |- ( ph -> ( C = A <-> C = B ) ) $=
+      ( wceq wb eqeq2 syl ) ABCFDBFDCFGEBCDHI $.
+      $( [27-Dec-1993] $)
+  $}
+
+  $( Equality relationship among 4 classes. $)
+  eqeq12 $p |- ( ( A = B /\ C = D ) -> ( A = C <-> B = D ) ) $=
+    ( wceq eqeq1 eqeq2 sylan9bb ) ABEACEBCECDEBDEABCFCDBGH $.
+    $( [3-Aug-1994] $)
+
+  ${
+    eqeq12i.1 $e |- A = B $.
+    eqeq12i.2 $e |- C = D $.
+    $( A useful inference for substituting definitions into an equality.  (The
+       proof was shortened by Andrew Salmon, 25-May-2011.) $)
+    eqeq12i $p |- ( A = C <-> B = D ) $=
+      ( wceq wb eqeq12 mp2an ) ABGCDGACGBDGHEFABCDIJ $.
+      $( [25-May-2011] $) $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqeq12d.1 $e |- ( ph -> A = B ) $.
+    eqeq12d.2 $e |- ( ph -> C = D ) $.
+    $( A useful inference for substituting definitions into an equality.  (The
+       proof was shortened by Andrew Salmon, 25-May-2011.) $)
+    eqeq12d $p |- ( ph -> ( A = C <-> B = D ) ) $=
+      ( wceq wb eqeq12 syl2anc ) ABCHDEHBDHCEHIFGBCDEJK $.
+      $( [14-Jun-2011] $) $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqeqan12d.1 $e |- ( ph -> A = B ) $.
+    eqeqan12d.2 $e |- ( ps -> C = D ) $.
+    $( A useful inference for substituting definitions into an equality.  (The
+       proof was shortened by Andrew Salmon, 25-May-2011.) $)
+    eqeqan12d $p |- ( ( ph /\ ps ) -> ( A = C <-> B = D ) ) $=
+      ( wceq wb eqeq12 syl2an ) ACDIEFICEIDFIJBGHCDEFKL $.
+      $( [25-May-2011] $) $( [9-Aug-1994] $)
+  $}
+
+  ${
+    eqeqan12rd.1 $e |- ( ph -> A = B ) $.
+    eqeqan12rd.2 $e |- ( ps -> C = D ) $.
+    $( A useful inference for substituting definitions into an equality. $)
+    eqeqan12rd $p |- ( ( ps /\ ph ) -> ( A = C <-> B = D ) ) $=
+      ( wceq wb eqeqan12d ancoms ) ABCEIDFIJABCDEFGHKL $.
+      $( [9-Aug-1994] $)
+  $}
+
+  $( A transitive law for class equality.  (The proof was shortened by Andrew
+     Salmon, 25-May-2011.) $)
+  eqtr2 $p |- ( ( A = B /\ A = C ) -> B = C ) $=
+    ( wceq eqcom eqtr sylanb ) ABDBADACDBCDABEBACFG $.
+    $( [25-May-2011] $) $( [20-May-2005] $)
+
+  $( A transitive law for class equality. $)
+  eqtr3 $p |- ( ( A = C /\ B = C ) -> A = B ) $=
+    ( wceq eqcom eqtr sylan2b ) BCDACDCBDABDBCEACBFG $.
+    $( [20-May-2005] $)
+
+  ${
+    eqtri.1 $e |- A = B $.
+    eqtri.2 $e |- B = C $.
+    $( An equality transitivity inference. $)
+    eqtri $p |- A = C $=
+      ( wceq eqeq2i mpbi ) ABFACFDBCAEGH $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqtr2i.1 $e |- A = B $.
+    eqtr2i.2 $e |- B = C $.
+    $( An equality transitivity inference. $)
+    eqtr2i $p |- C = A $=
+      ( eqtri eqcomi ) ACABCDEFG $.
+      $( [21-Feb-1995] $)
+  $}
+
+  ${
+    eqtr3i.1 $e |- A = B $.
+    eqtr3i.2 $e |- A = C $.
+    $( An equality transitivity inference. $)
+    eqtr3i $p |- B = C $=
+      ( eqcomi eqtri ) BACABDFEG $.
+      $( [6-May-1994] $)
+  $}
+
+  ${
+    eqtr4i.1 $e |- A = B $.
+    eqtr4i.2 $e |- C = B $.
+    $( An equality transitivity inference. $)
+    eqtr4i $p |- A = C $=
+      ( eqcomi eqtri ) ABCDCBEFG $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    3eqtri.1 $e |- A = B $.
+    3eqtri.2 $e |- B = C $.
+    3eqtri.3 $e |- C = D $.
+    $( An inference from three chained equalities. $)
+    3eqtri $p |- A = D $=
+      ( eqtri ) ABDEBCDFGHH $.
+      $( [29-Aug-1993] $)
+
+    $( An inference from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtrri $p |- D = A $=
+      ( eqtri eqtr2i ) ACDABCEFHGI $.
+      $( [25-May-2011] $) $( [3-Aug-2006] $)
+  $}
+
+  ${
+    3eqtr2i.1 $e |- A = B $.
+    3eqtr2i.2 $e |- C = B $.
+    3eqtr2i.3 $e |- C = D $.
+    $( An inference from three chained equalities. $)
+    3eqtr2i $p |- A = D $=
+      ( eqtr4i eqtri ) ACDABCEFHGI $.
+      $( [3-Aug-2006] $)
+
+    $( An inference from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtr2ri $p |- D = A $=
+      ( eqtr4i eqtr2i ) ACDABCEFHGI $.
+      $( [3-Aug-2006] $)
+  $}
+
+  ${
+    3eqtr3i.1 $e |- A = B $.
+    3eqtr3i.2 $e |- A = C $.
+    3eqtr3i.3 $e |- B = D $.
+    $( An inference from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtr3i $p |- C = D $=
+      ( eqtr3i ) BCDABCEFHGH $.
+      $( [25-May-2011] $) $( [6-May-1994] $)
+
+    $( An inference from three chained equalities. $)
+    3eqtr3ri $p |- D = C $=
+      ( eqtr3i ) BDCGABCEFHH $.
+      $( [15-Aug-2004] $)
+  $}
+
+  ${
+    3eqtr4i.1 $e |- A = B $.
+    3eqtr4i.2 $e |- C = A $.
+    3eqtr4i.3 $e |- D = B $.
+    $( An inference from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtr4i $p |- C = D $=
+      ( eqtr4i ) CADFDBAGEHH $.
+      $( [25-May-2011] $) $( [5-Aug-1993] $)
+
+    $( An inference from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtr4ri $p |- D = C $=
+      ( eqtr4i ) DACDBAGEHFH $.
+      $( [25-May-2011] $) $( [2-Sep-1995] $)
+  $}
+
+  ${
+    eqtrd.1 $e |- ( ph -> A = B ) $.
+    eqtrd.2 $e |- ( ph -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    eqtrd $p |- ( ph -> A = C ) $=
+      ( wceq eqeq2d mpbid ) ABCGBDGEACDBFHI $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    eqtr2d.1 $e |- ( ph -> A = B ) $.
+    eqtr2d.2 $e |- ( ph -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    eqtr2d $p |- ( ph -> C = A ) $=
+      ( eqtrd eqcomd ) ABDABCDEFGH $.
+      $( [18-Oct-1999] $)
+  $}
+
+  ${
+    eqtr3d.1 $e |- ( ph -> A = B ) $.
+    eqtr3d.2 $e |- ( ph -> A = C ) $.
+    $( An equality transitivity equality deduction. $)
+    eqtr3d $p |- ( ph -> B = C ) $=
+      ( eqcomd eqtrd ) ACBDABCEGFH $.
+      $( [18-Jul-1995] $)
+  $}
+
+  ${
+    eqtr4d.1 $e |- ( ph -> A = B ) $.
+    eqtr4d.2 $e |- ( ph -> C = B ) $.
+    $( An equality transitivity equality deduction. $)
+    eqtr4d $p |- ( ph -> A = C ) $=
+      ( eqcomd eqtrd ) ABCDEADCFGH $.
+      $( [18-Jul-1995] $)
+  $}
+
+  ${
+    3eqtrd.1 $e |- ( ph -> A = B ) $.
+    3eqtrd.2 $e |- ( ph -> B = C ) $.
+    3eqtrd.3 $e |- ( ph -> C = D ) $.
+    $( A deduction from three chained equalities. $)
+    3eqtrd $p |- ( ph -> A = D ) $=
+      ( eqtrd ) ABCEFACDEGHII $.
+      $( [29-Oct-1995] $)
+
+    $( A deduction from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtrrd $p |- ( ph -> D = A ) $=
+      ( eqtrd eqtr2d ) ABDEABCDFGIHJ $.
+      $( [25-May-2011] $) $( [4-Aug-2006] $)
+  $}
+
+  ${
+    3eqtr2d.1 $e |- ( ph -> A = B ) $.
+    3eqtr2d.2 $e |- ( ph -> C = B ) $.
+    3eqtr2d.3 $e |- ( ph -> C = D ) $.
+    $( A deduction from three chained equalities. $)
+    3eqtr2d $p |- ( ph -> A = D ) $=
+      ( eqtr4d eqtrd ) ABDEABCDFGIHJ $.
+      $( [4-Aug-2006] $)
+
+    $( A deduction from three chained equalities. $)
+    3eqtr2rd $p |- ( ph -> D = A ) $=
+      ( eqtr4d eqtr2d ) ABDEABCDFGIHJ $.
+      $( [4-Aug-2006] $)
+  $}
+
+  ${
+    3eqtr3d.1 $e |- ( ph -> A = B ) $.
+    3eqtr3d.2 $e |- ( ph -> A = C ) $.
+    3eqtr3d.3 $e |- ( ph -> B = D ) $.
+    $( A deduction from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtr3d $p |- ( ph -> C = D ) $=
+      ( eqtr3d ) ACDEABCDFGIHI $.
+      $( [25-May-2011] $) $( [4-Aug-1995] $)
+
+    $( A deduction from three chained equalities. $)
+    3eqtr3rd $p |- ( ph -> D = C ) $=
+      ( eqtr3d ) ACEDHABCDFGII $.
+      $( [14-Jan-2006] $)
+  $}
+
+  ${
+    3eqtr4d.1 $e |- ( ph -> A = B ) $.
+    3eqtr4d.2 $e |- ( ph -> C = A ) $.
+    3eqtr4d.3 $e |- ( ph -> D = B ) $.
+    $( A deduction from three chained equalities.  (The proof was shortened by
+       Andrew Salmon, 25-May-2011.) $)
+    3eqtr4d $p |- ( ph -> C = D ) $=
+      ( eqtr4d ) ADBEGAECBHFII $.
+      $( [25-May-2011] $) $( [4-Aug-1995] $)
+
+    $( A deduction from three chained equalities. $)
+    3eqtr4rd $p |- ( ph -> D = C ) $=
+      ( eqtr4d ) AEBDAECBHFIGI $.
+      $( [21-Sep-1995] $)
+  $}
+
+  ${
+    syl5eq.1 $e |- A = B $.
+    syl5eq.2 $e |- ( ph -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    syl5eq $p |- ( ph -> A = C ) $=
+      ( wceq a1i eqtrd ) ABCDBCGAEHFI $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    syl5req.1 $e |- A = B $.
+    syl5req.2 $e |- ( ph -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    syl5req $p |- ( ph -> C = A ) $=
+      ( syl5eq eqcomd ) ABDABCDEFGH $.
+      $( [29-Mar-1998] $)
+  $}
+
+  ${
+    syl5eqr.1 $e |- B = A $.
+    syl5eqr.2 $e |- ( ph -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    syl5eqr $p |- ( ph -> A = C ) $=
+      ( eqcomi syl5eq ) ABCDCBEGFH $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    syl5reqr.1 $e |- B = A $.
+    syl5reqr.2 $e |- ( ph -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    syl5reqr $p |- ( ph -> C = A ) $=
+      ( eqcomi syl5req ) ABCDCBEGFH $.
+      $( [29-Mar-1998] $)
+  $}
+
+  ${
+    syl6eq.1 $e |- ( ph -> A = B ) $.
+    syl6eq.2 $e |- B = C $.
+    $( An equality transitivity deduction. $)
+    syl6eq $p |- ( ph -> A = C ) $=
+      ( wceq a1i eqtrd ) ABCDECDGAFHI $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    syl6req.1 $e |- ( ph -> A = B ) $.
+    syl6req.2 $e |- B = C $.
+    $( An equality transitivity deduction. $)
+    syl6req $p |- ( ph -> C = A ) $=
+      ( syl6eq eqcomd ) ABDABCDEFGH $.
+      $( [29-Mar-1998] $)
+  $}
+
+  ${
+    syl6eqr.1 $e |- ( ph -> A = B ) $.
+    syl6eqr.2 $e |- C = B $.
+    $( An equality transitivity deduction. $)
+    syl6eqr $p |- ( ph -> A = C ) $=
+      ( eqcomi syl6eq ) ABCDEDCFGH $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    syl6reqr.1 $e |- ( ph -> A = B ) $.
+    syl6reqr.2 $e |- C = B $.
+    $( An equality transitivity deduction. $)
+    syl6reqr $p |- ( ph -> C = A ) $=
+      ( eqcomi syl6req ) ABCDEDCFGH $.
+      $( [29-Mar-1998] $)
+  $}
+
+  ${
+    sylan9eq.1 $e |- ( ph -> A = B ) $.
+    sylan9eq.2 $e |- ( ps -> B = C ) $.
+    $( An equality transitivity deduction.  (The proof was shortened by Andrew
+       Salmon, 25-May-2011.) $)
+    sylan9eq $p |- ( ( ph /\ ps ) -> A = C ) $=
+      ( wceq eqtr syl2an ) ACDHDEHCEHBFGCDEIJ $.
+      $( [25-May-2011] $) $( [8-May-1994] $)
+  $}
+
+  ${
+    sylan9req.1 $e |- ( ph -> B = A ) $.
+    sylan9req.2 $e |- ( ps -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    sylan9req $p |- ( ( ph /\ ps ) -> A = C ) $=
+      ( eqcomd sylan9eq ) ABCDEADCFHGI $.
+      $( [23-Jun-2007] $)
+  $}
+
+  ${
+    sylan9eqr.1 $e |- ( ph -> A = B ) $.
+    sylan9eqr.2 $e |- ( ps -> B = C ) $.
+    $( An equality transitivity deduction. $)
+    sylan9eqr $p |- ( ( ps /\ ph ) -> A = C ) $=
+      ( wceq sylan9eq ancoms ) ABCEHABCDEFGIJ $.
+      $( [8-May-1994] $)
+  $}
+
+  ${
+    3eqtr3g.1 $e |- ( ph -> A = B ) $.
+    3eqtr3g.2 $e |- A = C $.
+    3eqtr3g.3 $e |- B = D $.
+    $( A chained equality inference, useful for converting from definitions. $)
+    3eqtr3g $p |- ( ph -> C = D ) $=
+      ( syl5eqr syl6eq ) ADCEADBCGFIHJ $.
+      $( [15-Nov-1994] $)
+  $}
+
+  ${
+    3eqtr4g.1 $e |- ( ph -> A = B ) $.
+    3eqtr4g.2 $e |- C = A $.
+    3eqtr4g.3 $e |- D = B $.
+    $( A chained equality inference, useful for converting to definitions. $)
+    3eqtr4g $p |- ( ph -> C = D ) $=
+      ( syl5eq syl6eqr ) ADCEADBCGFIHJ $.
+      $( [5-Aug-1993] $)
+  $}
+
+  ${
+    3eqtr4a.1 $e |- A = B $.
+    3eqtr4a.2 $e |- ( ph -> C = A ) $.
+    3eqtr4a.3 $e |- ( ph -> D = B ) $.
+    $( A chained equality inference, useful for converting to definitions.
+       (The proof was shortened by Andrew Salmon, 25-May-2011.) $)
+    3eqtr4a $p |- ( ph -> C = D ) $=
+      ( syl6eq eqtr4d ) ADCEADBCGFIHJ $.
+      $( [25-May-2011] $) $( [2-Feb-2007] $)
+  $}
+
+  ${
+    eq2tr.1 $e |- ( A = C -> D = F ) $.
+    eq2tr.2 $e |- ( B = D -> C = G ) $.
+    $( A compound transitive inference for class equality. $)
+    eq2tri $p |- ( ( A = C /\ B = F ) <-> ( B = D /\ A = G ) ) $=
+      ( wceq wa ancom eqeq2d pm5.32i 3bitr3i ) ACIZBDIZJPOJOBEIZJPAFIZJOPKOPQOD
+      EBGLMPORPCFAHLMN $.
+      $( [22-Jan-2004] $)
+  $}
+
+  ${
+    $d x y z $.  $d ph z $.
+    $( Define behavior of iota.  Metalogically, this extends the definition of
+       =, i.e. to eliminate this definition, transform equalities.  Fix one
+       element of the domain (remember, this is not free logic); let
+       ` x = ( io. y ph ) ` mean that ` x ` is the unique individual such that
+       ` [ x / y ] ph ` if there is one, or else let it mean that ` x ` is the
+       fixed domain element.  Iota on the RHS of equality was not valid before
+       so this is conservative.  The second clause states that all wrong iotas
+       are equal. $)
+    df-io $a |- ( y = ( io. x ph ) <->
+        ( ( E! x ph /\ A. x ( ph <-> x = y ) ) \/
+          ( -. E! x ph /\ y = ( io. z F. ) ) ) ) $.
+
+    $( There is exactly one out-of-domain value. $)
+    ax-edom $a |- E! x x = ( io. y F. ) $.
+  $}
+
+  ${
+    $d ph y z w $.  $d ps y z w $.  $d x y z w $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    eio1 $p |- ( E! x ph -> ( y = ( io. x ph ) <-> A. x ( ph <-> x = y ) ) ) $=
+      ( vz cv cio wceq weu weq wb wal wa wn wfal wo df-io ibar notnot1 intnanrd
+      biorf syl orcom syl6bb bitr2d syl5bb ) CEZABFGABHZABCIJBKZLZUGMZUFNDFGZLZ
+      OZUGUHABCDPUGUHUIUMUGUHQUGUIULUIOZUMUGULMUIUNJUGUJUKUGRSULUITUAULUIUBUCUD
+      UE $.
+    $( [24-Jan-2015] $)
+    eio2 $p |- ( -. E! x ph -> ( y = ( io. x ph ) <-> y = ( io. z F. ) ) ) $=
+      ( cv cio wceq weu weq wb wal wa wn wfal wo df-io ibar id1 intnanrd biorf
+      syl bitr2d syl5bb ) CEZABFGABHZABCIJBKZLZUEMZUDNDFGZLZOZUHUIABCDPUHUIUJUK
+      UHUIQUHUGMUJUKJUHUEUFUHRSUGUJTUAUBUC $.
+    $( [24-Jan-2015] $)
+    iobit $p |- ( A. x ( ph <-> ps ) -> ( io. x ph ) = ( io. x ps ) ) $=
+      ( vz vw wb wal cv cio wceq weu wa weq bibi1 syl eio1 adantr biimpac eio2
+      wn alimi albi adantl hba1 ax-4 eubid 3bitr4d wfal notbid bitr4d pm2.61ian
+      alrimiv df-exeq sylibr ) ABFZCGZDHZACIZJZUQBCIZJZFZDGURUTJUPVBDACKZUPVBVC
+      UPLZACDMZFZCGZBVEFZCGZUSVAUPVGVIFZVCUPVFVHFZCGVJUOVKCABVENUAVFVHCUBOUCVCU
+      SVGFUPACDPQVDBCKZVAVIFUPVCVLUPABCUOCUDUOCUEUFZRBCDPOUGVCTZUPLZUSUQUHEIJZV
+      AVNUSVPFUPACDESQVOVLTZVAVPFUPVNVQUPVCVLVMUIRBCDESOUJUKULDURUTUMUN $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d ph y z w u $.  $d ps x z w u $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    cbviot $p |- ( A. x A. y ( x = y -> ( ph <-> ps ) ) -> ( io. x ph ) = ( io.
+        y ps ) ) $=
+      ? $.
+  $}
