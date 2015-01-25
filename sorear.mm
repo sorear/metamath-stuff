@@ -15334,41 +15334,6 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Definition of the structure product
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  ${
-    prdmsplit1.h $e |- H = ( x e. E |-> ( x |` A ) ) $.
-    prdmsplit1.d $e |- D = ( S Xm_ R ) $.
-    prdmsplit1.c $e |- C = ( S Xm_ ( R |` A ) ) $.
-    prdmsplit1.e $e |- E = ( Base ` D ) $.
-    prdmsplit1.a $e |- ( ph -> A C_ B ) $.
-    prdmsplit1.b $e |- ( ph -> B e. _V ) $.
-    prdmsplit1.s $e |- ( ph -> S e. _V ) $.
-    prdmsplit1.r $e |- ( ph -> R : B --> Grp ) $.
-    $( Restriction is a homomorphism on products of groups. $)
-    prdmsplit1 $p |- ( ph -> H e. ( D GrpHom C ) ) $=
-      ? $.
-  $}
-
-  ${
-    prdmsplit2.h $e |- H = ( x e. E |-> ( x |` A ) ) $.
-    prdmsplit2.d $e |- D = ( S Xm_ R ) $.
-    prdmsplit2.c $e |- C = ( S Xm_ ( R |` A ) ) $.
-    prdmsplit2.e $e |- E = ( Base ` D ) $.
-    prdmsplit2.a $e |- ( ph -> A C_ B ) $.
-    prdmsplit2.b $e |- ( ph -> B e. _V ) $.
-    prdmsplit2.s $e |- ( ph -> S e. Ring ) $.
-    prdmsplit2.r $e |- ( ph -> R : B --> LMod ) $.
-    prdmsplit2.rs $e |- ( ( ph /\ y e. B ) -> ( Scalar ` ( R ` y ) ) = S ) $.
-    $( Restriction is a homomorphism on products of modules. $)
-    prdmsplit2 $p |- ( ph -> H e. ( D GrpHom C ) ) $=
-      ? $.
-  $}
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Addenda for structure powers
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -16031,34 +15996,6 @@ $)
 
   $( direct sum coincides with products for finite $)
 
-  ${
-    dsmmsplit.c $e |- C = ( S (+)m R ) $.
-    dsmmsplit.d $e |- D = ( S (+)m ( R |` A ) ) $.
-    dsmmsplit.e $e |- E = ( S (+)m ( R |` B ) ) $.
-    dsmmsplit.u $e |- U = ( Base ` C ) $.
-    dsmmsplit.v $e |- V = ( Base ` D ) $.
-    dsmmsplit.f $e |- F = ( x e. U |-> ( x |` A ) ) $.
-    dsmmsplit.g $e |- G = ( y e. K |-> ( y |` B ) ) $.
-    dsmmsplit.z $e |- Z = ( 0g ` D ) $.
-    dsmmsplit.k $e |- K = ( `' F " { Z } ) $.
-    dsmmsplit.w $e |- W = ( C |`s K ) $.
-    dsmmsplit.a $e |- ( ph -> A e. _V ) $.
-    dsmmsplit.b $e |- ( ph -> B e. _V ) $.
-    dsmmsplit.r $e |- ( ph -> R : ( A u. B ) --> LMod ) $.
-    dsmmsplit.rs $e |- ( ( ph /\ z e. ( A u. B ) ) ->
-        ( Scalar ` ( R ` z ) ) = S ) $.
-    dsmmsplit.s $e |- ( ph -> S e. Ring ) $.
-    dsmmsplit.ab $e |- ( ph -> ( A i^i B ) = (/) ) $.
-    $( For any division of the coordinates of a free module, the module can be
-       split into two by a short exact sequence, i.e. there is a homomorphism
-       onto the first factor whose kernel is isomorphic to the second
-       factor. $)
-    dsmmsplit $p |- ( ph -> ( F e. ( C LMHom D ) /\ F : U -onto-> V /\
-        G e. ( W LMIso E ) ) ) $=
-      ? $.
-  $}
-
-
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Free modules
@@ -16098,30 +16035,6 @@ $)
   $( use span preservation to show that the free module maps onto a span $)
   $( this allows for neat representation of spans: ellspd $)
   $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
-
-  ${
-    frlmsplit.c $e |- C = ( R freeLMod ( A u. B ) ) $.
-    frlmsplit.d $e |- D = ( R freeLMod A ) $.
-    frlmsplit.e $e |- E = ( R freeLMod B ) $.
-    frlmsplit.u $e |- U = ( Base ` C ) $.
-    frlmsplit.v $e |- V = ( Base ` D ) $.
-    frlmsplit.f $e |- F = ( x e. U |-> ( x |` A ) ) $.
-    frlmsplit.g $e |- G = ( y e. K |-> ( y |` B ) ) $.
-    frlmsplit.z $e |- Z = ( 0g ` D ) $.
-    frlmsplit.k $e |- K = ( `' F " { Z } ) $.
-    frlmsplit.w $e |- W = ( C |`s K ) $.
-    frlmsplit.a $e |- ( ph -> A e. _V ) $.
-    frlmsplit.b $e |- ( ph -> B e. _V ) $.
-    frlmsplit.r $e |- ( ph -> R e. Ring ) $.
-    frlmsplit.ab $e |- ( ph -> ( A i^i B ) = (/) ) $.
-    $( For any division of the coordinates of a free module, the module can be
-       split into two by a short exact sequence, i.e. there is a homomorphism
-       onto the first factor whose kernel is isomorphic to the second
-       factor. $)
-    frlmsplit $p |- ( ph -> ( F e. ( C LMHom D ) /\ F : U -onto-> V /\
-        G e. ( W LMIso E ) ) ) $=
-      ? $.
-  $}
 
   ${
     $d M a b c f $.  $d B a b c f $.  $d N a b c f $.  $d K a b c f $.
