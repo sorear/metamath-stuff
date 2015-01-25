@@ -15369,6 +15369,189 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Addenda for structure powers
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d B x y z w $.  $d F x y z w $.  $d A x y z w $.  $d V x y z w $.
+
+    $( Membership in a class of singleton functions. $)
+    elixpsn $p |- ( A e. V -> ( F e. X_ x e. { A } B <->
+        E. y e. B F = { <. A , y >. } ) ) $=
+      ( vz vw cv csn cixp wcel cop wceq wrex cvv cfv wa vex eleq1d ixpeq1 opeq1
+      sneq syl eleq2d sneqd eqeq2d rexbidv elex snex eleq1 mpbiri rexlimivw wfn
+      eqeq1 wral elixp wsb ralsn weq fveq2 sbcie bitri anbi2i wf biimpri adantl
+      simpl ffnfv sylanbrc fsn2 sylib opeq2 rcla4ev fvsn id syl5eqel fnsn jctil
+      fneq1 fveq1 anbi12d syl5ibrcom rexlimiv impbii 3bitri vtoclbg pm5.21nii )
+      EAGIZJZDKZLZEWIBIZMZJZNZBDOZEACJZDKZLECWMMZJZNZBDOGCFWICNZWKWSEXCWJWRNWKW
+      SNWICUCAWJWRDUAUDUEXCWPXBBDXCWOXAEXCWNWTWICWMUBUFUGUHWLEPLZWQEWKUIWPXDBDW
+      PXDWOPLWNUJEWOPUKULUMHIZWKLZXEWONZBDOZWLWQHEPXEEWKUKXEENXGWPBDXEEWOUOUHXF
+      XEWJUNZAIZXEQZDLZAWJUPZRXIWIXEQZDLZRZXHAWJDXEHSUQXMXOXIXMXLAGURXOXLAWIGSZ
+      USXLXOAWIXQAGUTXKXNDXJWIXEVATVBVCVDXPXHXPXOXEWIXNMZJZNZRZXHXPWJDXEVEZYAXP
+      XIWMXEQZDLZBWJUPZYBXIXOVHXOYEXIYEXOYEYDBGURXOYDBWIXQUSYDXOBWIXQBGUTYCXNDW
+      MWIXEVATVBVCVFVGBWJDXEVIVJWIDXEXQVKVLXGXTBXNDWMXNNZWOXSXEYFWNXRWMXNWIVMUF
+      UGVNUDXGXPBDWMDLZXPXGWOWJUNZWIWOQZDLZRYGYJYHYGYIWMDWIWMXQBSVOYGVPVQWIWMXQ
+      VRVSXGXIYHXOYJWJXEWOVTXGXNYIDWIXEWOWATWBWCWDWEWFWGWHWG $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d B x a b $.  $d A x a b $.  $d V x a b $.  $d W x a b $.
+    $( Express set exponentiation in terms of cartesian product. $)
+    mapixpg $p |- ( ( A e. V /\ B e. W ) -> ( B ^m A ) = X_ x e. A B ) $=
+      ( vb va cv cmap co cixp wceq oveq2 ixpeq1 eqeq12d oveq1 wral id ralrimivw
+      vex ixpeq2 syl mapixp vtocl2g ) FHZGHZIJZAUFUEKZLUEBIJZABUEKZLCBIJZABCKZL
+      GFBCDEUFBLUGUIUHUJUFBUEIMAUFBUENOUECLZUIUKUJULUECBIPUMUMABQUJULLUMUMABUMR
+      SABUECUAUBOAUFUEGTFTUCUD $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d I a b c x y $.  $d A a b c x y $.  $d V a b c x y $.  $d F a b c y $.
+    $d W a b c x y $.  $d X x c $.
+    ixpsnf1o.f $e |- F = ( x e. A |-> ( { I } X. { x } ) ) $.
+    $( A bijection between a class and single-point functions to it. $)
+    ixpsnf1o $p |- ( I e. V -> F : A -1-1-onto-> X_ y e. { I } A ) $=
+      ( va vb vc wcel csn cv crn cuni cvv wa vex wceq eqeq2d cixp cxp snex xpex
+      a1i rnex uniex cop wrex wb sneq xpeq1d anbi2d elixpsn ax-mp bicomi ixpeq1
+      syl eleq2d syl5bb anbi1d bibi12d xpsn eqeq2i anbi2i eqid1 weq opeq2 sneqd
+      rcla4ev mpan2 op2nda eqcomi jca eqeq1 rexbidv rneq anbi12d syl5ibrcom imp
+      unieqd id1 eqidd eleq1 syl5bi imbi12d rexlimiv impbii bitri vtoclg f1od
+      wi ) EFKZAHCBELZCUAZWNAMZLZUBZHMZNZOZDPPGWRPKWMWPCKZQWNWQEUCWPUCUDUEXAPKW
+      MWSWOKZQWTWSHRUFUGUEXBWSIMZLZWQUBZSZQZWSXDJMZUHZLZSZJCUIZWPXASZQZUJXBWSWR
+      SZQZXCXNQZUJIEFXDESZXHXQXOXRXSXGXPXBXSXFWRWSXSXEWNWQXDEUKZULTUMXSXMXCXNXM
+      WSBXECUAZKZXSXCYBXMXDPKYBXMUJIRZBJXDCWSPUNUOUPXSYAWOWSXSXEWNSYAWOSXTBXEWN
+      CUQURUSUTVAVBXHXBWSXDWPUHZLZSZQZXOXGYFXBXFYEWSXDWPYCARZVCVDVEYGXOXBYFXOXB
+      XOYFYEXKSZJCUIZWPYENZOZSZQXBYJYMXBYEYESZYJYEVFYIYNJWPCJAVGZXKYEYEYOXJYDXI
+      WPXDVHVITVJVKYMXBYLWPXDWPYCYHVLVMUEVNYFXMYJXNYMYFXLYIJCWSYEXKVOVPYFXAYLWP
+      YFWTYKWSYEVQWATVRVSVTXMXNYGXLXNYGWLZJCXICKZYPXLWPXKNZOZSZXBXKYESZQZWLYTAJ
+      VGZYQUUBYSXIWPXDXIYCJRVLVDYQUUBUUCYQXKXKSZQYQYQUUDYQWBYQXKWCVNUUCXBYQUUAU
+      UDWPXICWDUUCYEXKXKUUCYDXJWPXIXDVHVITVRVSWEXLXNYTYGUUBXLXAYSWPXLWTYRWSXKVQ
+      WATXLYFUUAXBWSXKYEVOUMWFVSWGVTWHWIWJWK $.
+      $( [24-Jan-2015] $)
+
+    $( A bijection between a set and single-point functions to it. $)
+    mapsnf1o $p |- ( ( A e. V /\ I e. W ) ->
+        F : A -1-1-onto-> ( A ^m { I } ) ) $=
+      ( vy wcel wa csn cmap co wf1o cixp ixpsnf1o adantl wceq wb cvv adantr syl
+      snex mapixpg mpan f1oeq3 mpbird ) BEIZDFIZJZBBDKZLMZCNZBHUKBOZCNZUIUOUHAH
+      BCDFGPQUJULUNRZUMUOSUHUPUIUKTIUHUPDUCHUKBTEUDUEUAULUNBCUFUBUG $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d Y x $.  $d R x $.  $d I x $.  $d B x $.  $d C x $.  $d W x $.
+    pwssnf1o.y $e |- Y = ( R ^s { I } ) $.
+    pwssnf1o.b $e |- B = ( Base ` R ) $.
+    pwssnf1o.f $e |- F = ( x e. B |-> ( { I } X. { x } ) ) $.
+    pwssnf1o.c $e |- C = ( Base ` Y ) $.
+    $( Triviality of singleton powers: set equipollence. $)
+    pwssnf1o $p |- ( ( R e. V /\ I e. W ) -> F : B -1-1-onto-> C ) $=
+      ( wcel wa wf1o cvv cbs cfv wceq csn cmap co fvex eqeltri mapsnf1o syl2anc
+      a1i simpr wb snex pwsbas mpan2 adantr syl6eqr eqcomd f1oeq3 syl mpbird )
+      DGNZFHNZOZBCEPZBBFUAZUBUCZEPZVBBQNZVAVFVGVBBDRSQKDRUDUEUHUTVAUIABEFQHLUFU
+      GVBCVETVCVFUJVBVECVBVEIRSZCUTVEVHTZVAUTVDQNVIFUKBDVDGQIJKULUMUNMUOUPCVEBE
+      UQURUS $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    pwsdiagel.y $e |- Y = ( R ^s I ) $.
+    pwsdiagel.b $e |- B = ( Base ` R ) $.
+    pwsdiagel.c $e |- C = ( Base ` Y ) $.
+    $( Membership of diagonal elements in the structure power base set. $)
+    pwsdiagel $p |- ( ( ( R e. V /\ I e. W ) /\ A e. B ) ->
+        ( I X. { A } ) e. C ) $=
+      ( wcel wa csn cxp cmap wf cvv cbs cfv co wss fconstg snssi syl2anc adantl
+      wb fvex eqeltri elmapg mpan ad2antlr mpbird pwsbas syl6eqr adantr eleqtrd
+      fss wceq ) DFLZEGLZMZABLZMZEANZOZBEPUAZCVDVFVGLZEBVFQZVCVIVBVCEVEVFQVEBUB
+      VIEABUCABUDEVEBVFURUEUFVAVHVIUGZUTVCBRLVAVJBDSTRJDSUHUIBEVFRGUJUKULUMVBVG
+      CUSVCVBVGHSTCBDEFGHIJUNKUOUPUQ $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    pwssca.y $e |- Y = ( R ^s I ) $.
+    pwssca.s $e |- S = ( Scalar ` R ) $.
+    $( The ring of scalars of a structure product. $)
+    pwssca $p |- ( ( R e. V /\ I e. W ) -> S = ( Scalar ` Y ) ) $=
+      ( wcel wa csn cxp cprdm co csca cfv cvv wceq fvex eqeltri snex xpexg eqid
+      mpan2 adantl prdmsca sylancr pwsval fveq2d eqtr4d ) ADIZCEIZJZBBCAKZLZMNZ
+      OPZFOPUMBQIUOQIZBUQRBAOPQHAOSTULURUKULUNQIURAUACUNEQUBUDUEUPUOBQQUPUCUFUG
+      UMFUPOABCDEFGHUHUIUJ $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d B x $.  $d I x $.  $d V x $.  $d W x $.  $d X x $.
+    fdiagfn.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
+    $( Functionality of the diagonal map. $)
+    fdiagfn $p |- ( ( B e. V /\ I e. W ) -> F : B --> ( B ^m I ) ) $=
+      ( wcel wa cv csn cxp cmap co wf wss fconstg snssi fss syl2anc adantl wb
+      elmapg adantr mpbird fmptd ) BEHDFHIZABDAJZKZLZBDMNZCUGUHBHZIUJUKHZDBUJOZ
+      ULUNUGULDUIUJOUIBPUNDUHBQUHBRDUIBUJSTUAUGUMUNUBULBDUJEFUCUDUEGUF $.
+      $( [24-Jan-2015] $)
+
+    $( Functionality of the diagonal map. $)
+    fvdiagfn $p |- ( ( I e. W /\ X e. B ) -> ( F ` X ) = ( I X. { X } ) ) $=
+      ( wcel wa csn cxp cvv cfv wceq simpr snex xpexg mpan2 adantr cv syl2anc
+      sneq xpeq2d fvmptg ) DEHZFBHZIUFDFJZKZLHZFCMUHNUEUFOUEUIUFUEUGLHUIFPDUGEL
+      QRSAFDATZJZKUHBLCUJFNUKUGDUJFUBUCGUDUA $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d Y x a b $.  $d R x a b $.  $d I x a b $.  $d B x a b $.  $d F a b $.
+    $d W x a b $.
+    pwsdiagghm.y $e |- Y = ( R ^s I ) $.
+    pwsdiagghm.b $e |- B = ( Base ` R ) $.
+    pwsdiagghm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
+    $( Diagonal homomorphism into a structure power. $)
+    pwsdiagghm $p |- ( ( R e. Grp /\ I e. W ) -> F e. ( R GrpHom Y ) ) $=
+      ( va vb cgrp wcel wa cbs cfv co wceq cvv wf cplusg wral cghm simpl pwsgrp
+      cv jca cmap fvex eqeltri fdiagfn mpan adantl wb pwsbas feq3 syl mpbid csn
+      cxp cof eqid simpll simplr pwsdiagel adantrr adantrl pwsplusgval id ofc12
+      vex ad2antlr eqtr2d grpcl 3expb adantlr syl2anc oveqan12d anandis adantll
+      a1i fvdiagfn 3eqtr4d ralrimivva cpws ovex isghm ax-mp sylanbrc ) CMNZEFNZ
+      OZWKGMNZOZBGPQZDUAZKUGZLUGZCUBQZRZDQZWRDQZWSDQZGUBQZRZSZLBUCKBUCZOZDCGUDR
+      NZWMWKWNWKWLUECEFGHUFUHWMWQXHWMBBEUIRZDUAZWQWLXLWKBTNWLXLBCPQTICPUJUKABDE
+      TFJULUMUNWMXKWPSXLWQUOBCEMFGHIUPXKWPBDUQURUSWMXGKLBBWMWRBNZWSBNZOZOZEXAUT
+      VAZEWRUTVAZEWSUTVAZXERZXBXFXPXTXRXSWTVBRZXQXPWTWPXECXRXSEMFGHWPVCZWKWLXOV
+      DWKWLXOVEZWMXMXRWPNXNWRBWPCEMFGHIYBVFVGWMXNXSWPNXMWSBWPCEMFGHIYBVFVHWTVCZ
+      XEVCZVIWLYAXQSWKXOWLEWRWSWTFTTWLVJWRTNWLKVLWBWSTNWLLVLWBVKVMVNXPWLXABNZXB
+      XQSYCWKXOYFWLWKXMXNYFBWTCWRWSIYDVOVPVQABDEFXAJWCVRWLXOXFXTSZWKWLXMXNYGWLX
+      MOWLXNOXCXRXDXSXEABDEFWRJWCABDEFWSJWCVSVTWAWDWEUHGTNXJWOXIOUOGCEWFRTHCEWF
+      WGUKLKWTXECGDTBWPIYBYDYEWHWIWJ $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d Y x a b $.  $d R x a b $.  $d I x a b $.  $d B x a b $.  $d F a b $.
+    $d W x a b $.
+    pwsdiaglmhm.y $e |- Y = ( R ^s I ) $.
+    pwsdiaglmhm.b $e |- B = ( Base ` R ) $.
+    pwsdiaglmhm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
+    $( Diagonal homomorphism into a structure power. $)
+    pwsdiaglmhm $p |- ( ( R e. LMod /\ I e. W ) -> F e. ( R LMHom Y ) ) $=
+      ( va vb clmod wcel wa co cfv wceq eqid cvv cghm csca cvsca wral cbs clmhm
+      w3a simpl pwslmod jca cgrp lmodgrp pwsdiagghm sylan pwssca eqcomd csn cxp
+      cv cof simpll simplr simprl pwsdiagel adantrl pwsvscafval id vex ad2antlr
+      a1i ofc12 eqtr2d lmodvscl 3expb adantlr fvdiagfn syl2anc ad2ant2l 3eqtr4d
+      oveq2d ralrimivva 3jca wb cpws ovex eqeltri islmhm ax-mp sylanbrc ) CMNZE
+      FNZOZWJGMNZOZDCGUAPNZGUBQZCUBQZRZKUSZLUSZCUCQZPZDQZWSWTDQZGUCQZPZRZLBUDKW
+      QUEQZUDZUGZDCGUFPNZWLWJWMWJWKUHCEFGHUIUJWLWOWRXIWJCUKNWKWOCULABCDEFGHIJUM
+      UNWLWQWPCWQEMFGHWQSZUOUPWLXGKLXHBWLWSXHNZWTBNZOZOZEXBUQURZWSEWTUQURZXEPZX
+      CXFXPXSEWSUQURXRXAUTPZXQXPWSGUEQZCXAXEWQEXHMFXRGHYASZXASZXESZXLXHSZWJWKXO
+      VAWJWKXOVBZWLXMXNVCWLXNXRYANXMWTBYACEMFGHIYBVDVEVFWKXTXQRWJXOWKEWSWTXAFTT
+      WKVGWSTNWKKVHVJWTTNWKLVHVJVKVIVLXPWKXBBNZXCXQRYFWJXOYGWKWJXMXNYGWSXAWQXHB
+      CWTIXLYCYEVMVNVOABDEFXBJVPVQXPXDXRWSXEWKXNXDXRRWJXMABDEFWTJVPVRVTVSWAWBGT
+      NXKWNXJOWCGCEWDPTHCEWDWEWFKLXHCGBDWQWPXAXETXLWPSYEIYCYDWGWHWI $.
+      $( [24-Jan-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Direct sum of left modules
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
