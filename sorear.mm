@@ -15105,6 +15105,22 @@ $)
   $}
 
   ${
+    $d i g M $.  $d i g N $.  $d i g S $.  $d i g B $.
+    islnm2.b $e |- B = ( Base ` M ) $.
+    islnm2.s $e |- S = ( LSubSp ` M ) $.
+    islnm2.n $e |- N = ( LSpan ` M ) $.
+    $( Property of being a Noetherian left module with finite generation
+       expanded in terms of spans. $)
+    islnm2 $p |- ( M e. LNoeM <-> ( M e. LMod /\
+        A. i e. S E. g e. ( ~P B i^i Fin ) i = ( N ` g ) ) ) $=
+      ( clnm wcel clmod cv cress co clfig wral wa wceq wrex cfv cpw islnm eqid1
+      cfn cin islssfg2 eqcom rexbii syl6bb ralbidva pm5.32i bitri ) EJKELKZEDMZ
+      NOZPKZDBQZRUNUOCMFUAZSZCAUBUEUFZTZDBQZRBDEHUCUNURVCUNUQVBDBUNUOBKRUQUSUOS
+      ZCVATVBABUOFEUPCUPUDHIGUGVDUTCVAUSUOUHUIUJUKULUM $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
     $d M a $.  $d U a $.  $d S a $.  $d R a $.
     $( A Noetherian left module is a left module.  (Contributed by Stefan
        O'Rear, 12-Dec-2014.) $)
@@ -15181,6 +15197,54 @@ $)
       WDAYGYJXRYHWDYKXRUUEXRXQXPURZYKUUEXPXQWEYKHEFWFUCUMZXIXLYSUUFUUEVLAUUGYJA
       XGUUGQEFHWGUHVJAXIYJRVJYTUUABEFXKHIYMXOJKPNOUUCWHWKWIWJAXLYIXRWLYODICBEYN
       XOPUUBMWMWNWOWTWPWQWRWTWSXA $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d ph x $.  $d X x $.  $d S x $.  $d A x $.  $d U x $.  $d Y x $.
+    $d T x $.  $d F x $.
+    lmhmfgima.y $e |- Y = ( T |`s ( F " A ) ) $.
+    lmhmfgima.x $e |- X = ( S |`s A ) $.
+    lmhmfgima.u $e |- U = ( LSubSp ` S ) $.
+    lmhmfgima.xf $e |- ( ph -> X e. LFinGen ) $.
+    lmhmfgima.a $e |- ( ph -> A e. U ) $.
+    lmhmfgima.f $e |- ( ph -> F e. ( S LMHom T ) ) $.
+    lmhmfgima.t $e |- ( ph -> T e. V ) $.
+    $( A homomorphism maps finitely generated submodules to finitely generated
+       submodules. $)
+    lmhmfgima $p |- ( ph -> Y e. LFinGen ) $=
+      ( clfig cfv cfn wcel vx cima cress co cv clspn wceq cbs cpw wrex clmod wb
+      cin clmhm lmhmlmod1 syl eqid islssfg2 syl2anc mpbid wa adantr inss1 sseli
+      wss elpwi adantl lmhmlsp syl3anc oveq2d lmhmlmod2 imassrn wf lmhmf syl5ss
+      crn frn cres wfo inss2 wfun cdm ffun sseqtr4d fores fofi islssfgi eqeltrd
+      fdm imaeq2 eleq1d syl5ibcom rexlimdva mpd syl5eqel ) AIDFBUBZUCUDZQJAUAUE
+      ZCUFRZRZBUGZUACUHRZUIZSUMZUJZWQQTZAHQTZXEMACUKTZBETXGXEULAFCDUNUDTZXHOCDF
+      UOUPNXBEBWSCHUAKLWSUQZXBUQZURUSUTAXAXFUAXDAWRXDTZVAZDFWTUBZUCUDZQTXAXFXMX
+      ODFWRUBZDUFRZRZUCUDZQXMXNXRDUCXMXIDGTZWRXBVEZXNXRUGAXIXLOVBAXTXLPVBXLYAAX
+      LWRXCTYAXDXCWRXCSVCVDWRXBVFUPVGZCDWRFWSXQXBGXKXJXQUQZVHVIVJXMDUKTZXPDUHRZ
+      VEZXPSTZXSQTAYDXLAXIXTYDOPCDFGVKUSVBAYFXLAXPFVPZYEFWRVLAXBYEFVMZYHYEVEAXI
+      XTYIOPXBYECDFGXKYEUQZVNUSZXBYEFVQUPVOVBXMWRSTZWRXPFWRVRZVSZYGXLYLAXDSWRXC
+      SVTVDVGXMFWAZWRFWBZVEYNAYOXLAYIYOYKXBYEFWCUPVBXMWRXBYPYBAYPXBUGZXLAYIYQYK
+      XBYEFWIUPVBWDWRFWEUSWRXPYMWFUSXPXQYEDXSYCYJXSUQWGVIWHXAXOWQQXAXNWPDUCWTBF
+      WJVJWKWLWMWNWO $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d V a $.  $d T a $.  $d S a $.  $d F a $.  $d B a $.
+    lnmepi.b $e |- B = ( Base ` T ) $.
+    $( Epimorphic images of Noetherian modules are Noetherian. $)
+    lnmepi $p |- ( ( ( F e. ( S LMHom T ) /\ T e. V ) /\
+        ( S e. LNoeM /\ ran F = B ) ) -> T e. LNoeM ) $=
+      ( va co wcel wa clnm wceq cress clfig clss cfv adantr cima eqid sylanbrc
+      clmhm crn clmod cv wral lmhmlmod2 cbs wfo wss wf lmhmf simprr dffo2 lssss
+      foimacnv syl2an oveq2d simplrl simpll lmhmpreima lnmlssfg syl2anc simplll
+      ccnv sylan simpllr lmhmfgima eqeltrrd ralrimiva islnm ) DBCUAHIZCEIZJZBKI
+      ZDUBALZJZJZCUCIZCGUDZMHZNIZGCOPZUECKIVMVRVPBCDEUFQVQWAGWBVQVSWBIZJZCDDVDV
+      SRZRZMHZVTNWDWFVSCMVQBUGPZADUHZVSAUIWFVSLWCVQWHADUJZVOWIVMWJVPWHABCDEWHSF
+      UKQVMVNVOULWHADUMTWBVSACFWBSZUNWHAVSDUOUPUQWDWEBCBOPZDEBWEMHZWGWGSWMSZWLS
+      ZWDVNWEWLIZWMNIVMVNVOWCURVQVKWCWPVKVLVPUSBCVSDWLWBWOWKUTVEZWMWLWEBWOWNVAV
+      BWQVKVLVPWCVCVKVLVPWCVFVGVHVIWBGCWKVJT $.
       $( [24-Jan-2015] $)
   $}
 
@@ -16139,6 +16203,12 @@ $)
     $}
   $}
 
+  $( Principal ideal rings are rings. $)
+  lpirrng $p |- ( R e. LPIR -> R e. Ring ) $=
+    ( clpir wcel crg clidl cfv clpidl wceq eqid islpir simplbi ) ABCADCAEFZAGFZ
+    HMALMILIJK $.
+    $( [24-Jan-2015] $)
+
   $( Division rings are principal ideal.  (Contributed by Stefan O'Rear,
      3-Jan-2015.) $)
   drnglpir $p |- ( R e. DivRing -> R e. LPIR ) $=
@@ -16325,7 +16395,62 @@ $)
 
   $( A ring is _left-Noetherian_ iff it is Noetherian as a left module over
      itself. $)
-  df-lnr $a |- LNoeR = ( Ring i^i ( `' ringLMod " LNoeM ) ) $.
+  df-lnr $a |- LNoeR = { a e. Ring | ( ringLMod ` a ) e. LNoeM } $.
+
+  ${
+    $d A a $.
+    $( Property of a left-Noetherian ring. $)
+    islnr $p |- ( A e. LNoeR <-> ( A e. Ring /\
+        ( ringLMod ` A ) e. LNoeM ) ) $=
+      ( va cv crglmod cfv clnm wcel crg clnr wceq fveq2 eleq1d df-lnr elrab2 )
+      BCZDEZFGADEZFGBAHIOAJPQFOADKLBMN $.
+      $( [24-Jan-2015] $)
+
+    $( Left-Noetherian rings are rings. $)
+    lnrrng $p |- ( A e. LNoeR -> A e. Ring ) $=
+      ( clnr wcel crg crglmod cfv clnm islnr simplbi ) ABCADCAEFGCAHI $.
+      $( [24-Jan-2015] $)
+
+    $( Left-Noetherian rings have Noetherian associated modules. $)
+    lnrlnm $p |- ( A e. LNoeR -> ( ringLMod ` A ) e. LNoeM ) $=
+      ( clnr wcel crg crglmod cfv clnm islnr simprbi ) ABCADCAEFGCAHI $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d i g R $.  $d i g N $.  $d i g U $.  $d i g B $.
+    islnr2.b $e |- B = ( Base ` R ) $.
+    islnr2.u $e |- U = ( LIdeal ` R ) $.
+    islnr2.n $e |- N = ( RSpan ` R ) $.
+    $( Property of being a left-Noetherian ring in terms of finite generation
+       of ideals (the usual "pure ring theory" definition). $)
+    islnr2 $p |- ( R e. LNoeR <-> ( R e. Ring /\
+        A. i e. U E. g e. ( ~P B i^i Fin ) i = ( N ` g ) ) ) $=
+      ( wcel crg cfv wa cv wceq cpw cfn cin eqid syl5eq clnr crglmod clnm islnr
+      wrex wral clspn cbs clmod rlmlmod biantrurd islnm2 syl6rbbr clidl lidlval
+      clss rlmbase pweqd ineq1d rspval fveq1d eqeq2d rexeqbidv raleqbidv bitr4d
+      crsp pm5.32i bitri ) BUAJBKJZBUBLZUCJZMVIENZDNZFLZOZDAPZQRZUEZECUFZMBUDVI
+      VKVSVIVKVLVMVJUGLZLZOZDVJUHLZPZQRZUEZEVJUPLZUFZVSVIWHVJUIJZWHMVKVIWIWHBUJ
+      UKWCWGDEVJVTWCSWGSVTSULUMVIVRWFECWGVICBUNLWGHBKUOTVIVOWBDVQWEVIVPWDQVIAWC
+      VIABUHLWCGBKUQTURUSVIVNWAVLVIVMFVTVIFBVFLVTIBKUTTVAVBVCVDVEVGVH $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d a b c R $.
+    $( Left principal ideal rings are left Noetherian. $)
+    lpirlnr $p |- ( R e. LPIR -> R e. LNoeR ) $=
+      ( va vb vc clpir wcel crg cv crsp cfv wceq cbs cpw cfn cin wrex wral eqid
+      wa sylanbrc clidl lpirrng clpidl csn wb islpidl syl biimpa snelpwi adantl
+      clnr snfi fveq2 eqeq2d rcla4ev sylancl eqeq1 rexbidv syl5ibrcom rexlimdva
+      a1i elin mpd ralrimiva islpir simprbi raleqdv mpbird islnr2 ) AEFZAGFZBHZ
+      CHZAIJZJZKZCALJZMZNOZPZBAUAJZQZAUKFAUBZVJWBVTBAUCJZQVJVTBWDVJVLWDFZSZVLDH
+      ZUDZVNJZKZDVQPZVTVJWEWKVJVKWEWKUEWCVQWDADVLVNWDRZVNRZVQRZUFUGUHWFWJVTDVQW
+      FWGVQFZSZVTWJWIVOKZCVSPZWPWHVSFZWIWIKZWRWPWHVRFZWHNFZWSWOXAWFWGVQUIUJXBWP
+      WGULVAWHVRNVBTWIRWQWTCWHVSVMWHKVOWIWIVMWHVNUMUNUOUPWJVPWQCVSVLWIVOUQURUSU
+      TVCVDVJVTBWAWDVJVKWAWDKWDAWAWLWARZVEVFVGVHVQAWACBVNWNXCWMVIT $.
+      $( [24-Jan-2015] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
