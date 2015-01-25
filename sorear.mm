@@ -15397,13 +15397,14 @@ $)
   $}
 
   ${
-    $d B x a b $.  $d A x a b $.  $d V x a b $.  $d W x a b $.
-    $( Express set exponentiation in terms of cartesian product. $)
-    mapixpg $p |- ( ( A e. V /\ B e. W ) -> ( B ^m A ) = X_ x e. A B ) $=
-      ( vb va cv cmap co cixp wceq oveq2 ixpeq1 eqeq12d oveq1 wral id ralrimivw
-      vex ixpeq2 syl mapixp vtocl2g ) FHZGHZIJZAUFUEKZLUEBIJZABUEKZLCBIJZABCKZL
-      GFBCDEUFBLUGUIUHUJUFBUEIMAUFBUENOUECLZUIUKUJULUECBIPUMUMABQUJULLUMUMABUMR
-      SABUECUAUBOAUFUEGTFTUCUD $.
+    pwselbasb.y $e |- Y = ( R ^s I ) $.
+    pwselbasb.b $e |- B = ( Base ` R ) $.
+    pwselbasb.c $e |- C = ( Base ` Y ) $.
+    $( Membership in the base set of a structure product. $)
+    pwselbasb $p |- ( ( R e. V /\ I e. W ) -> ( X e. C <-> X : I --> B ) ) $=
+      ( wcel wa cmap co wf cbs cfv pwsbas cvv syl6eqr eleq2d fvex elmapg adantl
+      wb eqeltri mpan bitr3d ) CELZDFLZMZGADNOZLZGBLDAGPZULUMBGULUMHQRBACDEFHIJ
+      SKUAUBUKUNUOUFZUJATLUKUPACQRTJCQUCUGADGTFUDUHUEUI $.
       $( [24-Jan-2015] $)
   $}
 
@@ -15434,9 +15435,10 @@ $)
     $( A bijection between a set and single-point functions to it. $)
     mapsnf1o $p |- ( ( A e. V /\ I e. W ) ->
         F : A -1-1-onto-> ( A ^m { I } ) ) $=
-      ( vy wcel wa csn cmap co wf1o cixp ixpsnf1o adantl wceq wb cvv adantr syl
-      snex mapixpg mpan f1oeq3 mpbird ) BEIZDFIZJZBBDKZLMZCNZBHUKBOZCNZUIUOUHAH
-      BCDFGPQUJULUNRZUMUOSUHUPUIUKTIUHUPDUCHUKBTEUDUEUAULUNBCUFUBUG $.
+      ( vy wcel wa csn cmap co wf1o cixp ixpsnf1o adantl wceq wb cvv eqcomd syl
+      snex ixpconstg mpan adantr f1oeq3 mpbird ) BEIZDFIZJZBBDKZLMZCNZBHULBOZCN
+      ZUJUPUIAHBCDFGPQUKUMUORZUNUPSUIUQUJULTIZUIUQDUCURUIJUOUMHULBTEUDUAUEUFUMU
+      OBCUGUBUH $.
       $( [24-Jan-2015] $)
   $}
 
@@ -15463,11 +15465,9 @@ $)
     $( Membership of diagonal elements in the structure power base set. $)
     pwsdiagel $p |- ( ( ( R e. V /\ I e. W ) /\ A e. B ) ->
         ( I X. { A } ) e. C ) $=
-      ( wcel wa csn cxp cmap wf cvv cbs cfv co wss fconstg snssi syl2anc adantl
-      wb fvex eqeltri elmapg mpan ad2antlr mpbird pwsbas syl6eqr adantr eleqtrd
-      fss wceq ) DFLZEGLZMZABLZMZEANZOZBEPUAZCVDVFVGLZEBVFQZVCVIVBVCEVEVFQVEBUB
-      VIEABUCABUDEVEBVFURUEUFVAVHVIUGZUTVCBRLVAVJBDSTRJDSUHUIBEVFRGUJUKULUMVBVG
-      CUSVCVBVGHSTCBDEFGHIJUNKUOUPUQ $.
+      ( wcel wa csn cxp wf wss fconstg snssi fss adantl pwselbasb adantr mpbird
+      syl2anc wb ) DFLEGLMZABLZMEANZOZCLZEBUJPZUHULUGUHEUIUJPUIBQULEABRABSEUIBU
+      JTUEUAUGUKULUFUHBCDEFGUJHIJKUBUCUD $.
       $( [24-Jan-2015] $)
   $}
 
@@ -15547,6 +15547,229 @@ $)
       WKVGWSTNWKKVHVJWTTNWKLVHVJVKVIVLXPWKXBBNZXCXQRYFWJXOYGWKWJXMXNYGWSXAWQXHB
       CWTIXLYCYEVMVNVOABDEFXBJVPVQXPXDXRWSXEWKXNXDXRRWJXMABDEFWTJVPVRVTVSWAWBGT
       NXKWNXJOWCGCEWDPTHCEWDWEWFKLXHCGBDWQWPXAXETXLWPSYEIYCYDWGWHWI $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d B x $.  $d V x $.  $d X x $.
+    fvtresfn.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
+    $( Functionality of a tuple-restriction function. $)
+    fvtresfn $p |- ( X e. B -> ( F ` X ) = ( X |` V ) ) $=
+      ( wcel cres cvv cfv wceq resexg cv reseq1 fvmptg mpdan ) EBGEDHZIGECJQKED
+      BLAEAMZDHQBICREDNFOP $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d A y $.  $d B y $.  $d C x y $.
+    $( Unrestricted restriction of the mapping operation. $)
+    resmpt3 $p |- ( ( x e. A |-> B ) |` C ) = ( x e. ( A i^i C ) |-> B ) $=
+      ( vy cv wcel wceq wa copab cres cin cmpt resopab ancom bitri anbi1i anass
+      elin df-mpt bitr2i opabbii eqtri reseq1i 3eqtr4i ) AFZBGZEFCHZIZAEJZDKZUF
+      BDLZGZUHIZAEJZABCMZDKAULCMUKUFDGZUIIZAEJUOUIAEDNURUNAEUNUQUGIZUHIURUMUSUH
+      UMUGUQIUSUFBDSUGUQOPQUQUGUHRUAUBUCUPUJDAEBCTUDAEULCTUE $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d F x a b $.  $d G x a b $.  $d V x $.  $d W x $.  $d R x a b $.
+    $d D x $.
+    $( General value of ` ( F oF R G ) ` with no assumptions on functionality
+       of ` F ` and ` G ` . $)
+    offval3 $p |- ( ( F e. V /\ G e. W ) -> ( F oF R G ) =
+        ( x e. ( dom F i^i dom G ) |-> ( ( F ` x ) R ( G ` x ) ) ) ) $=
+      ( va vb wcel wa cvv cdm cin cv cfv co cmpt wceq elex adantr adantl inex1g
+      dmexg mptexg 3syl dmeq ineqan12d fveq1 oveqan12d mpteq12dv df-of ovmpt2ga
+      cof syl3anc ) CEIZDFIZJCKIZDKIZACLZDLZMZANZCOZVBDOZBPZQZKIZCDBUMZPVFRUOUQ
+      UPCESTUPURUODFSUAUOVGUPUOUSKIVAKIVGCEUCUSUTKUBAVAVEKUDUETGHCDKKAGNZLZHNZL
+      ZMZVBVIOZVBVKOZBPZQVFVHKVICRZVKDRZJAVMVPVAVEVQVRVJUSVLUTVICUFVKDUFUGVQVRV
+      NVCVOVDBVBVICUHVBVKDUHUIUJABGHUKULUN $.
+      $( [24-Jan-2015] $)
+
+    $( Pointwise combination commutes with restriction. $)
+    offres $p |- ( ( F e. V /\ G e. W ) -> ( ( F oF R G ) |` D ) =
+        ( ( F |` D ) oF R ( G |` D ) ) ) $=
+      ( vx wcel cdm cin cfv co cmpt cres wceq fvres dmres 3eqtr4ri offval3 cvv
+      wa cv cof inss2 sseli oveq12d mpteq2ia inindi incom ineq12i eqid mpteq12i
+      syl resmpt3 reseq1d resexg syl2an 3eqtr4a ) CEHZDFHZUAZGCIZDIZJZGUBZCKZVE
+      DKZBLZMZANZGCANZIZDANZIZJZVEVKKZVEVMKZBLZMZCDBUCZLZANVKVMVTLZGVDAJZVRMGWC
+      VHMVSVJGWCVRVHVEWCHVEAHZVRVHOWCAVEVDAUDUEWDVPVFVQVGBVEACPVEADPUFUMUGGVOVR
+      WCVRAVDJAVBJZAVCJZJWCVOAVBVCUHVDAUIVLWEVNWFCAQDAQUJRVRUKULGVDVHAUNRVAWAVI
+      AGBCDEFSUOUSVKTHVMTHWBVSOUTCAEUPDAFUPGBVKVMTTSUQUR $.
+      $( [24-Jan-2015] $)
+  $}
+
+  $( Restriction of a constant function (or other cross product). $)
+  xpssres $p |- ( C C_ A -> ( ( A X. B ) |` C ) = ( C X. B ) ) $=
+    ( wss cxp cres cin df-res inxp incom inv1 xpeq12i 3eqtri wceq biimpi xpeq1d
+    cvv df-ss syl5eq ) CADZABEZCFZCAGZBEZCBEUBUACQEGACGZBQGZEUDUACHABCQIUEUCUFB
+    ACJBKLMTUCCBTUCCNCAROPS $.
+    $( [24-Jan-2015] $)
+
+  ${
+    $d Y a b x $.  $d W a b x $.  $d U a b x $.  $d Z a b x $.  $d V a b x $.
+    $d B a b x $.  $d C a b x $.  $d F a b $.  $d X a b x $.  $d T x $.
+    pwssplit1.y $e |- Y = ( W ^s U ) $.
+    pwssplit1.z $e |- Z = ( W ^s V ) $.
+    pwssplit1.b $e |- B = ( Base ` Y ) $.
+    pwssplit1.c $e |- C = ( Base ` Z ) $.
+    pwssplit1.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
+    $( Splitting for structure powers, part 0: restriction is a function. $)
+    pwssplit0 $p |- ( ( W e. T /\ U e. X /\ V C_ U ) -> F : B --> C ) $=
+      ( wcel wf wb syl2anc wss w3a cv cres wa cbs eqid pwselbasb 3adant3 biimpa
+      cfv simpl3 fssres cvv simp1 simp3 simp2 ssexg adantr mpbird fmptd ) HDQZE
+      IQZGEUAZUBZABAUCZGUDZCFVEVFBQZUEZVGCQZGHUFUKZVGRZVIEVKVFRZVDVLVEVHVMVBVCV
+      HVMSVDVKBHEDIVFJLVKUGZNUHUIUJVBVCVDVHULEVKGVFUMTVEVJVLSZVHVEVBGUNQZVOVBVC
+      VDUOVEVDVCVPVBVCVDUPVBVCVDUQGEIURTVKCHGDUNVGKMVNOUHTUSUTPVA $.
+      $( [24-Jan-2015] $)
+
+    $( Splitting for structure powers, part 1: restriction is an onto
+       function.  The only actual monoid law we need here is that the base set
+       is nonempty. $)
+    pwssplit1 $p |- ( ( W e. Mnd /\ U e. X /\ V C_ U ) -> F : B -onto-> C ) $=
+      ( wcel wf wceq cun c0 va vb cmnd wss w3a cfv wrex wral wfo pwssplit0 cdif
+      cv wa c0g csn cxp cbs cin cvv wb simp1 simp3 simp2 syl2anc eqid pwselbasb
+      ssexg biimpa fconst a1i simpl1 mndidcl syl snssd fss disjdif fun syl21anc
+      fvex simpl3 undif sylib unidm feq23d simpl2 mpbird cres fvtresfn resundir
+      mpbid wfn ffn fnresdm incom eqtri fnconstg ax-mp fnresdisj uneq12d syl5eq
+      3syl un0 syl6eq eqtr2d fveq2 eqeq2d rcla4ev ralrimiva dffo3 sylanbrc ) GU
+      CPZDHPZFDUDZUEZBCEQUAULZUBULZEUFZRZUBBUGZUACUHBCEUIABCUCDEFGHIJKLMNOUJXNX
+      SUACXNXOCPZUMZXODFUKZGUNUFZUOZUPZSZBPZXOYFEUFZRZXSYAYGDGUQUFZYFQZYAFYBSZY
+      JYJSZYFQZYKYAFYJXOQZYBYJYEQZFYBURZTRZYNXNXTYOXNXKFUSPZXTYOUTXKXLXMVAXNXMX
+      LYSXKXLXMVBXKXLXMVCFDHVGVDYJCGFUCUSXOJLYJVEZNVFVDVHZYAYBYDYEQZYDYJUDYPUUB
+      YAYBYCGUNVSZVIVJYAYCYJYAXKYCYJPXKXLXMXTVKZYJGYCYTYCVEVLVMVNYBYDYJYEVOVDYR
+      YAFDVPZVJFYBYJYJXOYEVQVRYAYLYMDYJYFYAXMYLDRXKXLXMXTVTFDWAWBYMYJRYAYJWCVJW
+      DWJYAXKXLYGYKUTUUDXKXLXMXTWEYJBGDUCHYFIKYTMVFVDWFZYAYHYFFWGZXOYAYGYHUUGRU
+      UFABEFYFOWHVMYAUUGXOTSZXOYAUUGXOFWGZYEFWGZSUUHXOYEFWIYAUUIXOUUJTYAYOXOFWK
+      UUIXORUUAFYJXOWLFXOWMXAYAYBFURZTRZUUJTRZUULYAUUKYQTYBFWNUUEWOVJYAYEYBWKZU
+      ULUUMUTUUNYAYCUSPUUNUUCYBYCUSWPWQVJYBFYEWRVMWJWSWTXOXBXCXDXRYIUBYFBXPYFRX
+      QYHXOXPYFEXEXFXGVDXHUBUABCEXIXJ $.
+      $( [24-Jan-2015] $)
+
+    $( Splitting for structure powers, part 2: restriction is a group
+       homomorphism. $)
+    pwssplit2 $p |- ( ( W e. Grp /\ U e. X /\ V C_ U ) ->
+        F e. ( Y GrpHom Z ) ) $=
+      ( cgrp wcel cfv co cvv va vb wss w3a wa wf cv cplusg wceq wral cghm simp1
+      simp2 pwsgrp syl2anc simp3 jca pwssplit0 cres offres adantl adantr simpl2
+      ssexg cof simprl simprr eqid pwsplusgval reseq1d fvtresfn oveqan12d grpcl
+      3eqtr4d 3expb syl ffvelrn adantrr adantrl ralrimivva wb cpws ovex eqeltri
+      sylan isghm ax-mp sylanbrc ) GPQZDHQZFDUCZUDZIPQZJPQZUEZBCEUFZUAUGZUBUGZI
+      UHRZSZERZWQERZWRERZJUHRZSZUIZUBBUJUABUJZUEZEIJUKSQZWLWMWNWLWIWJWMWIWJWKUL
+      ZWIWJWKUMZGDHIKUNUOZWLWIFTQZWNXJWLWKWJXMWIWJWKUPXKFDHVDUOZGFTJLUNUOUQWLWP
+      XGABCPDEFGHIJKLMNOURZWLXFUAUBBBWLWQBQZWRBQZUEZUEZWTFUSZXBXCGUHRZVEZSZXAXE
+      XSWQWRYBSZFUSZWQFUSZWRFUSZYBSZXTYCXRYEYHUIWLFYAWQWRBBUTVAXSWTYDFXSYABWSGW
+      QWRDPHIKMWLWIXRXJVBZWIWJWKXRVCWLXPXQVFWLXPXQVGYAVHZWSVHZVIVJXRYCYHUIWLXPX
+      QXBYFXCYGYBABEFWQOVKABEFWROVKVLVAVNXSWTBQZXAXTUIWLWMXRYLXLWMXPXQYLBWSIWQW
+      RMYKVMVOWEABEFWTOVKVPXSYACXDGXBXCFPTJLNYIWLXMXRXNVBWLXPXBCQZXQWLWPXPYMXOB
+      CWQEVQWEVRWLXQXCCQZXPWLWPXQYNXOBCWREVQWEVSYJXDVHZVIVNVTUQJTQXIWOXHUEWAJGF
+      WBSTLGFWBWCWDUBUAWSXDIJETBCMNYKYOWFWGWH $.
+      $( [24-Jan-2015] $)
+
+    $( Splitting for structure powers, part 3: restriction is a module
+       homomorphism. $)
+    pwssplit3 $p |- ( ( W e. LMod /\ U e. X /\ V C_ U ) ->
+        F e. ( Y LMHom Z ) ) $=
+      ( clmod wcel co cfv cvv va vb wss w3a wa cghm csca wceq cv cvsca wral cbs
+      clmhm simp1 simp2 pwslmod syl2anc simp3 ssexg cgrp lmodgrp pwssplit2 eqid
+      jca syl3an1 pwssca eqtr3d cres csn cxp cof snex sylancl vex offres adantr
+      xpexg xpssres 3ad2ant3 oveq1d simpl1 simpl2 fveq2d eleq2d biimpar adantrr
+      eqtrd simprr pwsvscafval reseq1d fvtresfn ad2antll 3eqtr4d lmodvscl 3expb
+      oveq2d sylan wf pwssplit0 ffvelrn adantrl ralrimivva 3jca wb cpws eqeltri
+      syl ovex islmhm ax-mp sylanbrc ) GPQZDHQZFDUCZUDZIPQZJPQZUEZEIJUFRQZJUGSZ
+      IUGSZUHZUAUIZUBUIZIUJSZRZESZYCYDESZJUJSZRZUHZUBBUKUAYAULSZUKZUDZEIJUMRQZX
+      OXPXQXOXLXMXPXLXMXNUNZXLXMXNUOZGDHIKUPUQZXOXLFTQZXQYPXOXNXMYSXLXMXNURYQFD
+      HUSUQZGFTJLUPUQVDXOXSYBYMXLGUTQXMXNXSGVAABCDEFGHIJKLMNOVBVEXOGUGSZXTYAXOX
+      LYSUUAXTUHYPYTGUUAFPTJLUUAVCZVFUQXOXLXMUUAYAUHYPYQGUUADPHIKUUBVFUQZVGXOYK
+      UAUBYLBXOYCYLQZYDBQZUEZUEZYFFVHZFYCVIZVJZYHGUJSZVKZRZYGYJUUGDUUIVJZYDUULR
+      ZFVHZUUJYDFVHZUULRZUUHUUMUUGUUPUUNFVHZUUQUULRZUURXOUUPUUTUHZUUFXOUUNTQZYD
+      TQUVAXOXMUUITQUVBYQYCVLDUUIHTVQVMUBVNFUUKUUNYDTTVOVMVPUUGUUSUUJUUQUULXOUU
+      SUUJUHZUUFXNXLUVCXMDUUIFVRVSVPVTWGUUGYFUUOFUUGYCBGUUKYEUUADUUAULSZPHYDIKM
+      UUKVCZYEVCZUUBUVDVCZXLXMXNUUFWAZXLXMXNUUFWBXOUUDYCUVDQZUUEXOUVIUUDXOUVDYL
+      YCXOUUAYAULUUCWCWDWEWFZXOUUDUUEWHWIWJUUGYHUUQUUJUULUUEYHUUQUHXOUUDABEFYDO
+      WKWLWPWMUUGYFBQZYGUUHUHXOXPUUFUVKYRXPUUDUUEUVKYCYEYAYLBIYDMYAVCZUVFYLVCZW
+      NWOWQABEFYFOWKXGUUGYCCGUUKYIUUAFUVDPTYHJLNUVEYIVCZUUBUVGUVHXOYSUUFYTVPUVJ
+      XOUUEYHCQZUUDXOBCEWRUUEUVOABCPDEFGHIJKLMNOWSBCYDEWTWQXAWIWMXBXCJTQYOXRYNU
+      EXDJGFXERTLGFXEXHXFUAUBYLIJBEYAXTYEYITUVLXTVCUVMMUVFUVNXIXJXK $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d B a b $.  $d W a b $.
+    filnm.b $e |- B = ( Base ` W ) $.
+    $( Finite left modules are Noetherian. $)
+    filnm $p |- ( ( W e. LMod /\ B e. Fin ) -> W e. LNoeM ) $=
+      ( va vb clmod wcel cfn wa cv clspn cfv wceq cpw cin wrex syl2anc sylanbrc
+      clss eqid wral clnm simpl lssss adantl elpw sylibr simplr ssfi elin lspid
+      wss vex adantlr eqcomd weq fveq2 eqeq2d rcla4ev ralrimiva islnm2 ) BFGZAH
+      GZIZVBDJZEJZBKLZLZMZEANZHOZPZDBSLZUABUBGVBVCUCVDVLDVMVDVEVMGZIZVEVKGZVEVE
+      VGLZMZVLVOVEVJGZVEHGZVPVOVEAULZVSVNWAVDVMVEABCVMTZUDUEZVEADUMUFUGVOVCWAVT
+      VBVCVNUHWCAVEUIQVEVJHUJRVOVQVEVBVNVQVEMVCVMVEVGBWBVGTZUKUNUOVIVREVEVKEDUP
+      VHVQVEVFVEVGUQURUSQUTAVMEDBVGCWBWDVAR $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    pwslnmlem0.y $e |- Y = ( W ^s (/) ) $.
+    $( Zeroeth powers are Noetherian. $)
+    pwslnmlem0 $p |- ( W e. LMod -> Y e. LNoeM ) $=
+      ( clmod wcel cbs cfv cfn clnm cvv 0ex pwslmod mpan2 cmap wceq eqid pwsbas
+      c0 co csn c1o fvex map0e df1o2 eqtri snfi eqeltri syl6eqelr filnm syl2anc
+      ) ADEZBDEZBFGZHEBIEUKRJEZULKARJBCLMUKUMAFGZRNSZHUKUNUPUMOKUOARDJBCUOPQMUP
+      RTZHUPUAUQUOAFUBUCUDUERUFUGUHUMBUMPUIUJ $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d Y x $.  $d W i x $.
+    pwslnmlem1.y $e |- Y = ( W ^s { i } ) $.
+    $( First powers are Noetherian. $)
+    pwslnmlem1 $p |- ( W e. LNoeM -> Y e. LNoeM ) $=
+      ( vx clnm wcel cbs cfv cv csn cxp cmpt clmhm co cvv crn wceq eqid cpws id
+      clmod lnmlmod snex pwsdiaglmhm sylancl ovex eqeltri a1i wf1o wfo pwssnf1o
+      vex eqid1 mpan2 f1ofo forn 3syl lnmepi syl22anc ) BFGZEBHIZAJZKZEJKLMZBCN
+      OGZCPGZVAVEQCHIZRZCFGVABUBGVDPGVFBUCVCUDEVBBVEVDPCDVBSVESZUEUFVGVACBVDTOP
+      DBVDTUGUHUIVAUAVAVBVHVEUJZVBVHVEUKVIVAVCPGVKAUMEVBVHBVEVCFPCDVBUNVJVHSZUL
+      UOVBVHVEUPVBVHVEUQURVHBCVEPVLUSUT $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    pwslnmlem2.a $e |- A e. _V $.
+    pwslnmlem2.b $e |- B e. _V $.
+    pwslnmlem2.x $e |- X = ( W ^s A ) $.
+    pwslnmlem2.y $e |- Y = ( W ^s B ) $.
+    pwslnmlem2.z $e |- Z = ( W ^s ( A u. B ) ) $.
+    pwslnmlem2.w $e |- ( ph -> W e. LMod ) $.
+    pwslnmlem2.dj $e |- ( ph -> ( A i^i B ) = (/) ) $.
+    pwslnmlem2.xn $e |- ( ph -> X e. LNoeM ) $.
+    pwslnmlem2.yn $e |- ( ph -> Y e. LNoeM ) $.
+    $( A sum of powers is Noetherian. $)
+    pwslnmlem2 $p |- ( ph -> Z e. LNoeM ) $=
+      ( vx wcel clnm eqid cbs cfv cv cres cmpt clmhm co ccnv c0g csn cima cress
+      crn clmod cun cvv wss unex a1i ssun1 pwssplit3 syl3anc wfo wceq cmnd cgrp
+      lmodgrp grpmnd pwssplit1 forn oveq2d ressid eqtrd eqeltrd lmhmlnmsplit
+      syl ) AQGUAUBZQUCBUDUEZGEUFUGRZGVRUHEUIUBZUJUKZULUGZSREVRUMZULUGZSRGSRADU
+      NRZBCUOZUPRZBWFUQZVSMWGABCHIURUSZWHABCUTUSZQVQEUAUBZWFVRBDUPGELJVQTZWKTZV
+      RTZVAVB?AWDESAWDEWKULUGZEAWCWKEULAVQWKVRVCZWCWKVDADVERZWGWHWPAWEWQMWEDVFR
+      WQDVGDVHVPVPWIWJQVQWKWFVRBDUPGELJWLWMWNVIVBVQWKVRVJVPVKAESRWOEVDOWKESWMVL
+      VPVMOVNGEWBVRWAWDVTVTTWATWBTWDTVOVB $.
+  $}
+
+  ${
+    $d W a b c $.  $d I a b c $.
+    pwslnm.y $e |- Y = ( W ^s I ) $.
+    $( Finite powers of Noetherian modules are Noetherian. $)
+    pwslnm $p |- ( ( W e. LNoeM /\ I e. Fin ) -> Y e. LNoeM ) $=
+      ( va vb vc clnm wcel wa cpws co cv wi c0 wceq oveq2 eleq1d imbi2d eqid wn
+      cfn csn cun weq clmod lnmlmod pwslnmlem0 syl wel vex ad2antrl cin biimpri
+      snex disjsnOLD ad2antlr simprr pwslnmlem1 pwslnmlem2 exp32 a2d findcard2s
+      impcom syl5eqel ) BHIZAUBIZJCBAKLZHDVGVFVHHIZVFBEMZKLZHIZNVFBOKLZHIZNVFBF
+      MZKLZHIZNVFBVOGMZUCZUDZKLZHIZNVFVINEFGAVJOPZVLVNVFWCVKVMHVJOBKQRSEFUEZVLV
+      QVFWDVKVPHVJVOBKQRSVJVTPZVLWBVFWEVKWAHVJVTBKQRSVJAPZVLVIVFWFVKVHHVJABKQRS
+      VFBUFIZVNBUGZBVMVMTUHUIVOUBIZGFUJUAZJZVFVQWBWKVFVQWBWKVFVQJZJVOVSBVPBVSKL
+      ZWAFUKVRUOVPTWMTZWATVFWGWKVQWHULWJVOVSUMOPZWIWLWOWJVOVRUPUNUQWKVFVQURVFWM
+      HIWKVQGBWMWNUSULUTVAVBVCVDVE $.
       $( [24-Jan-2015] $)
   $}
 
