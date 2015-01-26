@@ -15954,14 +15954,14 @@ $)
        Stefan O'Rear, 24-Jan-2015.) $)
     pwslnm $p |- ( ( W e. LNoeM /\ I e. Fin ) -> Y e. LNoeM ) $=
       ( va vb vc clnm wcel wa cpws co cv wi c0 wceq oveq2 eleq1d imbi2d eqid wn
-      cfn csn cun weq clmod lnmlmod pwslnmlem0 syl wel vex ad2antrl cin biimpri
-      snex disjsnOLD ad2antlr simprr pwslnmlem1 pwslnmlem2 exp32 a2d findcard2s
-      impcom syl5eqel ) BHIZAUBIZJCBAKLZHDVGVFVHHIZVFBEMZKLZHIZNVFBOKLZHIZNVFBF
-      MZKLZHIZNVFBVOGMZUCZUDZKLZHIZNVFVINEFGAVJOPZVLVNVFWCVKVMHVJOBKQRSEFUEZVLV
-      QVFWDVKVPHVJVOBKQRSVJVTPZVLWBVFWEVKWAHVJVTBKQRSVJAPZVLVIVFWFVKVHHVJABKQRS
-      VFBUFIZVNBUGZBVMVMTUHUIVOUBIZGFUJUAZJZVFVQWBWKVFVQWBWKVFVQJZJVOVSBVPBVSKL
-      ZWAFUKVRUOVPTWMTZWATVFWGWKVQWHULWJVOVSUMOPZWIWLWOWJVOVRUPUNUQWKVFVQURVFWM
-      HIWKVQGBWMWNUSULUTVAVBVCVDVE $.
+      cfn csn cun weq clmod lnmlmod pwslnmlem0 syl wel vex snex ad2antrl disjsn
+      cin biimpri ad2antlr simprr pwslnmlem1 pwslnmlem2 exp32 findcard2s impcom
+      a2d syl5eqel ) BHIZAUBIZJCBAKLZHDVGVFVHHIZVFBEMZKLZHIZNVFBOKLZHIZNVFBFMZK
+      LZHIZNVFBVOGMZUCZUDZKLZHIZNVFVINEFGAVJOPZVLVNVFWCVKVMHVJOBKQRSEFUEZVLVQVF
+      WDVKVPHVJVOBKQRSVJVTPZVLWBVFWEVKWAHVJVTBKQRSVJAPZVLVIVFWFVKVHHVJABKQRSVFB
+      UFIZVNBUGZBVMVMTUHUIVOUBIZGFUJUAZJZVFVQWBWKVFVQWBWKVFVQJZJVOVSBVPBVSKLZWA
+      FUKVRULVPTWMTZWATVFWGWKVQWHUMWJVOVSUOOPZWIWLWOWJVOVRUNUPUQWKVFVQURVFWMHIW
+      KVQGBWMWNUSUMUTVAVDVBVCVE $.
       $( [24-Jan-2015] $)
   $}
 
@@ -16268,41 +16268,43 @@ $)
   $( this allows for neat representation of spans: ellspd $)
   $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
 
-  ${
-    $d M a b c f $.  $d B a b c f $.  $d N a b c f $.  $d K a b c f $.
-    $d S a b c f $.  $d Z a b c f $.  $d T a b c f $.  $d F a b c f $.
-    $d I a b c f $.
-    ellspd.n $e |- N = ( LSpan ` M ) $.
-    ellspd.v $e |- B = ( Base ` M ) $.
-    ellspd.k $e |- K = ( Base ` S ) $.
-    ellspd.s $e |- S = ( Scalar ` M ) $.
-    ellspd.z $e |- Z = ( 0g ` S ) $.
-    ellspd.t $e |- T = ( vsca ` M ) $.
+  $(
+  @{
+    @d M a b c f @.  @d B a b c f @.  @d N a b c f @.  @d K a b c f @.
+    @d S a b c f @.  @d Z a b c f @.  @d T a b c f @.  @d F a b c f @.
+    @d I a b c f @.
+    ellspd.n @e |- N = ( LSpan ` M ) @.
+    ellspd.v @e |- B = ( Base ` M ) @.
+    ellspd.k @e |- K = ( Base ` S ) @.
+    ellspd.s @e |- S = ( Scalar ` M ) @.
+    ellspd.z @e |- Z = ( 0g ` S ) @.
+    ellspd.t @e |- T = ( vsca ` M ) @.
 
-    ${
-      ellspd.f $e |- ( ph -> F : I --> B ) $.
-      ellspd.m $e |- ( ph -> M e. LMod ) $.
-      ellspd.i $e |- ( ph -> I e. _V ) $.
-      $( The elements of the span of an indexed collection of basic vectors are
+    @{
+      ellspd.f @e |- ( ph -> F : I --> B ) @.
+      ellspd.m @e |- ( ph -> M e. LMod ) @.
+      ellspd.i @e |- ( ph -> I e. _V ) @.
+      @( The elements of the span of an indexed collection of basic vectors are
          those vectors which can be written as finite linear combinations of
-         basic vectors. $)
-      ellspd $p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
+         basic vectors. @)
+      ellspd @p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
           E. f e. ( K ^m I ) ( ( `' f " { Z } ) e. Fin /\
-            X = ( M gsum ( f oF T F ) ) ) ) ) $=
-        ? $.
-    $}
+            X = ( M gsum ( f oF T F ) ) ) ) ) @=
+        ? @.
+    @}
 
-    ${
-      elfilspd.f $e |- ( ph -> F : I --> B ) $.
-      elfilspd.m $e |- ( ph -> M e. LMod ) $.
-      elfilspd.i $e |- ( ph -> I e. Fin ) $.
-      $( Simplified version of ~ ellspd when the spanning set is finite: all
-         linear combinations are then acceptable. $)
-      elfilspd $p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
-          E. f e. ( K ^m I ) X = ( M gsum ( f oF T F ) ) ) ) $=
-        ? $.
-    $}
-  $}
+    @{
+      elfilspd.f @e |- ( ph -> F : I --> B ) @.
+      elfilspd.m @e |- ( ph -> M e. LMod ) @.
+      elfilspd.i @e |- ( ph -> I e. Fin ) @.
+      @( Simplified version of ~ ellspd when the spanning set is finite: all
+         linear combinations are then acceptable. @)
+      elfilspd @p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
+          E. f e. ( K ^m I ) X = ( M gsum ( f oF T F ) ) ) ) @=
+        ? @.
+    @}
+  @}
+  $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
