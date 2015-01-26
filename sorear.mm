@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 9-Jan-2015:MC=a9f8ea3:s/GrpOpIso/GrpOpIso/ $)
+$[ set_clean.mm $] $( set.mm - Version of 21-Jan-2015:s/GrpIso/GrpOpIso $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -8407,7 +8407,8 @@ $)
       UEUKVJVOVLVMUFUSVKUGUHUIVEVSCVKJVDVKUSHRSUJVKVHVFULUMUNUOUPUQUR $.
       $( [18-Jan-2015] $)
 
-    $( Dedekind cut injection of ` RR ` into ` ~P QQ ` . $)
+    $( Dedekind cut injection of ` RR ` into ` ~P QQ ` .  (Contributed by
+       Stefan O'Rear, 18-Jan-2015.) $)
     rpnnen3 $p |- RR ~<_ ~P QQ $=
       ( va vb vc cq cpw cvv wcel cr cdom wbr qex pwex cv clt crab wss ssrab2 wa
       wne rpnnen3lem elpw2 mpbir a1i weq wo lttri2 ancom1s necomd jaodan sylbid
@@ -8449,7 +8450,8 @@ $)
 
   ${
     $d F a b c y $.  $d G a b c y $.  $d x y a b c $.
-    $( Equality theorem for ` recs ` . $)
+    $( Equality theorem for ` recs ` .  (Contributed by Stefan O'Rear,
+       18-Jan-2015.) $)
     recseq $p |- ( F = G -> recs ( F ) = recs ( G ) ) $=
       ( va vb vc wceq cv wfn cfv cres wral wa con0 wrex cuni crecs fveq1 eqeq2d
       cab df-recs ralbidv anbi2d rexbidv abbidv unieqd 3eqtr4g ) ABFZCGZDGZHZEG
@@ -8458,7 +8460,8 @@ $)
       $( [18-Jan-2015] $)
 
     hbrecs.f $e |- ( y e. F -> A. x y e. F ) $.
-    $( Bound-variable hypothesis builder for ` recs ` . $)
+    $( Bound-variable hypothesis builder for ` recs ` .  (Contributed by Stefan
+       O'Rear, 18-Jan-2015.) $)
     hbrecs $p |- ( y e. recs ( F ) -> A. x y e. recs ( F ) ) $=
       ( va vb vc crecs cv wfn cfv cres wceq wral wa con0 wrex cab wcel ax-17
       cuni df-recs wel hbfv hbeq hbral hban hbrex hbab hbuni hbxfreq ) ABCHEIZF
@@ -8469,13 +8472,15 @@ $)
 
   ${
     $d F a b c d e f g $.  $d A g $.
-    $( Strong transfinite recursion defines a function on ordinals. $)
+    $( Strong transfinite recursion defines a function on ordinals.
+       (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     recsfnon $p |- recs ( F ) Fn On $=
       ( ve vf va vb vc vd cv wfn cfv cres wceq wral con0 wrex cab crecs rdglem1
       wa df-recs tfr1 ) BCDHZEHZIFHZUBJUBUDKAJLFUCMSENODPGAQAEFBCDGAREFDATUA $.
       $( [18-Jan-2015] $)
 
-    $( Strong transfinite recursion in terms of all previous values. $)
+    $( Strong transfinite recursion in terms of all previous values.
+       (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     recsval $p |- ( A e. On -> ( recs ( F ) ` A ) =
           ( F ` ( recs ( F ) |` A ) ) ) $=
       ( vg ve vf va vb vc vd cv crecs cfv cres wceq fveq2 reseq2 fveq2d eqeq12d
@@ -8507,14 +8512,16 @@ $)
 
   ${
     $d x y z $.
-    $( Axiom of Choice equivalent: every set is equinumerous to an ordinal. $)
+    $( Axiom of Choice equivalent: every set is equinumerous to an ordinal.
+       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
     dfac10 $p |- ( CHOICE <-> A. x E. y e. On y ~~ x ) $=
       ( vz wchoi cv wwe wex wal cen wbr con0 wrex df-ac cvv wcel vex ween ax-mp
       wb albii bitri ) DAEZCEFCGZAHBEUBIJBKLZAHACMUCUDAUBNOUCUDSAPBUBNCQRTUA $.
       $( [17-Jan-2015] $)
 
     $( Axiom of Choice equivalent: every set is equinumerous to an ordinal
-       (quantifier-free short cryptic version alluded to in ~ df-ac ). $)
+       (quantifier-free short cryptic version alluded to in ~ df-ac ).
+       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
     dfac10b $p |- ( CHOICE <-> ( ~~ " On ) = _V ) $=
       ( vy vx cv cen wbr con0 wrex wal cima wcel wchoi cvv wceq vex elima albii
       bicomi dfac10 eqv 3bitr4i ) ACBCZDEAFGZBHUADFIZJZBHKUCLMUBUDBUDUBAUADFBNO
@@ -8647,10 +8654,11 @@ $)
 
   ${
     $d ph z w $.  $d ps z w $.  $d x y z w $.
-    $( The difference of two ordered-pair abstractions. $)
+    $( The difference of two ordered-pair abstractions.  (Contributed by Stefan
+       O'Rear, 17-Jan-2015.) $)
     difopab $p |- ( { <. x , y >. | ph } \ { <. x , y >. | ps } ) =
         { <. x , y >. | ( ph /\ -. ps ) } $=
-      ( vz vw copab cdif wn wa wrel relopabOLD cv wcel wsb sban sbn sbbii bitri
+      ( vz vw copab cdif wn wa wrel relopab cv wcel wsb sban sbn sbbii bitri
       opelopabsb reldif ax-mp cop anbi2i notbii anbi12i eldif 3bitr4i eqrelriiv
       3bitr4ri ) EFACDGZBCDGZHZABIZJZCDGZUKKUMKACDLUKULUAUBUOCDLEMFMUCZUKNZUQUL
       NZIZJZUOCEOZDFOZUQUMNUQUPNACEOZUNCEOZJZDFOZVDDFOZBCEOZDFOZIZJZVCVAVGVHVED
@@ -8661,7 +8669,8 @@ $)
 
   ${
     $d F x y $.  $d G x y $.  $d A x y $.
-    $( Two ways to express the locus of differences between two functions. $)
+    $( Two ways to express the locus of differences between two functions.
+       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
     fndmdif $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F \ G ) =
           { x e. A | ( F ` x ) =/= ( G ` x ) } ) $=
       ( vy wfn wa cdif cdm cv cfv wceq copab dffn5 biimpi wn wex cab wi annim
@@ -8675,7 +8684,8 @@ $)
       VOWSVQWALZPZWGWPXFEVQVNCVCVRWBXEVPVQWAUSUTVAVQWAVBVDUNUPVEWGABVFVGVHVI $.
       $( [17-Jan-2015] $)
 
-    $( The difference set between two functions is commutative. $)
+    $( The difference set between two functions is commutative.  (Contributed
+       by Stefan O'Rear, 17-Jan-2015.) $)
     fndmdifcom $p |- ( ( F Fn A /\ G Fn A ) ->
         dom ( F \ G ) = dom ( G \ F ) ) $=
       ( vx wfn wa cv cfv wne crab cdif cdm wb wcel necom rabbiia fndmdif ancoms
@@ -8684,7 +8694,7 @@ $)
       $( [17-Jan-2015] $)
 
     $( The difference set of two functions is empty if and only if the
-       functions are equal. $)
+       functions are equal.  (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
     fndmdifeq0 $p |- ( ( F Fn A /\ G Fn A ) ->
         ( dom ( F \ G ) = (/) <-> F = G ) ) $=
       ( vx wfn wa cv cfv wne crab c0 wceq wral cdif cdm wb wn rabeq0 nne ralbii
@@ -8693,7 +8703,8 @@ $)
       ABCUEUF $.
       $( [17-Jan-2015] $)
 
-    $( Two ways to express the locus of equality between two functions. $)
+    $( Two ways to express the locus of equality between two functions.
+       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
     fndmin $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F i^i G ) =
           { x e. A | ( F ` x ) = ( G ` x ) } ) $=
       ( vy wfn wa cin cdm wcel cfv wceq copab crab dffn5 biimpi syl6eq wex cab
@@ -8707,13 +8718,15 @@ $)
   $}
 
   ${
-    $( Express "less than or equals" for general strict orders. $)
+    $( Express "less than or equals" for general strict orders.  (Contributed
+       by Stefan O'Rear, 17-Jan-2015.) $)
     poleloe $p |- ( B e. V -> ( A ( R u. _I ) B <-> ( A R B \/ A = B ) ) ) $=
       ( cid cun wbr wo wcel wceq brun ideqg orbi2d syl5bb ) ABCEFGABCGZABEGZHBD
       IZOABJZHABCEKQPROABDLMN $.
       $( [17-Jan-2015] $)
 
-    $( Transitive law for general strict orders. $)
+    $( Transitive law for general strict orders.  (Contributed by Stefan
+       O'Rear, 17-Jan-2015.) $)
     poltletr $p |- ( ( R Po X /\ ( A e. X /\ B e. X /\ C e. X ) ) ->
         ( ( A R B /\ B ( R u. _I ) C ) -> A R C ) ) $=
       ( wpo wcel w3a wa wbr cid wceq wo wb poleloe 3ad2ant3 adantl anbi2d com12
@@ -8722,7 +8735,8 @@ $)
       TUAUQUMUNUPIUTEABCDUBSUNUQIUTUMUQUNUTBCADUCUDUEUFSUG $.
       $( [17-Jan-2015] $)
 
-    $( Property of a minimum in a strict order. $)
+    $( Property of a minimum in a strict order.  (Contributed by Stefan O'Rear,
+       17-Jan-2015.) $)
     somin1 $p |- ( ( R Or X /\ ( A e. X /\ B e. X ) ) ->
         if ( A R B , A , B ) ( R u. _I ) A ) $=
       ( wor wcel wa wbr cif cid cun wceq wo iftrue olcd adantl wn sotric mpbird
@@ -8733,7 +8747,8 @@ $)
       VBBLZVMVAABUIVNVDVHVEVIVBBACUKVBBAULUJUMPSUNURVCVFTUQUSVBACDUOUPS $.
       $( [17-Jan-2015] $)
 
-    $( Commutativity of minimum in a total order. $)
+    $( Commutativity of minimum in a total order.  (Contributed by Stefan
+       O'Rear, 17-Jan-2015.) $)
     somincom $p |- ( ( R Or X /\ ( A e. X /\ B e. X ) ) ->
         if ( A R B , A , B ) = if ( B R A , B , A ) ) $=
       ( wor wcel wa wbr cif wceq iftrue adantl wn so2nr nan mpbi iffalse eqcomd
@@ -8744,14 +8759,16 @@ $)
       UGUHUITUJ $.
       $( [17-Jan-2015] $)
 
-    $( Property of a minimum in a strict order. $)
+    $( Property of a minimum in a strict order.  (Contributed by Stefan O'Rear,
+       17-Jan-2015.) $)
     somin2 $p |- ( ( R Or X /\ ( A e. X /\ B e. X ) ) ->
         if ( A R B , A , B ) ( R u. _I ) B ) $=
       ( wor wcel wa wbr cif cid cun somin1 ancom2s somincom breq1d mpbird ) DCE
       ZADFZBDFZGGZABCHABIZBCJKZHBACHBAIZBUBHZQSRUDBACDLMTUAUCBUBABCDNOP $.
       $( [17-Jan-2015] $)
 
-    $( Being less than a minimum, for a general total order. $)
+    $( Being less than a minimum, for a general total order.  (Contributed by
+       Stefan O'Rear, 17-Jan-2015.) $)
     soltmin $p |- ( ( R Or X /\ ( A e. X /\ B e. X /\ C e. X ) ) ->
         ( A R if ( B R C , B , C ) <-> ( A R B /\ A R C ) ) ) $=
       ( wor wcel w3a wa wbr cif wpo cid cun 3jca syl12anc poltletr imp syl22anc
@@ -8773,7 +8790,8 @@ $)
         A. w e. A ( w R z -> ( x ` w ) = ( y ` w ) ) ) } $.
 
     ${
-      $( Value of the lexicographic order on a sequence space. $)
+      $( Value of the lexicographic order on a sequence space.  (Contributed by
+         Stefan O'Rear, 18-Jan-2015.) $)
       wemapso1 $p |- ( ( P e. V /\ Q e. W ) -> ( P T Q <->
           E. a e. A ( ( P ` a ) S ( Q ` a ) /\
             A. b e. A ( b R a -> ( P ` b ) = ( Q ` b ) ) ) ) ) $=
@@ -8866,7 +8884,8 @@ $)
        well-ordering of the indexes and a total ordering of the values.
 
        Without totality on the values or least differing indexes, the best we
-       can prove here is a partial order. $)
+       can prove here is a partial order.  (Contributed by Stefan O'Rear,
+       18-Jan-2015.) $)
     wemappo $p |- ( ( A e. V /\ R Or A /\ S Po B ) -> T Po ( B ^m A ) ) $=
       ( va vb vc wcel cvv wpo cv wa wbr wor cmap co elex w3a cfv wceq wral wrex
       wi wn simpll3 wf elmapi 3ad2antl1 ffvelrn sylan poirr syl2anc intnanrd wb
@@ -8881,7 +8900,8 @@ $)
       $( [18-Jan-2015] $)
 
     $( Construct lexicographic order on a function space based on a
-       well-ordering of the indexes and a total ordering of the values. $)
+       well-ordering of the indexes and a total ordering of the values.
+       (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     wemapso $p |- ( ( A e. V /\ R We A /\ S Or B ) -> T Or ( B ^m A ) ) $=
       ( vc vd wcel cvv wa wo cfv wceq wi va wwe wor cmap elex w3a wpo weso sopo
       vb co wemappo syl3an cv weq wbr w3o wn wne df-ne wral wrex cdm wfr wss c0
@@ -8925,7 +8945,7 @@ $)
     pw2f1o.f $e |- F = ( x e. ( 2o ^m A ) |-> ( `' x " { 1o } ) ) $.
     $( Define a bijection between characteristic functions and subsets.
        _EDITORIAL_: extracted from ~ pw2en , which can be easily reproved in
-       terms of this. $)
+       terms of this.  (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     pw2f1o $p |- ( A e. V -> F : ( 2o ^m A ) -1-1-onto-> ~P A ) $=
       ( va vy vz vw wcel c2o cv c1o wf1o wceq wb c0 cvv adantl wa cmap cpw ccnv
       csn cima cmpt oveq2 mpteq1 syl f1oeq1 pweq f1oeq23 syl2anc bitrd wtru wel
@@ -8965,7 +8985,7 @@ $)
       $( [18-Jan-2015] $)
 
     $( Function value of the ~ pw2f1o bijection.  TODO: first ant actually
-       unneeded. $)
+       unneeded.  (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     pw2f1oval $p |- ( ( A e. V /\ X e. ( 2o ^m A ) ) ->
         ( F ` X ) = ( `' X " { 1o } ) ) $=
       ( c2o cmap co wcel cfv ccnv c1o csn cima wceq cvv id1 cnvexg imaexg cnveq
@@ -8973,7 +8993,8 @@ $)
       MUIRUIUJQJUNEUHSUJUKQTUBAEAUCZLZUKOULUHQCUOEPUPUJUKUOEUAUDFUEUFUG $.
       $( [18-Jan-2015] $)
 
-    $( Membership in a mapped set under the ~ pw2f1o bijection. $)
+    $( Membership in a mapped set under the ~ pw2f1o bijection.  (Contributed
+       by Stefan O'Rear, 18-Jan-2015.) $)
     pw2f1oval2 $p |- ( ( A e. V /\ X e. ( 2o ^m A ) /\ Y e. A ) ->
         ( Y e. ( F ` X ) <-> ( X ` Y ) = 1o ) ) $=
       ( wcel c2o cmap co w3a cfv ccnv c1o csn wb wa 3adant3 con0 cima pw2f1oval
@@ -9041,19 +9062,22 @@ $)
   ${
     weeq12d.l $e |- ( ph -> R = S ) $.
     weeq12d.r $e |- ( ph -> A = B ) $.
-    $( Equality deduction for total orderings. $)
+    $( Equality deduction for total orderings.  (Contributed by Stefan O'Rear,
+       19-Jan-2015.) $)
     soeq12d $p |- ( ph -> ( R Or A <-> S Or B ) ) $=
       ( wor wceq wb soeq1 syl soeq2 bitrd ) ABDHZBEHZCEHZADEIOPJFBDEKLABCIPQJGB
       CEMLN $.
       $( [19-Jan-2015] $)
 
-    $( Equality deduction for founded relations. $)
+    $( Equality deduction for founded relations.  (Contributed by Stefan
+       O'Rear, 19-Jan-2015.) $)
     freq12d $p |- ( ph -> ( R Fr A <-> S Fr B ) ) $=
       ( wfr wceq wb freq1 syl freq2 bitrd ) ABDHZBEHZCEHZADEIOPJFBDEKLABCIPQJGB
       CEMLN $.
       $( [19-Jan-2015] $)
 
-    $( Equality deduction for well-orders. $)
+    $( Equality deduction for well-orders.  (Contributed by Stefan O'Rear,
+       19-Jan-2015.) $)
     weeq12d $p |- ( ph -> ( R We A <-> S We B ) ) $=
       ( wwe wceq wb weeq1 syl weeq2 bitrd ) ABDHZBEHZCEHZADEIOPJFBDEKLABCIPQJGB
       CEMLN $.
@@ -9064,7 +9088,7 @@ $)
     $d A x $.  $d B x $.
 
     $( Limit ordinals in the sense inclusive of zero contain all successors of
-       their members. $)
+       their members.  (Contributed by Stefan O'Rear, 20-Jan-2015.) $)
     limsuc2 $p |- ( ( Ord A /\ A = U. A ) -> ( B e. A <-> suc B e. A ) ) $=
       ( vx word cuni wceq wa wcel csuc cv wral ordunisuc2 biimpa suceq rcla4cva
       eleq1d sylan ex wi wtr ordtr trsuc syl adantr impbid ) ADZAAEFZGZBAHZBIZA
@@ -9132,7 +9156,7 @@ $)
 
     $( A well-ordering induces a strict ordering on the power set.
        _EDITORIAL_ : when well-orderings are set like, this can be strengthened
-       to remove ` A e. V ` $)
+       to remove ` A e. V ` (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     wepwso $p |- ( ( A e. V /\ R We A ) -> T Or ~P A ) $=
       ( va wcel wwe wa c2o cv cfv cep wbr wor eqid cmap co wceq wral wrex copab
       cpw word com 2onn nnord ax-mp ordwe weso mp2b wemapso mp3an3 cvv ccnv c1o
@@ -9145,7 +9169,8 @@ $)
 
   ${
     $d F a b $.  $d A a b $.
-    $( Non-emptyness of an initial segment in terms of range. $)
+    $( Non-emptyness of an initial segment in terms of range.  (Contributed by
+       Stefan O'Rear, 18-Jan-2015.) $)
     inisegn0 $p |- ( A e. ran F <-> ( `' F " { A } ) =/= (/) ) $=
       ( va vb crn wcel cvv ccnv csn cima c0 wne elex wn wceq snprc imaeq2d ima0
       biimpi cv syl6eq necon1ai eleq1 sneq neeq1d wbr cab wex abn0 iniseg ax-mp
@@ -9162,7 +9187,8 @@ $)
     dnnumch.a $e |- ( ph -> A e. V ) $.
     dnnumch.g $e |- ( ph -> A. y e. ~P A ( y =/= (/) -> ( G ` y ) e. y ) ) $.
     $( Define an enumeration of a set from a choice function; second part, it
-       restricts to a bijection. _EDITORIAL: overlaps ~ aceq8a _ $)
+       restricts to a bijection. _EDITORIAL: overlaps ~ aceq8a _ (Contributed
+       by Stefan O'Rear, 18-Jan-2015.) $)
     dnnumch1 $p |- ( ph -> E. x e. On ( F |` x ) : x -1-1-onto-> A ) $=
       ( vw wcel cv cdif c0 cfv con0 wceq cvv cima wne wi wral cres wf1o wrex wa
       crn cmpt crecs recsval fveq1i wfun wfn fneq1i mpbir fnfun ax-mp resfunexg
@@ -9180,7 +9206,7 @@ $)
       $( [18-Jan-2015] $)
 
     $( Define an enumeration (weak dominance version) of a set from a choice
-       function. $)
+       function.  (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     dnnumch2 $p |- ( ph -> A C_ ran F ) $=
       ( vx cv cres wf1o con0 wrex crn wss dnnumch1 a1i wi wceq f1ofo forn resss
       wfo syl rnss ax-mp eqsstr3d rexlimdvw mpd ) AKLZDEUMMZNZKOPDEQZRZAKBCDEFG
@@ -9201,7 +9227,7 @@ $)
       $( [18-Jan-2015] $)
 
     $( Define an injection from a set into the ordinals using a choice
-       function. $)
+       function.  (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     dnnumch3 $p |- ( ph -> ( x e. A |-> |^| ( `' F " { x } ) )
             : A -1-1-> On ) $=
       ( vv vw con0 cv cfv wceq wcel wa cvv ccnv csn cima cint cmpt weq wral wf1
@@ -9223,7 +9249,8 @@ $)
 
     dnwech.h $e |- H = { <. v , w >. | |^| ( `' F " { v } ) e.
         |^| ( `' F " { w } ) } $.
-    $( Define a well-ordering from a choice function. $)
+    $( Define a well-ordering from a choice function.  (Contributed by Stefan
+       O'Rear, 18-Jan-2015.) $)
     dnwech $p |- ( ph -> H We A ) $=
       ( vx wwe cep copab con0 cin ccnv csn cima cint cmpt cfv wbr wf1o dnnumch3
       cv crn wf1 f1f1orn syl wss wf f1f frn 3syl epweon wess ee10 eqid sylc cxp
@@ -9363,7 +9390,8 @@ $)
     $( A well-ordering can be constructed on a partitioned set by patching
        together well-orderings on each partition using a well-ordering on the
        partitions themselves.  Similar to ~ fnwe but does not require the
-       within-partition ordering to be globally well. $)
+       within-partition ordering to be globally well.  (Contributed by Stefan
+       O'Rear, 19-Jan-2015.) $)
     fnwe2 $p |- ( ph -> T We A ) $=
       ( va vb vd cv vc wfr wbr weq w3o wral wwe wss c0 wne wa wrex wal wcel cfv
       wn wi wceq crab adantlr cres wf adantr simprl simprr fnwe2lem2 ex alrimiv
@@ -9535,28 +9563,32 @@ $)
     hbpo.a $e |- ( y e. A -> A. x y e. A ) $.
     $( Bound-variable hypothesis builder for partial orders.
 
-       _EDITORIAL_: is $d x y $. actually needed? $)
+       _EDITORIAL_: is $d x y $. actually needed?  (Contributed by Stefan
+       O'Rear, 20-Jan-2015.) $)
     hbpo $p |- ( R Po A -> A. x R Po A ) $=
       ( va vb vc wpo cv wbr wn wa wral hblem ax17el hbbr hban hbral wi hbn hbim
       df-po hbxfrbi ) CDJGKZUFDLZMZUFHKZDLZUIIKZDLZNZUFUKDLZUAZNZICOZHCOZGCOAGH
       ICDUDURAGCABGCFPUQAHCABHCFPUPAICABICFPUHUOAUGAABUFUFDBGAQZEUSRUBUMUNAUJUL
       AABUFUIDUSEBHAQZRABUIUKDUTEBIAQZRSABUFUKDUSEVARUCSTTTUE $.
       $( [20-Jan-2015] $)
-    $( Bound-variable hypothesis builder for total orders. $)
+    $( Bound-variable hypothesis builder for total orders.  (Contributed by
+       Stefan O'Rear, 20-Jan-2015.) $)
     hbso $p |- ( R Or A -> A. x R Or A ) $=
       ( va vb wor wpo cv wbr weq w3o wral wa hblem ax17el hbbr hbral df-so hbpo
       ax17eq hb3or hban hbxfrbi ) CDICDJZGKZHKZDLZGHMZUIUHDLZNZHCOZGCOZPAGHCDUA
       UGUOAABCDEFUBUNAGCABGCFQUMAHCABHCFQUJUKULAABUHUIDBGARZEBHARZSGHAUCABUIUHD
       UQEUPSUDTTUEUF $.
       $( [20-Jan-2015] $)
-    $( Bound-variable hypothesis builder for well-founded relations. $)
+    $( Bound-variable hypothesis builder for well-founded relations.
+       (Contributed by Stefan O'Rear, 20-Jan-2015.) $)
     hbfr $p |- ( R Fr A -> A. x R Fr A ) $=
       ( va vc vb wfr cv wss c0 wne wa wbr wn wral wrex ax17el wi wal df-fr hbss
       ax-17 hban hbbr hbn hbral hbrex hbim hbal hbxfrbi ) CDJGKZCLZUNMNZOZHKZIK
       ZDPZQZHUNRZIUNSZUAZGUBAGIHCDUCVDAGUQVCAUOUPAABUNCBGATFUDUPAUEUFVBAIUNIGAT
       VAAHUNHGATUTAABURUSDBHATEBIATUGUHUIUJUKULUM $.
       $( [20-Jan-2015] $)
-    $( Bound-variable hypothesis builder for well-orderings. $)
+    $( Bound-variable hypothesis builder for well-orderings.  (Contributed by
+       Stefan O'Rear, 20-Jan-2015.) $)
     hbwe $p |- ( R We A -> A. x R We A ) $=
       ( wwe wfr wor wa df-we hbfr hbso hban hbxfrbi ) CDGCDHZCDIZJACDKPQAABCDEF
       LABCDEFMNO $.
@@ -9636,7 +9668,8 @@ $)
     supeq123d.a $e |- ( ph -> A = D ) $.
     supeq123d.b $e |- ( ph -> B = E ) $.
     supeq123d.c $e |- ( ph -> C = F ) $.
-    $( Equality deduction for supremum. $)
+    $( Equality deduction for supremum.  (Contributed by Stefan O'Rear,
+       20-Jan-2015.) $)
     supeq123d $p |- ( ph -> sup ( A , B , C ) = sup ( D , E , F ) ) $=
       ( vx vy vz cv wbr wn wral wrex wi breqd wa crab cuni csup imbi12d anbi12d
       notbid raleqbidv rexeqbidv rabeqbidv unieqd df-sup 3eqtr4g ) AKNZLNZDOZPZ
@@ -9719,7 +9752,8 @@ $)
        choice function, which in turn defines a well ordering.  Since a well
        ordering on a set defines a simple ordering of the power set, this
        allows the trivial well-ordering of the empty set to be transfinitely
-       bootstrapped up the cumulative hierarchy to any desired level. $)
+       bootstrapped up the cumulative hierarchy to any desired level.
+       (Contributed by Stefan O'Rear, 20-Jan-2015.) $)
     dfac11 $p |- ( CHOICE <-> A. x E. f A. z e. x ( z =/= (/) ->
         ( f ` z ) e. ( ( ~P z i^i Fin ) \ { (/) } ) ) ) $=
       ( va vb vd vc cv wex wal c0 wne cfv cfn csn wcel wi wral weq wceq wwe cpw
@@ -14665,7 +14699,8 @@ $)
     elovmpt2.e $e |- ( ( a = X /\ b = Y ) -> C = E ) $.
     $( Utility lemma for two-parameter classes.
 
-       _EDITORIAL_: can simplify ~ isghm , ~ islmhm. $)
+       _EDITORIAL_: can simplify ~ isghm , ~ islmhm.  (Contributed by Stefan
+       O'Rear, 21-Jan-2015.) $)
     elovmpt2 $p |- ( Y e. V -> ( F e. ( X D Y ) <-> ( X e. A /\ Y e. B /\ F e.
         E ) ) ) $=
       ( wcel wa eleq2i cvv wceq wal co w3a cop cxp cfv cdm elfvdm dmmpt2 bicomi
@@ -14700,7 +14735,8 @@ $)
     $d V a b c $.
     isgim.b $e |- B = ( Base ` R ) $.
     isgim.c $e |- C = ( Base ` S ) $.
-    $( An isomorphism of groups is a bijective homomorphism. $)
+    $( An isomorphism of groups is a bijective homomorphism.  (Contributed by
+       Stefan O'Rear, 21-Jan-2015.) $)
     isgim $p |- ( S e. V -> ( F e. ( R GrpIso S ) <-> ( F e. ( R GrpHom S ) /\
           F : B -1-1-onto-> C ) ) ) $=
       ( vc va vb wcel co cgrp cv wf1o cghm cbs cfv wceq cgim crab w3a wa df-gim
@@ -14714,7 +14750,8 @@ $)
       $.
       $( [21-Jan-2015] $)
 
-    $( An isomorphism of groups is a bijection. $)
+    $( An isomorphism of groups is a bijection.  (Contributed by Stefan O'Rear,
+       21-Jan-2015.) $)
     gimf1o $p |- ( ( F e. ( R GrpIso S ) /\ S e. V ) ->
           F : B -1-1-onto-> C ) $=
       ( wcel cgim co wf1o cghm wa isgim simpr syl6bi impcom ) DFIZECDJKIZABELZS
@@ -14724,7 +14761,8 @@ $)
 
   ${
     $d F a b $.  $d R a b $.  $d S a b $.  $d a b c $.
-    $( An isomorphism of groups is a homomorphism. $)
+    $( An isomorphism of groups is a homomorphism.  (Contributed by Stefan
+       O'Rear, 21-Jan-2015.) $)
     gimghm $p |- ( F e. ( R GrpIso S ) -> F e. ( R GrpHom S ) ) $=
       ( va vb vc cgim cghm cgrp cv cbs cfv wf1o crab df-gim reldmmpt2 wcel eqid
       co cvv wa wb vex isgim ax-mp simpl sylbi gimlem2 ) DEGHCABDEIIDJZKLZEJZKL
@@ -14737,7 +14775,8 @@ $)
     $d ph y $.  $d ps x $.  $d F x y $.  $d B x y $.  $d A x y $.
     rexima.x $e |- ( x = ( F ` y ) -> ( ph <-> ps ) ) $.
     $( Existential quantification under an image in terms of the base set.
-       _EDITORIAL_: usable in ~ fnwe2lem2 . $)
+       _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
+       21-Jan-2015.) $)
     rexima $p |- ( ( F Fn A /\ B C_ A ) ->
         ( E. x e. ( F " B ) ph <-> E. y e. B ps ) ) $=
       ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
@@ -14747,7 +14786,7 @@ $)
 
     $( Universal quantification under an image in terms of the base set.
        _EDITORIAL_: duplicates ~ raleqfn , but with interface consistency with
-       ~ rexrn . $)
+       ~ rexrn .  (Contributed by Stefan O'Rear, 21-Jan-2015.) $)
     ralima $p |- ( ( F Fn A /\ B C_ A ) ->
         ( A. x e. ( F " B ) ph <-> A. y e. B ps ) ) $=
       ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
@@ -14757,7 +14796,8 @@ $)
   $}
 
   $( Images under a function never map nonempty sets to empty sets.
-     _EDITORIAL_: usable in ~ fnwe2lem2 . $)
+     _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
+     21-Jan-2015.) $)
   fnimaeq0 $p |- ( ( F Fn A /\ B C_ A ) ->
       ( ( F " B ) = (/) <-> B = (/) ) ) $=
     ( cima c0 wceq cdm cin wfn wa imadisj incom fndm sseq2d biimpar df-ss sylib
@@ -14769,7 +14809,8 @@ $)
     $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
     $d B a b c d $.  $d V a b c d $.
     subgim.b $e |- B = ( Base ` R ) $.
-    $( Behavior of subgroups under isomorphism. $)
+    $( Behavior of subgroups under isomorphism.  (Contributed by Stefan O'Rear,
+       21-Jan-2015.) $)
     subggim $p |- ( ( F e. ( R GrpIso S ) /\ S e. V /\ A C_ B ) ->
         ( A e. ( SubGrp ` R ) <-> ( F " A ) e. ( SubGrp ` S ) ) ) $=
       ( cgim co wcel wss w3a csubg cfv cima wa cghm gimghm 3ad2ant1 adantr ccnv
@@ -14786,7 +14827,8 @@ $)
     $d Y a b $.
     lmhmf1o.x $e |- X = ( Base ` S ) $.
     lmhmf1o.y $e |- Y = ( Base ` T ) $.
-    $( A bijective module homomorphism is also converse homomorphic. $)
+    $( A bijective module homomorphism is also converse homomorphic.
+       (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
     lmhmf1o $p |- ( ( F e. ( S LMHom T ) /\ T e. W ) ->
         ( F : X -1-1-onto-> Y <-> `' F e. ( T LMHom S ) ) ) $=
       ( va vb co wcel wa clmod cfv wceq cbs adantr eqid syl wf1o ccnv cghm csca
@@ -14810,7 +14852,7 @@ $)
   $}
 
   $( The converse of a bijective group homomorphism is a bijective group
-     homomorphism. $)
+     homomorphism.  (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
   gimcnv $p |- ( ( F e. ( S GrpIso T ) /\ T e. W ) ->
       `' F e. ( T GrpIso S ) ) $=
     ( cgim co wcel wa ccnv cghm cbs cfv wf1o eqid gimf1o wb gimghm c0g syl cgrp
@@ -14839,19 +14881,22 @@ $)
   ${
     $d R f r s $.  $d S f r s $.  $d F f r s $.  $d B f $.  $d C f $.
     $d V f $.
-    $( The relation "is isomorphic to" for groups. $)
+    $( The relation "is isomorphic to" for groups.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     brgic $p |- ( R ~=g S <-> ( R GrpIso S ) =/= (/) ) $=
       ( vr vs vf cgic cgim df-gic cgrp cv cbs cfv wf1o cghm co df-gim reldmmpt2
       crab brwitnlem ) ABFGCDDCHCDIICJZKLDJZKLEJMETUANORGDECPQS $.
       $( [25-Jan-2015] $)
 
-    $( Prove isomorphic by an explicit isomorphism. $)
+    $( Prove isomorphic by an explicit isomorphism.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     brgici $p |- ( F e. ( R GrpIso S ) -> R ~=g S ) $=
       ( cgim co wcel c0 wne cgic wbr ne0i brgic sylibr ) CABDEZFNGHABIJNCKABLM
       $.
       $( [25-Jan-2015] $)
 
-    $( Isomorphism implies the left side is a group. $)
+    $( Isomorphism implies the left side is a group.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     giclcl $p |- ( R ~=g S -> R e. Grp ) $=
       ( vf cgic wbr cv cgim co wcel wex cgrp c0 wne brgic n0 bitri cghm ghmgrp1
       gimghm syl exlimiv sylbi ) ABDEZCFZABGHZIZCJZAKIZUCUELMUGABNCUEOPUFUHCUFU
@@ -14860,7 +14905,8 @@ $)
 
     gicen.b $e |- B = ( Base ` R ) $.
     gicen.c $e |- C = ( Base ` S ) $.
-    $( Isomorphic groups have equinumerous base sets. $)
+    $( Isomorphic groups have equinumerous base sets.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     gicen $p |- ( ( R ~=g S /\ S e. V ) -> B ~~ C ) $=
       ( vf cgic wbr wcel cen cgim co c0 wne wi brgic cbs sylbi cv wex n0 gimf1o
       wa wf1o cfv cvv fvex eqeltri f1oen syl ex exlimiv imp ) CDIJZDEKZABLJZUPC
@@ -14872,7 +14918,7 @@ $)
   ${
     $d R a b c $.  $d S a b c $.  $d V a b c $.
     $( A less trivial example of a group invariant: cardinality of the subgroup
-       lattice. $)
+       lattice.  (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
     gicsubgen $p |- ( ( R ~=g S /\ S e. V ) -> ( SubGrp ` R ) ~~
         ( SubGrp ` S ) ) $=
       ( va vb vc wbr wcel csubg cfv cv co cima cvv imaexg ax-mp a1ii wceq cbs
@@ -14898,7 +14944,8 @@ $)
     $d V a b c $.
     islmim.b $e |- B = ( Base ` R ) $.
     islmim.c $e |- C = ( Base ` S ) $.
-    $( An isomorphism of left modules is a bijective homomorphism. $)
+    $( An isomorphism of left modules is a bijective homomorphism.
+       (Contributed by Stefan O'Rear, 21-Jan-2015.) $)
     islmim $p |- ( S e. V -> ( F e. ( R LMIso S ) <-> ( F e. ( R LMHom S ) /\
           F : B -1-1-onto-> C ) ) ) $=
       ( vc va vb wcel co clmod cv wf1o clmhm cbs cfv wceq clmim crab wa df-lmim
@@ -14911,7 +14958,8 @@ $)
       AUSWAVJWJWAVJUCVKVLWAVSVKVTVJCDEUTVAVSVJVLVTCDEFVBVCWAVJVDVEVFVGVHVI $.
       $( [21-Jan-2015] $)
 
-    $( An isomorphism of left modules is a bijection. $)
+    $( An isomorphism of left modules is a bijection.  (Contributed by Stefan
+       O'Rear, 21-Jan-2015.) $)
     lmimf1o $p |- ( ( F e. ( R LMIso S ) /\ S e. V ) ->
           F : B -1-1-onto-> C ) $=
       ( wcel clmim co wf1o clmhm wa islmim simpr syl6bi impcom ) DFIZECDJKIZABE
@@ -14921,7 +14969,8 @@ $)
 
   ${
     $d F a b $.  $d R a b $.  $d S a b $.  $d a b c $.
-    $( An isomorphism of modules is a homomorphism. $)
+    $( An isomorphism of modules is a homomorphism.  (Contributed by Stefan
+       O'Rear, 21-Jan-2015.) $)
     lmimlmhm $p |- ( F e. ( R LMIso S ) -> F e. ( R LMHom S ) ) $=
       ( va vb vc clmim clmhm clmod cbs cfv wf1o crab df-lmim reldmmpt2 wcel cvv
       cv co eqid wa wb vex islmim ax-mp simplbi gimlem2 ) DEGHCABDEIIDRZJKZERZJ
@@ -14929,7 +14978,8 @@ $)
       TUDUEUFUG $.
       $( [21-Jan-2015] $)
 
-    $( An isomorphism of modules is an isomorphism of groups. $)
+    $( An isomorphism of modules is an isomorphism of groups.  (Contributed by
+       Stefan O'Rear, 21-Jan-2015.) $)
     lmimgim $p |- ( F e. ( R LMIso S ) -> F e. ( R GrpIso S ) ) $=
       ( va vb vc clmim cgim clmod cv cbs cfv wf1o co wcel wa cvv wb eqid ax-mp
       clmhm crab df-lmim reldmmpt2 cghm lmghm anim1i vex islmim 3imtr4i gimlem2
@@ -14940,7 +14990,7 @@ $)
   $}
 
   $( The converse of a bijective module homomorphism is a bijective module
-     homomorphism. $)
+     homomorphism.  (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
   lmimcnv $p |- ( ( F e. ( S LMIso T ) /\ T e. W ) ->
       `' F e. ( T LMIso S ) ) $=
     ( clmim co wcel wa ccnv clmhm cbs cfv wf1o eqid lmimf1o wb lmimlmhm lmhmf1o
@@ -14952,19 +15002,22 @@ $)
 
   ${
     $d R f r s $.  $d S f r s $.  $d F f r s $.
-    $( The relation "is isomorphic to" for modules. $)
+    $( The relation "is isomorphic to" for modules.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     brlmic $p |- ( R ~=m S <-> ( R LMIso S ) =/= (/) ) $=
       ( vr vs vf clmic clmim df-lmic clmod cv cbs cfv wf1o clmhm crab reldmmpt2
       co df-lmim brwitnlem ) ABFGCDDCHCDIICJZKLDJZKLEJMETUANQOGDECRPS $.
       $( [25-Jan-2015] $)
 
-    $( Prove isomorphic by an explicit isomorphism. $)
+    $( Prove isomorphic by an explicit isomorphism.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     brlmici $p |- ( F e. ( R LMIso S ) -> R ~=m S ) $=
       ( clmim co wcel c0 wne clmic wbr ne0i brlmic sylibr ) CABDEZFNGHABIJNCKAB
       LM $.
       $( [25-Jan-2015] $)
 
-    $( Isomorphism implies the left side is a module. $)
+    $( Isomorphism implies the left side is a module.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     lmiclcl $p |- ( R ~=m S -> R e. LMod ) $=
       ( vf clmic wbr cv clmim co wcel wex clmod c0 wne brlmic n0 bitri lmimlmhm
       clmhm lmhmlmod1 syl exlimiv sylbi ) ABDEZCFZABGHZIZCJZAKIZUCUELMUGABNCUEO
@@ -15036,7 +15089,8 @@ $)
 
     islssfg2.b $e |- B = ( Base ` W ) $.
     $( Property of a finitely generated left (sub-)module, with a relaxed
-       constraint on the spanning vectors. $)
+       constraint on the spanning vectors.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     islssfg2 $p |- ( ( W e. LMod /\ U e. S ) -> ( X e. LFinGen <->
           E. b e. ( ~P B i^i Fin ) ( N ` b ) = U ) ) $=
       ( wcel wa cfn cpw wrex wb wi wss elpw clmod clfig cv cfv wceq cin islssfg
@@ -15056,7 +15110,8 @@ $)
     islssfgi.n $e |- N = ( LSpan ` W ) $.
     islssfgi.v $e |- V = ( Base ` W ) $.
     islssfgi.x $e |- X = ( W |`s ( N ` B ) ) $.
-    $( Finitely spanned subspaces are finitely generated. $)
+    $( Finitely spanned subspaces are finitely generated.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     islssfgi $p |- ( ( W e. LMod /\ B C_ V /\ B e. Fin ) -> X e. LFinGen ) $=
       ( va clmod wcel wss cfn w3a clfig cv cfv wceq cbs eqid cpw cin wrex elpw2
       cvv fvex eqeltri biimpri 3ad2ant2 simp3 elin fveq2 eqeq1d rcla4ev sylancl
@@ -15087,7 +15142,8 @@ $)
     lsmfgcl.b $e |- ( ph -> B e. U ) $.
     lsmfgcl.df $e |- ( ph -> D e. LFinGen ) $.
     lsmfgcl.ef $e |- ( ph -> E e. LFinGen ) $.
-    $( The sum of two finitely generated submodules is finitely generated. $)
+    $( The sum of two finitely generated submodules is finitely generated.
+       (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     lsmfgcl $p |- ( ph -> F e. LFinGen ) $=
       ( wcel va vb co cress clfig cv clspn cfv wceq cbs cpw cfn wrex clmod eqid
       cin wb islssfg2 syl2anc mpbid adantr cun wss inss1 sseli elpwi syl lsmsp2
@@ -15145,7 +15201,8 @@ $)
     islnm2.s $e |- S = ( LSubSp ` M ) $.
     islnm2.n $e |- N = ( LSpan ` M ) $.
     $( Property of being a Noetherian left module with finite generation
-       expanded in terms of spans. $)
+       expanded in terms of spans.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     islnm2 $p |- ( M e. LNoeM <-> ( M e. LMod /\
         A. i e. S E. g e. ( ~P B i^i Fin ) i = ( N ` g ) ) ) $=
       ( clnm wcel clmod cv cress co clfig wral wa wceq wrex cfv cpw islnm eqid1
@@ -15214,7 +15271,8 @@ $)
     kercvrlsm.d $e |- ( ph -> D e. U ) $.
     kercvrlsm.cv $e |- ( ph -> ( F " D ) = ran F ) $.
     $( The domain of a linear function is the subspace sum of the kernel and
-       any subspace which covers the range. $)
+       any subspace which covers the range.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     kercvrlsm $p |- ( ph -> ( K P D ) = B ) $=
       ( va vb co wss clmod clmhm lmhmlmod1 syl lmhmkerlss syl2anc lsmcl syl3anc
       wcel lssss cv wa cfv wceq wrex cima crn wfn cbs eqid lmhmf fnfvelrn sylan
@@ -15246,7 +15304,7 @@ $)
     lmhmfgima.f $e |- ( ph -> F e. ( S LMHom T ) ) $.
     lmhmfgima.t $e |- ( ph -> T e. V ) $.
     $( A homomorphism maps finitely generated submodules to finitely generated
-       submodules. $)
+       submodules.  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     lmhmfgima $p |- ( ph -> Y e. LFinGen ) $=
       ( clfig cfv cfn wcel vx cima cress co cv clspn wceq cbs cpw wrex clmod wb
       cin clmhm lmhmlmod1 syl eqid islssfg2 syl2anc mpbid wa adantr inss1 sseli
@@ -15268,7 +15326,8 @@ $)
   ${
     $d V a $.  $d T a $.  $d S a $.  $d F a $.  $d B a $.
     lnmepi.b $e |- B = ( Base ` T ) $.
-    $( Epimorphic images of Noetherian modules are Noetherian. $)
+    $( Epimorphic images of Noetherian modules are Noetherian.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     lnmepi $p |- ( ( ( F e. ( S LMHom T ) /\ T e. V ) /\
         ( S e. LNoeM /\ ran F = B ) ) -> T e. LNoeM ) $=
       ( va co wcel wa clnm wceq cress clfig clss cfv adantr cima eqid sylanbrc
@@ -15361,7 +15420,8 @@ $)
 
   ${
     $d R a $.  $d S a $.  $d V a $.
-    $( Noetherian is an invariant property of modules. $)
+    $( Noetherian is an invariant property of modules.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     lnmlmic $p |- ( ( R ~=m S /\ S e. V ) ->
         ( R e. LNoeM <-> S e. LNoeM ) ) $=
       ( va wcel clnm clmim co wa clmhm crn cbs cfv wceq lmimlmhm ad2antrr simpr
@@ -15386,7 +15446,8 @@ $)
   ${
     $d B x y z w $.  $d F x y z w $.  $d A x y z w $.  $d V x y z w $.
 
-    $( Membership in a class of singleton functions. $)
+    $( Membership in a class of singleton functions.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     elixpsn $p |- ( A e. V -> ( F e. X_ x e. { A } B <->
         E. y e. B F = { <. A , y >. } ) ) $=
       ( vz vw cv csn cixp wcel cop wceq wrex cvv cfv wa vex eleq1d ixpeq1 opeq1
@@ -15410,7 +15471,8 @@ $)
     pwselbasb.y $e |- Y = ( R ^s I ) $.
     pwselbasb.b $e |- B = ( Base ` R ) $.
     pwselbasb.c $e |- C = ( Base ` Y ) $.
-    $( Membership in the base set of a structure product. $)
+    $( Membership in the base set of a structure product.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     pwselbasb $p |- ( ( R e. V /\ I e. W ) -> ( X e. C <-> X : I --> B ) ) $=
       ( wcel wa cmap co wf cbs cfv pwsbas cvv syl6eqr eleq2d fvex elmapg adantl
       wb eqeltri mpan bitr3d ) CELZDFLZMZGADNOZLZGBLDAGPZULUMBGULUMHQRBACDEFHIJ
@@ -15422,7 +15484,8 @@ $)
     $d I a b c x y $.  $d A a b c x y $.  $d V a b c x y $.  $d F a b c y $.
     $d W a b c x y $.  $d X x c $.
     ixpsnf1o.f $e |- F = ( x e. A |-> ( { I } X. { x } ) ) $.
-    $( A bijection between a class and single-point functions to it. $)
+    $( A bijection between a class and single-point functions to it.
+       (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     ixpsnf1o $p |- ( I e. V -> F : A -1-1-onto-> X_ y e. { I } A ) $=
       ( va vb vc wcel csn cv crn cuni cvv wa vex wceq eqeq2d cixp cxp snex xpex
       a1i rnex uniex cop wrex wb sneq xpeq1d anbi2d elixpsn ax-mp bicomi ixpeq1
@@ -15442,7 +15505,8 @@ $)
       WATXLYFUUAXBWSXKYEVOUMWFVSWGVTWHWIWJWK $.
       $( [24-Jan-2015] $)
 
-    $( A bijection between a set and single-point functions to it. $)
+    $( A bijection between a set and single-point functions to it.
+       (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     mapsnf1o $p |- ( ( A e. V /\ I e. W ) ->
         F : A -1-1-onto-> ( A ^m { I } ) ) $=
       ( vy wcel wa csn cmap co wf1o cixp ixpsnf1o adantl wceq wb cvv eqcomd syl
@@ -15458,7 +15522,8 @@ $)
     pwssnf1o.b $e |- B = ( Base ` R ) $.
     pwssnf1o.f $e |- F = ( x e. B |-> ( { I } X. { x } ) ) $.
     pwssnf1o.c $e |- C = ( Base ` Y ) $.
-    $( Triviality of singleton powers: set equipollence. $)
+    $( Triviality of singleton powers: set equipollence.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     pwssnf1o $p |- ( ( R e. V /\ I e. W ) -> F : B -1-1-onto-> C ) $=
       ( wcel wa wf1o cvv cbs cfv wceq csn cmap co fvex eqeltri mapsnf1o syl2anc
       a1i simpr wb snex pwsbas mpan2 adantr syl6eqr eqcomd f1oeq3 syl mpbird )
@@ -15472,7 +15537,8 @@ $)
     pwsdiagel.y $e |- Y = ( R ^s I ) $.
     pwsdiagel.b $e |- B = ( Base ` R ) $.
     pwsdiagel.c $e |- C = ( Base ` Y ) $.
-    $( Membership of diagonal elements in the structure power base set. $)
+    $( Membership of diagonal elements in the structure power base set.
+       (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     pwsdiagel $p |- ( ( ( R e. V /\ I e. W ) /\ A e. B ) ->
         ( I X. { A } ) e. C ) $=
       ( wcel wa csn cxp wf wss fconstg snssi fss adantl pwselbasb adantr mpbird
@@ -15484,7 +15550,8 @@ $)
   ${
     pwssca.y $e |- Y = ( R ^s I ) $.
     pwssca.s $e |- S = ( Scalar ` R ) $.
-    $( The ring of scalars of a structure product. $)
+    $( The ring of scalars of a structure product.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     pwssca $p |- ( ( R e. V /\ I e. W ) -> S = ( Scalar ` Y ) ) $=
       ( wcel wa csn cxp cprdm co csca cfv cvv wceq fvex eqeltri snex xpexg eqid
       mpan2 adantl prdmsca sylancr pwsval fveq2d eqtr4d ) ADIZCEIZJZBBCAKZLZMNZ
@@ -15496,14 +15563,16 @@ $)
   ${
     $d B x $.  $d I x $.  $d V x $.  $d W x $.  $d X x $.
     fdiagfn.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
-    $( Functionality of the diagonal map. $)
+    $( Functionality of the diagonal map.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     fdiagfn $p |- ( ( B e. V /\ I e. W ) -> F : B --> ( B ^m I ) ) $=
       ( wcel wa cv csn cxp cmap co wf wss fconstg snssi fss syl2anc adantl wb
       elmapg adantr mpbird fmptd ) BEHDFHIZABDAJZKZLZBDMNZCUGUHBHZIUJUKHZDBUJOZ
       ULUNUGULDUIUJOUIBPUNDUHBQUHBRDUIBUJSTUAUGUMUNUBULBDUJEFUCUDUEGUF $.
       $( [24-Jan-2015] $)
 
-    $( Functionality of the diagonal map. $)
+    $( Functionality of the diagonal map.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     fvdiagfn $p |- ( ( I e. W /\ X e. B ) -> ( F ` X ) = ( I X. { X } ) ) $=
       ( wcel wa csn cxp cvv cfv wceq simpr snex xpexg mpan2 adantr cv syl2anc
       sneq xpeq2d fvmptg ) DEHZFBHZIUFDFJZKZLHZFCMUHNUEUFOUEUIUFUEUGLHUIFPDUGEL
@@ -15517,7 +15586,8 @@ $)
     pwsdiagghm.y $e |- Y = ( R ^s I ) $.
     pwsdiagghm.b $e |- B = ( Base ` R ) $.
     pwsdiagghm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
-    $( Diagonal homomorphism into a structure power. $)
+    $( Diagonal homomorphism into a structure power.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     pwsdiagghm $p |- ( ( R e. Grp /\ I e. W ) -> F e. ( R GrpHom Y ) ) $=
       ( va vb cgrp wcel wa cbs cfv co wceq cvv wf cplusg wral cghm simpl pwsgrp
       cv jca cmap fvex eqeltri fdiagfn mpan adantl wb pwsbas feq3 syl mpbid csn
@@ -15542,7 +15612,8 @@ $)
     pwsdiaglmhm.y $e |- Y = ( R ^s I ) $.
     pwsdiaglmhm.b $e |- B = ( Base ` R ) $.
     pwsdiaglmhm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
-    $( Diagonal homomorphism into a structure power. $)
+    $( Diagonal homomorphism into a structure power.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     pwsdiaglmhm $p |- ( ( R e. LMod /\ I e. W ) -> F e. ( R LMHom Y ) ) $=
       ( va vb clmod wcel wa co cfv wceq eqid cvv cghm csca cvsca wral cbs clmhm
       w3a simpl pwslmod jca cgrp lmodgrp pwsdiagghm sylan pwssca eqcomd csn cxp
@@ -15563,7 +15634,8 @@ $)
   ${
     $d B x $.  $d V x $.  $d X x $.
     fvtresfn.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
-    $( Functionality of a tuple-restriction function. $)
+    $( Functionality of a tuple-restriction function.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     fvtresfn $p |- ( X e. B -> ( F ` X ) = ( X |` V ) ) $=
       ( wcel cres cvv cfv wceq resexg cv reseq1 fvmptg mpdan ) EBGEDHZIGECJQKED
       BLAEAMZDHQBICREDNFOP $.
@@ -15572,7 +15644,8 @@ $)
 
   ${
     $d A y $.  $d B y $.  $d C x y $.
-    $( Unrestricted restriction of the mapping operation. $)
+    $( Unrestricted restriction of the mapping operation.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     resmpt3 $p |- ( ( x e. A |-> B ) |` C ) = ( x e. ( A i^i C ) |-> B ) $=
       ( vy cv wcel wceq wa copab cres cin cmpt resopab ancom bitri anbi1i anass
       elin df-mpt bitr2i opabbii eqtri reseq1i 3eqtr4i ) AFZBGZEFCHZIZAEJZDKZUF
@@ -15585,7 +15658,7 @@ $)
     $d F x a b $.  $d G x a b $.  $d V x $.  $d W x $.  $d R x a b $.
     $d D x $.
     $( General value of ` ( F oF R G ) ` with no assumptions on functionality
-       of ` F ` and ` G ` . $)
+       of ` F ` and ` G ` .  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     offval3 $p |- ( ( F e. V /\ G e. W ) -> ( F oF R G ) =
         ( x e. ( dom F i^i dom G ) |-> ( ( F ` x ) R ( G ` x ) ) ) ) $=
       ( va vb wcel wa cvv cdm cin cv cfv co cmpt wceq elex adantr adantl inex1g
@@ -15596,7 +15669,8 @@ $)
       NVCVOVDBVBVICUHVBVKDUHUIUJABGHUKULUN $.
       $( [24-Jan-2015] $)
 
-    $( Pointwise combination commutes with restriction. $)
+    $( Pointwise combination commutes with restriction.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     offres $p |- ( ( F e. V /\ G e. W ) -> ( ( F oF R G ) |` D ) =
         ( ( F |` D ) oF R ( G |` D ) ) ) $=
       ( vx wcel cdm cin cfv co cmpt cres wceq fvres dmres 3eqtr4ri offval3 cvv
@@ -15609,7 +15683,8 @@ $)
       $( [24-Jan-2015] $)
   $}
 
-  $( Restriction of a constant function (or other cross product). $)
+  $( Restriction of a constant function (or other cross product).  (Contributed
+     by Stefan O'Rear, 24-Jan-2015.) $)
   xpssres $p |- ( C C_ A -> ( ( A X. B ) |` C ) = ( C X. B ) ) $=
     ( wss cxp cres cin df-res inxp incom inv1 xpeq12i 3eqtri wceq biimpi xpeq1d
     cvv df-ss syl5eq ) CADZABEZCFZCAGZBEZCBEUBUACQEGACGZBQGZEUDUACHABCQIUEUCUFB
@@ -15619,7 +15694,8 @@ $)
   ${
     $d F a $.  $d D a $.  $d Y a $.  $d X a x $.  $d V x $.
     mptcnvima.f $e |- F = ( x e. D |-> Y ) $.
-    $( Converse image of a function defined by maps-to. $)
+    $( Converse image of a function defined by maps-to.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
     mptcnvima $p |- ( `' F " X ) = { x e. D | Y e. X } $=
       ( va ccnv cima cv wcel wceq wa copab cres crn eqtri wex cab 3eqtri df-mpt
       crab cnveqi cnvopab imaeq1i df-ima resopab rneqi rnopab ancom anass bitri
@@ -15630,7 +15706,8 @@ $)
       KWBGEDUPUQURUSUTVKABVAVBTT $.
       $( [25-Jan-2015] $)
 
-    $( Converse singleton image of a function defined by maps-to. $)
+    $( Converse singleton image of a function defined by maps-to.  (Contributed
+       by Stefan O'Rear, 25-Jan-2015.) $)
     mptiniseg $p |- ( X e. V -> ( `' F " { X } ) = { x e. D | Y = X } ) $=
       ( wcel ccnv csn cima crab wceq mptcnvima elsnc2g rabbidv syl5eq ) EDHZCIE
       JZKFSHZABLFEMZABLABCSFGNRTUAABFEDOPQ $.
@@ -15645,7 +15722,8 @@ $)
     pwssplit1.b $e |- B = ( Base ` Y ) $.
     pwssplit1.c $e |- C = ( Base ` Z ) $.
     pwssplit1.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
-    $( Splitting for structure powers, part 0: restriction is a function. $)
+    $( Splitting for structure powers, part 0: restriction is a function.
+       (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     pwssplit0 $p |- ( ( W e. T /\ U e. X /\ V C_ U ) -> F : B --> C ) $=
       ( wcel wf wb syl2anc wss w3a cv cres wa cbs eqid pwselbasb 3adant3 biimpa
       cfv simpl3 fssres cvv simp1 simp3 simp2 ssexg adantr mpbird fmptd ) HDQZE
@@ -15656,7 +15734,7 @@ $)
 
     $( Splitting for structure powers, part 1: restriction is an onto
        function.  The only actual monoid law we need here is that the base set
-       is nonempty. $)
+       is nonempty.  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     pwssplit1 $p |- ( ( W e. Mnd /\ U e. X /\ V C_ U ) -> F : B -onto-> C ) $=
       ( wcel wf wceq cun c0 va vb cmnd wss w3a cfv wrex wral wfo pwssplit0 cdif
       cv wa c0g csn cxp cbs cin cvv wb simp1 simp3 simp2 syl2anc eqid pwselbasb
@@ -15678,7 +15756,7 @@ $)
       $( [24-Jan-2015] $)
 
     $( Splitting for structure powers, part 2: restriction is a group
-       homomorphism. $)
+       homomorphism.  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     pwssplit2 $p |- ( ( W e. Grp /\ U e. X /\ V C_ U ) ->
         F e. ( Y GrpHom Z ) ) $=
       ( cgrp wcel cfv co cvv va vb wss w3a wa wf cv cplusg wceq wral cghm simp1
@@ -15698,7 +15776,7 @@ $)
       $( [24-Jan-2015] $)
 
     $( Splitting for structure powers, part 3: restriction is a module
-       homomorphism. $)
+       homomorphism.  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
     pwssplit3 $p |- ( ( W e. LMod /\ U e. X /\ V C_ U ) ->
         F e. ( Y LMHom Z ) ) $=
       ( clmod wcel co cfv cvv va vb wss w3a wa cghm csca wceq cv cvsca wral cbs
@@ -15738,7 +15816,7 @@ $)
     pwssplit4.d $e |- D = ( R ^s B ) $.
     pwssplit4.l $e |- L = ( E |`s K ) $.
     $( Splitting for structure powers 4: maps isomorphically onto the other
-       half. $)
+       half.  (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
     pwssplit4 $p |- ( ( R e. LMod /\ ( A u. B ) e. V /\ ( A i^i B ) = (/) ) ->
           F e. ( L LMIso D ) ) $=
       ( va clmod wcel cun cin c0 wceq w3a clmhm co cbs cfv wf1o clmim cres cmpt
@@ -15800,7 +15878,8 @@ $)
   ${
     $d B a b $.  $d W a b $.
     filnm.b $e |- B = ( Base ` W ) $.
-    $( Finite left modules are Noetherian. $)
+    $( Finite left modules are Noetherian.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     filnm $p |- ( ( W e. LMod /\ B e. Fin ) -> W e. LNoeM ) $=
       ( va vb clmod wcel cfn wa cv clspn cfv wceq cpw cin wrex syl2anc sylanbrc
       clss eqid wral clnm simpl lssss adantl elpw sylibr simplr ssfi elin lspid
@@ -15871,7 +15950,8 @@ $)
   ${
     $d W a b c $.  $d I a b c $.
     pwslnm.y $e |- Y = ( W ^s I ) $.
-    $( Finite powers of Noetherian modules are Noetherian. $)
+    $( Finite powers of Noetherian modules are Noetherian.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     pwslnm $p |- ( ( W e. LNoeM /\ I e. Fin ) -> Y e. LNoeM ) $=
       ( va vb vc clnm wcel wa cpws co cv wi c0 wceq oveq2 eleq1d imbi2d eqid wn
       cfn csn cun weq clmod lnmlmod pwslnmlem0 syl wel vex ad2antrl cin biimpri
@@ -15972,7 +16052,7 @@ $)
     dsmmelbas.i $e |- ( ph -> I e. V ) $.
     dsmmelbas.r $e |- ( ph -> R Fn I ) $.
     $( Membership in the finitely supported hull of a structure product in
-       terms of the index set. $)
+       terms of the index set.  (Contributed by Stefan O'Rear, 11-Jan-2015.) $)
     dsmmelbas $p |- ( ph -> ( X e. H <-> ( X e. B /\ { a e. I |
           ( X ` a ) =/= ( 0g ` ( R ` a ) ) } e. Fin ) ) ) $=
       ( wcel cfv cbs vb cv c0g wne cdm crab cfn cprdm co wa cdsmm cvv wceq fnex
@@ -15999,7 +16079,8 @@ $)
       $( The all-zero vector is contained in the finite hull, since its support
          is empty and therefore finite.  This theorem along with the next one
          effectively proves that the finite hull is a "submonoid", although
-         that does not exist as a defined concept yet. $)
+         that does not exist as a defined concept yet.  (Contributed by Stefan
+         O'Rear, 11-Jan-2015.) $)
       dsmm0cl $p |- ( ph -> Z e. H ) $=
         ( va wcel cfv c0g wceq cbs cv wne crab cfn cmnd prdmmndd mndidcl syl c0
         eqid wn wral wa ccom prdm0g syl6eqr adantr fveq1d wf fvco2 sylan eqtr3d
@@ -16015,7 +16096,8 @@ $)
       dsmmacl.j $e |- ( ph -> J e. H ) $.
       dsmmacl.k $e |- ( ph -> K e. H ) $.
       dsmmacl.a $e |- A = ( +g ` P ) $.
-      $( The finite hull is closed under addition. $)
+      $( The finite hull is closed under addition.  (Contributed by Stefan
+         O'Rear, 11-Jan-2015.) $)
       dsmmacl $p |- ( ph -> ( J A K ) e. H ) $=
         ( wcel va co cbs cfv cv c0g wne crab cfn cmnd prdmmndd wa cdsmm eqid wf
         wfn ffn dsmmelbas mpbid simpld mndcl syl3anc cplusg simpr prdmplusgfval
@@ -16048,7 +16130,8 @@ $)
     prdminvgd2.n $e |- N = ( invg ` Y ) $.
     prdminvgd2.x $e |- ( ph -> X e. B ) $.
     prdminvgd2.j $e |- ( ph -> J e. I ) $.
-    $( Negation of a single coordinate in a structure product. $)
+    $( Negation of a single coordinate in a structure product.  (Contributed by
+       Stefan O'Rear, 11-Jan-2015.) $)
     prdminvgd2 $p |- ( ph -> ( ( N ` X ) ` J ) =
         ( ( invg ` ( R ` J ) ) ` ( X ` J ) ) ) $=
       ( cfv vx cminusg cmpt prdminvgd fveq1d wcel wceq fveq2d fveq12d eqid fvex
@@ -16066,7 +16149,8 @@ $)
     dsmmsubg.s $e |- ( ph -> S e. V ) $.
     dsmmsubg.r $e |- ( ph -> R : I --> Grp ) $.
     $( The finite hull of a product of groups is additionally closed under
-       negation and thus is a subgroup of the product. $)
+       negation and thus is a subgroup of the product.  (Contributed by Stefan
+       O'Rear, 11-Jan-2015.) $)
     dsmmsubg $p |- ( ph -> H e. ( SubGrp ` P ) ) $=
       ( va vb cfv wcel wceq cgrp eqid cplusg cress co c0g eqidd cdsmm cbs cprdm
       cv wne cdm crab cfn cvv wf fex syl2anc dsmmbase syl eqcomd wss ssrab2 a1i
@@ -16103,7 +16187,8 @@ $)
       dsmmlss.u $e |- U = ( LSubSp ` P ) $.
       dsmmlss.h $e |- H = ( Base ` ( S (+)m R ) ) $.
       $( The finite hull of a product of modules is additionally closed under
-         scalar multiplication and thus is a linear subspace of the product. $)
+         scalar multiplication and thus is a linear subspace of the product.
+         (Contributed by Stefan O'Rear, 11-Jan-2015.) $)
       dsmmlss $p |- ( ph -> H e. U ) $=
         ( wcel cfv clmod eqid va vb csubg cv cvsca co wral csca cbs crg wf cgrp
         wss lmodgrp ssriv fss sylancl dsmmsubg wa c0g wne crab prdmlmodd adantr
@@ -16131,7 +16216,8 @@ $)
 
     ${
       dsmmlmod.c $e |- C = ( S (+)m R ) $.
-      $( The direct sum of a family of modules is a module. $)
+      $( The direct sum of a family of modules is a module.  (Contributed by
+         Stefan O'Rear, 11-Jan-2015.) $)
       dsmmlmod $p |- ( ph -> C e. LMod ) $=
         ( cprdm co clmod wcel cdsmm cbs cfv eqid prdmlmodd cress dsmmval2 eqtri
         clss dsmmlss lsslmod syl2anc ) AEDMNZOPEDQNZRSZUIUESZPCOPABDEFGUIUITZIH
@@ -16494,7 +16580,8 @@ $)
     ${
       rspssp.u $e |- U = ( LIdeal ` R ) $.
       $( The ideal span of a set of elements in a ring is contained in any
-         subring which contains those elements. $)
+         subring which contains those elements.  (Contributed by Stefan O'Rear,
+         3-Jan-2015.) $)
       rspssp $p |- ( ( R e. Ring /\ I e. U /\ G C_ I ) -> ( K ` G ) C_ I ) $=
         ( crg wcel wss w3a crglmod clspn wceq crsp rspval syl5eq 3ad2ant1 eqid
         cfv fveq1d clmod clss rlmlmod clidl lidlval eleq2d biimpa 3adant3 simp3
@@ -16669,7 +16756,8 @@ $)
     $}
   $}
 
-  $( Principal ideal rings are rings. $)
+  $( Principal ideal rings are rings.  (Contributed by Stefan O'Rear,
+     24-Jan-2015.) $)
   lpirrng $p |- ( R e. LPIR -> R e. Ring ) $=
     ( clpir wcel crg clidl cfv clpidl wceq eqid islpir simplbi ) ABCADCAEFZAGFZ
     HMALMILIJK $.
@@ -16865,19 +16953,22 @@ $)
 
   ${
     $d A a $.
-    $( Property of a left-Noetherian ring. $)
+    $( Property of a left-Noetherian ring.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     islnr $p |- ( A e. LNoeR <-> ( A e. Ring /\
         ( ringLMod ` A ) e. LNoeM ) ) $=
       ( va cv crglmod cfv clnm wcel crg clnr wceq fveq2 eleq1d df-lnr elrab2 )
       BCZDEZFGADEZFGBAHIOAJPQFOADKLBMN $.
       $( [24-Jan-2015] $)
 
-    $( Left-Noetherian rings are rings. $)
+    $( Left-Noetherian rings are rings.  (Contributed by Stefan O'Rear,
+       24-Jan-2015.) $)
     lnrrng $p |- ( A e. LNoeR -> A e. Ring ) $=
       ( clnr wcel crg crglmod cfv clnm islnr simplbi ) ABCADCAEFGCAHI $.
       $( [24-Jan-2015] $)
 
-    $( Left-Noetherian rings have Noetherian associated modules. $)
+    $( Left-Noetherian rings have Noetherian associated modules.  (Contributed
+       by Stefan O'Rear, 24-Jan-2015.) $)
     lnrlnm $p |- ( A e. LNoeR -> ( ringLMod ` A ) e. LNoeM ) $=
       ( clnr wcel crg crglmod cfv clnm islnr simprbi ) ABCADCAEFGCAHI $.
       $( [24-Jan-2015] $)
@@ -16889,7 +16980,8 @@ $)
     islnr2.u $e |- U = ( LIdeal ` R ) $.
     islnr2.n $e |- N = ( RSpan ` R ) $.
     $( Property of being a left-Noetherian ring in terms of finite generation
-       of ideals (the usual "pure ring theory" definition). $)
+       of ideals (the usual "pure ring theory" definition).  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
     islnr2 $p |- ( R e. LNoeR <-> ( R e. Ring /\
         A. i e. U E. g e. ( ~P B i^i Fin ) i = ( N ` g ) ) ) $=
       ( wcel crg cfv wa cv wceq cpw cfn cin eqid syl5eq clnr crglmod clnm islnr
@@ -16904,7 +16996,8 @@ $)
 
   ${
     $d a b c R $.
-    $( Left principal ideal rings are left Noetherian. $)
+    $( Left principal ideal rings are left Noetherian.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
     lpirlnr $p |- ( R e. LPIR -> R e. LNoeR ) $=
       ( va vb vc clpir wcel crg cv crsp cfv wceq cbs cpw cfn cin wrex wral eqid
       wa sylanbrc clidl lpirrng clpidl csn wb islpidl syl biimpa snelpwi adantl
@@ -17916,7 +18009,7 @@ $)
   ${
     $d J x y p a b $.  $d K x y p a b $.  $d S x y p a b $.
     $( A set in a product is open iff each point is surrounded by an open
-       rectangle. $)
+       rectangle.  (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
     eltpt2 $p |- ( ( J e. Top /\ K e. Top ) -> ( S e. ( J tX K ) <-> A. p e. S
           E. x e. J E. y e. K ( p e. ( x X. y ) /\ ( x X. y ) C_ S ) ) ) $=
       ( va vb ctop wcel wa cv wceq wrex wss wral ctb wb wex r19.41v ctx cxp cab
@@ -17936,7 +18029,8 @@ $)
     hausdiag.x $e |- X = U. J $.
     $( A topology is Hausdorff iff the diagonal set is closed in the topology's
        product with itself. _EDITORIAL_: very clumsy proof, can probably be
-       shortened substantially. $)
+       shortened substantially.  (Contributed by Stefan O'Rear,
+       25-Jan-2015.) $)
     hausdiag $p |- ( J e. Haus <-> ( J e. Top /\ ( _I |` X ) e.
         ( Clsd ` ( J tX J ) ) ) ) $=
       ( va vb vc vd ve wcel cv cin wceq wrex wi wral wa cid wss wb wn ctop cres
@@ -17983,7 +18077,7 @@ $)
     hauseqlcld.g $e |- ( ph -> G e. ( J Cn K ) ) $.
     $( In a Hausdorff topology, the equalizer of two continuous functions is
        closed (thus, two continuous functions which agree on a dense set agree
-       everywhere). $)
+       everywhere).  (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
     hauseqlcld $p |- ( ph -> dom ( F i^i G ) e. ( Clsd ` J ) ) $=
       ( va vb cfv cid wcel wceq wa ctop co syl eqid cin cdm cuni cmpt ccnv cres
       cv cop cima ccld wf ccn cha haustop cnf syl3anc ffvelrn biantrud wbr fvex
@@ -18006,7 +18100,8 @@ $)
 
   ${
     $d F x a b $.  $d A x a b $.  $d B x a b $.
-    $( Express a function as a subset of the cross product. $)
+    $( Express a function as a subset of the cross product.  (Contributed by
+       Stefan O'Rear, 25-Jan-2015.) $)
     fgraphopab $p |- ( F : A --> B -> F =
           { <. a , b >. | ( ( a e. A /\ b e. B ) /\ ( F ` a ) = b ) } ) $=
       ( wf cv cfv cmpt cxp cin wcel wa wceq copab wss fssxp df-ss sylib anbi2i
@@ -18018,7 +18113,8 @@ $)
       HVFVAULTUNUOUPUQUR $.
       $( [25-Jan-2015] $)
 
-    $( Express a function as a subset of the cross product. $)
+    $( Express a function as a subset of the cross product.  (Contributed by
+       Stefan O'Rear, 25-Jan-2015.) $)
     fgraphxp $p |- ( F : A --> B -> F =
           { x e. ( A X. B ) | ( F ` ( 1st ` x ) ) = ( 2nd ` x ) } ) $=
       ( va vb wf cv wcel wa cfv wceq c1st c2nd cxp cvv wsbc cab fvex eleq1 crab
@@ -18033,7 +18129,8 @@ $)
 
   ${
     $d J a $.  $d K a $.  $d F a $.
-    $( The graph of a continuous function into a Hausdorff space is closed. $)
+    $( The graph of a continuous function into a Hausdorff space is closed.
+       (Contributed by Stefan O'Rear, 25-Jan-2015.) $)
     hausgraph $p |- ( ( J e. Top /\ K e. Haus /\ F e. ( J Cn K ) ) ->
         F e. ( Clsd ` ( J tX K ) ) ) $=
       ( va ctop wcel ccn co c1st cuni c2nd cfv wceq wfn ffn adantl eqid syl2anc
