@@ -35,9 +35,9 @@ htmldef "rmX" as " X<SUB>rm</SUB> ";
 htmldef "rmY" as " Y<SUB>rm</SUB> ";
   althtmldef "rmY" as " Y<SUB>rm</SUB> ";
   latexdef "rmY" as "{\rm rmY}";
-htmldef "{C.}" as " <B>{&sub;}</B> ";
-  althtmldef "{C.}" as " <B>{&sub;}</B> ";
-  latexdef "{C.}" as "{\rm {C.}}";
+htmldef "[C.]" as " [<IMG SRC='subseteq.gif' WIDTH=12 HEIGHT=19 TITLE='C_' ALIGN=TOP>] ";
+  althtmldef "[C.]" as " [<B>&sub;</B>] ";
+  latexdef "[C.]" as "{\rm [C.]}";
 /* standard notation is Roman numerals, but that looks ugly smashed up against
    the word "Fin" in the same font/size */
 htmldef "Fin1a" as "Fin<SUP>Ia</SUP>";
@@ -103,9 +103,10 @@ htmldef "LNoeM" as "LNoeM";
 htmldef "LNoeR" as "LNoeR";
   althtmldef "LNoeR" as "LNoeR";
   latexdef "LNoeR" as "{\rm LNoeR}";
-htmldef "(+)m" as "(+)m";
-  althtmldef "(+)m" as "(+)m";
-  latexdef "(+)m" as "(+){\rm m}";
+htmldef "(+)m" as
+    " <IMG SRC='oplus.gif' WIDTH=13 HEIGHT=19 TITLE='(+)' ALIGN=TOP><SUB>m</SUB> ";
+  althtmldef "(+)m" as " &#x2295;<SUB>m</SUB> ";
+  latexdef "(+)m" as "\oplus_{m}";
 htmldef "LPIdeal" as "LPIdeal";
   althtmldef "LPIdeal" as "LPIdeal";
   latexdef "LPIdeal" as "{\rm LPIdeal}";
@@ -128,6 +129,26 @@ htmldef "GrpHom" as
 htmldef "LMHom" as " LMHom ";
   althtmldef "LMHom" as " LMHom ";
   latexdef "LMHom" as "{\rm LMHom}";
+htmldef "GrpIso" as " GrpIso ";
+  althtmldef "GrpIso" as " GrpIso ";
+  latexdef "GrpIso" as "{\rm GrpIso}";
+htmldef "LMIso" as " LMIso ";
+  althtmldef "LMIso" as " LMIso ";
+  latexdef "LMIso" as "{\rm LMIso}";
+htmldef "freeLMod" as " freeLMod ";
+  althtmldef "freeLMod" as " freeLMod ";
+  latexdef "freeLMod" as "{\rm freeLMod}";
+htmldef "unitVec" as " unitVec ";
+  althtmldef "unitVec" as " unitVec ";
+  latexdef "unitVec" as "{\rm unitVec}";
+htmldef "~=g" as
+    " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 TITLE='~=ph' ALIGN=TOP><SUB><I>g</I></SUB> ";
+  althtmldef "~=g" as " &#8771;<SUB><I>g</I></SUB>";
+  latexdef "~=g" as "\simeq_{g}";
+htmldef "~=m" as
+    " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 TITLE='~=ph' ALIGN=TOP><SUB><I>m</I></SUB> ";
+  althtmldef "~=m" as " &#8771;<SUB><I>m</I></SUB>";
+  latexdef "~=m" as "\simeq_{m}";
 htmldef "LIdeal" as "LIdeal";
   althtmldef "LIdeal" as "LIdeal";
   latexdef "LIdeal" as "{\rm LIdeal}";
@@ -141,5 +162,11 @@ htmldef "Monic" as
     " <IMG SRC='_monic.gif' WIDTH=38 HEIGHT=19 TITLE='Monic' ALIGN=TOP> ";
   althtmldef "Monic" as " Monic ";
   latexdef "Monic" as "{\rm Monic}";
+htmldef "recs" as "recs";
+  althtmldef "recs" as "recs";
+  latexdef "recs" as "\mathrm{recs}";
+htmldef "CHOICE" as "<SMALL>CHOICE</SMALL>";
+  althtmldef "CHOICE" as "<SMALL>CHOICE</SMALL>";
+  latexdef "CHOICE" as "\mathrm{CHOICE}";
 /* End of mathbox of Stefan O'Rear */
 

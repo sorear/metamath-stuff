@@ -8824,7 +8824,7 @@ $)
         wemapso2.xq2 $e |- ( ph -> ( X ` b ) S ( Q ` b ) ) $.
         wemapso2.xq3 $e |- ( ph -> A. c e. A ( c R b ->
             ( X ` c ) = ( Q ` c ) ) ) $.
-        $( Lemma for ~ Owemapso .  Transitivity. $)
+        $( Lemma for ~ wemapso .  Transitivity. $)
         wemapso2 $p |- ( ph -> P T Q ) $=
           ( vd wbr cv cfv wceq wi wral wrex cif wcel ifcl syl2anc weq w3o solin
           wa wor syl12anc adantr breq1 fveq2 eqeq12d imbi12d rcla4va breqtrd wb
@@ -9155,7 +9155,7 @@ $)
     $}
 
     $( A well-ordering induces a strict ordering on the power set.
-       _EDITORIAL_ : when well-orderings are set like, this can be strengthened
+       _EDITORIAL_: when well-orderings are set like, this can be strengthened
        to remove ` A e. V ` (Contributed by Stefan O'Rear, 18-Jan-2015.) $)
     wepwso $p |- ( ( A e. V /\ R We A ) -> T Or ~P A ) $=
       ( va wcel wwe wa c2o cv cfv cep wbr wor eqid cmap co wceq wral wrex copab
@@ -9187,7 +9187,7 @@ $)
     dnnumch.a $e |- ( ph -> A e. V ) $.
     dnnumch.g $e |- ( ph -> A. y e. ~P A ( y =/= (/) -> ( G ` y ) e. y ) ) $.
     $( Define an enumeration of a set from a choice function; second part, it
-       restricts to a bijection. _EDITORIAL: overlaps ~ aceq8a _ (Contributed
+       restricts to a bijection. _EDITORIAL_: overlaps ~ aceq8a (Contributed
        by Stefan O'Rear, 18-Jan-2015.) $)
     dnnumch1 $p |- ( ph -> E. x e. On ( F |` x ) : x -1-1-onto-> A ) $=
       ( vw wcel cv cdif c0 cfv con0 wceq cvv cima wne wi wral cres wf1o wrex wa
@@ -9748,6 +9748,10 @@ $)
        not mentioning the cumulative hierarchy in any way as most consequences
        of regularity do.
 
+       This is definition (MC) of [Schechter] p. 141.  _EDITORIAL_: the proof
+       is not original with me of course but I lost my reference sometime after
+       writing it.
+
        A multiple choice function allows any total order to be extended to a
        choice function, which in turn defines a well ordering.  Since a well
        ordering on a set defines a simple ordering of the power set, this
@@ -9783,30 +9787,30 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c {C.} $.
+  $c [C.] $.
 
   $( Extend class notation to include the reified proper subset relation. $)
-  crpss $a class {C.} $.
+  crpss $a class [C.] $.
 
   ${
     $d a b $.
     $( Define a relation which corresponds to proper subsethood ~ df-pss on
        sets.  This allows us to use proper subsethood with general concepts
        that require relations, such as strict ordering, see ~ sorpss . $)
-    df-rpss $a |- {C.} = { <. a , b >. | a C. b } $.
+    df-rpss $a |- [C.] = { <. a , b >. | a C. b } $.
 
     $d A a b c x y $.  $d B a b $.  $d C a b $.
 
     $( The proper subset relation is a relation.  (Contributed by Stefan
        O'Rear, 2-Nov-2014.) $)
-    relrpss $p |- Rel {C.} $=
+    relrpss $p |- Rel [C.] $=
       ( va vb cv wpss crpss df-rpss relopabi ) ACBCDABEABFG $.
       $( [2-Nov-2014] $)
 
     ${
       $( The proper subset relation on sets is the same as class proper
          subsethood.  (Contributed by Stefan O'Rear, 2-Nov-2014.) $)
-      brrpssg $p |- ( B e. _V -> ( A {C.} B <-> A C. B ) ) $=
+      brrpssg $p |- ( B e. _V -> ( A [C.] B <-> A C. B ) ) $=
         ( va vb cvv wcel crpss wbr wpss relrpss brrelexi adantl simpl jca pssss
         wa wss id ssexg cv syl2anr psseq1 psseq2 df-rpss brabg pm5.21nd ) BEFZA
         BGHZABIZAEFZUGPUGUHPUJUGUHUJUGABGJKLUGUHMNUGUIPUJUGUIABQUGUJUGABOUGRABE
@@ -9816,14 +9820,14 @@ $)
       brrpss.a $e |- B e. _V $.
       $( The proper subset relation on sets is the same as class proper
          subsethood.  (Contributed by Stefan O'Rear, 2-Nov-2014.) $)
-      brrpss $p |- ( A {C.} B <-> A C. B ) $=
+      brrpss $p |- ( A [C.] B <-> A C. B ) $=
         ( cvv wcel crpss wbr wpss wb brrpssg ax-mp ) BDEABFGABHICABJK $.
         $( [2-Nov-2014] $)
     $}
 
     $( Every class is partially ordered by proper subsets.  (Contributed by
        Stefan O'Rear, 2-Nov-2014.) $)
-    porpss $p |- {C.} Po A $=
+    porpss $p |- [C.] Po A $=
       ( va vb vc crpss wpo cv wbr wn wa wi wral wpss pssirr psstr brrpss notbii
       vex anbi12i imbi12i mpbir2an rgenw rgen2w df-po mpbir ) AEFBGZUFEHZIZUFCG
       ZEHZUIDGZEHZJZUFUKEHZKZJZDALZCALBALUQBCAAUPDAUPUFUFMZIZUFUIMZUIUKMZJZUFUK
@@ -9833,7 +9837,7 @@ $)
 
     $( Express strict ordering under proper subsets, i.e. the notion of a chain
        of sets.  (Contributed by Stefan O'Rear, 2-Nov-2014.) $)
-    sorpss $p |- ( {C.} Or A <-> A. x e. A A. y e. A ( x C_ y \/
+    sorpss $p |- ( [C.] Or A <-> A. x e. A A. y e. A ( x C_ y \/
         y C_ x ) ) $=
       ( cv crpss wbr weq w3o wral wpo wss wor porpss biantrur wpss sspsstri vex
       wa wo brrpss biid 3orbi123i bitr4i 2ralbii df-so 3bitr4ri ) ADZBDZEFZABGZ
@@ -9843,7 +9847,7 @@ $)
 
     $( Property of a chain of sets.  (Contributed by Stefan O'Rear,
        2-Nov-2014.) $)
-    sorpssi $p |- ( ( {C.} Or A /\ ( B e. A /\ C e. A ) ) ->
+    sorpssi $p |- ( ( [C.] Or A /\ ( B e. A /\ C e. A ) ) ->
         ( B C_ C \/ C C_ B ) ) $=
       ( crpss wor wcel wa wpss wceq w3o wss wbr solin cvv elex ad2antll brrpssg
       wo wb syl biidd ad2antrl 3orbi123d mpbid sspsstri sylibr ) ADEZBAFZCAFZGG
@@ -9939,7 +9943,7 @@ $)
     $( A set is II-finite (Tarski finite) iff every nonempty chain of subsets
        contains a maximum element.  Definition II of [Levy] p. 2. $)
     df-fin2 $a |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\
-      {C.} Or y ) -> E. z e. y A. w e. y -. z C. w ) } $.
+      [C.] Or y ) -> E. z e. y A. w e. y -. z C. w ) } $.
 
     $( A set is IV-finite (Dedekind finite) iff it has no equinumerous proper
        subset.  Definition IV of [Levy] p. 3. $)
@@ -10241,7 +10245,7 @@ $)
 
     $( Lemma for ~ dffin2-3 .  In a chain of sets, a maximal element is the
        union of the chain. $)
-    fin23lem4 $p |- ( {C.} Or Y -> ( E. u e. Y A. v e. Y -. u C. v <->
+    fin23lem4 $p |- ( [C.] Or Y -> ( E. u e. Y A. v e. Y -. u C. v <->
         U. Y e. Y ) ) $=
       ( crpss wor cv wpss wn wral wrex cuni wcel w3a wss wa sorpssi syl elssuni
       wo wi anassrs sspss orel1 eqimss2 syl6com sylbi ax-1 jaoi ralimdva 3impia
@@ -10256,7 +10260,7 @@ $)
 
     $( Lemma for ~ dffin2-4 .  In a chain of sets, a minimal element is the
        intersection of the chain. $)
-    fin23lem5 $p |- ( {C.} Or Y -> ( E. u e. Y A. v e. Y -. v C. u <->
+    fin23lem5 $p |- ( [C.] Or Y -> ( E. u e. Y A. v e. Y -. v C. u <->
         |^| Y e. Y ) ) $=
       ( crpss wor cv wpss wn wral wrex cint wcel w3a wss intss1 3ad2ant2 wa syl
       wo wi sorpssi anassrs ax-1 weq sspss orel1 eqimss2 syl6com sylbi ralimdva
@@ -10276,7 +10280,7 @@ $)
 
     $( Lemma for ~ dffin2-2 .  The componentwise complement of a chain of sets
        is also a chain of sets. $)
-    fin23lem6 $p |- ( {C.} Or Y -> {C.} Or { u e. ~P A | ( A \ u ) e. Y } ) $=
+    fin23lem6 $p |- ( [C.] Or Y -> [C.] Or { u e. ~P A | ( A \ u ) e. Y } ) $=
       ( vx vy crpss wor cv wss wo cdif wcel wral wa difeq2 eleq1d elrab syl2anb
       weq wi cpw crab an4 biimpi sorpssi expcom wceq vex elpw dfss4 bitri sscon
       sseq12 syl5ib ancoms orim12d com12 orcoms syl6 com3l imp3a syl5 ralrimivv
@@ -10360,7 +10364,7 @@ $)
 
     $( ` Fin2 ` expressed in terms of minimal elements.  (Contributed by Stefan
        O'Rear, 2-Nov-2014.) $)
-    dffin2-2 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
+    dffin2-2 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ [C.] Or y ) ->
         E. z e. y A. w e. y -. w C. z ) } $=
       ( va vb vc cv c0 wne crpss wor wa wpss wral wrex wcel wss wceq cvv wn cpw
       cfin2 wi cab w3a cdif crab simp2 ssrab2 vex pwex elpw2 mpbir simp1 simp3l
@@ -10390,7 +10394,7 @@ $)
 
     $( ` Fin2 ` sets contain unions for all nonempty chains.  (Contributed by
        Stefan O'Rear, 2-Nov-2014.) $)
-    dffin2-3 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
+    dffin2-3 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ [C.] Or y ) ->
         U. y e. y ) } $=
       ( va vz vw cfin2 cv c0 wne crpss wor wa cuni wcel wi cpw wral cab wpss wn
       wrex wb fin23lem4 adantl pm5.74i ralbii df-fin2 abeq2i vex weq pweq pweqd
@@ -10401,7 +10405,7 @@ $)
 
     $( ` Fin2 ` sets contain intersections for all nonempty chains.
        (Contributed by Stefan O'Rear, 2-Nov-2014.) $)
-    dffin2-4 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ {C.} Or y ) ->
+    dffin2-4 $p |- Fin2 = { x | A. y e. ~P ~P x ( ( y =/= (/) /\ [C.] Or y ) ->
         |^| y e. y ) } $=
       ( va vw vz cfin2 cv c0 wne crpss wor wa cint wcel wi cpw wral cab wpss wn
       wrex fin23lem5 adantl pm5.74i ralbii dffin2-2 abeq2i vex weq pweq raleqdv
@@ -11494,7 +11498,7 @@ $)
     compssiso.b $e |- A e. _V $.
     $( Complementation is an antiautomorphism on power set lattices.
        (Contributed by Stefan O'Rear, 4-Nov-2014.) $)
-    compssiso $p |- F Isom {C.} , `' {C.} ( ~P A , ~P A ) $=
+    compssiso $p |- F Isom [C.] , `' [C.] ( ~P A , ~P A ) $=
       ( va vb crpss wbr wb cvv wcel cdif wa wss elpw2 wceq bitri difeq2 sscon
       cpw ccnv wiso wf1o cv cfv wral difss mpbir a1i dfss4 biimpi eqcomd eqeq2d
       wi syl5ibrcom adantl adantr impbid f1o2d ax-mp wpss sseq12 syl2anr syl5ib
@@ -11775,7 +11779,7 @@ $)
     $( A set is I-finite iff every system of subsets contains a maximal
        subset.  Definition I of [Levy] p. 2.  (Contributed by Stefan O'Rear,
        4-Nov-2014.) $)
-    dffin1-3 $p |- Fin = { x | `' {C.} Fr ~P x } $=
+    dffin1-3 $p |- Fin = { x | `' [C.] Fr ~P x } $=
       ( va vc vb vd cfn cv cpw crpss wfr wcel wbr wn vex wa wss wne elin adantr
       c0 ccnv cab wpo porpss cnvpo mpbi pwfi biimpi frfi sylancr wral wrex pwex
       cin cvv inex2 inss2 0fin 0elpw mpbir2an ne0i fri mpanr12 mpan weq wpss wi
@@ -11800,7 +11804,7 @@ $)
 
     $( A set is I-finite iff every system of subsets contains a minimal
        subset.  (Contributed by Stefan O'Rear, 4-Nov-2014.) $)
-    dffin1-4 $p |- Fin = { x | {C.} Fr ~P x } $=
+    dffin1-4 $p |- Fin = { x | [C.] Fr ~P x } $=
       ( va vb cfn cpw crpss wfr cab ccnv wcel cdif cmpt wiso eqid vex compssiso
       cv wb isofr ax-mp weq wceq pweq freq2 elab dffin1-3 abeq2i 3bitr4ri eqriv
       syl ) BDAQZEZFGZAHZBQZEZFGZUPFIZGZUOUNJUODJUPUPFURCUPUOCQKLZMUQUSRCUOUTUT
@@ -12085,7 +12089,7 @@ $)
 
     $( Lemma for ~ fin1a2 .  In a chain of finite sets, initial segments are
        finite. $)
-    fin1a2lem9 $p |- ( ( {C.} Or a /\ a C_ Fin /\ A e. om ) ->
+    fin1a2lem9 $p |- ( ( [C.] Or a /\ a C_ Fin /\ A e. om ) ->
         { b e. a | b ~<_ A } e. Fin ) $=
       ( vc vd cv cfn wss com wcel cdom wbr con0 sseldi 3ad2ant3 ccrd wa syl2anc
       cfv wb crpss wor w3a csuc crab cin onfin2 inss2 eqsstri cvv vex rabex wel
@@ -12106,7 +12110,7 @@ $)
 
     $( Lemma for ~ fin1a2 .  A nonempty finite union of members of a chain is a
        member of the chain. $)
-    fin1a2lem10 $p |- ( ( A =/= (/) /\ A e. Fin /\ {C.} Or A ) ->
+    fin1a2lem10 $p |- ( ( A =/= (/) /\ A e. Fin /\ [C.] Or A ) ->
         U. A e. A ) $=
       ( va vb vc c0 wne wcel crpss wor cuni wi cun neeq1 soeq2 unieq id eleq12d
       wceq imbi12d wa cfn cv csn weq wn eqidd necon1ai w3a vex unisn snid uneq1
@@ -12130,7 +12134,7 @@ $)
       $( [8-Nov-2014] $)
 
     $( Lemma for ~ fin1a2 . $)
-    fin1a2lem11 $p |- ( ( {C.} Or a /\ a C_ Fin ) -> ran ( b e. om |->
+    fin1a2lem11 $p |- ( ( [C.] Or a /\ a C_ Fin ) -> ran ( b e. om |->
         U. { c e. a | c ~<_ b } ) = ( a u. { (/) } ) ) $=
       ( vd cv crpss cfn wss wa com cdom wbr crab cuni wceq c0 wcel sylibr simpr
       wo wor cmpt crn wrex cab csn cun eqid rnmpt wel unieq syl6eq adantl rabex
@@ -12163,7 +12167,7 @@ $)
       $( [8-Nov-2014] $)
 
     $( Lemma for ~ fin1a2 . $)
-    fin1a2lem12 $p |- ( ( ( a e. ~P ~P b /\ {C.} Or a /\ -. U. a e. a ) /\
+    fin1a2lem12 $p |- ( ( ( a e. ~P ~P b /\ [C.] Or a /\ -. U. a e. a ) /\
         ( a C_ Fin /\ a =/= (/) ) ) -> -. b e. Fin3 ) $=
       ( vc vd ve vf cv cpw wcel cuni wn wss c0 wa com wi cdom wbr cvv wceq csuc
       crpss wor w3a cfn wne cfv wral crn wal cfin3 wex crab cmpt simpll1 ssrab2
@@ -12206,7 +12210,7 @@ $)
       $( [8-Nov-2014] $)
 
     $( Lemma for ~ fin1a2 . $)
-    fin1a2lem13 $p |- ( ( ( a e. ~P ~P b /\ {C.} Or a /\ -. U. a e. a ) /\
+    fin1a2lem13 $p |- ( ( ( a e. ~P ~P b /\ [C.] Or a /\ -. U. a e. a ) /\
         ( -. c e. Fin /\ c e. a ) ) -> -. ( b \ c ) e. Fin2 ) $=
       ( ve vd vg vf vh cv wcel wn wa c0 wral wrex wceq wss weq eqeq1 sylibr cpw
       crpss wor cuni w3a cfn wel wne cdif cfin2 cab simpl1 vex elpw ssel2 sylib
@@ -14699,7 +14703,7 @@ $)
     elovmpt2.e $e |- ( ( a = X /\ b = Y ) -> C = E ) $.
     $( Utility lemma for two-parameter classes.
 
-       _EDITORIAL_: can simplify ~ isghm , ~ islmhm.  (Contributed by Stefan
+       _EDITORIAL_: can simplify ~ isghm , ~ islmhm .  (Contributed by Stefan
        O'Rear, 21-Jan-2015.) $)
     elovmpt2 $p |- ( Y e. V -> ( F e. ( X D Y ) <-> ( X e. A /\ Y e. B /\ F e.
         E ) ) ) $=
