@@ -2543,20 +2543,6 @@ $)
   $}
 
   ${
-    $d A x y z $.  $d ph x y z $.  $d B x y z $.  $d D y z $.  $d E x $.
-    fiphp3dOLD.1 $e |- ( ph -> A ~~ NN ) $.
-    fiphp3dOLD.2 $e |- ( ph -> B e. Fin ) $.
-    fiphp3dOLD.3 $e |- ( ( ph /\ x e. A ) -> D e. B ) $.
-    fiphp3dOLD.4 $e |- ( x = z -> D = E ) $.
-    $( Infinite pigeonhole principle for partitioning an infinite set between
-       finitely many buckets.  This one can definitely be proven without AC.
-       TODO (Contributed by Stefan O'Rear, 18-Oct-2014.) $)
-    fiphp3dOLD $p |- ( ph -> E. y e. B { x e. A | D = y } ~~ NN ) $=
-      ( fiphp3d ) ABCEFGIJKM $.
-      $( [18-Oct-2014] $)
-  $}
-
-  ${
     $( Value of the numeric cardinality of a nonempty integer range.
        (Contributed by Stefan O'Rear, 12-Sep-2014.) $)
     hashfz $p |- ( ( A e. ZZ /\ B e. ZZ /\ A <_ B ) -> ( # ` ( A ... B ) ) = (
@@ -9946,9 +9932,7 @@ $)
     $d A a $.  $d B a $.
 
     $( A finite set is strictly dominated by another iff their cardinalities
-       are strictly ordered.  TODO: ~ ficarddomOLD has a statement which is not
-       consistent with related theorems.  (Contributed by Stefan O'Rear,
-       30-Oct-2014.) $)
+       are strictly ordered.  (Contributed by Stefan O'Rear, 30-Oct-2014.) $)
     ficardsdom $p |- ( ( A e. Fin /\ B e. Fin ) -> ( ( card ` A ) e.
       ( card ` B ) <-> A ~< B ) ) $=
       ( cfn wcel wa ccrd cfv wss wne cdom wbr cen ficarddom ficarden necon3abid
@@ -14788,62 +14772,125 @@ $)
     $( Behavior of subgroups under isomorphism. $)
     subggim $p |- ( ( F e. ( R GrpIso S ) /\ S e. V /\ A C_ B ) ->
         ( A e. ( SubGrp ` R ) <-> ( F " A ) e. ( SubGrp ` S ) ) ) $=
-      ( va vb vd co wcel c0 cfv wral wa wceq wb syl2anc adantr cgim wss w3a wne
-      vc cv cplusg cminusg cima cbs csubg simp3 crn imassrn wf1o gimf1o 3adant3
-      wfo eqid f1ofo forn 3syl syl5sseq wfn f1ofn syl fnimaeq0 bicomd necon3bid
-      2thd wf1 f1of1 cgrp cghm gimghm 3ad2ant1 ghmgrp1 wi ssel anim12d 3ad2ant3
-      imp grpcl 3expb simpl3 f1elima syl3anc simp2 ghmlin eleq1d bitr3d anassrs
-      jca ralbidva oveq2 ralima bitr4d 3ad2antl3 grpinvcl simpl2 ghminv anbi12d
-      ssel2 oveq1 ralbidv fveq2 3anbi123d issubg2 ghmgrp2 3bitr4d ) ECDUAKLZDFL
-      ZABUBZUCZXMAMUDZHUFZIUFZCUGNZKZALZIAOZXPCUHNZNZALZPZHAOZUCZEAUIZDUJNZUBZY
-      HMUDZUEUFZJUFZDUGNZKZYHLZJYHOZYLDUHNZNZYHLZPZUEYHOZUCZACUKNLZYHDUKNLZXNXM
-      YJXOYKYFUUBXNXMYJXKXLXMULZXNEUMZYHYIEAUNXNBYIEUOZBYIEURUUGYIQXKXLUUHXMBYI
-      CDEFGYIUSZUPUQZBYIEUTBYIEVAVBVCVJXNAMYHMXNYHMQZAMQZXNEBVDZXMUUKUULRXNUUHU
-      UMUUJBYIEVEVFZUUFBAEVGSVHVIXNYFXPENZYMYNKZYHLZJYHOZUUOYRNZYHLZPZHAOZUUBXN
-      YEUVAHAXNXPALZPZYAUURYDUUTUVDYAUUOXQENZYNKZYHLZIAOZUURUVDXTUVGIAXNUVCXQAL
-      ZXTUVGRXNUVCUVIPZPZXSENZYHLZXTUVGUVKBYIEVKZXSBLZXMUVMXTRXNUVNUVJXNUUHUVNU
-      UJBYIEVLVFZTUVKCVMLZXPBLZXQBLZPZUVOXNUVQUVJXNECDVNKLZUVQXKXLUWAXMCDEVOVPZ
-      CDEVQVFZTXNUVJUVTXMXKUVJUVTVRXLXMUVCUVRUVIUVSABXPVSABXQVSVTWAWBZUVQUVRUVS
-      UVOBXRCXPXQGXRUSZWCWDSXKXLXMUVJWEBYIEXSAWFWGUVKUVLUVFYHUVKUWAXLPZUVTUVLUV
-      FQXNUWFUVJXNUWAXLUWBXKXLXMWHZWMTUWDXRYNCDXPEXQFBGUWEYNUSZWISWJWKWLWNXNUUR
-      UVHRZUVCXNUUMXMUWIUUNUUFUUQUVGJIBAEYMUVEQUUPUVFYHYMUVEUUOYNWOWJWPSTWQUVDY
-      CENZYHLZYDUUTUVDUVNYCBLZXMUWKYDRXNUVNUVCUVPTUVDUVQUVRUWLXNUVQUVCUWCTXMXKU
-      VCUVRXLABXPXCWRZBCYBXPGYBUSZWSSXKXLXMUVCWEBYIEYCAWFWGUVDUWJUUSYHUVDUWAXLU
-      VRUWJUUSQXNUWAUVCUWBTXKXLXMUVCWTUWMBCDEYBYRFXPGUWNYRUSZXAWGWJWKXBWNXNUUMX
-      MUUBUVBRUUNUUFUUAUVAUEHBAEYLUUOQZYQUURYTUUTUWPYPUUQJYHUWPYOUUPYHYLUUOYMYN
-      XDWJXEUWPYSUUSYHYLUUOYRXFWJXBWPSWQXGXNUVQUUDYGRUWCHIBXRACYBGUWEUWNXHVFXND
-      VMLZUUEUUCRXNUWAXLUWQUWBUWGCDEFXISUEJYIYNYHDYRUUIUWHUWOXHVFXJ $.
+      ( cgim co wcel wss w3a csubg cfv cima wa cghm gimghm 3ad2ant1 adantr ccnv
+      simpr simpl2 ghmima syl3anc wceq cbs wf1 wf1o eqid gimf1o f1of1 syl simp3
+      3adant3 f1imacnv syl2anc ghmpreima sylan eqeltrrd impbida ) ECDHIJZDFJZAB
+      KZLZACMNZJZEAOZDMNJZVEVGPECDQIJZVGVCVIVEVJVGVBVCVJVDCDERSZTVEVGUBVBVCVDVG
+      UCCDAEFUDUEVEVIPEUAVHOZAVFVEVLAUFZVIVEBDUGNZEUHZVDVMVBVCVOVDVBVCPBVNEUIVO
+      BVNCDEFGVNUJUKBVNEULUMUOVBVCVDUNBVNAEUPUQTVEVJVIVLVFJVKCDEVHURUSUTVA $.
       $( [21-Jan-2015] $)
   $}
 
   ${
-    $d R f r s $.  $d S f r s $.  $d F f r s $.
+    $d F a b $.  $d S a b $.  $d T a b $.  $d W a b $.  $d X a b $.
+    $d Y a b $.
+    lmhmf1o.x $e |- X = ( Base ` S ) $.
+    lmhmf1o.y $e |- Y = ( Base ` T ) $.
+    $( A bijective module homomorphism is also converse homomorphic. $)
+    lmhmf1o $p |- ( ( F e. ( S LMHom T ) /\ T e. W ) ->
+        ( F : X -1-1-onto-> Y <-> `' F e. ( T LMHom S ) ) ) $=
+      ( va vb co wcel wa clmod cfv wceq cbs adantr eqid syl wf1o ccnv cghm csca
+      clmhm cv cvsca wral w3a lmhmlmod2 lmhmlmod1 jca wb lmghm c0g ghmf1o sylan
+      biimpa lmhmsca eqcomd simplll simpllr fveq2d eleq2d biimpar f1ocnv adantl
+      adantrr wf f1of ffvelrn adantrl lmhmlin syl22anc f1ocnvfv2 ad2ant2l eqtrd
+      oveq2d wi simplr lmodvscl syl3anc f1ocnvfv syl2anc ralrimivva 3jca islmhm
+      mpd mpbir2and wfn lmhmf ffn id syl2anr dff1o4 sylanbrc impbida ) CABUEKLZ
+      BDLZMZEFCUAZCUBZBAUEKLZWTXAMZXCBNLZANLZMZXBBAUCKLZAUDOZBUDOZPZIUFZJUFZBUG
+      OZKZXBOXLXMXBOZAUGOZKZPZJFUHIXJQOZUHZUIZXDXEXFWTXEXAABCDUJRWTXFXAWRXFWSAB
+      CUKRZRZULXDXHXKYAWTXAXHWRCABUCKLWSXAXHUMABCUNABBUOOZCDEFAUOOZGHYFSYESUPUQ
+      URWTXKXAWTXJXIABCXIXJDXISZXJSZUSUTRZXDXSIJXTFXDXLXTLZXMFLZMZMZXRCOZXOPZXS
+      YMYNXLXPCOZXNKZXOYMWRWSXLXIQOZLZXPELZYNYQPWRWSXAYLVAWRWSXAYLVBXDYJYSYKXDY
+      SYJXDYRXTXLXDXIXJQYIVCVDVEVHZXDYKYTYJXDFEXBVIZYKYTXAUUBWTXAFEXBUAUUBEFCVF
+      FEXBVJTVGFEXMXBVKUQVLZYRABECXIXQXNDXLXPYGYRSZGXQSZXNSZVMVNYMYPXMXLXNXAYKY
+      PXMPWTYJEFXMCVOVPVRVQYMXAXRELZYOXSVSWTXAYLVTYMXFYSYTUUGXDXFYLYDRUUAUUCXLX
+      QXIYREAXPGYGUUEUUDWAWBEFXRXOCWCWDWHWEWFXDXFXCXGYBMUMYDIJXTBAFXBXJXIXNXQNY
+      HYGXTSHUUFUUEWGTWIWTXCMZCEWJZXBFWJZXAWTUUIXCWTEFCVIUUIEFABCDGHWKEFCWLTRUU
+      HUUBUUJXCXCXFUUBWTXCWMYCFEBAXBNHGWKWNFEXBWLTEFCWOWPWQ $.
+      $( [25-Jan-2015] $)
+  $}
+
+  $( The converse of a bijective group homomorphism is a bijective group
+     homomorphism. $)
+  gimcnv $p |- ( ( F e. ( S GrpIso T ) /\ T e. W ) ->
+      `' F e. ( T GrpIso S ) ) $=
+    ( cgim co wcel wa ccnv cghm cbs cfv wf1o eqid gimf1o wb gimghm c0g syl cgrp
+    ghmf1o sylan mpbid f1ocnv ghmgrp1 adantr isgim mpbir2and ) CABEFGZBDGZHZCIZ
+    BAEFGZULBAJFGZBKLZAKLZULMZUKUPUOCMZUNUPUOABCDUPNZUONZOZUICABJFGZUJURUNPABCQ
+    ZABBRLZCDUPUOARLZUSUTVENVDNUAUBUCUKURUQVAUPUOCUDSUKATGZUMUNUQHPUIVFUJUIVBVF
+    VCABCUESUFUOUPBAULTUTUSUGSUH $.
+    $( [25-Jan-2015] $)
+
+  ${
+    $d O a b $.  $d A a b $.  $d B a b $.
+    brwitnlem.r $e |- R = { <. a , b >. | ( a O b ) =/= (/) } $.
+    brwitnlem.o $e |- Rel dom O $.
+    $( Lemma for relations which assert the existence of a witness in a
+       two-parameter set. $)
+    brwitnlem $p |- ( A R B <-> ( A O B ) =/= (/) ) $=
+      ( wbr cvv wcel co c0 wne cv wb wceq wa oveq12 neeq1d relopabi brrelexi wn
+      ovprc1 necon1ai brabga anidms brprc ovprc2 syl5ibrcom pm2.61dan pm5.21nii
+      bibi12d imp ) ABCIZAJKZABDLZMNZABCEOZFOZDLZMNZEFCGUAUBUPUQMABDHUDUEUPBJKZ
+      UOURPZVBUREFABCJJUSAQZUTBQRVAUQMUSAUTBDSTGUFUPVCUCZVDUPVDVFAACIZAADLZMNZP
+      ZUPVJVBVIEFAACJJVEUTAQRVAVHMUSAUTADSTGUFUGVFUOVGURVIABCUHVFUQVHMABDUITUMU
+      JUNUKUL $.
+      $( [25-Jan-2015] $)
+  $}
+
+  ${
+    $d R f r s $.  $d S f r s $.  $d F f r s $.  $d B f $.  $d C f $.
+    $d V f $.
     $( The relation "is isomorphic to" for groups. $)
-    brgic $p |- ( R ~=g S <-> E. f f e. ( R GrpIso S ) ) $=
-      ? $.
+    brgic $p |- ( R ~=g S <-> ( R GrpIso S ) =/= (/) ) $=
+      ( vr vs vf cgic cgim df-gic cgrp cv cbs cfv wf1o cghm co df-gim reldmmpt2
+      crab brwitnlem ) ABFGCDDCHCDIICJZKLDJZKLEJMETUANORGDECPQS $.
+      $( [25-Jan-2015] $)
 
     $( Prove isomorphic by an explicit isomorphism. $)
     brgici $p |- ( F e. ( R GrpIso S ) -> R ~=g S ) $=
-      ? $.
+      ( cgim co wcel c0 wne cgic wbr ne0i brgic sylibr ) CABDEZFNGHABIJNCKABLM
+      $.
+      $( [25-Jan-2015] $)
 
     $( Isomorphism implies the left side is a group. $)
     giclcl $p |- ( R ~=g S -> R e. Grp ) $=
-      ? $.
+      ( vf cgic wbr cv cgim co wcel wex cgrp c0 wne brgic n0 bitri cghm ghmgrp1
+      gimghm syl exlimiv sylbi ) ABDEZCFZABGHZIZCJZAKIZUCUELMUGABNCUEOPUFUHCUFU
+      DABQHIUHABUDSABUDRTUAUB $.
+      $( [25-Jan-2015] $)
 
     gicen.b $e |- B = ( Base ` R ) $.
     gicen.c $e |- C = ( Base ` S ) $.
     $( Isomorphic groups have equinumerous base sets. $)
     gicen $p |- ( ( R ~=g S /\ S e. V ) -> B ~~ C ) $=
-      ? $.
+      ( vf cgic wbr wcel cen cgim co c0 wne wi brgic cbs sylbi cv wex n0 gimf1o
+      wa wf1o cfv cvv fvex eqeltri f1oen syl ex exlimiv imp ) CDIJZDEKZABLJZUPC
+      DMNZOPZUQURQZCDRUTHUAZUSKZHUBVAHUSUCVCVAHVCUQURVCUQUEABVBUFURABCDVBEFGUDA
+      BVBACSUGUHFCSUIUJUKULUMUNTTUO $.
+      $( [25-Jan-2015] $)
   $}
 
   ${
-    $d R a b c $.  $d S a b c $.
+    $d R a b c $.  $d S a b c $.  $d V a b c $.
     $( A less trivial example of a group invariant: cardinality of the subgroup
        lattice. $)
     gicsubgen $p |- ( ( R ~=g S /\ S e. V ) -> ( SubGrp ` R ) ~~
         ( SubGrp ` S ) ) $=
-      ? $.
+      ( va vb vc wbr wcel csubg cfv cv co cima cvv imaexg ax-mp a1ii wceq cbs
+      wa cgic cen cgim wex wi c0 wne brgic bitri ccnv fvex a1i vex cnvex gimghm
+      n0 cghm ad2antrr simpr simplr ghmima syl3anc wf1 wss wf1o eqid gimf1o syl
+      f1of1 subgss f1imacnv syl2an eqcomd imaeq2 eqeq2d anbi12d syl5ibrcom impr
+      jca eleq1 adantr ghmpreima sylan wfo f1ofo foimacnv impbida en2d ex sylbi
+      exlimiv imp ) ABUAGZBCHZAIJZBIJZUBGZWMDKZABUCLZHZDUDZWNWQUEZWMWSUFUGXAABU
+      HDWSUPUIWTXBDWTWNWQWTWNTZEFWOWPWREKZMZWRUJZFKZMZWONHXCAIUKULXCXDWOHZXENHZ
+      WRNHXJDUMZWRXDNOPQXCXGWPHZXHNHZXFNHXMWRXKUNXFXGNOPQXCXIXGXERZTZXLXDXHRZTZ
+      XCXIXNXQXCXITZXQXNXEWPHZXDXFXEMZRZTXRXSYAXRWRABUQLHZXIWNXSWTYBWNXIABWRUOZ
+      URXCXIUSWTWNXIUTABXDWRCVAVBXRXTXDXCASJZBSJZWRVCZXDYDVDXTXDRXIXCYDYEWRVEZY
+      FYDYEABWRCYDVFZYEVFZVGZYDYEWRVIVHYDXDAYHVJYDYEXDWRVKVLVMVSXNXLXSXPYAXGXEW
+      PVTXNXHXTXDXGXEXFVNVOVPVQVRXCXLXPXOXCXLTZXOXPXHWOHZXGWRXHMZRZTYKYLYNXCYBX
+      LYLWTYBWNYCWAABWRXGWBWCYKYMXGXCYDYEWRWDZXGYEVDYMXGRXLXCYGYOYJYDYEWRWEVHYE
+      XGBYIVJYDYEXGWRWFVLVMVSXPXIYLXNYNXDXHWOVTXPXEYMXGXDXHWRVNVOVPVQVRWGWHWIWK
+      WJWL $.
+      $( [25-Jan-2015] $)
   $}
 
   ${
@@ -14892,41 +14939,37 @@ $)
       $( [21-Jan-2015] $)
   $}
 
-  ${
-    $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
-    $d U a b c d $.  $d V a b c d $.  $d B a b c d $.
-    lsslmim.u $e |- U = ( LSubSp ` R ) $.
-    lsslmim.v $e |- V = ( LSubSp ` S ) $.
-    $( Behavior of subspaces under isomorphism. $)
-    lsslmim $p |- ( ( F e. ( R LMIso S ) /\ S e. W /\ A C_ B ) ->
-        ( A e. U <-> ( F " A ) e. V ) ) $=
-      ? $.
-  $}
-
-  ${
-    $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
-    lsplmim.m $e |- M = ( LSpan ` R ) $.
-    lsplmim.n $e |- N = ( LSpan ` S ) $.
-    lsplmim.b $e |- B = ( Base ` R ) $.
-    $( Behavior of spans under isomorphism. $)
-    lsplmim $p |- ( ( F e. ( R LMIso S ) /\ X C_ B ) ->
-          ( F " ( M ` B ) ) = ( N ` ( F " B ) ) ) $=
-      ? $.
-  $}
+  $( The converse of a bijective module homomorphism is a bijective module
+     homomorphism. $)
+  lmimcnv $p |- ( ( F e. ( S LMIso T ) /\ T e. W ) ->
+      `' F e. ( T LMIso S ) ) $=
+    ( clmim co wcel wa ccnv clmhm cbs cfv wf1o eqid lmimf1o wb lmimlmhm lmhmf1o
+    syl clmod sylan mpbid f1ocnv lmhmlmod1 adantr islmim mpbir2and ) CABEFGZBDG
+    ZHZCIZBAEFGZUKBAJFGZBKLZAKLZUKMZUJUOUNCMZUMUOUNABCDUONZUNNZOZUHCABJFGZUIUQU
+    MPABCQZABCDUOUNURUSRUAUBUJUQUPUTUOUNCUCSUJATGZULUMUPHPUHVCUIUHVAVCVBABCUDSU
+    EUNUOBAUKTUSURUFSUG $.
+    $( [25-Jan-2015] $)
 
   ${
     $d R f r s $.  $d S f r s $.  $d F f r s $.
     $( The relation "is isomorphic to" for modules. $)
-    brlmic $p |- ( R ~=m S <-> E. f f e. ( R LMIso S ) ) $=
-      ? $.
+    brlmic $p |- ( R ~=m S <-> ( R LMIso S ) =/= (/) ) $=
+      ( vr vs vf clmic clmim df-lmic clmod cv cbs cfv wf1o clmhm crab reldmmpt2
+      co df-lmim brwitnlem ) ABFGCDDCHCDIICJZKLDJZKLEJMETUANQOGDECRPS $.
+      $( [25-Jan-2015] $)
 
     $( Prove isomorphic by an explicit isomorphism. $)
     brlmici $p |- ( F e. ( R LMIso S ) -> R ~=m S ) $=
-      ? $.
+      ( clmim co wcel c0 wne clmic wbr ne0i brlmic sylibr ) CABDEZFNGHABIJNCKAB
+      LM $.
+      $( [25-Jan-2015] $)
 
     $( Isomorphism implies the left side is a module. $)
     lmiclcl $p |- ( R ~=m S -> R e. LMod ) $=
-      ? $.
+      ( vf clmic wbr cv clmim co wcel wex clmod c0 wne brlmic n0 bitri lmimlmhm
+      clmhm lmhmlmod1 syl exlimiv sylbi ) ABDEZCFZABGHZIZCJZAKIZUCUELMUGABNCUEO
+      PUFUHCUFUDABRHIUHABUDQABUDSTUAUB $.
+      $( [25-Jan-2015] $)
   $}
 
 
@@ -15061,14 +15104,6 @@ $)
       CUOVRVSWAWBXLXQXHUEXLXPXGIUDXKCWNEWCVKWDWEWFWGWOXHWKUEWOXGWJIUDWNBCEWHVKW
       DWEWFWGWI $.
       $( [24-Jan-2015] $)
-  $}
-
-  ${
-    $d R a b c $.  $d S a b c $.
-    $( Finite generation is an invariant property of modules. $)
-    fglmic $p |- ( ( R ~=m S /\ S e. V ) ->
-        ( R e. LFinGen <-> S e. LFinGen ) ) $=
-      ? $.
   $}
 
 $(
@@ -15325,11 +15360,21 @@ $)
   $}
 
   ${
-    $d R a b c $.  $d S a b c $.
+    $d R a $.  $d S a $.  $d V a $.
     $( Noetherian is an invariant property of modules. $)
     lnmlmic $p |- ( ( R ~=m S /\ S e. V ) ->
         ( R e. LNoeM <-> S e. LNoeM ) ) $=
-      ? $.
+      ( va wcel clnm clmim co wa clmhm crn cbs cfv wceq lmimlmhm ad2antrr simpr
+      simplr adantr clmod clmic wbr wb cv wex wi c0 wne brlmic n0 wf1o wfo eqid
+      bitri lmimf1o f1ofo forn 3syl lnmepi syl22anc lmimcnv lmhmlmod1 syl sylan
+      ccnv jca impbida ex exlimiv sylbi imp ) ABUAUBZBCEZAFEZBFEZUCZVLDUDZABGHZ
+      EZDUEZVMVPUFZVLVRUGUHVTABUIDVRUJUNVSWADVSVMVPVSVMIZVNVOWBVNIVQABJHEZVMVNV
+      QKBLMZNZVOVSWCVMVNABVQOZPVSVMVNRWBVNQWBWEVNWBALMZWDVQUKWGWDVQULWEWGWDABVQ
+      CWGUMZWDUMZUOWGWDVQUPWGWDVQUQURSWDABVQCWIUSUTWBVQVEZBAGHEZATEZIZVOVNWBWKW
+      LABVQCVAVSWLVMVSWCWLWFABVQVBVCSVFWMVOIWJBAJHEZWLVOWJKWGNZVNWKWNWLVOBAWJOP
+      WKWLVORWMVOQWMWOVOWMWDWGWJUKWDWGWJULWOWDWGBAWJTWIWHUOWDWGWJUPWDWGWJUQURSW
+      GBAWJTWHUSUTVDVGVHVIVJVK $.
+      $( [25-Jan-2015] $)
   $}
 
 $(
@@ -15572,6 +15617,27 @@ $)
     $( [24-Jan-2015] $)
 
   ${
+    $d F a $.  $d D a $.  $d Y a $.  $d X a x $.  $d V x $.
+    mptcnvima.f $e |- F = ( x e. D |-> Y ) $.
+    $( Converse image of a function defined by maps-to. $)
+    mptcnvima $p |- ( `' F " X ) = { x e. D | Y e. X } $=
+      ( va ccnv cima cv wcel wceq wa copab cres crn eqtri wex cab 3eqtri df-mpt
+      crab cnveqi cnvopab imaeq1i df-ima resopab rneqi rnopab ancom anass bitri
+      cmpt exbii 19.42v df-clel bicomi anbi2i 3bitri abbii df-rab eqtr4i ) CHZD
+      IAJBKZGJZELZMZGANZDIVHDOZPZEDKZABUBZVCVHDVCVGAGNZHVHCVMCABEUMVMFAGBEUAQUC
+      VGAGUDQUEVHDUFVJVEDKZVGMZGANZPVOGRZASZVLVIVPVGGADUGUHVOGAUIVRVDVKMZASVLVQ
+      VSAVQVDVFVNMZMZGRVDVTGRZMVSVOWAGVOVGVNMWAVNVGUJVDVFVNUKULUNVDVTGUOWBVKVDV
+      KWBGEDUPUQURUSUTVKABVAVBTT $.
+      $( [25-Jan-2015] $)
+
+    $( Converse singleton image of a function defined by maps-to. $)
+    mptiniseg $p |- ( X e. V -> ( `' F " { X } ) = { x e. D | Y = X } ) $=
+      ( wcel ccnv csn cima crab wceq mptcnvima elsnc2g rabbidv syl5eq ) EDHZCIE
+      JZKFSHZABLFEMZABLABCSFGNRTUAABFEDOPQ $.
+      $( [25-Jan-2015] $)
+  $}
+
+  ${
     $d Y a b x $.  $d W a b x $.  $d U a b x $.  $d Z a b x $.  $d V a b x $.
     $d B a b x $.  $d C a b x $.  $d F a b $.  $d X a b x $.  $d T x $.
     pwssplit1.y $e |- Y = ( W ^s U ) $.
@@ -15660,6 +15726,22 @@ $)
   $}
 
   ${
+    $d Y a b x $.  $d W a b x $.  $d U a b x $.  $d Z a b x $.  $d V a b x $.
+    $d B a b x $.  $d C a b x $.  $d F a b $.  $d X a b x $.  $d T x $.
+    $d K a b $.  $d N a b x $.
+    pwssplit4.y $e |- Y = ( W ^s U ) $.
+    pwssplit4.z $e |- Z = ( W ^s V ) $.
+    pwssplit4.b $e |- B = ( Base ` Y ) $.
+    pwssplit4.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
+    pwssplit4.n $e |- N = ( 0g ` Z ) $.
+    pwssplit4.k $e |- K = ( `' F " { N } ) $.
+    $( Splitting for structure powers 4: calculation of the kernel. $)
+    pwssplit4 $p |- ( ( W e. T /\ U e. X /\ V C_ U ) ->
+          K = { x e. B | ( x |` V ) = ( V X. { N } ) } ) $=
+      ? $.
+  $}
+
+  ${
     $d B a b $.  $d W a b $.
     filnm.b $e |- B = ( Base ` W ) $.
     $( Finite left modules are Noetherian. $)
@@ -15713,13 +15795,15 @@ $)
     $( A sum of powers is Noetherian. $)
     pwslnmlem2 $p |- ( ph -> Z e. LNoeM ) $=
       ( vx wcel clnm eqid cbs cfv cv cres cmpt clmhm co ccnv c0g csn cima cress
-      crn clmod cun cvv wss unex a1i ssun1 pwssplit3 syl3anc wfo wceq cmnd cgrp
-      lmodgrp grpmnd pwssplit1 forn oveq2d ressid eqtrd eqeltrd lmhmlnmsplit
-      syl ) AQGUAUBZQUCBUDUEZGEUFUGRZGVRUHEUIUBZUJUKZULUGZSREVRUMZULUGZSRGSRADU
-      NRZBCUOZUPRZBWFUQZVSMWGABCHIURUSZWHABCUTUSZQVQEUAUBZWFVRBDUPGELJVQTZWKTZV
-      RTZVAVB?AWDESAWDEWKULUGZEAWCWKEULAVQWKVRVCZWCWKVDADVERZWGWHWPAWEWQMWEDVFR
-      WQDVGDVHVPVPWIWJQVQWKWFVRBDUPGELJWLWMWNVIVBVQWKVRVJVPVKAESRWOEVDOWKESWMVL
-      VPVMOVNGEWBVRWAWDVTVTTWATWBTWDTVOVB $.
+      crn clmod cun cvv wss unex a1i pwssplit3 syl3anc wceq crab fvex mptiniseg
+      ssun1 ax-mp oveq2i clmic wbr wb lnmlmic syl2anc mpbird syl5eqel cmnd cgrp
+      wfo lmodgrp grpmnd syl pwssplit1 oveq2d ressid eqtrd eqeltrd lmhmlnmsplit
+      forn ) AQGUAUBZQUCBUDZUEZGEUFUGRZGWKUHEUIUBZUJUKZULUGZSREWKUMZULUGZSRGSRA
+      DUNRZBCUOZUPRZBWSUQZWLMWTABCHIURUSZXAABCVFUSZQWIEUAUBZWSWKBDUPGELJWITZXDT
+      ZWKTZUTVAAWOGWJWMVBQWIVCZULUGZSWNXHGULWMUPRWNXHVBEUIVDQWIWKUPWMWJXGVEVGVH
+      AXISRZFSRZPAXIFVIVJXKXJXKVK?PXIFSVLVMVNVOAWQESAWQEXDULUGZEAWPXDEULAWIXDWK
+      VRZWPXDVBADVPRZWTXAXMAWRXNMWRDVQRXNDVSDVTWAWAXBXCQWIXDWSWKBDUPGELJXEXFXGW
+      BVAWIXDWKWHWAWCAESRXLEVBOXDESXFWDWAWEOWFGEWOWKWNWQWMWMTWNTWOTWQTWGVA $.
   $}
 
   ${
@@ -17789,7 +17873,8 @@ $)
     $d X a b c d e $.  $d J a b c d e $.
     hausdiag.x $e |- X = U. J $.
     $( A topology is Hausdorff iff the diagonal set is closed in the topology's
-       product with itself. $)
+       product with itself. _EDITORIAL_: very clumsy proof, can probably be
+       shortened substantially. $)
     hausdiag $p |- ( J e. Haus <-> ( J e. Top /\ ( _I |` X ) e.
         ( Clsd ` ( J tX J ) ) ) ) $=
       ( va vb vc vd ve wcel cv cin wceq wrex wi wral wa cid wss wb wn ctop cres
