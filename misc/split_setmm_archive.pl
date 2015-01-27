@@ -7,6 +7,8 @@ use Time::ParseDate;
 use File::Slurp qw( read_file read_dir );
 use HTML::Entities;
 
+my %breaks = ( '######' => 1, '#*#*#*' => 2, '=-=-=-' => 3 );
+
 if (@ARGV == 2) {
     my ($file, $name) = @ARGV;
     my $time = parsedate(($name =~ /([0-9]{4}-[0-9]{2}-[0-9]{2})/) ? $1 : '1990-01-01', GMT => 1);
@@ -30,8 +32,6 @@ else {
         scrape($mtime, $offtime, $v, $v);
     }
 }
-
-my %breaks = ( '######' => 1, '#*#*#*' => 2, '=-=-=-' => 3 );
 
 sub scrape {
     my ($mtime, $offtime, $v, $file, $continue) = @_;
