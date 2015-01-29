@@ -88,8 +88,10 @@ htmldef "LFinGen" as "LFinGen";
 htmldef "subringAlg" as " subringAlg ";
   althtmldef "subringAlg" as " subringAlg ";
   latexdef "subringAlg" as "{\rm subringAlg}";
-htmldef "_ZZ" as "<SPAN STYLE='text-decoration: overline; font-face: sans-serif;'>&#8484;</SPAN>";
-  althtmldef "_ZZ" as "<SPAN STYLE='text-decoration: overline; font-face: sans-serif;'>&#8484;</SPAN>";
+htmldef "_ZZ" as "<SPAN STYLE='text-decoration: overline; " +
+    "font-face: sans-serif;'>&#8484;</SPAN>";
+  althtmldef "_ZZ" as "<SPAN STYLE='text-decoration: overline; " +
+    "font-face: sans-serif;'>&#8484;</SPAN>";
   latexdef "_ZZ" as "{\rm _ZZ}";
 htmldef "IntgOver" as "IntgOver";
   althtmldef "IntgOver" as "IntgOver";
@@ -103,8 +105,8 @@ htmldef "LNoeM" as "LNoeM";
 htmldef "LNoeR" as "LNoeR";
   althtmldef "LNoeR" as "LNoeR";
   latexdef "LNoeR" as "{\rm LNoeR}";
-htmldef "(+)m" as
-    " <IMG SRC='oplus.gif' WIDTH=13 HEIGHT=19 TITLE='(+)' ALIGN=TOP><SUB>m</SUB> ";
+htmldef "(+)m" as " <IMG SRC='oplus.gif' WIDTH=13 HEIGHT=19 " +
+    "TITLE='(+)' ALIGN=TOP><SUB>m</SUB> ";
   althtmldef "(+)m" as " &#x2295;<SUB>m</SUB> ";
   latexdef "(+)m" as "\oplus_{m}";
 htmldef "LPIdeal" as "LPIdeal";
@@ -141,12 +143,12 @@ htmldef "freeLMod" as " freeLMod ";
 htmldef "unitVec" as " unitVec ";
   althtmldef "unitVec" as " unitVec ";
   latexdef "unitVec" as "{\rm unitVec}";
-htmldef "~=g" as
-    " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 TITLE='~=ph' ALIGN=TOP><SUB><I>g</I></SUB> ";
+htmldef "~=g" as " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 " +
+    "TITLE='~=ph' ALIGN=TOP><SUB><I>g</I></SUB> ";
   althtmldef "~=g" as " &#8771;<SUB><I>g</I></SUB>";
   latexdef "~=g" as "\simeq_{g}";
-htmldef "~=m" as
-    " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 TITLE='~=ph' ALIGN=TOP><SUB><I>m</I></SUB> ";
+htmldef "~=m" as " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 " +
+    "TITLE='~=ph' ALIGN=TOP><SUB><I>m</I></SUB> ";
   althtmldef "~=m" as " &#8771;<SUB><I>m</I></SUB>";
   latexdef "~=m" as "\simeq_{m}";
 htmldef "LIdeal" as "LIdeal";
