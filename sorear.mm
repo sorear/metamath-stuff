@@ -662,9 +662,9 @@ $)
     $( Define a _Moore collection_, which is a family of subsets of a base set
        which preserve arbitrary intersection.  Elements of a Moore collection
        are termed _closed_; Moore collections generalize the notion of
-       closedness and closure from topologies and vector spaces to the most
-       general setting in which such concepts make sense.  Definition of Moore
-       collection of sets in [Schechter] p. 78.
+       closedness from topologies ( ~ cldmre ) and vector spaces ( ~ lssmre )
+       to the most general setting in which such concepts make sense.
+       Definition of Moore collection of sets in [Schechter] p. 78.
 
        See ~ ismre , ~ mresspw , ~ mre1cl and ~ mreintcl for the major
        properties of a Moore collection.  Note that a Moore collection uniquely
@@ -676,7 +676,8 @@ $)
 
     $( Define the _Moore closure_ of a generating set, which is the smallest
        closed set containing all generating elements.  Definition of Moore
-       closure in [Schechter] p. 79. $)
+       closure in [Schechter] p. 79.  This generalizes topological closure
+       ( ~ mrccls ) and linear span ( ~ mrclsp ). $)
     df-mrc $a |- mrCls = ( c e. U. ran Moore |-> ( x e. ~P U. c |->
         |^| { s e. c | x C_ s } ) ) $.
 
@@ -1005,6 +1006,185 @@ $)
       PZQUFUHUGRHFAUIUABUGUJUBDUHAUGSCUCUDUE $.
       $( [31-Jan-2015] $)
   $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    A Moore space is a complete lattice
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d L x y z w $.  $d B x y z w $.  $d K x y z w $.  $d S x y z w $.
+    poslubmo.l $e |- L = ( le ` K ) $.
+    poslubmo.b $e |- B = ( Base ` K ) $.
+    $( Least upper bounds in a poset are unique if they exist. $)
+    poslubmo $p |- ( ( K e. Poset /\ S C_ B ) -> E* x ( x e. B /\
+        ( A. y e. S y L x /\ A. z e. B ( A. y e. S y L z -> x L z ) ) ) ) $=
+      ( vw wcel wa cv wbr wral wi weq breq2 ralbidv imbi12d cpo wss wmo simplrr
+      simprlr simprrl rcla4v simplrl simprrr simprll wb posasymb adantlr adantr
+      syl3c 3expb mpbi2and ex ralrimivva breq1 imbi2d anbi12d rmo4 sylibr ) FUA
+      KZEDUBZLZBMZAMZGNZBEOZVHCMZGNZBEOZVIVLGNZPZCDOZLZVHJMZGNZBEOZVNVSVLGNZPZC
+      DOZLZLZAJQZPZJDOADOVIDKZVRLAUCVGWHAJDDVGWIVSDKZLZLZWFWGWLWFLZVIVSGNZVSVIG
+      NZWGWMWJVQWAWNVGWIWJWFUDWLVKVQWEUEWLVRWAWDUFVPWAWNPCVSDCJQZVNWAVOWNWPVMVT
+      BEVLVSVHGRSVLVSVIGRTUGUOWMWIWDVKWOVGWIWJWFUHWLVRWAWDUIWLVKVQWEUJWCVKWOPCV
+      IDCAQZVNVKWBWOWQVMVJBEVLVIVHGRSVLVIVSGRTUGUOWLWNWOLWGUKZWFVEWKWRVFVEWIWJW
+      RDFGVIVSIHULUPUMUNUQURUSVRWEAJDWGVKWAVQWDWGVJVTBEVIVSVHGRSWGVPWCCDWGVOWBV
+      NVIVSVLGUTVASVBVCVD $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d L x y z w $.  $d B x y z w $.  $d K x y z w $.  $d S x y z w $.
+    $d U x y z w $.  $d T x y z w $.  $d ph x y z w $.
+    poslubd.l $e |- L = ( le ` K ) $.
+    poslubd.b $e |- B = ( Base ` K ) $.
+    poslubd.u $e |- U = ( lub ` K ) $.
+    poslubd.k $e |- ( ph -> K e. Poset ) $.
+    poslubd.s $e |- ( ph -> S C_ B ) $.
+    poslubd.t $e |- ( ph -> T e. B ) $.
+    poslubd.ub $e |- ( ( ph /\ x e. S ) -> x L T ) $.
+    poslubd.le $e |- ( ( ph /\ y e. B /\ A. x e. S x L y ) -> T L y ) $.
+    $( Properties which determine a least upper bound in a poset. $)
+    poslubd $p |- ( ph -> ( U ` S ) = T ) $=
+      ( vz wbr wral vw cfv cv wi wa crio cpo wcel wceq lubval syl2anc ralrimiva
+      wss 3expia jca wreu wrex wmo breq2 ralbidv breq1 anbi12d rcla4ev poslubmo
+      wb imbi2d reu5 sylanbrc ax-17 a17d riota2f mpbid eqtrd ) AEGUBZBUCZRUCZIS
+      ZBETZVOCUCZISBETZVPVSISZUDZCDTZUEZRDUFZFAHUGUHZEDUMZVNWEUIMNRBCUGDEGHIKJL
+      UJUKAVOFISZBETZVTFVSISZUDZCDTZUEZWEFUIZAWIWLAWHBEPULAWKCDAVSDUHVTWJQUNULU
+      OZAFDUHZWDRDUPZWMWNVEOAWDRDUQZVPDUHWDUERURZWQAWPWMWROWOWDWMRFDVPFUIZVRWIW
+      CWLWTVQWHBEVPFVOIUSUTWTWBWKCDWTWAWJVTVPFVSIVAVFUTVBZVCUKAWFWGWSMNRBCDEHIJ
+      KVDUKWDRDVGVHWDWMRUADFUAUCFUHRVIWPWMRVJXAVKUKVLVM $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d L x y $.  $d B x y $.  $d K x y $.  $d S x y $.  $d U x y $.
+    $d T x y $.  $d ph x y $.
+    poslubdg.l $e |- L = ( le ` K ) $.
+    poslubdg.b $e |- ( ph -> B = ( Base ` K ) ) $.
+    poslubdg.u $e |- ( ph -> U = ( lub ` K ) ) $.
+    poslubdg.k $e |- ( ph -> K e. Poset ) $.
+    poslubdg.s $e |- ( ph -> S C_ B ) $.
+    poslubdg.t $e |- ( ph -> T e. B ) $.
+    poslubdg.ub $e |- ( ( ph /\ x e. S ) -> x L T ) $.
+    poslubdg.le $e |- ( ( ph /\ y e. B /\ A. x e. S x L y ) -> T L y ) $.
+    $( Properties which determine a least upper bound in a poset. $)
+    poslubdg $p |- ( ph -> ( U ` S ) = T ) $=
+      ( cfv eqid cv club fveq1d cbs sseqtrd eleqtrd wcel eleq2d biimpar 3adant3
+      wbr wral syld3an2 poslubd eqtrd ) AEGREHUARZRFAEGUOLUBABCHUCRZEFUOHIJUPSU
+      OSMAEDUPNKUDAFDUPOKUEPACTZDUFZUQUPUFZBTUQIUJBEUKZFUQIUJAUSURUTAURUSADUPUQ
+      KUGUHUIQULUMUN $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d L x y $.  $d B x y $.  $d K x y $.  $d S x y $.  $d G x y $.
+    $d T x y $.  $d ph x y $.
+    posglbd.l $e |- L = ( le ` K ) $.
+    posglbd.b $e |- ( ph -> B = ( Base ` K ) ) $.
+    posglbd.g $e |- ( ph -> G = ( glb ` K ) ) $.
+    posglbd.k $e |- ( ph -> K e. Poset ) $.
+    posglbd.s $e |- ( ph -> S C_ B ) $.
+    posglbd.t $e |- ( ph -> T e. B ) $.
+    posglbd.lb $e |- ( ( ph /\ x e. S ) -> T L x ) $.
+    posglbd.gt $e |- ( ( ph /\ y e. B /\ A. x e. S y L x ) -> y L T ) $.
+    $( Properties which determine a greatest lower bound in a poset. $)
+    posglbd $p |- ( ph -> ( G ` S ) = T ) $=
+      ( cfv wcel wbr codu ccnv eqid oduleval cbs odubas syl6eq cglb club odulub
+      cpo wceq syl eqtrd odupos cv wa cvv vex brcnvg sylancr adantr mpbird wral
+      wb w3a brcnv ralbii syl3an3b sylancl 3ad2ant1 poslubdg ) ABCDEFGHUARZIUBZ
+      VMIHVMUCZJUDADHUERZVMUERKVPVMHVOVPUCUFUGAGHUHRZVMUIRZLAHUKSZVQVRULMVMVQHU
+      KVOVQUCUJUMUNAVSVMUKSMVMHVOUOUMNOABUPZESZUQVTFVNTZFVTITZPAWBWCVEZWAAVTURS
+      FDSZWDBUSZOVTFURDIUTVAVBVCACUPZDSZVTWGVNTZBEVDZVFFWGVNTZWGFITZWJAWHWGVTIT
+      ZBEVDWLWIWMBEVTWGIWFCUSZVGVHQVIAWHWKWLVEZWJAWEWGURSWOOWNFWGDURIUTVJVKVCVL
+      $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d I x y $.  $d C x y $.  $d G x y $.  $d L x y $.  $d U x y $.
+    $d F x y $.  $d X x y $.
+    mreclat.i $e |- I = ( incPos ` C ) $.
+
+    ${
+      mrelatglb.g $e |- G = ( glb ` I ) $.
+      $( Greatest lower bounds in a Moore space are realized by
+         intersections. $)
+      mrelatglb $p |- ( ( C e. ( Moore ` X ) /\ U C_ C /\ U =/= (/) ) ->
+          ( G ` U ) = |^| U ) $=
+        ( vx vy cfv wcel wss w3a wceq 3ad2ant1 wa wbr wb ipole syl3anc cmre wne
+        c0 cint cple eqid cbs ipobas cglb a1i cpo ipopos mreintcl intss1 adantl
+        simp2 cv simpl1 adantr sselda mpbird wral simplr simpl2 biimpd ralimdva
+        simpll1 3impia ssint sylibr simp11 posglbd ) AEUAJZKZBALZBUCUBZMZHIABBU
+        DZCDDUEJZVSUFZVNVOADUGJNVPADVMFUHOCDUIJNVQGUJDUKKVQADFULUJVNVOVPUPZABEU
+        MZVQHUQZBKZPZVRWCVSQZVRWCLZWDWGVQWCBUNUOWEVNVRAKZWCAKZWFWGRVNVOVPWDURVQ
+        WHWDWBUSVQBAWCWAUTADVSVMVRWCFVTSTVAVQIUQZAKZWJWCVSQZHBVBZMZWJVRVSQZWJVR
+        LZWNWJWCLZHBVBZWPVQWKWMWRVQWKPZWLWQHBWSWDPZWLWQWTVNWKWIWLWQRVNVOVPWKWDV
+        GVQWKWDVCWSBAWCVNVOVPWKVDUTADVSVMWJWCFVTSTVEVFVHHWJBVIVJWNVNWKWHWOWPRVN
+        VOVPWKWMVKVQWKWMUPVQWKWHWMWBOADVSVMWJVRFVTSTVAVL $.
+        $( [31-Jan-2015] $)
+
+      $( The empty intersection in a Moore space is realized by the base
+         set. $)
+      mrelatglb0 $p |- ( C e. ( Moore ` X ) -> ( G ` (/) ) = X ) $=
+        ( vx vy cmre cfv wcel c0 cple eqid ipobas cglb a1i wss cv wbr wceq ral0
+        cpo ipopos 0ss mre1cl rspec adantl wral wa mress wb adantr ipole mpbird
+        mpd3an3 3adant3 posglbd ) ADIJZKZGHALDBCCMJZVANZACUSEOBCPJUAUTFQCUCKUTA
+        CEUDQLARUTAUEQADUFZGSZLKDVDVATZUTVEGLVEGUBUGUHUTHSZAKZVFDVATZVFVDVATGLU
+        IUTVGUJVHVFDRZAVFDUKUTVGDAKZVHVIULUTVJVGVCUMACVAUSVFDEVBUNUPUOUQUR $.
+        $( [31-Jan-2015] $)
+    $}
+
+    ${
+      mrelatlub.f $e |- F = ( mrCls ` C ) $.
+      mrelatlub.l $e |- L = ( lub ` I ) $.
+      $( Least upper bounds in a Moore space are realized by the closure of the
+         union. $)
+      mrelatlub $p |- ( ( C e. ( Moore ` X ) /\ U C_ C ) ->
+          ( L ` U ) = ( F ` U. U ) ) $=
+        ( vx cfv wcel wss wa wceq adantr wbr wb ipole syl3anc vy cmre cuni cple
+        eqid cbs ipobas club a1i ipopos simpr uniss adantl mreuni sseqtrd mrccl
+        cpo syldan cv elssuni mrcssid sylan9ssr simpll sselda mpbird w3a simp1l
+        wral simplll simplr biimpd ralimdva 3impia unissb sylibr simp2 3ad2ant1
+        mrcsscl poslubdg ) AFUBKZLZBAMZNZJUAABBUCZCKZEDDUDKZWFUEZWAADUFKOWBADVT
+        GUGPEDUHKOWCIUIDUQLWCADGUJUIWAWBUKZWAWBWDFMZWEALZWCWDAUCZFWBWDWKMWABAUL
+        UMWAWKFOWBAFUNPUOZAWDCFHUPURZWCJUSZBLZNZWNWEWFQZWNWEMZWOWCWNWDWEWNBUTWA
+        WBWIWDWEMWLAWDCFHVAURVBWPWAWNALZWJWQWRRWAWBWOVCWCBAWNWHVDWCWJWOWMPADWFV
+        TWNWEGWGSTVEWCUAUSZALZWNWTWFQZJBVHZVFZWEWTWFQZWEWTMZXDWAWDWTMZXAXFWAWBX
+        AXCVGZXDWNWTMZJBVHZXGWCXAXCXJWCXANZXBXIJBXKWONZXBXIXLWAWSXAXBXIRWAWBXAW
+        OVIXKBAWNWAWBXAVJVDWCXAWOVJADWFVTWNWTGWGSTVKVLVMJBWTVNVOWCXAXCVPZAWDCWT
+        FHVRTXDWAWJXAXEXFRXHWCXAWJXCWMVQXMADWFVTWEWTGWGSTVEVS $.
+        $( [31-Jan-2015] $)
+    $}
+
+    $( A Moore space is a complete lattice under inclusion. $)
+    mreclat $p |- ( C e. ( Moore ` X ) -> I e. CLat ) $=
+      ( vx cmre cfv wcel cpo wa wi cuni eqid adantl wceq eqeltrd ad2antrr eleq2
+      wss c0 cv cbs club cglb wal ccla ipopos a1i mrelatlub uniss mreuni adantr
+      cmrc sseqtrd mrccl syldan fveq2 mrelatglb0 eqtrd mre1cl wne w3a mrelatglb
+      cint mreintcl 3expa pm2.61dane jca ex wb ipobas sseq2 anbi12d imbi12d syl
+      mpbid alrimiv isclat sylanbrc ) ACFGZHZBIHZEUAZBUBGZSZWCBUCGZGZWDHZWCBUDG
+      ZGZWDHZJZKZEUEBUFHWBWAABDUGUHWAWMEWAWCASZWGAHZWJAHZJZKZWMWAWNWQWAWNJZWOWP
+      WSWGWCLZAUMGZGZAAWCXABWFCDXAMZWFMZUIWAWNWTCSXBAHWSWTALZCWNWTXESWAWCAUJNWA
+      XECOWNACUKULUNAWTXACXCUOUPPWSWPWCTWSWCTOZJZWJCAXGWJTWIGZCXFWJXHOWSWCTWIUQ
+      NWAXHCOWNXFAWIBCDWIMZURQUSWACAHWNXFACUTQPWAWNWCTVAZWPWAWNXJVBWJWCVDAAWCWI
+      BCDXIVCAWCCVEPVFVGVHVIWAAWDOZWRWMVJABVTDVKXKWNWEWQWLAWDWCVLXKWOWHWPWKAWDW
+      GRAWDWJRVMVNVOVPVQWDWFWIBEWDMXDXIVRVS $.
+      $( [31-Jan-2015] $)
+  $}
+
+  $( The closed subspaces of a topology-bearing module form a complete
+     lattice.  Demonstration for ~ mreclat. $)
+  mreclatdemo $p |- ( W e. ( TopSp i^i LMod ) -> ( incPos `
+        ( ( LSubSp ` W ) i^i ( Clsd ` ( TopOpen ` W ) ) ) ) e. CLat ) $=
+    ( ctps clmod cin wcel clss cfv cts ccld cuni cmre cipo ccla fvex sseli eqid
+    cpw cvv syl wceq uniex mremre mp1i cbs inss2 eqid1 inss1 ctop istps simprbi
+    lssmre fveq2d eleqtrd simplbi cldmre mreincl syl3anc mreclat ) ABCDZEZAFGZA
+    HGZIGZDZVBJZKGZEZVDLGZMEUTVFVEQZKGEZVAVFEVCVFEZVGVEREVJUTVBAHNUARVEUBUCUTVA
+    AUDGZKGZVFUTACEVAVMEUSCABCUEOVLVAAVAUFVLPZUKSUTABEZVMVFTUSBABCUGOZVOVLVEKVO
+    VBUHEZVLVETZVLVBAVNVBPUIZUJULSUMUTVQVKUTVOVQVPVOVQVRVSUNSVBVEVEPUOSVAVCVFVI
+    UPUQVDVHVEVHPURS $.
+    $( [31-Jan-2015] $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
