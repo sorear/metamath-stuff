@@ -87,6 +87,40 @@ $)
       $( [30-Jan-2015] $)
   $}
 
+  ${
+    $d ph y $.  $d ps x $.  $d F x y $.  $d B x y $.  $d A x y $.
+    rexima.x $e |- ( x = ( F ` y ) -> ( ph <-> ps ) ) $.
+    $( Existential quantification under an image in terms of the base set.
+       _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
+       21-Jan-2015.) $)
+    rexima $p |- ( ( F Fn A /\ B C_ A ) ->
+        ( E. x e. ( F " B ) ph <-> E. y e. B ps ) ) $=
+      ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
+      wb adantl rexxfr2d ) GEIFEJKZABCDDLZGMZGFNZFUGGOUFCLZUIPUHUJQZDFRUJUHQZDF
+      RDEFUJGSUKULDFUHUJTUAUBULABUCUFHUDUE $.
+      $( [21-Jan-2015] $)
+
+    $( Universal quantification under an image in terms of the base set.
+       _EDITORIAL_: duplicates ~ raleqfn , but with interface consistency with
+       ~ rexrn .  (Contributed by Stefan O'Rear, 21-Jan-2015.) $)
+    ralima $p |- ( ( F Fn A /\ B C_ A ) ->
+        ( A. x e. ( F " B ) ph <-> A. y e. B ps ) ) $=
+      ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
+      wb adantl ralxfr2d ) GEIFEJKZABCDDLZGMZGFNZFUGGOUFCLZUIPUHUJQZDFRUJUHQZDF
+      RDEFUJGSUKULDFUHUJTUAUBULABUCUFHUDUE $.
+      $( [21-Jan-2015] $)
+  $}
+
+  $( Images under a function never map nonempty sets to empty sets.
+     _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
+     21-Jan-2015.) $)
+  fnimaeq0 $p |- ( ( F Fn A /\ B C_ A ) ->
+      ( ( F " B ) = (/) <-> B = (/) ) ) $=
+    ( cima c0 wceq cdm cin wfn wa imadisj incom fndm sseq2d biimpar df-ss sylib
+    wss syl5eq eqeq1d syl5bb ) CBDEFCGZBHZEFCAIZBARZJZBEFCBKUFUCBEUFUCBUBHZBUBB
+    LUFBUBRZUGBFUDUHUEUDUBABACMNOBUBPQSTUA $.
+    $( [21-Jan-2015] $)
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     The dual of an ordered set
@@ -688,6 +722,12 @@ $)
       GHBAFCIZJKQLAFMCAGNABCOP $.
       $( [30-Jan-2015] $)
 
+    $( A Moore-closed subset is a subset. $)
+    mress $p |- ( ( C e. ( Moore ` X ) /\ S e. C ) -> S C_ X ) $=
+      ( cmre cfv wcel wa cpw wss mresspw sselda elpwi syl ) ACDEFZBAFGBCHZFBCIN
+      AOBACJKBCLM $.
+      $( [31-Jan-2015] $)
+
     $( In any Moore collection the base set is closed. $)
     mre1cl $p |- ( C e. ( Moore ` X ) -> X e. C ) $=
       ( vs cmre cfv wcel cpw wss cv c0 wne cint wi wral ismre simp2bi ) ABDEFAB
@@ -788,6 +828,181 @@ $)
     cldmre $p |- ( J e. Top -> ( Clsd ` J ) e. ( Moore ` X ) ) $=
       ( va ctop wcel ccld cfv cldss2 topcld cv c0 wne cint intcld 3com23 ismred
       wss ) AEFZAGHZBDABCIABCJSDKZLMUATRUANTFUAAOPQ $.
+      $( [31-Jan-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Moore closures
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d F c x s $.  $d C c x s $.  $d X c x s $.  $d U c x s $.  $d V c x s $.
+    $( The domain and range of the function expression for Moore closures. $)
+    mrcflem $p |- ( C e. ( Moore ` X ) ->
+        ( x e. ~P X |-> |^| { s e. C | x C_ s } ) : ~P X --> C ) $=
+      ( cmre cfv wcel cpw cv wss crab cint cmpt wa wne simpl ssrab2 a1i mre1cl
+      c0 adantr elpwi sseq2 elrab sylanbrc ne0i syl mreintcl syl3anc eqid fmptd
+      adantl ) BCEFGZACHZAIZDIZJZDBKZLZBAUNUSMZUMUOUNGZNZUMURBJZURTOZUSBGUMVAPV
+      CVBUQDBQRVBCURGZVDVBCBGZUOCJZVEUMVFVABCSUAVAVGUMUOCUBULUQVGDCBUPCUOUCUDUE
+      URCUFUGBURCUHUIUTUJUK $.
+      $( [31-Jan-2015] $)
+
+    mrcfval.f $e |- F = ( mrCls ` C ) $.
+    $( Value of the function expression for the Moore closure. $)
+    mrcfval $p |- ( C e. ( Moore ` X ) -> F =
+        ( x e. ~P X |-> |^| { s e. C | x C_ s } ) ) $=
+      ( vc cmre cfv wcel cmrc cpw cv wss crab cint cmpt cuni wceq cvv fvssunirn
+      crn sseli unieq pweqd rabeq inteqd mpteq12dv df-mrc cxp wf mreunirn sylbi
+      mrcflem fssxp syl uniex pwex xpex ssexg sylancl fvmpt3 mreuni eqidd eqtrd
+      vex syl5eq ) BDHIZJZCBKIZADLZAMEMNZEBOZPZQZFVIVJABRZLZVNQZVOVIBHUBRZJVJVR
+      SVHVSBHDUAUCGBAGMZRZLZVLEVTOZPZQZVRVSKTVTBSZAWBWDVQVNWFWAVPVTBUDUEWFWCVMV
+      LEVTBUFUGUHAEGUIVTVSJZWEWBVTUJZNZWHTJWETJWGWBVTWEUKZWIWGVTWAHIJWJVTULAVTW
+      AEUNUMWBVTWEUOUPWBVTWAVTGVFZUQURWKUSWEWHTUTVAVBUPVIAVQVNVKVNVIVPDBDVCUEVI
+      VNVDUHVEVG $.
+      $( [31-Jan-2015] $)
+
+    $( The Moore closure is a function mapping arbitrary subsets to closed
+       sets. $)
+    mrcf $p |- ( C e. ( Moore ` X ) -> F : ~P X --> C ) $=
+      ( vx vs cmre cfv wcel cpw wf cv wss crab cint cmpt mrcflem wceq mrcfval
+      wb feq1 syl mpbird ) ACGHIZCJZABKZUEAEUEELFLMFANOPZKZEACFQUDBUGRUFUHTEABC
+      FDSUEABUGUAUBUC $.
+      $( [31-Jan-2015] $)
+
+    $( Evaluation of the Moore closure of a set. $)
+    mrcval $p |- ( ( C e. ( Moore ` X ) /\ U C_ X ) -> ( F ` U ) =
+        |^| { s e. C | U C_ s } ) $=
+      ( vx cmre cfv wcel wss wa cpw cv crab cint wceq wb syl adantr biimpar wne
+      mre1cl elpw2g c0 simpl ssrab2 a1i simpr sseq2 elrab sylanbrc ne0i syl3anc
+      mreintcl ax-17 sseq1 rabbidv inteqd adantl cmpt mrcfval fvmptd mpd3an23 )
+      ADHIJZBDKZLZBDMZJZBENZKZEAOZPZAJZBCIVMQVEVIVFVEDAJZVIVFRADUCZBDAUDSUAVGVE
+      VLAKZVLUEUBZVNVEVFUFVQVGVKEAUGUHVGDVLJZVRVGVOVFVSVEVOVFVPTVEVFUIVKVFEDAVJ
+      DBUJUKULVLDUMSAVLDUOUNVGGBGNZVJKZEAOZPZVMVHCAVGGUPVTBQZWCVMQVGWDWBVLWDWAV
+      KEAVTBVJUQURUSUTVECGVHWCVAQVFGACDEFVBTVCVD $.
+      $( [31-Jan-2015] $)
+
+    $( The Moore closure of a set is a closed set. $)
+    mrccl $p |- ( ( C e. ( Moore ` X ) /\ U C_ X ) -> ( F ` U ) e. C ) $=
+      ( cmre cfv wcel wss wa cpw wf adantr wb mre1cl elpw2g syl biimpar ffvelrn
+      mrcf syl2anc ) ADFGHZBDIZJDKZACLZBUDHZBCGAHUBUEUCACDETMUBUFUCUBDAHUFUCNAD
+      OBDAPQRUDABCSUA $.
+      $( [31-Jan-2015] $)
+
+    $( The Moore closure of a singleton is a closed set. $)
+    mrcsncl $p |- ( ( C e. ( Moore ` X ) /\ U e. X ) -> ( F ` { U } ) e. C ) $=
+      ( wcel cmre cfv csn wss snssi mrccl sylan2 ) BDFADGHFBIZDJNCHAFBDKANCDELM
+      $.
+      $( [31-Jan-2015] $)
+
+    $( The closure of a closed set is itself. $)
+    mrcid $p |- ( ( C e. ( Moore ` X ) /\ U e. C ) -> ( F ` U ) = U ) $=
+      ( vs cmre cfv wcel wa cv crab cint wceq mress mrcval syldan intmin adantl
+      wss eqtrd ) ADGHIZBAIZJBCHZBFKTFALMZBUBUCBDTUDUENABDOABCDFEPQUCUEBNUBFBAR
+      SUA $.
+      $( [31-Jan-2015] $)
+
+    $( The closure of a set is a subset of the base. $)
+    mrcssv $p |- ( C e. ( Moore ` X ) -> ( F ` U ) C_ X ) $=
+      ( cmre cfv wcel crn cuni fvssunirn cpw wf wss mrcf frn uniss 3syl sseqtrd
+      mreuni syl5ss ) ADFGHZBCGCIZJZDCBKUBUDAJZDUBDLZACMUCANUDUENACDEOUFACPUCAQ
+      RADTSUA $.
+      $( [31-Jan-2015] $)
+
+    $( A set is closed iff it is equal to its closure. $)
+    mrcidb $p |- ( C e. ( Moore ` X ) -> ( U e. C <-> ( F ` U ) = U ) ) $=
+      ( cmre cfv wcel wceq mrcid wa simpr mrcssv adantr eqsstr3d mrccl eqeltrrd
+      wss syldan impbida ) ADFGHZBAHBCGZBIZABCDEJUAUCKZUBBAUAUCLZUAUCBDRUBAHUDB
+      UBDUEUAUBDRUCABCDEMNOABCDEPSQT $.
+      $( [31-Jan-2015] $)
+
+    $( Closure preserves subset ordering. $)
+    mrcss $p |- ( ( C e. ( Moore ` X ) /\ U C_ V /\ V C_ X ) ->
+        ( F ` U ) C_ ( F ` V ) ) $=
+      ( vs cmre cfv wcel wss w3a cv crab cint wi sstr2 adantr wceq mrcval intss
+      ss2rabdv syl 3ad2ant2 simp1 sstr 3adant1 syl2anc 3adant2 3sstr4d ) AEHIJZ
+      BDKZDEKZLZBGMZKZGANZOZDUOKZGANZOZBCIZDCIZULUKURVAKZUMULUTUQKVDULUSUPGAULU
+      SUPPUOAJBDUOQRUBUTUQUAUCUDUNUKBEKZVBURSUKULUMUEULUMVEUKBDEUFUGABCEGFTUHUK
+      UMVCVASULADCEGFTUIUJ $.
+      $( [31-Jan-2015] $)
+
+    $( The closure of a set is a superset. $)
+    mrcssid $p |- ( ( C e. ( Moore ` X ) /\ U C_ X ) -> U C_ ( F ` U ) ) $=
+      ( vs cmre cfv wcel wss wa cv crab cint ssintub mrcval syl5sseqr ) ADGHIBD
+      JKBFLJFAMNBBCHFBAOABCDFEPQ $.
+      $( [31-Jan-2015] $)
+
+    $( The closure operation is idempotent. $)
+    mrcidm $p |- ( ( C e. ( Moore ` X ) /\ U C_ X ) ->
+        ( F ` ( F ` U ) ) = ( F ` U ) ) $=
+      ( cmre cfv wcel wss wceq mrccl mrcid syldan ) ADFGHBDIBCGZAHNCGNJABCDEKAN
+      CDELM $.
+      $( [31-Jan-2015] $)
+
+    $( The closure is the minimal closed set; any closed set which contains the
+       generators is a superset of the closure. $)
+    mrcsscl $p |- ( ( C e. ( Moore ` X ) /\ U C_ V /\ V e. C ) ->
+        ( F ` U ) C_ V ) $=
+      ( cmre cfv wcel wss w3a mress 3adant2 mrcss syld3an3 wceq mrcid sseqtrd )
+      AEGHIZBDJZDAIZKBCHZDCHZDSTUADEJZUBUCJSUAUDTADELMABCDEFNOSUAUCDPTADCEFQMR
+      $.
+      $( [31-Jan-2015] $)
+
+    $( Idempotence of closure under a general union. $)
+    mrcuni $p |- ( ( C e. ( Moore ` X ) /\ U C_ ~P X ) ->
+        ( F ` U. U ) = ( F ` U. ( F " U ) ) ) $=
+      ( vs vx cfv wcel wss wa cuni wral syl syl2anc adantr unissb mrcss syl3anc
+      sylibr cmre cpw cima simpl cv simpll ssel2 elpwi adantll mrcssid wfun cdm
+      wi wf mrcf ffun wceq fdm sseq2d biimpar funfvima2 elssuni sstrd ralrimiva
+      imp mrcssv ralrimivw wfn wb ffn sseq1 ralima mpbird adantl sspwuni biimpi
+      sylan mrcidm sseqtrd eqssd ) ADUAHIZBDUBZJZKZBLZCHZCBUCZLZCHZWDWAWEWHJZWH
+      DJZWFWIJWAWCUDZWDFUEZWHJZFBMWJWDWNFBWDWMBIZKZWMWMCHZWHWPWAWMDJZWMWQJWAWCW
+      OUFWCWOWRWAWCWOKWMWBIWRBWBWMUGWMDUHNUIAWMCDEUJOWPWQWGIZWQWHJWDWOWSWDCUKZB
+      CULZJZWOWSUMWAWTWCWAWBACUNZWTACDEUOZWBACUPNPWAXBWCWAXAWBBWAXCXAWBUQXDWBAC
+      URNUSUTBWMCVAOVEWQWGVBNVCVDFBWHQTWDWRFWGMZWKWDXEGUEZCHZDJZGBMZWDXHGBWAXHW
+      CAXFCDEVFPVGWACWBVHZWCXEXIVIWAXCXJXDWBACVJNZWRXHFGWBBCWMXGDVKVLVQVMFWGDQT
+      AWECWHDERSWDWIWFCHZWFWDWAWHWFJZWFDJZWIXLJWLWDWMWFJZFWGMZXMWDXPXGWFJZGBMZW
+      DXQGBWDXFBIZKWAXFWEJZWEDJZXQWAWCXSUFXSXTWDXFBVBVNWDYAXSWCYAWAWCYABDVOVPVN
+      ZPAXFCWEDERSVDWAXJWCXPXRVIXKXOXQFGWBBCWMXGWFVKVLVQVMFWGWFQTWAXNWCAWECDEVF
+      PAWHCWFDERSWDWAYAXLWFUQWLYBAWECDEVROVSVT $.
+      $( [31-Jan-2015] $)
+
+    $( Idempotence of closure under a pair union. $)
+    mrcun $p |- ( ( C e. ( Moore ` X ) /\ U C_ X /\ V C_ X ) ->
+        ( F ` ( U u. V ) ) = ( F ` ( ( F ` U ) u. ( F ` V ) ) ) ) $=
+      ( cfv wcel wss cpr cuni cun wceq elpw2g syl biimpar syl2anc fveq2d fvex
+      wb cmre w3a cima cpw simp1 mre1cl 3adant3 3adant2 prssi mrcuni uniprg wfn
+      wf mrcf ffn 3ad2ant1 fnimapr syl3anc unieqd unipr syl6eq 3eqtr3d ) AEUAGH
+      ZBEIZDEIZUBZBDJZKZCGZCVGUCZKZCGZBDLZCGBCGZDCGZLZCGVFVCVGEUDZIZVIVLMVCVDVE
+      UEVFBVQHZDVQHZVRVCVDVSVEVCVSVDVCEAHZVSVDTAEUFZBEANOPUGZVCVEVTVDVCVTVEVCWA
+      VTVETWBDEANOPUHZBDVQUIQAVGCEFUJQVFVHVMCVFVSVTVHVMMWCWDBDVQVQUKQRVFVKVPCVF
+      VKVNVOJZKVPVFVJWEVFCVQULZVSVTVJWEMVCVDWFVEVCVQACUMWFACEFUNVQACUOOUPWCWDVQ
+      BDCUQURUSVNVOBCSDCSUTVARVB $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d W a b c $.  $d U a b c $.  $d K a b c $.  $d F a b c $.
+    mrclsp.u $e |- U = ( LSubSp ` W ) $.
+    mrclsp.k $e |- K = ( LSpan ` W ) $.
+    mrclsp.f $e |- F = ( mrCls ` U ) $.
+    $( Moore closure generalizes module span. $)
+    mrclsp $p |- ( W e. LMod -> K = F ) $=
+      ( va vb clmod wcel cbs cfv cpw cv wss crab cint cmpt eqid lspfval mrcfval
+      cmre wceq lssmre syl eqtr4d ) DJKZCHDLMZNHOIOPIAQRSZBIACUIDJHUITZEFUAUHAU
+      IUCMKBUJUDUIADEUKUEHABUIIGUBUFUG $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d J a b c $.  $d F a b c $.
+    mrccls.f $e |- F = ( mrCls ` ( Clsd ` J ) ) $.
+    $( Moore closure generalizes closure in a topology. $)
+    mrccls $p |- ( J e. Top -> ( cls ` J ) = F ) $=
+      ( va ctop wcel ccl cfv cuni cpw wss ccld crab cint cmpt eqid clsfval cmre
+      vb cv wceq cldmre mrcfval syl eqtr4d ) BEFZBGHDBIZJDTSTKSBLHZMNOZADSBUGUG
+      PZQUFUHUGRHFAUIUABUGUJUBDUHAUGSCUCUDUE $.
       $( [31-Jan-2015] $)
   $}
 
@@ -14920,40 +15135,6 @@ $)
       RUDUEUOUPUFUGUH $.
       $( [21-Jan-2015] $)
   $}
-
-  ${
-    $d ph y $.  $d ps x $.  $d F x y $.  $d B x y $.  $d A x y $.
-    rexima.x $e |- ( x = ( F ` y ) -> ( ph <-> ps ) ) $.
-    $( Existential quantification under an image in terms of the base set.
-       _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
-       21-Jan-2015.) $)
-    rexima $p |- ( ( F Fn A /\ B C_ A ) ->
-        ( E. x e. ( F " B ) ph <-> E. y e. B ps ) ) $=
-      ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
-      wb adantl rexxfr2d ) GEIFEJKZABCDDLZGMZGFNZFUGGOUFCLZUIPUHUJQZDFRUJUHQZDF
-      RDEFUJGSUKULDFUHUJTUAUBULABUCUFHUDUE $.
-      $( [21-Jan-2015] $)
-
-    $( Universal quantification under an image in terms of the base set.
-       _EDITORIAL_: duplicates ~ raleqfn , but with interface consistency with
-       ~ rexrn .  (Contributed by Stefan O'Rear, 21-Jan-2015.) $)
-    ralima $p |- ( ( F Fn A /\ B C_ A ) ->
-        ( A. x e. ( F " B ) ph <-> A. y e. B ps ) ) $=
-      ( wfn wss wa cv cfv cima fvex wcel wceq wrex fvelimab eqcom rexbii syl6bb
-      wb adantl ralxfr2d ) GEIFEJKZABCDDLZGMZGFNZFUGGOUFCLZUIPUHUJQZDFRUJUHQZDF
-      RDEFUJGSUKULDFUHUJTUAUBULABUCUFHUDUE $.
-      $( [21-Jan-2015] $)
-  $}
-
-  $( Images under a function never map nonempty sets to empty sets.
-     _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
-     21-Jan-2015.) $)
-  fnimaeq0 $p |- ( ( F Fn A /\ B C_ A ) ->
-      ( ( F " B ) = (/) <-> B = (/) ) ) $=
-    ( cima c0 wceq cdm cin wfn wa imadisj incom fndm sseq2d biimpar df-ss sylib
-    wss syl5eq eqeq1d syl5bb ) CBDEFCGZBHZEFCAIZBARZJZBEFCBKUFUCBEUFUCBUBHZBUBB
-    LUFBUBRZUGBFUDUHUEUDUBABACMNOBUBPQSTUA $.
-    $( [21-Jan-2015] $)
 
   ${
     $d F a b c d $.  $d A a b c d $.  $d R a b c d $.  $d S a b c d $.
