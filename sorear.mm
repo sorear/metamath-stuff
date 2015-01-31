@@ -8,6 +8,87 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Additional elementary logic and set theory
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    mp1i.a $e |- ph $.
+    mp1i.b $e |- ( ph -> ps ) $.
+    $( Drop and replace an antecedent. $)
+    mp1i $p |- ( ch -> ps ) $=
+      ( ax-mp a1i ) BCABDEFG $.
+      $( [29-Jan-2015] $)
+  $}
+
+  ${
+    $d a b B $.
+    $( A mapping operation with empty domain. $)
+    mpt20 $p |- ( a e. (/) , b e. B |-> X ) = (/) $=
+      ( cmpt2 wfn wceq cxp cvv wcel wral ral0 eqid fnmpt2 mpbi xp0r fneq2i fn0
+      c0 ) CDSABEZSFZTSGTSAHZFZUABIJDAKZCSKUCUDCLCDSABTTMNOUBSTAPQOTRO $.
+      $( [29-Jan-2015] $)
+  $}
+
+  ${
+    $d x A $.  $d x C $.  $d x D $.  $d x V $.
+    fvmpt3.a $e |- ( x = A -> B = C ) $.
+    fvmpt3.b $e |- F = ( x e. D |-> B ) $.
+    fvmpt3.c $e |- ( x e. D -> B e. V ) $.
+    $( Value of a function given in maps-to notation, with a slightly different
+       sethood condition. $)
+    fvmpt3 $p |- ( A e. D -> ( F ` A ) = C ) $=
+      ( wcel cfv wceq cv eleq1d vtoclga fvmptg mpdan ) BEKDGKZBFLDMCGKSABEANBMC
+      DGHOJPABCDEGFHIQR $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d F a $.  $d X a $.
+
+    $( Two possibilities for the behavior of a function value.  (Contributed by
+       Stefan O'Rear, 2-Nov-2014.) $)
+    fvbr0 $p |- ( X F ( F ` X ) \/ ( F ` X ) = (/) ) $=
+      ( va cv csn cima wcel weu cfv wbr c0 wceq wo cio wsbc iota4 eqcomi dfsbcq
+      wb dffv3 ax-mp fvex eleq1 sbcie bitri biimpi elimasni 3syl orcd wn syl5eq
+      iotanul olcd pm2.61i ) CDZABEFZGZCHZBBAIZAJZUSKLZMURUTVAURUQCUQCNZOZUSUPG
+      ZUTUQCPVCVDVCUQCUSOZVDVBUSLVCVESUSVBCBATZQUQCVBUSRUAUQVDCUSBAUBUOUSUPUCUD
+      UEUFABUSUGUHUIURUJZVAUTVGUSVBKVFUQCULUKUMUN $.
+      $( [2-Nov-2014] $)
+  $}
+
+  $( All function values are either null or in the range.  (Contributed by
+     Stefan O'Rear, 3-Jan-2015.) $)
+  fvelrn0 $p |- ( F ` X ) e. ( ran F u. { (/) } ) $=
+    ( cvv wcel cfv crn c0 csn cun wbr wceq wo fvbr0 wa simpr fvex simpl brelrng
+    a1i syl3anc elun1 syl 0ex snid elun2 ax-mp eleq1 mpbiri adantr jaoian fvprc
+    mpan wn syl6eqel pm2.61i ) BCDZBAEZAFZGHZIZDZBUQAJZUQGKZLUPVAABMVBUPVAVCVBU
+    PNZUQURDZVAVDUPUQCDZVBVEVBUPOVFVDBAPSVBUPQBUQACCRTUQURUSUAUBVCVAUPVCVAGUTDZ
+    GUSDVGGUCUDGUSURUEUFZUQGUTUGUHUIUJULUPUMUQGUTBAUKVHUNUO $.
+    $( [3-Jan-2015] $)
+
+
+  $( The result of a function value is always a subset of the union of the
+     range, even if it is invalid and thus empty.  (Contributed by Stefan
+     O'Rear, 2-Nov-2014.) $)
+  fvssunirn $p |- ( F ` X ) C_ U. ran F $=
+      ( cfv crn wcel c0 csn wo cuni wss cun fvelrn0 elun mpbi elssuni 0ss elsni
+      sseq1d mpbiri jaoi ax-mp ) BACZADZEZUBFGZEZHZUBUCIZJZUBUCUEKEUGABLUBUCUEM
+      NUDUIUFUBUCOUFUIFUHJUHPUFUBFUHUBFQRSTUA $.
+      $( [30-Jan-2015] $)
+
+  ${
+    $d x A $.  $d x I $.  $d x F $.
+    $( Membership in a union of some function-defined family of sets. $)
+    fnunirn $p |- ( F Fn I -> ( A e. U. ran F <->
+        E. x e. I A e. ( F ` x ) ) ) $=
+      ( wfn crn cuni wcel cv cfv cdm wrex wfun fnfun elunirn fndm rexeqdv bitrd
+      wb syl ) CDEZBCFGHZBAICJHZACKZLZUCADLUACMUBUESDCNABCOTUAUCAUDDDCPQR $.
+      $( [30-Jan-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     The dual of an ordered set
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -19,7 +100,10 @@ $)
 
   $( Define the dual of an ordered structure, which replaces the order
      component of the structure with its reverse.  See ~ odubas , ~ oduleval ,
-     and ~ oduleg for its principal properties. $)
+     and ~ oduleg for its principal properties.
+
+     _EDITORIAL_: likely usable to simplify many lattice proofs, as it allows
+     for duality arguments to be formalized; for instance ~ latmass . $)
   df-odu $a |- ODual = ( w e. _V |->
       ( w sSet <. ( le ` ndx ) , `' ( le ` w ) >. ) ) $.
 
@@ -73,15 +157,6 @@ $)
       reldmsets 3eqtr4a pm2.61i eqid oduval fveq2i 3eqtr4i ) CGHZCIJHZCJHZKZLZM
       NZGHZABGHCOPZVAVGQVDVBGOCFFRZVBIGHZVBVJUAPZSVBVJUBUCVKVBVJVBVJIJUDUEUFUGU
       HUIVHSZTTGHVAVGGVJFVIUJCGUKVLVFTGCVEMUNULUMUOUPEBVFGBVCCDVCUQURUSUT $.
-      $( [29-Jan-2015] $)
-  $}
-
-  ${
-    mp1i.a $e |- ph $.
-    mp1i.b $e |- ( ph -> ps ) $.
-    $( Drop and replace an antecedent. $)
-    mp1i $p |- ( ch -> ps ) $=
-      ( ax-mp a1i ) BCABDEFG $.
       $( [29-Jan-2015] $)
   $}
 
@@ -143,15 +218,6 @@ $)
       AJUAOUPUBVAUSMKUCUPVAUSAUTVAABDVALPPOUPVAUDEQZFQZUSRKZSZVBVCBRKZSZUMUPVBV
       AGVCVAGTTVEVBVCVFUNZUNZSVCVBVHSVGVBVCVDVIVIVDUSVHAUTAVFBDVFLUEUEUFUGVBVCV
       HEUHZFUHZUIVCVBVFVKVJUIUJOUKULUO $.
-      $( [29-Jan-2015] $)
-  $}
-
-  ${
-    $d a b B $.
-    $( A mapping operation with empty domain. $)
-    mpt20 $p |- ( a e. (/) , b e. B |-> X ) = (/) $=
-      ( cmpt2 wfn wceq cxp cvv wcel wral ral0 eqid fnmpt2 mpbi xp0r fneq2i fn0
-      c0 ) CDSABEZSFZTSGTSAHZFZUABIJDAKZCSKUCUDCLCDSABTTMNOUBSTAPQOTRO $.
       $( [29-Jan-2015] $)
   $}
 
@@ -274,6 +340,112 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
+  $c incPos $.
+
+  $( Class function defining inclusion posets. $)
+  cipo $a class incPos $.
+
+  ${
+    $d f x y $.
+    $( For any family of sets, define the poset of that family ordered by
+       inclusion.  See ~ ipobas , ~ ipolerval , and ~ ipole for its contract.
+
+       _EDITORIAL_:  I'm not thrilled with the name.  Any suggestions?
+       Possible future directions include adding relative complement for the
+       ` oc ` slot, or the order topology. $)
+    df-ipo $a |- incPos = ( f e. _V |-> { <. ( Base ` ndx ) , f >. ,
+        <. ( le ` ndx ) , { <. x , y >. |
+            ( { x , y } C_ f /\ x C_ y ) } >. } ) $.
+  $}
+
+  ${
+    $d F f x y $.  $d I f x y $.  $d V f x y $.
+    ipoval.i $e |- I = ( incPos ` F ) $.
+    $( Value of the inclusion poset. $)
+    ipoval $p |- ( F e. V -> I = { <. ( Base ` ndx ) , F >. , <. ( le ` ndx ) ,
+          { <. x , y >. | ( { x , y } C_ F /\ x C_ y ) } >. } ) $=
+      ( vf wcel cvv cnx cbs cfv cop cv cpr wss wa copab wceq cipo cple opabbidv
+      elex opeq2 sseq2 anbi1d opeq2d preq12d df-ipo prex fvmpt syl5eq syl ) CEH
+      CIHZDJKLZCMZJUALZANZBNZOZCPZURUSPZQZABRZMZOZSCEUCUNDCTLVFFGCUOGNZMZUQUTVG
+      PZVBQZABRZMZOVFITVGCSZVHUPVLVEVGCUOUDVMVKVDUQVMVJVCABVMVIVAVBVGCUTUEUFUBU
+      GUHABGUIUPVEUJUKULUM $.
+      $( [30-Jan-2015] $)
+
+    $( Base set of the inclusion poset. $)
+    ipobas $p |- ( F e. V -> F = ( Base ` I ) ) $=
+      ( vx vy wcel cnx cbs cfv cop cple cv cpr wss wa copab eqid posbase ipoval
+      fveq2d eqtr4d ) ACGZAHIJAKHLJEMZFMZNAOUDUEOPEFQZKNZIJBIJAUGUFCUGRSUCBUGIE
+      FABCDTUAUB $.
+      $( [30-Jan-2015] $)
+
+    $( Relation of the inclusion poset. $)
+    ipolerval $p |- ( F e. V ->
+          { <. x , y >. | ( { x , y } C_ F /\ x C_ y ) } = ( le ` I ) ) $=
+      ( wcel cv cpr wss wa copab cnx cbs cfv cop cple cvv wceq vex prss biimpri
+      cxp adantr ssopab2i df-xp sseqtr4i xpexg anidms ssexg sylancr eqid ipoval
+      posle syl fveq2d eqtr4d ) CEGZAHZBHZICJZUSUTJZKZABLZMNOCPMQOVDPIZQOZDQOUR
+      VDRGZVDVFSURVDCCUCZJVHRGZVGVDUSCGUTCGKZABLVHVCVJABVAVJVBVJVAUSUTCATBTUAUB
+      UDUEABCCUFUGURVICCEEUHUIVDVHRUJUKCVEVDRVEULUNUOURDVEQABCDEFUMUPUQ $.
+      $( [30-Jan-2015] $)
+
+    ipole.l $e |- L = ( le ` I ) $.
+    $d L x y $.  $d X x y $.  $d Y x y $.
+
+    $( Weak order condition of the inclusion poset. $)
+    ipole $p |- ( ( F e. V /\ X e. F /\ Y e. F ) -> ( X L Y <-> X C_ Y ) ) $=
+      ( vx vy wcel w3a cv cpr wss wa wbr wb wceq 3adant1 copab preq12 eqid cple
+      sseq1d sseq12 anbi12d brabga cfv ipolerval syl6reqr breqd prssi biantrurd
+      3ad2ant1 3bitr4d ) ADKZEAKZFAKZLZEFIMZJMZNZAOZVAVBOZPZIJUAZQZEFNZAOZEFOZP
+      ZEFCQZVKURUSVHVLRUQVFVLIJEFVGAAVAESVBFSPZVDVJVEVKVNVCVIAVAVBEFUBUEVAEVBFU
+      FUGVGUCUHTUQURVMVHRUSUQCVGEFUQVGBUDUICIJABDGUJHUKULUOUTVJVKURUSVJUQEFAUMT
+      UNUP $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    ipolt.i $e |- I = ( incPos ` F ) $.
+    ipolt.l $e |- S = ( lt ` I ) $.
+    $( Strict order condition of the inclusion poset. $)
+    ipolt $p |- ( ( F e. V /\ X e. F /\ Y e. F ) -> ( X S Y <-> X C. Y ) ) $=
+      ( wcel w3a cple cfv wbr wne wa wss wpss wb cvv cipo anbi1d eqeltri pltval
+      eqid ipole fvex mp3an1 3adant1 df-pss a1i 3bitr4d ) BDIZEBIZFBIZJZEFCKLZM
+      ZEFNZOZEFPZUROZEFAMZEFQZUOUQUTURBCUPDEFGUPUDZUEUAUMUNVBUSRZULCSIUMUNVECBT
+      LSGBTUFUBSBBACUPEFVDHUCUGUHVCVARUOEFUIUJUK $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d a b c $.
+    $( Technical lemma to simplify the statement of ~ ipopos .  The empty set
+       is (rather pathologically) a poset under our definitions, since it has
+       an empty base set ( ~ str0 ) and any relation partially orders an empty
+       set. $)
+    0pos $p |- (/) e. Poset $=
+      ( va vb vc c0 cpo wcel cvv cv cple cfv wbr wa weq wi w3a wral 0ex cbs cnx
+      ral0 baseid str0 eqid ispos mpbir2an ) DEFDGFAHZUFDIJZKUFBHZUGKZUHUFUGKLA
+      BMNUIUHCHZUGKLUFUJUGKNOCDPBDPZADPQUKATABCDDUGRSRJAAUAUBUGUCUDUE $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d F a b c $.  $d I a b c $.
+    ipopos.i $e |- I = ( incPos ` F ) $.
+    $( The inclusion poset on a family of sets is actually a poset. $)
+    ipopos $p |- I e. Poset $=
+      ( va vb vc cvv wcel cpo cfv cipo a1i cv wa wbr wss wb ipole w3a anbi12d
+      cple fvex eqeltri ipobas eqidd ssid eqid 3anidm23 mpbiri weq 3com23 simpl
+      simpr eqssd syl6bi wi sstr 3adant3r3 3adant3r1 3adant3r2 3imtr4d wn fvprc
+      isposd c0 syl5eq 0pos syl6eqel pm2.61i ) AGHZBIHVJDEFABBUAJZBGHVJBAKJZGCA
+      KUBUCLABGCUDVJVKUEVJDMZAHZNVMVMVKOZVMVMPZVMUFVJVNVOVPQABVKGVMVMCVKUGZRUHU
+      IVJVNEMZAHZSZVMVRVKOZVRVMVKOZNVMVRPZVRVMPZNZDEUJVTWAWCWBWDABVKGVMVRCVQRZV
+      JVSVNWBWDQABVKGVRVMCVQRUKTWEVMVRWCWDULWCWDUMUNUOVJVNVSFMZAHZSNZWCVRWGPZNZ
+      VMWGPZWAVRWGVKOZNVMWGVKOZWKWLUPWIVMVRWGUQLWIWAWCWMWJVJVNVSWAWCQWHWFURVJVS
+      WHWMWJQVNABVKGVRWGCVQRUSTVJVNWHWNWLQVSABVKGVMWGCVQRUTVAVDVJVBZBVEIWOBVLVE
+      CAKVCVFVGVHVI $.
+      $( [30-Jan-2015] $)
+  $}
+
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Distributive lattices
@@ -344,6 +516,94 @@ $)
       $( [29-Jan-2015] $)
   $}
 
+  $c DLat $.
+
+  $( The class of distributive lattices. $)
+  cdlat $a class DLat $.
+
+  ${
+    $d k b j m x y z $.
+    $( A _distributive lattice_ is a lattice in which meets distribute over
+       joins, or equivalently ( ~ latdisd ) joins distribute over meets. $)
+    df-dlat $a |- DLat = { k e. Lat | [ ( Base ` k ) / b ]
+        [ ( join ` k ) / j ] [ ( meet ` k ) / m ] A. x e. b A. y e. b
+          A. z e. b ( x m ( y j z ) ) = ( ( x m y ) j ( x m z ) ) } $.
+  $}
+
+  ${
+    $d k b j m x y z K $.  $d k b j m x y z B $.  $d k b j m x y z J $.
+    $d k b j m x y z M $.
+    isdlat.b $e |- B = ( Base ` K ) $.
+    isdlat.j $e |- J = ( join ` K ) $.
+    isdlat.m $e |- M = ( meet ` K ) $.
+    $( Property of being a distributive lattice. $)
+    isdlat $p |- ( K e. DLat <-> ( K e. Lat /\ A. x e. B A. y e. B A. z e. B
+        ( x M ( y J z ) ) = ( ( x M y ) J ( x M z ) ) ) ) $=
+      ( vj vm vb cv co wceq wral cfv wsbc wb vk cmee cjn cbs clat cdlat syl6eqr
+      fveq2 dfsbcq syl sbcbidv bitrd cvv fvex eqeltri wa raleq raleqbi1dv simpr
+      eqidd simpl oveqd oveq123d eqeq12d ralbidv 2ralbidv sylan9bb 3impb sbc3ie
+      a1i 3bitrd df-dlat elrab2 ) ANZBNZCNZKNZOZLNZOZVNVOVSOZVNVPVSOZVQOZPZCMNZ
+      QZBWEQZAWEQZLUANZUBRZSZKWIUCRZSZMWIUDRZSZVNVOVPEOZGOZVNVOGOZVNVPGOZEOZPZC
+      DQZBDQADQZUAFUEUFWIFPZWOWMMDSZWHLGSZKESZMDSZXCXDWNDPWOXETXDWNFUDRZDWIFUDU
+      HHUGWMMWNDUIUJXDWMXGMDXDWMWKKESZXGXDWLEPWMXJTXDWLFUCRZEWIFUCUHIUGWKKWLEUI
+      UJXDWKXFKEXDWJGPWKXFTXDWJFUBRZGWIFUBUHJUGWHLWJGUIUJUKULUKXHXCTXDWHXCMKLDE
+      GDXIUMHFUDUNUOEXKUMIFUCUNUOGXLUMJFUBUNUOWEDPZVQEPZVSGPZWHXCTXMWHWDCDQZBDQ
+      ZADQXNXOUPZXCWGXQAWEDWFXPBWEDWDCWEDUQURURXRXPXBABDDXRWDXACDXRVTWQWCWTXRVN
+      VNVRWPVSGXNXOUSZXRVNUTXRVQEVOVPXNXOVAZVBVCXRWAWRWBWSVQEXTXRVSGVNVOXSVBXRV
+      SGVNVPXSVBVCVDVEVFVGVHVIVJVKABCKUALMVLVM $.
+      $( [30-Jan-2015] $)
+
+    $d X x y z $.  $d Y x y z $.  $d Z x y z $.
+
+    $( In a distributive lattice, meets distribute over joins. $)
+    dlatmjdi $p |- ( ( K e. DLat /\ ( X e. B /\ Y e. B /\ Z e. B ) ) ->
+        ( X M ( Y J Z ) ) = ( ( X M Y ) J ( X M Z ) ) ) $=
+      ( vx vy vz wcel cv co wceq wral oveq1 eqeq12d clat isdlat simprbi oveq12d
+      cdlat w3a oveq2d oveq2 oveq1d rcla43v mpan9 ) CUENZKOZLOZMOZBPZDPZUMUNDPZ
+      UMUODPZBPZQZMARLARKARZEANFANGANUFEFGBPZDPZEFDPZEGDPZBPZQZULCUANVBKLMABCDH
+      IJUBUCVAVHEUPDPZEUNDPZEUODPZBPZQEFUOBPZDPZVEVKBPZQKLMEFGAAAUMEQZUQVIUTVLU
+      MEUPDSVPURVJUSVKBUMEUNDSUMEUODSUDTUNFQZVIVNVLVOVQUPVMEDUNFUOBSUGVQVJVEVKB
+      UNFEDUHUITUOGQZVNVDVOVGVRVMVCEDUOGFBUHUGVRVKVFVEBUOGEDUHUGTUJUK $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d K x y z $.
+    $( A distributive lattice is a lattice. $)
+    dlatl $p |- ( K e. DLat -> K e. Lat ) $=
+      ( vx vy vz cdlat wcel clat cjn cfv cmee wceq cbs wral eqid isdlat simplbi
+      cv co ) AEFAGFBQZCQZDQZAHIZRAJIZRSTUCRSUAUCRUBRKDALIZMCUDMBUDMBCDUDUBAUCU
+      DNUBNUCNOP $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d K x y z $.  $d D x y z $.  $d V x y z $.
+    odudlat.d $e |- D = ( ODual ` K ) $.
+    $( The dual of a distributive lattice is a distributive lattice and
+       conversely. $)
+    odudlatb $p |- ( K e. V -> ( K e. DLat <-> D e. DLat ) ) $=
+      ( vx vy vz wcel clat cv cjn cfv co cmee wceq wral wa cdlat eqid isdlat
+      cbs latdisd bicomd pm5.32i odulatb anbi1d syl5bb odujoin odumeet 3bitr4g
+      odubas ) BCHZBIHZEJZFJZGJZBKLZMBNLZMUNUOURMUNUPURMUQMOGBUALZPFUSPEUSPZQZA
+      IHZUNUOUPURMUQMUNUOUQMUNUPUQMURMOGUSPFUSPEUSPZQZBRHARHVAUMVCQULVDUMUTVCUM
+      VCUTEFGUSUQBURUSSZUQSZURSZUBUCUDULUMVBVCABCDUEUFUGEFGUSUQBURVEVFVGTEFGUSU
+      RAUQUSABDVEUKAURBDVGUHAUQBDVFUITUJ $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    dlatjmdi.b $e |- B = ( Base ` K ) $.
+    dlatjmdi.j $e |- J = ( join ` K ) $.
+    dlatjmdi.m $e |- M = ( meet ` K ) $.
+    $( In a distributive lattice, joins distribute over meets. $)
+    dlatjmdi $p |- ( ( K e. DLat /\ ( X e. B /\ Y e. B /\ Z e. B ) ) ->
+        ( X J ( Y M Z ) ) = ( ( X J Y ) M ( X J Z ) ) ) $=
+      ( cdlat wcel codu cfv w3a co wceq eqid odudlatb ibi odujoin odumeet sylan
+      odubas dlatmjdi ) CKLZCMNZKLZEALFALGALOEFGDPBPEFBPEGBPDPQUFUHUGCKUGRZSTAD
+      UGBEFGAUGCUIHUDUGDCUIJUAUGBCUIIUBUEUC $.
+      $( [30-Jan-2015] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -365,17 +625,25 @@ $)
   ${
     $d c f s x $.
 
-    $( Define a _Moore collection_, which is a set of notionally "closed" sets
-       which preserve arbitrary intersection.  This is the most general setting
-       in which typical notions of closure and span make sense.  Based on
-       definition of Moore collection of sets in [Schechter] p. 78. $)
-    df-mre $a |- Moore = { c | ( U. c e. c /\
-        A. s e. ~P c ( s =/= (/) -> |^| s e. c ) ) } $.
+    $( Define a _Moore collection_, which is a family of subsets of a base set
+       which preserve arbitrary intersection.  Elements of a Moore collection
+       are termed _closed_; Moore collections generalize the notion of
+       closedness and closure from topologies and vector spaces to the most
+       general setting in which such concepts make sense.  Definition of Moore
+       collection of sets in [Schechter] p. 78.
+
+       See ~ ismre , ~ mresspw , ~ mre1cl and ~ mreintcl for the major
+       properties of a Moore collection.  Note that a Moore collection uniquely
+       determines its base set ( ~ mreuni ); as such the disjoint union of all
+       Moore collections is sometimes considered as ` U. ran Moore ` ,
+       justified by ~ mreunirn . $)
+    df-mre $a |- Moore = ( x e. _V |-> { c e. ~P ~P x | ( x e. c /\
+        A. s e. ~P c ( s =/= (/) -> |^| s e. c ) ) } ) $.
 
     $( Define the _Moore closure_ of a generating set, which is the smallest
        closed set containing all generating elements.  Definition of Moore
        closure in [Schechter] p. 79. $)
-    df-mrc $a |- mrCls = ( c e. Moore |-> ( x e. ~P U. c |->
+    df-mrc $a |- mrCls = ( c e. U. ran Moore |-> ( x e. ~P U. c |->
         |^| { s e. c | x C_ s } ) ) $.
 
     $( An important subclass of Moore systems are those which can be
@@ -388,6 +656,139 @@ $)
        we consider a single function defined on finite sets instead. $)
     df-acs $a |- ACS = { c | E. f ( f : ( ~P U. c i^i Fin ) --> ~P U. c /\
       A. x e. ~P U. c ( x e. c <-> ( f " ~P x ) C_ x ) ) } $.
+  $}
+
+  ${
+    $d C c s x $.  $d X c s x $.  $d S c s x $.
+    $( Property of being a Moore collection on some base set. $)
+    ismre $p |- ( C e. ( Moore ` X ) <-> ( C C_ ~P X /\ X e. C /\
+        A. s e. ~P C ( s =/= (/) -> |^| s e. C ) ) ) $=
+      ( vc vx cmre wcel cvv cpw cv wi wral elex syl crab wceq pweq anbi1d pwex
+      wa cfv wss c0 wne cint w3a cdm elfvdm 3ad2ant2 wel pweqd rabeqbidv df-mre
+      eleq1 vex rabex a1i fvmpt3 eleq2d wb eleq2 imbi2d raleqbidv anbi12d elrab
+      pwexg elpw2g 3anass syl6bbr 3bitrd pm5.21nii ) ABFUAZGZBHGZABIZUBZBAGZCJZ
+      UCUDZVRUEZAGZKZCAIZLZUFZVMBFUGZGVNABFUHBWFMNVQVPVNWDBAMUIVNVMABDJZGZVSVTW
+      GGZKZCWGIZLZTZDVOIZOZGZAWNGZVQWDTZTZWEVNVLWOAEBEDUJZWLTZDEJZIZIZOZWOHFHXB
+      BPZXAWMDXDWNXFXCVOXBBQUKXFWTWHWLXBBWGUNRULECDUMXEHGXBHGXADXDXCXBEUOSSUPUQ
+      URUSWPWSUTVNWMWRDAWNWGAPZWHVQWLWDWGABVAXGWJWBCWKWCWGAQXGWIWAVSWGAVTVAVBVC
+      VDVEUQVNWSVPWRTWEVNWQVPWRVNVOHGWQVPUTBHVFAVOHVGNRVPVQWDVHVIVJVK $.
+      $( [30-Jan-2015] $)
+
+    $( The Moore collection generator is a well-behaved function. $)
+    fnmre $p |- Moore Fn _V $=
+      ( vx vc vs wel cv c0 wne cint wcel wi cpw wral wa crab cvv cmre wfn fnmpt
+      df-mre pwex vex rabex a1i mprg ) ABDCEZFGUEHBEZIJCUFKLMZBAEZKZKZNZOIZPOQA
+      OAOUKPOACBSRULUHOIUGBUJUIUHAUATTUBUCUD $.
+      $( [30-Jan-2015] $)
+
+    $( A Moore collection is a subset of the power of the base set; each closed
+       subset of the system is actually a subset of the base. $)
+    mresspw $p |- ( C e. ( Moore ` X ) -> C C_ ~P X ) $=
+      ( vs cmre cfv wcel cpw wss cv c0 wne cint wi wral ismre simp1bi ) ABDEFAB
+      GHBAFCIZJKQLAFMCAGNABCOP $.
+      $( [30-Jan-2015] $)
+
+    $( In any Moore collection the base set is closed. $)
+    mre1cl $p |- ( C e. ( Moore ` X ) -> X e. C ) $=
+      ( vs cmre cfv wcel cpw wss cv c0 wne cint wi wral ismre simp2bi ) ABDEFAB
+      GHBAFCIZJKQLAFMCAGNABCOP $.
+      $( [30-Jan-2015] $)
+
+    $( A nonempty collection of closed sets has a closed intersection. $)
+    mreintcl $p |- ( ( C e. ( Moore ` X ) /\ S C_ C /\ S =/= (/) ) ->
+        |^| S e. C ) $=
+      ( vs cmre cfv wcel wss c0 wne w3a cpw cv cint wral elpw2g biimpar 3adant3
+      wi ismre simp3bi 3ad2ant1 simp3 neeq1 inteq eleq1d imbi12d rcla4va 3impia
+      wceq syl3anc ) ACEFZGZBAHZBIJZKBALZGZDMZIJZURNZAGZSZDUPOZUOBNZAGZUMUNUQUO
+      UMUQUNBAULPQRUMUNVCUOUMACLHCAGVCACDTUAUBUMUNUOUCUQVCUOVEVBUOVESDBUPURBUJZ
+      USUOVAVEURBIUDVFUTVDAURBUEUFUGUHUIUK $.
+      $( [30-Jan-2015] $)
+
+    $( Two closed sets have a closed intersection. $)
+    mreincl $p |- ( ( C e. ( Moore ` X ) /\ A e. C /\ B e. C ) ->
+        ( A i^i B ) e. C ) $=
+      ( cmre cfv wcel w3a cpr cint cin wceq intprg 3adant1 c0 simp1 prssi prnzg
+      wss wne 3ad2ant2 mreintcl syl3anc eqeltrrd ) CDEFGZACGZBCGZHZABIZJZABKZCU
+      FUGUJUKLUEABCCMNUHUEUICSZUIOTZUJCGUEUFUGPUFUGULUEABCQNUFUEUMUGABCRUACUIDU
+      BUCUD $.
+      $( [30-Jan-2015] $)
+
+    $( Since the entire base set of a Moore collection is the greatest element
+       of it, the base set can be recovered from a Moore collection by set
+       union. $)
+    mreuni $p |- ( C e. ( Moore ` X ) -> U. C = X ) $=
+      ( cmre cfv wcel cpw wss cuni wceq mre1cl mresspw elpwuni biimpa syl2anc )
+      ABCDEBAEZABFGZAHBIZABJABKOPQABLMN $.
+      $( [30-Jan-2015] $)
+
+    $( Two ways to express the notion of being a Moore collection on an
+       unspecified base. $)
+    mreunirn $p |- ( C e. U. ran Moore <-> C e. ( Moore ` U. C ) ) $=
+      ( vx cmre crn cuni wcel cfv cv cvv wrex wfn wb fnmre fnunirn ax-mp mreuni
+      fveq2d eleq2d ibir rexlimivw sylbi fvssunirn sseli impbii ) ACDEZFZAAEZCG
+      ZFZUFABHZCGZFZBIJZUICIKUFUMLMBACINOULUIBIULUIULUHUKAULUGUJCAUJPQRSTUAUHUE
+      ACUGUBUCUD $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d ph s $.  $d C s $.  $d X s $.
+    ismred.ss $e |- ( ph -> C C_ ~P X ) $.
+    ismred.ba $e |- ( ph -> X e. C ) $.
+    ismred.in $e |- ( ( ph /\ s C_ C /\ s =/= (/) ) -> |^| s e. C ) $.
+    $( Properties that determine a Moore collection. $)
+    ismred $p |- ( ph -> C e. ( Moore ` X ) ) $=
+      ( cpw wss wcel cv c0 wne cint wi wral cmre cfv vex elpw sylan2b ralrimiva
+      3expia ismre syl3anbrc ) ABCHICBJDKZLMZUFNBJZOZDBHZPBCQRJEFAUIDUJUFUJJAUF
+      BIZUIUFBDSTAUKUGUHGUCUAUBBCDUDUE $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d V a b c $.  $d X a b c $.
+
+    $( The Moore collections of subsets of a space, viewed as a kind of subset
+       of the power set, form a Moore collection in their own right on the
+       power set. $)
+    mremre $p |- ( X e. V -> ( Moore ` X ) e. ( Moore ` ~P X ) ) $=
+      ( va vb vc wcel cpw wss cv mresspw a1i c0 wne w3a wb mpbird ismred sselda
+      ssid wa cmre cfv vex elpw sylibr ssriv mpbiri cint cuni intssuni2 3adant1
+      elpwg unipw syl6sseq elpw2g 3ad2ant1 wel wex n0 intss1 adantl simpr sstrd
+      ex exlimdv syl5bi 3impia wral simp2 mre1cl ralrimiva elintg simp12 simpl2
+      syl simpl3 mreintcl syl3anc cvv intex sylbi 3ad2ant3 ) BAFZBUAUBZBGZCWDWE
+      GZHWCCWDWFCIZWDFWGWEHZWGWFFWGBJWGWECUCUDUEUFKWCWEBCWEWEHWCWESKWCBWEFBBHBS
+      BBAULUGWCWHWGLMZNZWGUHZWEFZWKBHZWJWKWEUIZBWHWIWKWNHWCWGWEUJUKBUMUNWCWHWLW
+      MOWIWKBAUOUPPQWCWGWDHZWINZWKBDWCWOWIWKWEHZWIDCUQZDURWCWOTZWQDWGUSWSWRWQDW
+      SWRWQWSWRTZWKDIZWEWRWKXAHWSXAWGUTVAWTXAWDFZXAWEHWSWGWDXAWCWOVBRXABJVOVCVD
+      VEVFVGWPBWKFZBXAFZDWGVHZWPXDDWGWPWRTXBXDWPWGWDXAWCWOWIVIRXABVJVOVKWCWOXCX
+      EOWIDBWGAVLUPPWPXAWKHZXALMZNZXAUHZWKFZXIEIZFZEWGVHZXHXLEWGXHECUQZTZXKWDFX
+      AXKHXGXLXHWGWDXKWCWOWIXFXGVMRXOXAWKXKWPXFXGXNVNXNWKXKHXHXKWGUTVAVCWPXFXGX
+      NVPXKXABVQVRVKXGWPXJXMOZXFXGXIVSFXPXAVTEXIWGVSVLWAWBPQQ $.
+      $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d W a $.  $d U a $.  $d B a $.
+    lssmre.u $e |- U = ( LSubSp ` W ) $.
+    lssmre.b $e |- B = ( Base ` W ) $.
+    $( The subspaces of a module comprise a Moore system on the vectors of the
+       module. $)
+    lssmre $p |- ( W e. LMod -> U e. ( Moore ` B ) ) $=
+      ( va clmod wcel cpw cv wss lssss vex elpw sylibr a1i ssrdv lss1 lssintcl
+      wi ismred ) CGHZBAFUBFBAIZFJZBHZUDUCHZTUBUEUDAKUFBUDACEDLUDAFMNOPQBACEDRU
+      DBCDSUA $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d X a $.  $d J a $.
+    cldmre.x $e |- X = U. J $.
+    $( The closed sets of a topology comprise a Moore system on the points of
+       the topology. $)
+    cldmre $p |- ( J e. Top -> ( Clsd ` J ) e. ( Moore ` X ) ) $=
+      ( va ctop wcel ccld cfv cldss2 topcld cv c0 wne cint intcld 3com23 ismred
+      wss ) AEFZAGHZBDABCIABCJSDKZLMUATRUANTFUAAOPQ $.
+      $( [31-Jan-2015] $)
   $}
 
 $(
@@ -10990,31 +11391,6 @@ $)
     $( [2-Nov-2014] $)
 
   ${
-    $d F a $.  $d X a $.
-
-    $( Two possibilities for the behavior of a function value.  (Contributed by
-       Stefan O'Rear, 2-Nov-2014.) $)
-    fvbr0 $p |- ( X F ( F ` X ) \/ ( F ` X ) = (/) ) $=
-      ( va cv csn cima wcel weu cfv wbr c0 wceq wo cio wsbc iota4 eqcomi dfsbcq
-      wb dffv3 ax-mp fvex eleq1 sbcie bitri biimpi elimasni 3syl orcd wn syl5eq
-      iotanul olcd pm2.61i ) CDZABEFZGZCHZBBAIZAJZUSKLZMURUTVAURUQCUQCNZOZUSUPG
-      ZUTUQCPVCVDVCUQCUSOZVDVBUSLVCVESUSVBCBATZQUQCVBUSRUAUQVDCUSBAUBUOUSUPUCUD
-      UEUFABUSUGUHUIURUJZVAUTVGUSVBKVFUQCULUKUMUN $.
-      $( [2-Nov-2014] $)
-
-    $( The result of a function value is always a subset of the union of the
-       range, even if it is invalid and thus empty.  (Contributed by Stefan
-       O'Rear, 2-Nov-2014.) $)
-    fvssunirn $p |- ( F ` X ) C_ U. ran F $=
-      ( va cvv wcel cfv crn cuni wss cv wceq fveq2 sseq1d wbr c0 fvbr0 vex fvex
-      wo mpbiri brelrn elssuni syl 0ss sseq1 jaoi ax-mp vtoclg wn fvprc pm2.61i
-      ) BDEZBAFZAGZHZIZCJZAFZUOIZUPCBDUQBKURUMUOUQBALMUQURANZUROKZSUSAUQPUTUSVA
-      UTURUNEUSUQURACQUQARUAURUNUBUCVAUSOUOIZUOUDZUROUOUETUFUGUHULUIZUPVBVCVDUM
-      OUOBAUJMTUK $.
-      $( [2-Nov-2014] $)
-  $}
-
-  ${
     $d i j a b c $.  $d S i j a b c $.  $d C a b c $.
 
     $( Lemma for ~ fin23lem22 . $)
@@ -16435,17 +16811,6 @@ $)
        ideal has a single generator. $)
     df-lpir $a |- LPIR = { w e. Ring | ( LIdeal ` w ) = ( LPIdeal ` w ) } $.
   $}
-
-
-  $( All function values are either null or in the range.  (Contributed by
-     Stefan O'Rear, 3-Jan-2015.) $)
-  fvelrn0 $p |- ( F ` X ) e. ( ran F u. { (/) } ) $=
-    ( cvv wcel cfv crn c0 csn cun wbr wceq wo fvbr0 wa simpr fvex simpl brelrng
-    a1i syl3anc elun1 syl 0ex snid elun2 ax-mp eleq1 mpbiri adantr jaoian fvprc
-    mpan wn syl6eqel pm2.61i ) BCDZBAEZAFZGHZIZDZBUQAJZUQGKZLUPVAABMVBUPVAVCVBU
-    PNZUQURDZVAVDUPUQCDZVBVEVBUPOVFVDBAPSVBUPQBUQACCRTUQURUSUAUBVCVAUPVCVAGUTDZ
-    GUSDVGGUCUDGUSURUEUFZUQGUTUGUHUIUJULUPUMUQGUTBAUKVHUNUO $.
-    $( [3-Jan-2015] $)
 
   ${
     $d R r g $.  $d P r g $.  $d B r g $.  $d r K g $.  $d U g $.  $d I g $.
