@@ -21,6 +21,39 @@ $)
       $( [29-Jan-2015] $)
   $}
 
+
+  $( No class is unequal to itself.  (Contributed by Stefan O'Rear,
+     1-Jan-2015.) $)
+  neirr $p |- -. A =/= A $=
+    ( wne wn wceq eqid nne mpbir ) AABCAADAEAAFG $.
+    $( [1-Jan-2015] $)
+
+  ${
+    $d ph z w $.  $d ps z w $.  $d x y z w $.
+    $( The difference of two ordered-pair abstractions.  (Contributed by Stefan
+       O'Rear, 17-Jan-2015.) $)
+    difopab $p |- ( { <. x , y >. | ph } \ { <. x , y >. | ps } ) =
+        { <. x , y >. | ( ph /\ -. ps ) } $=
+      ( vz vw copab cdif wn wa wrel relopab cv wcel sban sbbii bitri opelopabsb
+      wsb sbn reldif ax-mp cop anbi2i notbii anbi12i 3bitr4ri 3bitr4i eqrelriiv
+      eldif ) EFACDGZBCDGZHZABIZJZCDGZUKKUMKACDLUKULUAUBUOCDLEMFMUCZUKNZUQULNZI
+      ZJZUOCESZDFSZUQUMNUQUPNACESZUNCESZJZDFSZVDDFSZBCESZDFSZIZJZVCVAVGVHVEDFSZ
+      JVLVDVEDFOVMVKVHVMVIIZDFSVKVEVNDFBCETPVIDFTQUDQVBVFDFAUNCEOPURVHUTVKACDEF
+      RUSVJBCDEFRUEUFUGUQUKULUJUOCDEFRUHUI $.
+      $( [17-Jan-2015] $)
+  $}
+
+  $( Membership of the original in a power set. $)
+  pwidg $p |- ( A e. V -> A e. ~P A ) $=
+    ( wcel cpw wss ssid elpwg mpbiri ) ABCAADCAAEAFAABGH $.
+    $( [1-Feb-2015] $)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Additional theory of functions
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
   ${
     $d a b B $.
     $( A mapping operation with empty domain. $)
@@ -120,6 +153,92 @@ $)
     wss syl5eq eqeq1d syl5bb ) CBDEFCGZBHZEFCAIZBARZJZBEFCBKUFUCBEUFUCBUBHZBUBB
     LUFBUBRZUGBFUDUHUEUDUBABACMNOBUBPQSTUA $.
     $( [21-Jan-2015] $)
+  ${
+    $d F x y $.  $d G x y $.  $d A x y $.
+    $( Two ways to express the locus of differences between two functions.
+       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
+    fndmdif $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F \ G ) =
+          { x e. A | ( F ` x ) =/= ( G ` x ) } ) $=
+      ( vy wfn wa cdif cdm cv cfv wceq copab dffn5 biimpi wn wex cab wi annim
+      wcel wne crab adantr adantl difeq12d dmeqd difopab dmopab imdistan bicomi
+      dmeqi notbii anbi2i bitr2i 3bitri exbii 19.42v eqeq1 notbid ceqsexv df-ne
+      fvex bitr4i abbii df-rab eqtr4i 3eqtri syl6eq ) CBFZDBFZGZCDHZIAJZBUAZEJZ
+      VNCKZLZGZAEMZVOVPVNDKZLZGZAEMZHZIZVQWAUBZABUCZVLVMWEVLCVTDWDVJCVTLZVKVJWI
+      AEBCNOUDVKDWDLZVJVKWJAEBDNOUEUFUGWFVSWCPGZAEMZIWKEQZARZWHWEWLVSWCAEUHULWK
+      AEUIWNVOWGGZARWHWMWOAWMVOVRWBPZGZGZEQVOWQEQZGWOWKWREWKVSWCSZPVOVRWBSZSZPZ
+      WRVSWCTWTXBXBWTVOVRWBUJUKUMWRVOXAPZGXCWQXDVOVRWBTUNVOXATUOUPUQVOWQEURWSWG
+      VOWSVQWALZPZWGWPXFEVQVNCVCVRWBXEVPVQWAUSUTVAVQWAVBVDUNUPVEWGABVFVGVHVI $.
+      $( [17-Jan-2015] $)
+
+    $( The difference set between two functions is commutative.  (Contributed
+       by Stefan O'Rear, 17-Jan-2015.) $)
+    fndmdifcom $p |- ( ( F Fn A /\ G Fn A ) ->
+        dom ( F \ G ) = dom ( G \ F ) ) $=
+      ( vx wfn wa cv cfv wne crab cdif cdm wb wcel necom rabbiia fndmdif ancoms
+      a1i wceq 3eqtr4a ) BAEZCAEZFDGZBHZUDCHZIZDAJUFUEIZDAJZBCKLCBKLZUGUHDAUGUH
+      MUDANUEUFOSPDABCQUCUBUJUITDACBQRUA $.
+      $( [17-Jan-2015] $)
+
+    $( The difference set of two functions is empty if and only if the
+       functions are equal.  (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
+    fndmdifeq0 $p |- ( ( F Fn A /\ G Fn A ) ->
+        ( dom ( F \ G ) = (/) <-> F = G ) ) $=
+      ( vx wfn wa cv cfv wne crab c0 wceq wral cdif cdm wb wn rabeq0 nne ralbii
+      bitri a1i fndmdif eqeq1d eqfnfv2 3bitr4d ) BAECAEFZDGZBHZUHCHZIZDAJZKLZUI
+      UJLZDAMZBCNOZKLBCLUMUOPUGUMUKQZDAMUOUKDARUQUNDAUIUJSTUAUBUGUPULKDABCUCUDD
+      ABCUEUF $.
+      $( [17-Jan-2015] $)
+
+    $( Two ways to express the locus of equality between two functions.
+       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
+    fndmin $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F i^i G ) =
+          { x e. A | ( F ` x ) = ( G ` x ) } ) $=
+      ( vy wfn wa cin cdm wcel cfv wceq copab crab dffn5 biimpi syl6eq wex cab
+      cv ineqan12d inopab dmeqd 19.42v anandi exbii fvex ceqsexv anbi2i 3bitr3i
+      eqeq1 abbii dmopab df-rab 3eqtr4i ) CBFZDBFZGZCDHZIATZBJZETZUTCKZLZGZVAVB
+      UTDKZLZGZGZAEMZIZVCVFLZABNZURUSVJURUSVEAEMZVHAEMZHVJUPUQCVNDVOUPCVNLAEBCO
+      PUQDVOLAEBDOPUAVEVHAEUBQUCVIERZASVAVLGZASVKVMVPVQAVAVDVGGZGZERVAVRERZGVPV
+      QVAVREUDVSVIEVAVDVGUEUFVTVLVAVGVLEVCUTCUGVBVCVFUKUHUIUJULVIAEUMVLABUNUOQ
+      $.
+      $( [17-Jan-2015] $)
+  $}
+
+  ${
+    $d F x y $.  $d A x y $.  $d X x y $.
+    $( Express the class of fixed points of a function. $)
+    fninfp $p |- ( F Fn A -> dom ( F i^i _I ) = { x e. A | ( F ` x ) = x } ) $=
+      ( wfn cid cin cdm cres cv cfv wceq crab inres incom reseq1i eqtri 3eqtr4i
+      fnresdm ineq1d syl5reqr dmeqd fnresi fndmin mpan2 wcel fvresi rabbiia a1i
+      eqeq2d 3eqtrd ) CBDZCEFZGCEBHZFZGZAIZCJZUPUMJZKZABLZUQUPKZABLZUKULUNUKUNC
+      BHZEFZULEVCFZULBHZVDUNVEECFZBHVFECBMVGULBECNOPVCENCEBMQUKVCCEBCRSTUAUKUMB
+      DUOUTKBUBABCUMUCUDUTVBKUKUSVAABUPBUEURUPUQBUPUFUIUGUHUJ $.
+      $( [1-Feb-2015] $)
+
+    $( Property of a fixed point of a function. $)
+    fnelfp $p |- ( ( F Fn A /\ X e. A ) -> ( X e. dom ( F i^i _I ) <->
+          ( F ` X ) = X ) ) $=
+      ( vx wfn cid cin cdm wcel cv cfv wceq crab fninfp eleq2d fveq2 id eqeq12d
+      elrab3 sylan9bb ) BAEZCBFGHZICDJZBKZUCLZDAMZICAICBKZCLZUAUBUFCDABNOUEUHDC
+      AUCCLZUDUGUCCUCCBPUIQRST $.
+      $( [1-Feb-2015] $)
+  $}
+
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Additional elementary topology
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d a b c $.
+    $( The closed-set generator is a well-behaved function. $)
+    fncld $p |- Clsd Fn Top $=
+      ( va vb cuni cdif wcel cpw crab cvv ccld ctop wfn df-cld fnmpt uniex pwex
+      cv vex rabex a1i mprg ) APZCZBPDUAEZBUBFZGZHEZIJKAJAJUEIHBALMUFUAJEUCBUDU
+      BUAAQNORST $.
+      $( [1-Feb-2015] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -850,6 +969,15 @@ $)
       URCUFUGBURCUHUIUTUJUK $.
       $( [31-Jan-2015] $)
 
+    $( Moore-closure is a well behaved function. $)
+    fnmrc $p |- mrCls Fn U. ran Moore $=
+      ( vx vc vs cv cuni cpw wss crab cint cmpt cvv wcel cmrc cmre df-mrc fnmpt
+      crn wfn cfv mreunirn cxp wf mrcflem fssxp syl vex uniex pwex xpex sylancl
+      ssexg sylbi mprg ) ABDZEZFZADCDGCUNHIJZKLZMNQEZRBUSBUSUQMKACBOPUNUSLUNUON
+      SLZURUNTUTUQUPUNUAZGZVAKLURUTUPUNUQUBVBAUNUOCUCUPUNUQUDUEUPUNUOUNBUFZUGUH
+      VCUIUQVAKUKUJULUM $.
+      $( [1-Feb-2015] $)
+
     mrcfval.f $e |- F = ( mrCls ` C ) $.
     $( Value of the function expression for the Moore closure. $)
     mrcfval $p |- ( C e. ( Moore ` X ) -> F =
@@ -1185,6 +1313,410 @@ $)
     VBUHEZVLVETZVLVBAVNVBPUIZUJULSUMUTVQVKUTVOVQVPVOVQVRVSUNSVBVEVEPUOSVAVCVFVI
     UPUQVDVHVEVHPURS $.
     $( [31-Jan-2015] $)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Characterization of closure operators.  Kuratowski closure axioms
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c TopOn $.
+
+  $( The class function of all topologies over a base set. $)
+  ctopon $a class TopOn $.
+
+  ${
+    $d b j $.
+    $( Define the set of topologies with a given base set. $)
+    df-topon $a |- TopOn = ( b e. _V |-> { j e. Top | U. j = b } ) $.
+  $}
+
+  ${
+    $d B b j $.  $d J b j $.
+    $( Property of bieng a topology with a given base set. $)
+    istopon $p |- ( J e. ( TopOn ` B ) <-> ( J e. Top /\ U. J = B ) ) $=
+      ( vj vb ctopon cfv wcel cvv ctop cuni wceq wa cdm cv crab cpw vex wss a1i
+      pwex elfvdm elex syl uniexg eleq1 syl5ibcom imp eqeq2 rabbidv df-topon wi
+      rabss pwuni mpbir pweqd syl5eleq mprgbir ssexi fvmpt3 eleq2d unieq eqeq1d
+      elpw pweq elrab syl6bb pm5.21nii ) BAEFZGZAHGZBIGZBJZAKZLZVIAEMZGVJBAEUAA
+      VOUBUCVKVMVJVKVLHGVMVJBIUDVLAHUEUFUGVJVIBCNZJZAKZCIOZGVNVJVHVSBDAVQDNZKZC
+      IOZVSHEHVTAKWAVRCIVTAVQUHUICDUJWBHGVTHGWBVTPZPZWCVTDQTTWBWDRWAVPWDGUKZCIW
+      ACIWDULWEVPIGWAVPVQPZPZWDVPWGGVPWFRVPUMVPWFCQVCUNWAWFWCVQVTVDUOUPSUQURSUS
+      UTVRVMCBIVPBKVQVLAVPBVAVBVEVFVG $.
+      $( [31-Jan-2015] $)
+  $}
+
+  ${
+    $d B a b c x y $.  $d V a b c x y $.  $d K x y $.
+    $( The topologies over a given base set form a Moore collection: the
+       intersection of any family of them is a topology, including the empty
+       (relative) intersection which gives the discrete topology ~ distop . $)
+    toponmre $p |- ( B e. V -> ( TopOn ` B ) e. ( Moore ` ~P B ) ) $=
+      ( va vb vc vx vy cv wcel wceq wss cuni ctop istopon sylibr wa wral adantl
+      syl wel ctopon cfv cpw cmre fveq2 pweq fveq2d eleq12d wtru simprbi eqimss
+      sspwuni vex elpw ssriv a1i distop unipw mpbir2an c0 wne cint wi wal simpl
+      cin sselda adantrl simplbi intss1 sstrd uniopn expr ralrimiv uniex elint2
+      syl2anc ex alrimiv simpll simplrl sseldd simplrr inopn syl3anc ralrimivva
+      ralrimiva inex1 cvv wb intex biimpi istopg mpbir2and wex ad2antlr elssuni
+      n0 ancoms sseqtrd exlimdv mpd unissb eqid topopn eqeltrrd unissel 3adant1
+      sylanbrc ismred trud vtoclg ) CHZUAUBZXMUCZUDUBZIZAUAUBZAUCZUDUBZICABXMAJ
+      ZXNXRXPXTXMAUAUEYAXOXSUDXMAUFUGUHXQUIXNXODXNXOUCZKUIDXNYBDHZXNIZYCXOKZYCY
+      BIYDYCLZXMJZYEYDYCMIYGXMYCNUJYGYFXMKYEYFXMUKYCXMULOSYCXODUMUNOUOUPXOXNIZU
+      IYHXOMIXOLXMJXMCUMZUQXMURXMXONUSUPYCXNKZYCUTVAZYCVBZXNIZUIYJYKPZYLMIZYLLZ
+      XMJZYMYNYOEHZYLKZYRLZYLIZVCZEVDZYRFHZVFZYLIZFYLQEYLQZYNUUBEYNYSUUAYNYSPZY
+      TUUDIZFYCQUUAUUHUUIFYCYNYSFDTZUUIYNYSUUJPZPZUUDMIZYRUUDKZUUIUULUUDXNIZUUM
+      YNUUJUUOYSYNYCXNUUDYJYKVEZVGZVHUUOUUMUUDLZXMJZXMUUDNZVISUUKUUNYNUUKYRYLUU
+      DYSUUJVEUUJYLUUDKYSUUDYCVJZRVKRYRUUDVLVQVMVNFYTYCYREUMZVOVPOVRVSYNUUFEFYL
+      YLYNYRYLIZUUDYLIZPZPZUUEGHZIZGYCQUUFUVFUVHGYCUVFGDTZPZUVGMIZEGTFGTUVHUVJU
+      VGXNIZUVKUVFYCXNUVGYJYKUVEVTVGUVLUVKUVGLXMJXMUVGNVISUVJYLUVGYRUVIYLUVGKUV
+      FUVGYCVJRZYNUVCUVDUVIWAWBUVJYLUVGUUDUVMYNUVCUVDUVIWCWBYRUUDUVGWDWEWGGUUEY
+      CYRUUDUVBWHVPOWFYNYLWIIZYOUUCUUGPWJYKUVNYJYKUVNYCWKWLREFWIYLWMSWNYNYPXMKZ
+      XMYLIZYQYNYRXMKZEYLQUVOYNUVQEYLYNUVCPZUUJFWOZUVQYKUVSYJUVCYKUVSFYCWRWLWPU
+      VRUUJUVQFYNUVCUUJUVQYNUVCUUJPZPZYRUURXMUVTYRUURKZYNUVTEFTZUWBUUJUVCUWCUUJ
+      YLUUDYRUVAVGWSYRUUDWQSRUWAUUOUUSYNUUJUUOUVCUUQVHUUOUUMUUSUUTUJSWTVMXAXBWG
+      EYLXMXCOYNCETZEYCQUVPYNUWDEYCYNEDTPZYTXMYRUWEYRXNIZYTXMJZYNYCXNYRUUPVGZUW
+      FYRMIZUWGXMYRNZUJSUWEUWIYTYRIUWEUWFUWIUWHUWFUWIUWGUWJVISYRYTYTXDXESXFWGEX
+      MYCYIVPOYLXMXGVQXMYLNXIXHXJXKXL $.
+      $( [31-Jan-2015] $)
+
+    $( The closed sets of a topology over a set are a Moore collection over the
+       same set. $)
+    cldmreon $p |- ( J e. ( TopOn ` B ) -> ( Clsd ` J ) e. ( Moore ` B ) ) $=
+      ( ctopon cfv wcel ccld cuni cmre ctop wceq istopon simplbi cldmre simprbi
+      eqid syl fveq2d eleqtrd ) BACDEZBFDZBGZHDZAHDSBIEZTUBESUCUAAJZABKZLBUAUAO
+      MPSUAAHSUCUDUENQR $.
+      $( [31-Jan-2015] $)
+
+    $d K a b c d $.
+    $( A family is the closed sets of a topology iff it is a Moore collection
+       and closed under finite union. $)
+    iscldtop $p |- ( K e. ( Clsd " ( TopOn ` B ) ) <-> ( K e. ( Moore ` B ) /\
+          (/) e. K /\ A. x e. K A. y e. K ( x u. y ) e. K ) ) $=
+      ( va vb vc ccld wcel c0 cv wral wceq ctop syl wa cdif wss difeq2 eleq1d
+      ctopon cfv cima cmre cun w3a wrex wfun wfn fncld fnfun ax-mp fvelima mpan
+      cldmreon cuni istopon simplbi 0cld uncld 3expb ralrimivva 3jca raleqbi1dv
+      sylan eleq1 eleq2 3anbi123d syl5ibcom rexlimiv cpw crab eqid cldval uniss
+      ssrab2 unipw sseqtri a1i mre1cl 3ad2ant1 pwidg difidALT syl5eqel sylanbrc
+      simp2 elrab unissel syl2anc pweqd difeq1d rabeqbidv adantl mresspw sselda
+      sseli wb elrab3 difss elpw2g adantr mpbiri elpwi dfss4 sylib 3bitrd eqtrd
+      weq eqrdav wi wal cin sstr mpan2 sspwuni vex uniex elpw bitr4i unieq uni0
+      biimpi syl6eq difeq2d dif0 syl5ibrcom imp wne ciin iindif2 uniiun difeq2i
+      ciun syl6reqr eqeltrd pm2.61dane ex ad2antrl simprbi cvv alrimiv ad2antll
+      ssinss1 inex1 3imtr4i difindi simpl3 uneq1 uneq2 rcla42va syl21anc rabexg
+      pwexg istopg mpbir2and cdm ssriv sseqtr4i funfvima2 mp2an eqeltrrd impbii
+      fndm ) DHCUAUBZUCZIZDCUDUBZIZJDIZAKZBKZUEZDIZBDLZADLZUFZUVFEKZHUBZDMZEUVD
+      UGZUVPHUHZUVFUVTHNUIZUWAUJNHUKULZEDUVDHUMUNUVSUVPEUVDUVQUVDIZUVRUVGIZJUVR
+      IZUVLUVRIZBUVRLZAUVRLZUFUVSUVPUWDUWEUWFUWICUVQUOUWDUVQNIZUWFUWDUWJUVQUPCM
+      CUVQUQURZUVQUSOUWDUWGABUVRUVRUWDUWJUVJUVRIZUVKUVRIZPUWGUWKUWJUWLUWMUWGUVJ
+      UVKUVQUTVAVEVBVCUVSUWEUVHUWFUVIUWIUVOUVRDUVGVFUVRDJVGUWHUVNAUVRDUWGUVMBUV
+      RDUVRDUVLVGVDVDVHVIVJOUVPCUVQQZDIZECVKZVLZHUBZDUVEUVPUWRUWQUPZFKZQZUWQIZF
+      UWSVKZVLZDUVPUWQNIZUWRUXDM?FUWQUWSUWSVMVNOUVPUXDCUWTQZUWQIZFUWPVLZDUVPUXB
+      UXGFUXCUWPUVPUWSCUVPUWSCRZCUWQIZUWSCMZUXIUVPUWSUWPUPZCUWQUWPRZUWSUXLRUWOE
+      UWPVPZUWQUWPVOULCVQVRVSUVPCUWPIZCCQZDIZUXJUVPCDIZUXOUVHUVIUXRUVODCVTZWAZC
+      DWBOUVPUXPJDCWCUVHUVIUVOWFWDUWOUXQECUWPUVQCMUWNUXPDUVQCCSTWGWEUWQCWHWIZWJ
+      UVPUXAUXFUWQUVPUWSCUWTUYAWKTWLUVHUVIUXHDMUVOUVHGUXHDUWPGKZUXHIZUYBUWPIZUV
+      HUXHUWPUYBUXGFUWPVPWPWMUVHDUWPUYBDCWNWOUVHUYDPZUYCCUYBQZUWQIZCUYFQZDIZUYB
+      DIUYDUYCUYGWQUVHUXGUYGFUYBUWPFGXHUXFUYFUWQUWTUYBCSTWRWMUYEUYFUWPIZUYGUYIW
+      QUYEUYJUYFCRZCUYBWSUVHUYJUYKWQZUYDUVHUXRUYLUXSUYFCDWTOXAXBUWOUYIEUYFUWPUV
+      QUYFMUWNUYHDUVQUYFCSTWROUYEUYHUYBDUYDUYHUYBMZUVHUYDUYBCRUYMUYBCXCUYBCXDXE
+      WMTXFXIWAXGXGUVPUWQUVDIZUWRUVEIZUVPUXEUXKUYNUVPUXEUWTUWQRZUWTUPZUWQIZXJZF
+      XKZUWTUYBXLZUWQIZGUWQLFUWQLZUVPUYSFUVPUYPUYRUVPUYPPZUYQUWPIZCUYQQZDIZUYRU
+      YPVUEUVPUYPUWTUWPRZVUEUYPUXMVUHUXNUWTUWQUWPXMXNVUHVUEVUHUYQCRVUEUWTCXOUYQ
+      CUWTFXPZXQXRXSYBOWMVUDVUGUWTJVUDUWTJMZVUGUVPVUJVUGXJZUYPUVHUVIVUKUVOUVHVU
+      GVUJUXRUXSVUJVUFCDVUJVUFCJQCVUJUYQJCVUJUYQJUPJUWTJXTYAYCYDCYEYCTYFWAXAYGV
+      UDUWTJYHZPVUFGUWTUYFYIZDVULVUFVUMMVUDVULVUMCGUWTUYBYMZQVUFGUWTCUYBYJUYQVU
+      NCGUWTYKYLYNWM?YOYPUWOVUGEUYQUWPUVQUYQMUWNVUFDUVQUYQCSTWGWEYQUUAUVPVUBFGU
+      WQUWQUVPUWTUWQIZUYBUWQIZPZPZVUAUWPIZCVUAQZDIZVUBVUOVUSUVPVUPVUOUWTUWPIZVU
+      SUWQUWPUWTUXNWPUWTCRVUACRVVBVUSUWTUYBCUUCUWTCVUIXRVUACUWTUYBVUIUUDXRUUEOY
+      RVURVUTUXFUYFUEZDCUWTUYBUUFVURUXFDIZUYFDIZUVOVVCDIZVUOVVDUVPVUPVUOVVBVVDU
+      WOVVDEUWTUWPEFXHUWNUXFDUVQUWTCSTWGYSYRVUPVVEUVPVUOVUPUYDVVEUWOVVEEUYBUWPE
+      GXHUWNUYFDUVQUYBCSTWGYSUUBUVHUVIUVOVUQUUGUVMVVFUXFUVKUEZDIABUXFUYFDDUVJUX
+      FMUVLVVGDUVJUXFUVKUUHTUVKUYFMVVGVVCDUVKUYFUXFUUITUUJUUKWDUWOVVAEVUAUWPUVQ
+      VUAMUWNVUTDUVQVUACSTWGWEVBUVPUWQYTIZUXEUYTVUCPWQUVPUXRVVHUXTUXRUWPYTIVVHC
+      DUUMUWOEUWPYTUULOOFGYTUWQUUNOUUOUYACUWQUQWEUWAUVDHUUPZRUYNUYOXJUWCUVDNVVI
+      EUVDNUWKUUQUWBVVINMUJNHUVCULUURUVDUWQHUUSUUTOUVAUVB $.
+  $}
+
+  ${
+    $d ph x y z $.  $d B x y z $.  $d F x y z $.  $d V x y z $.
+    ismrcd.b $e |- ( ph -> B e. V ) $.
+    ismrcd.f $e |- ( ph -> F : ~P B --> ~P B ) $.
+    ismrcd.e $e |- ( ( ph /\ x C_ B ) -> x C_ ( F ` x ) ) $.
+    ismrcd.m $e |- ( ( ph /\ x C_ B /\ y C_ x ) -> ( F ` y ) C_ ( F ` x ) ) $.
+    ismrcd.i $e |- ( ( ph /\ x C_ B ) -> ( F ` ( F ` x ) ) = ( F ` x ) ) $.
+    $( Any function from the subsets of a set to itself, which is extensive
+       (satisfies ~ mrcssid ), isotone (satisfies ~ mrcss ), and idempotent
+       (satisfies ~ mrcidm ) has a collection of fixed points which is a Moore
+       collection, and itself is the closure operator for that collection.
+       This can be taken as an alternate definition for the closure operators.
+       This is the first half, ~ ismrcd2 is the second. $)
+    ismrcd1 $p |- ( ph -> dom ( F i^i _I ) e. ( Moore ` B ) ) $=
+      ( vz wss wceq syl wcel cfv wb syl2anc 3ad2ant1 cid cin cdm cpw inss1 dmss
+      ax-mp fdm syl5sseq ssid elpwg mpbiri ffvelrn fvex elpw sylib wral sylan2b
+      wf cv vex ralrimiva fveq2 sseq12d rcla4va eqssd wfn ffn fnelfp mpbird wne
+      id c0 w3a cint wel wa wal cuni simp2 sstrd simp3 intssuni2 unipw syl6sseq
+      cvv intex sylbi 3ad2ant3 adantr 3expib alrimiv sselda intss1 adantl sseq1
+      jca anbi2d sseq1d imbi12d cla4gv syl3c mpbid sseqtrd ssint sylibr ismred
+      wi ) AEUAUBZUCZDLAEUCZXJDUDZXIEMXJXKMEUAUEXIEUFUGAXLXLEUSZXKXLNHXLXLEUHOU
+      IZADXJPZDEQZDNZAXPDAXPXLPZXPDMAXMDXLPZXRHAXSDDMZDUJADFPXSXTRGDDFUKOULZXLX
+      LDEUMSXPDDEUNUOUPAXSBUTZYBEQZMZBXLUQZDXPMZYAAYDBXLYBXLPZAYBDMZYDYBDBVAUOZ
+      IURVBZYDYFBDXLYBDNZYBDYCXPYKVLYBDEVCVDVESVFAEXLVGZXSXOXQRAXMYLHXLXLEVHOZY
+      AXLEDVISVJALUTZXJMZYNVMVKZVNZYNVOZXJPZYREQZYRNZYQYTYRYQYTYBMZBYNUQYTYRMYQ
+      UUBBYNYQBLVPZVQZYTYCYBUUDYRXLPZYHCUTZYBMZVQZUUFEQZYCMZXHZCVRZYHYRYBMZVQZY
+      TYCMZYQUUEUUCYQUUEYRDMZYQYRXLVSZDYQYNXLMYPYRUUQMYQYNXJXLAYOYPVTZAYOXJXLMY
+      PXNTWAZAYOYPWBYNXLWCSDWDWEYPAUUEUUPRZYOYPYRWFPUUTYNWGYRDWFUKWHWIVJZWJYQUU
+      LUUCAYOUULYPAUUKCAYHUUGUUJJWKWLTWJUUDYHUUMUUDYGYHYQYNXLYBUUSWMZYIUPUUCUUM
+      YQYBYNWNWOWQUUKUUNUUOXHCYRXLUUFYRNZUUHUUNUUJUUOUVCUUGUUMYHUUFYRYBWPWRUVCU
+      UIYTYCUUFYREVCWSWTXAXBUUDYBXJPZYCYBNZYQYNXJYBUURWMUUDYLYGUVDUVERYQYLUUCAY
+      OYLYPYMTZWJUVBXLEYBVISXCXDVBBYTYNXEXFYQUUEYEYRYTMZUVAAYOYEYPYJTYDUVGBYRXL
+      YBYRNZYBYRYCYTUVHVLYBYREVCVDVESVFYQYLUUEYSUUARUVFUVAXLEYRVISVJXG $.
+      $( [1-Feb-2015] $)
+
+    $( Second half of ~ ismrcd . $)
+    ismrcd2 $p |- ( ph -> F = ( mrCls ` dom ( F i^i _I ) ) ) $=
+      ( vz cfv wcel wa wss adantr wi cvv wceq cpw cid cin cdm cmrc wfn ffn cmre
+      wf syl ismrcd1 eqid mrcf 3syl cv mrcssv elpwi mrcssid syl2an wal alrimivv
+      3expib vex weq wb sseq1 adantl sseq12 anbi12d fveq2 imbi12d cla42gv mp2an
+      fvex mp2and mrccl elpw sylibr fnelfp syl2anc mpbid sseqtrd anbi2d sseq12d
+      chvarv sylan2 fveq2d eqeq12d ffvelrn sylan mpbird mrcsscl syl3anc eqfnfvd
+      id eqssd ) ALDUAZEEUBUCUDZUEMZAWQWQEUIZEWQUFZHWQWQEUGUJZAWRDUHMNZWQWRWSUI
+      WSWQUFABCDEFGHIJKUKZWRWSDWSULZUMWQWRWSUGUNALUOZWQNZOZXFEMZXFWSMZXHXIXJEMZ
+      XJXHXJDPZXFXJPZXIXKPZAXLXGAXCXLXDWRXFWSDXEUPUJZQAXCXFDPZXMXGXDXFDUQZWRXFW
+      SDXEURUSAXLXMOZXNRZXGABUOZDPZCUOZXTPZOZYBEMZXTEMZPZRZBUTCUTZXSAYHCBAYAYCY
+      GJVBVAXFSNXJSNYIXSRLVCXFWSVNZYHXSCBXFXJSSCLVDZXTXJTZOZYDXRYGXNYMYAXLYCXMY
+      LYAXLVEYKXTXJDVFVGYBXFXTXJVHVIYKYEXITYFXKTYGXNVEYLYBXFEVJXTXJEVJYEXIYFXKV
+      HUSVKVLVMUJQVOXHXJWRNZXKXJTZAXCXPYNXGXDXQWRXFWSDXEVPUSXHXAXJWQNZYNYOVEAXA
+      XGXBQZAYPXGAXLYPXOXJDYJVQVRQWQEXJVSVTWAWBXHXCXFXIPZXIWRNZXJXIPAXCXGXDQXGA
+      XPYRXQAYAOZXTYFPZRAXPOZYRRBLBLVDZYTUUBUUAYRUUCYAXPAXTXFDVFWCZUUCXTXFYFXIU
+      UCWOXTXFEVJZWDVKIWEWFXHYSXIEMZXITZXGAXPUUGXQYTYFEMZYFTZRUUBUUGRBLUUCYTUUB
+      UUIUUGUUDUUCUUHUUFYFXIUUCYFXIEUUEWGUUEWHVKKWEWFXHXAXIWQNZYSUUGVEYQAWTXGUU
+      JHWQWQXFEWIWJWQEXIVSVTWKWRXFWSXIDXEWLWMWPWN $.
+      $( [1-Feb-2015] $)
+  $}
+
+  ${
+    $d F x y z w $.  $d B x y z w $.
+    $( A function is a Moore closure operator iff it satisfies ~ mrcssid ,
+       ~ mrcss , and ~ mrcidm . $)
+    ismrc $p |- ( F e. ( mrCls " ( Moore ` B ) ) <-> ( B e. _V /\
+          F : ~P B --> ~P B /\ A. x A. y ( ( x C_ B /\ y C_ x ) ->
+              ( x C_ ( F ` x ) /\ ( F ` y ) C_ ( F ` x ) /\
+                ( F ` ( F ` x ) ) = ( F ` x ) ) ) ) ) $=
+      ( vz vw cmrc cfv wcel cvv cv wss wa wceq w3a wi wal syl wb adantr cmre wf
+      cima cpw wrex wfun crn cuni wfn fnmrc fnfun ax-mp fvelima mpan elex eqid1
+      mre1cl mrcf mresspw fss syl2anc mrcssid adantrr mrcss ancom2s mrcidm 3jca
+      3expb alrimivv feq1 fveq1 sseq2d sseq12d fveq12d eqeq12d 3anbi123d imbi2d
+      ex id 2albidv 3anbi23d syl5ibcom rexlimiv cid cin simp1 simp2 ssid 3simpb
+      cdm imim2i 2alimi vex weq sseq1 sseq12 ancoms anbi12d fveq2 imbi12d mp2an
+      fveq2d cla42gv 3ad2ant3 mpan2i imp simpld syl2anr 3impib simprd fvssunirn
+      ismrcd2 ismrcd1 fndm sseqtr4i funfvima2 eqeltrd impbii ) DGCUAHZUCZIZCJIZ
+      CUDZYCDUBZAKZCLZBKZYELZMZYEYEDHZLZYGDHZYJLZYJDHZYJNZOZPZBQAQZOZYAEKZGHZDN
+      ZEXSUEZYSGUFZYAUUCGUAUGUHZUIZUUDUJUUEGUKULZEDXSGUMUNUUBYSEXSYTXSIZYBYCYCU
+      UAUBZYIYEYEUUAHZLZYGUUAHZUUJLZUUJUUAHZUUJNZOZPZBQAQZOUUBYSUUHYBUUIUURUUHC
+      YTIYBYTCUQCYTUORUUHYCYTUUAUBYTYCLUUIYTUUACUUAUPZURYTCUSYCYTYCUUAUTVAUUHUU
+      QABUUHYIUUPUUHYIMUUKUUMUUOUUHYFUUKYHYTYEUUACUUSVBVCUUHYHYFUUMUUHYHYFUUMYT
+      YGUUAYECUUSVDVHVEUUHYFUUOYHYTYEUUACUUSVFVCVGVRVIVGUUBUUIYDUURYRYBYCYCUUAD
+      VJUUBUUQYQABUUBUUPYPYIUUBUUKYKUUMYMUUOYOUUBUUJYJYEYEUUADVKZVLUUBUULYLUUJY
+      JYGUUADVKUUTVMUUBUUNYNUUJYJUUBUUJYJUUADUUBVSUUTVNUUTVOVPVQVTWAWBWCRYSDDWD
+      WEWJZGHZXTYSEFCDJYBYDYRWFZYBYDYRWGZYSYTCLZMZYTYTDHZLZUVGDHZUVGNZYSUVEUVHU
+      VJMZYSUVEYTYTLZUVKYTWHYRYBUVEUVLMZUVKPZYDYRYIYKYOMZPZBQAQZUVNYQUVPABYPUVO
+      YIYKYMYOWIWKWLYTJIZUVRUVQUVNPEWMZUVSUVPUVNABYTYTJJAEWNZBEWNZMZYIUVMUVOUVK
+      UWBYFUVEYHUVLUVTYFUVESZUWAYEYTCWOZTUWAUVTYHUVLSYGYTYEYTWPWQWRUWBYKUVHYOUV
+      JUVTYKUVHSUWAUVTYEYTYJUVGUVTVSYEYTDWSZVMTUVTYOUVJSUWAUVTYNUVIYJUVGUVTYJUV
+      GDUWEXBUWEVOTWRWTXCXARXDXEXFZXGZYSUVEFKZYTLZUWHDHZUVGLZYSYIYMPZBQAQZUVEUW
+      IMZUWKPZYRYBUWMYDYQUWLABYPYMYIYKYMYOWGWKWLXDUVRUWHJIUWMUWOPUVSFWMUWLUWOAB
+      YTUWHJJUVTBFWNZMZYIUWNYMUWKUWQYFUVEYHUWIUVTUWCUWPUWDTUWPUVTYHUWISYGUWHYEY
+      TWPWQWRUWPYLUWJNYJUVGNYMUWKSUVTYGUWHDWSUWEYLUWJYJUVGWPXHWTXCXARXIZUVFUVHU
+      VJUWFXJZXLYSUVAXSIZUVBXTIZYSEFCDJUVCUVDUWGUWRUWSXMUUDXSGWJZLUWTUXAPUUGXSU
+      UEUXBUACXKUUFUXBUUENUJUUEGXNULXOXSUVAGXPXARXQXR $.
+      $( [1-Feb-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Presets and directed sets
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c Preset Dirset $.
+
+  $( Extend class notation with the class of all presets. $)
+  cpreset $a class Preset $.
+
+  $( Extend class notation with the class of all directed sets. $)
+  cdrs $a class Dirset $.
+
+  ${
+    $d f b r x y z $.
+    $( Define the class of preordered sets (presets).  A preset is a set
+       equipped with a transitive and reflexive relation.
+
+       Preorders are a natural generalization of order for sets where there is
+       a well-defined ordering, but it in some sense "fails to capture the
+       whole story", in that there may be pairs of elements which are
+       indistinguishable under the order.  Two elements which are not equal but
+       are less-or-equal to each other behave the same under all order
+       operations and may be thought of as "tied".
+
+       A preorder can naturally be strengthened by requiring that there are no
+       ties, resulting in a partial order, or by stating that all comparable
+       pairs of elements _are_ tied, resulting in an equivalence relation.
+       Every preorder naturally factors into these two types; the tied relation
+       on a preorder is an equivalence relation and the quotient under that
+       relation is a partial order.
+
+       _EDITORIAL_: definition copied from FL's mathbox, expanded on the copy a
+       bit. $)
+    df-preset $a |- Preset = { f | [ ( Base ` f ) / b ] [ ( le ` f ) / r ]
+                A. x e. b A. y e. b A. z e. b ( x r x
+                 /\ ( ( x r y /\ y r z ) -> x r z ) ) } $.
+
+    $( Define the class of directed sets.  A directed set is a nonempty
+       preordered set where every pair of elements have some upper bound.  Note
+       that it is not required that there exist a _least_ upper bound.
+
+       There is no consensus in the literature over whether directed sets are
+       allowed to be empty.  It is slightly more convenient for us if they are
+       not. $)
+    df-drs $a |- Dirset = { f e. Preset | [ ( Base ` f ) / b ]
+        [ ( le ` f ) / r ] ( b =/= (/) /\ A. x e. b A. y e. b E. z e. b
+            ( x r z /\ y r z ) ) } $.
+  $}
+
+  ${
+    $d K f b r x y z $.  $d B f b r x y z $.  $d L f b r x y z $.
+    $d X x y z $.  $d Y x y z $.  $d Z x y z $.
+    isprs.b $e |- B = ( Base ` K ) $.
+    isprs.l $e |- L = ( le ` K ) $.
+    $( Property of being a preordered set. $)
+    isprs $p |- ( K e. Preset <-> ( K e. _V /\ A. x e. B A. y e. B A. z e. B
+          ( x L x /\ ( ( x L y /\ y L z ) -> x L z ) ) ) ) $=
+      ( vr vb cv wbr wa wral cple cfv wsbc cbs wceq wb vf wi cpreset dfsbcq syl
+      fveq2 sbcbidv bitrd eqtr3 mpan2 raleq raleqbi1dv anbi12d imbi12d 2ralbidv
+      fvex breq ralbidv sylan9bb sbc2ie syl6bb df-preset elab4g ) AKZVDIKZLZVDB
+      KZVELZVGCKZVELZMZVDVIVELZUBZMZCJKZNZBVONZAVONZIUAKZOPZQZJVSRPZQZVDVDFLZVD
+      VGFLZVGVIFLZMZVDVIFLZUBZMZCDNZBDNADNZUAEUCVSESZWCVRIEOPZQZJERPZQZWLWMWCWA
+      JWPQZWQWMWBWPSWCWRTVSERUFWAJWBWPUDUEWMWAWOJWPWMVTWNSWAWOTVSEOUFVRIVTWNUDU
+      EUGUHVRWLJIWPWNERUPEOUPVOWPSZVRVNCDNZBDNZADNZVEWNSZWLWSVODSZVRXBTWSDWPSXD
+      GVODWPUIUJVQXAAVODVPWTBVODVNCVODUKULULUEXCVEFSZXBWLTXCFWNSXEHVEFWNUIUJXEW
+      TWKABDDXEVNWJCDXEVFWDVMWIVDVDVEFUQXEVKWGVLWHXEVHWEVJWFVDVGVEFUQVGVIVEFUQU
+      MVDVIVEFUQUNUMURUOUEUSUTVAABCUAIJVBVC $.
+      $( [31-Jan-2015] $)
+
+    $( Lemma for ~ prsref and ~ prstr . $)
+    prslem $p |- ( ( K e. Preset /\ ( X e. B /\ Y e. B /\ Z e. B ) ) ->
+        ( X L X /\ ( ( X L Y /\ Y L Z ) -> X L Z ) ) ) $=
+      ( vx vy vz wcel wbr wa wi cv wral wceq breq1 breq2 w3a cpreset simprbi wb
+      cvv isprs breq12 anidms anbi1d imbi12d anbi12d imbi1d anbi2d rcla43v syl5
+      impcom ) DALEALFALUAZBUBLZDDCMZDECMZEFCMZNZDFCMZOZNZURIPZVFCMZVFJPZCMZVHK
+      PZCMZNZVFVJCMZOZNZKAQJAQIAQZUQVEURBUELVPIJKABCGHUFUCVOVEUSDVHCMZVKNZDVJCM
+      ZOZNUSUTEVJCMZNZVSOZNIJKDEFAAAVFDRZVGUSVNVTWDVGUSUDVFDVFDCUGUHWDVLVRVMVSW
+      DVIVQVKVFDVHCSUIVFDVJCSUJUKVHERZVTWCUSWEVRWBVSWEVQUTVKWAVHEDCTVHEVJCSUKUL
+      UMVJFRZWCVDUSWFWBVBVSVCWFWAVAUTVJFECTUMVJFDCTUJUMUNUOUP $.
+      $( [1-Feb-2015] $)
+
+    $( Less-or-equal is reflexive in a preset. $)
+    prsref $p |- ( ( K e. Preset /\ X e. B ) -> X L X ) $=
+      ( cpreset wcel wa wbr wi w3a id1 3jca prslem sylan2 simpld ) BGHZDAHZIDDC
+      JZTTITKZSRSSSLTUAISSSSSMZUBUBNABCDDDEFOPQ $.
+      $( [1-Feb-2015] $)
+
+    $( Less-or-equal is transitive in a preset. $)
+    prstr $p |- ( ( K e. Preset /\ ( X e. B /\ Y e. B /\ Z e. B ) /\
+          ( X L Y /\ Y L Z ) ) -> X L Z ) $=
+      ( cpreset wcel w3a wbr wa wi prslem simprd 3impia ) BIJZDAJEAJFAJKZDECLEF
+      CLMZDFCLZRSMDDCLTUANABCDEFGHOPQ $.
+      $( [1-Feb-2015] $)
+
+    $( A poset is an antisymmetric preset.
+
+       _EDITORIAL_: could become the definition of poset. $)
+    ispos2 $p |- ( K e. Poset <-> ( K e. Preset /\ A. x e. B A. y e. B
+          ( ( x L y /\ y L x ) -> x = y ) ) ) $=
+      ( vz cvv wcel cv wbr wa weq wi w3a wral bitri ralbii anbi2i df-3an r19.26
+      cpo cpreset an32 2ralbii r19.26-2 rr19.3v 3bitri ispos isprs anbi1i anass
+      3bitr4i ) DIJZAKZUPELZUPBKZELZURUPELMABNOZUSURHKZELMUPVAELOZPZHCQZBCQACQZ
+      MUOUQVBMZHCQZBCQACQZUTBCQZACQZMZMZDUCJDUDJZVJMZVEVKUOVEVGUTHCQZMZBCQACQVH
+      VOBCQZACQZMVKVDVPABCCVDVFUTMZHCQVPVCVSHCVCUQUTMVBMVSUQUTVBUAUQUTVBUERSVFU
+      THCUBRUFVGVOABCCUGVRVJVHVQVIACUTBHCUHSTUITABHCDEFGUJVNUOVHMZVJMVLVMVTVJAB
+      HCDEFGUKULUOVHVJUMRUN $.
+      $( [1-Feb-2015] $)
+  $}
+
+  ${
+    $d K x y z $.
+
+    $( A poset is a preset. $)
+    posprs $p |- ( K e. Poset -> K e. Preset ) $=
+      ( vx vy cpo wcel cpreset cv cple cfv wbr weq cbs wral eqid ispos2 simplbi
+      wa wi ) ADEAFEBGZCGZAHIZJTSUAJQBCKRCALIZMBUBMBCUBAUAUBNUANOP $.
+      $( [1-Feb-2015] $)
+  $}
+
+  ${
+    $d K f b r x y z $.  $d B f b r x y z $.  $d L f b r x y z $.
+    $d X x y z $.  $d Y x y z $.
+    isdrs.b $e |- B = ( Base ` K ) $.
+    isdrs.l $e |- L = ( le ` K ) $.
+    $( Property of being a directed set. $)
+    isdrs $p |- ( K e. Dirset <-> ( K e. Preset /\ B =/= (/) /\
+          A. x e. B A. y e. B E. z e. B ( x L z /\ y L z ) ) ) $=
+      ( vb vr vf cv wbr wa wral cple cfv wsbc cbs wceq cdrs wcel cpreset c0 wne
+      wrex w3a wb fveq2 syl6eqr dfsbcq syl sbcbidv bitrd cvv fvex eqeltri neeq1
+      adantr rexeq raleqbi1dv breq anbi12d 2ralbidv sbc2ie syl6bb df-drs elrab2
+      rexbidv sylan9bb 3anass bitr4i ) EUAUBEUCUBZDUDUEZALZCLZFMZBLZVPFMZNZCDUF
+      ZBDOADOZNZNVMVNWBUGILZUDUEZVOVPJLZMZVRVPWFMZNZCWDUFZBWDOZAWDOZNZJKLZPQZRZ
+      IWNSQZRZWCKEUCUAWNETZWRWMJFRZIDRZWCWSWRWPIDRZXAWSWQDTWRXBUHWSWQESQZDWNESU
+      IGUJWPIWQDUKULWSWPWTIDWSWOFTWPWTUHWSWOEPQZFWNEPUIHUJWMJWOFUKULUMUNWMWCIJD
+      FDXCUOGESUPUQFXDUOHEPUPUQWDDTZWFFTZNWEVNWLWBXEWEVNUHXFWDDUDURUSXEWLWICDUF
+      ZBDOZADOXFWBWKXHAWDDWJXGBWDDWICWDDUTVAVAXFXGWAABDDXFWIVTCDXFWGVQWHVSVOVPW
+      FFVBVRVPWFFVBVCVIVDVJVCVEVFABCKJIVGVHVMVNWBVKVL $.
+      $( [1-Feb-2015] $)
+
+    $( Direction of a directed set. $)
+    drsdir $p |- ( ( K e. Dirset /\ X e. B /\ Y e. B ) ->
+        E. z e. B ( X L z /\ Y L z ) ) $=
+      ( vx vy cdrs wcel cv wbr wa wrex wral wceq breq1 rexbidv cpreset c0 isdrs
+      wne simp3bi anbi1d anbi2d rcla42v syl5com 3impib ) CKLZEBLZFBLZEAMZDNZFUN
+      DNZOZABPZUKIMZUNDNZJMZUNDNZOZABPZJBQIBQZULUMOURUKCUALBUBUDVEIJABCDGHUCUEV
+      DURUOVBOZABPIJEFBBUSERZVCVFABVGUTUOVBUSEUNDSUFTVAFRZVFUQABVHVBUPUOVAFUNDS
+      UGTUHUIUJ $.
+      $( [1-Feb-2015] $)
+  $}
+
+  ${
+    $d K x y z $.  $d B x y z $.
+
+    $( A directed set is a preset. $)
+    drsprs $p |- ( K e. Dirset -> K e. Preset ) $=
+      ( vx vz vy cdrs wcel cpreset cbs cfv c0 wne cv cple wbr wa wrex wral eqid
+      isdrs simp1bi ) AEFAGFAHIZJKBLCLZAMIZNDLUBUCNOCUAPDUAQBUAQBDCUAAUCUARUCRS
+      T $.
+      $( [1-Feb-2015] $)
+
+    drsbn0.b $e |- B = ( Base ` K ) $.
+    $( The base of a directed set is not empty. $)
+    drsbn0 $p |- ( K e. Dirset -> B =/= (/) ) $=
+      ( vx vz vy cdrs wcel cpreset c0 wne cv cple cfv wbr wrex wral eqid isdrs
+      wa simp2bi ) BGHBIHAJKDLELZBMNZOFLUBUCOTEAPFAQDAQDFEABUCCUCRSUA $.
+      $( [1-Feb-2015] $)
+
+    drsdirfi.l $e |- L = ( le ` K ) $.
+    $d K a b c x y $.  $d L a b c x y $.  $d B a b c x y $.  $d X a b c x y $.
+    $( Any _finite_ number of elements in a directed set have a common upper
+       bound.  Here is where the non-emptiness constraint in ~ df-drs first
+       comes into play; without it we would need an additional constraint that
+       ` X ` not be empty. $)
+    drsdirfi $p |- ( ( K e. Dirset /\ X C_ B /\ X e. Fin ) ->
+        E. y e. B A. z e. X z L y ) $=
+      ? $.
+
+    $( Directed sets may be defined in terms of finite subsets.  Again, without
+       nonemptiness we would need to restrict to nonempty subsets here. $)
+    isdrs2 $p |- ( K e. Dirset <-> ( K e. Preset /\
+          A. x e. ( ~P B i^i Fin ) E. y e. B A. z e. x z L y ) ) $=
+      ? $.
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -9756,77 +10288,6 @@ $)
       $( [17-Jan-2015] $)
   $}
 
-  $( No class is unequal to itself.  (Contributed by Stefan O'Rear,
-     1-Jan-2015.) $)
-  neirr $p |- -. A =/= A $=
-    ( wne wn wceq eqid nne mpbir ) AABCAADAEAAFG $.
-    $( [1-Jan-2015] $)
-
-  ${
-    $d ph z w $.  $d ps z w $.  $d x y z w $.
-    $( The difference of two ordered-pair abstractions.  (Contributed by Stefan
-       O'Rear, 17-Jan-2015.) $)
-    difopab $p |- ( { <. x , y >. | ph } \ { <. x , y >. | ps } ) =
-        { <. x , y >. | ( ph /\ -. ps ) } $=
-      ( vz vw copab cdif wn wa wrel relopab cv wcel sban sbbii bitri opelopabsb
-      wsb sbn reldif ax-mp cop anbi2i notbii anbi12i 3bitr4ri 3bitr4i eqrelriiv
-      eldif ) EFACDGZBCDGZHZABIZJZCDGZUKKUMKACDLUKULUAUBUOCDLEMFMUCZUKNZUQULNZI
-      ZJZUOCESZDFSZUQUMNUQUPNACESZUNCESZJZDFSZVDDFSZBCESZDFSZIZJZVCVAVGVHVEDFSZ
-      JVLVDVEDFOVMVKVHVMVIIZDFSVKVEVNDFBCETPVIDFTQUDQVBVFDFAUNCEOPURVHUTVKACDEF
-      RUSVJBCDEFRUEUFUGUQUKULUJUOCDEFRUHUI $.
-      $( [17-Jan-2015] $)
-  $}
-
-  ${
-    $d F x y $.  $d G x y $.  $d A x y $.
-    $( Two ways to express the locus of differences between two functions.
-       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
-    fndmdif $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F \ G ) =
-          { x e. A | ( F ` x ) =/= ( G ` x ) } ) $=
-      ( vy wfn wa cdif cdm cv cfv wceq copab dffn5 biimpi wn wex cab wi annim
-      wcel wne crab adantr adantl difeq12d dmeqd difopab dmopab imdistan bicomi
-      dmeqi notbii anbi2i bitr2i 3bitri exbii 19.42v eqeq1 notbid ceqsexv df-ne
-      fvex bitr4i abbii df-rab eqtr4i 3eqtri syl6eq ) CBFZDBFZGZCDHZIAJZBUAZEJZ
-      VNCKZLZGZAEMZVOVPVNDKZLZGZAEMZHZIZVQWAUBZABUCZVLVMWEVLCVTDWDVJCVTLZVKVJWI
-      AEBCNOUDVKDWDLZVJVKWJAEBDNOUEUFUGWFVSWCPGZAEMZIWKEQZARZWHWEWLVSWCAEUHULWK
-      AEUIWNVOWGGZARWHWMWOAWMVOVRWBPZGZGZEQVOWQEQZGWOWKWREWKVSWCSZPVOVRWBSZSZPZ
-      WRVSWCTWTXBXBWTVOVRWBUJUKUMWRVOXAPZGXCWQXDVOVRWBTUNVOXATUOUPUQVOWQEURWSWG
-      VOWSVQWALZPZWGWPXFEVQVNCVCVRWBXEVPVQWAUSUTVAVQWAVBVDUNUPVEWGABVFVGVHVI $.
-      $( [17-Jan-2015] $)
-
-    $( The difference set between two functions is commutative.  (Contributed
-       by Stefan O'Rear, 17-Jan-2015.) $)
-    fndmdifcom $p |- ( ( F Fn A /\ G Fn A ) ->
-        dom ( F \ G ) = dom ( G \ F ) ) $=
-      ( vx wfn wa cv cfv wne crab cdif cdm wb wcel necom rabbiia fndmdif ancoms
-      a1i wceq 3eqtr4a ) BAEZCAEZFDGZBHZUDCHZIZDAJUFUEIZDAJZBCKLCBKLZUGUHDAUGUH
-      MUDANUEUFOSPDABCQUCUBUJUITDACBQRUA $.
-      $( [17-Jan-2015] $)
-
-    $( The difference set of two functions is empty if and only if the
-       functions are equal.  (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
-    fndmdifeq0 $p |- ( ( F Fn A /\ G Fn A ) ->
-        ( dom ( F \ G ) = (/) <-> F = G ) ) $=
-      ( vx wfn wa cv cfv wne crab c0 wceq wral cdif cdm wb wn rabeq0 nne ralbii
-      bitri a1i fndmdif eqeq1d eqfnfv2 3bitr4d ) BAECAEFZDGZBHZUHCHZIZDAJZKLZUI
-      UJLZDAMZBCNOZKLBCLUMUOPUGUMUKQZDAMUOUKDARUQUNDAUIUJSTUAUBUGUPULKDABCUCUDD
-      ABCUEUF $.
-      $( [17-Jan-2015] $)
-
-    $( Two ways to express the locus of equality between two functions.
-       (Contributed by Stefan O'Rear, 17-Jan-2015.) $)
-    fndmin $p |- ( ( F Fn A /\ G Fn A ) -> dom ( F i^i G ) =
-          { x e. A | ( F ` x ) = ( G ` x ) } ) $=
-      ( vy wfn wa cin cdm wcel cfv wceq copab crab dffn5 biimpi syl6eq wex cab
-      cv ineqan12d inopab dmeqd 19.42v anandi exbii fvex ceqsexv anbi2i 3bitr3i
-      eqeq1 abbii dmopab df-rab 3eqtr4i ) CBFZDBFZGZCDHZIATZBJZETZUTCKZLZGZVAVB
-      UTDKZLZGZGZAEMZIZVCVFLZABNZURUSVJURUSVEAEMZVHAEMZHVJUPUQCVNDVOUPCVNLAEBCO
-      PUQDVOLAEBDOPUAVEVHAEUBQUCVIERZASVAVLGZASVKVMVPVQAVAVDVGGZGZERVAVRERZGVPV
-      QVAVREUDVSVIEVAVDVGUEUFVTVLVAVGVLEVCUTCUGVBVCVFUKUHUIUJULVIAEUMVLABUNUOQ
-      $.
-      $( [17-Jan-2015] $)
-  $}
-
   ${
     $( Express "less than or equals" for general strict orders.  (Contributed
        by Stefan O'Rear, 17-Jan-2015.) $)
@@ -16555,6 +17016,37 @@ $)
   $}
 
   ${
+    $d S f x $.  $d R f x $.  $d P f x $.  $d I f x $.  $d V f x $.
+    dsmmbas2.p $e |- P = ( S Xm_ R ) $.
+    dsmmbas2.b $e |- B = { f e. ( Base ` P ) |
+        dom ( f \ ( 0g o. R ) ) e. Fin } $.
+    $( Base set of the direct sum module using the ~ fndmin abbreviation. $)
+    dsmmbas2 $p |- ( ( R Fn I /\ I e. V ) -> B = ( Base ` ( S (+)m R ) ) ) $=
+      ( vx wfn wcel wa c0g cbs cfv crab wceq cvv c0 ccom cdif cdm cfn cdsmm wne
+      cv co cprdm fveq2i rabeq ax-mp simpll fvco2 sylan neeq2d rabbidva eqid wn
+      noel reldmprdm ovprc1 fveq2d cnx baseid str0 syl6eqr eleq2d mtbiri adantl
+      con4i simplr simpr prdmbasfn wf fn0g mpbi biimpi fco sylancr ffn ad2antrr
+      dffn2 syl fndmdif syl2anc fndm 3eqtr4d eleq1d syl5eq fnex dsmmbase eqtrd
+      ) CFKZFGLZMZAEUGZNCUAZUBUCZUDLZEBOPZQZDCUEUHOPZIWPXBJUGZWQPZXDCPNPZUFZJCU
+      CZQZUDLZEDCUIUHZOPZQZXCWPXBWTEXLQZXMXAXLRXBXNRBXKOHUJWTEXAXLUKULWPWTXJEXL
+      WPWQXLLZMZWSXIUDXPXEXDWRPZUFZJFQZXGJFQZWSXIXPXRXGJFXPXDFLZMXQXFXEXPWNYAXQ
+      XFRWNWOXOUMZFNCXDUNUOUPUQXPWQFKWRFKZWSXSRXPXLCDWQFSGXKXKURXLURXODSLZWPYDX
+      OYDUSZXOWQTLWQUTYEXLTWQYEXLTOPTYEXKTODCUIVAVBVCOVDOPEEVEVFVGVHVIVKVJWNWOX
+      OVLYBWPXOVMVNWNYCWOXOWNFSWRVOZYCWNSSNVOZFSCVOZYFNSKYGVPSNWCVQWNYHFCWCVRFS
+      SNCVSVTFSWRWAWDWBJFWQWRWEWFWNXIXTRZWOXOWNXHFRYIFCWGXGJXHFUKWDWBWHWIUQWJWP
+      CSLXMXCRFGCWKJXMCDESXMURWLWDWMWJ $.
+      $( [1-Feb-2015] $)
+  $}
+
+  ${
+    $d S f x $.  $d R f x $.  $d P f x $.  $d I f x $.  $d V f x $.
+
+    $( For finite products, the direct sum is just the module product. $)
+    dsmmfi $p |- ( ( R Fn I /\ I e. Fin ) -> ( S (+)m R ) = ( S Xm_ R ) ) $=
+      ? $.
+  $}
+
+  ${
     $d S a b $.  $d R a b $.  $d X a b $.  $d I a b $.
     dsmmelbas.p $e |- P = ( S Xm_ R ) $.
     dsmmelbas.c $e |- C = ( S (+)m R ) $.
@@ -16737,8 +17229,6 @@ $)
     $}
   $}
 
-  $( direct sum coincides with products for finite $)
-
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Free modules
@@ -16771,10 +17261,81 @@ $)
         ( k e. i |-> if ( k = j , ( 1r ` r ) , ( 0g ` r ) ) ) ) ) $.
   $}
 
-  $( value of free module $)
-  $( demonstrate base set and operations for pedagogic value, including finite and infinite case, using oF and o. $)
+  ${
+    $d R r i $.  $d I r i $.
+    frlmval.f $e |- F = ( R freeLMod I ) $.
+    $( Value of the free module. $)
+    frlmval $p |- ( ( R e. V /\ I e. W ) -> F =
+        ( R (+)m ( I X. { ( ringLMod ` R ) } ) ) ) $=
+      ? $.
+
+    $( The free module is a module. $)
+    frlmlmod $p |- ( ( R e. Ring /\ I e. W ) -> F e. LMod ) $=
+      ? $.
+
+    ${
+      frlmpws.b $e |- B = ( Base ` F ) $.
+      $( The free module as a restriction of the power module. $)
+      frlmpws $p |- ( ( R e. Ring /\ I e. W ) ->
+          F = ( ( ( ringLMod ` R ) ^s I ) |`s B ) ) $=
+        ? $.
+
+      frlmlss.u $e |- U = ( LSubSp ` ( ( ringLMod ` R ) ^s I ) ) $.
+      $( The base set of the free module is a subspace of the power module. $)
+      frlmlss $p |- ( ( R e. Ring /\ I e. W ) -> B e. U ) $=
+        ? $.
+    $}
+
+    $( The finite free module is a power of the ring module. $)
+    frlmpwsfi $p |- ( ( R e. Ring /\ I e. Fin ) ->
+        F = ( ( ringLMod ` R ) ^s I ) ) $=
+      ? $.
+
+    ${
+      $d N k x $.  $d R k x $.  $d B x $.  $d I k x $.
+      frlmbas.n $e |- N = ( Base ` R ) $.
+      frlmbas.z $e |- Z = ( 0g ` R ) $.
+      frlmbas.b $e |- B = { k e. ( N ^m I ) |
+          ( `' k " ( _V \ { Z } ) ) e. Fin } $.
+      $( Base set of the free module. $)
+      frlmbas $p |- ( ( R e. V /\ I e. W ) -> B = ( Base ` F ) ) $=
+        ? $.
+    $}
+  $}
+
+  ${
+    frlmplusgval.y $e |- Y = ( R freeLMod I ) $.
+    frlmplusgval.b $e |- B = ( Base ` Y ) $.
+    frlmplusgval.r $e |- ( ph -> R e. V ) $.
+    frlmplusgval.i $e |- ( ph -> I e. W ) $.
+    frlmplusgval.f $e |- ( ph -> F e. B ) $.
+    frlmplusgval.g $e |- ( ph -> G e. B ) $.
+    frlmplusgval.a $e |- A = ( +g ` R ) $.
+    frlmplusgval.p $e |- P = ( +g ` Y ) $.
+    $( Addition in a free module. $)
+    frlmplusgval $p |- ( ph -> ( F P G ) = ( F oF A G ) ) $=
+      ? $.
+  $}
+
+  ${
+    frlmvscaval.y $e |- Y = ( R freeLMod I ) $.
+    frlmvscaval.b $e |- B = ( Base ` Y ) $.
+    frlmvscaval.t $e |- T = ( .r ` R ) $.
+    frlmvscaval.k $e |- K = ( Base ` R ) $.
+    frlmvscaval.r $e |- ( ph -> R e. V ) $.
+    frlmvscaval.i $e |- ( ph -> I e. W ) $.
+    frlmvscaval.a $e |- ( ph -> A e. K ) $.
+    frlmvscaval.x $e |- ( ph -> X e. B ) $.
+    $( Scalar multiplication in a free module. $)
+    frlmvscafval $p |- ( ph -> ( A T X ) = ( ( I X. { A } ) oF T X ) ) $=
+      ? $.
+  $}
+
+  $( demonstrate base set and operations for pedagogic value, including finite
+     and infinite case, using oF and o. $)
   $( free module is spanned by basis vectors $)
-  $( evaluation map from a free module to any other module: a map on basis extends (uniquely) to the whole $)
+  $( evaluation map from a free module to any other module: a map on basis
+     extends (uniquely) to the whole $)
   $( use span preservation to show that the free module maps onto a span $)
   $( this allows for neat representation of spans: ellspd $)
   $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
