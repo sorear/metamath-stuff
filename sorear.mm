@@ -224,6 +224,38 @@ $)
   $}
 
 
+  $( Constant function with loose range. $)
+  fconst6 $p |- ( B e. C -> ( A X. { B } ) : A --> C ) $=
+    ( wcel csn cxp wf wss fconstg snssi fss syl2anc ) BCDABEZAMFZGMCHACNGABCIBC
+    JAMCNKL $.
+    $( [1-Feb-2015] $)
+
+  ${
+    $d x A $.  $d x F $.  $d x B $.
+    $( Inverse images under functions expressed as abstractions. $)
+    fncnvima2 $p |- ( F Fn A -> ( `' F " B ) = { x e. A | ( F ` x ) e. B } ) $=
+      ( wfn cv ccnv cima wcel cab cfv crab elpreima abbidv abid2 eqcomi 3eqtr4g
+      wa df-rab ) DBEZAFZDGCHZIZAJZUABIUADKCIZRZAJUBUEABLTUCUFABUACDMNUDUBAUBOP
+      UEABSQ $.
+      $( [1-Feb-2015] $)
+
+    $( Inverse point images under functions expressed as abstractions. $)
+    fniniseg2 $p |- ( F Fn A -> ( `' F " { B } ) =
+          { x e. A | ( F ` x ) = B } ) $=
+      ( wfn ccnv csn cima cv cfv wcel crab wceq fncnvima2 wb fvex elsnc rabbiia
+      a1i syl6eq ) DBEDFCGZHAIZDJZUAKZABLUCCMZABLABUADNUDUEABUDUEOUBBKUCCUBDPQS
+      RT $.
+      $( [1-Feb-2015] $)
+
+    $( Support sets of functions expressed as abstractions. $)
+    fnniniseg2 $p |- ( F Fn A -> ( `' F " ( _V \ { B } ) ) =
+          { x e. A | ( F ` x ) =/= B } ) $=
+      ( wfn ccnv cvv csn cdif cima cv cfv wcel wne fncnvima2 wb eldifsn mpbiran
+      crab fvex a1i rabbiia syl6eq ) DBEDFGCHIZJAKZDLZUDMZABSUFCNZABSABUDDOUGUH
+      ABUGUHPUEBMUGUFGMUHUEDTUFGCQRUAUBUC $.
+      $( [1-Feb-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Additional elementary topology
@@ -864,6 +896,20 @@ $)
       USUOVAVEURBIUDVFUTVDAURBUEUFUGUHUIUK $.
       $( [30-Jan-2015] $)
 
+    $d I c s y $.  $d X y $.  $d C y $.
+    $( A nonempty indexed intersection of closed sets is closed. $)
+    mreiincl $p |- ( ( C e. ( Moore ` X ) /\ I =/= (/) /\
+          A. y e. I S e. C ) -> |^|_ y e. I S e. C ) $=
+      ( vs vc cmre cfv wcel c0 wne wral w3a ciin cv wceq wrex 3ad2ant3 wex cint
+      cab dfiin2g wss simp1 uniiunlem ibi wi n0 hbra1 hbre1 hbab ax-17 hbne ra4
+      hbim com12 elisset ra4e ex syl5 rexcom4 syl6ib syld abn0 exlimi sylbi imp
+      syl6ibr 3adant1 mreintcl syl3anc eqeltrd ) BEHIJZDKLZCBJZADMZNZADCOZFPCQZ
+      ADRZFUBZUAZBVQVNVSWCQVOAFDCBUCSVRVNWBBUDZWBKLZWCBJVNVOVQUEVQVNWDVOVQWDAFD
+      CBBUFUGSVOVQWEVNVOVQWEVOAPDJZATVQWEUHZADUIWFWGAVQWEAVPADUJAGWBKWAAFGVTADU
+      KULGPKJAUMUNUPWFVQWAFTZWEWFVQVPWHVQWFVPVPADUOUQWFVPVTFTZADRZWHVPWIWFWJFCB
+      URWFWIWJWIADUSUTVAVTAFDVBVCVDWAFVEVIVFVGVHVJBWBEVKVLVM $.
+      $( [1-Feb-2015] $)
+
     $( Two closed sets have a closed intersection. $)
     mreincl $p |- ( ( C e. ( Moore ` X ) /\ A e. C /\ B e. C ) ->
         ( A i^i B ) e. C ) $=
@@ -1392,49 +1438,52 @@ $)
        and closed under finite union. $)
     iscldtop $p |- ( K e. ( Clsd " ( TopOn ` B ) ) <-> ( K e. ( Moore ` B ) /\
           (/) e. K /\ A. x e. K A. y e. K ( x u. y ) e. K ) ) $=
-      ( va vb vc ccld wcel c0 cv wral wceq ctop syl wa cdif wss difeq2 eleq1d
+      ( va vb vc ccld wcel c0 cv wral wceq ctop syl wa cdif wss eleq1d difeq2
       ctopon cfv cima cmre cun w3a wrex wfun wfn fncld fnfun ax-mp fvelima mpan
       cldmreon cuni istopon simplbi 0cld uncld 3expb ralrimivva 3jca raleqbi1dv
-      sylan eleq1 eleq2 3anbi123d syl5ibcom rexlimiv cpw crab eqid cldval uniss
-      ssrab2 unipw sseqtri a1i mre1cl 3ad2ant1 pwidg difidALT syl5eqel sylanbrc
-      simp2 elrab unissel syl2anc pweqd difeq1d rabeqbidv adantl mresspw sselda
-      sseli wb elrab3 difss elpw2g adantr mpbiri elpwi dfss4 sylib 3bitrd eqtrd
-      weq eqrdav wi wal cin sstr mpan2 sspwuni vex uniex elpw bitr4i unieq uni0
-      biimpi syl6eq difeq2d dif0 syl5ibrcom imp wne ciin iindif2 uniiun difeq2i
-      ciun syl6reqr eqeltrd pm2.61dane ex ad2antrl simprbi cvv alrimiv ad2antll
-      ssinss1 inex1 3imtr4i difindi simpl3 uneq1 uneq2 rcla42va syl21anc rabexg
-      pwexg istopg mpbir2and cdm ssriv sseqtr4i funfvima2 mp2an eqeltrrd impbii
-      fndm ) DHCUAUBZUCZIZDCUDUBZIZJDIZAKZBKZUEZDIZBDLZADLZUFZUVFEKZHUBZDMZEUVD
-      UGZUVPHUHZUVFUVTHNUIZUWAUJNHUKULZEDUVDHUMUNUVSUVPEUVDUVQUVDIZUVRUVGIZJUVR
-      IZUVLUVRIZBUVRLZAUVRLZUFUVSUVPUWDUWEUWFUWICUVQUOUWDUVQNIZUWFUWDUWJUVQUPCM
-      CUVQUQURZUVQUSOUWDUWGABUVRUVRUWDUWJUVJUVRIZUVKUVRIZPUWGUWKUWJUWLUWMUWGUVJ
-      UVKUVQUTVAVEVBVCUVSUWEUVHUWFUVIUWIUVOUVRDUVGVFUVRDJVGUWHUVNAUVRDUWGUVMBUV
-      RDUVRDUVLVGVDVDVHVIVJOUVPCUVQQZDIZECVKZVLZHUBZDUVEUVPUWRUWQUPZFKZQZUWQIZF
-      UWSVKZVLZDUVPUWQNIZUWRUXDM?FUWQUWSUWSVMVNOUVPUXDCUWTQZUWQIZFUWPVLZDUVPUXB
-      UXGFUXCUWPUVPUWSCUVPUWSCRZCUWQIZUWSCMZUXIUVPUWSUWPUPZCUWQUWPRZUWSUXLRUWOE
-      UWPVPZUWQUWPVOULCVQVRVSUVPCUWPIZCCQZDIZUXJUVPCDIZUXOUVHUVIUXRUVODCVTZWAZC
-      DWBOUVPUXPJDCWCUVHUVIUVOWFWDUWOUXQECUWPUVQCMUWNUXPDUVQCCSTWGWEUWQCWHWIZWJ
-      UVPUXAUXFUWQUVPUWSCUWTUYAWKTWLUVHUVIUXHDMUVOUVHGUXHDUWPGKZUXHIZUYBUWPIZUV
-      HUXHUWPUYBUXGFUWPVPWPWMUVHDUWPUYBDCWNWOUVHUYDPZUYCCUYBQZUWQIZCUYFQZDIZUYB
-      DIUYDUYCUYGWQUVHUXGUYGFUYBUWPFGXHUXFUYFUWQUWTUYBCSTWRWMUYEUYFUWPIZUYGUYIW
-      QUYEUYJUYFCRZCUYBWSUVHUYJUYKWQZUYDUVHUXRUYLUXSUYFCDWTOXAXBUWOUYIEUYFUWPUV
-      QUYFMUWNUYHDUVQUYFCSTWROUYEUYHUYBDUYDUYHUYBMZUVHUYDUYBCRUYMUYBCXCUYBCXDXE
-      WMTXFXIWAXGXGUVPUWQUVDIZUWRUVEIZUVPUXEUXKUYNUVPUXEUWTUWQRZUWTUPZUWQIZXJZF
-      XKZUWTUYBXLZUWQIZGUWQLFUWQLZUVPUYSFUVPUYPUYRUVPUYPPZUYQUWPIZCUYQQZDIZUYRU
-      YPVUEUVPUYPUWTUWPRZVUEUYPUXMVUHUXNUWTUWQUWPXMXNVUHVUEVUHUYQCRVUEUWTCXOUYQ
-      CUWTFXPZXQXRXSYBOWMVUDVUGUWTJVUDUWTJMZVUGUVPVUJVUGXJZUYPUVHUVIVUKUVOUVHVU
-      GVUJUXRUXSVUJVUFCDVUJVUFCJQCVUJUYQJCVUJUYQJUPJUWTJXTYAYCYDCYEYCTYFWAXAYGV
-      UDUWTJYHZPVUFGUWTUYFYIZDVULVUFVUMMVUDVULVUMCGUWTUYBYMZQVUFGUWTCUYBYJUYQVU
-      NCGUWTYKYLYNWM?YOYPUWOVUGEUYQUWPUVQUYQMUWNVUFDUVQUYQCSTWGWEYQUUAUVPVUBFGU
-      WQUWQUVPUWTUWQIZUYBUWQIZPZPZVUAUWPIZCVUAQZDIZVUBVUOVUSUVPVUPVUOUWTUWPIZVU
-      SUWQUWPUWTUXNWPUWTCRVUACRVVBVUSUWTUYBCUUCUWTCVUIXRVUACUWTUYBVUIUUDXRUUEOY
-      RVURVUTUXFUYFUEZDCUWTUYBUUFVURUXFDIZUYFDIZUVOVVCDIZVUOVVDUVPVUPVUOVVBVVDU
-      WOVVDEUWTUWPEFXHUWNUXFDUVQUWTCSTWGYSYRVUPVVEUVPVUOVUPUYDVVEUWOVVEEUYBUWPE
-      GXHUWNUYFDUVQUYBCSTWGYSUUBUVHUVIUVOVUQUUGUVMVVFUXFUVKUEZDIABUXFUYFDDUVJUX
-      FMUVLVVGDUVJUXFUVKUUHTUVKUYFMVVGVVCDUVKUYFUXFUUITUUJUUKWDUWOVVAEVUAUWPUVQ
-      VUAMUWNVUTDUVQVUACSTWGWEVBUVPUWQYTIZUXEUYTVUCPWQUVPUXRVVHUXTUXRUWPYTIVVHC
-      DUUMUWOEUWPYTUULOOFGYTUWQUUNOUUOUYACUWQUQWEUWAUVDHUUPZRUYNUYOXJUWCUVDNVVI
-      EUVDNUWKUUQUWBVVINMUJNHUVCULUURUVDUWQHUUSUUTOUVAUVB $.
+      sylan eleq1 eleq2 3anbi123d syl5ibcom rexlimiv cpw crab wi wal cin ssrab2
+      sstr mpan2 sspwuni vex uniex elpw bitr4i sylib adantl mre1cl unieq syl6eq
+      uni0 difeq2d dif0 syl5ibrcom 3ad2ant1 adantr imp ciin ciun iindif2 uniiun
+      wne difeq2i syl6reqr simpll1 simpr wel ssel2 weq elrab ralrimiva ad2antlr
+      simprbi mreiincl syl3anc eqeltrd pm2.61dane alrimiv sseli ssinss1 3imtr4i
+      sylanbrc ex inex1 ad2antrl difindi ad2antll uneq1 uneq2 rcla42va syl21anc
+      simpl3 syl5eqel cvv wb pwexg rabexg istopg 3syl mpbir2and eqid elrab3 cdm
+      cldval uniss unipw sseqtri pwidg difidALT simp2 unissel sylancr rabeqbidv
+      pweqd difeq1d sselda difss elpw2g mpbiri elpwi dfss4 3bitrd eqrdav 3eqtrd
+      mresspw ssriv fndm sseqtr4i funfvima2 mp2an eqeltrrd impbii ) DHCUAUBZUCZ
+      IZDCUDUBZIZJDIZAKZBKZUEZDIZBDLZADLZUFZUVMEKZHUBZDMZEUVKUGZUWCHUHZUVMUWGHN
+      UIZUWHUJNHUKULZEDUVKHUMUNUWFUWCEUVKUWDUVKIZUWEUVNIZJUWEIZUVSUWEIZBUWELZAU
+      WELZUFUWFUWCUWKUWLUWMUWPCUWDUOUWKUWDNIZUWMUWKUWQUWDUPCMCUWDUQURZUWDUSOUWK
+      UWNABUWEUWEUWKUWQUVQUWEIZUVRUWEIZPUWNUWRUWQUWSUWTUWNUVQUVRUWDUTVAVEVBVCUW
+      FUWLUVOUWMUVPUWPUWBUWEDUVNVFUWEDJVGUWOUWAAUWEDUWNUVTBUWEDUWEDUVSVGVDVDVHV
+      IVJOUWCCUWDQZDIZECVKZVLZHUBZDUVLUWCUXEUXDUPZFKZQZUXDIZFUXFVKZVLZCUXGQZUXD
+      IZFUXCVLZDUWCUXDNIZUXEUXKMUWCUXOUXGUXDRZUXGUPZUXDIZVMZFVNZUXGGKZVOZUXDIZG
+      UXDLFUXDLZUWCUXSFUWCUXPUXRUWCUXPPZUXQUXCIZCUXQQZDIZUXRUXPUYFUWCUXPUXGUXCR
+      ZUYFUXPUXDUXCRZUYIUXBEUXCVPZUXGUXDUXCVQVRUYIUXQCRUYFUXGCVSUXQCUXGFVTZWAWB
+      WCWDWEUYEUYHUXGJUYEUXGJMZUYHUWCUYMUYHVMZUXPUVOUVPUYNUWBUVOUYHUYMCDIZDCWFZ
+      UYMUYGCDUYMUYGCJQCUYMUXQJCUYMUXQJUPJUXGJWGWIWHWJCWKWHSWLWMWNWOUYEUXGJWTZP
+      ZUYGGUXGCUYAQZWPZDUYQUYGUYTMUYEUYQUYTCGUXGUYAWQZQUYGGUXGCUYAWRUXQVUACGUXG
+      WSXAXBWEUYRUVOUYQUYSDIZGUXGLZUYTDIUVOUVPUWBUXPUYQXCUYEUYQXDUXPVUCUWCUYQUX
+      PVUBGUXGUXPGFXEPUYAUXDIZVUBUXGUXDUYAXFVUDUYAUXCIZVUBUXBVUBEUYAUXCEGXGUXAU
+      YSDUWDUYACTSXHXKZOXIXJGDUYSUXGCXLXMXNXOUXBUYHEUXQUXCUWDUXQMUXAUYGDUWDUXQC
+      TSXHXTYAXPUWCUYCFGUXDUXDUWCUXGUXDIZVUDPZPZUYBUXCIZCUYBQZDIZUYCVUGVUJUWCVU
+      DVUGUXGUXCIZVUJUXDUXCUXGUYKXQUXGCRUYBCRVUMVUJUXGUYACXRUXGCUYLWBUYBCUXGUYA
+      UYLYBWBXSOYCVUIVUKUXLUYSUEZDCUXGUYAYDVUIUXLDIZVUBUWBVUNDIZVUGVUOUWCVUDVUG
+      VUMVUOUXBVUOEUXGUXCEFXGUXAUXLDUWDUXGCTSXHXKYCVUDVUBUWCVUGVUFYEUVOUVPUWBVU
+      HYJUVTVUPUXLUVRUEZDIABUXLUYSDDUVQUXLMUVSVUQDUVQUXLUVRYFSUVRUYSMVUQVUNDUVR
+      UYSUXLYGSYHYIYKUXBVULEUYBUXCUWDUYBMUXAVUKDUWDUYBCTSXHXTVBUWCUYOUXDYLIZUXO
+      UXTUYDPYMUVOUVPUYOUWBUYPWMZUYOUXCYLIVURCDYNUXBEUXCYLYOOFGYLUXDYPYQYRZFUXD
+      UXFUXFYSUUBOUWCUXIUXMFUXJUXCUWCUXFCUWCUXFCRCUXDIZUXFCMZUXFUXCUPZCUYJUXFVV
+      CRUYKUXDUXCUUCULCUUDUUEUWCCUXCIZCCQZDIZVVAUWCUYOVVDVUSCDUUFOUWCVVEJDCUUGU
+      VOUVPUWBUUHYKUXBVVFECUXCUWDCMUXAVVEDUWDCCTSXHXTUXDCUUIUUJZUULUWCUXHUXLUXD
+      UWCUXFCUXGVVGUUMSUUKUVOUVPUXNDMUWBUVOGUXNDUXCUYAUXNIZVUEUVOUXNUXCUYAUXMFU
+      XCVPXQWEUVODUXCUYADCUVCUUNUVOVUEPZVVHUYSUXDIZCUYSQZDIZUYADIVUEVVHVVJYMUVO
+      UXMVVJFUYAUXCFGXGUXLUYSUXDUXGUYACTSYTWEVVIUYSUXCIZVVJVVLYMVVIVVMUYSCRZCUY
+      AUUOUVOVVMVVNYMZVUEUVOUYOVVOUYPUYSCDUUPOWNUUQUXBVVLEUYSUXCUWDUYSMUXAVVKDU
+      WDUYSCTSYTOVVIVVKUYADVUEVVKUYAMZUVOVUEUYACRVVPUYACUURUYACUUSWDWESUUTUVAWM
+      UVBUWCUXDUVKIZUXEUVLIZUWCUXOVVBVVQVUTVVGCUXDUQXTUWHUVKHUUAZRVVQVVRVMUWJUV
+      KNVVSEUVKNUWRUVDUWIVVSNMUJNHUVEULUVFUVKUXDHUVGUVHOUVIUVJ $.
+      $( [1-Feb-2015] $)
   $}
 
   ${
@@ -1702,20 +1751,58 @@ $)
       $( [1-Feb-2015] $)
 
     drsdirfi.l $e |- L = ( le ` K ) $.
-    $d K a b c x y $.  $d L a b c x y $.  $d B a b c x y $.  $d X a b c x y $.
+    $d K a b c x y z $.  $d L a b c x y z $.  $d B a b c x y z $.
+    $d X a b c x y z $.
     $( Any _finite_ number of elements in a directed set have a common upper
        bound.  Here is where the non-emptiness constraint in ~ df-drs first
        comes into play; without it we would need an additional constraint that
        ` X ` not be empty. $)
     drsdirfi $p |- ( ( K e. Dirset /\ X C_ B /\ X e. Fin ) ->
         E. y e. B A. z e. X z L y ) $=
-      ? $.
+      ( va vb vc wcel wss cv wbr wral wrex wa wi c0 cdrs cfn csn cun wceq sseq1
+      anbi2d raleq rexbidv imbi12d weq wne drsbn0 wex ral0 jctr eximi n0 df-rex
+      3imtr4i adantr ssun1 sstr mpan anim2i breq2 ralbidv cbvrexv simpll simprl
+      syl vex snss sylibr ad2antlr drsdir syl3anc simplrr wel cpreset ad3antrrr
+      ssun2 drsprs ad2antrr sselda simplr simpr simprrl prstr ralimdva adantlrr
+      syl132anc mpd simprrr ralsn breq1 sbcie bitri ralun syl2anc expr reximdva
+      ex wsb rexlimdva syl5bi embantd com12 a1i findcard2 3impia ) DUALZFCMZFUB
+      LZBNZANZEOZBFPZACQZXNXLXMRZXSXLINZCMZRZXQBYAPZACQZSXLTCMZRZXQBTPZACQZSXLJ
+      NZCMZRZXQBYJPZACQZSZXLYJKNZUCZUDZCMZRZXQBYRPZACQZSZXTXSSIJKFYATUEZYCYGYEY
+      IUUDYBYFXLYATCUFUGUUDYDYHACXQBYATUHUIUJIJUKZYCYLYEYNUUEYBYKXLYAYJCUFUGUUE
+      YDYMACXQBYAYJUHUIUJYAYRUEZYCYTYEUUBUUFYBYSXLYAYRCUFUGUUFYDUUAACXQBYAYRUHU
+      IUJYAFUEZYCXTYEXSUUGYBXMXLYAFCUFUGUUGYDXRACXQBYAFUHUIUJXLYIYFXLCTULZYICDG
+      UMXPCLZAUNUUIYHRZAUNUUHYIUUIUUJAUUIYHXQBUOUPUQACURYHACUSUTVKVAYOUUCSYJUBL
+      YTYOUUBYTYLYNUUBYSYKXLYJYRMYSYKYJYQVBYJYRCVCVDZVEYNXOYAEOZBYJPZICQYTUUBYM
+      UUMAICAIUKXQUULBYJXPYAXOEVFVGVHYTUUMUUBICYTYACLZUUMUUBYTUUNUUMRZRZYAXPEOZ
+      YPXPEOZRZACQZUUBUUPXLUUNYPCLZUUTXLYSUUOVIYTUUNUUMVJYSUVAXLUUOYSYQCMZUVAYQ
+      YRMYSUVBYQYJWBYQYRCVCVDYPCKVLZVMVNVOACDEYAYPGHVPVQUUPUUSUUAACUUPUUIUUSUUA
+      UUPUUIUUSRZRZYMXQBYQPZUUAUVEUUMYMYTUUNUUMUVDVRYTUUNUVDUUMYMSUUMYTUUNRZUVD
+      RZUULXQBYJUVHBJVSZRZUULXQUVJUULRDVTLZXOCLZUUNUUIUULUUQXQUVHUVKUVIUULXLUVK
+      YSUUNUVDDWCWAWDUVJUVLUULUVHYJCXOUVGYKUVDYSYKXLUUNUUKVOVAWEVAUVHUUNUVIUULY
+      TUUNUVDWFWDUVHUUIUVIUULUVGUUIUUSVJWDUVJUULWGUVHUUQUVIUULUVGUUIUUQUURWHWDC
+      DEXOYAXPGHWIWLXCWJWKWMUVEUURUVFUUPUUIUUQUURWNUVFXQBKXDUURXQBYPUVCWOXQUURB
+      YPUVCXOYPXPEWPWQWRVNXQBYJYQWSWTXAXBWMXAXEXFXGXHXIXJXHXK $.
+      $( [1-Feb-2015] $)
 
     $( Directed sets may be defined in terms of finite subsets.  Again, without
        nonemptiness we would need to restrict to nonempty subsets here. $)
     isdrs2 $p |- ( K e. Dirset <-> ( K e. Preset /\
           A. x e. ( ~P B i^i Fin ) E. y e. B A. z e. x z L y ) ) $=
-      ? $.
+      ( va vb wcel cv wbr wral wrex cfn wa syl adantl c0 cpreset cpw cin drsprs
+      cdrs wss simpl inss1 sseli elpwi inss2 drsdirfi syl3anc ralrimiva jca wne
+      0elpw 0fin elin mpbir2an wceq raleq rexbidv rcla4v ax-mp rexn0 cpr zfpair
+      wi prssi elpw sylibr prfi a1i sylanbrc simplr rcla4va syl2anc ralpr breq1
+      wsb sbcie anbi12i bitri biimpi reximi ralrimivva isdrs syl3anbrc impbii
+      vex ) EUEKZEUAKZCLZBLZFMZCALZNZBDOZADUBZPUCZNZQZWLWMXBEUDWLWSAXAWLWQXAKZQ
+      WLWQDUFZWQPKZWSWLXDUGXDXEWLXDWQWTKXEXAWTWQWTPUHUIWQDUJRSXDXFWLXAPWQWTPUKU
+      ISBCDEFWQGHULUMUNUOXCWMDTUPZILZWOFMZJLZWOFMZQZBDOZJDNIDNWLWMXBUGXBXGWMXBW
+      PCTNZBDOZXGTXAKZXBXOVIXPTWTKTPKDUQURTWTPUSUTWSXOATXAWQTVAWRXNBDWPCWQTVBVC
+      VDVEXNBDVFRSXCXMIJDDXCXHDKXJDKQZQZWPCXHXJVGZNZBDOZXMXRXSXAKZXBYAXQYBXCXQX
+      SWTKZXSPKZYBXQXSDUFYCXHXJDVJXSDIJVHVKVLYDXQXHXJVMVNXSWTPUSVOSWMXBXQVPWSYA
+      AXSXAWQXSVAWRXTBDWPCWQXSVBVCVQVRXTXLBDXTXLXTWPCIWAZWPCJWAZQXLWPCXHXJIWKZJ
+      WKZVSYEXIYFXKWPXICXHYGWNXHWOFVTWBWPXKCXJYHWNXJWOFVTWBWCWDWEWFRWGIJBDEFGHW
+      HWIWJ $.
+      $( [1-Feb-2015] $)
   $}
 
 $(
@@ -17043,7 +17130,17 @@ $)
 
     $( For finite products, the direct sum is just the module product. $)
     dsmmfi $p |- ( ( R Fn I /\ I e. Fin ) -> ( S (+)m R ) = ( S Xm_ R ) ) $=
-      ? $.
+      ( vf wfn cfn wcel wa co cprdm cbs cfv cress eqid cdm wceq wss cvv ax-mp
+      c0 cdsmm dsmmval2 cv c0g ccom cdif crab wral noel reldmprdm ovprc1 fveq2d
+      wn cnx baseid str0 syl6eqr eleq2d mtbiri con4i adantl simplr simpll simpr
+      prdmbasfn fndm syl eqeltrd difss dmss ssfi sylancl rabid2 sylibr dsmmbas2
+      ralrimiva eqtr2d oveq2d ovex ressid syl6eq syl5eq ) ACEZCFGZHZBAUAIZBAJIZ
+      WFKLZMIZWGWHABWHNUBWEWIWGWGKLZMIZWGWEWHWJWGMWEWJDUCZUDAUEZUFZOZFGZDWJUGZW
+      HWEWPDWJUHWJWQPWEWPDWJWEWLWJGZHZWLOZFGWOWTQZWPWSWTCFWSWLCEWTCPWSWJABWLCRF
+      WGWGNZWJNZWRBRGZWEXDWRXDUMZWRWLTGWLUIXEWJTWLXEWJTKLTXEWGTKBAJUJUKULKUNKLD
+      DUOUPUQURUSUTVAWCWDWRVBZWCWDWRVCWEWRVDVECWLVFVGXFVHWNWLQXAWLWMVIWNWLVJSWT
+      WOVKVLVPWPDWJVMVNWQWGABDCFXBWQNVOVQVRWGRGWKWGPBAJVSWJWGRXCVTSWAWB $.
+      $( [1-Feb-2015] $)
   $}
 
   ${
@@ -17228,155 +17325,6 @@ $)
         $( [11-Jan-2015] $)
     $}
   $}
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Free modules
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  $c freeLMod unitVec $.
-
-  $( Class of free module generator. $)
-  cfrlm $a class freeLMod $.
-
-  $( Class of basic unit vectors for an explicit free module. $)
-  cuvc $a class unitVec $.
-
-  ${
-    $d r i j k $.
-
-    $( The ` i ` -dimensional free module over a ring ` r ` is the product of
-       ` i ` -many copies of the ring with componentwise addition and
-       multiplication.  If ` i ` is infinite, the allowed vectors are
-       restricted to those with finitely many nonzero cooerdinates; this
-       ensures that the resulting module is actually spanned by its unit
-       vectors. $)
-    df-frlm $a |- freeLMod = ( r e. _V , i e. _V |->
-        ( r (+)m ( i X. { ( ringLMod ` r ) } ) ) ) $.
-
-    $( ` ( ( R unitVec I ) `` i ) ` is the unit vector in ` ( R freeLMod I ) `
-       along the ` i ` axis. $)
-    df-uvc $a |- unitVec = ( r e. _V , i e. _V |-> ( j e. i |->
-        ( k e. i |-> if ( k = j , ( 1r ` r ) , ( 0g ` r ) ) ) ) ) $.
-  $}
-
-  ${
-    $d R r i $.  $d I r i $.
-    frlmval.f $e |- F = ( R freeLMod I ) $.
-    $( Value of the free module. $)
-    frlmval $p |- ( ( R e. V /\ I e. W ) -> F =
-        ( R (+)m ( I X. { ( ringLMod ` R ) } ) ) ) $=
-      ? $.
-
-    $( The free module is a module. $)
-    frlmlmod $p |- ( ( R e. Ring /\ I e. W ) -> F e. LMod ) $=
-      ? $.
-
-    ${
-      frlmpws.b $e |- B = ( Base ` F ) $.
-      $( The free module as a restriction of the power module. $)
-      frlmpws $p |- ( ( R e. Ring /\ I e. W ) ->
-          F = ( ( ( ringLMod ` R ) ^s I ) |`s B ) ) $=
-        ? $.
-
-      frlmlss.u $e |- U = ( LSubSp ` ( ( ringLMod ` R ) ^s I ) ) $.
-      $( The base set of the free module is a subspace of the power module. $)
-      frlmlss $p |- ( ( R e. Ring /\ I e. W ) -> B e. U ) $=
-        ? $.
-    $}
-
-    $( The finite free module is a power of the ring module. $)
-    frlmpwsfi $p |- ( ( R e. Ring /\ I e. Fin ) ->
-        F = ( ( ringLMod ` R ) ^s I ) ) $=
-      ? $.
-
-    ${
-      $d N k x $.  $d R k x $.  $d B x $.  $d I k x $.
-      frlmbas.n $e |- N = ( Base ` R ) $.
-      frlmbas.z $e |- Z = ( 0g ` R ) $.
-      frlmbas.b $e |- B = { k e. ( N ^m I ) |
-          ( `' k " ( _V \ { Z } ) ) e. Fin } $.
-      $( Base set of the free module. $)
-      frlmbas $p |- ( ( R e. V /\ I e. W ) -> B = ( Base ` F ) ) $=
-        ? $.
-    $}
-  $}
-
-  ${
-    frlmplusgval.y $e |- Y = ( R freeLMod I ) $.
-    frlmplusgval.b $e |- B = ( Base ` Y ) $.
-    frlmplusgval.r $e |- ( ph -> R e. V ) $.
-    frlmplusgval.i $e |- ( ph -> I e. W ) $.
-    frlmplusgval.f $e |- ( ph -> F e. B ) $.
-    frlmplusgval.g $e |- ( ph -> G e. B ) $.
-    frlmplusgval.a $e |- A = ( +g ` R ) $.
-    frlmplusgval.p $e |- P = ( +g ` Y ) $.
-    $( Addition in a free module. $)
-    frlmplusgval $p |- ( ph -> ( F P G ) = ( F oF A G ) ) $=
-      ? $.
-  $}
-
-  ${
-    frlmvscaval.y $e |- Y = ( R freeLMod I ) $.
-    frlmvscaval.b $e |- B = ( Base ` Y ) $.
-    frlmvscaval.t $e |- T = ( .r ` R ) $.
-    frlmvscaval.k $e |- K = ( Base ` R ) $.
-    frlmvscaval.r $e |- ( ph -> R e. V ) $.
-    frlmvscaval.i $e |- ( ph -> I e. W ) $.
-    frlmvscaval.a $e |- ( ph -> A e. K ) $.
-    frlmvscaval.x $e |- ( ph -> X e. B ) $.
-    $( Scalar multiplication in a free module. $)
-    frlmvscafval $p |- ( ph -> ( A T X ) = ( ( I X. { A } ) oF T X ) ) $=
-      ? $.
-  $}
-
-  $( demonstrate base set and operations for pedagogic value, including finite
-     and infinite case, using oF and o. $)
-  $( free module is spanned by basis vectors $)
-  $( evaluation map from a free module to any other module: a map on basis
-     extends (uniquely) to the whole $)
-  $( use span preservation to show that the free module maps onto a span $)
-  $( this allows for neat representation of spans: ellspd $)
-  $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
-
-  $(
-  @{
-    @d M a b c f @.  @d B a b c f @.  @d N a b c f @.  @d K a b c f @.
-    @d S a b c f @.  @d Z a b c f @.  @d T a b c f @.  @d F a b c f @.
-    @d I a b c f @.
-    ellspd.n @e |- N = ( LSpan ` M ) @.
-    ellspd.v @e |- B = ( Base ` M ) @.
-    ellspd.k @e |- K = ( Base ` S ) @.
-    ellspd.s @e |- S = ( Scalar ` M ) @.
-    ellspd.z @e |- Z = ( 0g ` S ) @.
-    ellspd.t @e |- T = ( vsca ` M ) @.
-
-    @{
-      ellspd.f @e |- ( ph -> F : I --> B ) @.
-      ellspd.m @e |- ( ph -> M e. LMod ) @.
-      ellspd.i @e |- ( ph -> I e. _V ) @.
-      @( The elements of the span of an indexed collection of basic vectors are
-         those vectors which can be written as finite linear combinations of
-         basic vectors. @)
-      ellspd @p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
-          E. f e. ( K ^m I ) ( ( `' f " { Z } ) e. Fin /\
-            X = ( M gsum ( f oF T F ) ) ) ) ) @=
-        ? @.
-    @}
-
-    @{
-      elfilspd.f @e |- ( ph -> F : I --> B ) @.
-      elfilspd.m @e |- ( ph -> M e. LMod ) @.
-      elfilspd.i @e |- ( ph -> I e. Fin ) @.
-      @( Simplified version of ~ ellspd when the spanning set is finite: all
-         linear combinations are then acceptable. @)
-      elfilspd @p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
-          E. f e. ( K ^m I ) X = ( M gsum ( f oF T F ) ) ) ) @=
-        ? @.
-    @}
-  @}
-  $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -17706,6 +17654,231 @@ $)
       KWJWLWMWN $.
       $( [3-Jan-2015] $)
   $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Free modules
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c freeLMod unitVec $.
+
+  $( Class of free module generator. $)
+  cfrlm $a class freeLMod $.
+
+  $( Class of basic unit vectors for an explicit free module. $)
+  cuvc $a class unitVec $.
+
+  ${
+    $d r i j k $.
+
+    $( The ` i ` -dimensional free module over a ring ` r ` is the product of
+       ` i ` -many copies of the ring with componentwise addition and
+       multiplication.  If ` i ` is infinite, the allowed vectors are
+       restricted to those with finitely many nonzero cooerdinates; this
+       ensures that the resulting module is actually spanned by its unit
+       vectors. $)
+    df-frlm $a |- freeLMod = ( r e. _V , i e. _V |->
+        ( r (+)m ( i X. { ( ringLMod ` r ) } ) ) ) $.
+
+    $( ` ( ( R unitVec I ) `` i ) ` is the unit vector in ` ( R freeLMod I ) `
+       along the ` i ` axis. $)
+    df-uvc $a |- unitVec = ( r e. _V , i e. _V |-> ( j e. i |->
+        ( k e. i |-> if ( k = j , ( 1r ` r ) , ( 0g ` r ) ) ) ) ) $.
+  $}
+
+  ${
+    $d R r i $.  $d I r i $.  $d W r i $.
+    frlmval.f $e |- F = ( R freeLMod I ) $.
+    $( Value of the free module. $)
+    frlmval $p |- ( ( R e. V /\ I e. W ) -> F =
+        ( R (+)m ( I X. { ( ringLMod ` R ) } ) ) ) $=
+      ( vr vi wcel cfrlm co crglmod cfv csn cxp cdsmm cvv wceq elex cv wa fveq2
+      id sneqd xpeq2d oveq12d xpeq1 oveq2d df-frlm ovex ovmpt2 syl2an syl5eq )
+      ADIZCEIZUABACJKZACALMZNZOZPKZFUNAQICQIUPUTRUOADSCESGHACQQGTZHTZVALMZNZOZP
+      KUTJAVBUROZPKVAARZVAAVEVFPVGUCVGVDURVBVGVCUQVAALUBUDUEUFVBCRVFUSAPVBCURUG
+      UHHGUIAUSPUJUKULUM $.
+      $( [1-Feb-2015] $)
+
+    $( The free module is a module. $)
+    frlmlmod $p |- ( ( R e. Ring /\ I e. W ) -> F e. LMod ) $=
+      ( vi crg wcel wa crglmod cfv csn cxp cdsmm clmod frlmval simpr csca wceq
+      co simpl wf rlmlmod adantr fconst6 syl fvex fvconst2 adantl fveq2d rlmsca
+      cv ad2antrr eqtr4d eqid dsmmlmod eqeltrd ) AGHZCDHZIZBACAJKZLMZNTZOABCGDE
+      PUTFVCVBACDURUSQURUSUAUTVAOHZCOVBUBURVDUSAUCUDCVAOUEUFUTFULZCHZIZVEVBKZRK
+      VARKZAVGVHVARVFVHVASUTCVAVEAJUGUHUIUJURAVISUSVFAGUKUMUNVCUOUPUQ $.
+      $( [1-Feb-2015] $)
+
+    ${
+      frlmpws.b $e |- B = ( Base ` F ) $.
+      $( The free module as a restriction of the power module. $)
+      frlmpwsOLD $p |- ( ( R e. Ring /\ I e. W ) ->
+          F = ( ( ( ringLMod ` R ) ^s I ) |`s B ) ) $=
+        ( crg wcel wa crglmod cfv co cprdm cress cbs eqid wceq oveq1d cvv cdsmm
+        csn cxp csca cpws dsmmval2 rlmsca adantr frlmval eqcomd syl6eqr oveq12d
+        fveq2d syl5eq fvex pwsval mpan adantl 3eqtr4d ) BHIZDEIZJZBDBKLZUBUCZUA
+        MZVCUDLZVDNMZAOMZCVCDUEMZAOMVBVEBVDNMZVEPLZOMVHVKVDBVKQUFVBVJVGVKAOVBBV
+        FVDNUTBVFRVABHUGUHSVBVKCPLAVBVECPVBCVEBCDHEFUIZUJUMGUKULUNVLVBVIVGAOVAV
+        IVGRZUTVCTIVAVMBKUOVCVFDTEVIVIQVFQUPUQURSUS $.
+      $( [1-Feb-2015] $)
+      frlmpws $p |- ( ( R e. V /\ I e. W ) ->
+          F = ( ( ( ringLMod ` R ) ^s I ) |`s B ) ) $=
+        ( wcel wa crglmod cfv co cprdm cress cbs eqid wceq oveq1d cvv csn cdsmm
+        cxp dsmmval2 rlmsca adantr frlmval eqcomd fveq2d syl6eqr oveq12d syl5eq
+        csca cpws fvex pwsval mpan adantl 3eqtr4d ) BEIZDFIZJZBDBKLZUAUCZUBMZVC
+        UMLZVDNMZAOMZCVCDUNMZAOMVBVEBVDNMZVEPLZOMVHVKVDBVKQUDVBVJVGVKAOVBBVFVDN
+        UTBVFRVABEUEUFSVBVKCPLAVBVECPVBCVEBCDEFGUGZUHUIHUJUKULVLVBVIVGAOVAVIVGR
+        ZUTVCTIVAVMBKUOVCVFDTFVIVIQVFQUPUQURSUS $.
+        $( [1-Feb-2015] $)
+
+      frlmlss.u $e |- U = ( LSubSp ` ( ( ringLMod ` R ) ^s I ) ) $.
+      $( The base set of the free module is a subspace of the power module. $)
+      frlmlss $p |- ( ( R e. Ring /\ I e. W ) -> B e. U ) $=
+        ( crg wcel cfv co cbs fveq2d cprdm clss clmod wceq eqid crglmod csn cxp
+        vi wa cdsmm frlmval syl5eq simpr simpl wf rlmlmod adantr fconst6 syl cv
+        csca fvex fvconst2 adantl rlmsca ad2antrr eqtr4d cpws cvv pwsval eqcomd
+        dsmmlss mpan oveq1d eqtr2d syl6eqr eleqtrd eqeltrd ) BJKZEFKZUEZABEBUAL
+        ZUBUCZUFMZNLZCVQADNLWAHVQDVTNBDEJFGUGOUHVQWABVSPMZQLZCVQUDWBVSBWCWAEFVO
+        VPUIVOVPUJVQVRRKZERVSUKVOWDVPBULUMEVRRUNUOVQUDUPZEKZUEZWEVSLZUQLVRUQLZB
+        WGWHVRUQWFWHVRSVQEVRWEBUAURZUSUTOVOBWISVPWFBJVAZVBVCWBTWCTWATVHVQWCVREV
+        DMZQLCVQWBWLQVQWLWIVSPMZWBVPWLWMSZVOVRVEKVPWNWJVRWIEVEFWLWLTWITVFVIUTVQ
+        WIBVSPVOWIBSVPVOBWIWKVGUMVJVKOIVLVMVN $.
+        $( [1-Feb-2015] $)
+    $}
+
+    $( The finite free module is a power of the ring module. $)
+    frlmpwsfi $p |- ( ( R e. V /\ I e. Fin ) ->
+        F = ( ( ringLMod ` R ) ^s I ) ) $=
+      ( wcel cfn wa crglmod cfv csn cxp cdsmm cprdm wceq cvv mpan adantl eqid
+      co csca cpws wfn fnconstg ax-mp dsmmfi rlmsca adantr oveq1d eqtrd frlmval
+      fvex pwsval 3eqtr4d ) ADFZCGFZHZACAIJZKLZMTZURUAJZUSNTZBURCUBTZUQUTAUSNTZ
+      VBUPUTVDOZUOUSCUCZUPVEURPFZVFAIULZCURPUDUEUSACUFQRUQAVAUSNUOAVAOUPADUGUHU
+      IUJABCDGEUKUPVCVBOZUOVGUPVIVHURVACPGVCVCSVASUMQRUN $.
+      $( [1-Feb-2015] $)
+
+    ${
+      $d N k x $.  $d R k x $.  $d B x $.  $d I k x $.  $d W k x $.
+      $d V k x $.  $d Z k x $.
+      frlmbas.n $e |- N = ( Base ` R ) $.
+      frlmbas.z $e |- Z = ( 0g ` R ) $.
+      frlmbas.b $e |- B = { k e. ( N ^m I ) |
+          ( `' k " ( _V \ { Z } ) ) e. Fin } $.
+      $( Base set of the free module. $)
+      frlmbas $p |- ( ( R e. V /\ I e. W ) -> B = ( Base ` F ) ) $=
+        ( vx wcel c0g cfv cbs wceq cvv wa cv crglmod csn cxp ccom cdm cfn cprdm
+        cdif co crab cdsmm wfn fvex fnconstg ax-mp eqid dsmmbas2 mpan ccnv cima
+        adantl cmap wne fvconst2 fveq2d fvco2 ad3antrrr syl5eq 3eqtr4d rabbidva
+        rlm0 neeq2d wf wb eqeltri elmapg biimpa ffn syl crn wss fn0g fnco mp3an
+        ssv fndmdif sylancl fnniniseg2 eleq1d cpws rlmbase adantr oveq1d pwsbas
+        csca pwsval rlmsca eqtr4d 3eqtrd rabeq eqtr3d frlmval ) BGOZEHOZUAZCUBZ
+        PEBUCQZUDUEZUFZUJUGZUHOZCBXJUIUKZRQZULZBXJUMUKZRQZADRQXFXPXRSZXEXJEUNZX
+        FXSXITOZXTBUCUOZEXITUPUQZXPXNXJBCEHXNURXPURUSUTVCXGAXHVATIUDUJVBZUHOZCF
+        EVDUKZULZXPMXGXMCYFULZYGXPXGXMYECYFXGXHYFOZUAZXLYDUHYJNUBZXHQZYKXKQZVEZ
+        NEULZYLIVEZNEULZXLYDYJYNYPNEYJYKEOZUAZYMIYLYSYKXJQZPQZXIPQZYMIYSYTXIPYR
+        YTXISYJEXIYKYBVFVCVGYRYMUUASZYJXTYRUUCYCEPXJYKVHUTVCYSIBPQZUUBLXEUUDUUB
+        SXFYIYRBGVMVIVJVKVNVLYJXHEUNZXKEUNZXLYOSYJEFXHVOZUUEXGYIUUGXFYIUUGVPZXE
+        FTOXFUUHFBRQZTKBRUOVQFEXHTHVRUTVCVSEFXHVTWAZPTUNXTXJWBZTWCUUFWDYCUUKWGT
+        EPXJWEWFNEXHXKWHWIYJUUEYDYQSUUJNEIXHWJWAVKWKVLXGYFXOSYHXPSXGYFXIRQZEVDU
+        KZXIEWLUKZRQZXOXGFUULEVDXEFUULSXFXEFUUIUULKBGWMVJWNWOXFUUMUUOSZXEYAXFUU
+        PYBUULXIETHUUNUUNURZUULURWPUTVCXGUUNXNRXGUUNXIWQQZXJUIUKZXNXFUUNUUSSZXE
+        YAXFUUTYBXIUURETHUUNUUQUURURWRUTVCXGBUURXJUIXEBUURSXFBGWSWNWOWTVGXAXMCY
+        FXOXBWAXCVJXGDXQRBDEGHJXDVGVK $.
+        $( [1-Feb-2015] $)
+    $}
+  $}
+
+  ${
+    frlmplusgval.y $e |- Y = ( R freeLMod I ) $.
+    frlmplusgval.b $e |- B = ( Base ` Y ) $.
+    frlmplusgval.r $e |- ( ph -> R e. V ) $.
+    frlmplusgval.i $e |- ( ph -> I e. W ) $.
+    frlmplusgval.f $e |- ( ph -> F e. B ) $.
+    frlmplusgval.g $e |- ( ph -> G e. B ) $.
+    frlmplusgval.a $e |- A = ( +g ` R ) $.
+    frlmplusgval.p $e |- P = ( +g ` Y ) $.
+    $( Addition in a free module. $)
+    frlmplusgval $p |- ( ph -> ( F P G ) = ( F oF A G ) ) $=
+      ( cfv co crglmod cpws cplusg cof cbs cress wcel wceq eqid frlmpws syl2anc
+      fveq2d ressplusg 3eqtr4g cvv fvex a1i syl5eq wss ressbasss eqsstrd sseldd
+      oveqd pwsplusgval rlmplusg syl syl5req ofeq 3eqtrd ) AFGDUAFGEUBTZHUCUAZU
+      DTZUAFGVKUDTZUEZUAFGBUEZUAADVMFGAKUDTVLKUFTZUGUAZUDTDVMAKVRUDAEIUHZHJUHZK
+      VRUINOVQEKHIJLVQUJUKULUMSVQVMVLVRVRUJVMUJZUNUOVDAVNVLUFTZVMVKFGHUPJVLVLUJ
+      WBUJZVKUPUHAEUBUQUROACWBFACVLCUGUAZUFTZWBACVQWEMAKWDUFAVSVTKWDUINOCEKHIJL
+      MUKULUMUSWEWBUTACWBWDVLWDUJWCVAURVBZPVCACWBGWFQVCVNUJWAVEAVOVPFGAVNBUIVOV
+      PUIABEUDTZVNRAVSWGVNUINEIVFVGVHVNBVIVGVDVJ $.
+      $( [1-Feb-2015] $)
+  $}
+
+  ${
+    frlmvscaval.y $e |- Y = ( R freeLMod I ) $.
+    frlmvscaval.b $e |- B = ( Base ` Y ) $.
+    frlmvscaval.k $e |- K = ( Base ` R ) $.
+    frlmvscaval.r $e |- ( ph -> R e. V ) $.
+    frlmvscaval.i $e |- ( ph -> I e. W ) $.
+    frlmvscaval.a $e |- ( ph -> A e. K ) $.
+    frlmvscaval.x $e |- ( ph -> X e. B ) $.
+    frlmvscaval.v $e |- V = ( vsca ` Y ) $.
+    frlmvscaval.t $e |- T = ( .r ` R ) $.
+    $( Scalar multiplication in a free module. $)
+    frlmvscafval $p |- ( ph -> ( A V X ) = ( ( I X. { A } ) oF T X ) ) $=
+      ( crglmod cfv cpws cvsca csn cxp cof cbs csca cvv eqid wcel fvex a1i wceq
+      co rlmsca syl fveq2d syl5eq eleqtrd frlmpws syl2anc wss ressbasss eqsstrd
+      cress sseldd pwsvscafval ressvsca syl6eqr oveqd cmulr rlmvsca 3eqtr4d
+      ofeq ) ABJDUAUBZFUCUPZUDUBZUPFBUEUFZJVQUDUBZUGZUPBJHUPVTJEUGZUPABVRUHUBZV
+      QWAVSVQUIUBZFWEUHUBZUJIJVRVRUKWDUKZWAUKVSUKZWEUKWFUKVQUJULADUAUMUNPABGWFQ
+      AGDUHUBWFNADWEUHADHULZDWEUOODHUQURUSUTVAACWDJACVRCVGUPZUHUBZWDACKUHUBWKMA
+      KWJUHAWIFIULKWJUOOPCDKFHILMVBVCZUSUTWKWDVDACWDWJVRWJUKZWGVEUNVFRVHVIAHVSB
+      JAHKUDUBZVSSAWNWJUDUBVSAKWJUDWLUSCVSVRWJWMWHVJVKUTVLAWCWBVTJAEWAUOWCWBUOA
+      EDVMUBZWATAWIWOWAUOODHVNURUTEWAVPURVLVO $.
+      $( [1-Feb-2015] $)
+  $}
+
+  $( demonstrate base set and operations for pedagogic value, including finite
+     and infinite case, using oF and o. $)
+  $( free module is spanned by basis vectors $)
+  $( evaluation map from a free module to any other module: a map on basis
+     extends (uniquely) to the whole $)
+  $( use span preservation to show that the free module maps onto a span $)
+  $( this allows for neat representation of spans: ellspd $)
+  $( splitting theorem: free module on ( A u. B ) maps onto B with kernel A $)
+
+  $(
+  @{
+    @d M a b c f @.  @d B a b c f @.  @d N a b c f @.  @d K a b c f @.
+    @d S a b c f @.  @d Z a b c f @.  @d T a b c f @.  @d F a b c f @.
+    @d I a b c f @.
+    ellspd.n @e |- N = ( LSpan ` M ) @.
+    ellspd.v @e |- B = ( Base ` M ) @.
+    ellspd.k @e |- K = ( Base ` S ) @.
+    ellspd.s @e |- S = ( Scalar ` M ) @.
+    ellspd.z @e |- Z = ( 0g ` S ) @.
+    ellspd.t @e |- T = ( vsca ` M ) @.
+
+    @{
+      ellspd.f @e |- ( ph -> F : I --> B ) @.
+      ellspd.m @e |- ( ph -> M e. LMod ) @.
+      ellspd.i @e |- ( ph -> I e. _V ) @.
+      @( The elements of the span of an indexed collection of basic vectors are
+         those vectors which can be written as finite linear combinations of
+         basic vectors. @)
+      ellspd @p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
+          E. f e. ( K ^m I ) ( ( `' f " { Z } ) e. Fin /\
+            X = ( M gsum ( f oF T F ) ) ) ) ) @=
+        ? @.
+    @}
+
+    @{
+      elfilspd.f @e |- ( ph -> F : I --> B ) @.
+      elfilspd.m @e |- ( ph -> M e. LMod ) @.
+      elfilspd.i @e |- ( ph -> I e. Fin ) @.
+      @( Simplified version of ~ ellspd when the spanning set is finite: all
+         linear combinations are then acceptable. @)
+      elfilspd @p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
+          E. f e. ( K ^m I ) X = ( M gsum ( f oF T F ) ) ) ) @=
+        ? @.
+    @}
+  @}
+  $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
