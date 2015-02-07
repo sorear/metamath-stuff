@@ -18927,7 +18927,7 @@ $)
   ${
     $d M a b c f $.  $d B a b c f $.  $d N a b c f $.  $d K a b c f $.
     $d S a b c f $.  $d Z a b c f $.  $d T a b c f $.  $d F a b c f $.
-    $d I a b c f $.
+    $d I a b c f $.  $d X a f $.  $d ph a f $.
     ellspd.n $e |- N = ( LSpan ` M ) $.
     ellspd.v $e |- B = ( Base ` M ) $.
     ellspd.k $e |- K = ( Base ` S ) $.
@@ -18943,9 +18943,21 @@ $)
          those vectors which can be written as finite linear combinations of
          basic vectors. $)
       ellspd $p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
-          E. f e. ( K ^m I ) ( ( `' f " { Z } ) e. Fin /\
+          E. f e. ( K ^m I ) ( ( `' f " ( _V \ { Z } ) ) e. Fin /\
             X = ( M gsum ( f oF T F ) ) ) ) ) $=
-        ? $.
+        ( va cima cfv wcel cv cof co cgsu wceq cfrlm cbs wrex cab ccnv cvv cdif
+        csn cfn wa cmap crn wf wfn ffn fnima 3syl fveq2d cmpt eqid csca frlmup3
+        rnmpt a1i syl5eqr eqtr4d eleq2d ovex eleq1 mpbiri rexlimivw eqeq1 elab3
+        rexbidv crab fvex eqeltri frlmbas sylancr eqcomd rexeqdv imaeq1d eleq1d
+        weq cnveq rexrab syl6bb syl5bb bitrd ) AKFGUCZJUDZUEKUBUFZIEUFZFDUGUHZU
+        IUHZUJZECGUKUHZULUDZUMZUBUNZUEZXCUOZUPLURUQZUCZUSUEZKXEUJZUTEHGVAUHZUMZ
+        AXAXJKAXAFVBZJUDZXJAWTXSJAGBFVCFGVDWTXSUJSGBFVEGFVFVGVHAXJEXHXEVIZVBXTE
+        UBXHXEYAYAVJZVMAEFXHBCIYAXGGJDUPXGVJZXHVJNRYBTUACIVKUDZUJAPVNSMVLVOVPVQ
+        XKXPEXHUMZAXRXIYEUBKXPKUPUEZEXHXPYFXEUPUEIXDUIVRKXEUPVSVTWAXBKUJXFXPEXH
+        XBKXEWBWDWCAYEXPEXBUOZXMUCZUSUEZUBXQWEZUMXRAXPEXHYJAYJXHACUPUEGUPUEYJXH
+        UJCYDUPPIVKWFWGUAYJCUBXGGHUPUPLYCOQYJVJWHWIWJWKYIXOXPUBEXQUBEWNZYHXNUSY
+        KYGXLXMXBXCWOWLWMWPWQWRWS $.
+        $( [7-Feb-2015] $)
     $}
 
     ${
@@ -18956,7 +18968,14 @@ $)
          linear combinations are then acceptable. $)
       elfilspd $p |- ( ph -> ( X e. ( N ` ( F " I ) ) <->
           E. f e. ( K ^m I ) X = ( M gsum ( f oF T F ) ) ) ) $=
-        ? $.
+        ( cima cfv wcel cv ccnv cvv csn cdif cfn co cgsu wceq wa cmap wrex elex
+        cof syl ellspd wss adantr cdm cnvimass wf wb cbs eqeltri elmapg sylancr
+        fvex biimpa fdm syl5sseq ssfi syl2anc biantrurd rexbidva bitr4d ) AKFGU
+        BJUCUDEUEZUFUGLUHUIZUBZUJUDZKIVTFDURUKULUKUMZUNZEHGUOUKZUPWDEWFUPABCDEF
+        GHIJKLMNOPQRSTAGUJUDZGUGUDUAGUJUQUSUTAWDWEEWFAVTWFUDZUNZWCWDWIWGWBGVAWC
+        AWGWHUAVBWIVTVCZWBGVTWAVDWIGHVTVEZWJGUMAWHWKAHUGUDWGWHWKVFHCVGUCUGOCVGV
+        KVHUAHGVTUGUJVIVJVLGHVTVMUSVNGWBVOVPVQVRVS $.
+        $( [7-Feb-2015] $)
     $}
   $}
 
@@ -19343,7 +19362,19 @@ $)
     $( Finitely-generated modules over a Noetherian ring, being homomorphic
        images of free modules, are Noetherian. $)
     lnrfg $p |- ( ( M e. LFinGen /\ S e. LNoeR ) -> M e. LNoeM ) $=
-      ? $.
+      ( va vb clfig wcel clnr wa cv cfv cbs wceq clnm eqid co crn cvv a1i wf wb
+      cfn clspn cpw wrex clmod fglmod islmodfg syl ibi cfrlm cid cres cvsca cof
+      cgsu cmpt clmhm ad3antrrr vex csca wss wf1o f1oi f1of ax-mp elpwi sylancr
+      adantr fss ad2antlr frlmup1 simplll simpllr simprl lnrfrlm syl2anc rnresi
+      frlmup3 fveq2i simprr syl5eq eqtrd lnmepi syl22anc exp31 rexlimdv mpd ) B
+      FGZAHGZIZDJZUBGZWLBUCKZKZBLKZMZIZDWPUDZUEZBNGZWIWTWJWIWTWIBUFGZWIWTUABUGZ
+      WPWNBDWPOZWNOZUHUIUJVIWKWRXADWSWKWLWSGZWRXAWKXFIZWRIZEAWLUKPZLKZBEJULWLUM
+      ZBUNKZUOPUPPUQZXIBURPGWIXINGZXMQZWPMXAXHEXKXJWPABXMXIWLXLRXIOZXJOZXDXLOZX
+      MOZWIXBWJXFWRXCUSZWLRGXHDUTSZABVAKMXHCSZXFWLWPXKTZWKWRXFWLWLXKTZWLWPVBYCW
+      LWLXKVCYDWLVDWLWLXKVEVFWLWPVGWLWLWPXKVJVHVKZVLWIWJXFWRVMXHWJWMXNWIWJXFWRV
+      NXGWMWQVOAWLXIXPVPVQXHXOXKQZWNKZWPXHEXKXJWPABXMXIWLWNXLRXPXQXDXRXSXTYAYBY
+      EXEVSXHYGWOWPYFWLWNWLVRVTXGWMWQWAWBWCWPXIBXMFXDWDWEWFWGWH $.
+      $( [7-Feb-2015] $)
 
     lnrfgtr.u $e |- U = ( LSubSp ` M ) $.
     lnrfgtr.n $e |- N = ( M |`s P ) $.
@@ -19352,7 +19383,9 @@ $)
        ring. $)
     lnrfgtr $p |- ( ( M e. LFinGen /\ S e. LNoeR /\ P e. U ) ->
         N e. LFinGen ) $=
-      ? $.
+      ( clfig wcel clnr w3a clnm lnrfg 3adant3 simp3 lnmlssfg syl2anc ) DIJZBKJ
+      ZACJZLDMJZUAEIJSTUBUABDFNOSTUAPECADGHQR $.
+      $( [7-Feb-2015] $)
   $}
 
 $(
