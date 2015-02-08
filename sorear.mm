@@ -239,7 +239,7 @@ $)
 
 
   $( Constant function with loose range. $)
-  fconst6 $p |- ( B e. C -> ( A X. { B } ) : A --> C ) $=
+  fconst6g $p |- ( B e. C -> ( A X. { B } ) : A --> C ) $=
     ( wcel csn cxp wf wss fconstg snssi fss syl2anc ) BCDABEZAMFZGMCHACNGABCIBC
     JAMCNKL $.
     $( [1-Feb-2015] $)
@@ -713,10 +713,10 @@ $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
-  $c incPos $.
+  $c toInc $.
 
   $( Class function defining inclusion posets. $)
-  cipo $a class incPos $.
+  cipo $a class toInc $.
 
   ${
     $d f x y $.
@@ -726,14 +726,14 @@ $)
        _EDITORIAL_:  I'm not thrilled with the name.  Any suggestions?
        Possible future directions include adding relative complement for the
        ` oc ` slot, or the order topology. $)
-    df-ipo $a |- incPos = ( f e. _V |-> { <. ( Base ` ndx ) , f >. ,
+    df-ipo $a |- toInc = ( f e. _V |-> { <. ( Base ` ndx ) , f >. ,
         <. ( le ` ndx ) , { <. x , y >. |
             ( { x , y } C_ f /\ x C_ y ) } >. } ) $.
   $}
 
   ${
     $d F f x y $.  $d I f x y $.  $d V f x y $.
-    ipoval.i $e |- I = ( incPos ` F ) $.
+    ipoval.i $e |- I = ( toInc ` F ) $.
     $( Value of the inclusion poset. $)
     ipoval $p |- ( F e. V -> I = { <. ( Base ` ndx ) , F >. , <. ( le ` ndx ) ,
           { <. x , y >. | ( { x , y } C_ F /\ x C_ y ) } >. } ) $=
@@ -776,7 +776,7 @@ $)
   $}
 
   ${
-    ipolt.i $e |- I = ( incPos ` F ) $.
+    ipolt.i $e |- I = ( toInc ` F ) $.
     ipolt.l $e |- S = ( lt ` I ) $.
     $( Strict order condition of the inclusion poset. $)
     ipolt $p |- ( ( F e. V /\ X e. F /\ Y e. F ) -> ( X S Y <-> X C. Y ) ) $=
@@ -802,7 +802,7 @@ $)
 
   ${
     $d F a b c $.  $d I a b c $.
-    ipopos.i $e |- I = ( incPos ` F ) $.
+    ipopos.i $e |- I = ( toInc ` F ) $.
     $( The inclusion poset on a family of sets is actually a poset. $)
     ipopos $p |- I e. Poset $=
       ( va vb vc cvv wcel cpo cfv cipo a1i cv wa wbr wss wb ipole w3a anbi12d
@@ -1466,7 +1466,7 @@ $)
   ${
     $d I x y $.  $d C x y $.  $d G x y $.  $d L x y $.  $d U x y $.
     $d F x y $.  $d X x y $.
-    mreclat.i $e |- I = ( incPos ` C ) $.
+    mreclat.i $e |- I = ( toInc ` C ) $.
 
     ${
       mrelatglb.g $e |- G = ( glb ` I ) $.
@@ -1536,8 +1536,8 @@ $)
   $}
 
   $( The closed subspaces of a topology-bearing module form a complete
-     lattice.  Demonstration for ~ mreclat. $)
-  mreclatdemo $p |- ( W e. ( TopSp i^i LMod ) -> ( incPos `
+     lattice.  Demonstration for ~ mreclat . $)
+  mreclatdemo $p |- ( W e. ( TopSp i^i LMod ) -> ( toInc `
         ( ( LSubSp ` W ) i^i ( Clsd ` ( TopOpen ` W ) ) ) ) e. CLat ) $=
     ( ctps clmod cin wcel clss cfv cts ccld cuni cmre cipo ccla fvex sseli eqid
     cpw cvv syl wceq uniex mremre mp1i cbs inss2 eqid1 inss1 ctop istps simprbi
@@ -1729,7 +1729,7 @@ $)
       YBYRNZYBYRYCYTUVHVLYBYREVCVDVESVFYQYLUUEYSUUARUVFUVAXLEYRVISVJXG $.
       $( [1-Feb-2015] $)
 
-    $( Second half of ~ ismrcd . $)
+    $( Second half of ~ ismrcd1 . $)
     ismrcd2 $p |- ( ph -> F = ( mrCls ` dom ( F i^i _I ) ) ) $=
       ( vz cfv wcel wa wss adantr wi cvv wceq cpw cid cin cdm cmrc wfn ffn cmre
       wf syl ismrcd1 eqid mrcf 3syl cv mrcssv elpwi mrcssid syl2an wal alrimivv
@@ -17329,7 +17329,7 @@ $)
     pwsgsum $p |- ( ph -> ( Y gsum F ) = ( x e. I |-> ( R gsum
               ( y e. J |-> ( ( F ` y ) ` x ) ) ) ) ) $=
       ( cgsu co csca cfv csn cprdm cv cmpt ccmn wcel wceq pwsval syl2anc oveq1d
-      cxp eqid cbs cvv c0g fvex a1i wf fconst6 wb fveq2d syl5eq feq3 mpbid ccnv
+      cxp eqid cbs cvv c0g fvex a1i wf fconst6g wb fveq2d syl5eq feq3 mpbid ccnv
       syl cdif cima cfn sneqd difeq2d imaeq2d eqeltrrd prdmgsum fvconst2g sylan
       wa mpteq2dva 3eqtrd ) AKFUAUBEUCUDZGEUEUOZUFUBZFUAUBBGBUGZWEUDZCHWGCUGFUD
       UDUHZUAUBZUHBGEWIUAUBZUHAKWFFUAAEUIUJZGIUJKWFUKRPEWDGUIIKMWDUPULUMZUNABCW
@@ -18085,7 +18085,7 @@ $)
     $( The free module is a module. $)
     frlmlmod $p |- ( ( R e. Ring /\ I e. W ) -> F e. LMod ) $=
       ( vi crg wcel wa crglmod cfv csn cxp cdsmm clmod frlmval simpr csca wceq
-      co simpl wf rlmlmod adantr fconst6 syl fvex fvconst2 adantl fveq2d rlmsca
+      co simpl wf rlmlmod adantr fconst6g syl fvex fvconst2 adantl fveq2d rlmsca
       cv ad2antrr eqtr4d eqid dsmmlmod eqeltrd ) AGHZCDHZIZBACAJKZLMZNTZOABCGDE
       PUTFVCVBACDURUSQURUSUAUTVAOHZCOVBUBURVDUSAUCUDCVAOUEUFUTFULZCHZIZVEVBKZRK
       VARKZAVGVHVARVFVHVASUTCVAVEAJUGUHUIUJURAVISUSVFAGUKUMUNVCUOUPUQ $.
@@ -18108,7 +18108,7 @@ $)
       $( The base set of the free module is a subspace of the power module. $)
       frlmlss $p |- ( ( R e. Ring /\ I e. W ) -> B e. U ) $=
         ( crg wcel cfv co cbs fveq2d cprdm clss clmod wceq eqid crglmod csn cxp
-        vi wa cdsmm frlmval syl5eq simpr simpl wf rlmlmod adantr fconst6 syl cv
+        vi wa cdsmm frlmval syl5eq simpr simpl wf rlmlmod adantr fconst6g syl cv
         csca fvex fvconst2 adantl rlmsca ad2antrr eqtr4d cpws cvv pwsval eqcomd
         dsmmlss mpan oveq1d eqtr2d syl6eqr eleqtrd eqeltrd ) BJKZEFKZUEZABEBUAL
         ZUBUCZUFMZNLZCVQADNLWAHVQDVTNBDEJFGUGOUHVQWABVSPMZQLZCVQUDWBVSBWCWAEFVO
