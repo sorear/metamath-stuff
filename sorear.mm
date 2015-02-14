@@ -712,6 +712,14 @@ $)
       ( wcel char cfv cdom wbr harcl onirri con0 wa elharval biimprd mpani mtoi
       ) BACZBDEZBFGZQQCZQBHZIPQJCZRSTPSUARKABQLMNO $.
       $( [11-Feb-2015] $)
+
+    $( Weak ordering property of the Hartogs function. $)
+    harword $p |- ( ( X ~<_ Y /\ Y e. V ) -> ( har ` X ) C_ ( har ` Y ) ) $=
+      ( vy cdom wbr wcel wa cv con0 crab char cfv wss wi adantr wceq cvv harval
+      domtr expcom ss2rabdv reldom brrelexi syl adantl 3sstr4d ) BCEFZCAGZHDIZB
+      EFZDJKZUJCEFZDJKZBLMZCLMZUHULUNNUIUHUKUMDJUHUKUMOUJJGUKUHUMUJBCTUAPUBPUHU
+      OULQZUIUHBRGUQBCEUCUDDRBSUEPUIUPUNQUHDACSUFUG $.
+      $( [14-Feb-2015] $)
   $}
 
   ${
@@ -808,16 +816,16 @@ $)
     wdomtr $p |- ( ( X ~<_* Y /\ Y ~<_* Z ) -> X ~<_* Z ) $=
       ( vz vy cvv wcel cwdom wbr wa wi c0 wceq adantl wne cv wfo wex wb mpbid
       0wdom syl5ibrcom simpll simprr relwdom brrelexi ad2antlr brwdomn0 syl2anc
-      breq1 simpllr simplrr crn cdm dm0rn0 necon3bii a1i bicomd forn neeq1d fof
-      wf fdm syl 3bitr3d simplrl ccom vex coex foco fowdom sylancr expr exlimdv
-      mpd ex pm2.61dne expcom wn wdomref adantr brprc syl5ibr pm2.61i ) CFGZABH
-      IZBCHIZJZACHIZKWHWEWIWHWEJWIALWEALMZWIKWHWEWIWJLCHIFCUAALCHUJUBNWHWEALOZW
-      IWHWEWKJZJZBADPZQZDRZWIWMWFWPWFWGWLUCWMWKBFGZWFWPSWHWEWKUDWGWQWFWLBCHUEUF
-      UGDFABUHUITWMWOWIDWMWOWIWMWOJZCBEPZQZERZWIWRWGXAWFWGWLWOUKWRBLOZWEWGXASWR
-      WKXBWHWEWKWOULWOWKXBSWMWOWNUMZLOZWNUNZLOZWKXBWOXFXDXFXDSWOXELXCLWNUOUPUQU
-      RWOXCALBAWNUSUTWOXEBLWOBAWNVBXEBMBAWNVABAWNVCVDUTVENTWHWEWKWOVFEFBCUHUITW
-      RWTWIEWMWOWTWIWOWTJZWIWMXGWNWSVGZFGCAXHQWIWNWSDVHEVHVICBAWNWSVJXHFACVKVLN
-      VMVNVOVPVNVOVMVQVRWHWIWEVSAAHIZWFXIWGWFAFGXIABHUEUFFAVTVDWAACHWBWCWD $.
+      breq1 simpllr simplrr cdm crn dm0rn0 necon3bii a1i wf fof fdm neeq1d forn
+      syl 3bitr3rd simplrl ccom coex foco fowdom sylancr expr exlimdv pm2.61dne
+      vex mpd ex expcom wn wdomref adantr brprc syl5ibr pm2.61i ) CFGZABHIZBCHI
+      ZJZACHIZKWGWDWHWGWDJWHALWDALMZWHKWGWDWHWILCHIFCUAALCHUJUBNWGWDALOZWHWGWDW
+      JJZJZBADPZQZDRZWHWLWEWOWEWFWKUCWLWJBFGZWEWOSWGWDWJUDWFWPWEWKBCHUEUFUGDFAB
+      UHUITWLWNWHDWLWNWHWLWNJZCBEPZQZERZWHWQWFWTWEWFWKWNUKWQBLOZWDWFWTSWQWJXAWG
+      WDWJWNULWNWJXASWLWNWMUMZLOZWMUNZLOZXAWJXCXESWNXBLXDLWMUOUPUQWNXBBLWNBAWMU
+      RXBBMBAWMUSBAWMUTVCVAWNXDALBAWMVBVAVDNTWGWDWJWNVEEFBCUHUITWQWSWHEWLWNWSWH
+      WNWSJZWHWLXFWMWRVFZFGCAXGQWHWMWRDVNEVNVGCBAWMWRVHXGFACVIVJNVKVLVOVPVLVOVK
+      VMVQWGWHWDVRAAHIZWEXHWFWEAFGXHABHUEUFFAVSVCVTACHWAWBWC $.
       $( [11-Feb-2015] $)
 
     $( Weak dominance strengthens to usual dominance on the power sets. $)
@@ -853,19 +861,19 @@ $)
     wdom2d $p |- ( ph -> A ~<_* B ) $=
       ( vz vw vv cv wcel wbr cvv syl2anc wrex csb crab cwdom wfo cxp wss wf weq
       cmpt csbeq1 eleq1d elrab simprbi adantl eqid fmptd fssxp syl rabexg xpexg
-      ssexg cfv wceq wral wa wi eleq1 biimpcd ancrd reximdv mpd wel hbcsb1 hbel
-      ax-17 ax17el hbeq hban csbeq1a eqeq2d anbi12d cbvrex sylib fvmptg rexbiia
-      mpdan rexrab bitri sylibr ralrimiva dffo3 sylanbrc fowdom cdom ssrab2 mpi
-      ssdom2g domwdom 3syl wdomtr ) ADCLOZHUAZDPZLEUBZUCQZXDEUCQZDEUCQAMXDCMOZH
-      UAZUIZRPZXDDXIUDZXEAXIXDDUEZUFZXLRPZXJAXDDXIUGZXMAMXDXHDXIXGXDPZXHDPZAXPX
-      GEPXQXCXQLXGELMUHXBXHDCXAXGHUJUKULUMUNXIUOZUPZXDDXIUQURAXDRPZDFPXNAEGPZXT
-      JXCLEGUSURIXDDRFUTSXIXLRVASAXOBOZNOZXIVBZVCZNXDTZBDVDXKXSAYFBDAYBDPZVEZCY
-      CHUAZDPZYBYIVCZVEZNETZYFYHHDPZYBHVCZVEZCETZYMYHYOCETYQKYHYOYPCEYGYOYPVFAY
-      GYOYNYOYGYNYBHDVGVHVIUNVJVKYPYLCNEYPNVOYJYKCCMMYIDCMYCHMNVLCVOVMZXGDPCVOV
-      NCMMYBYIMBCVPYRVQVRCNUHZYNYJYOYKYSHYIDCYCHVSZUKYSHYIYBYTVTWAWBWCYFYKNXDTY
-      MYEYKNXDYCXDPZYDYIYBUUAYJYDYIVCUUAYCEPYJXCYJLYCELNUHXBYIDCXAYCHUJUKZULUMM
-      YCXHYIXDDXICXGYCHUJXRWDWFVTWEXCYJYKLNEUUBWGWHWIWJNBXDDXIWKWLXIRDXDWMSAYAX
-      DEWNQZXFJYAXDEUFUUCXCLEWOXDEGWQWPXDEWRWSDXDEWTS $.
+      ssexg cfv wceq wral wa wi eleq1 biimpcd ancrd reximdv ax-17 ax17el hbcsb1
+      hbel hbeq csbeq1a eqeq2d anbi12d cbvrex sylib fvmptg mpdan rexbiia rexrab
+      mpd hban bitri sylibr ralrimiva dffo3 sylanbrc fowdom cdom ssrab2 ssdom2g
+      mpi domwdom 3syl wdomtr ) ADCLOZHUAZDPZLEUBZUCQZXCEUCQZDEUCQAMXCCMOZHUAZU
+      IZRPZXCDXHUDZXDAXHXCDUEZUFZXKRPZXIAXCDXHUGZXLAMXCXGDXHXFXCPZXGDPZAXOXFEPX
+      PXBXPLXFELMUHXAXGDCWTXFHUJUKULUMUNXHUOZUPZXCDXHUQURAXCRPZDFPXMAEGPZXSJXBL
+      EGUSURIXCDRFUTSXHXKRVASAXNBOZNOZXHVBZVCZNXCTZBDVDXJXRAYEBDAYADPZVEZCYBHUA
+      ZDPZYAYHVCZVEZNETZYEYGHDPZYAHVCZVEZCETZYLYGYNCETYPKYGYNYOCEYFYNYOVFAYFYNY
+      MYNYFYMYAHDVGVHVIUNVJWEYOYKCNEYONVKYIYJCCMMYHDCMYBHMNCVLVMZXFDPCVKVNCMMYA
+      YHMBCVLYQVOWFCNUHZYMYIYNYJYRHYHDCYBHVPZUKYRHYHYAYSVQVRVSVTYEYJNXCTYLYDYJN
+      XCYBXCPZYCYHYAYTYIYCYHVCYTYBEPYIXBYILYBELNUHXAYHDCWTYBHUJUKZULUMMYBXGYHXC
+      DXHCXFYBHUJXQWAWBVQWCXBYIYJLNEUUAWDWGWHWINBXCDXHWJWKXHRDXCWLSAXTXCEWMQZXE
+      JXTXCEUFUUBXBLEWNXCEGWOWPXCEWQWRDXCEWSS $.
       $( [13-Feb-2015] $)
   $}
 
@@ -889,14 +897,13 @@ $)
           E. f A. x e. X E. y e. Y x = ( f ` y ) ) ) $=
       ( vz vw wcel cvv cv cfv wceq wrex wral wex wb wa adantl cwdom wbr wfo cpw
       elex brwdom2 wf dffo3 simprbi wi wss elpwi ssrexv syl ralimdv syl5 eximdv
-      rexlimdva sylbid simpll simplr eqeq1 rexbidv fveq2 eqeq2d cbvrexv cbvralv
-      weq syl6bb biimpi r19.21bi wdom2d ex exlimdv impbid syl2an ) FDJFKJZGKJZF
-      GUAUBZALZBLZCLZMZNZBGOZAFPZCQZRGEJFDUEGEUEVQVRSZVSWGWHVSHLZFWBUCZCQZHGUDZ
-      OZWGVRVSWMRVQHCKFGUFTWHWKWGHWLWHWIWLJZSZWJWFCWJWDBWIOZAFPZWOWFWJWIFWBUGWQ
-      BAWIFWBUHUIWOWPWEAFWNWPWEUJZWHWNWIGUKWRWIGULWDBWIGUMUNTUOUPUQURUSWHWFVSCW
-      HWFVSWHWFSZHIFGKKILZWBMZVQVRWFUTVQVRWFVAWSWIXANZIGOZHFWFXCHFPZWHWFXDWEXCA
-      HFAHVHZWEWIWCNZBGOXCXEWDXFBGVTWIWCVBVCXFXBBIGBIVHWCXAWIWAWTWBVDVEVFVIVGVJ
-      TVKVLVMVNVOVP $.
+      rexlimdva sylbid simplr eqeq1 rexbidv fveq2 eqeq2d cbvrexv syl6bb cbvralv
+      weq biimpi r19.21bi wdomd ex exlimdv impbid syl2an ) FDJFKJZGKJZFGUAUBZAL
+      ZBLZCLZMZNZBGOZAFPZCQZRGEJFDUEGEUEVPVQSZVRWFWGVRHLZFWAUCZCQZHGUDZOZWFVQVR
+      WLRVPHCKFGUFTWGWJWFHWKWGWHWKJZSZWIWECWIWCBWHOZAFPZWNWEWIWHFWAUGWPBAWHFWAU
+      HUIWNWOWDAFWMWOWDUJZWGWMWHGUKWQWHGULWCBWHGUMUNTUOUPUQURUSWGWEVRCWGWEVRWGW
+      ESZHIFGKILZWAMZVPVQWEUTWRWHWTNZIGOZHFWEXBHFPZWGWEXCWDXBAHFAHVHZWDWHWBNZBG
+      OXBXDWCXEBGVSWHWBVAVBXEXABIGBIVHWBWTWHVTWSWAVCVDVEVFVGVITVJVKVLVMVNVO $.
       $( [13-Feb-2015] $)
 
     $( Weak dominance implies existance of a covering function. $)
@@ -914,25 +921,24 @@ $)
     $( Weak dominance of a (disjoint) union. $)
     unwdomg $p |- ( ( ( A ~<_* B /\ B e. V ) /\ ( C ~<_* D /\ D e. W ) /\
           ( B i^i D ) = (/) ) -> ( A u. C ) ~<_* ( B u. D ) ) $=
-      ( va vb vf vg vz cwdom wcel wa wceq cv cfv wrex cvv eqeq2d vy wbr cin w3a
-      wral wex cun brwdom3i 3ad2ant1 3ad2ant2 adantr cif relwdom brrelexi unexg
-      c0 syl2an ad2ant2r 3adant3 ad2ant2l wi wo weq eqeq1 rexbidv rcla4va fveq2
-      cbvrexv wss ssun1 iftrue fveq1d biimprd reximia ssrexv mpsyl sylbi ancoms
-      syl adantlr adantll syl6bb ssun2 wn minel iffalse reximdva sylan2 anassrs
-      elun imp adantlrl jaodan sylan2b expl 3ad2ant3 impl wdom2d exlimdv mpd ex
-      expr ) ABLUBZBEMZNZCDLUBZDFMZNZBDUCUPOZUDZGPZHPZIPZQZOZHBRZGAUEZIUFZACUGZ
-      BDUGZLUBZXEXHXRXIGHIEABUHUIXJXQYAIXJXQYAXJXQNZXKXLJPZQZOZHDRZGCUEZJUFZYAX
-      JYHXQXHXEYHXIGHJFCDUHUJUKYBYGYAJXJXQYGYAXJXQYGNZNUAKXSXTSSKPZYJBMZXMYCULZ
-      QZXJXSSMZYIXEXHYNXIXCXFYNXDXGXCASMCSMYNXFABLUMUNCDLUMUNACSSUOUQURUSUKXJXT
-      SMZYIXEXHYOXIXDXGYOXCXFBDEFUOUTUSUKXJYIUAPZXSMZYPYMOZKXTRZXIXEYIYQNYSVAXH
-      XIYIYQYSYQXIYINZYPAMZYPCMZVBYSYPACWJYTUUAYSUUBYIUUAYSXIXQUUAYSYGUUAXQYSUU
-      AXQNYPXNOZHBRZYSXPUUDGYPAGUAVCZXOUUCHBXKYPXNVDVEVFUUDYPYJXMQZOZKBRZYSUUCU
-      UGHKBHKVCZXNUUFYPXLYJXMVGTVHBXTVIUUHYRKBRYSBDVJUUGYRKBYKYRUUGYKYMUUFYPYKY
-      JYLXMYKXMYCVKVLTVMVNYRKBXTVOVPVQVSVRVTWAXIYGUUBYSXQXIYGUUBYSYGUUBNXIYPYJY
-      CQZOZKDRZYSUUBYGUULYFUULGYPCUUEYFYPYDOZHDRUULUUEYEUUMHDXKYPYDVDVEUUMUUKHK
-      DUUIYDUUJYPXLYJYCVGTVHWBVFVRDXTVIXIUULNYRKDRZYSDBWCXIUULUUNXIUUKYRKDXIYJD
-      MZNZYRUUKUUPYMUUJYPUUPYJYLYCUUPYKWDZYLYCOUUOXIUUQYJDBWEVRYKXMYCWFVSVLTVMW
-      GWKYRKDXTVOVPWHWIWLWMWNWOWPWQWRXBWSWTXAWSWT $.
+      ( va vb vf vg vy vz cwdom wcel wa wceq cv cfv wrex eqeq2d wbr cin c0 wral
+      w3a wex cun brwdom3i 3ad2ant1 3ad2ant2 adantr cvv cif ad2ant2l 3adant3 wi
+      unexg wo elun weq eqeq1 rexbidv rcla4va fveq2 cbvrexv ssun1 iftrue fveq1d
+      wss biimprd reximia ssrexv mpsyl sylbi syl ancoms adantlr syl6bb ssun2 wn
+      adantll minel iffalse reximdva imp sylan2 anassrs adantlrl jaodan sylan2b
+      expl 3ad2ant3 impl wdomd expr exlimdv mpd ex ) ABMUAZBENZOZCDMUAZDFNZOZBD
+      UBUCPZUEZGQZHQZIQZRZPZHBSZGAUDZIUFZACUGZBDUGZMUAZXAXDXNXEGHIEABUHUIXFXMXQ
+      IXFXMXQXFXMOZXGXHJQZRZPZHDSZGCUDZJUFZXQXFYDXMXDXAYDXEGHJFCDUHUJUKXRYCXQJX
+      FXMYCXQXFXMYCOZOKLXOXPULLQZYFBNZXIXSUMZRZXFXPULNZYEXAXDYJXEWTXCYJWSXBBDEF
+      UQUNUOUKXFYEKQZXONZYKYIPZLXPSZXEXAYEYLOYNUPXDXEYEYLYNYLXEYEOZYKANZYKCNZUR
+      YNYKACUSYOYPYNYQYEYPYNXEXMYPYNYCYPXMYNYPXMOYKXJPZHBSZYNXLYSGYKAGKUTZXKYRH
+      BXGYKXJVAVBVCYSYKYFXIRZPZLBSZYNYRUUBHLBHLUTZXJUUAYKXHYFXIVDTVEBXPVIUUCYML
+      BSYNBDVFUUBYMLBYGYMUUBYGYIUUAYKYGYFYHXIYGXIXSVGVHTVJVKYMLBXPVLVMVNVOVPVQW
+      AXEYCYQYNXMXEYCYQYNYCYQOXEYKYFXSRZPZLDSZYNYQYCUUGYBUUGGYKCYTYBYKXTPZHDSUU
+      GYTYAUUHHDXGYKXTVAVBUUHUUFHLDUUDXTUUEYKXHYFXSVDTVEVRVCVPDXPVIXEUUGOYMLDSZ
+      YNDBVSXEUUGUUIXEUUFYMLDXEYFDNZOZYMUUFUUKYIUUEYKUUKYFYHXSUUKYGVTZYHXSPUUJX
+      EUULYFDBWBVPYGXIXSWCVOVHTVJWDWEYMLDXPVLVMWFWGWHWIWJWKWLWMWNWOWPWQWRWPWQ
+      $.
       $( [13-Feb-2015] $)
   $}
 
@@ -942,24 +948,31 @@ $)
     $( Weak dominance of a cross product. $)
     xpwdomg $p |- ( ( ( A ~<_* B /\ B e. V ) /\ ( C ~<_* D /\ D e. W ) ) ->
           ( A X. C ) ~<_* ( B X. D ) ) $=
-      ( vc vd va vb vx cwdom wcel wa cv cfv wceq wrex wral cvv vg vf vy wbr wex
-      cxp brwdom3i adantl wi adantr c1st c2nd cop relwdom brrelexi xpexg syl2an
-      ad2ant2r ad2ant2l pm3.2 ralimdv com12 impcom reximdv ralimi syl eqeq1 vex
-      fvex opth syl6bb 2rexbidv ralxp sylibr r19.21bi fveq2 op1st syl6eq fveq2d
-      op2nd opeq12d eqeq2d rexxp adantll wdom2d expr exlimdv ex mpd ) ABLUDZBEM
-      ZNZCDLUDZDFMZNZNZGOZHOZUAOZPZQZHDRZGCSZUAUEZACUFZBDUFZLUDZWOXDWLGHUAFCDUG
-      UHWPIOZJOZUBOZPZQZJBRZIASZUBUEZXDXGUIZWLXOWOIJUBEABUGUJWPXNXPUBWPXNXPWPXN
-      NXCXGUAWPXNXCXGWPXNXCNZNKUCXEXFTTUCOZUKPZXJPZXRULPZWSPZUMZWPXETMZXQWJWMYD
-      WKWNWJATMCTMYDWMABLUNUOCDLUNUOACTTUPUQURUJWPXFTMZXQWKWNYEWJWMBDEFUPUSUJXQ
-      KOZXEMZYFYCQZUCXFRZWPXQYGNYFXKWTUMZQZHDRJBRZYIXQYLKXEXQXLXANZHDRZJBRZGCSZ
-      IASZYLKXESXQXMXBNZGCSZIASZYQXCXNYTXCXMYSIAXMXCYSXMXBYRGCXMXBUTVAVBVAVCYSY
-      PIAYRYOGCXBXMYOXBXLYNJBXLXBYNXLXAYMHDXLXAUTVDVBVDVCVEVEVFYLYOKIGACYFXHWQU
-      MZQZYKYMJHBDUUBYKUUAYJQYMYFUUAYJVGXHWQXKWTIVHGVHWRWSVIVJVKVLVMVNVOYHYKUCJ
-      HBDXRXIWRUMZQZYCYJYFUUDXTXKYBWTUUDXSXIXJUUDXSUUCUKPXIXRUUCUKVPXIWRJVHZVQV
-      RVSUUDYAWRWSUUDYAUUCULPWRXRUUCULVPXIWRUUEHVHVTVRVSWAWBWCVNWDWEWFWGWHWGWIW
-      I $.
+      ( va vb vf vc vd vg vx vy wa cv cfv wceq wrex wral cwdom wbr wcel wex cxp
+      brwdom3i adantr adantl wi cvv c1st cop xpexg ad2ant2l pm3.2 ralimdv com12
+      c2nd impcom reximdv ralimi syl eqeq1 vex fvex opth syl6bb 2rexbidv sylibr
+      ralxp r19.21bi fveq2 op1st syl6eq fveq2d op2nd opeq12d eqeq2d rexxp wdomd
+      adantll expr exlimdv ex mp2d ) ABUAUBZBEUCZOZCDUAUBZDFUCZOZOZGPZHPZIPZQZR
+      ZHBSZGATZIUDZJPZKPZLPZQZRZKDSZJCTZLUDZACUEZBDUEZUAUBZWHWTWKGHIEABUFUGWKXH
+      WHJKLFCDUFUHWLWSXHXKUIZIWLWSXLWLWSOXGXKLWLWSXGXKWLWSXGOZOMNXIXJUJNPZUKQZW
+      OQZXNURQZXCQZULZWLXJUJUCZXMWGWJXTWFWIBDEFUMUNUGXMMPZXIUCZYAXSRZNXJSZWLXMY
+      BOYAWPXDULZRZKDSHBSZYDXMYGMXIXMWQXEOZKDSZHBSZJCTZGATZYGMXITXMWRXFOZJCTZGA
+      TZYLXGWSYOXGWRYNGAWRXGYNWRXFYMJCWRXFUOUPUQUPUSYNYKGAYMYJJCXFWRYJXFWQYIHBW
+      QXFYIWQXEYHKDWQXEUOUTUQUTUSVAVAVBYGYJMGJACYAWMXAULZRZYFYHHKBDYQYFYPYERYHY
+      AYPYEVCWMXAWPXDGVDJVDXBXCVEVFVGVHVJVIVKYCYFNHKBDXNWNXBULZRZXSYEYAYSXPWPXR
+      XDYSXOWNWOYSXOYRUKQWNXNYRUKVLWNXBHVDZVMVNVOYSXQXBXCYSXQYRURQXBXNYRURVLWNX
+      BYTKVDVPVNVOVQVRVSVIWAVTWBWCWDWCWE $.
       $( [13-Feb-2015] $)
   $}
+
+  $( A set is weakly dominant over its image under any function. $)
+  wdomimag $p |- ( ( Fun F /\ A e. V ) -> ( F " A ) ~<_* A ) $=
+    ( wfun wcel wa cima crn cwdom df-ima cdm wbr cvv resfunexg funres funforn
+    cres wfo sylib syl2anc adantr fowdom cdom wss dmres inss1 eqsstri ssdom2g
+    cin mpi domwdom syl adantl wdomtr syl5eqbr ) BDZACEZFZBAGBAQZHZAIBAJURUTU
+    SKZILZVAAILZUTAILURUSMEVAUTUSRZVBBACNUPVDUQUPUSDVDABOUSPSUAUSMUTVAUBTUQVC
+    UPUQVAAUCLZVCUQVAAUDVEVAABKZUIABAUEAVFUFUGVAACUHUJVAAUKULUMUTVAAUNTUO $.
+    $( [14-Feb-2015] $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -1044,23 +1057,22 @@ $)
     $( Unwrap an iterated union from the "other end". $)
     ituniiun $p |- ( A e. V -> ( ( U ` A ) ` suc B ) =
           U_ a e. A ( ( U ` a ) ` B ) ) $=
-      ( csuc cfv ciun wceq fveq2 eqeq12d com wcel c0 adantr iuneq2dv cvv fveq1d
-      vb vd vc cv iuneq1 suceq fveq2d wel weq cuni uniiun itunisuc ituni0 ax-mp
-      vex unieqi eqtri a1i iuneq2i 3eqtr4i wi unieq eqcomi eqtr4i syl6eq syl5eq
-      iuncom4 finds iun0 cdm peano2b wfn itunifn fndm mp2b eleq2i bitr4i sylnbi
-      wn ndmfv sylnbir 3eqtr4d pm2.61i vtoclg ) DIZUBUEZEJZJZGWGDGUEZEJZJZKZLZW
-      FCEJZJZGCWLKZLUBCFWGCLZWIWPWMWQWRWFWHWOWGCEMUAGWGCWLUFNDOPZWNUCUEZIZWHJZG
-      WGWTWKJZKZLQIZWHJZGWGQWKJZKZLUDUEZIZWHJZGWGXIWKJZKZLZXJIZWHJZGWGXJWKJZKZL
-      ZWNUCUDDWTQLZXBXFXDXHXTXAXEWHWTQUGUHXTGWGXCXGXTXCXGLGUBUIZWTQWKMRSNUCUDUJ
+      ( csuc cfv ciun wceq fveq2 eqeq12d com wcel c0 adantr iuneq2dv cuni vb vd
+      vc cv fveq1d iuneq1 suceq fveq2d wel weq uniiun itunisuc cvv ituni0 ax-mp
+      vex unieqi eqtri iuneq2i 3eqtr4i wi unieq a1i iuncom4 eqtr2i syl6eq finds
+      syl5eq iun0 eqcomi cdm peano2b wfn itunifn fndm mp2b eleq2i bitr4i sylnbi
+      wn ndmfv sylnbir 3eqtr4a pm2.61i vtoclg ) DIZUAUDZEJZJZGWGDGUDZEJZJZKZLZW
+      FCEJZJZGCWLKZLUACFWGCLZWIWPWMWQWRWFWHWOWGCEMUEGWGCWLUFNDOPZWNUBUDZIZWHJZG
+      WGWTWKJZKZLQIZWHJZGWGQWKJZKZLUCUDZIZWHJZGWGXIWKJZKZLZXJIZWHJZGWGXJWKJZKZL
+      ZWNUBUCDWTQLZXBXFXDXHXTXAXEWHWTQUGUHXTGWGXCXGXTXCXGLGUAUIZWTQWKMRSNUBUCUJ
       ZXBXKXDXMYBXAXJWHWTXIUGUHYBGWGXCXLYBXCXLLYAWTXIWKMRSNWTXJLZXBXPXDXRYCXAXO
       WHWTXJUGUHYCGWGXCXQYCXCXQLYAWTXJWKMRSNWTDLZXBWIXDWMYDXAWFWHWTDUGUHYDGWGXC
-      WLYDXCWLLYAWTDWKMRSNWGUKZGWGWJKXFXHGWGULXFQWHJZUKYEABWGQEHUMYFWGWGTPZYFWG
-      LUBUPZABWGETHUNUOUQURGWGXGWJXGWJLZYAWJTPZYIGUPZABWJETHUNUOUSUTVAXNXSVBXIO
-      PXNXPXKUKZXRABWGXJEHUMXNYLXMUKZXRXKXMVCYMGWGXLUKZKZXRYOYMGWGXLVHVDGWGXQYN
-      XQYNLYAABWJXIEHUMUSUTVEVFVGUSVIWSVTZQGWGQKZWIWMQYQLYPYQQGWGVJVDUSWSWFWHVK
-      ZPZWIQLWSWFOPYSDVLYROWFYGWHOVMYROLYHABWGETHVNOWHVOVPVQVRWFWHWAVSYPGWGWLQY
-      PWLQLZYAWSDWKVKZPYTUUAODYJWKOVMUUAOLYKABWJETHVNOWKVOVPVQDWKWAWBRSWCWDWE
-      $.
+      WLYDXCWLLYAWTDWKMRSNWGTZGWGWJKXFXHGWGUKXFQWHJZTYEABWGQEHULYFWGWGUMPZYFWGL
+      UAUPZABWGEUMHUNUOUQURGWGXGWJABWJEWGHUNUSUTXNXSVAXIOPXNXPXKTZXRABWGXJEHULX
+      NYIXMTZXRXKXMVBXRGWGXLTZKYJGWGXQYKXQYKLYAABWJXIEHULVCUSGWGXLVDVEVFVHVCVGW
+      SVTZQGWGQKZWIWMYMQGWGVIVJWSWFWHVKZPZWIQLWSWFOPYODVLYNOWFYGWHOVMYNOLYHABWG
+      EUMHVNOWHVOVPVQVRWFWHWAVSYLGWGWLQYLWLQLZYAWSDWKVKZPYPYQODWJUMPWKOVMYQOLGU
+      PABWJEUMHVNOWKVOVPVQDWKWAWBRSWCWDWE $.
       $( [11-Feb-2015] $)
   $}
 
@@ -1093,12 +1105,12 @@ $)
     otosid $p |- ( X e. On -> ( O ` X ) = X ) $=
       ( con0 wcel cfv cv cep wiso wex crio cpw wceq exbidv syl cvv mpdan isoeq5
       wtr wss tron dftr4 mpbi sseli riotabidv riotaex fvmpt cres resiexg isoeq1
-      cid isoid cla4egv mpi wreu wwe word eloni ordwe ordtype ax-17 a17d isoeq4
-      wb riota2f mpbid eqtrd ) EGHZEDIZBJZEKKAJZLZAMZBGNZEVKEGOZHVLVQPGVREGUBGV
-      RUCUDGUEUFUGCEVMCJZKKVNLZAMZBGNVQVRDVSEPZWAVPBGWBVTVOAVMVSEKKVNUAQUHFVPBG
-      UIUJRVKEEKKVNLZAMZVQEPZVKUNEUKZSHZWDEGULWGEEKKWFLZWDEKUOWCWHAWFSEEKKWFVNU
-      MUPUQRVKVPBGURZWDWEVGVKEKUSZWIVKEUTWJEVAEVBRBEGKAVCTVPWDBCGEVSEHBVDVKWDBV
-      EVMEPVOWCAVMEEKKVNVFQVHTVIVJ $.
+      cid isoid cla4egv ee10 wreu wb word eloni ordwe ordtype ax-17 a17d isoeq4
+      wwe riota2f mpbid eqtrd ) EGHZEDIZBJZEKKAJZLZAMZBGNZEVKEGOZHVLVQPGVREGUBG
+      VRUCUDGUEUFUGCEVMCJZKKVNLZAMZBGNVQVRDVSEPZWAVPBGWBVTVOAVMVSEKKVNUAQUHFVPB
+      GUIUJRVKEEKKVNLZAMZVQEPZVKUNEUKZSHEEKKWFLZWDEGULEKUOWCWGAWFSEEKKWFVNUMUPU
+      QVKVPBGURZWDWEUSVKEKVGZWHVKEUTWIEVAEVBRBEGKAVCTVPWDBCGEVSEHBVDVKWDBVEVMEP
+      VOWCAVMEEKKVNVFQVHTVIVJ $.
       $( [11-Feb-2015] $)
 
     ${
@@ -1124,65 +1136,217 @@ $)
     $d O a b x y z $.
     $( A set of ordinals is equinumerous to its order type. $)
     otosen $p |- ( X e. ~P On -> X ~~ ( O ` X ) ) $=
-      ( va vb con0 cpw wcel cfv cv cep wiso cio cmpt ccnv wf1o syl cen wbr wceq
-      weq wb fveq2 isoeq4 isoeq5 iotabidv isoeq1 cbviota syl6eq cbvmptv otosiso
-      bitrd isocnv isof1o f1oeng mpdan ) EIJZKZEEDLZEGUTGMZDLZVCNNHMZOZHPZQZLZR
-      ZSZEVBUAUBVAEVBNNVJOZVKVAVBENNVIOVLABCVHDEFGCUTVGCMZDLZVMNNBMZOZBPZGCUDZV
-      GVNVMNNVEOZHPVQVRVFVSHVRVFVNVCNNVEOZVSVRVDVNUCVFVTUEVCVMDUFVDVCVNNNVEUGTV
-      NVCVMNNVEUHUOUIVSVPHBVNVMNNVOVEUJUKULUMUNVBENNVIUPTEVBNNVJUQTEVBUTVJURUS
+      ( va vb con0 cpw wcel cfv cv cep wiso cio cmpt ccnv wf1o cen wbr weq wceq
+      wb fveq2 isoeq4 syl isoeq5 iotabidv isoeq1 cbviota syl6eq cbvmptv otosiso
+      bitrd isocnv isof1o 3syl f1oeng mpdan ) EIJZKZEEDLZEGVAGMZDLZVDNNHMZOZHPZ
+      QZLZRZSZEVCTUAVBVCENNVJOEVCNNVKOVLABCVIDEFGCVAVHCMZDLZVMNNBMZOZBPZGCUBZVH
+      VNVMNNVFOZHPVQVRVGVSHVRVGVNVDNNVFOZVSVRVEVNUCVGVTUDVDVMDUEVEVDVNNNVFUFUGV
+      NVDVMNNVFUHUOUIVSVPHBVNVMNNVOVFUJUKULUMUNVCENNVJUPEVCNNVKUQUREVCVAVKUSUT
       $.
       $( [11-Feb-2015] $)
   $}
 
   ${
-    $d O x y z a b c $.  $d I x y z a b c $.
-    hsmexlem.o $e |- O = ( z e. ~P On |-> ( iota_ y e. On
-            E. x x Isom _E , _E ( y , z ) ) ) $.
-
-    ${
-      hsmexlem.i $e |- I = ( z e. ~P On |->
-            ( iota y y Isom _E , _E ( ( O ` z ) , z ) ) ) $.
-      $( Lemma for hsmex.  Bound the order type of a union of sets of ordinals,
-         each of limited order type.  Vaguely reminiscent of ~ unictb but use
-         of order types allows to canonically choose the sub-bijections,
-         removing the choice requirement. $)
-      hsmexlem1 $p |- ( ( A e. _V /\ C e. On /\ A. a e. A ( B e. ~P On /\
-                ( O ` B ) e. C ) ) ->
-          ( O ` U_ a e. A B ) e. ( har ` ~P ( A X. C ) ) ) $=
-        ? $.
-    $}
-
-    $( Lemma for hsmex.  Bound the order type of a limited-cardinality set of
+    $d H b $.  $d X b z $.  $d a b z $.
+    hsmexlem7.h $e |- H = ( rec ( ( z e. _V |-> ( har ` ~P ( X X. z ) ) ) ,
+            ( har ` ~P X ) ) |` om ) $.
+    $( Lemma for ~ hsmex .  Properties of the recurrent sequence of
        ordinals. $)
-    hsmexlem2 $p |- ( ( A C_ On /\ A ~<_ B ) ->
-        ( O ` A ) e. ( har ` B ) ) $=
-      ? $.
+    hsmexlem7 $p |- ( H ` (/) ) = ( har ` ~P X ) $=
+      ( c0 cfv cvv cxp cpw char cmpt crdg com cres fveq1i wcel wceq fvex fr0g
+      cv ax-mp eqtri ) EBFEAGCATHIJFKZCIZJFZLMNZFZUEEBUFDOUEGPUGUEQUDJRUEGUCSUA
+      UB $.
+      $( [14-Feb-2015] $)
 
-    $( Lemma for hsmex.  Extends previous result by dominance.  Note that this could be substantially strengthened, e.g. using the weak Hartogs function, but all we need here is that there be *some* dominating ordinal. $)
+    $( Lemma for ~ hsmex .  Properties of the recurrent sequence of
+       ordinals. $)
+    hsmexlem8 $p |- ( a e. om -> ( H ` suc a ) =
+          ( har ` ~P ( X X. ( H ` a ) ) ) ) $=
+      ( vb cv com wcel cfv cxp cpw char cvv csuc wceq fvex ax-17 wel hbfv hbrdg
+      cmpt crdg cres hbmpt1 hbres hbxfreq hbxp hbpw xpeq2 pweqd fveq2d frsucmpt
+      mpan2 ) DGZHICUOBJZKZLZMJZNIUOOBJUSPURMQAFCLMJZUOCAGZKZLZMJZUSNBFGZUTIARZ
+      FDSARZAFURMVEMIARAFUQAFCUPVECIARAFUOBAFBANVDUBZUTUCZHUDEAFVIHAFUTVHAFNVDU
+      EVFUAVEHIARUFUGVGTUHUITEVAUPPZVCURMVJVBUQVAUPCUJUKULUMUN $.
+      $( [14-Feb-2015] $)
 
-    hsmexlem.h $e |- H = ( rec ( ( z e. On |-> ( har ` ~P ( X x. z ) ) ) ,
-            ( har ` X ) ) |` om ) $.
-
-    ${
-      hsmexlem4.s $e |- ( ph -> S e. U. ( R1 " On ) ) $.
-      hsmexlem4.x $e |- ( ph -> X e. _V ) $.
-      hsmexlem4.tc $e |- ( ph -> A. a e. ( TC ` { S } ) a ~<_ X ) $.
-      $( Lemma for hsmex.  The core induction, establishing bounds on the order
-         types of iterated unions of the initial set. $)
-      hsmexlem4 $p |- ( ph -> ( A e. om ->
-            ( O ` ( rank " ( ( U ` S ) ` A ) ) ) e. ( H ` A ) ) ) $=
-        ? $.
-
-      $( Lemma for hsmex.  Combining the above constraints, along with
-         ~ itunitc and ~ tcrank , gives an effective constraint on the rank of
-         ` S ` . $)
-      hsmexlem5 $p |- ( ph -> ( rank ` S ) e.
-            ( har ` ~P ( om X. U. ran H ) ) ) $=
-        ? $.
-    $}
+    $( Lemma for ~ hsmex .  Properties of the recurrent sequence of
+       ordinals. $)
+    hsmexlem9 $p |- ( a e. om -> ( H ` a ) e. On ) $=
+      ( vb cv com wcel c0 wceq csuc wrex cfv con0 fveq2 cpw char harcl syl6eqel
+      wo nn0suc hsmexlem7 eqeltri cxp hsmexlem8 eleq1d syl5ibrcom rexlimiv jaoi
+      syl ) DGZHIULJKZULFGZLZKZFHMZUAULBNZOIZFULUBUMUSUQUMURJBNZOULJBPUTCQZRNOA
+      BCEUCVASUDTUPUSFHUNHIZUSUPUOBNZOIVBVCCUNBNUEQZRNOABCFEUFVDSTUPURVCOULUOBP
+      UGUHUIUJUK $.
+      $( [14-Feb-2015] $)
   $}
 
   ${
+    $d O x y z a b c $.  $d I x y z a b c $.  $d A x y z $.
+    hsmexlem.o $e |- O = ( z e. ~P On |-> ( iota_ y e. On
+            E. x x Isom _E , _E ( y , z ) ) ) $.
+    $( Lemma for ~ hsmex .  Bound the order type of a limited-cardinality set
+       of ordinals. $)
+    hsmexlem1 $p |- ( ( A C_ On /\ A ~<_* B /\ B e. _V ) ->
+        ( O ` A ) e. ( har ` ~P B ) ) $=
+      ( con0 wss cwdom wbr cvv wcel cfv cpw cdom cen wb syl 3syl w3a otoscl a1i
+      char csdm fvex canth2 sdomdom ax-mp simp1 relwdom brrelexi elpwg 3ad2ant2
+      mpbird otosen ensym endom domwdom simp2 wdomtr syl2anc wdompwdom domtr wa
+      sylancr pwexg elharval 3ad2ant3 mpbir2and ) DHIZDEJKZELMZUAZDFNZEOZUDNMZV
+      OHMZVOVPPKZVRVNABCFDGUBUCVNVOVOOZPKZVTVPPKZVSVOVTUEKWAVODFUFZUGVOVTUHUIVN
+      VOEJKZWBVNVODJKZVLWDVNVODQKZVODPKWEVNDHOMZDVOQKWFVNWGVKVKVLVMUJVLVKWGVKRZ
+      VMVLDLMWHDEJUKULDHLUMSUNUOABCFDGUPDVOWCUQTVODURVODUSTVKVLVMUTVODEVAVBVOEV
+      CSVOVTVPVDVFVMVKVQVRVSVERZVLVMVPLMWIELVGLVPVOVHSVIVJ $.
+      $( [14-Feb-2015] $)
+
+    ${
+      $d A a d e $.  $d A b $.  $d A c $.  $d B b d e $.  $d B c $.  $d B x $.
+      $d B y $.  $d B z $.  $d C a d e $.  $d C b $.  $d C c $.  $d I d e $.
+      $d O e $.  $d c d e $.
+      hsmexlem.i $e |- I = ( z e. ~P On |->
+            ( iota y y Isom _E , _E ( ( O ` z ) , z ) ) ) $.
+      $( Lemma for ~ hsmex .  Bound the order type of a union of sets of
+         ordinals, each of limited order type.  Vaguely reminiscent of ~ unictb
+         but use of order types allows to canonically choose the
+         sub-bijections, removing the choice requirement. $)
+      hsmexlem2 $p |- ( ( A e. _V /\ C e. On /\ A. a e. A ( B e. ~P On /\
+                ( O ` B ) e. C ) ) ->
+          ( O ` U_ a e. A B ) e. ( har ` ~P ( A X. C ) ) ) $=
+        ( vb vc ve vd wcel con0 cfv cv wrex cvv cpw wral w3a ciun wss cxp cwdom
+        wa wbr char elpwi adantr ralimi iunss sylibr 3ad2ant3 c2nd csb xpexgALT
+        c1st 3adant3 wceq ax-17 hbra1 hban ra4 onelss imp adantrl wfo wiso wf1o
+        wi cep otosiso isof1o f1ofo 3syl ad2antrl wf simprbi 3impia ssrexv sylc
+        dffo3 3exp sylan9r reximdai 3adant1 ax17el hbcsb1 hbfv hbeq weq csbeq1a
+        hbrex fveq2d fveq1d eqeq2d rexbidv cbvrex syl6ib eliun cop fveq2 syl6eq
+        vex op1st csbeq1d op2nd fveq12d rexxp 3imtr4g wdomd hsmexlem1 syl3anc )
+        DUAPZFQPZEQUBPZEHRZFPZUIZIDUCZUDZIDEUEZQUFZYFDFUGZUHUJYHUAPZYFHRYHUBUKR
+        PYDXRYGXSYDEQUFZIDUCYGYCYJIDXTYJYBEQULUMUNIDEQUOUPUQYELMYFYHUAMSZURRZIY
+        KVARZEUSZGRZRZXRXSYIYDDFUAQUTVBZYELSZYFPZYRYPVCZMYHTZYEYREPZIDTZYRNSZIO
+        SZEUSZGRZRZVCZNFTZODTZYSUUAYEUUCYRUUDEGRZRZVCZNFTZIDTZUUKXSYDUUCUUPVNXR
+        XSYDUIUUBUUOIDXSYDIXSIVDYCIDVEVFYDISDPYCXSUUBUUOVNYCIDVGXSYCUUBUUOXSYCU
+        UBUDYAFUFZUUNNYATZUUOXSYCUUQUUBXSYBUUQXTXSYBUUQFYAVHVIVJVBXSYCUUBUURXSY
+        CUIYAEUULVKZUURLEUCZUUBUURVNXTUUSXSYBXTYAEVOVOUULVLYAEUULVMUUSABCGHEJKV
+        PYAEVOVOUULVQYAEUULVRVSVTUUSYAEUULWAUUTNLYAEUULWFWBUURLEVGVSWCUUNNYAFWD
+        WEWGWHWIWJUUOUUJIODUUOOVDUUIINFUUDFPIVDIMMYRUUHMLIWKIMUUDUUGIMUUFGYKGPI
+        VDIMUUEEMOIWKWLWMMNIWKWMWNWQIOWOZUUNUUINFUVAUUMUUHYRUVAUUDUULUUGUVAEUUF
+        GIUUEEWPWRWSWTXAXBXCIYRDEXDYTUUIMONDFYKUUEUUDXEZVCZYPUUHYRUVCYLUUDYOUUG
+        UVCYNUUFGUVCIYMUUEEUVCYMUVBVARUUEYKUVBVAXFUUEUUDOXHZXIXGXJWRUVCYLUVBURR
+        UUDYKUVBURXFUUEUUDUVDNXHXKXGXLWTXMXNVIXOYQABCYFYHHJXPXQ $.
+        $( [14-Feb-2015] $)
+    $}
+
+    ${
+      $d A a $.  $d B x $.  $d B y $.  $d B z $.  $d C a $.  $d O d e $.
+      $d a d e $.  $d d x $.  $d d y $.  $d d z $.  $d e x $.  $d e y $.
+      $d e z $.
+      $( Lemma for ~ hsmex .  Clear ` I ` hypothesis and extend previous result
+         by dominance.  Note that this could be substantially strengthened,
+         e.g. using the weak Hartogs function, but all we need here is that
+         there be *some* dominating ordinal. $)
+      hsmexlem3 $p |- ( ( ( A ~<_* D /\ C e. On /\ D e. _V ) /\
+            A. a e. A ( B e. ~P On /\ ( O ` B ) e. C ) ) ->
+          ( O ` U_ a e. A B ) e. ( har ` ~P ( D X. C ) ) ) $=
+        ( vd ve cwdom wbr con0 wcel cvv cfv cv cep w3a cpw wa wral cxp char wss
+        ciun cdom simp1 simp3 wdomref 3ad2ant2 simp2 xpwdomg syl22anc wdompwdom
+        syl xpexg ancoms 3adant1 pwexg harword syl2anc adantr brrelexi 3ad2ant1
+        relwdom simpl2 simpr wiso cio cmpt wceq wb fveq2 isoeq4 isoeq5 iotabidv
+        weq bitrd isoeq1 cbviota syl6eq cbvmptv hsmexlem2 syl3anc sseldd ) DGMN
+        ZFOPZGQPZUAZEOUBZPEHRFPUCIDUDZUCZDFUEZUBZUFRZGFUEZUBZUFRZIDEUHHRZWLWRXA
+        UGZWNWLWQWTUINZWTQPZXCWLWPWSMNZXDWLWIWKFFMNZWJXFWIWJWKUJWIWJWKUKWJWIXGW
+        KOFULUMWIWJWKUNDGFFQOUOUPWPWSUQURWLWSQPZXEWJWKXHWIWKWJXHGFQOUSUTVAWSQVB
+        URQWQWTVCVDVEWODQPZWJWNXBWRPWLXIWNWIWJXIWKDGMVHVFVGVEWIWJWKWNVIWLWNVJAB
+        CDEFKWMKSZHRZXJTTLSZVKZLVLZVMHIJKCWMXNCSZHRZXOTTBSZVKZBVLZKCVTZXNXPXOTT
+        XLVKZLVLXSXTXMYALXTXMXPXJTTXLVKZYAXTXKXPVNXMYBVOXJXOHVPXKXJXPTTXLVQURXP
+        XJXOTTXLVRWAVSYAXRLBXPXOTTXQXLWBWCWDWEWFWGWH $.
+        $( [14-Feb-2015] $)
+    $}
+
+    $d H a c d e $.  $d H f $.  $d O d e f $.  $d S c d e $.  $d S f $.
+    $d U c d e $.  $d U f x $.  $d U y $.  $d U z $.  $d X a $.  $d X b $.
+    $d X z $.  $d a d f $.  $d b d f $.  $d d x $.  $d d y $.  $d d z $.
+    $d e x $.  $d e y $.  $d e z $.  $d f y $.  $d f z $.
+    hsmexlem4.x $e |- X e. _V $.
+    hsmexlem.h $e |- H = ( rec ( ( z e. _V |-> ( har ` ~P ( X X. z ) ) ) ,
+            ( har ` ~P X ) ) |` om ) $.
+    hsmexlem4.u $e |- U = ( x e. _V |->
+          ( rec ( ( y e. _V |-> U. y ) , x ) |` om ) ) $.
+    hsmexlem4.s $e |- S = { a e. U. ( R1 " On ) |
+          A. b e. ( TC ` { a } ) b ~<_ X } $.
+    $( Lemma for hsmex.  The core induction, establishing bounds on the order
+       types of iterated unions of the initial set. $)
+    hsmexlem4 $p |- ( ( c e. om /\ d e. S ) ->
+          ( O ` ( rank " ( ( U ` d ) ` c ) ) ) e. ( H ` c ) ) $=
+      ( wcel crnk cfv ve vf cv com cima wral c0 csuc wceq fveq2 imaeq2d eleq12d
+      fveq2d ralbidv weq cpw char con0 wss cwdom wbr cvv crn imassrn cuni rankf
+      cr1 wf frn ax-mp sstri a1i vex ituni0 imaeq2i wfun ffun wdomimag cdom csn
+      mp2an ctc sneq raleqdv elrab2 simprbi snex tcid snid sselii breq1 domwdom
+      rcla4v 3syl wdomtr sylancr syl5eqbr hsmexlem1 syl3anc hsmexlem7 syl6eleqr
+      wi rgen wa hbra1 ax-17 hban ciun ituniiun imaiun eqtri ad2antll hsmexlem9
+      cxp fveq2i ad2antrl wel crab ssrab2 eqsstri sseli r1elssi syl sselda tcss
+      snssi tcel mp1i sstrd ssralv mpan9 adantll simpll fveq1d eleq1d sylc fvex
+      sylanbrc funimaex elpw mpbir jctil ralrimiva hsmexlem3 syl31anc hsmexlem8
+      syl5eqel eleqtrrd expr ralrimi expcom finds1 r19.21bi ) KUCZUDRSUUNLUCZET
+      ZTZUEZGTZUUNFTZRZLDUVALDUFSUGUUPTZUEZGTZUGFTZRZLDUFSUAUCZUUPTZUEZGTZUVGFT
+      ZRZLDUFZSUVGUHZUUPTZUEZGTZUVNFTZRZLDUFZKUAUUNUGUIZUVAUVFLDUWAUUSUVDUUTUVE
+      UWAUURUVCGUWAUUQUVBSUUNUGUUPUJUKUMUUNUGFUJULUNKUAUOZUVAUVLLDUWBUUSUVJUUTU
+      VKUWBUURUVIGUWBUUQUVHSUUNUVGUUPUJUKUMUUNUVGFUJULUNUUNUVNUIZUVAUVSLDUWCUUS
+      UVQUUTUVRUWCUURUVPGUWCUUQUVOSUUNUVNUUPUJUKUMUUNUVNFUJULUNUVFLDUUODRZUVDHU
+      PUQTZUVEUWDUVCURUSZUVCHUTVAHVBRZUVDUWERUWFUWDUVCSVCZURSUVBVDVGURUEVEZURSV
+      HZUWHURUSVFUWIURSVIVJZVKVLUWDUVCSUUOUEZHUTUVBUUOSUUOVBRZUVBUUOUILVMZABUUO
+      EVBPVNVJVOUWDUWLUUOUTVAZUUOHUTVAZUWLHUTVASVPZUWMUWOUWJUWQVFUWIURSVQVJZUWN
+      UUOSVBVRWAUWDJUCZHVSVAZJUUOVTZWBTZUFZUUOHVSVAZUWPUWDUUOUWIRZUXCUWTJIUCZVT
+      ZWBTZUFZUXCIUUOUWIDILUOZUWTJUXHUXBUXJUXGUXAWBUXFUUOWCUMWDQWEWFZUUOUXBRUXC
+      UXDXBUXAUXBUUOUXAVBRUXAUXBUSUUOWGZUXAVBWHVJUUOUWNWIZWJUWTUXDJUUOUXBUWSUUO
+      HVSWKWMVJUUOHWLWNZUWLUUOHWOWPWQUWGUWDNVLABCUVCHGMWRWSCFHOWTXAXCUVMUVGUDRZ
+      UVTUVMUXOXDUVSLDUVMUXOLUVLLDXEUXOLXFXGUVMUXOUWDUVSUVMUXOUWDXDZXDZUVQHUVKX
+      NUPUQTZUVRUXQUVQUBUUOSUVGUBUCZETZTZUEZXHZGTZUXRUVPUYCGUVPSUBUUOUYAXHZUEUY
+      CUVOUYESUWMUVOUYEUIUWNABUUOUVGEVBUBPXIVJVOUBSUUOUYAXJXKXOUXQUWPUVKURRZUWG
+      UYBURUPRZUYBGTZUVKRZXDZUBUUOUFUYDUXRRUWDUWPUVMUXOUXNXLUXOUYFUVMUWDCFHUAOX
+      MXPUWGUXQNVLUXQUYJUBUUOUXQUBLXQZXDZUYIUYGUYLUXSDRZUVMUYIUXPUYKUYMUVMUWDUY
+      KUYMUXOUWDUYKXDUXSUWIRUWTJUXSVTZWBTZUFZUYMUWDUUOUWIUXSUWDUXEUUOUWIUSDUWIU
+      UODUXIIUWIXRUWIQUXIIUWIXSXTYAUUOYBYCYDUWDUXCUYKUYPUXKUYKUYOUXBUSUXCUYPXBU
+      YKUYOUUOWBTZUXBUYKUYNUUOUSUYOUYQUSUXSUUOYFUUOUYNUWNYEYCUUOUXARUYQUXBUSUYK
+      UXMUXAUUOUXLYGYHYIUWTJUYOUXBYJYCYKUXIUYPIUXSUWIDIUBUOZUWTJUXHUYOUYRUXGUYN
+      WBUXFUXSWCUMWDQWEYRYLYLUVMUXPUYKYMUVLUYILUXSDLUBUOZUVJUYHUVKUYSUVIUYBGUYS
+      UVHUYASUYSUVGUUPUXTUUOUXSEUJYNUKUMYOWMYPUYGUYBURUSUYBUWHURSUYAVDUWKVKUYBU
+      RUWQUYBVBRUWRSUYAUVGUXTYQYSVJYTUUAUUBUUCABCUUOUYBUVKHGUBMUUDUUEUUGUXOUVRU
+      XRUIUVMUWDCFHUAOUUFXPUUHUUIUUJUUKUULUUM $.
+      $( [14-Feb-2015] $)
+
+    $( Lemma for ~ hsmex .  Combining the above constraints, along with
+       ~ itunitc and ~ tcrank , gives an effective constraint on the rank of
+       ` S ` . $)
+    hsmexlem5 $p |- ( d e. S -> ( rank ` d ) e.
+          ( har ` ~P ( om X. U. ran H ) ) ) $=
+      ( wcel crnk com con0 vc cfv cima ciun crn cuni cxp cpw char rankon otosid
+      cv wceq mp1i ctc cr1 cdom wbr csn wral crab ssrab2 eqsstri tcrank syl wfn
+      sseli itunifn fniunfv itunitc syl6reqr imaeq2d imaiun 3eqtrd fveq2d cwdom
+      a1i eqtr3d cvv omex wdomref cmpt crdg cres frfnom fneq1i mpbir ax-mp fvex
+      wa iunon hsmexlem9 eqeltrri fvssunirn hsmexlem4 ancoms sseldi wss imassrn
+      mprg wf rankf frn sstri wfun ffun funimaex mp2b jctil ralrimiva hsmexlem3
+      elpw syl31anc eqeltrd ) KULZDQZXORUBZUASRUAULZXOEUBZUBZUCZUDZGUBZSFUEUFZU
+      GUHUIUBZXPXQGUBZXQYCXQTQYFXQUMXPXOUJABCGXQLUKUNXPXQYBGXPXQRXOUOUBZUCZRUAS
+      XTUDZUCZYBXPXOUPTUCUFZQXQYHUMDYKXODJULHUQURJIULZUSUOUBUTZIYKVAYKPYMIYKVBV
+      CVGXOVDVEXPYGYIRXPYIXSUEUFZYGXPXSSVFYIYNUMABXOEDOVHUASXSVIVEABXOEOVJVKVLY
+      JYBUMXPUARSXTVMVQVNVOVRXPSSVPURZYDTQZSVSQZYATUHQZYAGUBZYDQZWJZUASUTYCYEQY
+      QYOXPVTVSSWAUNYPXPISYLFUBZUDZYDTFSVFZUUCYDUMUUDCVSHCULUGUHUIUBWBZHUHUIUBZ
+      WCSWDZSVFUUFUUEWESFUUGNWFWGISFVIWHUUBTQUUCTQISISUUBVTYLFWIWKCFHINWLWTWMVQ
+      YQXPVTVQXPUUAUASXPXRSQZWJZYTYRUUIXRFUBZYDYSFXRWNUUHXPYSUUJQABCDEFGHIJUAKL
+      MNOPWOWPWQYRYATWRYARUEZTRXTWSYKTRXAZUUKTWRXBYKTRXCWHXDYATUULRXEYAVSQXBYKT
+      RXFRXTXRXSWIXGXHXLWGXIXJABCSYAYDSGUALXKXMXN $.
+      $( [14-Feb-2015] $)
+
+    $( Lemmr for ~ hsmex . $)
+    hsmexlem6 $p |- S e. _V $=
+      ( vc cfv cr1 cv wcel com crn cuni char fvex crnk hsmexlem5 con0 cima cdom
+      cxp cpw wbr csn ctc wral crab ssrab2 eqsstri sseli harcl rankr1ag sylancl
+      wb mpbird ssriv ssexi ) DUAFUBUCUKULZUDQZRQZVIRUEPDVJPSZDTZVKVJTZVKUFQVIT
+      ZABCDEFGHIJPKLMNOUGVLVKRUHUIUCZTVIUHTVMVNVDDVOVKDJSHUJUMJISUNUOQUPZIVOUQV
+      OOVPIVOURUSUTVHVAVKVIVBVCVEVFVG $.
+      $( [14-Feb-2015] $)
+  $}
+
+  ${
+    $d X a s x $.  $d a d $.  $d b c d e f g s x $.
     $( The collection of hereditarily size-limited well-founded sets comprise a
        set.  The proof is that of Randall Holmes at http://math.boisestate.edu/
        ~ holmes/holmes/hereditary.pdf , with modifications to use Hartogs'
@@ -1191,7 +1355,18 @@ $)
        explicit to avoid a direct dependence on ~ ax-reg . $)
     hsmex $p |- ( X e. V -> { s e. U. ( R1 " On ) |
             A. x e. ( TC ` { s } ) x ~<_ X } e. _V ) $=
-      ? $.
+      ( va vb vc vd ve vf vg cv con0 cvv cmpt crdg com cep wiso wex wbr csn ctc
+      cdom cfv wral cr1 cima cuni crab wcel wceq breq2 ralbidv rabbidv cres cxp
+      eleq1d cpw char weq isoeq5 exbidv riotabidv isoeq4 isoeq1 cbvexv cbvriota
+      crio syl6bb syl6eq cbvmptv vex eqid rdgeq2 unieq rdgeq1 reseq1d hsmexlem6
+      ax-mp vtoclg ) ALZELZUDUAZADLUBUCUEZUFZDUGMUHUIZUJZNUKWBCUDUAZAWEUFZDWGUJ
+      ZNUKECBWCCULZWHWKNWLWFWJDWGWLWDWIAWEWCCWBUDUMUNUOURFGHWHINJNJLZUIZOZILZPZ
+      QUPZOHNWCHLZUQUSUTUEOWCUSUTUEPQUPZIMUSZWMWPRRKLZSZKTZJMVIZOWCDAIHXAXEGLZW
+      SRRFLZSZFTZGMVIZIHVAZXEWMWSRRXBSZKTZJMVIXJXKXDXMJMXKXCXLKWMWPWSRRXBVBVCVD
+      XMXIJGMJGVAZXMXFWSRRXBSZKTXIXNXLXOKWMWSXFRRXBVEVCXOXHKFXFWSRRXGXBVFVGVJVH
+      VKVLEVMWTVNIFNWRGNXFUIZOZXGPZQUPIFVAZWQXRQXSWQWOXGPZXRWPXGWOVOWOXQULXTXRU
+      LJGNWNXPWMXFVPVLXGWOXQVQVTVKVRVLWHVNVSWA $.
+      $( [14-Feb-2015] $)
 
     $( The set of hereditary size-limited sets, assuming ~ ax-reg . $)
     hsmex2 $p |- ( X e. V -> { s | A. x e. ( TC ` { s } ) x ~<_ X } e. _V ) $=
