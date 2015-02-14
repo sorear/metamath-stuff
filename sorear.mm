@@ -66,6 +66,20 @@ $)
     ( wcel wn wss ssel com12 con3d imp ) ABDZACDZEBCFZEKMLMKLBCAGHIJ $.
     $( [5-Feb-2015] $)
 
+  ${
+    $d ps x $.  $d ph y $.  $d x A $.  $d x y $.
+    moxfr.a $e |- A e. _V $.
+    moxfr.b $e |- E! y x = A $.
+    moxfr.c $e |- ( x = A -> ( ph <-> ps ) ) $.
+    $( Transfer at-most-one between related expressions. $)
+    moxfr $p |- ( E* x ph <-> E* y ps ) $=
+      ( wex weu wi wmo cvv wrex wcel cv a1i wceq rexv df-mo ax-mp mpbir 3bitr3i
+      euex rexxfr euxfr imbi12i 3bitr4i ) ACIZACJZKBDIZBDJZKACLBDLUIUKUJULACMNB
+      DMNUIUKABCDEMMEMODPMOFQCPZERZDMNZUMMOUOUNDIZUNDJUPGUNDUDUAUNDSUBQHUEACSBD
+      SUCABCDEFGHUFUGACTBDTUH $.
+      $( [12-Feb-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Additional theory of functions
@@ -302,6 +316,135 @@ $)
       $( [5-Feb-2015] $)
   $}
 
+  $( Composition with the converse.  (Contributed by Jeff Madsen,
+     2-Sep-2009.) $)
+  cnvcan $p |- ( Fun G -> ( G o. `' G ) = ( _I |` ran G ) ) $=
+    ( wfun ccnv ccom cid wss crn cres wceq wrel df-fun simprbi cdm dfdm4 dmcoeq
+    iss ax-mp df-rn eqtr4i a1i reseq2d eqeq2d syl5bb mpbid ) ABZAACZDZEFZUGEAGZ
+    HZIZUEAJUHAKLUHUGEUGMZHZIUEUKUGPUEUMUJUGUEULUIEULUIIUEULUFMZUIAMUFGIULUNIAN
+    AUFOQARSTUAUBUCUD $.
+    $( [2-Sep-2009] $)
+
+  $( The composition of an onto function and its converse. _EDITORIAL_:
+     Generalizes ~ f1ococnv2 . $)
+  fococnv2 $p |- ( F : A -onto-> B -> ( F o. `' F ) = ( _I |` B ) ) $=
+    ( wfo ccnv ccom cid crn cres wfun wceq fofun cnvcan syl forn reseq2d eqtrd
+    ) ABCDZCCEFZGCHZIZGBIRCJSUAKABCLCMNRTBGABCOPQ $.
+    $( [12-Feb-2015] $)
+
+  ${
+    $d F x y $.  $d G x y $.  $d A x y $.  $d B x y $.
+    $( Condition for function equality in terms of vanishing of the composition
+       with the converse. _EDITORIAL_:  Is there a relation-algebraic proof of
+       this? $)
+    foeqcnvco $p |- ( ( F : A -onto-> B /\ G : A -onto-> B ) ->
+        ( F = G <-> ( F o. `' G ) = ( _I |` B ) ) ) $=
+      ( vx vy wfo wa wceq ccnv ccom adantr wfn fofn ad2antlr cv wcel sylan sylibr
+      wbr cid cres wi fococnv2 cnveq coeq2d eqeq1d syl5ibcom ad2antrr cfv wex cop
+      adantl fnopfv fvex vex brcnv df-br bitri jca weq breq2 breq1 anbi12d cla4ev
+      syl brco adantlr wb breq mpbid wf fof ffvelrn resieq syl2anc eqcomd eqfnfvd
+      ex impbid ) ABCGZABDGZHZCDIZCDJZKZUABUBZIZWAWDWHUCWBWACCJZKZWGIWDWHABCUDWDW
+      JWFWGWDWIWECCDUEUFUGUHLWCWHWDWCWHHZEACDWACAMZWBWHABCNZUIWBDAMZWAWHABDNZOWKE
+      PZAQZHZWPDUJZWPCUJZWRWSWTWGTZWSWTIZWRWSWTWFTZXAWCWQXCWHWCWQHZWSFPZWETZXEWTC
+      TZHZFUKZXCXDWSWPWETZWPWTCTZHZXIXDXJXKXDWPWSULDQZXJWCWNWQXMWBWNWAWOUMAWPDUNR
+      XJWPWSDTXMWSWPDWPDUOZEUPZUQWPWSDURUSSXDWPWTULCQZXKWCWLWQXPWAWLWBWMLAWPCUNRW
+      PWTCURSUTXHXLFWPXOFEVAXFXJXGXKXEWPWSWEVBXEWPWTCVCVDVEVFFWSWTCWEXNWPCUOVGSVH
+      WHXCXAVIWCWQWSWTWFWGVJOVKWCWQXAXBVIZWHXDWSBQZWTBQZXQWCABDVLZWQXRWBXTWAABDVM
+      UMABWPDVNRWCABCVLZWQXSWAYAWBABCVMLABWPCVNRBWSWTVOVPVHVKVQVRVSVT $.
+      $( [12-Feb-2015] $)
+
+    $( Condition for function equality in terms of vanishing of the composition
+       with the inverse. $)
+    f1eqcocnv $p |- ( ( F : A -1-1-> B /\ G : A -1-1-> B ) ->
+        ( F = G <-> ( `' F o. G ) = ( _I |` A ) ) ) $=
+      ( vx vy wf1 wa wceq ccom wi adantr wfn f1fn adantl cv wcel wbr wb syl coeq2
+      ccnv cid cres f1cocnv1 eqeq1d cfv weq mathbox resieq mpbiri anidms ad2antlr
+      syl5ibcom breq mpbird wex cop wfun cdm fndm eleq2d biimpar jca vex funopfvb
+      fnfun bicomd df-br eqcom 3bitr4g biimpd syl6bbr brcnv anim12d eximdv eqvinc
+      brco fvex 3imtr4g adantlr mpd eqfnfvd eqcomd ex impbid ) ABCGZABDGZHZCDIZCU
+      BZDJZUCAUDZIZWGWJWNKWHWGWKCJZWMIWJWNABCUEWJWOWLWMCDWKUAUFUNLWIWNWJWIWNHZDCW
+      PEADCWIDAMZWNWHWQWGABDNOZLWICAMZWNWGWSWHABCNLZLWPEPZAQZHZXAXAWLRZXADUGZXACU
+      GZIZXCXDXAXAWMRZXBXHWPXBXHXBXBHXHEEUHEUIAXAXAUJUKULOWNXDXHSWIXBXAXAWLWMUOUM
+      UPWIXBXDXGKWNWIXBHZXAFPZDRZXJXAWKRZHZFUQXJXEIZXJXFIZHZFUQXDXGXIXMXPFXIXKXNX
+      LXOXIXKXNXIXAXJURZDQZXEXJIZXKXNXIXSXRXIDUSZXADUTZQZHXSXRSXIXTYBWIXTXBWIWQXT
+      WRADVGTLWIYBXBWIYAAXAWIWQYAAIWRADVATVBVCVDXAXJDFVEZVFTVHXAXJDVIXJXEVJVKVLXI
+      XLXOXIXAXJCRZXFXJIZXLXOXIYEYDXIYEXQCQZYDXICUSZXACUTZQZHYEYFSXIYGYIWIYGXBWIW
+      SYGWTACVGTLWIYIXBWIYHAXAWIWSYHAIWTACVATVBVCVDXAXJCYCVFTXAXJCVIVMVHXJXACYCEV
+      EZVNXJXFVJVKVLVOVPFXAXAWKDYJYJVRFXEXFXADVSVQVTWAWBWCWDWEWF $.
+      $( [12-Feb-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Extensions beyond function theory
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d A a b c $.  $d R b c $.  $d F a b c $.
+    $( A well-ordering has no nontrivial automorphisms.  (Is sethood actually
+       needed here?)  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
+    weniso $p |- ( ( A e. V /\ R We A /\ F Isom R , R ( A , A ) ) ->
+        F = ( _I |` A ) ) $=
+      ( va vc vb wcel cvv wceq cfv wral wn wbr wa syl wi fveq2 id adantr wwe cv
+      wiso cid cres elex w3a crab c0 wne wrex rabn0 rexnal bitri wfr wss simpl1
+      rabexg simpl2 wefr ssrab2 a1i simpr fri syl22anc weq eqeq12d notbid elrab
+      ex ralrab con34b bicomi ralbii wo simprr wor weso wf1o simpl3 isof1o f1of
+      wb wf simprl ffvelrn syl2anc sotrieq syl12anc con2bid mpbird breq1 rcla4v
+      imbi12d com23 imp wf1 f1fveq pm2.21 ad2antll sylbid syld ccnv f1ocnv 3syl
+      f1of1 isorel f1ocnvfv2 breq1d bitr2d biimpa simplrr adantl fveq2d 3eqtr3d
+      sylc jaodan syl5bi rexlimdv syl5bir pm2.18d fvresi eqeq2d biimprd ralimia
+      mpdan wfn 3ad2ant3 f1ofn fnresi eqfnfv2 syl3an1 ) ADHAIHZABUAZAABBCUCZCUD
+      AUEZJZADUFYMYNYOUGZYQEUBZCKZYSYPKZJZEALZYRYTYSJZEALZUUCYRUUEUUEMZUUDMZEAU
+      HZUIUJZYRUUEUUIUUGEAUKUUFUUGEAULUUDEAUMUNYRUUIFUBZGUBZBNZMZFUUHLZGUUHUKZU
+      UEYRUUIUUOYRUUIOZUUHIHZABUOZUUHAUPZUUIUUOUUPYMUUQYMYNYOUUIUQUUGEAIURPUUPY
+      NUURYMYNYOUUIUSABUTPUUSUUPUUGEAVAVBYRUUIVCGFAUUHIBVDVEVJYRUUNUUEGUUHUUKUU
+      HHUUKAHZUUKCKZUUKJZMZOZYRUUNUUEQZUUGUVCEUUKAEGVFZUUDUVBUVFYTUVAYSUUKYSUUK
+      CRUVFSVGVHVIYRUVDUVEUUNUULUUJCKZUUJJZQZFALZYRUVDOZUUEUUNUVHMZUUMQZFALUVJU
+      UGUVLUUMFEAEFVFZUUDUVHUVNYTUVGYSUUJYSUUJCRUVNSVGVHVKUVMUVIFAUVIUVMUULUVHV
+      LVMVNUNUVKUVAUUKBNZUUKUVABNZVOZUVJUUEQZUVKUVQUVCYRUUTUVCVPUVKUVBUVQUVKABV
+      QZUVAAHZUUTUVBUVQMWCUVKYNUVSYMYNYOUVDUSABVRPUVKAACWDZUUTUVTUVKAACVSZUWAUV
+      KYOUWBYMYNYOUVDVTZAABBCWAZPZAACWBPYRUUTUVCWEZAAUUKCWFWGZUWFAUVAUUKBWHWIWJ
+      WKUVKUVOUVRUVPUVKUVOOUVJUVACKZUVAJZUUEUVKUVOUVJUWIQUVKUVJUVOUWIUVKUVTUVJU
+      VOUWIQZQUWGUVIUWJFUVAAUUJUVAJZUULUVOUVHUWIUUJUVAUUKBWLUWKUVGUWHUUJUVAUUJU
+      VACRUWKSVGWNWMPWOWPUVKUWIUUEQUVOUVKUWIUVBUUEUVKAACWQZUVTUUTUWIUVBWCUVKUWB
+      UWLUWEAACXFPUWGUWFAAUVAUUKCWRWIUVCUVBUUEQYRUUTUVBUUEWSZWTXATXBUVKUVPOZUVJ
+      UUKCXCZKZCKZUWPJZUUEUWNUWPAHZUWPUUKBNZUVJUWRQUVKUWSUVPUVKAAUWOWDZUUTUWSUV
+      KUWBAAUWOVSUXAUWEAACXDAAUWOWBXEUWFAAUUKUWOWFWGZTUVKUVPUWTUVKUWTUWQUVABNZU
+      VPUVKYOUWSUUTUWTUXCWCUWCUXBUWFAAUWPUUKBBCXGWIUVKUWQUUKUVABUVKUWBUUTUWQUUK
+      JZUWEUWFAAUUKCXHWGZXIXJXKUWSUVJUWTUWRUVIUWTUWRQFUWPAUUJUWPJZUULUWTUVHUWRU
+      UJUWPUUKBWLUXFUVGUWQUUJUWPUUJUWPCRUXFSVGWNWMWOXPUVKUWRUUEQUVPUVKUWRUUEUVK
+      UWROZUVCUVBUUEYRUUTUVCUWRXLUXGUWQCKZUWQUVAUUKUWRUXHUWQJUVKUWQUWPCRXMUVKUX
+      HUVAJUWRUVKUWQUUKCUXEXNTUVKUXDUWRUXETXOUWMXPVJTXBXQYFXRVJXRXSXBXTYAUUDUUB
+      EAYSAHZUUBUUDUXIUUAYSYTAYSYBYCYDYEPYRCAYGZYPAYGZYQUUCWCYRUWBUXJYOYMUWBYNU
+      WDYHAACYIPUXKYRAYJVBEACYPYKWGWKYL $.
+      $( [16-Nov-2014] $)
+  $}
+
+  ${
+    $d R f g $.  $d A f g $.  $d S f g $.  $d B f g $.
+    $( Thus there is at most one isomorphism between any two well-ordered
+       sets.  TODO:  Shorten ~ finnisoeu . $)
+    wemoiso $p |- ( R We A -> E* f f Isom R , S ( A , B ) ) $=
+      ( vg wwe cv wiso wa weq wal cvv wcel wf1o isof1o adantl wf1 f1of1 syl wmo
+      wi ccnv ccom cid cres wceq f1of vex dmfex mpan 3syl ad2antrl simpl isocnv
+      wf id isotr syl2anr weniso syl3anc wb f1eqcocnv syl2an mpbird ex alrimivv
+      isoeq1 mo4 sylibr ) ACGZABCDEHZIZABCDFHZIZJZEFKZUBZFLELVMEUAVKVREFVKVPVQV
+      KVPJZVQVLUCZVNUDZUEAUFUGZVSAMNZVKAACCWAIZWBVMWCVKVOVMABVLOZABVLUPZWCABCDV
+      LPZABVLUHVLMNWFWCEUIABMVLUJUKULUMVKVPUNVPWDVKVOVOBADCVTIWDVMVOUQABCDVLUOA
+      BACDCVTVNURUSQACWAMUTVAVPVQWBVBZVKVMABVLRZABVNRZWHVOVMWEWIWGABVLSTVOABVNO
+      WJABCDVNPABVNSTABVLVNVCVDQVEVFVGVMVOEFABCDVNVLVHVIVJ $.
+      $( [12-Feb-2015] $)
+
+    $( Thus there is at most one isomorphism between any two well-ordered
+       sets. $)
+    wemoiso2 $p |- ( S We B -> E* f f Isom R , S ( A , B ) ) $=
+      ( wwe cv wiso wex wmo wi isowe exlimiv biimprcd wemoiso syl6 moabs sylibr
+      wb ) BDFZABCDEGZHZEIZUBEJZKUDTUCACFZUDUCUETUBUETSEABCDUALMNABCDEOPUBEQR
+      $.
+      $( [12-Feb-2015] $)
+  $}
+
   ${
     rngel1ne0.o $e |- O = ( 1r ` R ) $.
     rngel1ne0.z $e |- Z = ( 0g ` R ) $.
@@ -316,11 +459,22 @@ $)
       $( [6-Feb-2015] $)
   $}
 
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Extensions beyond function theory
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
+  ${
+    $d A a b c $.  $d B a b c $.  $d F a b c $.
+    $( Lemma for ~ dffin3-2 .  Covering implies injection on power sets. $)
+    fopwdom $p |- ( ( F e. _V /\ F : A -onto-> B ) -> ~P B ~<_ ~P A ) $=
+      ( va vb cvv wcel wa cpw syl cv cima wss wceq adantl imaeq2 vex elpw sylib
+      wb wfo cdom wbr fof dmfex sylan2 pwexg ccnv crn imassrn cdm dfdm4 syl5eqr
+      wf fdm syl5sseq cnvexg adantr imaexg elpwg mpbird a1d weq simpllr simplrl
+      3syl foimacnv syl2anc simplrr 3eqtr3d ex impbid1 dom3d mpd ) CFGZABCUAZHZ
+      AIZFGZBIZVRUBUCVQAFGZVSVPVOABCUNZWAABCUDZABFCUEUFAFUGJVQDEVTVRCUHZDKZLZWD
+      EKZLZFVQWFVRGZWEVTGZVQWIWFAMZVPWKVOVPWDUIZWFAWDWEUJVPWLCUKZACULVPWBWMANWC
+      ABCUOJUMUPOVQWDFGZWFFGWIWKTVOWNVPCFUQURWDWEFUSWFAFUTVFVAVBVQWJWGVTGZHZWFW
+      HNZDEVCZTVQWPHZWQWRWSWQWRWSWQHZCWFLZCWHLZWEWGWQXAXBNWSWFWHCPOWTVPWEBMZXAW
+      ENVOVPWPWQVDZWTWJXCVQWJWOWQVEWEBDQRSABWECVGVHWTVPWGBMZXBWGNXDWTWOXEVQWJWO
+      WQVIWGBEQRSABWGCVGVHVJVKWEWGWDPVLVKVMVN $.
+      $( [6-Nov-2014] $)
+  $}
 
   ${
     $d a b c $.
@@ -479,6 +633,581 @@ $)
       $( [7-Feb-2015] $)
   $}
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Hartogs function, order types, weak dominance
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c har ~<_* $.
+
+  $( Class symbol for the Hartogs/cardinal successor function. $)
+  char $a class har $.
+
+  $( Class symbol for the weak dominance relation. $)
+  cwdom $a class ~<_* $.
+
+  ${
+    $d x y z $.
+
+    $( Define the _Hartogs function_ , which maps all sets to the smallest
+       ordinal that cannot be injected into the given set.  In the important
+       special case where ` x ` is an ordinal, this is the _cardinal successor_
+       operation.
+
+       Traditionally, the Hartogs number of a set is written ` aleph ( X ) `
+       and the cardinal successor ` X + ` ; we use functional notation for
+       this, and cannot use the aleph symbol because it is taken for the
+       enumerating function of the infinite initial ordinals ~ df-aleph .
+
+       Some authors define the Hartogs number of a set to be the least
+       *infinite* ordinal which does not inject into it, thus causing the range
+       to consist only of alephs.  We use the simpler definition where the
+       value can be any successor cardinal. $)
+    df-har $a |- har = ( x e. _V |-> { y e. On | y ~<_ x } ) $.
+
+    $( A set is _weakly dominated_ by a "larger" set iff the "larger" set can
+       be mapped onto the "smaller" set or the smaller set is empty;
+       equivalently if the smaller set can be placed into bijection with some
+       partition of the larger set.  When choice is assumed (as ~ fodom ), this
+       concides with the 1-1 defition ~ df-dom ; however, it is not known
+       whether this is a choice-equivalent or a strictly weaker form.  Some
+       discussion of this question can be found at
+       http://boolesrings.org/asafk/2014/on-the-partition-principle/ . $)
+    df-wdom $a |- ~<_* = { <. x , y >. | ( x = (/) \/
+            E. z z : y -onto-> x ) } $.
+  $}
+
+  ${
+    $d x y X $.  $d x y Y $.
+
+    $( Functionality of the Hartogs function. $)
+    fhar $p |- har : _V --> On $=
+      ( vy vx cv cdom wbr con0 crab wcel cvv wral char hartogs rgen df-har fmpt
+      wf mpbi ) ACBCZDEAFGZFHZBIJIFKPTBIARILMBIFSKBANOQ $.
+      $( [11-Feb-2015] $)
+
+    $( Closure of the Hartogs function in the ordinals. $)
+    harcl $p |- ( har ` X ) e. On $=
+      ( cvv con0 char fhar 0elon f0cli ) BCADEFG $.
+      $( [11-Feb-2015] $)
+
+    $( Function value of the Hartogs function. $)
+    harval $p |- ( X e. V -> ( har ` X ) = { y e. On | y ~<_ X } ) $=
+      ( vx wcel cvv char cfv cdom wbr con0 crab wceq elex breq2 rabbidv hartogs
+      cv df-har fvmpt3 syl ) CBECFECGHARZCIJZAKLZMCBNDCUBDRZIJZAKLUDFGKUECMUFUC
+      AKUECUBIOPDASAUEFQTUA $.
+      $( [11-Feb-2015] $)
+
+    $( The Hartogs number of a set is greater than all ordinals which inject
+       into it. $)
+    elharval $p |- ( X e. V -> ( Y e. ( har ` X ) <->
+          ( Y e. On /\ Y ~<_ X ) ) ) $=
+      ( vy wcel char cfv cv cdom wbr con0 crab harval eleq2d breq1 elrab syl6bb
+      wa ) BAEZCBFGZECDHZBIJZDKLZECKECBIJZRSTUCCDABMNUBUDDCKUACBIOPQ $.
+      $( [11-Feb-2015] $)
+
+    $( The Hartogs number of a set does not inject into that set. $)
+    harndom $p |- ( X e. V -> -. ( har ` X ) ~<_ X ) $=
+      ( wcel char cfv cdom wbr harcl onirri con0 wa elharval biimprd mpani mtoi
+      ) BACZBDEZBFGZQQCZQBHZIPQJCZRSTPSUARKABQLMNO $.
+      $( [11-Feb-2015] $)
+  $}
+
+  ${
+    $d X x y z w $.  $d Y x y z w $.  $d F x y z $.  $d Z x y z w $.
+
+    $( Weak dominance is a relation. $)
+    relwdom $p |- Rel ~<_* $=
+      ( vx vy vz cv c0 wceq wfo wex wo cwdom df-wdom relopabi ) ADZEFBDMCDGCHIA
+      BJABCKL $.
+      $( [11-Feb-2015] $)
+
+    $( Property of weak dominance (definitional form). $)
+    brwdom $p |- ( Y e. V -> ( X ~<_* Y <->
+          ( X = (/) \/ E. z z : Y -onto-> X ) ) ) $=
+      ( vx vy wcel cvv cwdom wbr c0 wceq cv wfo wex wo wb wi a1i exbidv relwdom
+      elex brrelexi 0ex eleq1a ax-mp crn forn rnex syl6eqelr exlimiv jaoi eqeq1
+      vex foeq3 orbi12d foeq2 orbi2d df-wdom brabg expcom pm5.21ndd syl ) DBGDH
+      GZCDIJZCKLZDCAMZNZAOZPZQZDBUBVDCHGZVEVJVEVLRVDCDIUAUCSVJVLRVDVFVLVIKHGVFV
+      LRUDKHCUEUFVHVLAVHCVGUGHDCVGUHVGAUNUIUJUKULSVLVDVKEMZKLZFMZVMVGNZAOZPVFVO
+      CVGNZAOZPVJEFCDHHIVMCLZVNVFVQVSVMCKUMVTVPVRAVMCVOVGUOTUPVODLZVSVIVFWAVRVH
+      AVODCVGUQTUREFAUSUTVAVBVC $.
+      $( [11-Feb-2015] $)
+
+    $( Weak dominance over nonempty sets. $)
+    brwdomn0 $p |- ( ( X =/= (/) /\ Y e. V ) -> ( X ~<_* Y <->
+          E. z z : Y -onto-> X ) ) $=
+      ( wcel cwdom wbr c0 wceq cv wfo wex wo wne brwdom wn wb df-ne biorf sylbi
+      bicomd sylan9bbr ) DBECDFGCHIZDCAJKALZMZCHNZUDABCDOUFUDUEUFUCPUDUEQCHRUCU
+      DSTUAUB $.
+      $( [11-Feb-2015] $)
+
+    $( Any set weakly dominates the empty set. $)
+    0wdom $p |- ( X e. V -> (/) ~<_* X ) $=
+      ( vz wcel c0 cwdom wbr wceq cv wfo wex wo eqid orci brwdom mpbiri ) BADEB
+      FGEEHZBECIJCKZLQREMNCAEBOP $.
+      $( [11-Feb-2015] $)
+
+    $( An onto function implies weak dominance. $)
+    fowdom $p |- ( ( F e. V /\ F : Y -onto-> X ) -> X ~<_* Y ) $=
+      ( vz wcel cvv wfo cwdom wbr elex wa c0 wceq cv wex wo foeq1 cla4egv imp
+      olcd wb wf fof dmfex sylan2 brwdom syl mpbird sylan ) ABFAGFZDCAHZCDIJZAB
+      KUKULLZUMCMNZDCEOZHZEPZQZUNURUOUKULURUQULEAGDCUPARSTUAUNDGFZUMUSUBULUKDCA
+      UCUTDCAUDDCGAUEUFEGCDUGUHUIUJ $.
+      $( [11-Feb-2015] $)
+
+    $( Reflexivity of weak dominance. $)
+    wdomref $p |- ( X e. V -> X ~<_* X ) $=
+      ( wcel cid cres cvv wfo cwdom wbr resiexg wf1o f1ofo ax-mp fowdom sylancl
+      f1oi ) BACDBEZFCBBQGZBBHIBAJBBQKRBPBBQLMQFBBNO $.
+      $( [11-Feb-2015] $)
+
+    $( Alternate characterization of the weak dominance predicate which does
+       not require special treatment of the empty set. $)
+    brwdom2 $p |- ( Y e. V -> ( X ~<_* Y <->
+          E. y e. ~P Y E. z z : y -onto-> X ) ) $=
+      ( vx vw wcel cvv cwdom cv wfo wex c0 wceq wa foeq1 exbidv cun wfn wbr cpw
+      wrex wb elex 0wdom breq1 syl5ibrcom imp 0elpw wf1o f1o0 f1ofo cla4ev mp2b
+      0ex foeq2 rcla4ev mp2an rexbidv mpbiri adantl 2thd brwdomn0 ancoms cbvexv
+      foeq3 wne pwidg ad2antrr sylancom syl5bi biimpi ad2antlr cdif csn cxp vex
+      ex n0 difexg snex xpexg sylancl sylancr adantr crn cin fofn fnconstg mp1i
+      unexg disjdif a1i fnun syl21anc wss elpwi undif sylib ad2antrl mpbid rnun
+      fneq2d forn ad2antll uneq1d wf fconst6g frn ssequn2 eqtrd syl5eq sylanbrc
+      syl df-fo cla4egv sylc exlimdv mpd expr rexlimdva impbid bitrd pm2.61dane
+      ) ECHEIHZDEJUAZAKZDBKZLZBMZAEUBZUCZUDZECUEYFYNDNYFDNOZPYGYMYFYOYGYFYGYONE
+      JUAIEUFDNEJUGUHUIYOYMYFYOYMYHNYILZBMZAYLUCZNYLHNNYILZBMZYREUJNNNUKNNNLZYT
+      ULNNNUMYSUUABNUPNNYINQUNUOYQYTANYLYHNOYPYSBYHNNYIUQRURUSYOYKYQAYLYOYJYPBD
+      NYHYIVGRUTVAVBVCYFDNVHZPZYGEDFKZLZFMZYMUUBYFYGUUFUDFIDEVDVEUUCUUFYMUUFEDY
+      ILZBMZUUCYMUUEUUGFBEDUUDYIQVFUUCUUHYMUUCUUHEYLHZYMYFUUIUUBUUHEIVIVJYKUUHA
+      EYLYHEOYJUUGBYHEDYIUQRURVKVSVLUUCYKUUFAYLUUCYHYLHZPYJUUFBUUCUUJYJUUFUUCUU
+      JYJPZPZGKZDHZGMZUUFUUBUUOYFUUKUUBUUOGDVTVMVNUULUUNUUFGUULUUNUUFUULUUNPZYI
+      EYHVOZUUMVPZVQZSZIHZEDUUTLZUUFUUCUVAUUKUUNYFUVAUUBYFYIIHUUSIHZUVABVRYFUUQ
+      IHUURIHUVCEYHIWAUUMWBUUQUURIIWCWDYIUUSIIWLWEWFVJUUPUUTETZUUTWGZDOUVBUUPUU
+      TYHUUQSZTZUVDUUPYIYHTZUUSUUQTZYHUUQWHNOZUVGUUKUVHUUCUUNYJUVHUUJYHDYIWIVBV
+      NUUMIHUVIUUPGVRUUQUUMIWJWKUVJUUPYHEWMWNYHUUQYIUUSWOWPUUPUVFEUUTUULUVFEOZU
+      UNUUJUVKUUCYJUUJYHEWQUVKYHEWRYHEWSWTXAWFXDXBUUPUVEYIWGZUUSWGZSZDYIUUSXCUU
+      PUVNDUVMSZDUUPUVLDUVMUULUVLDOZUUNYJUVPUUCUUJYHDYIXEXFWFXGUUPUVMDWQZUVODOU
+      UNUVQUULUUNUUQDUUSXHUVQUUQUUMDXIUUQDUUSXJXOVBUVMDXKWTXLXMEDUUTXPXNUUEUVBF
+      UUTIEDUUDUUTQXQXRVSXSXTYAXSYBYCYDYEXO $.
+      $( [11-Feb-2015] $)
+
+    $( Weak dominance is implied by dominance in the usual sense. $)
+    domwdom $p |- ( X ~<_ Y -> X ~<_* Y ) $=
+      ( vz vy cvv wcel cdom wbr cwdom wi cv cen wss wa wex wfo cpw vex brrelexi
+      wrex elpw biimpri ad2antll relen ensym wf1o breng f1ofo eximi syl6bi sylc
+      jca ex eximdv df-rex syl6ibr domeng brwdom2 3imtr4d wn reldom wdomref syl
+      ad2antrl brprc syl5ibr pm2.61i ) BEFZABGHZABIHZJVHACKZLHZVKBMZNZCOZVKADKZ
+      PZDOZCBQZTZVIVJVHVOVKVSFZVRNZCOVTVHVNWBCVHVNWBVHVNNWAVRVMWAVHVLWAVMVKBCRZ
+      UAUBUCVLVRVHVMVLAEFZVKALHZVRAVKLUDSAVKWCUEWDWEVKAVPUFZDOVRVKAEDUGWFVQDVKA
+      VPUHUIUJUKVDULUMUNVRCVSUOUPCABEUQCDEABURUSVIVJVHUTAAIHZVIWDWGABGVASEAVBVC
+      ABIVEVFVG $.
+      $( [11-Feb-2015] $)
+
+    $( Transitivity of weak dominance. $)
+    wdomtr $p |- ( ( X ~<_* Y /\ Y ~<_* Z ) -> X ~<_* Z ) $=
+      ( vz vy cvv wcel cwdom wbr wa wi c0 wceq adantl wne cv wfo wex wb mpbid
+      0wdom syl5ibrcom simpll simprr relwdom brrelexi ad2antlr brwdomn0 syl2anc
+      breq1 simpllr simplrr crn cdm dm0rn0 necon3bii a1i bicomd forn neeq1d fof
+      wf fdm syl 3bitr3d simplrl ccom vex coex foco fowdom sylancr expr exlimdv
+      mpd ex pm2.61dne expcom wn wdomref adantr brprc syl5ibr pm2.61i ) CFGZABH
+      IZBCHIZJZACHIZKWHWEWIWHWEJWIALWEALMZWIKWHWEWIWJLCHIFCUAALCHUJUBNWHWEALOZW
+      IWHWEWKJZJZBADPZQZDRZWIWMWFWPWFWGWLUCWMWKBFGZWFWPSWHWEWKUDWGWQWFWLBCHUEUF
+      UGDFABUHUITWMWOWIDWMWOWIWMWOJZCBEPZQZERZWIWRWGXAWFWGWLWOUKWRBLOZWEWGXASWR
+      WKXBWHWEWKWOULWOWKXBSWMWOWNUMZLOZWNUNZLOZWKXBWOXFXDXFXDSWOXELXCLWNUOUPUQU
+      RWOXCALBAWNUSUTWOXEBLWOBAWNVBXEBMBAWNVABAWNVCVDUTVENTWHWEWKWOVFEFBCUHUITW
+      RWTWIEWMWOWTWIWOWTJZWIWMXGWNWSVGZFGCAXHQWIWNWSDVHEVHVICBAWNWSVJXHFACVKVLN
+      VMVNVOVPVNVOVMVQVRWHWIWEVSAAHIZWFXIWGWFAFGXIABHUEUFFAVTVDWAACHWBWCWD $.
+      $( [11-Feb-2015] $)
+
+    $( Weak dominance strengthens to usual dominance on the power sets. $)
+    wdompwdom $p |- ( X ~<_* Y -> ~P X ~<_ ~P Y ) $=
+      ( vz cvv wcel cwdom wbr cpw cdom wi wceq pweq wss 0ex pwex 0ss sspwb mpbi
+      c0 a1d ssdomg mp2 syl6eqbr wne wa cv wfo wex brwdomn0 vex fopwdom exlimiv
+      mpan syl6bi ex pm2.61ine wn relwdom brrelexi pwexg domrefg wb pwexb brprc
+      3syl sylnbi syl5ibr pm2.61i ) BDEZABFGZAHZBHZIGZJZVIVNJASASKZVNVIVOVMVJVO
+      VKSHZVLIASLVPDEVPVLMZVPVLIGSNOSBMVQBPSBQRVPVLDUAUBUCTTASUDZVIVNVRVIUEVJBA
+      CUFZUGZCUHVMCDABUIVTVMCVSDEVTVMCUJBAVSUKUMULUNUOUPVJVMVIUQVKVKIGZVJADEVKD
+      EWAABFURUSADUTVKDVAVEVIVLDEVMWAVBBVCVKVLIVDVFVGVH $.
+      $( [11-Feb-2015] $)
+
+    $( When assuming AC, weak and usual dominance coincide.  It is not known if
+       this is an AC equivalent. $)
+    wdomac $p |- ( X ~<_* Y <-> X ~<_ Y ) $=
+      ( vy vz cwdom wbr cdom cvv wcel wi cv wfo wex cpw wrex brwdom2 wa vex wss
+      fodom elpwi ssdomg mpsyl adantl domtr syl2anr ex exlimdv rexlimdva sylbid
+      wn relwdom brrelexi domrefg syl brprc syl5ibr pm2.61i domwdom impbii ) AB
+      EFZABGFZBHIZVAVBJVCVACKZADKZLZDMZCBNZOVBCDHABPVCVGVBCVHVCVDVHIZQZVFVBDVJV
+      FVBVFAVDGFVDBGFZVBVJVDAVECRZTVIVKVCVDHIVIVDBSVKVLVDBUAVDBHUBUCUDAVDBUEUFU
+      GUHUIUJVAVBVCUKAAGFZVAAHIVMABEULUMAHUNUOABGUPUQURABUSUT $.
+      $( [11-Feb-2015] $)
+  $}
+
+  ${
+    $d A v w x y z $.  $d B v w x y z $.  $d X v w x z $.  $d ph w x y $.
+    wdom2d.a $e |- ( ph -> A e. V ) $.
+    wdom2d.b $e |- ( ph -> B e. W ) $.
+    wdom2d.o $e |- ( ( ph /\ x e. A ) -> E. y e. B x = X ) $.
+    $( Deduce weak dominance from an implicit onto function (version which
+       avoids ~ ax-reg ). $)
+    wdom2d $p |- ( ph -> A ~<_* B ) $=
+      ( vz vw vv cv wcel wbr cvv syl2anc wrex csb crab cwdom wfo cxp wss wf weq
+      cmpt csbeq1 eleq1d elrab simprbi adantl eqid fmptd fssxp syl rabexg xpexg
+      ssexg cfv wceq wral wa wi eleq1 biimpcd ancrd reximdv mpd wel hbcsb1 hbel
+      ax-17 ax17el hbeq hban csbeq1a eqeq2d anbi12d cbvrex sylib fvmptg rexbiia
+      mpdan rexrab bitri sylibr ralrimiva dffo3 sylanbrc fowdom cdom ssrab2 mpi
+      ssdom2g domwdom 3syl wdomtr ) ADCLOZHUAZDPZLEUBZUCQZXDEUCQZDEUCQAMXDCMOZH
+      UAZUIZRPZXDDXIUDZXEAXIXDDUEZUFZXLRPZXJAXDDXIUGZXMAMXDXHDXIXGXDPZXHDPZAXPX
+      GEPXQXCXQLXGELMUHXBXHDCXAXGHUJUKULUMUNXIUOZUPZXDDXIUQURAXDRPZDFPXNAEGPZXT
+      JXCLEGUSURIXDDRFUTSXIXLRVASAXOBOZNOZXIVBZVCZNXDTZBDVDXKXSAYFBDAYBDPZVEZCY
+      CHUAZDPZYBYIVCZVEZNETZYFYHHDPZYBHVCZVEZCETZYMYHYOCETYQKYHYOYPCEYGYOYPVFAY
+      GYOYNYOYGYNYBHDVGVHVIUNVJVKYPYLCNEYPNVOYJYKCCMMYIDCMYCHMNVLCVOVMZXGDPCVOV
+      NCMMYBYIMBCVPYRVQVRCNUHZYNYJYOYKYSHYIDCYCHVSZUKYSHYIYBYTVTWAWBWCYFYKNXDTY
+      MYEYKNXDYCXDPZYDYIYBUUAYJYDYIVCUUAYCEPYJXCYJLYCELNUHXBYIDCXAYCHUJUKZULUMM
+      YCXHYIXDDXICXGYCHUJXRWDWFVTWEXCYJYKLNEUUBWGWHWIWJNBXDDXIWKWLXIRDXDWMSAYAX
+      DEWNQZXFJYAXDEUFUUCXCLEWOXDEGWQWPXDEWRWSDXDEWTS $.
+      $( [13-Feb-2015] $)
+  $}
+
+  ${
+    $d A x y $.  $d B x y $.  $d ph x y $.  $d X x $.
+    wdomd.b $e |- ( ph -> B e. W ) $.
+    wdomd.o $e |- ( ( ph /\ x e. A ) -> E. y e. B x = X ) $.
+    $( Deduce weak dominance from an implicit onto function. $)
+    wdomd $p |- ( ph -> A ~<_* B ) $=
+      ( cvv cv wceq wrex cab wss wcel wi wal ex alrimiv ssab abrexexg syl ssexg
+      sylibr syl2anc wdom2d ) ABCDEJFGADBKZGLCEMZBNZOZUJJPZDJPAUHDPZUIQZBRUKAUN
+      BAUMUIISTUIBDUAUEAEFPULHCBEGFUBUCDUJJUDUFHIUG $.
+      $( [13-Feb-2015] $)
+  $}
+
+  ${
+    $d X f w x y z $.  $d Y f w x y z $.
+    $( Condition for weak dominance with a condition reminiscent of
+       ~ wdomd . $)
+    brwdom3 $p |- ( ( X e. V /\ Y e. W ) -> ( X ~<_* Y <->
+          E. f A. x e. X E. y e. Y x = ( f ` y ) ) ) $=
+      ( vz vw wcel cvv cv cfv wceq wrex wral wex wb wa adantl cwdom wbr wfo cpw
+      elex brwdom2 wf dffo3 simprbi wi wss elpwi ssrexv syl ralimdv syl5 eximdv
+      rexlimdva sylbid simpll simplr eqeq1 rexbidv fveq2 eqeq2d cbvrexv cbvralv
+      weq syl6bb biimpi r19.21bi wdom2d ex exlimdv impbid syl2an ) FDJFKJZGKJZF
+      GUAUBZALZBLZCLZMZNZBGOZAFPZCQZRGEJFDUEGEUEVQVRSZVSWGWHVSHLZFWBUCZCQZHGUDZ
+      OZWGVRVSWMRVQHCKFGUFTWHWKWGHWLWHWIWLJZSZWJWFCWJWDBWIOZAFPZWOWFWJWIFWBUGWQ
+      BAWIFWBUHUIWOWPWEAFWNWPWEUJZWHWNWIGUKWRWIGULWDBWIGUMUNTUOUPUQURUSWHWFVSCW
+      HWFVSWHWFSZHIFGKKILZWBMZVQVRWFUTVQVRWFVAWSWIXANZIGOZHFWFXCHFPZWHWFXDWEXCA
+      HFAHVHZWEWIWCNZBGOXCXEWDXFBGVTWIWCVBVCXFXBBIGBIVHWCXAWIWAWTWBVDVEVFVIVGVJ
+      TVKVLVMVNVOVP $.
+      $( [13-Feb-2015] $)
+
+    $( Weak dominance implies existance of a covering function. $)
+    brwdom3i $p |- ( ( X ~<_* Y /\ Y e. V ) ->
+        E. f A. x e. X E. y e. Y x = ( f ` y ) ) $=
+      ( cwdom wbr wcel wa cv cfv wceq wrex wral wex simpl cvv wb relwdom sylan
+      brrelexi brwdom3 mpbid ) EFGHZFDIZJUEAKBKCKLMBFNAEOCPZUEUFQUEERIUFUEUGSEF
+      GTUBABCRDEFUCUAUD $.
+      $( [13-Feb-2015] $)
+  $}
+
+  ${
+    $d A a b f g y z $.  $d B a b f g y z $.  $d C a b f g y z $.
+    $d D a b f g y z $.  $d V f g y z $.  $d W f g y z $.
+    $( Weak dominance of a (disjoint) union. $)
+    unwdomg $p |- ( ( ( A ~<_* B /\ B e. V ) /\ ( C ~<_* D /\ D e. W ) /\
+          ( B i^i D ) = (/) ) -> ( A u. C ) ~<_* ( B u. D ) ) $=
+      ( va vb vf vg vz cwdom wcel wa wceq cv cfv wrex cvv eqeq2d vy wbr cin w3a
+      wral wex cun brwdom3i 3ad2ant1 3ad2ant2 adantr cif relwdom brrelexi unexg
+      c0 syl2an ad2ant2r 3adant3 ad2ant2l wi wo weq eqeq1 rexbidv rcla4va fveq2
+      cbvrexv wss ssun1 iftrue fveq1d biimprd reximia ssrexv mpsyl sylbi ancoms
+      syl adantlr adantll syl6bb ssun2 wn minel iffalse reximdva sylan2 anassrs
+      elun imp adantlrl jaodan sylan2b expl 3ad2ant3 impl wdom2d exlimdv mpd ex
+      expr ) ABLUBZBEMZNZCDLUBZDFMZNZBDUCUPOZUDZGPZHPZIPZQZOZHBRZGAUEZIUFZACUGZ
+      BDUGZLUBZXEXHXRXIGHIEABUHUIXJXQYAIXJXQYAXJXQNZXKXLJPZQZOZHDRZGCUEZJUFZYAX
+      JYHXQXHXEYHXIGHJFCDUHUJUKYBYGYAJXJXQYGYAXJXQYGNZNUAKXSXTSSKPZYJBMZXMYCULZ
+      QZXJXSSMZYIXEXHYNXIXCXFYNXDXGXCASMCSMYNXFABLUMUNCDLUMUNACSSUOUQURUSUKXJXT
+      SMZYIXEXHYOXIXDXGYOXCXFBDEFUOUTUSUKXJYIUAPZXSMZYPYMOZKXTRZXIXEYIYQNYSVAXH
+      XIYIYQYSYQXIYINZYPAMZYPCMZVBYSYPACWJYTUUAYSUUBYIUUAYSXIXQUUAYSYGUUAXQYSUU
+      AXQNYPXNOZHBRZYSXPUUDGYPAGUAVCZXOUUCHBXKYPXNVDVEVFUUDYPYJXMQZOZKBRZYSUUCU
+      UGHKBHKVCZXNUUFYPXLYJXMVGTVHBXTVIUUHYRKBRYSBDVJUUGYRKBYKYRUUGYKYMUUFYPYKY
+      JYLXMYKXMYCVKVLTVMVNYRKBXTVOVPVQVSVRVTWAXIYGUUBYSXQXIYGUUBYSYGUUBNXIYPYJY
+      CQZOZKDRZYSUUBYGUULYFUULGYPCUUEYFYPYDOZHDRUULUUEYEUUMHDXKYPYDVDVEUUMUUKHK
+      DUUIYDUUJYPXLYJYCVGTVHWBVFVRDXTVIXIUULNYRKDRZYSDBWCXIUULUUNXIUUKYRKDXIYJD
+      MZNZYRUUKUUPYMUUJYPUUPYJYLYCUUPYKWDZYLYCOUUOXIUUQYJDBWEVRYKXMYCWFVSVLTVMW
+      GWKYRKDXTVOVPWHWIWLWMWNWOWPWQWRXBWSWTXAWSWT $.
+      $( [13-Feb-2015] $)
+  $}
+
+  ${
+    $d A a b c f g x y $.  $d B a b c d f g x y $.  $d C a c d f g x y $.
+    $d D a b c d f g x y $.  $d V f g x y $.  $d W f g x y $.
+    $( Weak dominance of a cross product. $)
+    xpwdomg $p |- ( ( ( A ~<_* B /\ B e. V ) /\ ( C ~<_* D /\ D e. W ) ) ->
+          ( A X. C ) ~<_* ( B X. D ) ) $=
+      ( vc vd va vb vx cwdom wcel wa cv cfv wceq wrex wral cvv vg vf vy wbr wex
+      cxp brwdom3i adantl wi adantr c1st c2nd cop relwdom brrelexi xpexg syl2an
+      ad2ant2r ad2ant2l pm3.2 ralimdv com12 impcom reximdv ralimi syl eqeq1 vex
+      fvex opth syl6bb 2rexbidv ralxp sylibr r19.21bi fveq2 op1st syl6eq fveq2d
+      op2nd opeq12d eqeq2d rexxp adantll wdom2d expr exlimdv ex mpd ) ABLUDZBEM
+      ZNZCDLUDZDFMZNZNZGOZHOZUAOZPZQZHDRZGCSZUAUEZACUFZBDUFZLUDZWOXDWLGHUAFCDUG
+      UHWPIOZJOZUBOZPZQZJBRZIASZUBUEZXDXGUIZWLXOWOIJUBEABUGUJWPXNXPUBWPXNXPWPXN
+      NXCXGUAWPXNXCXGWPXNXCNZNKUCXEXFTTUCOZUKPZXJPZXRULPZWSPZUMZWPXETMZXQWJWMYD
+      WKWNWJATMCTMYDWMABLUNUOCDLUNUOACTTUPUQURUJWPXFTMZXQWKWNYEWJWMBDEFUPUSUJXQ
+      KOZXEMZYFYCQZUCXFRZWPXQYGNYFXKWTUMZQZHDRJBRZYIXQYLKXEXQXLXANZHDRZJBRZGCSZ
+      IASZYLKXESXQXMXBNZGCSZIASZYQXCXNYTXCXMYSIAXMXCYSXMXBYRGCXMXBUTVAVBVAVCYSY
+      PIAYRYOGCXBXMYOXBXLYNJBXLXBYNXLXAYMHDXLXAUTVDVBVDVCVEVEVFYLYOKIGACYFXHWQU
+      MZQZYKYMJHBDUUBYKUUAYJQYMYFUUAYJVGXHWQXKWTIVHGVHWRWSVIVJVKVLVMVNVOYHYKUCJ
+      HBDXRXIWRUMZQZYCYJYFUUDXTXKYBWTUUDXSXIXJUUDXSUUCUKPXIXRUUCUKVPXIWRJVHZVQV
+      RVSUUDYAWRWSUUDYAUUCULPWRXRUUCULVPXIWRUUEHVHVTVRVSWAWBWCVNWDWEWFWGWHWGWIW
+      I $.
+      $( [13-Feb-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Heredetarily size-limited sets without Choice
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d A x y a b c $.  $d B x y a b c d $.  $d U a b c d $.
+    ituni.u $e |- U = ( x e. _V |->
+        ( rec ( ( y e. _V |-> U. y ) , x ) |` om ) ) $.
+    $( Function value of iterated unions. _EDITORIAL_:  The iterated unions and
+       order types of ordered sets are split out here because they could
+       concievably be independently useful. $)
+    itunifval $p |- ( A e. V -> ( U ` A ) =
+          ( rec ( ( y e. _V |-> U. y ) , A ) |` om ) ) $=
+      ( wcel cvv cfv cv cuni cmpt crdg com cres wceq elex rdgeq2 reseq1d con0
+      wfun wfn rdgfnon fnfun ax-mp omex resfunexg mp2an fvmpt syl ) CEGCHGCDIBH
+      BJKLZCMZNOZPCEQACUKAJZMZNOUMHDUNCPUOULNUNCUKRSFULUAZNHGUMHGULTUBUPCUKUCTU
+      LUDUEUFULNHUGUHUIUJ $.
+      $( [11-Feb-2015] $)
+
+    $( Functionality of the iterated union. $)
+    itunifn $p |- ( A e. V -> ( U ` A ) Fn om ) $=
+      ( wcel cfv com wfn cvv cuni cmpt crdg cres frfnom itunifval fneq1d mpbiri
+      cv ) CEGZCDHZIJBKBTLMZCNIOZIJCUCPUAIUBUDABCDEFQRS $.
+      $( [11-Feb-2015] $)
+
+    $( A zero-fold iterated union. $)
+    ituni0 $p |- ( A e. V -> ( ( U ` A ) ` (/) ) = A ) $=
+      ( wcel c0 cfv cvv cv cuni cmpt crdg com cres itunifval fveq1d fr0g eqtrd
+      ) CEGZHCDIZIHBJBKLMZCNOPZICUAHUBUDABCDEFQRCEUCST $.
+      $( [11-Feb-2015] $)
+
+    $( Successor iterated union. $)
+    itunisuc $p |- ( ( U ` A ) ` suc B ) = U. ( ( U ` A ) ` B ) $=
+      ( va cvv wcel cfv cuni wceq com wa cv fveq1d unieqd wn c0 syl frsuc unieq
+      csuc cmpt crdg cres fvex uniex fvmpt ax-mp syl6eq adantl itunifval adantr
+      cbvmptv 3eqtr4d uni0 eqcomi cdm wfn itunifn eleq2d peano2b syl6bbr notbid
+      fndm biimpar ndmfv 3eqtr4a pm2.61dan fv01 unieqi 3eqtr4ri fvprc pm2.61i )
+      CHIZDUCZCEJZJZDVRJZKZLZVPDMIZWBVPWCNZVQBHBOZKZUDZCUEMUFZJZDWHJZKZVSWAWCWI
+      WKLVPWCWIWJWGJZWKCDWGUAWJHIWLWKLDWHUGZGWJGOZKZWKHWGWNWJUBBGHWFWOWEWNUBUOW
+      JWMUHUIUJUKULVPVSWILWCVPVQVRWHABCEHFUMZPUNWDVTWJVPVTWJLWCVPDVRWHWPPUNQUPV
+      PWCRZNZSSKZVSWAWSSUQURWRVQVRUSZIZRZVSSLVPXBWQVPXAWCVPXAVQMIWCVPWTMVQVPVRM
+      UTWTMLABCEHFVAMVRVFTZVBDVCVDVEVGVQVRVHTWRVTSWRDWTIZRZVTSLVPXEWQVPXDWCVPWT
+      MDXCVBVEVGDVRVHTQVIVJVPRZVQSJZDSJZKZVSWAWSSXIXGUQXHSDVKVLVQVKVMXFVQVRSCEV
+      NZPXFVTXHXFDVRSXJPQVIVO $.
+      $( [11-Feb-2015] $)
+
+    $( Each union iterate is a member of the transitive closure. $)
+    itunitc1 $p |- ( ( U ` A ) ` B ) C_ ( TC ` A ) $=
+      ( va vb vc cvv wcel cfv ctc wss cv wceq fveq2 com c0 sseq1d fveq1d ituni0
+      sseq12d csuc weq vex tcid eqsstrd wi cuni itunisuc cpw wtr tctr pwtr mpbi
+      ax-mp trss fvex sspwuni 3imtr3i syl5eqss a1i finds wn 0ss cdm wfn itunifn
+      elpw fndm mp2b eleq2i ndmfv sylnbir mpbiri pm2.61i vtoclg fvprc syl6eq
+      fv01 ) CJKZDCELZLZCMLZNZDGOZELZLZWGMLZNZWFGCJWGCPZWIWDWJWEWLDWHWCWGCEQUAW
+      GCMQUCDRKZWKHOZWHLZWJNSWHLZWJNZIOZWHLZWJNZWRUDZWHLZWJNZWKHIDWNSPWOWPWJWNS
+      WHQTHIUEWOWSWJWNWRWHQTWNXAPWOXBWJWNXAWHQTWNDPWOWIWJWNDWHQTWGJKZWQGUFZXDWP
+      WGWJABWGEJFUBWGJUGUHUQWTXCUIWRRKWTXBWSUJZWJABWGWREFUKWSWJULZKZWSXGNZWTXFW
+      JNXGUMZXHXIUIWJUMXJWGUNWJUOUPXGWSURUQWSWJWRWHUSVJWSWJUTVAVBVCVDWMVEZWKSWJ
+      NWJVFXKWISWJWMDWHVGZKWISPXLRDXDWHRVHXLRPXEABWGEJFVIRWHVKVLVMDWHVNVOTVPVQV
+      RWBVEZWFSWENWEVFXMWDSWEXMWDDSLSXMDWCSCEVSUADWAVTTVPVQ $.
+      $( [11-Feb-2015] $)
+
+    $( The union of all union iterates creates the transitive closure; compare
+       ~ trcl . $)
+    itunitc $p |- ( TC ` A ) = U. ran ( U ` A ) $=
+      ( va vb vc cvv wcel ctc cfv crn cuni wceq cv fveq2 wss c0 com eqeq12d wtr
+      rneqd unieqd vex ituni0 ax-mp fvssunirn eqsstr3i wrex wfn itunifn fnunirn
+      dftr3 wb mp2b elssuni itunisuc syl6ss rexlimivw sylbi mprgbir wa wi tcmin
+      csuc mp2an unissb fvelrnb itunitc1 a1i sseq1 syl5ibcom rexlimiv vtoclg wn
+      eqssi rn0 unieqi uni0 eqtr2i fvprc 3eqtr4a pm2.61i ) CIJZCKLZCDLZMZNZOZFP
+      ZKLZWKDLZMZNZOWJFCIWKCOZWLWFWOWIWKCKQWPWNWHWPWMWGWKCDQUCUDUAWLWOWKWORZWOU
+      BZWLWORZWKSWMLZWOWKIJZWTWKOFUEZABWKDIEUFUGWMSUHUIWRGPZWORZGWOGWOUNXCWOJZX
+      CHPZWMLZJZHTUJZXDXAWMTUKZXEXIUOXBABWKDIEULZHXCWMTUMUPXHXDHTXHXCXGNZWOXCXG
+      UQXLXFVFZWMLWOABWKXFDEURWMXMUHUIUSUTVAVBXAWQWRVCWSVDXBWKWOIVEUGVGWOWLRXCW
+      LRZGWNGWNWLVHXCWNJZXGXCOZHTUJZXNXAXJXOXQUOXBXKHTXCWMVIUPXPXNHTXFTJZXGWLRZ
+      XPXNXSXRABWKXFDEVJVKXGXCWLVLVMVNVAVBVQVOWEVPZSSMZNZWFWIYBSNSYASVRVSVTWACK
+      WBXTWHYAXTWGSCDWBUCUDWCWD $.
+      $( [11-Feb-2015] $)
+
+    $( Unwrap an iterated union from the "other end". $)
+    ituniiun $p |- ( A e. V -> ( ( U ` A ) ` suc B ) =
+          U_ a e. A ( ( U ` a ) ` B ) ) $=
+      ( csuc cfv ciun wceq fveq2 eqeq12d com wcel c0 adantr iuneq2dv cvv fveq1d
+      vb vd vc cv iuneq1 suceq fveq2d wel weq cuni uniiun itunisuc ituni0 ax-mp
+      vex unieqi eqtri a1i iuneq2i 3eqtr4i wi unieq eqcomi eqtr4i syl6eq syl5eq
+      iuncom4 finds iun0 cdm peano2b wfn itunifn fndm mp2b eleq2i bitr4i sylnbi
+      wn ndmfv sylnbir 3eqtr4d pm2.61i vtoclg ) DIZUBUEZEJZJZGWGDGUEZEJZJZKZLZW
+      FCEJZJZGCWLKZLUBCFWGCLZWIWPWMWQWRWFWHWOWGCEMUAGWGCWLUFNDOPZWNUCUEZIZWHJZG
+      WGWTWKJZKZLQIZWHJZGWGQWKJZKZLUDUEZIZWHJZGWGXIWKJZKZLZXJIZWHJZGWGXJWKJZKZL
+      ZWNUCUDDWTQLZXBXFXDXHXTXAXEWHWTQUGUHXTGWGXCXGXTXCXGLGUBUIZWTQWKMRSNUCUDUJ
+      ZXBXKXDXMYBXAXJWHWTXIUGUHYBGWGXCXLYBXCXLLYAWTXIWKMRSNWTXJLZXBXPXDXRYCXAXO
+      WHWTXJUGUHYCGWGXCXQYCXCXQLYAWTXJWKMRSNWTDLZXBWIXDWMYDXAWFWHWTDUGUHYDGWGXC
+      WLYDXCWLLYAWTDWKMRSNWGUKZGWGWJKXFXHGWGULXFQWHJZUKYEABWGQEHUMYFWGWGTPZYFWG
+      LUBUPZABWGETHUNUOUQURGWGXGWJXGWJLZYAWJTPZYIGUPZABWJETHUNUOUSUTVAXNXSVBXIO
+      PXNXPXKUKZXRABWGXJEHUMXNYLXMUKZXRXKXMVCYMGWGXLUKZKZXRYOYMGWGXLVHVDGWGXQYN
+      XQYNLYAABWJXIEHUMUSUTVEVFVGUSVIWSVTZQGWGQKZWIWMQYQLYPYQQGWGVJVDUSWSWFWHVK
+      ZPZWIQLWSWFOPYSDVLYROWFYGWHOVMYROLYHABWGETHVNOWHVOVPVQVRWFWHWAVSYPGWGWLQY
+      PWLQLZYAWSDWKVKZPYTUUAODYJWKOVMUUAOLYKABWJETHVNOWKVOVPVQDWKWAWBRSWCWDWE
+      $.
+      $( [11-Feb-2015] $)
+  $}
+
+  ${
+    $d x y z X $.  $d x y z O $.  $d x y z I $.
+    otos.o $e |- O = ( z e. ~P On |-> ( iota_ y e. On
+            E. x x Isom _E , _E ( y , z ) ) ) $.
+    $( The order type of a set of ordinals is an ordinal.
+
+       _EDITORIAL_:  Clearly, the limitation to sets of ordinals here is less
+       than ideal, but there is no compelling better option.  An order type in
+       general requires an ordering, and the natural ordering on sets of
+       ordinals is a proper class.  We could concievably require that the
+       ordering first be restricted, as in ` ( ( _E |`` ( X X. X ) ) O X ) ` ,
+       requiring heavy use of ~ weinxp at al, or use a syntactic
+       constructuction ` ( _E OrderType X ) ` with the usual problems of that
+       form.  Also conceivable is to define order type on poset structures, as
+       in ` ( O `` ( toInc `` X ) ) ` ; this is at least concise, but it
+       introduces a dependency on ` CC ` and probably a great deal of
+       translation overhead. $)
+    otoscl $p |- ( O ` X ) e. On $=
+      ( con0 cpw cv cep wiso wex crio wcel wral wf wn c0 cund 0elon riotacl cfv
+      wreu riotaund cvv wceq onprc fvprc ax-mp syl6eqel pm2.61i rgenw fmpt mpbi
+      syl6eq f0cli ) GHZGEDBICIJJAIKALZBGMZGNZCUQOUQGDPUTCUQURBGUCZUTURBGUAVAQZ
+      USRGVBUSGSUBZRURBGUDGUENQVCRUFUGGSUHUIUOTUJUKULCUQGUSDFUMUNTUP $.
+      $( [11-Feb-2015] $)
+
+    $( The order type of an ordinal, considered as the set of smaller ordinals,
+       is itself. $)
+    otosid $p |- ( X e. On -> ( O ` X ) = X ) $=
+      ( con0 wcel cfv cv cep wiso wex crio cpw wceq exbidv syl cvv mpdan isoeq5
+      wtr wss tron dftr4 mpbi sseli riotabidv riotaex fvmpt cres resiexg isoeq1
+      cid isoid cla4egv mpi wreu wwe word eloni ordwe ordtype ax-17 a17d isoeq4
+      wb riota2f mpbid eqtrd ) EGHZEDIZBJZEKKAJZLZAMZBGNZEVKEGOZHVLVQPGVREGUBGV
+      RUCUDGUEUFUGCEVMCJZKKVNLZAMZBGNVQVRDVSEPZWAVPBGWBVTVOAVMVSEKKVNUAQUHFVPBG
+      UIUJRVKEEKKVNLZAMZVQEPZVKUNEUKZSHZWDEGULWGEEKKWFLZWDEKUOWCWHAWFSEEKKWFVNU
+      MUPUQRVKVPBGURZWDWEVGVKEKUSZWIVKEUTWJEVAEVBRBEGKAVCTVPWDBCGEVSEHBVDVKWDBV
+      EVMEPVOWCAVMEEKKVNVFQVHTVIVJ $.
+      $( [11-Feb-2015] $)
+
+    ${
+      otos.i $e |- I = ( z e. ~P On |->
+            ( iota y y Isom _E , _E ( ( O ` z ) , z ) ) ) $.
+      $( The (unique) isomorphism from a set of ordinals to its order type. $)
+      otosiso $p |- ( X e. ~P On ->
+          ( I ` X ) Isom _E , _E ( ( O ` X ) , X ) ) $=
+        ( con0 wcel cfv cep cv wiso cio wceq isoeq4 syl isoeq5 wex cpw wb fveq2
+        cab bitrd iotabidv iotaex fvmpt weu wmo crab crio exbidv riotabidv wreu
+        riotaex wwe elpwi epweon wess ee10 ordtype mpdan riotacl2 eqeltrd elrab
+        wss simprbi isoeq1 cbvexv sylibr wemoiso2 eu5 sylanbrc iotacl fvex elab
+        sylib ) FIUAZJZFDKZFEKZFLLBMZNZBUDZJWBFLLWANZVTWAWDBOZWECFCMZEKZWHLLWCN
+        ZBOWGVSDWHFPZWJWDBWKWJWBWHLLWCNZWDWKWIWBPWJWLUBWHFEUCWIWHWBLLWCQRWBWHFL
+        LWCSUEUFHWDBUGUHVTWDBUIZWGWEJVTWDBTZWDBUJZWMVTWBFLLAMZNZATZWNVTWBWCFLLW
+        PNZATZBIUKZJZWRVTWBWTBIULZXACFWCWHLLWPNZATZBIULXCVSEWKXEWTBIWKXDWSAWCWH
+        FLLWPSUMUNGWTBIUPUHVTWTBIUOZXCXAJVTFLUQZXFVTFIVGILUQXGFIURUSFILUTVAZBFV
+        SLAVBVCWTBIVDRVEXBWBIJWRWTWRBWBIWCWBPWSWQAWCFWBLLWPQUMVFVHRWDWQBAWBFLLW
+        PWCVIVJVKVTXGWOXHWBFLLBVLRWDBVMVNWDBVORVEWDWFBWAFDVPWBFLLWAWCVIVQVR $.
+        $( [12-Feb-2015] $)
+    $}
+
+    $d O a b x y z $.
+    $( A set of ordinals is equinumerous to its order type. $)
+    otosen $p |- ( X e. ~P On -> X ~~ ( O ` X ) ) $=
+      ( va vb con0 cpw wcel cfv cv cep wiso cio cmpt ccnv wf1o syl cen wbr wceq
+      weq wb fveq2 isoeq4 isoeq5 iotabidv isoeq1 cbviota syl6eq cbvmptv otosiso
+      bitrd isocnv isof1o f1oeng mpdan ) EIJZKZEEDLZEGUTGMZDLZVCNNHMZOZHPZQZLZR
+      ZSZEVBUAUBVAEVBNNVJOZVKVAVBENNVIOVLABCVHDEFGCUTVGCMZDLZVMNNBMZOZBPZGCUDZV
+      GVNVMNNVEOZHPVQVRVFVSHVRVFVNVCNNVEOZVSVRVDVNUCVFVTUEVCVMDUFVDVCVNNNVEUGTV
+      NVCVMNNVEUHUOUIVSVPHBVNVMNNVOVEUJUKULUMUNVBENNVIUPTEVBNNVJUQTEVBUTVJURUS
+      $.
+      $( [11-Feb-2015] $)
+  $}
+
+  ${
+    $d O x y z a b c $.  $d I x y z a b c $.
+    hsmexlem.o $e |- O = ( z e. ~P On |-> ( iota_ y e. On
+            E. x x Isom _E , _E ( y , z ) ) ) $.
+
+    ${
+      hsmexlem.i $e |- I = ( z e. ~P On |->
+            ( iota y y Isom _E , _E ( ( O ` z ) , z ) ) ) $.
+      $( Lemma for hsmex.  Bound the order type of a union of sets of ordinals,
+         each of limited order type.  Vaguely reminiscent of ~ unictb but use
+         of order types allows to canonically choose the sub-bijections,
+         removing the choice requirement. $)
+      hsmexlem1 $p |- ( ( A e. _V /\ C e. On /\ A. a e. A ( B e. ~P On /\
+                ( O ` B ) e. C ) ) ->
+          ( O ` U_ a e. A B ) e. ( har ` ~P ( A X. C ) ) ) $=
+        ? $.
+    $}
+
+    $( Lemma for hsmex.  Bound the order type of a limited-cardinality set of
+       ordinals. $)
+    hsmexlem2 $p |- ( ( A C_ On /\ A ~<_ B ) ->
+        ( O ` A ) e. ( har ` B ) ) $=
+      ? $.
+
+    $( Lemma for hsmex.  Extends previous result by dominance.  Note that this could be substantially strengthened, e.g. using the weak Hartogs function, but all we need here is that there be *some* dominating ordinal. $)
+
+    hsmexlem.h $e |- H = ( rec ( ( z e. On |-> ( har ` ~P ( X x. z ) ) ) ,
+            ( har ` X ) ) |` om ) $.
+
+    ${
+      hsmexlem4.s $e |- ( ph -> S e. U. ( R1 " On ) ) $.
+      hsmexlem4.x $e |- ( ph -> X e. _V ) $.
+      hsmexlem4.tc $e |- ( ph -> A. a e. ( TC ` { S } ) a ~<_ X ) $.
+      $( Lemma for hsmex.  The core induction, establishing bounds on the order
+         types of iterated unions of the initial set. $)
+      hsmexlem4 $p |- ( ph -> ( A e. om ->
+            ( O ` ( rank " ( ( U ` S ) ` A ) ) ) e. ( H ` A ) ) ) $=
+        ? $.
+
+      $( Lemma for hsmex.  Combining the above constraints, along with
+         ~ itunitc and ~ tcrank , gives an effective constraint on the rank of
+         ` S ` . $)
+      hsmexlem5 $p |- ( ph -> ( rank ` S ) e.
+            ( har ` ~P ( om X. U. ran H ) ) ) $=
+        ? $.
+    $}
+  $}
+
+  ${
+    $( The collection of hereditarily size-limited well-founded sets comprise a
+       set.  The proof is that of Randall Holmes at http://math.boisestate.edu/
+       ~ holmes/holmes/hereditary.pdf , with modifications to use Hartogs'
+       theorem instead of the weak variant (inconsequentially weakening some
+       intermediate results), and making the well-foundedness condition
+       explicit to avoid a direct dependence on ~ ax-reg . $)
+    hsmex $p |- ( X e. V -> { s e. U. ( R1 " On ) |
+            A. x e. ( TC ` { s } ) x ~<_ X } e. _V ) $=
+      ? $.
+
+    $( The set of hereditary size-limited sets, assuming ~ ax-reg . $)
+    hsmex2 $p |- ( X e. V -> { s | A. x e. ( TC ` { s } ) x ~<_ X } e. _V ) $=
+      ( wcel cv cdom wbr csn ctc cfv wral cab cr1 con0 cima cuni crab cvv wceq
+      unir1 rabeq ax-mp rabab eqtr2i hsmex syl5eqel ) CBEAFCGHADFIJKLZDMZUHDNOP
+      QZRZSUKUHDSRZUIUJSTUKULTUAUHDUJSUBUCUHDUDUEABCDUFUG $.
+      $( [11-Feb-2015] $)
+
+    $( The set of hereditary size-limited sets, assuming ~ ax-reg , using
+       strict comparison (an easy corrolary by separation). $)
+    hsmex3 $p |- ( X e. V -> { s | A. x e. ( TC ` { s } ) x ~< X } e. _V ) $=
+      ( wcel cv csdm wbr csn ctc cfv wral cab cdom wss cvv ralimi ss2abi hsmex2
+      sdomdom ssexg sylancr ) CBEAFZCGHZADFIJKZLZDMZUCCNHZAUELZDMZOUJPEUGPEUFUI
+      DUDUHAUEUCCTQRABCDSUGUJPUAUB $.
+      $( [11-Feb-2015] $)
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
@@ -13494,21 +14223,6 @@ $)
 
   ${
     $d A a b c $.  $d B a b c $.  $d F a b c $.
-
-    $( Lemma for ~ dffin3-2 .  Covering implies injection on power sets. $)
-    df32lem11 $p |- ( ( F e. _V /\ F : A -onto-> B ) -> ~P B ~<_ ~P A ) $=
-      ( va vb cvv wcel wa cpw syl cv cima wss wceq adantl imaeq2 vex elpw sylib
-      wb wfo cdom wbr fof dmfex sylan2 pwexg ccnv crn imassrn cdm dfdm4 syl5eqr
-      wf fdm syl5sseq cnvexg adantr imaexg elpwg mpbird a1d weq simpllr simplrl
-      3syl foimacnv syl2anc simplrr 3eqtr3d ex impbid1 dom3d mpd ) CFGZABCUAZHZ
-      AIZFGZBIZVRUBUCVQAFGZVSVPVOABCUNZWAABCUDZABFCUEUFAFUGJVQDEVTVRCUHZDKZLZWD
-      EKZLZFVQWFVRGZWEVTGZVQWIWFAMZVPWKVOVPWDUIZWFAWDWEUJVPWLCUKZACULVPWBWMANWC
-      ABCUOJUMUPOVQWDFGZWFFGWIWKTVOWNVPCFUQURWDWEFUSWFAFUTVFVAVBVQWJWGVTGZHZWFW
-      HNZDEVCZTVQWPHZWQWRWSWQWRWSWQHZCWFLZCWHLZWEWGWQXAXBNWSWFWHCPOWTVPWEBMZXAW
-      ENVOVPWPWQVDZWTWJXCVQWJWOWQVEWEBDQRSABWECVGVHWTVPWGBMZXBWGNXDWTWOXEVQWJWO
-      WQVIWGBEQRSABWGCVGVHVJVKWEWGWDPVLVKVMVN $.
-      $( [6-Nov-2014] $)
-
     $d a b c d e f g h i j k l x y $.
 
     $( Lemma for ~ dffin3-2 .  Remove hypotheses from ~ df32lem9 . $)
@@ -13530,7 +14244,7 @@ $)
        ` om ` .  (Contributed by Stefan O'Rear, 6-Nov-2014.) $)
     dffin3-2 $p |- Fin3 = { x | -. E. y y : x -onto-> om } $=
       ( va vb cfin3 cv com wfo wex cab wcel cpw cdom wbr cvv vex notbid cfin3ds
-      wn cfin4 csdm wi fornex ax-mp canth2g sdomdom 3syl df32lem11 mpan syl2anc
+      wn cfin4 csdm wi fornex ax-mp canth2g sdomdom 3syl fopwdom mpan syl2anc
       domtr df-fin3 abeq2i pwex wceq breq2 dffin4-2 elab2 bitri con2bii exlimiv
       sylib con2i fin23lem41 df32lem12 con1i sseldi impbii weq foeq2 elab eqriv
       exbidv bitr4i ) CEAFZGBFZHZBIZSZAJZCFZEKZWAGVPHZBIZSZWAVTKWBWEWDWBWCWBSZB
@@ -15616,45 +16330,6 @@ $)
       CIDIZVJOPEIFIZVJOPQVPVQRLQFGSDGSCEULZHHUMZUPZKZVOVKGRKZWAUNVKGHRVRVJUOZWB
       WAUAVKVRVRPWCVRUQDFCEGHRVRVJURUSWCWBHVRKWAGHRVRVJUTHVRVAVBTVCVNWAAVTVSVRH
       HNNVDVEHVMVTVHVFTVGVI $.
-      $( [16-Nov-2014] $)
-
-    $d a b c F $.
-    $( A well-ordering has no nontrivial automorphisms.  (Is sethood actually
-       needed here?)  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
-    weniso $p |- ( ( A e. V /\ R We A /\ F Isom R , R ( A , A ) ) ->
-        F = ( _I |` A ) ) $=
-      ( va vc vb wcel cvv wceq cfv wral wn wbr wa syl wi fveq2 id adantr wwe cv
-      wiso cid cres elex w3a crab c0 wne wrex rabn0 rexnal bitri wfr wss simpl1
-      rabexg simpl2 wefr ssrab2 a1i simpr fri syl22anc weq eqeq12d notbid elrab
-      ex ralrab con34b bicomi ralbii wo simprr wor weso wf1o simpl3 isof1o f1of
-      wb wf simprl ffvelrn syl2anc sotrieq syl12anc con2bid mpbird breq1 rcla4v
-      imbi12d com23 imp wf1 f1fveq pm2.21 ad2antll sylbid syld ccnv f1ocnv 3syl
-      f1of1 isorel f1ocnvfv2 breq1d bitr2d biimpa simplrr adantl fveq2d 3eqtr3d
-      sylc jaodan syl5bi rexlimdv syl5bir pm2.18d fvresi eqeq2d biimprd ralimia
-      mpdan wfn 3ad2ant3 f1ofn fnresi eqfnfv2 syl3an1 ) ADHAIHZABUAZAABBCUCZCUD
-      AUEZJZADUFYMYNYOUGZYQEUBZCKZYSYPKZJZEALZYRYTYSJZEALZUUCYRUUEUUEMZUUDMZEAU
-      HZUIUJZYRUUEUUIUUGEAUKUUFUUGEAULUUDEAUMUNYRUUIFUBZGUBZBNZMZFUUHLZGUUHUKZU
-      UEYRUUIUUOYRUUIOZUUHIHZABUOZUUHAUPZUUIUUOUUPYMUUQYMYNYOUUIUQUUGEAIURPUUPY
-      NUURYMYNYOUUIUSABUTPUUSUUPUUGEAVAVBYRUUIVCGFAUUHIBVDVEVJYRUUNUUEGUUHUUKUU
-      HHUUKAHZUUKCKZUUKJZMZOZYRUUNUUEQZUUGUVCEUUKAEGVFZUUDUVBUVFYTUVAYSUUKYSUUK
-      CRUVFSVGVHVIYRUVDUVEUUNUULUUJCKZUUJJZQZFALZYRUVDOZUUEUUNUVHMZUUMQZFALUVJU
-      UGUVLUUMFEAEFVFZUUDUVHUVNYTUVGYSUUJYSUUJCRUVNSVGVHVKUVMUVIFAUVIUVMUULUVHV
-      LVMVNUNUVKUVAUUKBNZUUKUVABNZVOZUVJUUEQZUVKUVQUVCYRUUTUVCVPUVKUVBUVQUVKABV
-      QZUVAAHZUUTUVBUVQMWCUVKYNUVSYMYNYOUVDUSABVRPUVKAACWDZUUTUVTUVKAACVSZUWAUV
-      KYOUWBYMYNYOUVDVTZAABBCWAZPZAACWBPYRUUTUVCWEZAAUUKCWFWGZUWFAUVAUUKBWHWIWJ
-      WKUVKUVOUVRUVPUVKUVOOUVJUVACKZUVAJZUUEUVKUVOUVJUWIQUVKUVJUVOUWIUVKUVTUVJU
-      VOUWIQZQUWGUVIUWJFUVAAUUJUVAJZUULUVOUVHUWIUUJUVAUUKBWLUWKUVGUWHUUJUVAUUJU
-      VACRUWKSVGWNWMPWOWPUVKUWIUUEQUVOUVKUWIUVBUUEUVKAACWQZUVTUUTUWIUVBWCUVKUWB
-      UWLUWEAACXFPUWGUWFAAUVAUUKCWRWIUVCUVBUUEQYRUUTUVBUUEWSZWTXATXBUVKUVPOZUVJ
-      UUKCXCZKZCKZUWPJZUUEUWNUWPAHZUWPUUKBNZUVJUWRQUVKUWSUVPUVKAAUWOWDZUUTUWSUV
-      KUWBAAUWOVSUXAUWEAACXDAAUWOWBXEUWFAAUUKUWOWFWGZTUVKUVPUWTUVKUWTUWQUVABNZU
-      VPUVKYOUWSUUTUWTUXCWCUWCUXBUWFAAUWPUUKBBCXGWIUVKUWQUUKUVABUVKUWBUUTUWQUUK
-      JZUWEUWFAAUUKCXHWGZXIXJXKUWSUVJUWTUWRUVIUWTUWRQFUWPAUUJUWPJZUULUWTUVHUWRU
-      UJUWPUUKBWLUXFUVGUWQUUJUWPUUJUWPCRUXFSVGWNWMWOXPUVKUWRUUEQUVPUVKUWRUUEUVK
-      UWROZUVCUVBUUEYRUUTUVCUWRXLUXGUWQCKZUWQUVAUUKUWRUXHUWQJUVKUWQUWPCRXMUVKUX
-      HUVAJUWRUVKUWQUUKCUXEXNTUVKUXDUWRUXETXOUWMXPVJTXBXQYFXRVJXRXSXBXTYAUUDUUB
-      EAYSAHZUUBUUDUXIUUAYSYTAYSYBYCYDYEPYRCAYGZYPAYGZYQUUCWCYRUWBUXJYOYMUWBYNU
-      WDYHAACYIPUXKYRAYJVBEACYPYKWGWKYL $.
       $( [16-Nov-2014] $)
 
     $d a b c f R $.  $d f A $.
