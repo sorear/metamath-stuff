@@ -4,7 +4,7 @@ use strict; use warnings;
 
 use Text::CleanFragment;
 use Time::ParseDate;
-use File::Slurp qw( read_file read_dir );
+use File::Slurper qw( read_text read_dir );
 use HTML::Entities;
 
 my %breaks = ( '######' => 1, '#*#*#*' => 2, '=-=-=-' => 3 );
@@ -37,7 +37,7 @@ sub scrape {
     my ($mtime, $offtime, $v, $file, $continue) = @_;
     print "progress ** $v $mtime $offtime\n";
 
-    my $text = read_file($file);
+    my $text = read_text($file);
     $text =~ s/\r//g;
     my @lines = split /^/m, $text;
 
