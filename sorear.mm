@@ -20045,6 +20045,498 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Independent sets and families
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c NzRing LIndF LIndS $.
+
+  $( The class of nonzero rings. $)
+  cnzr $a class NzRing $.
+
+  $( The class relationship of independent families in a module. $)
+  clindf $a class LIndF $.
+
+  $( The class generator of independent sets in a module. $)
+  clinds $a class LIndS $.
+
+  $( A nonzero or nontrivial ring is a ring with at least two values, or
+     equivalently where 1 and 0 are different. $)
+  df-nzr $a |- NzRing = { r e. Ring | ( 1r ` r ) =/= ( 0g ` r ) } $.
+
+  ${
+    $d f w s x k $.
+    $( An independent family is a family of vectors, no nonzero multiple of
+       which can be expressed as a linear combination of other elements of the
+       family.  This is almost, but not quite, the same as a function into an
+       independent set. $)
+    df-lindf $a |- LIndF = { <. f , w >. | ( f : dom f --> ( Base ` w ) /\
+            [ ( Scalar ` w ) / s ] A. x e. dom f
+                A. k e. ( ( Base ` s ) \ { ( 0g ` s ) } )
+                  -. ( k ( vsca ` w ) ( f ` x ) ) e.
+                      ( ( LSpan ` w ) ` ( f " ( dom f \ { x } ) ) ) ) } $.
+
+    $( An independent set is a set which is independent as a family. $)
+    df-linds $a |- LIndS = ( w e. _V |->
+          { s e. ~P ( Base ` w ) | ( _I |` s ) LIndF w } ) $.
+  $}
+
+  ${
+    $d O r $.  $d R r $.  $d Z r $.
+    isnzr.o $e |- O = ( 1r ` R ) $.
+    isnzr.z $e |- Z = ( 0g ` R ) $.
+    $( Property of a nonzero ring. $)
+    isnzr $p |- ( R e. NzRing <-> ( R e. Ring /\ O =/= Z ) ) $=
+      ( vr cv cur cfv c0g wne crg cnzr wceq fveq2 syl6eqr neeq12d df-nzr elrab2
+      ) FGZHIZTJIZKBCKFALMTANZUABUBCUCUAAHIBTAHODPUCUBAJICTAJOEPQFRS $.
+      $( [24-Feb-2015] $)
+
+    $( One and zero are different in a nonzero ring. $)
+    nzrnz $p |- ( R e. NzRing -> O =/= Z ) $=
+      ( cnzr wcel crg wne isnzr simprbi ) AFGAHGBCIABCDEJK $.
+      $( [24-Feb-2015] $)
+  $}
+
+  $( A nonzero ring is a ring. $)
+  nzrrng $p |- ( R e. NzRing -> R e. Ring ) $=
+    ( cnzr wcel crg cur cfv c0g wne eqid isnzr simplbi ) ABCADCAEFZAGFZHALMLIMI
+    JK $.
+    $( [24-Feb-2015] $)
+
+  $( All division rings are nonzero. $)
+  drngnzr $p |- ( R e. DivRing -> R e. NzRing ) $=
+    ( cdr wcel crg cur cfv c0g wne cnzr drngrng eqid drngunz isnzr sylanbrc ) A
+    BCADCAEFZAGFZHAICAJAOPPKZOKZLAOPRQMN $.
+    $( [24-Feb-2015] $)
+
+  ${
+    $d B x y $.  $d R x y $.
+    isnzr2.b $e |- B = ( Base ` R ) $.
+    $( Equivalent characterization of nonzero rings: they have at least two
+       elements. $)
+    isnzr2 $p |- ( R e. NzRing <-> ( R e. Ring /\ 2o ~<_ B ) ) $=
+      ( vx vy wcel cfv wne wa c2o cdom wbr eqid c1o wrex adantr cv wceq cvv wb
+      cnzr crg cur c0g isnzr csdm weq wn rngidcl rng0cl simpr df-ne neeq1 neeq2
+      syl5bbr rcla42ev syl3anc ex rng1eq0 3expb necon3bd rexlimdvva impbid fvex
+      cbs eqeltri 1sdom ax-mp syl6bbr csuc com sucdom mp2an df-2o breq1i bitr4i
+      wi 1onn a1i bitrd pm5.32i bitri ) BUAFBUBFZBUCGZBUDGZHZIZWCJAKLZIBWDWEWDM
+      ZWEMZUEWCWFWHWCWFNAUFLZWHWCWFDEUGZUHZEAODAOZWKWCWFWNWCWFWNWGWDAFZWEAFZWFW
+      NWCWOWFABWDCWIUIPWCWPWFABWECWJUJPWCWFUKWMWFWDEQZHZDEWDWEAAWMDQZWQHWSWDRWR
+      WSWQULWSWDWQUMUOWQWEWDUNUPUQURWCWMWFDEAAWCWSAFZWQAFZIIWLWDWEWCWTXAWDWERWL
+      VQABWDWSWQWECWIWJUSUTVAVBVCASFZWKWNTABVEGSCBVEVDVFZDEASVGVHVIWKWHTWCWKNVJ
+      ZAKLZWHNVKFXBWKXETVRXCNASVLVMJXDAKVNVOVPVSVTWAWB $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d f k s w x $.
+    $( The independent-family predicate is a proper relation and can be used
+       with ~ brrelexi . $)
+    rellindf $p |- Rel LIndF $=
+      ( vf vw vk vx vs cv cdm cbs cfv wf cvsca co csn cdif cima clspn wcel wral
+      wn c0g csca wsbc wa clindf df-lindf relopabi ) AFZGZBFZHIUGJCFDFZUGIUIKIL
+      UGUHUJMNOUIPIIQSCEFZHIUKTIMNRDUHREUIUAIUBUCABUDDBACEUEUF $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d W s w $.  $d X s $.
+    islinds.b $e |- B = ( Base ` W ) $.
+    $( Property of an independent set of vectors in terms of an independent
+       family. $)
+    islinds $p |- ( W e. V -> ( X e. ( LIndS ` W ) <->
+          ( X C_ B /\ ( _I |` X ) LIndF W ) ) ) $=
+      ( vs vw wcel clinds cfv cid cv cres clindf wbr cbs cpw crab wa wceq fveq2
+      wss cvv elex pweqd breq2 rabeqbidv df-linds fvex pwex rabex syl eleq2d wb
+      fvmpt reseq2 breq1d elrab a1i elpw2 sseq2i bitr4i anbi1i 3bitrd ) CBHZDCI
+      JZHDKFLZMZCNOZFCPJZQZRZHZDVKHZKDMZCNOZSZDAUBZVPSZVEVFVLDVECUCHVFVLTCBUDGC
+      VHGLZNOZFVTPJZQZRVLUCIVTCTZWAVIFWCVKWDWBVJVTCPUAUEVTCVHNUFUGGFUHVIFVKVJCP
+      UIZUJUKUOULUMVMVQUNVEVIVPFDVKVGDTVHVOCNVGDKUPUQURUSVQVSUNVEVNVRVPVNDVJUBV
+      RDVJWEUTAVJDEVAVBVCUSVD $.
+      $( [24-Feb-2015] $)
+
+    $( An independent set of vectors is a set of vectors. $)
+    linds1 $p |- ( X e. ( LIndS ` W ) -> X C_ B ) $=
+      ( clinds cfv wcel wss cid cres clindf wbr wa cdm wb elfvdm islinds simpld
+      syl ibi ) CBEFGZCAHZICJBKLZUAUBUCMZUABENZGUAUDOCBEPAUEBCDQSTR $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $( An independent set of vectors is independent as a family. $)
+    linds2 $p |- ( X e. ( LIndS ` W ) -> ( _I |` X ) LIndF W ) $=
+      ( clinds cfv wcel cbs wss cid cres clindf wbr cdm elfvdm eqid islinds syl
+      wa wb ibi simprd ) BACDEZBAFDZGZHBIAJKZUAUCUDQZUAACLZEUAUERBACMUBUFABUBNO
+      PST $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d B f w $.  $d F f k w x $.  $d K f w $.  $d N f k w $.  $d V f w $.
+    $d W f k w x $.  $d Z f k w $.  $d f s $.  $d k s $.  $d s w x $.
+    islindf.b $e |- B = ( Base ` W ) $.
+    islindf.v $e |- V = ( vsca ` W ) $.
+    islindf.k $e |- K = ( LSpan ` W ) $.
+    islindf.s $e |- S = ( Scalar ` W ) $.
+    islindf.n $e |- N = ( Base ` S ) $.
+    islindf.z $e |- Z = ( 0g ` S ) $.
+    $( Property of an independent family of vectors. $)
+    islindf $p |- ( ( W e. Y /\ F e. X ) -> ( F LIndF W <->
+          ( F : dom F --> B /\ A. x e. dom F A. k e. ( N \ { Z } )
+                -. ( k V ( F ` x ) ) e.
+                    ( K ` ( F " ( dom F \ { x } ) ) ) ) ) ) $=
+      ( cfv wceq vf vw vs wcel clindf wbr cdm wf cv co csn cdif cima wn wral wa
+      wb cbs cvsca clspn csca wsbc feq1 adantr dmeq fveq2 syl6eqr adantl feq23d
+      c0g bitrd fvex sneqd difeq12d raleqdv ralbidv sbcie fveq2d eqidd oveq123d
+      fveq1 imaeq1 difeq1d imaeq2d eqtrd fveq12d eleq12d notbid syl5bb df-lindf
+      raleqbidv anbi12d brabga ancoms ) EJUDIKUDEIUEUFEUGZBEUHZDUIZAUIZESZHUJZE
+      WOWRUKZULZUMZFSZUDZUNZDGLUKZULZUOZAWOUOZUPZUQUAUIZUGZUBUIZURSZXLUHZWQWRXL
+      SZXNUSSZUJZXLXMXAULZUMZXNUTSZSZUDZUNZDUCUIZURSZYFVJSZUKZULZUOZAXMUOZUCXNV
+      ASZVBZUPXKUAUBEIUEJKXLETZXNITZUPZXPWPYNXJYQXPXMXOEUHZWPYOXPYRUQYPXMXOXLEV
+      CVDYQXMXOWOBEYOXMWOTYPXLEVEZVDZYPXOBTYOYPXOIURSBXNIURVFMVGVHVIVKYNYEDYMUR
+      SZYMVJSZUKZULZUOZAXMUOZYQXJYLUUFUCYMXNVAVLYFYMTZYKUUEAXMUUGYEDYJUUDUUGYGU
+      UAYIUUCYFYMURVFUUGYHUUBYFYMVJVFVMVNVOVPVQYQUUEXIAXMWOYTYQYEXFDUUDXHYPUUDX
+      HTYOYPUUAGUUCXGYPUUACURSGYPYMCURYPYMIVASCXNIVAVFPVGZVRQVGYPUUBLYPUUBCVJSL
+      YPYMCVJUUHVRRVGVMVNVHYQYDXEYQXSWTYCXDYQWQWQXQWSXRHYPXRHTYOYPXRIUSSHXNIUSV
+      FNVGVHYQWQVSYOXQWSTYPWRXLEWAVDVTYQYAXCYBFYPYBFTYOYPYBIUTSFXNIUTVFOVGVHYOY
+      AXCTYPYOYAEXTUMXCXLEXTWBYOXTXBEYOXMWOXAYSWCWDWEVDWFWGWHWKWKWIWLAUBUADUCWJ
+      WMWN $.
+      $( [24-Feb-2015] $)
+
+    $( Expanded property of an independent set of vectors. $)
+    islinds2 $p |- ( W e. Y -> ( F e. ( LIndS ` W ) <->
+          ( F C_ B /\ A. x e. F A. k e. ( N \ { Z } )
+                -. ( k V x ) e. ( K ` ( F \ { x } ) ) ) ) ) $=
+      ( wcel wa cvv clinds cfv wss cid cres clindf wbr cdm wf cv co csn cdif wn
+      cima wral islinds wb simpl cbs eqeltri ssexg mpan2 adantl resiexg islindf
+      fvex syl syl2anc pm5.32da wf1o f1oi f1of ax-mp dmresi feq2i fss biantrurd
+      mpbir mpan raleqi fvresi oveq2d wceq difeq1i imaeq2i difss resiima fveq2i
+      eqtri eleq12d notbid ralbidv ralbiia anbi2i bicomi syl6rbb pm5.32i 3bitrd
+      a1i bitri ) IJRZEIUAUBREBUCZUDEUEZIUFUGZSXCXDUHZBXDUIZDUJZAUJZXDUBZHUKZXD
+      XFXIULZUMZUOZFUBZRZUNZDGKULUMZUPZAXFUPZSZSZXCXHXIHUKZEXLUMZFUBZRZUNZDXRUP
+      ZAEUPZSZBJIELUQXBXCXEYAXBXCSZXBXDTRZXEYAURXBXCUSYKETRZYLXCYMXBXCBTRYMBIUT
+      UBTLIUTVGVAEBTVBVCVDETVEVHABCDXDFGHITJKLMNOPQVFVIVJYBYJURXBXCYAYIXCYIXGYI
+      SZYAXCXGYIXFEXDUIZXCXGYOEEXDUIZEEXDVKYPEVLEEXDVMVNXFEEXDEVOZVPVSXFEBXDVQV
+      TVRYAYNXTYIXGXTXSAEUPYIXSAXFEYQWAXSYHAEXIERZXQYGDXRYRXPYFYRXKYCXOYEYRXJXI
+      XHHEXIWBWCXOYEWDYRXNYDFXNXDYDUOZYDXMYDXDXFEXLYQWEWFYDEUCYSYDWDEXLWGEYDWHV
+      NWJWIWTWKWLWMWNXAWOWPWQWRWTWS $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d F k x $.  $d W k x $.
+    lindff.b $e |- B = ( Base ` W ) $.
+    $( Functional property of a linearly independent family. $)
+    lindff $p |- ( ( F LIndF W /\ W e. Y ) -> F : dom F --> B ) $=
+      ( vk vx clindf wbr wcel wa cdm wf cv cfv csn cdif wral cvv eqid cima csca
+      cvsca co clspn wn cbs c0g simpl wb rellindf brrelexi islindf sylan2 mpbid
+      ancoms simpld ) BCHIZCDJZKZBLZABMZFNGNZBOCUCOZUDBVAVCPQUACUEOZOJUFFCUBOZU
+      GOZVFUHOZPQRGVARZUTURVBVIKZURUSUIUSURURVJUJZURUSBSJVKBCHUKULGAVFFBVEVGVDC
+      SDVHEVDTVETVFTVGTVHTUMUNUPUOUQ $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d A a $.  $d E a e $.  $d F a e $.  $d K a e $.  $d N a e $.  $d S a e $.
+    $d W a e $.  $d Z a e $.
+    lindfind.s $e |- S = ( vsca ` W ) $.
+    lindfind.n $e |- N = ( LSpan ` W ) $.
+    lindfind.l $e |- L = ( Scalar ` W ) $.
+    lindfind.z $e |- Z = ( 0g ` L ) $.
+    lindfind.k $e |- K = ( Base ` L ) $.
+    $( A linearly independent family is independent: no nonzero element
+       multiple can be expressed as a linear combination of the others. $)
+    lindfind $p |- ( ( ( F LIndF W /\ E e. dom F ) /\
+          ( A e. K /\ A =/= Z ) ) -> -. ( A S ( F ` E ) ) e.
+            ( N ` ( F " ( dom F \ { E } ) ) ) ) $=
+      ( va ve wcel cfv cbs c0 clindf wbr cdm wa wne csn cdif cv co cima wn wral
+      simplr eldifsn biimpri adantl wf simpll cvv noel csca fvprc syl5eq fveq2d
+      wb cnx baseid str0 syl6eqr eleq2d mtbiri con4i ad2antrl rellindf brrelexi
+      ad2antrr eqid islindf syl2anc mpbid simprd wceq fveq2 oveq2d sneq difeq2d
+      imaeq2d eleq12d notbid oveq1 eleq1d rcla42va syl21anc ) DHUAUBZCDUCZQZUDZ
+      AEQZAIUEZUDZUDZWPAEIUFUGZQZOUHZPUHZDRZBUIZDWOXEUFZUGZUJZGRZQZUKZOXBULPWOU
+      LZACDRZBUIZDWOCUFZUGZUJZGRZQZUKZWNWPWTUMWTXCWQXCWTAEIUNUOUPXAWOHSRZDUQZXN
+      XAWNYDXNUDZWNWPWTURXAHUSQZDUSQZWNYEVEWRYFWQWSYFWRYFUKZWRATQAUTYHETAYHEFSR
+      ZTNYHYITSRTYHFTSYHFHVARTLHVAVBVCVDSVFSROOVGVHVIVCVJVKVLVMWNYGWPWTDHUAVNVO
+      VPPYCFODGEBHUSUSIYCVQJKLNMVRVSVTWAXMYBXDXOBUIZXTQZUKPOCAWOXBXECWBZXLYKYLX
+      GYJXKXTYLXFXOXDBXECDWCWDYLXJXSGYLXIXRDYLXHXQWOXECWEWFWGVDWHWIXDAWBZYKYAYM
+      YJXPXTXDAXOBWJWKWIWLWM $.
+      $( [24-Feb-2015] $)
+
+    $( A linearly independent set is independent: no nonzero element multiple
+       can be expressed as a linear combination of the others. $)
+    lindsind $p |- ( ( ( F e. ( LIndS ` W ) /\ E e. F ) /\
+          ( A e. K /\ A =/= Z ) ) -> -. ( A S E ) e. ( N ` ( F \ { E } ) ) ) $=
+      ( va ve clinds cfv wcel wa wne csn cdif cv co wral simplr eldifsn biimpri
+      wn adantl cbs wss cdm wb elfvdm eqid islinds2 syl ibi ad2antrr wceq oveq2
+      simprd sneq difeq2d fveq2d eleq12d notbid oveq1 eleq1d rcla42va syl21anc
+      ) DHQRSZCDSZTZAESAIUATZTVOAEIUBUCZSZOUDZPUDZBUEZDWAUBZUCZGRZSZUJZOVRUFPDU
+      FZACBUEZDCUBZUCZGRZSZUJZVNVOVQUGVQVSVPVSVQAEIUHUIUKVNWHVOVQVNDHULRZUMZWHV
+      NWPWHTZVNHQUNZSVNWQUODHQUPPWOFODGEBHWRIWOUQJKLNMURUSUTVDVAWGWNVTCBUEZWLSZ
+      UJPOCADVRWACVBZWFWTXAWBWSWEWLWACVTBVCXAWDWKGXAWCWJDWACVEVFVGVHVIVTAVBZWTW
+      MXBWSWIWLVTACBVJVKVIVLVM $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    lindfind2.k $e |- K = ( LSpan ` W ) $.
+    lindfind2.l $e |- L = ( Scalar ` W ) $.
+    $( In a linearly independent family in a module over a nonzero ring, no
+       element is contained in the span of any non-containing set. $)
+    lindfind2 $p |- ( ( ( W e. LMod /\ L e. NzRing ) /\
+          F LIndF W /\ E e. dom F ) -> -. ( F ` E ) e.
+            ( K ` ( F " ( dom F \ { E } ) ) ) ) $=
+      ( clmod wcel cnzr wa clindf wbr cdm cfv cbs eqid adantl 3ad2ant1 syl2anc
+      w3a cur cvsca co csn cdif cima c0g wne simp2 simp3 crg nzrrng rngidcl syl
+      wn eqid1 nzrnz lindfind syl22anc wceq simp1l lindff ffvelrn lmodvs1 mtbid
+      wf eleq1d ) EHIZDJIZKZBELMZABNZIZUAZDUBOZABOZEUCOZUDZBVMAUEUFUGCOZIZVQVTI
+      VOVLVNVPDPOZIZVPDUHOZUIZWAUPVKVLVNUJZVKVLVNUKZVKVLWCVNVJWCVIVJDULIWCDUMWB
+      DVPWBQZVPQZUNUORSVKVLWEVNVJWEVIDVPWDVPUQWDQZURRSVPVRABWBDCEWDVRQZFGWJWHUS
+      UTVOVSVQVTVOVIVQEPOZIZVSVQVAVIVJVLVNVBZVOVMWLBVGZVNWMVOVLVIWOWFWNWLBEHWLQ
+      ZVCTWGVMWLABVDTVRVPDWLEVQWPGWKWIVETVHVF $.
+      $( [24-Feb-2015] $)
+
+    $( In a linearly independent set in a module over a nonzero ring, no
+       element is contained in the span of any non-containing set. $)
+    lindsind2 $p |- ( ( ( W e. LMod /\ L e. NzRing ) /\
+          F e. ( LIndS ` W ) /\ E e. F ) -> -. E e. ( K ` ( F \ { E } ) ) ) $=
+      ( clmod wcel cnzr wa clinds cfv w3a cid cres cdif cima 3ad2ant3 wceq cdm
+      csn clindf wbr wn linds2 3ad2ant2 dmresi eleq2i biimpri lindfind2 syl3anc
+      simp1 fvresi difeq1i imaeq2i wss difss resiima ax-mp eqtri fveq2i eleq12d
+      wb a1i mtbid ) EHIDJIKZBELMIZABIZNZAOBPZMZVKVKUAZAUBZQZRZCMZIZABVNQZCMZIZ
+      VJVGVKEUCUDZAVMIZVRUEVGVHVIUMVHVGWBVIEBUFUGVIVGWCVHWCVIVMBABUHZUIUJSAVKCD
+      EFGUKULVIVGVRWAVDVHVIVLAVQVTBAUNVQVTTVIVPVSCVPVKVSRZVSVOVSVKVMBVNWDUOUPVS
+      BUQWEVSTBVNURBVSUSUTVAVBVEVCSVF $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d F x y $.  $d L x y $.  $d W x y $.
+    lindff1.b $e |- B = ( Base ` W ) $.
+    lindff1.l $e |- L = ( Scalar ` W ) $.
+    $( A linearly independent family over a nonzero ring has no repeated
+       elements. $)
+    lindff1 $p |- ( ( W e. LMod /\ L e. NzRing /\ F LIndF W ) ->
+        F : dom F -1-1-> B ) $=
+      ( vx vy clmod wcel cnzr cv cfv wral syl2anc wa wne wss syl adantr wbr w3a
+      clindf cdm wf wceq weq wi wf1 simp3 simp1 lindff csn cdif clspn wn simpl1
+      cima crn imassrn frn syl5ss eqid lspssid wfun simprll jca eldifsn biimpri
+      ffun adantlr adantl sylc sseldd simpl2 simpl3 simprlr lindfind2 syl211anc
+      funfvima nelne2 expr necon4d ralrimivva dff13 sylanbrc ) DIJZCKJZBDUCUAZU
+      BZBUDZABUEZGLZBMZHLZBMZUFGHUGUHZHWKNGWKNWKABUIWJWIWGWLWGWHWIUJWGWHWIUKABD
+      IEULOZWJWQGHWKWKWJWMWKJZWOWKJZPZPWMWOWNWPWJXAWMWOQZWNWPQZWJXAXBPZPZWNBWKW
+      OUMUNZURZDUOMZMZJWPXIJUPZXCXEXGXIWNXEWGXGARZXGXIRWGWHWIXDUQZWJXKXDWJXGBUS
+      ZABXFUTWJWLXMARWRWKABVASVBTXGXHADEXHVCZVDOXEBVEZWSPWMXFJZWNXGJXEXOWSWJXOX
+      DWJWLXOWRWKABVJSTWJWSWTXBVFVGXDXPWJWSXBXPWTXPWSXBPWMWKWOVHVIVKVLXFWMBVTVM
+      VNXEWGWHWIWTXJXLWGWHWIXDVOWGWHWIXDVPWJWSWTXBVQWOBXHCDXNFVRVSWNWPXIWAOWBWC
+      WDGHWKABWEWF $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d F k x y $.  $d W k x y $.
+    $( The range of an independent family is an independent set. $)
+    lindfrn $p |- ( ( W e. LMod /\ F LIndF W ) -> ran F e. ( LIndS ` W ) ) $=
+      ( vk vx vy clmod wcel wa cfv wss cv csn cdif wn wral eqid syl wne eldifsn
+      adantr clindf wbr crn clinds cbs cvsca co clspn csca c0g wf lindff ancoms
+      cdm frn cima simplr simprl eldifi ad2antll simprbi lindfind simpll syl5ss
+      syl22anc imassrn wfun ffun wceq wrex wi wb funfn fvelrnb sylbi difss jctr
+      wfn ad2antrr simpl fveq2 necon3i sylanbrc funfvima2 sylc expr neeq1 eleq1
+      adantl imbi12d syl5ibcom rexlimdva sylbid imp3a ssrdv sylan lspss syl3anc
+      syl5bi adantrr sseld ralrimivva sylib oveq2 difeq2d fveq2d eleq12d notbid
+      mtod sneq ralbidv ralrn mpbird islinds2 mpbir2and ) BFGZABUAUBZHZAUCZBUDI
+      GZXSBUEIZJZCKZDKZBUFIZUGZXSYDLZMZBUHIZIZGZNZCBUIIZUEIZYMUJIZLZMZOZDXSOZXR
+      AUNZYAAUKZYBXQXPUUAYAABFYAPZULUMZYTYAAUOQZXRYSYCEKZAIZYEUGZXSUUFLZMZYIIZG
+      ZNZCYQOZEYTOZXRUULECYTYQXRUUEYTGZYCYQGZHZHZUUKUUGAYTUUELZMZUPZYIIZGZUURXQ
+      UUOYCYNGZYCYORZUVCNXPXQUUQUQXRUUOUUPURUUPUVDXRUUOYCYNYPUSUTUUPUVEXRUUOUUP
+      UVDUVEYCYNYOSVAUTYCYEUUEAYNYMYIBYOYEPZYIPZYMPZYOPZYNPZVBVEUURUUJUVBUUGXRU
+      UOUUJUVBJZUUPXRUUOHXPUVAYAJZUUIUVAJZUVKXPXQUUOVCXRUVLUUOXRUVAXSYAAUUTVFUU
+      DVDTXRAVGZUUOUVMXRUUAUVNUUCYTYAAVHQZUVNUUOHZDUUIUVAYDUUIGYDXSGZYDUUFRZHUV
+      PYDUVAGZYDXSUUFSUVPUVQUVRUVSUVPUVQYCAIZYDVIZCYTVJZUVRUVSVKZUVNUVQUWBVLZUU
+      OUVNAYTVRZUWDAVMZCYTYDAVNVOTUVPUWAUWCCYTUVPYCYTGZHUVTUUFRZUVTUVAGZVKUWAUW
+      CUVPUWGUWHUWIUVPUWGUWHHZHUVNUUTYTJZHZYCUUTGZUWIUVNUWLUUOUWJUVNUWKYTUUSVPV
+      QVSUWJUWMUVPUWJUWGYCUUERZUWMUWGUWHVTUWHUWNUWGYCUUEUVTUUFYCUUEAWAWBWIYCYTU
+      UESWCWIUUTYCAWDWEWFUWAUWHUVRUWIUVSUVTYDUUFWGUVTYDUVAWHWJWKWLWMWNWSWOWPUUI
+      UVAYIYABUUBUVGWQWRWTXAXIXBXRUWEYSUUNVLXRUVNUWEUVOUWFXCYRUUMDEYTAYDUUFVIZY
+      LUULCYQUWOYKUUKUWOYFUUGYJUUJYDUUFYCYEXDUWOYHUUIYIUWOYGUUHXSYDUUFXJXEXFXGX
+      HXKXLQXMXPXTYBYSHVLXQDYAYMCXSYIYNYEBFYOUUBUVFUVGUVHUVJUVIXNTXO $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d F k x $.  $d G k x $.  $d K k x $.  $d W k x $.
+    $( Rearranging and deleting elements from an independent family gives an
+       independent family. $)
+    f1lindf $p |- ( ( W e. LMod /\ F LIndF W /\ G : K -1-1-> dom F ) ->
+        ( F o. G ) LIndF W ) $=
+      ( vk vx clmod wcel cfv wf cdif cima eqid syl2anc wss syl adantr wceq cvv
+      wa clindf wbr cdm wf1 w3a ccom cbs cv cvsca co csn clspn wn csca c0g wral
+      lindff ancoms 3adant3 f1f 3ad2ant3 fco ffdm simpld wne simpl2 fdm ffvelrn
+      eleq2d biimpa adantrr ad2antll eldifsn simprbi lindfind syl22anc wfn f1fn
+      eldifi wi fvco2 oveq2d eleq1d simpl1 crn imassrn frn syl5ss imaco difeq1d
+      imaeq2d ccnv wfun df-f1 imadif eqtrd sylan difeq2d ssdif eqsstr3d eqsstrd
+      fnsnfv imass2 syl5eqss lspss syl3anc syldan sseld sylbid ralrimivva simp1
+      mtod wb rellindf brrelexi 3ad2ant2 simp3 dmexg f1dmex fex coexg mpbir2and
+      islindf ) DGHZADUAUBZCAUCZBUDZUEZABUFZDUAUBZYIUCZDUGIZYIJZEUHZFUHZYIIZDUI
+      IZUJZYIYKYOUKZKZLZDULIZIZHZUMZEDUNIZUGIZUUFUOIZUKZKZUPFYKUPZYHCYLYIJZYMYH
+      YFYLAJZCYFBJZUULYDYEUUMYGYEYDUUMYLADGYLMZUQURUSZYGYDUUNYECYFBUTVAZCYFYLAB
+      VBNZUULYMYKCOCYLYIVCVDPYHUUEFEYKUUJYHYOYKHZYNUUJHZTZTZUUDYNYOBIZAIZYQUJZA
+      YFUVCUKZKZLZUUBIZHZUVBYEUVCYFHZYNUUGHZYNUUHVEZUVJUMYDYEYGUVAVFYHUUSUVKUUT
+      YHUUSTZUUNYOCHZUVKYHUUNUUSUUQQYHUUSUVOYHYKCYOYHUULYKCRUURCYLYIVGPZVIVJZCY
+      FYOBVHNVKUUTUVLYHUUSYNUUGUUIVSVLUUTUVMYHUUSUUTUVLUVMYNUUGUUHVMVNVLYNYQUVC
+      AUUGUUFUUBDUUHYQMZUUBMZUUFMZUUHMZUUGMZVOVPYHUUSUUDUVJVTUUTUVNUUDUVEUUCHUV
+      JUVNYRUVEUUCUVNYPUVDYNYQUVNBCVQZUVOYPUVDRYHUWCUUSYGYDUWCYECYFBVRVAZQUVQCA
+      BYOWANWBWCUVNUUCUVIUVEYHUUSUVOUUCUVIOZUVQYHUVOTZYDUVHYLOZUUAUVHOUWEYDYEYG
+      UVOWDYHUWGUVOYHUVHAWEZYLAUVGWFYHUUMUWHYLOUUPYFYLAWGPWHQUWFUUAABYTLZLZUVHA
+      BYTWIUWFUWIUVGOUWJUVHOUWFUWIBCLZBYSLZKZUVGYHUWIUWMRUVOYHUWIBCYSKZLZUWMYHY
+      TUWNBYHYKCYSUVPWJWKYHBWLWMZUWOUWMRYGYDUWPYEYGUUNUWPCYFBWNVNVACYSBWOPWPQUW
+      FUWMUWKUVFKZUVGUWFUVFUWLUWKYHUWCUVOUVFUWLRUWDCYOBXBWQWRUWFUWKYFOUWQUVGOUW
+      FUWKBWEZYFBCWFUWFUUNUWRYFOYHUUNUVOUUQQCYFBWGPWHUWKYFUVFWSPWTXAUWIUVGAXCPX
+      DUUAUVHUUBYLDUUOUVSXEXFXGXHXIVKXLXJYHYDYISHZYJYMUUKTXMYDYEYGXKYHASHZBSHZU
+      WSYEYDUWTYGADUAXNXOXPZYHUUNCSHZUXAUUQYHYGYFSHZUXCYDYEYGXQYHUWTUXDUXBASXRP
+      CYFSBXSNCYFSBXTNABSSYANFYLUUFEYIUUBUUGYQDSGUUHUUOUVRUVSUVTUWBUWAYCNYB $.
+      $( [24-Feb-2015] $)
+
+    $( Any restriction of an independent family is independent. $)
+    lindfres $p |- ( ( W e. LMod /\ F LIndF W ) -> ( F |` X ) LIndF W ) $=
+      ( clmod wcel clindf wbr cid cres cdm ccom wf1 wf1o f1oi f1of1 ax-mp resss
+      wa wss syl dmss f1ss mp2an f1lindf mp3an3 wrel wceq cbs cfv lindff ancoms
+      wf eqid frel coires1 resdmres syl6eq breq1d mpbid ) BDEZABFGZRZAHACIZJZIZ
+      KZBFGZVCBFGUTVAVDAJZVELZVGVDVDVELZVDVHSZVIVDVDVEMVJVDNVDVDVEOPVCASVKACQVC
+      AUAPVDVDVHVEUBUCAVEVDBUDUEVBVFVCBFVBVFAVDIZVCVBAUFZVFVLUGVBVHBUHUIZAULZVM
+      VAUTVOVNABDVNUMUJUKVHVNAUNTAVDUOTACUPUQURUS $.
+      $( [24-Feb-2015] $)
+
+    $( Any subset of an independent set is independent. $)
+    lindsss $p |- ( ( W e. LMod /\ F e. ( LIndS ` W ) /\ G C_ F ) ->
+        G e. ( LIndS ` W ) ) $=
+      ( clmod wcel clinds cfv wss w3a cbs cid cres clindf wa eqid linds1 adantl
+      wbr sstr2 wb syl5com 3impia simp1 linds2 3ad2ant2 lindfres syl2anc breq1d
+      resabs1 3ad2ant3 mpbid islinds 3ad2ant1 mpbir2and ) CDEZACFGZEZBAHZIZBUPE
+      ZBCJGZHZKBLZCMRZUOUQURVBUOUQNAVAHZURVBUQVEUOVACAVAOZPQBAVASUAUBUSKALZBLZC
+      MRZVDUSUOVGCMRZVIUOUQURUCUQUOVJURCAUDUEVGCBUFUGURUOVIVDTUQURVHVCCMKBAUIUH
+      UJUKUOUQUTVBVDNTURVADCBVFULUMUN $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d F k x $.  $d S k x $.  $d U k x $.  $d W k x $.  $d X k x $.
+    lsslindf.u $e |- U = ( LSubSp ` W ) $.
+    lsslindf.x $e |- X = ( W |`s S ) $.
+    $( Linear independence is unchanged by working in a subspace. $)
+    lsslindf $p |- ( ( W e. LMod /\ S e. U /\ ran F C_ S ) ->
+        ( F LIndF X <-> F LIndF W ) ) $=
+      ( vk vx wcel wss cvv clindf a1i wb wa cbs cfv wral eqid clmod crn w3a wbr
+      wi rellindf brrelexi cdm wf cv cvsca co csn cdif cima clspn wn csca simpr
+      c0g ressbasss adantr fss syl2anc wfn ffn adantl simp3 wceq lssss 3ad2ant2
+      ressbas2 syl sseqtrd sylanbrc impbida simpl1 simpl2 imassrn simpl3 syl5ss
+      df-f lsslsp syl3anc eqcomd eleq2d 2ralbidv anbi12d cress eqeltri ressvsca
+      notbid ovex resssca islindf sylan 3ad2antl1 3bitr4d ex pm5.21ndd ) DUAJZA
+      BJZCUBZAKZUCZCLJZCEMUDZCDMUDZXGXFUEXECEMUFUGNXHXFUEXECDMUFUGNXEXFXGXHOXEX
+      FPZCUHZEQRZCUIZHUJIUJZCRDUKRZULZCXJXMUMUNZUOZEUPRZRZJZUQZHDURRZQRZYBUTRZU
+      MUNZSIXJSZPZXJDQRZCUIZXOXQDUPRZRZJZUQZHYESIXJSZPZXGXHXIXLYIYFYNXEXLYIOXFX
+      EXLYIXEXLPXLXKYHKZYIXEXLUSXEYPXLYPXEAYHEDGYHTZVANVBXJXKYHCVCVDXEYIPCXJVEZ
+      XCXKKZXLYIYRXEXJYHCVFVGXEYSYIXEXCAXKXAXBXDVHXEAYHKZAXKVIXBXAYTXDBAYHDYQFV
+      JVKAYHEDGYQVLVMVNVBXJXKCWBVOVPVBXIYAYMIHXJYEXIXTYLXIXSYKXOXIYKXSXIXAXBXQA
+      KYKXSVIXAXBXDXFVQXAXBXDXFVRXIXQXCACXPVSXAXBXDXFVTWAAXQBYJXRDEGYJTZXRTZFWC
+      WDWEWFWLWGWHXEELJZXFXGYGOUUCXEEDAWIULLGDAWIWMWJNIXKYBHCXRYCXNELLYDXKTAXND
+      EGXNTZWKUUBAYBDEGYBTZWNYCTZYDTZWOWPXAXBXFXHYOOXDIYHYBHCYJYCXNDLUAYDYQUUDU
+      UAUUEUUFUUGWOWQWRWSWT $.
+      $( [24-Feb-2015] $)
+
+    $( Linear independence is unchanged by working in a subspace. $)
+    lsslinds $p |- ( ( W e. LMod /\ S e. U /\ F C_ S ) ->
+        ( F e. ( LIndS ` X ) <-> F e. ( LIndS ` W ) ) ) $=
+      ( clmod wcel wss cbs cfv clindf wbr wa clinds eqid 3ad2ant2 wb cvv sseq2d
+      w3a cid cres wceq lssss ressbas2 syl sstr2 syl5 impcom simpl3 impbida crn
+      bitr3d rnresi sseq1i lsslindf syl3an3br anbi12d ovex eqeltri islinds mp1i
+      cress co 3ad2ant1 3bitr4d ) DHIZABIZCAJZUBZCEKLZJZUCCUDZEMNZOZCDKLZJZVODM
+      NZOZCEPLIZCDPLIZVLVNVSVPVTVLVKVNVSVLAVMCVJVIAVMUEZVKVJAVRJZWDBAVRDVRQZFUF
+      ZAVREDGWFUGUHRUAVLVKVSVKVLVSVLWEVKVSVJVIWEVKWGRCAVRUIUJUKVIVJVKVSULUMUOVK
+      VIVJVOUNZAJVPVTSWHCACUPUQABVODEFGURUSUTETIWBVQSVLEDAVEVFTGDAVEVAVBVMTECVM
+      QVCVDVIVJWCWASVKVRHDCWFVCVGVH $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d K k x $.  $d W k x $.  $d X k x $.
+    islbs4.b $e |- B = ( Base ` W ) $.
+    islbs4.j $e |- J = ( LBasis ` W ) $.
+    islbs4.k $e |- K = ( LSpan ` W ) $.
+    $( A basis is an independent spanning set. $)
+    islbs4 $p |- ( X e. J <-> ( X e. ( LIndS ` W ) /\ ( K ` X ) = B ) ) $=
+      ( vk vx wcel cvv clinds cfv wa clbs cdm elfvdm elex eqid eleq2i syl sylbi
+      wceq adantr wss cv cvsca co csn cdif csca cbs c0g wral w3a 3ancomb df-3an
+      wn wb bitri a1i islbs islinds2 anbi1d 3bitr4d pm5.21nii ) EBKZDLKZEDMNKZE
+      CNAUDZOZVHEDPNZKZVIBVMEGUAVNDPQZKVIEDPRDVOSUBUCVJVIVKVJDMQZKVIEDMRDVPSUBU
+      EVIEAUFZVKIUGJUGZDUHNZUIEVRUJUKCNKUSIDULNZUMNZVTUNNZUJUKUOJEUOZUPZVQWCOZV
+      KOZVHVLWDWFUTVIWDVQWCVKUPWFVQVKWCUQVQWCVKURVAVBJIEVSVTBWACADLWBFVTTZVSTZW
+      ATZGHWBTZVCVIVJWEVKJAVTIECWAVSDLWBFWHHWGWIWJVDVEVFVG $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    $d J a $.  $d W a $.
+    lbslinds.j $e |- J = ( LBasis ` W ) $.
+    $( A basis is independent. $)
+    lbslinds $p |- J C_ ( LIndS ` W ) $=
+      ( va clinds cfv cv wcel clspn cbs wceq eqid islbs4 simplbi ssriv ) DABEFZ
+      DGZAHQPHQBIFZFBJFZKSARBQSLCRLMNO $.
+      $( [24-Feb-2015] $)
+  $}
+
+  ${
+    islinds3.b $e |- B = ( Base ` W ) $.
+    islinds3.k $e |- K = ( LSpan ` W ) $.
+    islinds3.x $e |- X = ( W |`s ( K ` Y ) ) $.
+    islinds3.j $e |- J = ( LBasis ` X ) $.
+    $( A subset is linearly independent iff it is a basis of its span. $)
+    islinds3 $p |- ( W e. LMod -> ( Y e. ( LIndS ` W ) <-> Y e. J ) ) $=
+      ( wcel clinds cfv wceq wa wss wi linds1 a1i eqid clmod clspn ressbasss wb
+      cbs syl6ss adantr clss simpl lspcl lspssid lsslsp syl3anc lspssv ressbas2
+      syl eqtr3d biantrud lsslinds bicomd anbi1d bitrd pm5.21ndd islbs4 syl6bbr
+      ex ) DUAKZFDLMKZFELMKZFEUBMZMZEUEMZNZOZFBKVGFAPZVHVNVHVOQVGADFGRSVNVOQVGV
+      IVOVMVIFVLAVLEFVLTZRFCMZAEDIGUCUFUGSVGVOVHVNUDVGVOOZVHVHVMOVNVRVMVHVRVQVK
+      VLVRVGVQDUHMZKZFVQPZVQVKNVGVOUIZVSFCADGVSTZHUJZFCADGHUKZVQFVSCVJDEIHVJTZW
+      CULUMVRVQAPVQVLNFCADGHUNVQAEDIGUOUPUQURVRVHVIVMVRVIVHVRVGVTWAVIVHUDWBWDWE
+      VQVSFDEWCIUSUMUTVAVBVFVCVLBVJEFVPJWFVDVE $.
+      $( [25-Feb-2015] $)
+  $}
+
+  ${
+    $d J b $.  $d W b x $.  $d Y b x $.
+    islinds4.j $e |- J = ( LBasis ` W ) $.
+    $( A set is independent in a vector space iff it is a subset of some
+       basis.  (AC equivalent) $)
+    islinds4 $p |- ( W e. LVec ->
+        ( Y e. ( LIndS ` W ) <-> E. b e. J Y C_ b ) ) $=
+      ( vx clvec wcel clinds cfv cv wss wrex wa cbs eqid ad2antrr simpr syl3anc
+      ex csn cdif clspn wn wral simpl linds1 adantl csca cnzr lveclmod lvecdrng
+      clmod cdr drngnzr syl simplr lindsind2 syl211anc ralrimiva lbslinds sseli
+      lbsext ad2antlr lindsss rexlimdva impbid ) BGHZCBIJZHZCDKZLZDAMZVHVJVMVHV
+      JNZVHCBOJZLZFKZCVQUAUBBUCJZJHUDZFCUEVMVHVJUFVJVPVHVOBCVOPZUGUHVNVSFCVNVQC
+      HZNBUMHZBUIJZUJHZVJWAVSVHWBVJWABUKZQVHWDVJWAVHWCUNHWDWCBWCPZULWCUOUPQVHVJ
+      WAUQVNWARVQCVRWCBVRPZWFURUSUTFCAVRVOBDEVTWGVCSTVHVLVJDAVHVKAHZNZVLVJWIVLN
+      WBVKVIHZVLVJVHWBWHVLWEQWHWJVHVLAVIVKABEVAVBVDWIVLRVKCBVESTVFVG $.
+      $( [24-Feb-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Characterization of free modules
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $( A module has a basis iff it is isomorphic to a free module.  Some
+       authors define "free module" to refer to any module with a basis. $)
+    lmisfree $p |- ( W e. LMod -> ( J =/= (/) <->
+        E. k W ~=m ( F freeLMod k ) ) ) $=
+      ? $.
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Principal ideal rings.  Divisibility in the integers
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
