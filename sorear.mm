@@ -17359,6 +17359,14 @@ $)
       clmhm lmhmlmod1 syl exlimiv sylbi ) ABDEZCFZABGHZIZCJZAKIZUCUELMUGABNCUEO
       PUFUHCUFUDABRHIUHABUDQABUDSTUAUB $.
       $( [25-Jan-2015] $)
+
+    $( Module isomorphism is symmetric. $)
+    lmicsym $p |- ( ( R ~=m S /\ S e. V ) -> S ~=m R ) $=
+      ( vf wcel clmic wbr clmim co c0 wne brlmic cv wex n0 cvv elex syl syl5bi
+      wi wa ccnv lmimcnv brlmici expcom exlimdv impcom ) BCEZABFGZBAFGZUIABHIZJ
+      KZUHUJABLULDMZUKEZDNZUHUJDUKOUHBPEZUOUJTBCQUPUNUJDUNUPUJUNUPUAUMUBZBAHIEU
+      JABUMPUCBAUQUDRUEUFRSSUG $.
+      $( [26-Feb-2015] $)
   $}
 
 
@@ -20221,6 +20229,23 @@ $)
       XHHEXIWBWCXOYEWDYRXNYDFXNXDYDUOZYDXMYDXDXFEXLYQWEWFYDEUCYSYDWDEXLWGEYDWHV
       NWJWIWTWKWLWMWNXAWOWPWQWRWTWS $.
       $( [24-Feb-2015] $)
+
+    $d B k $.  $d B x $.  $d I k $.  $d I x $.  $d X k $.  $d X x $.  $d Y k $.
+    $d Y x $.
+    $( Property of an independent family of vectors with prior constrained
+       domain and codomain. $)
+    islindf2 $p |- ( ( W e. Y /\ I e. X /\ F : I --> B ) -> ( F LIndF W <->
+          A. x e. I A. k e. ( N \ { Z } ) -. ( k V ( F ` x ) ) e.
+                  ( K ` ( F " ( I \ { x } ) ) ) ) ) $=
+      ( wcel wf w3a clindf wbr cdm cv cfv co csn cdif cima wn wral wa cvv simp1
+      simp3 simp2 fex syl2anc islindf wss ffdm simpld 3ad2ant3 biantrurd bicomd
+      wb wceq fdm difeq1d imaeq2d fveq2d eleq2d notbid ralbidv raleqbidv 3bitrd
+      ) JLTZFKTZFBEUAZUBZEJUCUDZEUEZBEUAZDUFAUFZEUGIUHZEWDWFUIZUJZUKZGUGZTZULZD
+      HMUIUJZUMZAWDUMZUNZWPWGEFWHUJZUKZGUGZTZULZDWNUMZAFUMWBVSEUOTZWCWQVHVSVTWA
+      UPWBWAVTXDVSVTWAUQVSVTWAURFBKEUSUTABCDEGHIJUOLMNOPQRSVAUTWBWPWQWBWEWPWAVS
+      WEVTWAWEWDFVBFBEVCVDVEVFVGWBWOXCAWDFWAVSWDFVIVTFBEVJVEZWBWMXBDWNWBWLXAWBW
+      KWTWGWBWJWSGWBWIWREWBWDFWHXEVKVLVMVNVOVPVQVR $.
+      $( [26-Feb-2015] $)
   $}
 
   ${
@@ -20396,27 +20421,137 @@ $)
       WSYEYDUWTYGADUAXNXOXPZYHUUNCSHZUXAUUQYHYGYFSHZUXCYDYEYGXQYHUWTUXDUXBASXRP
       CYFSBXSNCYFSBXTNABSSYANFYLUUFEYIUUBUUGYQDSGUUHUUOUVRUVSUVTUWBUWAYCNYB $.
       $( [24-Feb-2015] $)
+  $}
 
-    $( Any restriction of an independent family is independent. $)
-    lindfres $p |- ( ( W e. LMod /\ F LIndF W ) -> ( F |` X ) LIndF W ) $=
-      ( clmod wcel clindf wbr cid cres cdm ccom wf1 wf1o f1oi f1of1 ax-mp resss
-      wa wss syl dmss f1ss mp2an f1lindf mp3an3 wrel wceq cbs cfv lindff ancoms
-      wf eqid frel coires1 resdmres syl6eq breq1d mpbid ) BDEZABFGZRZAHACIZJZIZ
-      KZBFGZVCBFGUTVAVDAJZVELZVGVDVDVELZVDVHSZVIVDVDVEMVJVDNVDVDVEOPVCASVKACQVC
-      AUAPVDVDVHVEUBUCAVEVDBUDUEVBVFVCBFVBVFAVDIZVCVBAUFZVFVLUGVBVHBUHUIZAULZVM
-      VAUTVOVNABDVNUMUJUKVHVNAUNTAVDUOTACUPUQURUS $.
-      $( [24-Feb-2015] $)
+  $( Any restriction of an independent family is independent. $)
+  lindfres $p |- ( ( W e. LMod /\ F LIndF W ) -> ( F |` X ) LIndF W ) $=
+    ( clmod wcel clindf wbr cid cres cdm ccom wf1 wf1o f1oi f1of1 ax-mp resss
+    wa wss syl dmss f1ss mp2an f1lindf mp3an3 wrel wceq cbs cfv lindff ancoms
+    wf eqid frel coires1 resdmres syl6eq breq1d mpbid ) BDEZABFGZRZAHACIZJZIZ
+    KZBFGZVCBFGUTVAVDAJZVELZVGVDVDVELZVDVHSZVIVDVDVEMVJVDNVDVDVEOPVCASVKACQVC
+    AUAPVDVDVHVEUBUCAVEVDBUDUEVBVFVCBFVBVFAVDIZVCVBAUFZVFVLUGVBVHBUHUIZAULZVM
+    VAUTVOVNABDVNUMUJUKVHVNAUNTAVDUOTACUPUQURUS $.
+    $( [24-Feb-2015] $)
 
-    $( Any subset of an independent set is independent. $)
-    lindsss $p |- ( ( W e. LMod /\ F e. ( LIndS ` W ) /\ G C_ F ) ->
-        G e. ( LIndS ` W ) ) $=
-      ( clmod wcel clinds cfv wss w3a cbs cid cres clindf wa eqid linds1 adantl
-      wbr sstr2 wb syl5com 3impia simp1 linds2 3ad2ant2 lindfres syl2anc breq1d
-      resabs1 3ad2ant3 mpbid islinds 3ad2ant1 mpbir2and ) CDEZACFGZEZBAHZIZBUPE
-      ZBCJGZHZKBLZCMRZUOUQURVBUOUQNAVAHZURVBUQVEUOVACAVAOZPQBAVASUAUBUSKALZBLZC
-      MRZVDUSUOVGCMRZVIUOUQURUCUQUOVJURCAUDUEVGCBUFUGURUOVIVDTUQURVHVCCMKBAUIUH
-      UJUKUOUQUTVBVDNTURVADCBVFULUMUN $.
-      $( [24-Feb-2015] $)
+  $( Any subset of an independent set is independent. $)
+  lindsss $p |- ( ( W e. LMod /\ F e. ( LIndS ` W ) /\ G C_ F ) ->
+      G e. ( LIndS ` W ) ) $=
+    ( clmod wcel clinds cfv wss w3a cbs cid cres clindf wa eqid linds1 adantl
+    wbr sstr2 wb syl5com 3impia simp1 linds2 3ad2ant2 lindfres syl2anc breq1d
+    resabs1 3ad2ant3 mpbid islinds 3ad2ant1 mpbir2and ) CDEZACFGZEZBAHZIZBUPE
+    ZBCJGZHZKBLZCMRZUOUQURVBUOUQNAVAHZURVBUQVEUOVACAVAOZPQBAVASUAUBUSKALZBLZC
+    MRZVDUSUOVGCMRZVIUOUQURUCUQUOVJURCAUDUEVGCBUFUGURUOVIVDTUQURVHVCCMKBAUIUH
+    UJUKUOUQUTVBVDNTURVADCBVFULUMUN $.
+    $( [24-Feb-2015] $)
+
+  $( A family constructed from non-repeated elements of an independent set is
+     independent. $)
+  f1linds $p |- ( ( W e. LMod /\ S e. ( LIndS ` W ) /\ F : D -1-1-> S ) ->
+      F LIndF W ) $=
+    ( clmod wcel clinds cfv wf1 w3a cid cres ccom clindf wbr cdm simp1 3ad2ant3
+    linds2 wceq 3ad2ant2 wb dmresi f1eq3 ax-mp biimpri f1lindf syl3anc wf fcoi2
+    f1f syl breq1d mpbid ) DEFZBDGHFZABCIZJZKBLZCMZDNOZCDNOURUOUSDNOZAUSPZCIZVA
+    UOUPUQQUPUOVBUQDBSUAUQUOVDUPVDUQVCBTVDUQUBBUCVCBACUDUEUFRUSCADUGUHURUTCDNUQ
+    UOUTCTZUPUQABCUIVEABCUKABCUJULRUMUN $.
+    $( [26-Feb-2015] $)
+
+  ${
+    islindf3.l $e |- L = ( Scalar ` W ) $.
+    $( In a nonzero ring, independent families can be equivalently
+       characterized as renamings of independent sets. $)
+    islindf3 $p |- ( ( W e. LMod /\ L e. NzRing ) -> ( F LIndF W <->
+          ( F : dom F -1-1-> _V /\ ran F e. ( LIndS ` W ) ) ) ) $=
+      ( wcel cnzr wa clindf wbr cdm cvv wf1 crn clinds cfv cbs wss eqid lindff1
+      clmod 3expa ssv f1ss sylancl lindfrn adantlr jca simpll simprr wf1o f1of1
+      f1f1orn syl ad2antrl f1linds syl3anc impbida ) CTEZBFEZGZACHIZAJZKALZAMZC
+      NOEZGZUTVAGZVCVEVGVBCPOZALZVHKQVCURUSVAVIVHABCVHRDSUAVHUBVBVHKAUCUDURVAVE
+      USACUEUFUGUTVFGURVEVBVDALZVAURUSVFUHUTVCVEUIVCVJUTVEVCVBVDAUJVJVBKAULVBVD
+      AUKUMUNVBVDACUOUPUQ $.
+      $( [26-Feb-2015] $)
+  $}
+
+  ${
+    lmmmlem.b $e |- B = ( Base ` S ) $.
+    lmmmlem.c $e |- C = ( Base ` T ) $.
+    $( Monomorphism as expressed using expressions similar to this implies
+       double sethood. $)
+    lmmmlem $p |- ( ( G e. ( S LMHom T ) /\ G : B --> C ) -> T e. LMod ) $=
+      ( clmhm co wcel wf cvv clmod wa c0g cfv simpr cgrp c0 cbs lmodgrp grpidcl
+      lmhmlmod1 eqid 3syl adantr ffvelrn syl2anc noel fvprc syl5eq eleq2d con4i
+      wn mtbiri syl lmhmlmod2 syldan ) ECDHIJZABEKZDLJZDMJUSUTNZCOPZEPZBJZVAVBU
+      TVCAJZVEUSUTQUSVFUTUSCMJCRJVFCDEUCCUAACVCFVCUDUBUEUFABVCEUGUHVAVEVAUNZVEV
+      DSJVDUIVGBSVDVGBDTPSGDTUJUKULUOUMUPCDELUQUR $.
+      $( [26-Feb-2015] $)
+  $}
+
+  ${
+    $d B k x $.  $d C k x $.  $d F k x $.  $d G k x $.  $d I k x $.
+    $d S k x $.  $d T k x $.
+    lindfmm.b $e |- B = ( Base ` S ) $.
+    lindfmm.c $e |- C = ( Base ` T ) $.
+    $( Linear independence of a family is unchanged by injective linear
+       functions. $)
+    lindfmm $p |- ( ( G e. ( S LMHom T ) /\ G : B -1-1-> C /\ F : I --> B ) ->
+        ( F LIndF S <-> ( G o. F ) LIndF T ) ) $=
+      ( vk vx wcel cvv wb wa cfv cbs clmod eqid wceq clmhm co wf1 wf w3a clindf
+      wbr ccom rellindf brrelexi simp3 dmfex syl2anr ex f1f sylan 3adant1 wi cv
+      fco cvsca csn cdif cima clspn wn csca c0g eldifi simpllr lmhmlmod1 adantr
+      wral wss ad2antrr simprr simprl simpl ffvelrn syl2an lmodvscl syl3anc crn
+      imassrn frn syl5ss ad2antlr lspssv syl2anc f1elima simplll lmmmlem sylan2
+      lmhmlin syl22anc wfn ffn ad2antrl fvco2 oveq2d eqtr4d lmodgrp grpidcl syl
+      cgrp c0 fvprc syl5eq eleq2d mtbiri con4i lmhmlsp imaco fveq2i a1i eleq12d
+      noel bitr3d notbid anassrs ralbidva lmhmsca eqcomd sneqd difeq12d raleqdv
+      fveq2d bitrd islindf2 ad2ant2lr 3bitr4d exp32 3impia pm5.21ndd ) FCDUAUBL
+      ZABFUCZGAEUDZUEZGMLZECUFUGZFEUHZDUFUGZYRYTYSYTEMLYQYSYRECUFUIUJYOYPYQUKGA
+      MEULUMUNYRUUBYSUUBUUAMLGBUUAUDZYSYRUUADUFUIUJYPYQUUCYOYPABFUDZYQUUCABFUOZ
+      GABFEUTUPZUQGBMUUAULUMUNYOYPYQYSYTUUBNZURYOYPOZYQYSUUGUUHYQYSOZOZJUSZKUSZ
+      EPZCVAPZUBZEGUULVBVCZVDZCVEPZPZLZVFZJCVGPZQPZUVBVHPZVBZVCZVMZKGVMZUUKUULU
+      UAPZDVAPZUBZUUAUUPVDZDVEPZPZLZVFZJDVGPZQPZUVQVHPZVBZVCZVMZKGVMZYTUUBUUJUV
+      GUWBKGUUJUULGLZOZUVGUVPJUVFVMUWBUWEUVAUVPJUVFUUKUVFLUWEUUKUVCLZUVAUVPNZUU
+      KUVCUVEVIUUJUWDUWFUWGUUJUWDUWFOZOZUUTUVOUWIUUOFPZFUUSVDZLZUUTUVOUWIYPUUOA
+      LZUUSAVNZUWLUUTNYOYPUUIUWHVJUWICRLZUWFUUMALZUWMUUHUWOUUIUWHYOUWOYPCDFVKZV
+      LVOZUUJUWDUWFVPZUUJYQUWDUWPUWHUUHYQYSVQZUWDUWFVRZGAUULEVSVTZUUKUUNUVBUVCA
+      CUUMHUVBSZUUNSZUVCSZWAWBUWIUWOUUQAVNZUWNUWRUUIUXFUUHUWHUUIUUQEWCZAEUUPWDY
+      QUXGAVNYSGAEWEVLWFWGZUUQUURACHUURSZWHWIABFUUOUUSWJWBUWIUWJUVKUWKUVNUWIUWJ
+      UUKUUMFPZUVJUBZUVKUWIYODRLZUWFUWPUWJUXKTYOYPUUIUWHWKZUUHUXLUUIUWHYPYOUUDU
+      XLUUEABCDFHIWLWMZVOUWSUXBUVCCDAFUVBUUNUVJRUUKUUMUXCUXEHUXDUVJSZWNWOUWIUVI
+      UXJUUKUVJUUJEGWPZUWDUVIUXJTUWHYQUXPUUHYSGAEWQWRUXAGFEUULWSVTWTXAUWIUWKFUU
+      QVDZUVMPZUVNUWIYODMLZUXFUWKUXRTUXMUUHUXSUUIUWHUUHCVHPZFPZBLZUXSYPUUDUXTAL
+      ZUYBYOUUEYOUWOUYCUWQUWOCXELUYCCXBACUXTHUXTSXCXDXDABUXTFVSUMUXSUYBUXSVFZUY
+      BUYAXFLUYAXQUYDBXFUYAUYDBDQPXFIDQXGXHXIXJXKXDVOUXHCDUUQFUURUVMAMHUXIUVMSZ
+      XLWBUVNUXRTUWIUVLUXQUVMFEUUPXMXNXOXAXPXRXSXTWMYAUWEUVPJUVFUWAUUHUVFUWATUU
+      IUWDUUHUVCUVRUVEUVTUUHUVBUVQQUUHUVQUVBUUHYOUXLUVQUVBTYOYPVRUXNCDFUVBUVQRU
+      XCUVQSZYBWIYCZYGUUHUVDUVSUUHUVBUVQVHUYGYGYDYEVOYFYHYAUUJUWOYSYQYTUVHNYOUW
+      OYPUUIUWQVOUUHYQYSVPZUWTKAUVBJEGUURUVCUUNCMRUVDHUXDUXIUXCUXEUVDSYIWBUUJUX
+      LYSUUCUUBUWCNUUHUXLUUIUXNVLUYHYPYQUUCYOYSUUFYJKBUVQJUUAGUVMUVRUVJDMRUVSIU
+      XOUYEUYFUVRSUVSSYIWBYKYLYMYN $.
+      $( [26-Feb-2015] $)
+
+    $( Linear independence of a set is unchanged by injective linear
+       functions. $)
+    lindsmm $p |- ( ( G e. ( S LMHom T ) /\ G : B -1-1-> C /\ F C_ B ) ->
+        ( F e. ( LIndS ` S ) <-> ( G " F ) e. ( LIndS ` T ) ) ) $=
+      ( wcel wf1 cres clindf wbr wa clinds cfv wb wf clmod syl clmhm co wss w3a
+      cid ccom cima ibar 3ad2ant3 simp1 simp2 wf1o f1oi ax-mp simp3 fss sylancr
+      f1of lindfmm syl3anc bitr3d lmhmlmod1 3ad2ant1 islinds f1f lmmmlem sylan2
+      3adant3 adantr simpr f1ores f1of1 3adant1 f1linds df-ima lindfrn syl5eqel
+      crn sylan impbida wrel wceq f1rel coires1 breq1d 3ad2ant2 bitr4d 3bitr4d
+      ) FCDUAUBIZABFJZEAUCZUDZWKUEEKZCLMZNZFWMUFZDLMZECOPIZFEUGZDOPZIZWLWNWOWQW
+      KWIWNWOQWJWKWNUHUIWLWIWJEAWMRZWNWQQWIWJWKUJWIWJWKUKWLEEWMRZWKXBEEWMULXCEU
+      MEEWMURUNWIWJWKUOEEAWMUPUQABCDWMFEGHUSUTVAWLCSIZWRWOQWIWJXDWKCDFVBVCASCEG
+      VDTWLXAFEKZDLMZWQWLXAXFWLXANDSIZXAEWSXEJZXFWLXGXAWIWJXGWKWJWIABFRXGABFVEA
+      BCDFGHVFVGVHZVIWLXAVJWLXHXAWJWKXHWIWJWKNEWSXEULXHABEFVKEWSXEVLTVMVIEWSXED
+      VNUTWLXFNWSXEVRZWTFEVOWLXGXFXJWTIXIXEDVPVSVQVTWJWIWQXFQWKWJWPXEDLWJFWAWPX
+      EWBABFWCFEWDTWEWFWGWH $.
+      $( [26-Feb-2015] $)
+
+    $( The monomorphic image of an independent set is independent. $)
+    lindsmm2 $p |- ( ( G e. ( S LMHom T ) /\ G : B -1-1-> C /\
+          F e. ( LIndS ` S ) ) -> ( G " F ) e. ( LIndS ` T ) ) $=
+      ( clmhm co wcel wf1 clinds cfv w3a cima simp3 wss wb simp1 simp2 3ad2ant3
+      linds1 lindsmm syl3anc mpbid ) FCDIJKZABFLZECMNKZOZUIFEPDMNKZUGUHUIQUJUGU
+      HEARZUIUKSUGUHUITUGUHUIUAUIUGULUHACEGUCUBABCDEFGHUDUEUF $.
+      $( [26-Feb-2015] $)
   $}
 
   ${
@@ -20528,11 +20663,134 @@ $(
 $)
 
   ${
+    lmimlbs.j $e |- J = ( LBasis ` S ) $.
+    lmimlbs.k $e |- K = ( LBasis ` T ) $.
+    $( The isomorphic image of a basis is a basis. $)
+    lmimlbs $p |- ( ( ( F e. ( S LMIso T ) /\ T e. V ) /\ B e. J ) ->
+        ( F " B ) e. K ) $=
+      ( co wcel wa cima clinds cfv clspn cbs wceq eqid adantl lmimlmhm ad2antrr
+      clmim clmhm wf1 wf1o lmimf1o f1of1 adantr lbslinds sseli lindsmm2 syl3anc
+      syl lbssp imaeq2d wss simplr lbsss lmhmlsp wfo f1ofo foima 3eqtr3d islbs4
+      3syl sylanbrc ) DBCUCJKZCGKZLZAEKZLZDAMZCNOKZVMCPOZOZCQOZRVMFKVLDBCUDJKZB
+      QOZVQDUEZABNOZKZVNVHVRVIVKBCDUAUBZVJVTVKVJVSVQDUFZVTVSVQBCDGVSSZVQSZUGZVS
+      VQDUHUNUIVKWBVJEWAAEBHUJUKTVSVQBCADWEWFULUMVLDABPOZOZMZDVSMZVPVQVLWIVSDVK
+      WIVSRVJAEWHVSBWEHWHSZUOTUPVLVRVIAVSUQZWJVPRWCVHVIVKURVKWMVJAEVSBWEHUSTBCA
+      DWHVOVSGWEWLVOSZUTUMVLWDVSVQDVAWKVQRVJWDVKWGUIVSVQDVBVSVQDVCVFVDVQFVOCVMW
+      FIWNVEVG $.
+      $( [26-Feb-2015] $)
+
+    $d J b f $.  $d K b f $.  $d S b f $.  $d T b f $.  $d V b f $.
+    $( Having a basis is an isomorphism invariant. $)
+    lmiclbs $p |- ( ( S ~=m T /\ T e. V ) -> ( J =/= (/) -> K =/= (/) ) ) $=
+      ( vf vb clmic wbr wcel c0 wne wi cv wex n0 wa ex clmim bitri cima lmimlbs
+      co brlmic ne0i syl exlimdv syl5bi exlimiv sylbi imp ) ABJKZBELZCMNZDMNZOZ
+      UNHPZABUAUEZLZHQZUOUROZUNUTMNVBABUFHUTRUBVAVCHVAUOURUPIPZCLZIQVAUOSZUQICR
+      VFVEUQIVFVEUQVFVESUSVDUCZDLUQVDABUSCDEFGUDDVGUGUHTUIUJTUKULUM $.
+      $( [26-Feb-2015] $)
+  $}
+
+  ${
+    islindf4.b $e |- B = ( Base ` W ) $.
+    islindf4.z $e |- Z = ( 0g ` W ) $.
+    islindf4.y $e |- Y = ( 0g ` R ) $.
+    islindf4.r $e |- R = ( Scalar ` W ) $.
+    islindf4.l $e |- L = ( Base ` ( R freeLMod I ) ) $.
+    $( A family is independent iff it has no nontrivial representations of
+       zero. $)
+    islindf4 $p |- ( ( W e. LMod /\ I e. X /\ F : I --> B ) ->
+        ( F LIndF W <-> A. x e. L ( ( W gsum ( x oF T F ) ) = Z ->
+              x = ( I X. { Y } ) ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    islindf5.f $e |- F = ( R freeLMod I ) $.
+    islindf5.b $e |- B = ( Base ` F ) $.
+    islindf5.c $e |- C = ( Base ` T ) $.
+    islindf5.v $e |- V = ( vsca ` T ) $.
+    islindf5.e $e |- E = ( x e. B |-> ( T gsum ( x oF V A ) ) ) $.
+    islindf5.t $e |- ( ph -> T e. LMod ) $.
+    islindf5.i $e |- ( ph -> I e. X ) $.
+    islindf5.r $e |- ( ph -> R = ( Scalar ` T ) ) $.
+    islindf5.a $e |- ( ph -> A : I --> C ) $.
+    $( A family is independent iff the linear combinations homomorphism is
+       injective. $)
+    islindf5 $p |- ( ph -> ( A LIndF T <-> E : B -1-1-> C ) ) $=
+      ( vy cv cfv c0g wceq wi wral wf1 clindf wbr cghm co wcel clmod wb frlmup1
+      clmhm lmghm syl eqid ghmf1 syl2anc 3bitr4rd ) AUBUCZHUDGUEUDZUFVEIUEUDZUF
+      UGUBDUHZ?DEHUIZCGUJUK?AHIGULUMUNZGUOUNVIVHUPAHIGURUMUNVJABCDEFGHIJKLMNOPQ
+      RSTUAUQIGHUSUTRUBIGVFHUODEVGNOVGVAVFVAVBVC?VD $.
+  $}
+
+  ${
+    $d ph x $.  $d A x $.  $d B x $.  $d C x $.  $d F x $.  $d I x $.
+    $d N x $.  $d R x $.  $d T x $.  $d V x $.  $d X x $.
+    indlcim.f $e |- F = ( R freeLMod I ) $.
+    indlcim.b $e |- B = ( Base ` F ) $.
+    indlcim.c $e |- C = ( Base ` T ) $.
+    indlcim.v $e |- V = ( vsca ` T ) $.
+    indlcim.n $e |- N = ( LSpan ` T ) $.
+    indlcim.e $e |- E = ( x e. B |-> ( T gsum ( x oF V A ) ) ) $.
+    indlcim.t $e |- ( ph -> T e. LMod ) $.
+    indlcim.i $e |- ( ph -> I e. X ) $.
+    indlcim.r $e |- ( ph -> R = ( Scalar ` T ) ) $.
+    indlcim.a $e |- ( ph -> A : I -onto-> J ) $.
+    indlcim.l $e |- ( ph -> A LIndF T ) $.
+    indlcim.s $e |- ( ph -> ( N ` J ) = C ) $.
+    $( An independent, spanning family extends to an isomorphism from a free
+       module. $)
+    indlcim $p |- ( ph -> E e. ( F LMIso T ) ) $=
+      ( clmim co wcel clmhm wf1o wfn crn wss wfo fofn syl cdm clindf wbr lindff
+      wf clmod syl2anc frn df-f sylanbrc frlmup1 wf1 wceq islindf5 mpbid frlmup3
+      cfv forn fveq2d 3eqtrd dff1o5 wa wb islmim mpbir2and ) AHIGUGUHUIZHIGUJUH
+      UIZDEHUKZABCDEFGHIJMNOPQRTUAUBUCACJULZCUMZEUNZJECVBAJKCUOZWFUDJKCUPUQACUR
+      ZECVBZWHACGUSUTZGVCUIZWKUEUAECGVCQVAVDWJECVEUQJECVFVGZVHADEHVIZHUMZEVJWEA
+      WLWOUEABCDEFGHIJMNOPQRTUAUBUCWNVKVLAWPWGLVNKLVNEABCDEFGHIJLMNOPQRTUAUBUCW
+      NSVMAWGKLAWIWGKVJUDJKCVOUQVPUFVQDEHVRVGAWMWCWDWEVSVTUADEIGHVCPQWAUQWB $.
+      $( [26-Feb-2015] $)
+  $}
+
+  ${
+    $d B e $.  $d F e $.  $d I e $.  $d J e $.  $d W e $.  $d B x $.  $d F x $.
+    $d I x $.  $d J x $.  $d W x $.  $d e x $.
+    lbslcic.f $e |- F = ( Scalar ` W ) $.
+    lbslcic.j $e |- J = ( LBasis ` W ) $.
+    $( A module with a basis is isomorphic to a free module with the same
+       cardinality. $)
+    lbslcic $p |- ( ( W e. LMod /\ B e. J /\ I ~~ B ) ->
+        W ~=m ( F freeLMod I ) ) $=
+      ( ve vx clmod wcel cen wbr cv co 3ad2ant2 cbs cfv eqid adantr cfrlm clmic
+      w3a wf1o wex simp3 wb breng mpbid wa cvsca cof cgsu cmpt ccnv clmim clspn
+      cvv simpl1 relen brrelexi 3ad2ant3 csca wceq a1i wfo adantl clinds clindf
+      f1ofo wf1 sseli f1of1 f1linds syl3anc indlcim lmimcnv syl2anc brlmici syl
+      lbslinds lbssp ex exlimdv mpd ) EJKZADKZCALMZUCZCAHNZUDZHUEZEBCUAOZUBMZWI
+      WHWLWFWGWHUFWGWFWHWLUGWHCADHUHPUIWIWKWNHWIWKWNWIWKUJZIWMQRZEINWJEUKRZULOU
+      MOUNZUOZEWMUPOKZWNWOWRWMEUPOKWFWTWOIWJWPEQRZBEWRWMCAEUQRZWQURWMSWPSXASZWQ
+      SXBSZWRSWFWGWHWKUSZWICURKZWKWHWFXFWGCALUTVAVBTBEVCRVDWOFVEWKCAWJVFWICAWJV
+      JVGWOWFAEVHRZKZCAWJVKZWJEVIMXEWIXHWKWGWFXHWHDXGADEGWAVLPTWKXIWICAWJVMVGCA
+      WJEVNVOWIAXBRXAVDZWKWGWFXJWHADXBXAEXCGXDWBPTVPXEWMEWRJVQVREWMWSVSVTWCWDWE
+      $.
+      $( [26-Feb-2015] $)
+  $}
+
+  ${
+    $d F j k $.  $d J j k $.  $d W j k $.
+    lmisfree.j $e |- J = ( LBasis ` W ) $.
+    lmisfree.f $e |- F = ( Scalar ` W ) $.
     $( A module has a basis iff it is isomorphic to a free module.  Some
        authors define "free module" to refer to any module with a basis. $)
     lmisfree $p |- ( W e. LMod -> ( J =/= (/) <->
         E. k W ~=m ( F freeLMod k ) ) ) $=
-      ? $.
+      ( vj clmod wcel c0 wne cv cfrlm co clmic wbr wex wa cvv eqid n0 cen enref
+      vex lbslcic mp3an3 weq oveq2 breq2d cla4ev syl ex exlimdv syl5bi clbs cfv
+      cuvc crn lmodrng frlmlbs sylancl ne0i adantr wi ovex lmicsym mpan2 adantl
+      crg simpl lmiclbs syl2anc mpd impbid ) DHIZCJKZDBALZMNZOPZAQZVPGLZCIZGQVO
+      VTGCUAVOWBVTGVOWBVTVOWBRDBWAMNZOPZVTVOWBWAWAUBPWDWAGUDZUCWABWACDFEUEUFVSW
+      DAWAWEAGUGVRWCDOVQWABMUHUIUJUKULUMUNVOVSVPAVOVSVPVOVSRZVRUOUPZJKZVPVOWHVS
+      VOBVQUQNZURZWGIZWHVOBVIIVQSIWKBDFUSAUDBWIVRVQWGSVRTWITWGTZUTVAWGWJVBUKVCW
+      FVRDOPZVOWHVPVDVSWMVOVSVRSIWMBVQMVEDVRSVFVGVHVOVSVJVRDWGCHWLEVKVLVMULUMVN
+      $.
+      $( [26-Feb-2015] $)
   $}
 
 $(
