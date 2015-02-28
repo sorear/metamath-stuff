@@ -507,6 +507,24 @@ $)
   $}
 
   ${
+    $d A x y $.  $d B x y $.  $d F x y $.  $d V x y $.
+    $( Onto functions define dominance when a finite number of choices need to
+       be made. $)
+    fodomfi2 $p |- ( ( A e. V /\ B e. Fin /\ F : A -onto-> B ) -> B ~<_ A ) $=
+      ( vx vy wcel cfn wfo cv wceq wrex cdom wbr wss 3ad2ant3 syl syl3anc sseli
+      cvv w3a cima cpw cin wfn crn fofn forn eqimss2 simp2 fipreimaNEW cen con0
+      wa cres vex a1i inss2 finnum adantl wfun cdm simpl3 fofun inss1 elpwi fof
+      wf fdm 3syl sseqtr4d fores syl2anc fodomnumg ssdomg mpsyl domtr syl5ibcom
+      breq1 rexlimdva mpd ) ADGZBHGZABCIZUAZCEJZUBZBKZEAUCZHUDZLZBAMNZWECAUEZBC
+      UFZOZWCWKWDWBWMWCABCUGPWDWBWOWCWDWNBKWOABCUHBWNUIQPWBWCWDUJBACEUKRWEWHWLE
+      WJWEWFWJGZUNZWGAMNZWHWLWQWGWFMNZWFAMNZWRWQWFTGZFJWFULNFUMLZWFWGCWFUOZIZWS
+      XAWQEUPZUQWPXBWEWPWFHGXBWJHWFWIHURSFWFUSQUTWQCVAZWFCVBZOXDWQWDXFWBWCWDWPV
+      CZABCVDQWQWFAXGWPWFAOZWEWPWFWIGXIWJWIWFWIHVESWFAVFQUTZWQWDABCVHXGAKXHABCV
+      GABCVIVJVKWFCVLVMFWFWGXCTVNRXAWQXIWTXEXJWFATVOVPWGWFAVQVMWGBAMVSVRVTWA $.
+      $( [28-Feb-2015] $)
+  $}
+
+  ${
     $d A a b c $.  $d R b c $.  $d F a b c $.
     $( A well-ordering has no nontrivial automorphisms.  (Is sethood actually
        needed here?)  (Contributed by Stefan O'Rear, 16-Nov-2014.) $)
@@ -1405,6 +1423,22 @@ $)
   $}
 
   ${
+    $d A x y $.
+    $( A way to express well-orderability without bound or distinct
+       variables. $)
+    isnum2 $p |- ( A e. V -> ( A e. dom card <-> E. x e. On x ~~ A ) ) $=
+      ( vy cen wbr con0 wrex ccrd cdm wceq breq2 rexbidv cab cardf2 fdmi elab2g
+      cv ) ARZDRZEFZAGHZSBEFZAGHDBIJCTBKUAUCAGTBSELMUBDNGIDAOPQ $.
+      $( [28-Feb-2015] $)
+
+    $( All sets are well-orderable under choice. $)
+    numth3 $p |- ( A e. V -> A e. dom card ) $=
+      ( vx wcel ccrd cdm cv cen wbr con0 wrex numth2 isnum2 mpbiri ) ABDAEFDCGA
+      HICJKCALCABMN $.
+      $( [28-Feb-2015] $)
+  $}
+
+  ${
     $d X x y z w $.  $d Y x y z w $.  $d F x y z $.  $d Z x y z w $.
 
     $( Weak dominance is a relation. $)
@@ -1519,15 +1553,43 @@ $)
       EWAABFURUSADUTVKDVAVEVIVLDEVMWAVBBVCVKVLIVDVFVGVH $.
       $( [11-Feb-2015] $)
 
+    $( The out-of-domain behavior of ` ~<_* ` is the same as that of ` ~<_ ` .
+       Lemma for ~ wdomfi and ~ wdomnum . $)
+    wdomndm $p |- ( -. ( X e. _V /\ Y e. _V ) -> ( X ~<_* Y -> X ~<_ Y ) ) $=
+      ( cvv wcel wa wn cwdom wbr cdom relwdom brrelexi pm3.21 syl5 con3d pm2.21
+      wi syl6 domrefg syl brprc a1i 3imtr4d a1d pm2.61i ) BCDZACDZUEEZFZABGHZAB
+      IHZPZPUEUHUIFUKUEUIUGUIUFUEUGABGJKUEUFLMNUIUJOQUEFZUKUHULAAGHZAAIHZUIUJUM
+      UNPULUMUFUNAAGJKACRSUAABGTABITUBUCUD $.
+      $( [28-Feb-2015] $)
+
+    $( Weak dominance agrees with normal for finite left sets. $)
+    wdomfil $p |- ( X e. Fin -> ( X ~<_* Y <-> X ~<_ Y ) ) $=
+      ( vx cfn wcel cwdom wbr cdom cvv wa wi c0 wceq cv wfo wo wb brwdom adantl
+      wex 0dom a1i breq1 syl5ibrcom wf vex dmfex sylancr simpl fodomfi2 syl3anc
+      fof simpr ex adantr exlimdv jaod sylbid expcom wn wdomndm pm2.61i domwdom
+      a1d impbid1 ) ADEZABFGZABHGZAIEZBIEZJZVFVGVHKZKZVJVMVIVFVJVLVFVJJZVGALMZB
+      ACNZOZCTZPZVHVJVGVSQVFCIABRSVNVOVHVRVNVHVOLBHGZVTVNBUAUBALBHUCUDVNVQVHCVF
+      VQVHKVJVFVQVHVFVQJVJVFVQVHVQVJVFVQVPIEBAVPUEVJCUFBAVPULBAIVPUGUHSVFVQUIVF
+      VQUMBAVPIUJUKUNUOUPUQURUSSVKUTVLVFABVAVDVBABVCVE $.
+      $( [28-Feb-2015] $)
+
+    $( Weak dominance agrees with normal for numerable right sets. $)
+    wdomnumr $p |- ( Y e. dom card -> ( X ~<_* Y <-> X ~<_ Y ) ) $=
+      ( vx vy ccrd cdm wcel cwdom wbr cdom cvv wa wi c0 wceq cv wfo wex wo ex
+      wb brwdom adantl 0dom mpbiri a1i cen con0 wrex simplr isnum2 ibi ad2antlr
+      breq1 fodomnumg syl3anc exlimdv jaod sylbid adantr wn wdomndm a1d pm2.61i
+      simpr domwdom impbid1 ) BEFZGZABHIZABJIZAKGZBKGZLZVIVJVKMZMZVLVPVMVLVIVOV
+      LVILZVJANOZBACPZQZCRZSZVKVIVJWBUAVLCVHABUBUCVQVRVKWAVRVKMVQVRVKNBJIBUDANB
+      JUNUEUFVQVTVKCVQVTVKVQVTLVIDPBUGIDUHUIZVTVKVLVIVTUJVIWCVLVTVIWCDBVHUKULUM
+      VQVTVEDBAVSVHUOUPTUQURUSTUTVNVAVOVIABVBVCVDABVFVG $.
+      $( [28-Feb-2015] $)
+
     $( When assuming AC, weak and usual dominance coincide.  It is not known if
        this is an AC equivalent. $)
     wdomac $p |- ( X ~<_* Y <-> X ~<_ Y ) $=
-      ( vy vz cwdom wbr cdom cvv wcel wi cv wfo wex cpw wrex brwdom2 wa vex wss
-      fodom elpwi ssdomg mpsyl adantl domtr syl2anr ex exlimdv rexlimdva sylbid
-      wn relwdom brrelexi domrefg syl brprc syl5ibr pm2.61i domwdom impbii ) AB
-      EFZABGFZBHIZVAVBJVCVACKZADKZLZDMZCBNZOVBCDHABPVCVGVBCVHVCVDVHIZQZVFVBDVJV
-      FVBVFAVDGFVDBGFZVBVJVDAVECRZTVIVKVCVDHIVIVDBSVKVLVDBUAVDBHUBUCUDAVDBUEUFU
-      GUHUIUJVAVBVCUKAAGFZVAAHIVMABEULUMAHUNUOABGUPUQURABUSUT $.
+      ( cwdom wbr cdom cvv wcel wa wi cdm numth3 wdomnumr biimpd adantl wdomndm
+      ccrd syl pm2.61i domwdom impbii ) ABCDZABEDZAFGZBFGZHUAUBIZUDUEUCUDBPJGZU
+      EBFKUFUAUBABLMQNABORABST $.
       $( [11-Feb-2015] $)
   $}
 
