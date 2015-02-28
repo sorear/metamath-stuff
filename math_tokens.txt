@@ -143,20 +143,32 @@ htmldef "freeLMod" as " freeLMod ";
 htmldef "unitVec" as " unitVec ";
   althtmldef "unitVec" as " unitVec ";
   latexdef "unitVec" as "{\rm unitVec}";
-/*
-htmldef "~=g" as " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 " +
+htmldef "~=g" as " <IMG SRC='simeq.gif' WIDTH=26 HEIGHT=19 " +
     "TITLE='~=ph' ALIGN=TOP><SUB><I>g</I></SUB> ";
-*/
-htmldef "~=g" as " &#8771;<SUB><I>g</I></SUB>";
-  althtmldef "~=g" as " &#8771;<SUB><I>g</I></SUB>";
+  althtmldef "~=g" as " &#8771;<SUB><I>g</I></SUB> ";
   latexdef "~=g" as "\simeq_{g}";
-/*
-htmldef "~=m" as " <IMG SRC='_simeq.gif' WIDTH=26 HEIGHT=19 " +
+htmldef "~=m" as " <IMG SRC='simeq.gif' WIDTH=26 HEIGHT=19 " +
     "TITLE='~=ph' ALIGN=TOP><SUB><I>m</I></SUB> ";
-*/
-htmldef "~=m" as " &#8771;<SUB><I>m</I></SUB>";
-  althtmldef "~=m" as " &#8771;<SUB><I>m</I></SUB>";
+  althtmldef "~=m" as " &#8771;<SUB><I>m</I></SUB> ";
   latexdef "~=m" as "\simeq_{m}";
+htmldef "~<_*" as " <IMG SRC='preccurlyeq.gif' WIDTH=11 HEIGHT=19 " +
+   "TITLE='~&lt;_' ALIGN=TOP><SUP>*</SUP> ";
+  althtmldef "~<_*" as ' <FONT FACE=sans-serif>&#8828;</FONT><SUP>*</SUP> ';
+  /* &prcue; */
+  latexdef "~<_*" as "\preccurlyeq^*";
+/* the standard symbol for this is \aleph, but that collides */
+htmldef "har" as "har";
+  althtmldef "har" as "har";
+  latexdef "har" as "{\rm har}";
+htmldef "LIndF" as " LIndF ";
+  althtmldef "LIndF" as " LIndF ";
+  latexdef "LIndF" as " {\rm LIndF} ";
+htmldef "LIndS" as "LIndS";
+  althtmldef "LIndS" as "LIndS";
+  latexdef "LIndS" as "{\rm LIndS}";
+htmldef "NzRing" as "NzRing";
+  althtmldef "NzRing" as "NzRing";
+  latexdef "NzRing" as "{\rm NzRing}";
 htmldef "LIdeal" as "LIdeal";
   althtmldef "LIdeal" as "LIdeal";
   latexdef "LIdeal" as "{\rm LIdeal}";

@@ -39,7 +39,8 @@ $)
     moxfr.a $e |- A e. _V $.
     moxfr.b $e |- E! y x = A $.
     moxfr.c $e |- ( x = A -> ( ph <-> ps ) ) $.
-    $( Transfer at-most-one between related expressions. $)
+    $( Transfer at-most-one between related expressions.  (Contributed by
+       Stefan O'Rear, 12-Feb-2015.) $)
     moxfr $p |- ( E* x ph <-> E* y ps ) $=
       ( wex weu wi wmo cvv wrex wcel cv a1i wceq rexv df-mo ax-mp mpbir 3bitr3i
       euex rexxfr euxfr imbi12i 3bitr4i ) ACIZACJZKBDIZBDJZKACLBDLUIUKUJULACMNB
@@ -50,7 +51,8 @@ $)
 
   ${
     $d ph w $.  $d A w x $.  $d A y $.  $d w y z $.  $d x z $.
-    $( Move indexed union inside an ordered-pair abstraction. $)
+    $( Move indexed union inside an ordered-pair abstraction.  (Contributed by
+       Stefan O'Rear, 20-Feb-2015.) $)
     iunopab $p |- U_ z e. A { <. x , y >. | ph } =
         { <. x , y >. | E. z e. A ph } $=
       ( vw cv copab wcel wrex cab cop wceq wex ciun elopab rexbii rexcom4 exbii
@@ -62,7 +64,8 @@ $)
 
   ${
     $d A x y $.  $d V x y $.
-    $( The power set of a set is never a subset. $)
+    $( The power set of a set is never a subset.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     pwnss $p |- ( A e. V -> -. ~P A C_ A ) $=
       ( vx vy wcel cv wnel crab cpw wn ssrab2 elpw2g mpbiri wa wb eleq12 anidms
       wss wel notbid wceq weq df-nel syl5bb cbvrabv elrab2 pclem6 ax-mp sylancl
@@ -72,22 +75,24 @@ $)
       $( [22-Feb-2015] $)
   $}
 
-  $( Direct proof of ~ pwuninel avoiding functions and thus several ZF
-     axioms. $)
+  $( Direct proof of ~ pwuninel avoiding functions and thus several ZF axioms.
+     (Contributed by Stefan O'Rear, 22-Feb-2015.) $)
   pwuninelALT $p |- ( U. A e. V -> -. ~P U. A e. A ) $=
     ( cuni wcel cpw wss pwnss elssuni nsyl ) ACZBDJEZJFKADJBGKAHI $.
     $( [22-Feb-2015] $)
 
   ${
     $d X a $.
-    $( Intersection of a singleton. $)
+    $( Intersection of a singleton.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     intsng $p |- ( X e. V -> |^| { X } = X ) $=
       ( va cv csn cint wceq sneq inteqd id eqeq12d vex intsn vtoclg ) CDZEZFZOG
       BEZFZBGCBAOBGZQSOBTPROBHITJKOCLMN $.
       $( [22-Feb-2015] $)
   $}
 
-  $( Rearrangement of a property of a singleton difference. $)
+  $( Rearrangement of a property of a singleton difference.  (Contributed by
+     Stefan O'Rear, 27-Feb-2015.) $)
   raldifsni $p |- ( A. x e. ( A \ { B } ) -. ph <->
       A. x e. A ( ph -> x = B ) ) $=
     ( wn cv wceq wi csn cdif wcel wne eldifsn imbi1i impexp df-ne con34b bitr4i
@@ -234,7 +239,7 @@ $)
     $( [2-Sep-2009] $)
 
   $( The composition of an onto function and its converse. _EDITORIAL_:
-     Generalizes ~ f1ococnv2 . $)
+     Generalizes ~ f1ococnv2 .  (Contributed by Stefan O'Rear, 12-Feb-2015.) $)
   fococnv2 $p |- ( F : A -onto-> B -> ( F o. `' F ) = ( _I |` B ) ) $=
     ( wfo ccnv ccom cid crn cres wfun wceq fofun cnvcan syl forn reseq2d eqtrd
     ) ABCDZCCEFZGCHZIZGBIRCJSUAKABCLCMNRTBGABCOPQ $.
@@ -244,45 +249,48 @@ $)
     $d F x y $.  $d G x y $.  $d A x y $.  $d B x y $.
     $( Condition for function equality in terms of vanishing of the composition
        with the converse. _EDITORIAL_:  Is there a relation-algebraic proof of
-       this? $)
+       this?  (Contributed by Stefan O'Rear, 12-Feb-2015.) $)
     foeqcnvco $p |- ( ( F : A -onto-> B /\ G : A -onto-> B ) ->
         ( F = G <-> ( F o. `' G ) = ( _I |` B ) ) ) $=
-      ( vx vy wfo wa wceq ccnv ccom adantr wfn fofn ad2antlr cv wcel sylan sylibr
-      wbr cid cres wi fococnv2 cnveq coeq2d eqeq1d syl5ibcom ad2antrr cfv wex cop
-      adantl fnopfv fvex vex brcnv df-br bitri jca weq breq2 breq1 anbi12d cla4ev
-      syl brco adantlr wb breq mpbid wf fof ffvelrn resieq syl2anc eqcomd eqfnfvd
-      ex impbid ) ABCGZABDGZHZCDIZCDJZKZUABUBZIZWAWDWHUCWBWACCJZKZWGIWDWHABCUDWDW
-      JWFWGWDWIWECCDUEUFUGUHLWCWHWDWCWHHZEACDWACAMZWBWHABCNZUIWBDAMZWAWHABDNZOWKE
-      PZAQZHZWPDUJZWPCUJZWRWSWTWGTZWSWTIZWRWSWTWFTZXAWCWQXCWHWCWQHZWSFPZWETZXEWTC
-      TZHZFUKZXCXDWSWPWETZWPWTCTZHZXIXDXJXKXDWPWSULDQZXJWCWNWQXMWBWNWAWOUMAWPDUNR
-      XJWPWSDTXMWSWPDWPDUOZEUPZUQWPWSDURUSSXDWPWTULCQZXKWCWLWQXPWAWLWBWMLAWPCUNRW
-      PWTCURSUTXHXLFWPXOFEVAXFXJXGXKXEWPWSWEVBXEWPWTCVCVDVEVFFWSWTCWEXNWPCUOVGSVH
-      WHXCXAVIWCWQWSWTWFWGVJOVKWCWQXAXBVIZWHXDWSBQZWTBQZXQWCABDVLZWQXRWBXTWAABDVM
-      UMABWPDVNRWCABCVLZWQXSWAYAWBABCVMLABWPCVNRBWSWTVOVPVHVKVQVRVSVT $.
+      ( vx vy wfo wa wceq ccnv ccom adantr wfn fofn ad2antlr cv wcel wbr sylibr
+      sylan cid cres wi fococnv2 cnveq coeq2d eqeq1d syl5ibcom ad2antrr cfv wex
+      cop adantl fnopfv fvex vex brcnv df-br bitri jca weq breq2 anbi12d cla4ev
+      breq1 syl brco adantlr wb breq mpbid wf fof ffvelrn resieq syl2anc eqcomd
+      eqfnfvd ex impbid ) ABCGZABDGZHZCDIZCDJZKZUABUBZIZWAWDWHUCWBWACCJZKZWGIWD
+      WHABCUDWDWJWFWGWDWIWECCDUEUFUGUHLWCWHWDWCWHHZEACDWACAMZWBWHABCNZUIWBDAMZW
+      AWHABDNZOWKEPZAQZHZWPDUJZWPCUJZWRWSWTWGRZWSWTIZWRWSWTWFRZXAWCWQXCWHWCWQHZ
+      WSFPZWERZXEWTCRZHZFUKZXCXDWSWPWERZWPWTCRZHZXIXDXJXKXDWPWSULDQZXJWCWNWQXMW
+      BWNWAWOUMAWPDUNTXJWPWSDRXMWSWPDWPDUOZEUPZUQWPWSDURUSSXDWPWTULCQZXKWCWLWQX
+      PWAWLWBWMLAWPCUNTWPWTCURSUTXHXLFWPXOFEVAXFXJXGXKXEWPWSWEVBXEWPWTCVEVCVDVF
+      FWSWTCWEXNWPCUOVGSVHWHXCXAVIWCWQWSWTWFWGVJOVKWCWQXAXBVIZWHXDWSBQZWTBQZXQW
+      CABDVLZWQXRWBXTWAABDVMUMABWPDVNTWCABCVLZWQXSWAYAWBABCVMLABWPCVNTBWSWTVOVP
+      VHVKVQVRVSVT $.
       $( [12-Feb-2015] $)
 
     $( Condition for function equality in terms of vanishing of the composition
-       with the inverse. $)
+       with the inverse.  (Contributed by Stefan O'Rear, 12-Feb-2015.) $)
     f1eqcocnv $p |- ( ( F : A -1-1-> B /\ G : A -1-1-> B ) ->
         ( F = G <-> ( `' F o. G ) = ( _I |` A ) ) ) $=
-      ( vx vy wf1 wa wceq ccom wi adantr wfn f1fn adantl cv wcel wbr wb syl coeq2
-      ccnv cid cres f1cocnv1 eqeq1d cfv weq mathbox resieq mpbiri anidms ad2antlr
-      syl5ibcom breq mpbird wex cop wfun cdm fndm eleq2d biimpar jca vex funopfvb
-      fnfun bicomd df-br eqcom 3bitr4g biimpd syl6bbr brcnv anim12d eximdv eqvinc
-      brco fvex 3imtr4g adantlr mpd eqfnfvd eqcomd ex impbid ) ABCGZABDGZHZCDIZCU
-      BZDJZUCAUDZIZWGWJWNKWHWGWKCJZWMIWJWNABCUEWJWOWLWMCDWKUAUFUNLWIWNWJWIWNHZDCW
-      PEADCWIDAMZWNWHWQWGABDNOZLWICAMZWNWGWSWHABCNLZLWPEPZAQZHZXAXAWLRZXADUGZXACU
-      GZIZXCXDXAXAWMRZXBXHWPXBXHXBXBHXHEEUHEUIAXAXAUJUKULOWNXDXHSWIXBXAXAWLWMUOUM
-      UPWIXBXDXGKWNWIXBHZXAFPZDRZXJXAWKRZHZFUQXJXEIZXJXFIZHZFUQXDXGXIXMXPFXIXKXNX
-      LXOXIXKXNXIXAXJURZDQZXEXJIZXKXNXIXSXRXIDUSZXADUTZQZHXSXRSXIXTYBWIXTXBWIWQXT
-      WRADVGTLWIYBXBWIYAAXAWIWQYAAIWRADVATVBVCVDXAXJDFVEZVFTVHXAXJDVIXJXEVJVKVLXI
-      XLXOXIXAXJCRZXFXJIZXLXOXIYEYDXIYEXQCQZYDXICUSZXACUTZQZHYEYFSXIYGYIWIYGXBWIW
-      SYGWTACVGTLWIYIXBWIYHAXAWIWSYHAIWTACVATVBVCVDXAXJCYCVFTXAXJCVIVMVHXJXACYCEV
-      EZVNXJXFVJVKVLVOVPFXAXAWKDYJYJVRFXEXFXADVSVQVTWAWBWCWDWEWF $.
+      ( vx vy wf1 wa wceq ccom wi adantr wfn f1fn adantl cv wcel wbr wb syl cid
+      ccnv f1cocnv1 coeq2 eqeq1d syl5ibcom cfv weq mathbox resieq mpbiri anidms
+      cres breq ad2antlr mpbird wex cop wfun fnfun fndm eleq2d biimpar funopfvb
+      cdm jca vex bicomd df-br eqcom 3bitr4g biimpd syl6bbr anim12d eximdv brco
+      brcnv fvex eqvinc 3imtr4g adantlr mpd eqfnfvd eqcomd ex impbid ) ABCGZABD
+      GZHZCDIZCUBZDJZUAAUMZIZWGWJWNKWHWGWKCJZWMIWJWNABCUCWJWOWLWMCDWKUDUEUFLWIW
+      NWJWIWNHZDCWPEADCWIDAMZWNWHWQWGABDNOZLWICAMZWNWGWSWHABCNLZLWPEPZAQZHZXAXA
+      WLRZXADUGZXACUGZIZXCXDXAXAWMRZXBXHWPXBXHXBXBHXHEEUHEUIAXAXAUJUKULOWNXDXHS
+      WIXBXAXAWLWMUNUOUPWIXBXDXGKWNWIXBHZXAFPZDRZXJXAWKRZHZFUQXJXEIZXJXFIZHZFUQ
+      XDXGXIXMXPFXIXKXNXLXOXIXKXNXIXAXJURZDQZXEXJIZXKXNXIXSXRXIDUSZXADVEZQZHXSX
+      RSXIXTYBWIXTXBWIWQXTWRADUTTLWIYBXBWIYAAXAWIWQYAAIWRADVATVBVCVFXAXJDFVGZVD
+      TVHXAXJDVIXJXEVJVKVLXIXLXOXIXAXJCRZXFXJIZXLXOXIYEYDXIYEXQCQZYDXICUSZXACVE
+      ZQZHYEYFSXIYGYIWIYGXBWIWSYGWTACUTTLWIYIXBWIYHAXAWIWSYHAIWTACVATVBVCVFXAXJ
+      CYCVDTXAXJCVIVMVHXJXACYCEVGZVQXJXFVJVKVLVNVOFXAXAWKDYJYJVPFXEXFXADVRVSVTW
+      AWBWCWDWEWF $.
       $( [12-Feb-2015] $)
   $}
 
-  $( Image of a relation restricted to a rectangular region. $)
+  $( Image of a relation restricted to a rectangular region.  (Contributed by
+     Stefan O'Rear, 19-Feb-2015.) $)
   imainrect $p |- ( ( G i^i ( A X. B ) ) " Y ) =
       ( ( G " ( Y i^i A ) ) i^i B ) $=
     ( cxp cin cvv crn cima ccnv cdm cres df-rn ineq1i eqtr2i df-res ineq2i inv1
@@ -296,7 +304,7 @@ $)
     $( [19-Feb-2015] $)
 
   $( Combine a one-to-one function with a restriction on the domain. _TODO_:
-     Use in ~ domdifsn . $)
+     Use in ~ domdifsn .  (Contributed by Stefan O'Rear, 20-Feb-2015.) $)
   f1ssr $p |- ( ( F : A -1-1-> B /\ ran F C_ C ) -> F : A -1-1-> C ) $=
     ( wf1 crn wss wa wf ccnv wfun f1fn adantr simpr df-f sylanbrc df-f1 simprbi
     wfn ) ABDEZDFCGZHZACDIZDJKZACDEUBDASZUAUCTUEUAABDLMTUANACDOPTUDUATABDIUDABD
@@ -305,7 +313,8 @@ $)
 
   ${
     $d B x $.  $d F x $.
-    $( Indexed intersection of an image. $)
+    $( Indexed intersection of an image.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     imaiinfv $p |- ( ( F Fn A /\ B C_ A ) ->
         |^|_ x e. B ( F ` x ) = |^| ( F " B ) ) $=
       ( wfn wss wa cres cfv ciin crn cint cima wceq fnssres fniinfv syl iineq2i
@@ -317,7 +326,7 @@ $)
   ${
     $d a b c $.
     $( Set exponentiation is a well-behaved binary operator. _EDITORIAL_:
-       shortens ~ elmapex1 . $)
+       shortens ~ elmapex1 .  (Contributed by Stefan O'Rear, 27-Feb-2015.) $)
     reldmmap $p |- Rel dom ^m $=
       ( va vb vc cvv cv wf cab cmap df-map reldmmpt2 ) ABDDBEAECEFCGHABCIJ $.
       $( [27-Feb-2015] $)
@@ -330,7 +339,7 @@ $)
     ralxpxfr2d.b $e |- ( ph -> ( x e. B <-> E. y e. C E. z e. D x = A ) ) $.
     ralxpxfr2d.c $e |- ( ( ph /\ x = A ) -> ( ps <-> ch ) ) $.
     $( Transfer a universal quantifier between one variable with pair-like
-       semantics and two. $)
+       semantics and two.  (Contributed by Stefan O'Rear, 27-Feb-2015.) $)
     ralxpxfr2d $p |- ( ph -> ( A. x e. B ps <-> A. y e. C A. z e. D ch ) ) $=
       ( wral wrex wi wal albidv r19.23v ralbii wceq df-ral imbi1d syl5bb bitr2i
       cv wcel wb albii ralcom4 bitri a1i pm5.74da biidd ceqsalv syl6bb 2ralbidv
@@ -341,7 +350,8 @@ $)
       $( [27-Feb-2015] $)
   $}
 
-  $( Split a function into a single point and all the rest. $)
+  $( Split a function into a single point and all the rest.  (Contributed by
+     Stefan O'Rear, 27-Feb-2015.) $)
   fnsnsplit $p |- ( ( F Fn A /\ X e. A ) ->
       F = ( ( F |` ( A \ { X } ) ) u. { <. X , ( F ` X ) >. } ) ) $=
     ( wfn wcel wa csn cdif cun cres cfv cop wceq difsnid adantl reseq2d resundi
@@ -350,7 +360,8 @@ $)
     EABUAUBUC $.
     $( [27-Feb-2015] $)
 
-  $( Adjoining a point to a function gives a function. $)
+  $( Adjoining a point to a function gives a function.  (Contributed by Stefan
+     O'Rear, 28-Feb-2015.) $)
   fsnunf $p |- ( ( F : S --> T /\ ( X e. V /\ -. X e. S ) /\ Y e. T ) ->
       ( F u. { <. X , Y >. } ) : ( S u. { X } ) --> T ) $=
     ( wf wcel wn wa w3a csn cun cop cin c0 wceq simp1 wf1o syl simp2l simp3 fun
@@ -361,7 +372,8 @@ $)
     ULUMVGBUNUPVHBVFVJUQTUR $.
     $( [28-Feb-2015] $)
 
-  $( Adjoining a point to a punctured function gives a function. $)
+  $( Adjoining a point to a punctured function gives a function.  (Contributed
+     by Stefan O'Rear, 28-Feb-2015.) $)
   fsnunf2 $p |- ( ( F : ( S \ { X } ) --> T /\ X e. S /\ Y e. T ) ->
       ( F u. { <. X , Y >. } ) : S --> T ) $=
     ( csn cdif wf wcel w3a cun cop simp1 simp2 snidg elndif syl 3ad2ant2 simp3
@@ -370,7 +382,8 @@ $)
     SUHBCADEUAUBULUMABUNUJUIUMAUCUKADUDRUEUF $.
     $( [28-Feb-2015] $)
 
-  $( Recover the added point from a point-added function. $)
+  $( Recover the added point from a point-added function.  (Contributed by
+     Stefan O'Rear, 28-Feb-2015.) $)
   fsnunfv $p |- ( ( X e. V /\ Y e. V /\ -. X e. dom F ) ->
       ( ( F u. { <. X , Y >. } ) ` X ) = Y ) $=
     ( wcel cdm wn w3a cop csn cun cres cfv c0 wceq cin dmres incom syl 3adant3
@@ -383,7 +396,8 @@ $)
     OVAVBVEVCVNCVQEZVSWAOVJVKWKVMCBVDVFCVQVPVGSVJVKVTDOVMCDBBVHTVI $.
     $( [28-Feb-2015] $)
 
-  $( Recover the original function from a point-added function. $)
+  $( Recover the original function from a point-added function.  (Contributed
+     by Stefan O'Rear, 28-Feb-2015.) $)
   fsnunres $p |- ( ( F Fn S /\ -. X e. S ) ->
       ( ( F u. { <. X , Y >. } ) |` S ) = F ) $=
     ( wfn wcel wn wa cres cop csn cun c0 fnresdm adantr ressnop0 adantl uneq12d
@@ -396,7 +410,7 @@ $)
     $d V f g y $.
     ralxpmap.j $e |- ( f = ( g u. { <. J , y >. } ) -> ( ph <-> ps ) ) $.
     $( Quantification over functions in terms of quantification over values and
-       punctured functions. $)
+       punctured functions.  (Contributed by Stefan O'Rear, 27-Feb-2015.) $)
     ralxpmap $p |- ( ( J e. T /\ T e. V ) -> ( A. f e. ( S ^m T ) ph <->
           A. y e. S A. g e. ( S ^m ( T \ { J } ) ) ps ) ) $=
       ( wcel wa csn cun wceq wf cvv wb syl2anc wss cv cop cmap co cdif vex snex
@@ -422,7 +436,8 @@ $)
       $( [27-Feb-2015] $)
   $}
 
-  $( Finite support for a function extended by a singleton. $)
+  $( Finite support for a function extended by a singleton.  (Contributed by
+     Stefan O'Rear, 27-Feb-2015.) $)
   funsnfsup $p |- ( ( `' ( F u. { <. X , Y >. } ) " Z ) e. Fin <->
       ( `' F " Z ) e. Fin ) $=
     ( cop csn cun ccnv cima cfn cnvun imaeq1i imaundir eqtri eleq1i crn wss cdm
@@ -456,7 +471,8 @@ $)
 
   ${
     $d x A $.  $d x B $.
-    $( Express a singleton function in maps-to notation. $)
+    $( Express a singleton function in maps-to notation.  (Contributed by
+       Stefan O'Rear, 28-Feb-2015.) $)
     fmptsn $p |- ( ( A e. V /\ B e. W ) ->
         { <. A , B >. } = ( x e. { A } |-> B ) ) $=
       ( wcel wa cop csn cxp cmpt wf wceq wf1o f1osng f1of syl fconst2g adantl
@@ -472,7 +488,8 @@ $(
 $)
 
   ${
-    $( Images of finite sets are finite. $)
+    $( Images of finite sets are finite.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     imafi $p |- ( ( Fun F /\ X e. Fin ) -> ( F " X ) e. Fin ) $=
       ( wfun cfn wcel wa cima cres cdm imadmres wfo wss simpr cin dmres eqsstri
       inss1 ssfi sylancl resss dmss mp1i fores syldan fofi syl2anc syl5eqelr )
@@ -484,7 +501,8 @@ $)
   ${
     $d A c f $.  $d A x $.  $d B c f $.  $d B x y $.  $d F c f $.  $d F x y $.
     $d f x y $.
-    $( Finite sets have finite preimages, using ~ ac6sfi . $)
+    $( Finite sets have finite preimages, using ~ ac6sfi .  (Contributed by
+       Stefan O'Rear, 22-Feb-2015.) $)
     fipreimaNEW $p |- ( ( F Fn B /\ A C_ ran F /\ A e. Fin ) ->
         E. c e. ( ~P B i^i Fin ) ( F " c ) = A ) $=
       ( vf vx vy wfn wss cfn wcel cv cfv wceq wral wa cima syl2anc cvv ad2antrl
@@ -509,7 +527,7 @@ $)
   ${
     $d A x y $.  $d B x y $.  $d F x y $.  $d V x y $.
     $( Onto functions define dominance when a finite number of choices need to
-       be made. $)
+       be made.  (Contributed by Stefan O'Rear, 28-Feb-2015.) $)
     fodomfi2 $p |- ( ( A e. V /\ B e. Fin /\ F : A -onto-> B ) -> B ~<_ A ) $=
       ( vx vy wcel cfn wfo cv wceq wrex cdom wbr wss 3ad2ant3 syl syl3anc sseli
       cvv w3a cima cpw cin wfn crn fofn forn eqimss2 simp2 fipreimaNEW cen con0
@@ -568,7 +586,8 @@ $)
   ${
     $d R f g $.  $d A f g $.  $d S f g $.  $d B f g $.
     $( Thus there is at most one isomorphism between any two well-ordered
-       sets.  TODO:  Shorten ~ finnisoeu . $)
+       sets.  TODO:  Shorten ~ finnisoeu .  (Contributed by Stefan O'Rear,
+       12-Feb-2015.) $)
     wemoiso $p |- ( R We A -> E* f f Isom R , S ( A , B ) ) $=
       ( vg wwe cv wiso wa weq wal cvv wcel wf1o isof1o adantl wf1 f1of1 syl wmo
       wi ccnv ccom cid cres wceq f1of vex dmfex mpan 3syl ad2antrl simpl isocnv
@@ -581,7 +600,7 @@ $)
       $( [12-Feb-2015] $)
 
     $( Thus there is at most one isomorphism between any two well-ordered
-       sets. $)
+       sets.  (Contributed by Stefan O'Rear, 12-Feb-2015.) $)
     wemoiso2 $p |- ( S We B -> E* f f Isom R , S ( A , B ) ) $=
       ( wwe cv wiso wex wmo wi isowe exlimiv biimprcd wemoiso syl6 moabs sylibr
       wb ) BDFZABCDEGZHZEIZUBEJZKUDTUCACFZUDUCUETUBUETSEABCDUALMNABCDEOPUBEQR
@@ -620,7 +639,8 @@ $)
       $( [6-Nov-2014] $)
   $}
 
-  $( All decrements of a set are equinumerous. $)
+  $( All decrements of a set are equinumerous.  (Contributed by Stefan O'Rear,
+     19-Feb-2015.) $)
   difsnen $p |- ( ( X e. V /\ A e. X /\ B e. X ) ->
       ( X \ { A } ) ~~ ( X \ { B } ) ) $=
     ( wcel csn cdif cen wbr wceq cvv difexg enrefg syl wne cun cin c0 disjdif
@@ -637,7 +657,8 @@ $)
 
   ${
     $d A f x $.  $d B f x $.  $d C f x $.
-    $( Dominance over a set with one element removed. $)
+    $( Dominance over a set with one element removed.  (Contributed by Stefan
+       O'Rear, 19-Feb-2015.) $)
     domdifsn $p |- ( A ~< B -> A ~<_ ( B \ { C } ) ) $=
       ( vf vx wbr wcel csn cdif wa cvv wb syl adantr adantl wn ad2antrr syl2anc
       cdom mpd csdm cv wf1 wex sdomdom sdomex simprd brdomg mpbid crn c0 wne wf
@@ -661,7 +682,8 @@ $)
     $d A f x y $.  $d B f x y $.  $d X x y $.  $d Y y $.
     domunsncan.a $e |- A e. _V $.
     domunsncan.b $e |- B e. _V $.
-    $( A singleton cancellation law for dominance. $)
+    $( A singleton cancellation law for dominance.  (Contributed by Stefan
+       O'Rear, 19-Feb-2015.) $)
     domunsncan $p |- ( ( -. A e. X /\ -. B e. Y ) ->
         ( ( { A } u. X ) ~<_ ( { B } u. Y ) <-> X ~<_ Y ) ) $=
       ( wcel wn wa cvv cun cdom wbr wi wss syl wb wceq cdif adantl vx vy vf csn
@@ -704,7 +726,8 @@ $)
 
   ${
     $d A a b c f $.  $d B a b c f $.  $d X a b c f $.  $d Y a b c f $.
-    $( A finite set union cancellation law for dominance. $)
+    $( A finite set union cancellation law for dominance.  (Contributed by
+       Stefan O'Rear, 19-Feb-2015.) $)
     domunfican $p |- ( ( ( A e. Fin /\ B ~~ A ) /\
           ( ( A i^i X ) = (/) /\ ( B i^i Y ) = (/) ) ) ->
         ( ( A u. X ) ~<_ ( B u. Y ) <-> X ~<_ Y ) ) $=
@@ -757,7 +780,8 @@ $)
     lmodvsinv.n $e |- N = ( invg ` W ) $.
     lmodvsinv.m $e |- M = ( invg ` F ) $.
     lmodvsinv.k $e |- K = ( Base ` F ) $.
-    $( Multiplication of a vector by a negated scalar. $)
+    $( Multiplication of a vector by a negated scalar.  (Contributed by Stefan
+       O'Rear, 28-Feb-2015.) $)
     lmodvsinv $p |- ( ( W e. LMod /\ R e. K /\ X e. B ) ->
         ( ( M ` R ) S X ) = ( N ` ( R S X ) ) ) $=
       ( wcel cfv co wceq syl clmod w3a cur cmulr simp1 cgrp crg 3ad2ant1 rnggrp
@@ -920,13 +944,15 @@ $)
     grpinvnzcl.b $e |- B = ( Base ` G ) $.
     grpinvnzcl.z $e |- Z = ( 0g ` G ) $.
     grpinvnzcl.n $e |- N = ( invg ` G ) $.
-    $( The inverse of a nonzero group element is not zero. $)
+    $( The inverse of a nonzero group element is not zero.  (Contributed by
+       Stefan O'Rear, 27-Feb-2015.) $)
     grpinvnz $p |- ( ( G e. Grp /\ X e. B /\ X =/= Z ) -> ( N ` X ) =/= Z ) $=
       ( cgrp wcel wne cfv wceq fveq2 adantl grpinvinv adantr grpinvid ad2antrr
       wa 3eqtr3d ex necon3d 3impia ) BIJZDAJZDEKDCLZEKUEUFTZUGEDEUHUGEMZDEMUHUI
       TUGCLZECLZDEUIUJUKMUHUGECNOUHUJDMUIABCDFHPQUEUKEMUFUIBCEGHRSUAUBUCUD $.
       $( [27-Feb-2015] $)
-    $( The inverse of a nonzero group element is a nonzero group element. $)
+    $( The inverse of a nonzero group element is a nonzero group element.
+       (Contributed by Stefan O'Rear, 27-Feb-2015.) $)
     grpinvnzcl $p |- ( ( G e. Grp /\ X e. ( B \ { Z } ) ) ->
         ( N ` X ) e. ( B \ { Z } ) ) $=
       ( cgrp wcel csn cdif wa cfv wne eldifi grpinvcl sylan2 eldifsn grpinvnz
@@ -945,7 +971,8 @@ $)
     lcomf.g $e |- ( ph -> G : I --> K ) $.
     lcomf.h $e |- ( ph -> H : I --> B ) $.
     lcomf.i $e |- ( ph -> I e. V ) $.
-    $( A linear-combination sum is a function. $)
+    $( A linear-combination sum is a function.  (Contributed by Stefan O'Rear,
+       28-Feb-2015.) $)
     lcomf $p |- ( ph -> ( G oF S H ) : I --> B ) $=
       ( vx wcel vy clmod cv wa co lmodvscl 3expb sylan inidm off ) ASUAGGGCHBBE
       FIIAJUBTZSUCZHTZUAUCZBTZUDULUNCUEBTZOUKUMUOUPULCDHBJUNNKMLUFUGUHPQRRGUIUJ
@@ -956,8 +983,8 @@ $)
     lcomfsup.z $e |- Z = ( 0g ` W ) $.
     lcomfsup.y $e |- Y = ( 0g ` F ) $.
     lcomfsup.j $e |- ( ph -> ( `' G " ( _V \ { Y } ) ) e. Fin ) $.
-    $( A linear-combination sum is finitely supported if the coefficients
-       are. $)
+    $( A linear-combination sum is finitely supported if the coefficients are.
+       (Contributed by Stefan O'Rear, 28-Feb-2015.) $)
     lcomfsup $p |- ( ph -> ( `' ( G oF S H ) " ( _V \ { Z } ) ) e. Fin ) $=
       ( vx ccnv cvv csn cdif cima cfn wcel cof co wss lcomf cfv wceq eldifi wfn
       cv wa ffn syl adantr simpr fnfvof syl22anc sylan2 ssid a1i suppssr oveq1d
@@ -988,7 +1015,8 @@ $)
   $}
 
   $( An open set in a topology generated by a basis is the union of all basic
-     open sets contained in it. $)
+     open sets contained in it.  (Contributed by Stefan O'Rear,
+     22-Feb-2015.) $)
   eltg4i $p |- ( A e. ( topGen ` B ) -> A = U. ( B i^i ~P A ) ) $=
     ( ctg cfv wcel cpw cin cuni wss cdm elfvdm eltg syl inss2 uniss ax-mp unipw
     wb ibi sseqtri a1i eqssd ) ABCDEZABAFZGZHZUCAUFIZUCBCJZEUCUGRABCKABUHLMSUFA
@@ -997,7 +1025,8 @@ $)
 
   ${
     $d B b $.  $d b x y $.
-    $( A space has no more open sets than subsets of a basis. $)
+    $( A space has no more open sets than subsets of a basis.  (Contributed by
+       Stefan O'Rear, 22-Feb-2015.) $)
     tgdom $p |- ( B e. V -> ( topGen ` B ) ~<_ ~P B ) $=
       ( vb vx vy cv ctg cfv cpw cdom wbr wceq fveq2 pweq cvv wcel cin wa eltg4i
       cuni breq12d vex pwex wss inss1 elpw2 mpbir a1i weq unieq adantl ad2antrr
@@ -1011,7 +1040,8 @@ $)
 
   ${
     $d P x y $.
-    $( A disjoint system of sets is a basis for a topology. $)
+    $( A disjoint system of sets is a basis for a topology.  (Contributed by
+       Stefan O'Rear, 22-Feb-2015.) $)
     baspartn $p |- ( ( P e. V /\ A. x e. P A. y e. P
               ( x = y \/ ( x i^i y ) = (/) ) ) -> P e. TopBases ) $=
       ( wcel weq cv cin c0 wceq wo wral wa ctb cpw cuni wss id pwidg elin inidm
@@ -1027,7 +1057,8 @@ $)
   ${
     $d J x $.  $d X x $.
     $( In a compact topology, a system of closed sets with nonempty finite
-       intersections has a nonempty intersection. $)
+       intersections has a nonempty intersection.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     cmpfii $p |- ( ( J e. Comp /\ X C_ ( Clsd ` J ) /\ (/) e/ ( fi ` X ) ) ->
         |^| X =/= (/) ) $=
       ( vx ccmp wcel ccld cfv wss c0 cfi wnel cint wne cpw cv wi wral syl wceq
@@ -1041,7 +1072,8 @@ $)
   ${
     $d A x $.  $d J x $.
     riincld.x $e |- X = U. J $.
-    $( A indexed relative intersection of closed sets is closed. $)
+    $( A indexed relative intersection of closed sets is closed.  (Contributed
+       by Stefan O'Rear, 22-Feb-2015.) $)
     riincld $p |- ( ( J e. Top /\ A. x e. A B e. ( Clsd ` J ) ) ->
         ( X i^i |^|_ x e. A B ) e. ( Clsd ` J ) ) $=
       ( ctop wcel ccld cfv wral wa ciin cin c0 wceq cvv syl6eq ad2antrr syl3anc
@@ -1056,7 +1088,8 @@ $)
   ${
     $d A y z $.  $d B y z $.  $d I x y z $.
     $( A rectangular subset of a rectangular set can be recovered as the
-       relative intersection of single-axis restrictions. $)
+       relative intersection of single-axis restrictions.  (Contributed by
+       Stefan O'Rear, 22-Feb-2015.) $)
     boxriin $p |- ( A. x e. I A C_ B -> X_ x e. I A = ( X_ x e. I B i^i
             |^|_ y e. I X_ x e. I if ( x = y , A , B ) ) ) $=
       ( vz wral cixp weq cv wcel wa wi ral2imi adantr impr eleq2 jca elixp cvv
@@ -1076,7 +1109,8 @@ $)
 
   ${
     $d A k l m z $.  $d B l m n z $.  $d C l m n z $.  $d X k l m n z $.
-    $( The relative complement of a box set restricted on one axis. $)
+    $( The relative complement of a box set restricted on one axis.
+       (Contributed by Stefan O'Rear, 22-Feb-2015.) $)
     boxcutc $p |- ( ( X e. A /\ A. k e. A C C_ B ) ->
         ( X_ k e. A B \ X_ k e. A if ( k = X , C , B ) ) =
           X_ k e. A if ( k = X , ( B \ C ) , B ) ) $=
@@ -1116,7 +1150,8 @@ $)
 
   ${
     $d I x $.  $d S x $.  $d V k $.  $d X k $.  $d k x $.
-    $( Express a relative indexed intersection as an intersection. $)
+    $( Express a relative indexed intersection as an intersection.
+       (Contributed by Stefan O'Rear, 22-Feb-2015.) $)
     riinint $p |- ( ( X e. V /\ A. k e. I S C_ X ) ->
         ( X i^i |^|_ k e. I S ) = |^| ( { X } u. ran ( k e. I |-> S ) ) ) $=
       ( vx wcel wss wral wa ciin cin cmpt crn cint csn cun cv wceq cvv wrex cab
@@ -1133,7 +1168,8 @@ $)
     ptopn2.a $e |- ( ph -> A e. V ) $.
     ptopn2.f $e |- ( ph -> F : A --> Top ) $.
     ptopn2.o $e |- ( ph -> O e. ( F ` Y ) ) $.
-    $( A sub-basic open set in the product topology. $)
+    $( A sub-basic open set in the product topology.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     ptopn2 $p |- ( ph ->
         X_ k e. A if ( k = Y , O , U. ( F ` k ) ) e. ( Xt_ ` F ) ) $=
       ( cv wceq cfv cuni cif csn wcel adantr wn ctop cfn snfi a1i wa syl5ibrcom
@@ -1146,19 +1182,22 @@ $)
   $}
 
   ${
-    $( Reverse closure of the closed set operation. $)
+    $( Reverse closure of the closed set operation.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     cldrcl $p |- ( C e. ( Clsd ` J ) -> J e. Top ) $=
       ( ccld cfv wcel cdm ctop elfvdm wfn wceq fncld fndm ax-mp syl6eleq ) ABCD
       EBCFZGABCHCGIOGJKGCLMN $.
       $( [22-Feb-2015] $)
 
     cldss3.x $e |- X = U. J $.
-    $( Closed sets are subsets of the base. $)
+    $( Closed sets are subsets of the base.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     cldss3 $p |- ( C e. ( Clsd ` J ) -> C C_ X ) $=
       ( ctop wcel ccld cfv wss cldrcl cldss mpancom ) BEFABGHFACIABJABCDKL $.
       $( [22-Feb-2015] $)
 
-    $( The relative complement of a closed set is open. $)
+    $( The relative complement of a closed set is open.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     cldopn2 $p |- ( C e. ( Clsd ` J ) -> ( X \ C ) e. J ) $=
       ( ctop wcel ccld cfv cdif cldrcl cldopn mpancom ) BEFABGHFCAIBFABJABCDKL
       $.
@@ -1168,7 +1207,8 @@ $)
   ${
     $d A x y z $.  $d K y z $.  $d V y $.
     ptunimpt.j $e |- J = ( Xt_ ` ( x e. A |-> K ) ) $.
-    $( Base set of a product topology given by substitution. $)
+    $( Base set of a product topology given by substitution.  (Contributed by
+       Stefan O'Rear, 22-Feb-2015.) $)
     ptunimpt $p |- ( ( A e. V /\ A. x e. A K e. Top ) ->
         X_ x e. A U. K = U. J ) $=
       ( vy vz wcel ctop wral wa cuni cixp cv cmpt cfv wceq unieqd ax-17 syl wel
@@ -1185,7 +1225,8 @@ $)
     ptcld.a $e |- ( ph -> A e. V ) $.
     ptcld.f $e |- ( ph -> F : A --> Top ) $.
     ptcld.c $e |- ( ( ph /\ k e. A ) -> C e. ( Clsd ` ( F ` k ) ) ) $.
-    $( A closed box in the product topology. $)
+    $( A closed box in the product topology.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     ptcld $p |- ( ph -> X_ k e. A C e. ( Clsd ` ( Xt_ ` F ) ) ) $=
       ( vx vz cixp cfv ccld wss wral wceq wcel syl2anc adantr cuni weq cif ciin
       cv cin cpt wa eqid1 cldss3 syl ralrimiva boxriin ctop wf eqid ptuni pttop
@@ -1213,7 +1254,8 @@ $)
     ptcldmpt.a $e |- ( ph -> A e. V ) $.
     ptcldmpt.j $e |- ( ( ph /\ k e. A ) -> J e. Top ) $.
     ptcldmpt.c $e |- ( ( ph /\ k e. A ) -> C e. ( Clsd ` J ) ) $.
-    $( A closed box in the product topology. $)
+    $( A closed box in the product topology.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     ptcldmpt $p |- ( ph -> X_ k e. A C e.
           ( Clsd ` ( Xt_ ` ( k e. A |-> J ) ) ) ) $=
       ( vl vz cixp cv cfv ccld wcel ax-17 ctop wa wi csb cpt wel hbcsb1 csbeq1a
@@ -1229,7 +1271,8 @@ $)
 
   ${
     $d A v w $.  $d B v w $.  $d C v w $.  $d V v w $.
-    $( Elementhood in a set of relative finite intersections. $)
+    $( Elementhood in a set of relative finite intersections.  (Contributed by
+       Stefan O'Rear, 22-Feb-2015.) $)
     elrfi $p |- ( ( B e. V /\ C C_ ~P B ) -> ( A e. ( fi ` ( { B } u. C ) ) <->
           E. v e. ( ~P C i^i Fin ) A = ( B i^i |^| v ) ) ) $=
       ( vw wcel cpw wss wa cvv cun cint cin wceq cfn wrex syl2anc sseli sylib
@@ -1267,7 +1310,7 @@ $)
     $d A v w $.  $d B v w $.  $d F v w $.  $d F y $.  $d I v w $.  $d V v w $.
     $d v y $.
     $( Elementhood in a set of relative finite intersections of an indexed
-       family of sets. $)
+       family of sets.  (Contributed by Stefan O'Rear, 22-Feb-2015.) $)
     elrfirn $p |- ( ( B e. V /\ F : I --> ~P B ) ->
         ( A e. ( fi ` ( { B } u. ran F ) ) <->
           E. v e. ( ~P I i^i Fin ) A = ( B i^i |^|_ y e. v ( F ` y ) ) ) ) $=
@@ -1292,7 +1335,8 @@ $)
     $d V v y $.  $d x y z $.
 
     $( Elementhood in a set of relative finite intersections of an indexed
-       family of sets (implicit). $)
+       family of sets (implicit).  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     elrfirn2 $p |- ( ( B e. V /\ A. y e. I C C_ B ) ->
         ( A e. ( fi ` ( { B } u. ran ( y e. I |-> C ) ) ) <->
           E. v e. ( ~P I i^i Fin ) A = ( B i^i |^|_ y e. v C ) ) ) $=
@@ -1318,7 +1362,8 @@ $)
     cmpfiiin.z $e |- ( ( ph /\ ( l C_ I /\ l e. Fin ) ) ->
         ( X i^i |^|_ k e. l S ) =/= (/) ) $.
     $( In a compact topology, a system of closed sets with nonempty finite
-       intersections has a nonempty intersection. $)
+       intersections has a nonempty intersection.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     cmpfiiin $p |- ( ph -> ( X i^i |^|_ k e. I S ) =/= (/) ) $=
       ( ciin cin c0 wcel wss syl wa wne cfn csn cmpt crn cun cint ccld cfv wral
       wceq ctop ccmp cmptop topcld cv cldss3 ralrimiva riinint syl2anc cfi wnel
@@ -1381,18 +1426,21 @@ $)
   ${
     $d x y X $.  $d x y Y $.
 
-    $( Functionality of the Hartogs function. $)
+    $( Functionality of the Hartogs function.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     fhar $p |- har : _V --> On $=
       ( vy vx cv cdom wbr con0 crab wcel cvv wral char hartogs rgen df-har fmpt
       wf mpbi ) ACBCZDEAFGZFHZBIJIFKPTBIARILMBIFSKBANOQ $.
       $( [11-Feb-2015] $)
 
-    $( Closure of the Hartogs function in the ordinals. $)
+    $( Closure of the Hartogs function in the ordinals.  (Contributed by Stefan
+       O'Rear, 11-Feb-2015.) $)
     harcl $p |- ( har ` X ) e. On $=
       ( cvv con0 char fhar 0elon f0cli ) BCADEFG $.
       $( [11-Feb-2015] $)
 
-    $( Function value of the Hartogs function. $)
+    $( Function value of the Hartogs function.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     harval $p |- ( X e. V -> ( har ` X ) = { y e. On | y ~<_ X } ) $=
       ( vx wcel cvv char cfv cdom wbr con0 crab wceq elex breq2 rabbidv hartogs
       cv df-har fvmpt3 syl ) CBECFECGHARZCIJZAKLZMCBNDCUBDRZIJZAKLUDFGKUECMUFUC
@@ -1400,20 +1448,22 @@ $)
       $( [11-Feb-2015] $)
 
     $( The Hartogs number of a set is greater than all ordinals which inject
-       into it. $)
+       into it.  (Contributed by Stefan O'Rear, 11-Feb-2015.) $)
     elharval $p |- ( X e. V -> ( Y e. ( har ` X ) <->
           ( Y e. On /\ Y ~<_ X ) ) ) $=
       ( vy wcel char cfv cv cdom wbr con0 crab harval eleq2d breq1 elrab syl6bb
       wa ) BAEZCBFGZECDHZBIJZDKLZECKECBIJZRSTUCCDABMNUBUDDCKUACBIOPQ $.
       $( [11-Feb-2015] $)
 
-    $( The Hartogs number of a set does not inject into that set. $)
+    $( The Hartogs number of a set does not inject into that set.  (Contributed
+       by Stefan O'Rear, 11-Feb-2015.) $)
     harndom $p |- ( X e. V -> -. ( har ` X ) ~<_ X ) $=
       ( wcel char cfv cdom wbr harcl onirri con0 wa elharval biimprd mpani mtoi
       ) BACZBDEZBFGZQQCZQBHZIPQJCZRSTPSUARKABQLMNO $.
       $( [11-Feb-2015] $)
 
-    $( Weak ordering property of the Hartogs function. $)
+    $( Weak ordering property of the Hartogs function.  (Contributed by Stefan
+       O'Rear, 14-Feb-2015.) $)
     harword $p |- ( ( X ~<_ Y /\ Y e. V ) -> ( har ` X ) C_ ( har ` Y ) ) $=
       ( vy cdom wbr wcel wa cv con0 crab char cfv wss wi adantr wceq cvv harval
       domtr expcom ss2rabdv reldom brrelexi syl adantl 3sstr4d ) BCEFZCAGZHDIZB
@@ -1424,14 +1474,15 @@ $)
 
   ${
     $d A x y $.
-    $( A way to express well-orderability without bound or distinct
-       variables. $)
+    $( A way to express well-orderability without bound or distinct variables.
+       (Contributed by Stefan O'Rear, 28-Feb-2015.) $)
     isnum2 $p |- ( A e. V -> ( A e. dom card <-> E. x e. On x ~~ A ) ) $=
       ( vy cen wbr con0 wrex ccrd cdm wceq breq2 rexbidv cab cardf2 fdmi elab2g
       cv ) ARZDRZEFZAGHZSBEFZAGHDBIJCTBKUAUCAGTBSELMUBDNGIDAOPQ $.
       $( [28-Feb-2015] $)
 
-    $( All sets are well-orderable under choice. $)
+    $( All sets are well-orderable under choice.  (Contributed by Stefan
+       O'Rear, 28-Feb-2015.) $)
     numth3 $p |- ( A e. V -> A e. dom card ) $=
       ( vx wcel ccrd cdm cv cen wbr con0 wrex numth2 isnum2 mpbiri ) ABDAEFDCGA
       HICJKCALCABMN $.
@@ -1441,13 +1492,15 @@ $)
   ${
     $d X x y z w $.  $d Y x y z w $.  $d F x y z $.  $d Z x y z w $.
 
-    $( Weak dominance is a relation. $)
+    $( Weak dominance is a relation.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     relwdom $p |- Rel ~<_* $=
       ( vx vy vz cv c0 wceq wfo wex wo cwdom df-wdom relopabi ) ADZEFBDMCDGCHIA
       BJABCKL $.
       $( [11-Feb-2015] $)
 
-    $( Property of weak dominance (definitional form). $)
+    $( Property of weak dominance (definitional form).  (Contributed by Stefan
+       O'Rear, 11-Feb-2015.) $)
     brwdom $p |- ( Y e. V -> ( X ~<_* Y <->
           ( X = (/) \/ E. z z : Y -onto-> X ) ) ) $=
       ( vx vy wcel cvv cwdom wbr c0 wceq cv wfo wex wo wb wi a1i exbidv relwdom
@@ -1459,7 +1512,8 @@ $)
       AVODCVGUQTUREFAUSUTVAVBVC $.
       $( [11-Feb-2015] $)
 
-    $( Weak dominance over nonempty sets. $)
+    $( Weak dominance over nonempty sets.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     brwdomn0 $p |- ( ( X =/= (/) /\ Y e. V ) -> ( X ~<_* Y <->
           E. z z : Y -onto-> X ) ) $=
       ( wcel cwdom wbr c0 wceq cv wfo wex wo wne brwdom wn wb df-ne biorf sylbi
@@ -1467,13 +1521,15 @@ $)
       DSTUAUB $.
       $( [11-Feb-2015] $)
 
-    $( Any set weakly dominates the empty set. $)
+    $( Any set weakly dominates the empty set.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     0wdom $p |- ( X e. V -> (/) ~<_* X ) $=
       ( vz wcel c0 cwdom wbr wceq cv wfo wex wo eqid orci brwdom mpbiri ) BADEB
       FGEEHZBECIJCKZLQREMNCAEBOP $.
       $( [11-Feb-2015] $)
 
-    $( An onto function implies weak dominance. $)
+    $( An onto function implies weak dominance.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     fowdom $p |- ( ( F e. V /\ F : Y -onto-> X ) -> X ~<_* Y ) $=
       ( vz wcel cvv wfo cwdom wbr elex wa c0 wceq cv wex wo foeq1 cla4egv imp
       olcd wb wf fof dmfex sylan2 brwdom syl mpbird sylan ) ABFAGFZDCAHZCDIJZAB
@@ -1481,14 +1537,16 @@ $)
       UCUTDCAUDDCGAUEUFEGCDUGUHUIUJ $.
       $( [11-Feb-2015] $)
 
-    $( Reflexivity of weak dominance. $)
+    $( Reflexivity of weak dominance.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     wdomref $p |- ( X e. V -> X ~<_* X ) $=
       ( wcel cid cres cvv wfo cwdom wbr resiexg wf1o f1ofo ax-mp fowdom sylancl
       f1oi ) BACDBEZFCBBQGZBBHIBAJBBQKRBPBBQLMQFBBNO $.
       $( [11-Feb-2015] $)
 
     $( Alternate characterization of the weak dominance predicate which does
-       not require special treatment of the empty set. $)
+       not require special treatment of the empty set.  (Contributed by Stefan
+       O'Rear, 11-Feb-2015.) $)
     brwdom2 $p |- ( Y e. V -> ( X ~<_* Y <->
           E. y e. ~P Y E. z z : y -onto-> X ) ) $=
       ( vx vw wcel cvv cwdom cv wfo wex c0 wceq wa foeq1 exbidv cun wfn wbr cpw
@@ -1516,7 +1574,8 @@ $)
       UUTIEDUUDUUTQXQXRVSXSXTYAXSYBYCYDYEXO $.
       $( [11-Feb-2015] $)
 
-    $( Weak dominance is implied by dominance in the usual sense. $)
+    $( Weak dominance is implied by dominance in the usual sense.  (Contributed
+       by Stefan O'Rear, 11-Feb-2015.) $)
     domwdom $p |- ( X ~<_ Y -> X ~<_* Y ) $=
       ( vy cvv wcel cdom wbr cwdom wi c0 wceq cv wfo wex wo wa wn csdm syl ex
       simpll wne df-ne biimpri adantl wb reldom brrelexi 0sdomg ad2antlr mpbird
@@ -1526,7 +1585,8 @@ $)
       JUKVBVCVIULBADCUMUNTUOTCDABUPUQVCVDVBQAAHGZVCVNVPVODAURSABHUSUTVA $.
       $( [11-Feb-2015] $)
 
-    $( Transitivity of weak dominance. $)
+    $( Transitivity of weak dominance.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     wdomtr $p |- ( ( X ~<_* Y /\ Y ~<_* Z ) -> X ~<_* Z ) $=
       ( vz vy cvv wcel cwdom wbr wa wi c0 wceq adantl wne cv wfo wex wb mpbid
       0wdom syl5ibrcom simpll simprr relwdom brrelexi ad2antlr brwdomn0 syl2anc
@@ -1542,7 +1602,8 @@ $)
       VMVQWGWHWDVRAAHIZWEXHWFWEAFGXHABHUEUFFAVSVCVTACHWAWBWC $.
       $( [11-Feb-2015] $)
 
-    $( Weak dominance strengthens to usual dominance on the power sets. $)
+    $( Weak dominance strengthens to usual dominance on the power sets.
+       (Contributed by Stefan O'Rear, 11-Feb-2015.) $)
     wdompwdom $p |- ( X ~<_* Y -> ~P X ~<_ ~P Y ) $=
       ( vz cvv wcel cwdom wbr cpw cdom wi wceq pweq wss 0ex pwex 0ss sspwb mpbi
       c0 a1d ssdomg mp2 syl6eqbr wne wa cv wfo wex brwdomn0 vex fopwdom exlimiv
@@ -1554,7 +1615,7 @@ $)
       $( [11-Feb-2015] $)
 
     $( The out-of-domain behavior of ` ~<_* ` is the same as that of ` ~<_ ` .
-       Lemma for ~ wdomfi and ~ wdomnum . $)
+       Lemma for ~ wdomfil and ~ wdomnumr . $)
     wdomndm $p |- ( -. ( X e. _V /\ Y e. _V ) -> ( X ~<_* Y -> X ~<_ Y ) ) $=
       ( cvv wcel wa wn cwdom wbr cdom relwdom brrelexi pm3.21 syl5 con3d pm2.21
       wi syl6 domrefg syl brprc a1i 3imtr4d a1d pm2.61i ) BCDZACDZUEEZFZABGHZAB
@@ -1562,7 +1623,8 @@ $)
       UNPULUMUFUNAAGJKACRSUAABGTABITUBUCUD $.
       $( [28-Feb-2015] $)
 
-    $( Weak dominance agrees with normal for finite left sets. $)
+    $( Weak dominance agrees with normal for finite left sets.  (Contributed by
+       Stefan O'Rear, 28-Feb-2015.) $)
     wdomfil $p |- ( X e. Fin -> ( X ~<_* Y <-> X ~<_ Y ) ) $=
       ( vx cfn wcel cwdom wbr cdom cvv wa wi c0 wceq cv wfo wo wb brwdom adantl
       wex 0dom a1i breq1 syl5ibrcom wf vex dmfex sylancr simpl fodomfi2 syl3anc
@@ -1573,7 +1635,8 @@ $)
       VQUMBAVPIUJUKUNUOUPUQURUSSVKUTVLVFABVAVDVBABVCVE $.
       $( [28-Feb-2015] $)
 
-    $( Weak dominance agrees with normal for numerable right sets. $)
+    $( Weak dominance agrees with normal for numerable right sets.
+       (Contributed by Stefan O'Rear, 28-Feb-2015.) $)
     wdomnumr $p |- ( Y e. dom card -> ( X ~<_* Y <-> X ~<_ Y ) ) $=
       ( vx vy ccrd cdm wcel cwdom wbr cdom cvv wa wi c0 wceq cv wfo wex wo ex
       wb brwdom adantl 0dom mpbiri a1i cen con0 wrex simplr isnum2 ibi ad2antlr
@@ -1585,7 +1648,8 @@ $)
       $( [28-Feb-2015] $)
 
     $( When assuming AC, weak and usual dominance coincide.  It is not known if
-       this is an AC equivalent. $)
+       this is an AC equivalent.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     wdomac $p |- ( X ~<_* Y <-> X ~<_ Y ) $=
       ( cwdom wbr cdom cvv wcel wa wi cdm numth3 wdomnumr biimpd adantl wdomndm
       ccrd syl pm2.61i domwdom impbii ) ABCDZABEDZAFGZBFGZHUAUBIZUDUEUCUDBPJGZU
@@ -1598,8 +1662,9 @@ $)
     wdom2d.a $e |- ( ph -> A e. V ) $.
     wdom2d.b $e |- ( ph -> B e. W ) $.
     wdom2d.o $e |- ( ( ph /\ x e. A ) -> E. y e. B x = X ) $.
-    $( Deduce weak dominance from an implicit onto function (version which
-       avoids ~ ax-reg ). $)
+    $( Deduce weak dominance from an implicit onto function (stated in a way
+       which could avoid ~ ax-rep , although the current proof does not).
+       (Contributed by Stefan O'Rear, 13-Feb-2015.) $)
     wdom2d $p |- ( ph -> A ~<_* B ) $=
       ( vz vw vv cv wcel wbr cvv syl2anc wrex csb crab cwdom wfo cxp wss wf weq
       cmpt csbeq1 eleq1d elrab simprbi adantl eqid fmptd fssxp syl rabexg xpexg
@@ -1623,7 +1688,8 @@ $)
     $d A x y $.  $d B x y $.  $d ph x y $.  $d X x $.
     wdomd.b $e |- ( ph -> B e. W ) $.
     wdomd.o $e |- ( ( ph /\ x e. A ) -> E. y e. B x = X ) $.
-    $( Deduce weak dominance from an implicit onto function. $)
+    $( Deduce weak dominance from an implicit onto function.  (Contributed by
+       Stefan O'Rear, 13-Feb-2015.) $)
     wdomd $p |- ( ph -> A ~<_* B ) $=
       ( cvv cv wceq wrex cab wss wcel wi wal ex alrimiv ssab abrexexg syl ssexg
       sylibr syl2anc wdom2d ) ABCDEJFGADBKZGLCEMZBNZOZUJJPZDJPAUHDPZUIQZBRUKAUN
@@ -1633,8 +1699,8 @@ $)
 
   ${
     $d X f w x y z $.  $d Y f w x y z $.
-    $( Condition for weak dominance with a condition reminiscent of
-       ~ wdomd . $)
+    $( Condition for weak dominance with a condition reminiscent of ~ wdomd .
+       (Contributed by Stefan O'Rear, 13-Feb-2015.) $)
     brwdom3 $p |- ( ( X e. V /\ Y e. W ) -> ( X ~<_* Y <->
           E. f A. x e. X E. y e. Y x = ( f ` y ) ) ) $=
       ( vz vw wcel cvv cv cfv wceq wrex wral wex wb wa adantl cwdom wbr wfo cpw
@@ -1648,7 +1714,8 @@ $)
       OXBXDWCXEBGVSWHWBVAVBXEXABIGBIVHWBWTWHVTWSWAVCVDVEVFVGVITVJVKVLVMVNVO $.
       $( [13-Feb-2015] $)
 
-    $( Weak dominance implies existance of a covering function. $)
+    $( Weak dominance implies existance of a covering function.  (Contributed
+       by Stefan O'Rear, 13-Feb-2015.) $)
     brwdom3i $p |- ( ( X ~<_* Y /\ Y e. V ) ->
         E. f A. x e. X E. y e. Y x = ( f ` y ) ) $=
       ( cwdom wbr wcel wa cv cfv wceq wrex wral wex simpl cvv wb relwdom sylan
@@ -1660,7 +1727,8 @@ $)
   ${
     $d A a b f g y z $.  $d B a b f g y z $.  $d C a b f g y z $.
     $d D a b f g y z $.  $d V f g y z $.  $d W f g y z $.
-    $( Weak dominance of a (disjoint) union. $)
+    $( Weak dominance of a (disjoint) union.  (Contributed by Stefan O'Rear,
+       13-Feb-2015.) $)
     unwdomg $p |- ( ( ( A ~<_* B /\ B e. V ) /\ ( C ~<_* D /\ D e. W ) /\
           ( B i^i D ) = (/) ) -> ( A u. C ) ~<_* ( B u. D ) ) $=
       ( va vb vf vg vy vz cwdom wcel wa wceq cv cfv wrex eqeq2d wbr cin c0 wral
@@ -1687,7 +1755,8 @@ $)
   ${
     $d A a b c f g x y $.  $d B a b c d f g x y $.  $d C a c d f g x y $.
     $d D a b c d f g x y $.  $d V f g x y $.  $d W f g x y $.
-    $( Weak dominance of a cross product. $)
+    $( Weak dominance of a cross product.  (Contributed by Stefan O'Rear,
+       13-Feb-2015.) $)
     xpwdomg $p |- ( ( ( A ~<_* B /\ B e. V ) /\ ( C ~<_* D /\ D e. W ) ) ->
           ( A X. C ) ~<_* ( B X. D ) ) $=
       ( va vb vf vc vd vg vx vy wa cv cfv wceq wrex wral cwdom wbr wcel wex cxp
@@ -1707,7 +1776,8 @@ $)
       $( [13-Feb-2015] $)
   $}
 
-  $( A set is weakly dominant over its image under any function. $)
+  $( A set is weakly dominant over its image under any function.  (Contributed
+     by Stefan O'Rear, 14-Feb-2015.) $)
   wdomimag $p |- ( ( Fun F /\ A e. V ) -> ( F " A ) ~<_* A ) $=
     ( wfun wcel wa cima crn cwdom df-ima cdm wbr cvv resfunexg funres funforn
     cres wfo sylib syl2anc adantr fowdom cdom wss dmres inss1 eqsstri ssdom2g
@@ -1728,7 +1798,8 @@ $)
         ( rec ( ( y e. _V |-> U. y ) , x ) |` om ) ) $.
     $( Function value of iterated unions. _EDITORIAL_:  The iterated unions and
        order types of ordered sets are split out here because they could
-       concievably be independently useful. $)
+       concievably be independently useful.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     itunifval $p |- ( A e. V -> ( U ` A ) =
           ( rec ( ( y e. _V |-> U. y ) , A ) |` om ) ) $=
       ( wcel cvv cfv cv cuni cmpt crdg com cres wceq elex rdgeq2 reseq1d con0
@@ -1737,19 +1808,22 @@ $)
       LUDUEUFULNHUGUHUIUJ $.
       $( [11-Feb-2015] $)
 
-    $( Functionality of the iterated union. $)
+    $( Functionality of the iterated union.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     itunifn $p |- ( A e. V -> ( U ` A ) Fn om ) $=
       ( wcel cfv com wfn cvv cuni cmpt crdg cres frfnom itunifval fneq1d mpbiri
       cv ) CEGZCDHZIJBKBTLMZCNIOZIJCUCPUAIUBUDABCDEFQRS $.
       $( [11-Feb-2015] $)
 
-    $( A zero-fold iterated union. $)
+    $( A zero-fold iterated union.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     ituni0 $p |- ( A e. V -> ( ( U ` A ) ` (/) ) = A ) $=
       ( wcel c0 cfv cvv cv cuni cmpt crdg com cres itunifval fveq1d fr0g eqtrd
       ) CEGZHCDIZIHBJBKLMZCNOPZICUAHUBUDABCDEFQRCEUCST $.
       $( [11-Feb-2015] $)
 
-    $( Successor iterated union. $)
+    $( Successor iterated union.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     itunisuc $p |- ( ( U ` A ) ` suc B ) = U. ( ( U ` A ) ` B ) $=
       ( va cvv wcel cfv cuni wceq com wa cv fveq1d unieqd wn c0 syl frsuc unieq
       csuc cmpt crdg cres fvex uniex fvmpt ax-mp syl6eq adantl itunifval adantr
@@ -1764,7 +1838,8 @@ $)
       NZPXFVTXHXFDVRSXJPQVIVO $.
       $( [11-Feb-2015] $)
 
-    $( Each union iterate is a member of the transitive closure. $)
+    $( Each union iterate is a member of the transitive closure.  (Contributed
+       by Stefan O'Rear, 11-Feb-2015.) $)
     itunitc1 $p |- ( ( U ` A ) ` B ) C_ ( TC ` A ) $=
       ( va vb vc cvv wcel cfv ctc wss cv wceq fveq2 com c0 sseq1d fveq1d ituni0
       sseq12d csuc weq vex tcid eqsstrd wi cuni itunisuc cpw wtr tctr pwtr mpbi
@@ -1780,7 +1855,7 @@ $)
       $( [11-Feb-2015] $)
 
     $( The union of all union iterates creates the transitive closure; compare
-       ~ trcl . $)
+       ~ trcl .  (Contributed by Stefan O'Rear, 11-Feb-2015.) $)
     itunitc $p |- ( TC ` A ) = U. ran ( U ` A ) $=
       ( va vb vc cvv wcel ctc cfv crn cuni wceq cv fveq2 wss c0 com eqeq12d wtr
       rneqd unieqd vex ituni0 ax-mp fvssunirn eqsstr3i wrex wfn itunifn fnunirn
@@ -1796,7 +1871,8 @@ $)
       WBXTWHYAXTWGSCDWBUCUDWCWD $.
       $( [11-Feb-2015] $)
 
-    $( Unwrap an iterated union from the "other end". $)
+    $( Unwrap an iterated union from the "other end".  (Contributed by Stefan
+       O'Rear, 11-Feb-2015.) $)
     ituniiun $p |- ( A e. V -> ( ( U ` A ) ` suc B ) =
           U_ a e. A ( ( U ` a ) ` B ) ) $=
       ( csuc cfv ciun wceq fveq2 eqeq12d com wcel c0 adantr iuneq2dv cuni vb vd
@@ -1830,11 +1906,12 @@ $)
        ordinals is a proper class.  We could concievably require that the
        ordering first be restricted, as in ` ( ( _E |`` ( X X. X ) ) O X ) ` ,
        requiring heavy use of ~ weinxp at al, or use a syntactic
-       constructuction ` ( _E OrderType X ) ` with the usual problems of that
-       form.  Also conceivable is to define order type on poset structures, as
-       in ` ( O `` ( toInc `` X ) ) ` ; this is at least concise, but it
-       introduces a dependency on ` CC ` and probably a great deal of
-       translation overhead. $)
+       constructuction ` ( _E ` OrderType ` X ) ` with the usual problems of
+       that form.  Also conceivable is to define order type on poset
+       structures, as in ` ( O `` ( toInc `` X ) ) ` ; this is at least
+       concise, but it introduces a dependency on ` CC ` and probably a great
+       deal of translation overhead.  (Contributed by Stefan O'Rear,
+       11-Feb-2015.) $)
     otoscl $p |- ( O ` X ) e. On $=
       ( con0 cpw cv cep wiso wex crio wcel wral wf wn c0 cund 0elon riotacl cfv
       wreu riotaund cvv wceq onprc fvprc ax-mp syl6eqel pm2.61i rgenw fmpt mpbi
@@ -1843,7 +1920,7 @@ $)
       $( [11-Feb-2015] $)
 
     $( The order type of an ordinal, considered as the set of smaller ordinals,
-       is itself. $)
+       is itself.  (Contributed by Stefan O'Rear, 11-Feb-2015.) $)
     otosid $p |- ( X e. On -> ( O ` X ) = X ) $=
       ( con0 wcel cfv cv cep wiso wex crio cpw wceq exbidv syl cvv mpdan isoeq5
       wtr wss tron dftr4 mpbi sseli riotabidv riotaex fvmpt cres resiexg isoeq1
@@ -1858,7 +1935,8 @@ $)
     ${
       otos.i $e |- I = ( z e. ~P On |->
             ( iota y y Isom _E , _E ( ( O ` z ) , z ) ) ) $.
-      $( The (unique) isomorphism from a set of ordinals to its order type. $)
+      $( The (unique) isomorphism from a set of ordinals to its order type.
+         (Contributed by Stefan O'Rear, 12-Feb-2015.) $)
       otosiso $p |- ( X e. ~P On ->
           ( I ` X ) Isom _E , _E ( ( O ` X ) , X ) ) $=
         ( con0 wcel cfv cep cv wiso cio wceq isoeq4 syl isoeq5 wex cpw wb fveq2
@@ -1876,7 +1954,8 @@ $)
     $}
 
     $d O a b x y z $.
-    $( A set of ordinals is equinumerous to its order type. $)
+    $( A set of ordinals is equinumerous to its order type.  (Contributed by
+       Stefan O'Rear, 11-Feb-2015.) $)
     otosen $p |- ( X e. ~P On -> X ~~ ( O ` X ) ) $=
       ( va vb con0 cpw wcel cfv cv cep wiso cio cmpt ccnv wf1o cen wbr weq wceq
       wb fveq2 isoeq4 syl isoeq5 iotabidv isoeq1 cbviota syl6eq cbvmptv otosiso
@@ -2095,7 +2174,7 @@ $)
        modifications to use Hartogs' theorem instead of the weak variant
        (inconsequentially weakening some intermediate results), and making the
        well-foundedness condition explicit to avoid a direct dependence on
-       ~ ax-reg . $)
+       ~ ax-reg .  (Contributed by Stefan O'Rear, 14-Feb-2015.) $)
     hsmex $p |- ( X e. V -> { s e. U. ( R1 " On ) |
             A. x e. ( TC ` { s } ) x ~<_ X } e. _V ) $=
       ( va vb vc vd ve vf vg cv con0 cvv cmpt crdg com cep wiso wex wbr csn ctc
@@ -2111,7 +2190,8 @@ $)
       LJGNWNXPWMXFVPVLXGWOXQVQVTVKVRVLWHVNVSWA $.
       $( [14-Feb-2015] $)
 
-    $( The set of hereditary size-limited sets, assuming ~ ax-reg . $)
+    $( The set of hereditary size-limited sets, assuming ~ ax-reg .
+       (Contributed by Stefan O'Rear, 11-Feb-2015.) $)
     hsmex2 $p |- ( X e. V -> { s | A. x e. ( TC ` { s } ) x ~<_ X } e. _V ) $=
       ( wcel cv cdom wbr csn ctc cfv wral cab cr1 con0 cima cuni crab cvv wceq
       unir1 rabeq ax-mp rabab eqtr2i hsmex syl5eqel ) CBEAFCGHADFIJKLZDMZUHDNOP
@@ -2119,7 +2199,8 @@ $)
       $( [11-Feb-2015] $)
 
     $( The set of hereditary size-limited sets, assuming ~ ax-reg , using
-       strict comparison (an easy corrolary by separation). $)
+       strict comparison (an easy corrolary by separation).  (Contributed by
+       Stefan O'Rear, 11-Feb-2015.) $)
     hsmex3 $p |- ( X e. V -> { s | A. x e. ( TC ` { s } ) x ~< X } e. _V ) $=
       ( wcel cv csdm wbr csn ctc cfv wral cab cdom wss cvv ralimi ss2abi hsmex2
       sdomdom ssexg sylancr ) CBEAFZCGHZADFIJKZLZDMZUCCNHZAUELZDMZOUJPEUGPEUFUI
@@ -3704,7 +3785,8 @@ $)
     marypha1.d $e |- ( ( ph /\ d C_ A ) -> d ~<_ ( C " d ) ) $.
     $( (Philip) Hall's marriage theorem, sufficiency: a finite relation
        contains an injection if there is no subset of its domain which would be
-       forced to violate the pidgeonhole principle. $)
+       forced to violate the pidgeonhole principle.  (Contributed by Stefan
+       O'Rear, 20-Feb-2015.) $)
     marypha1 $p |- ( ph -> E. f e. ~P C f : A -1-1-> B ) $=
       ( vc vb cvv cv cpw wral wcel wss wi cfn wf1 wrex cima wbr elpwi ralrimiva
       cdom sylan2 cxp xpexg syl2anc elpw2g syl mpbird wceq xpeq2 raleqdv imbi2d
@@ -3770,7 +3852,7 @@ $)
     marypha2.b $e |- ( ph -> F : A --> Fin ) $.
     marypha2.c $e |- ( ( ph /\ d C_ A ) -> d ~<_ U. ( F " d ) ) $.
     $( Version of ~ marypha1 using a functional family of sets instead of a
-       relation. $)
+       relation.  (Contributed by Stefan O'Rear, 20-Feb-2015.) $)
     marypha2 $p |- ( ph -> E. g ( g : A -1-1-> _V /\
           A. x e. A ( g ` x ) e. ( F ` x ) ) ) $=
       ( cuni cv wf1 cfv cxp ciun cvv wcel wa cfn wss crn csn cpw wrex wral wceq
@@ -13117,7 +13199,8 @@ $)
        closed sets in the factors of a topology, and there is a definable
        element in each topology (which need not be in the closed set - if it
        were this would be trivial), then compactness (via finite intersection)
-       guarantees that the final product is nonempty. $)
+       guarantees that the final product is nonempty.  (Contributed by Stefan
+       O'Rear, 22-Feb-2015.) $)
     kelac1 $p |- ( ph -> X_ x e. I S =/= (/) ) $=
       ( vy wcel c0 wral syl cvv vz vf vw cixp wex wne cuni weq cif ciin cin wss
       cv wceq wa ccld cfv eqid cldss3 ralrimiva boxriin cmpt cpt ctop wf cmptop
@@ -13191,7 +13274,8 @@ $)
     kelac2.k $e |- ( ph -> ( Xt_ `
           ( x e. I |-> ( topGen ` { S , { ~P U. S } } ) ) ) e. Comp ) $.
     $( Kelley's choice, most common form: compactness of a product of knob
-       topologies recovers choice. $)
+       topologies recovers choice.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     kelac2 $p |- ( ph -> X_ x e. I S =/= (/) ) $=
       ( cuni cfv wcel 3syl cdif cun cvv wceq cin c0 a1i wss cid cpw csn cpr ctg
       cres cv ccmp ctop kelac2lem cmptop ccld uncom difeq1i difun2 eqtri uniprg
@@ -13211,7 +13295,7 @@ $)
   ${
     $d f r x z $.
     $( Equivalent of the axiom of choice: definition AC1 of [Schechter]
-       p. 139. $)
+       p. 139.  (Contributed by Stefan O'Rear, 22-Feb-2015.) $)
     dfac1 $p |- ( CHOICE <->
         A. x E. f A. z e. x ( z =/= (/) -> ( f ` z ) e. z ) ) $=
       ( vr wchoi cv wwe wex wal c0 wne cfv wcel wi wral df-ac aceq8 bitri ) EAF
@@ -13222,7 +13306,8 @@ $)
   ${
     $d f g s t x $.
     $( Equivalence of the axiom of choice with a statement related to ~ ac9 ;
-       definition AC3 of [Schechter] p. 139. $)
+       definition AC3 of [Schechter] p. 139.  (Contributed by Stefan O'Rear,
+       22-Feb-2015.) $)
     dfac3 $p |- ( CHOICE <-> A. f ( ( Fun f /\ (/) e/ ran f ) ->
             X_ x e. dom f ( f ` x ) =/= (/) ) ) $=
       ( vt vg vs cv c0 wne cfv wcel wi wral wex wa cixp vex wceq id cvv ax-mp
@@ -13257,7 +13342,8 @@ $)
   ${
     $d f g y $.  $d g x $.  $d x y $.
     $( Tychonoff's theorem implies choice.  (This is actually a
-       biconditional.)  Half of definition AC21 of Schechter p. 461. $)
+       biconditional.)  Half of definition AC21 of Schechter p. 461.
+       (Contributed by Stefan O'Rear, 22-Feb-2015.) $)
     dfac21i $p |- ( A. f ( f : dom f --> Comp ->
             ( Xt_ ` f ) e. Comp ) -> CHOICE ) $=
       ( vg vx vy cv cdm ccmp wf cpt cfv wcel wi wal c0 wa wne cuni cpw ctg cvv
@@ -17633,7 +17719,8 @@ $)
       PUFUHCUFUDABRHIUHABUDQABUDSTUAUB $.
       $( [25-Jan-2015] $)
 
-    $( Module isomorphism is symmetric. $)
+    $( Module isomorphism is symmetric.  (Contributed by Stefan O'Rear,
+       26-Feb-2015.) $)
     lmicsym $p |- ( ( R ~=m S /\ S e. V ) -> S ~=m R ) $=
       ( vf wcel clmic wbr clmim co c0 wne brlmic cv wex n0 cvv elex syl syl5bi
       wi wa ccnv lmimcnv brlmici expcom exlimdv impcom ) BCEZABFGZBAFGZUIABHIZJ
@@ -20350,14 +20437,28 @@ $)
     $( An independent family is a family of vectors, no nonzero multiple of
        which can be expressed as a linear combination of other elements of the
        family.  This is almost, but not quite, the same as a function into an
-       independent set. $)
+       independent set.
+
+       This is a defined concept because it matters in many cases whether
+       independence is taken at a set or family level.  For instance, a number
+       is transcedental iff its nonzero powers are linearly independent.  Is 1
+       transcedental?  It has only one nonzero power.
+
+       We can almost define family independence as a family of unequal elements
+       with independent range, as ~ islindf3 , but taking that as primitive
+       would lead to unpleasant corner case behavior with the zero ring.
+
+       This is equivalent to the common definition of having no nontrivial
+       representations of zero ( ~ islindf4) and only one representation for
+       each element of the range ( ~ islindf5). $)
     df-lindf $a |- LIndF = { <. f , w >. | ( f : dom f --> ( Base ` w ) /\
             [ ( Scalar ` w ) / s ] A. x e. dom f
                 A. k e. ( ( Base ` s ) \ { ( 0g ` s ) } )
                   -. ( k ( vsca ` w ) ( f ` x ) ) e.
                       ( ( LSpan ` w ) ` ( f " ( dom f \ { x } ) ) ) ) } $.
 
-    $( An independent set is a set which is independent as a family. $)
+    $( An independent set is a set which is independent as a family.  See also
+       ~ islinds3 and ~ islinds4 . $)
     df-linds $a |- LIndS = ( w e. _V |->
           { s e. ~P ( Base ` w ) | ( _I |` s ) LIndF w } ) $.
   $}
@@ -20366,25 +20467,28 @@ $)
     $d O r $.  $d R r $.  $d Z r $.
     isnzr.o $e |- O = ( 1r ` R ) $.
     isnzr.z $e |- Z = ( 0g ` R ) $.
-    $( Property of a nonzero ring. $)
+    $( Property of a nonzero ring.  (Contributed by Stefan O'Rear,
+       24-Feb-2015.) $)
     isnzr $p |- ( R e. NzRing <-> ( R e. Ring /\ O =/= Z ) ) $=
       ( vr cv cur cfv c0g wne crg cnzr wceq fveq2 syl6eqr neeq12d df-nzr elrab2
       ) FGZHIZTJIZKBCKFALMTANZUABUBCUCUAAHIBTAHODPUCUBAJICTAJOEPQFRS $.
       $( [24-Feb-2015] $)
 
-    $( One and zero are different in a nonzero ring. $)
+    $( One and zero are different in a nonzero ring.  (Contributed by Stefan
+       O'Rear, 24-Feb-2015.) $)
     nzrnz $p |- ( R e. NzRing -> O =/= Z ) $=
       ( cnzr wcel crg wne isnzr simprbi ) AFGAHGBCIABCDEJK $.
       $( [24-Feb-2015] $)
   $}
 
-  $( A nonzero ring is a ring. $)
+  $( A nonzero ring is a ring.  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
   nzrrng $p |- ( R e. NzRing -> R e. Ring ) $=
     ( cnzr wcel crg cur cfv c0g wne eqid isnzr simplbi ) ABCADCAEFZAGFZHALMLIMI
     JK $.
     $( [24-Feb-2015] $)
 
-  $( All division rings are nonzero. $)
+  $( All division rings are nonzero.  (Contributed by Stefan O'Rear,
+     24-Feb-2015.) $)
   drngnzr $p |- ( R e. DivRing -> R e. NzRing ) $=
     ( cdr wcel crg cur cfv c0g wne cnzr drngrng eqid drngunz isnzr sylanbrc ) A
     BCADCAEFZAGFZHAICAJAOPPKZOKZLAOPRQMN $.
@@ -20394,7 +20498,7 @@ $)
     $d B x y $.  $d R x y $.
     isnzr2.b $e |- B = ( Base ` R ) $.
     $( Equivalent characterization of nonzero rings: they have at least two
-       elements. $)
+       elements.  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     isnzr2 $p |- ( R e. NzRing <-> ( R e. Ring /\ 2o ~<_ B ) ) $=
       ( vx vy wcel cfv wne wa c2o cdom wbr eqid c1o wrex adantr cv wceq cvv wb
       cnzr crg cur c0g isnzr csdm weq wn rngidcl rng0cl simpr df-ne neeq1 neeq2
@@ -20412,7 +20516,7 @@ $)
   ${
     $d f k s w x $.
     $( The independent-family predicate is a proper relation and can be used
-       with ~ brrelexi . $)
+       with ~ brrelexi .  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     rellindf $p |- Rel LIndF $=
       ( vf vw vk vx vs cv cdm cbs cfv wf cvsca co csn cdif cima clspn wcel wral
       wn c0g csca wsbc wa clindf df-lindf relopabi ) AFZGZBFZHIUGJCFDFZUGIUIKIL
@@ -20424,7 +20528,7 @@ $)
     $d W s w $.  $d X s $.
     islinds.b $e |- B = ( Base ` W ) $.
     $( Property of an independent set of vectors in terms of an independent
-       family. $)
+       family.  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     islinds $p |- ( W e. V -> ( X e. ( LIndS ` W ) <->
           ( X C_ B /\ ( _I |` X ) LIndF W ) ) ) $=
       ( vs vw wcel clinds cfv cid cv cres clindf wbr cbs cpw crab wa wceq fveq2
@@ -20436,7 +20540,8 @@ $)
       RDVJWEUTAVJDEVAVBVCUSVD $.
       $( [24-Feb-2015] $)
 
-    $( An independent set of vectors is a set of vectors. $)
+    $( An independent set of vectors is a set of vectors.  (Contributed by
+       Stefan O'Rear, 24-Feb-2015.) $)
     linds1 $p |- ( X e. ( LIndS ` W ) -> X C_ B ) $=
       ( clinds cfv wcel wss cid cres clindf wbr wa cdm wb elfvdm islinds simpld
       syl ibi ) CBEFGZCAHZICJBKLZUAUBUCMZUABENZGUAUDOCBEPAUEBCDQSTR $.
@@ -20444,7 +20549,8 @@ $)
   $}
 
   ${
-    $( An independent set of vectors is independent as a family. $)
+    $( An independent set of vectors is independent as a family.  (Contributed
+       by Stefan O'Rear, 24-Feb-2015.) $)
     linds2 $p |- ( X e. ( LIndS ` W ) -> ( _I |` X ) LIndF W ) $=
       ( clinds cfv wcel cbs wss cid cres clindf wbr cdm elfvdm eqid islinds syl
       wa wb ibi simprd ) BACDEZBAFDZGZHBIAJKZUAUCUDQZUAACLZEUAUERBACMUBUFABUBNO
@@ -20461,7 +20567,8 @@ $)
     islindf.s $e |- S = ( Scalar ` W ) $.
     islindf.n $e |- N = ( Base ` S ) $.
     islindf.z $e |- Z = ( 0g ` S ) $.
-    $( Property of an independent family of vectors. $)
+    $( Property of an independent family of vectors.  (Contributed by Stefan
+       O'Rear, 24-Feb-2015.) $)
     islindf $p |- ( ( W e. Y /\ F e. X ) -> ( F LIndF W <->
           ( F : dom F --> B /\ A. x e. dom F A. k e. ( N \ { Z } )
                 -. ( k V ( F ` x ) ) e.
@@ -20484,7 +20591,8 @@ $)
       WMWN $.
       $( [24-Feb-2015] $)
 
-    $( Expanded property of an independent set of vectors. $)
+    $( Expanded property of an independent set of vectors.  (Contributed by
+       Stefan O'Rear, 24-Feb-2015.) $)
     islinds2 $p |- ( W e. Y -> ( F e. ( LIndS ` W ) <->
           ( F C_ B /\ A. x e. F A. k e. ( N \ { Z } )
                 -. ( k V x ) e. ( K ` ( F \ { x } ) ) ) ) ) $=
@@ -20506,7 +20614,7 @@ $)
     $d B k $.  $d B x $.  $d I k $.  $d I x $.  $d X k $.  $d X x $.  $d Y k $.
     $d Y x $.
     $( Property of an independent family of vectors with prior constrained
-       domain and codomain. $)
+       domain and codomain.  (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
     islindf2 $p |- ( ( W e. Y /\ I e. X /\ F : I --> B ) -> ( F LIndF W <->
           A. x e. I A. k e. ( N \ { Z } ) -. ( k V ( F ` x ) ) e.
                   ( K ` ( F " ( I \ { x } ) ) ) ) ) $=
@@ -20524,7 +20632,8 @@ $)
   ${
     $d F k x $.  $d W k x $.
     lindff.b $e |- B = ( Base ` W ) $.
-    $( Functional property of a linearly independent family. $)
+    $( Functional property of a linearly independent family.  (Contributed by
+       Stefan O'Rear, 24-Feb-2015.) $)
     lindff $p |- ( ( F LIndF W /\ W e. Y ) -> F : dom F --> B ) $=
       ( vk vx clindf wbr wcel wa cdm wf cv cfv csn cdif wral cvv eqid cima csca
       cvsca co clspn wn cbs c0g simpl wb rellindf brrelexi islindf sylan2 mpbid
@@ -20543,7 +20652,8 @@ $)
     lindfind.z $e |- Z = ( 0g ` L ) $.
     lindfind.k $e |- K = ( Base ` L ) $.
     $( A linearly independent family is independent: no nonzero element
-       multiple can be expressed as a linear combination of the others. $)
+       multiple can be expressed as a linear combination of the others.
+       (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     lindfind $p |- ( ( ( F LIndF W /\ E e. dom F ) /\
           ( A e. K /\ A =/= Z ) ) -> -. ( A S ( F ` E ) ) e.
             ( N ` ( F " ( dom F \ { E } ) ) ) ) $=
@@ -20562,7 +20672,8 @@ $)
       $( [24-Feb-2015] $)
 
     $( A linearly independent set is independent: no nonzero element multiple
-       can be expressed as a linear combination of the others. $)
+       can be expressed as a linear combination of the others.  (Contributed by
+       Stefan O'Rear, 24-Feb-2015.) $)
     lindsind $p |- ( ( ( F e. ( LIndS ` W ) /\ E e. F ) /\
           ( A e. K /\ A =/= Z ) ) -> -. ( A S E ) e. ( N ` ( F \ { E } ) ) ) $=
       ( va ve clinds cfv wcel wa wne csn cdif cv co wral simplr eldifsn biimpri
@@ -20580,7 +20691,8 @@ $)
     lindfind2.k $e |- K = ( LSpan ` W ) $.
     lindfind2.l $e |- L = ( Scalar ` W ) $.
     $( In a linearly independent family in a module over a nonzero ring, no
-       element is contained in the span of any non-containing set. $)
+       element is contained in the span of any non-containing set.
+       (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     lindfind2 $p |- ( ( ( W e. LMod /\ L e. NzRing ) /\
           F LIndF W /\ E e. dom F ) -> -. ( F ` E ) e.
             ( K ` ( F " ( dom F \ { E } ) ) ) ) $=
@@ -20595,7 +20707,8 @@ $)
       $( [24-Feb-2015] $)
 
     $( In a linearly independent set in a module over a nonzero ring, no
-       element is contained in the span of any non-containing set. $)
+       element is contained in the span of any non-containing set.
+       (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     lindsind2 $p |- ( ( ( W e. LMod /\ L e. NzRing ) /\
           F e. ( LIndS ` W ) /\ E e. F ) -> -. E e. ( K ` ( F \ { E } ) ) ) $=
       ( clmod wcel cnzr wa clinds cfv w3a cid cres cdif cima 3ad2ant3 wceq cdm
@@ -20613,7 +20726,7 @@ $)
     lindff1.b $e |- B = ( Base ` W ) $.
     lindff1.l $e |- L = ( Scalar ` W ) $.
     $( A linearly independent family over a nonzero ring has no repeated
-       elements. $)
+       elements.  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     lindff1 $p |- ( ( W e. LMod /\ L e. NzRing /\ F LIndF W ) ->
         F : dom F -1-1-> B ) $=
       ( vx vy clmod wcel cnzr cv cfv wral syl2anc wa wne wss syl adantr wbr w3a
@@ -20633,7 +20746,8 @@ $)
 
   ${
     $d F k x y $.  $d W k x y $.
-    $( The range of an independent family is an independent set. $)
+    $( The range of an independent family is an independent set.  (Contributed
+       by Stefan O'Rear, 24-Feb-2015.) $)
     lindfrn $p |- ( ( W e. LMod /\ F LIndF W ) -> ran F e. ( LIndS ` W ) ) $=
       ( vk vx vy clmod wcel wa cfv wss cv csn cdif wn wral eqid syl wne eldifsn
       adantr clindf wbr crn clinds cbs cvsca co clspn csca c0g wf lindff ancoms
@@ -20664,7 +20778,7 @@ $)
   ${
     $d F k x $.  $d G k x $.  $d K k x $.  $d W k x $.
     $( Rearranging and deleting elements from an independent family gives an
-       independent family. $)
+       independent family.  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     f1lindf $p |- ( ( W e. LMod /\ F LIndF W /\ G : K -1-1-> dom F ) ->
         ( F o. G ) LIndF W ) $=
       ( vk vx clmod wcel cfv wf cdif cima eqid syl2anc wss syl adantr wceq cvv
@@ -20696,7 +20810,8 @@ $)
       $( [24-Feb-2015] $)
   $}
 
-  $( Any restriction of an independent family is independent. $)
+  $( Any restriction of an independent family is independent.  (Contributed by
+     Stefan O'Rear, 24-Feb-2015.) $)
   lindfres $p |- ( ( W e. LMod /\ F LIndF W ) -> ( F |` X ) LIndF W ) $=
     ( clmod wcel clindf wbr cid cres cdm ccom wf1 wf1o f1oi f1of1 ax-mp resss
     wa wss syl dmss f1ss mp2an f1lindf mp3an3 wrel wceq cbs cfv lindff ancoms
@@ -20706,7 +20821,8 @@ $)
     VAUTVOVNABDVNUMUJUKVHVNAUNTAVDUOTACUPUQURUS $.
     $( [24-Feb-2015] $)
 
-  $( Any subset of an independent set is independent. $)
+  $( Any subset of an independent set is independent.  (Contributed by Stefan
+     O'Rear, 24-Feb-2015.) $)
   lindsss $p |- ( ( W e. LMod /\ F e. ( LIndS ` W ) /\ G C_ F ) ->
       G e. ( LIndS ` W ) ) $=
     ( clmod wcel clinds cfv wss w3a cbs cid cres clindf wa eqid linds1 adantl
@@ -20718,7 +20834,7 @@ $)
     $( [24-Feb-2015] $)
 
   $( A family constructed from non-repeated elements of an independent set is
-     independent. $)
+     independent.  (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
   f1linds $p |- ( ( W e. LMod /\ S e. ( LIndS ` W ) /\ F : D -1-1-> S ) ->
       F LIndF W ) $=
     ( clmod wcel clinds cfv wf1 w3a cid cres ccom clindf wbr cdm simp1 3ad2ant3
@@ -20731,7 +20847,8 @@ $)
   ${
     islindf3.l $e |- L = ( Scalar ` W ) $.
     $( In a nonzero ring, independent families can be equivalently
-       characterized as renamings of independent sets. $)
+       characterized as renamings of independent sets.  (Contributed by Stefan
+       O'Rear, 26-Feb-2015.) $)
     islindf3 $p |- ( ( W e. LMod /\ L e. NzRing ) -> ( F LIndF W <->
           ( F : dom F -1-1-> _V /\ ran F e. ( LIndS ` W ) ) ) ) $=
       ( wcel cnzr wa clindf wbr cdm cvv wf1 crn clinds cfv cbs wss eqid lindff1
@@ -20763,7 +20880,7 @@ $)
     lindfmm.b $e |- B = ( Base ` S ) $.
     lindfmm.c $e |- C = ( Base ` T ) $.
     $( Linear independence of a family is unchanged by injective linear
-       functions. $)
+       functions.  (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
     lindfmm $p |- ( ( G e. ( S LMHom T ) /\ G : B -1-1-> C /\ F : I --> B ) ->
         ( F LIndF S <-> ( G o. F ) LIndF T ) ) $=
       ( vk vx wcel cvv wb wa cfv cbs clmod eqid wceq clmhm co wf1 wf w3a clindf
@@ -20801,7 +20918,7 @@ $)
       $( [26-Feb-2015] $)
 
     $( Linear independence of a set is unchanged by injective linear
-       functions. $)
+       functions.  (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
     lindsmm $p |- ( ( G e. ( S LMHom T ) /\ G : B -1-1-> C /\ F C_ B ) ->
         ( F e. ( LIndS ` S ) <-> ( G " F ) e. ( LIndS ` T ) ) ) $=
       ( wcel wf1 cres clindf wbr wa clinds cfv wb wf clmod syl clmhm co wss w3a
@@ -20818,7 +20935,8 @@ $)
       EWBABFWCFEWDTWEWFWGWH $.
       $( [26-Feb-2015] $)
 
-    $( The monomorphic image of an independent set is independent. $)
+    $( The monomorphic image of an independent set is independent.
+       (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
     lindsmm2 $p |- ( ( G e. ( S LMHom T ) /\ G : B -1-1-> C /\
           F e. ( LIndS ` S ) ) -> ( G " F ) e. ( LIndS ` T ) ) $=
       ( clmhm co wcel wf1 clinds cfv w3a cima simp3 wss wb simp1 simp2 3ad2ant3
@@ -20831,7 +20949,8 @@ $)
     $d F k x $.  $d S k x $.  $d U k x $.  $d W k x $.  $d X k x $.
     lsslindf.u $e |- U = ( LSubSp ` W ) $.
     lsslindf.x $e |- X = ( W |`s S ) $.
-    $( Linear independence is unchanged by working in a subspace. $)
+    $( Linear independence is unchanged by working in a subspace.  (Contributed
+       by Stefan O'Rear, 24-Feb-2015.) $)
     lsslindf $p |- ( ( W e. LMod /\ S e. U /\ ran F C_ S ) ->
         ( F LIndF X <-> F LIndF W ) ) $=
       ( vk vx wcel wss cvv clindf a1i wb wa cbs cfv wral eqid clmod crn w3a wbr
@@ -20852,7 +20971,8 @@ $)
       UAUUEUUFUUGWOWQWRWSWT $.
       $( [24-Feb-2015] $)
 
-    $( Linear independence is unchanged by working in a subspace. $)
+    $( Linear independence is unchanged by working in a subspace.  (Contributed
+       by Stefan O'Rear, 24-Feb-2015.) $)
     lsslinds $p |- ( ( W e. LMod /\ S e. U /\ F C_ S ) ->
         ( F e. ( LIndS ` X ) <-> F e. ( LIndS ` W ) ) ) $=
       ( clmod wcel wss cbs cfv clindf wbr wa clinds eqid 3ad2ant2 wb cvv sseq2d
@@ -20871,7 +20991,8 @@ $)
     islbs4.b $e |- B = ( Base ` W ) $.
     islbs4.j $e |- J = ( LBasis ` W ) $.
     islbs4.k $e |- K = ( LSpan ` W ) $.
-    $( A basis is an independent spanning set. $)
+    $( A basis is an independent spanning set.  (Contributed by Stefan O'Rear,
+       24-Feb-2015.) $)
     islbs4 $p |- ( X e. J <-> ( X e. ( LIndS ` W ) /\ ( K ` X ) = B ) ) $=
       ( vk vx wcel cvv clinds cfv wa clbs cdm elfvdm elex eqid eleq2i syl sylbi
       wceq adantr wss cv cvsca co csn cdif csca cbs c0g wral w3a 3ancomb df-3an
@@ -20886,7 +21007,7 @@ $)
   ${
     $d J a $.  $d W a $.
     lbslinds.j $e |- J = ( LBasis ` W ) $.
-    $( A basis is independent. $)
+    $( A basis is independent.  (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     lbslinds $p |- J C_ ( LIndS ` W ) $=
       ( va clinds cfv cv wcel clspn cbs wceq eqid islbs4 simplbi ssriv ) DABEFZ
       DGZAHQPHQBIFZFBJFZKSARBQSLCRLMNO $.
@@ -20898,7 +21019,8 @@ $)
     islinds3.k $e |- K = ( LSpan ` W ) $.
     islinds3.x $e |- X = ( W |`s ( K ` Y ) ) $.
     islinds3.j $e |- J = ( LBasis ` X ) $.
-    $( A subset is linearly independent iff it is a basis of its span. $)
+    $( A subset is linearly independent iff it is a basis of its span.
+       (Contributed by Stefan O'Rear, 25-Feb-2015.) $)
     islinds3 $p |- ( W e. LMod -> ( Y e. ( LIndS ` W ) <-> Y e. J ) ) $=
       ( wcel clinds cfv wceq wa wss wi linds1 a1i eqid clmod clspn ressbasss wb
       cbs syl6ss adantr clss simpl lspcl lspssid lsslsp syl3anc lspssv ressbas2
@@ -20915,7 +21037,7 @@ $)
     $d J b $.  $d W b x $.  $d Y b x $.
     islinds4.j $e |- J = ( LBasis ` W ) $.
     $( A set is independent in a vector space iff it is a subset of some
-       basis.  (AC equivalent) $)
+       basis.  (AC equivalent) (Contributed by Stefan O'Rear, 24-Feb-2015.) $)
     islinds4 $p |- ( W e. LVec ->
         ( Y e. ( LIndS ` W ) <-> E. b e. J Y C_ b ) ) $=
       ( vx clvec wcel clinds cfv cv wss wrex wa cbs eqid ad2antrr simpr syl3anc
@@ -20938,7 +21060,8 @@ $)
   ${
     lmimlbs.j $e |- J = ( LBasis ` S ) $.
     lmimlbs.k $e |- K = ( LBasis ` T ) $.
-    $( The isomorphic image of a basis is a basis. $)
+    $( The isomorphic image of a basis is a basis.  (Contributed by Stefan
+       O'Rear, 26-Feb-2015.) $)
     lmimlbs $p |- ( ( ( F e. ( S LMIso T ) /\ T e. V ) /\ B e. J ) ->
         ( F " B ) e. K ) $=
       ( co wcel wa cima clinds cfv clspn cbs wceq eqid adantl lmimlmhm ad2antrr
@@ -20953,7 +21076,8 @@ $)
       $( [26-Feb-2015] $)
 
     $d J b f $.  $d K b f $.  $d S b f $.  $d T b f $.  $d V b f $.
-    $( Having a basis is an isomorphism invariant. $)
+    $( Having a basis is an isomorphism invariant.  (Contributed by Stefan
+       O'Rear, 26-Feb-2015.) $)
     lmiclbs $p |- ( ( S ~=m T /\ T e. V ) -> ( J =/= (/) -> K =/= (/) ) ) $=
       ( vf vb clmic wbr wcel c0 wne wi cv wex n0 wa ex clmim bitri cima lmimlbs
       co brlmic ne0i syl exlimdv syl5bi exlimiv sylbi imp ) ABJKZBELZCMNZDMNZOZ
@@ -20975,7 +21099,7 @@ $)
     islindf4.y $e |- Y = ( 0g ` R ) $.
     islindf4.l $e |- L = ( Base ` ( R freeLMod I ) ) $.
     $( A family is independent iff it has no nontrivial representations of
-       zero. $)
+       zero.  (Contributed by Stefan O'Rear, 28-Feb-2015.) $)
     islindf4 $p |- ( ( W e. LMod /\ I e. X /\ F : I --> B ) ->
         ( F LIndF W <-> A. x e. L ( ( W gsum ( x oF T F ) ) = Z ->
               x = ( I X. { Y } ) ) ) ) $=
@@ -21069,7 +21193,7 @@ $)
     islindf5.r $e |- ( ph -> R = ( Scalar ` T ) ) $.
     islindf5.a $e |- ( ph -> A : I --> C ) $.
     $( A family is independent iff the linear combinations homomorphism is
-       injective. $)
+       injective.  (Contributed by Stefan O'Rear, 28-Feb-2015.) $)
     islindf5 $p |- ( ph -> ( A LIndF T <-> E : B -1-1-> C ) ) $=
       ( vy cv cfv c0g wceq wi wral cof co cgsu csn cxp cfrlm cbs wf1 clindf wbr
       csca wcel simpr weq oveq1 oveq2d ovex fvmpt syl eqeq1d clmod eqid lmodrng
@@ -21103,15 +21227,15 @@ $)
     indlcim.l $e |- ( ph -> A LIndF T ) $.
     indlcim.s $e |- ( ph -> ( N ` J ) = C ) $.
     $( An independent, spanning family extends to an isomorphism from a free
-       module. $)
+       module.  (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
     indlcim $p |- ( ph -> E e. ( F LMIso T ) ) $=
       ( clmim co wcel clmhm wf1o wfn crn wss wfo fofn syl cdm clindf wbr lindff
-      wf clmod syl2anc frn df-f sylanbrc frlmup1 wf1 wceq islindf5 mpbid frlmup3
-      cfv forn fveq2d 3eqtrd dff1o5 wa wb islmim mpbir2and ) AHIGUGUHUIZHIGUJUH
-      UIZDEHUKZABCDEFGHIJMNOPQRTUAUBUCACJULZCUMZEUNZJECVBAJKCUOZWFUDJKCUPUQACUR
-      ZECVBZWHACGUSUTZGVCUIZWKUEUAECGVCQVAVDWJECVEUQJECVFVGZVHADEHVIZHUMZEVJWEA
-      WLWOUEABCDEFGHIJMNOPQRTUAUBUCWNVKVLAWPWGLVNKLVNEABCDEFGHIJLMNOPQRTUAUBUCW
-      NSVMAWGKLAWIWGKVJUDJKCVOUQVPUFVQDEHVRVGAWMWCWDWEVSVTUADEIGHVCPQWAUQWB $.
+      wf clmod syl2anc frn df-f sylanbrc frlmup1 wf1 islindf5 mpbid cfv frlmup3
+      wceq forn fveq2d 3eqtrd dff1o5 wa wb islmim mpbir2and ) AHIGUGUHUIZHIGUJU
+      HUIZDEHUKZABCDEFGHIJMNOPQRTUAUBUCACJULZCUMZEUNZJECVBAJKCUOZWFUDJKCUPUQACU
+      RZECVBZWHACGUSUTZGVCUIZWKUEUAECGVCQVAVDWJECVEUQJECVFVGZVHADEHVIZHUMZEVNWE
+      AWLWOUEABCDEFGHIJMNOPQRTUAUBUCWNVJVKAWPWGLVLKLVLEABCDEFGHIJLMNOPQRTUAUBUC
+      WNSVMAWGKLAWIWGKVNUDJKCVOUQVPUFVQDEHVRVGAWMWCWDWEVSVTUADEIGHVCPQWAUQWB $.
       $( [26-Feb-2015] $)
   $}
 
@@ -21121,7 +21245,7 @@ $)
     lbslcic.f $e |- F = ( Scalar ` W ) $.
     lbslcic.j $e |- J = ( LBasis ` W ) $.
     $( A module with a basis is isomorphic to a free module with the same
-       cardinality. $)
+       cardinality.  (Contributed by Stefan O'Rear, 26-Feb-2015.) $)
     lbslcic $p |- ( ( W e. LMod /\ B e. J /\ I ~~ B ) ->
         W ~=m ( F freeLMod I ) ) $=
       ( ve vx clmod wcel cen wbr cv co 3ad2ant2 cbs cfv eqid adantr cfrlm clmic
@@ -21142,8 +21266,11 @@ $)
     $d F j k $.  $d J j k $.  $d W j k $.
     lmisfree.j $e |- J = ( LBasis ` W ) $.
     lmisfree.f $e |- F = ( Scalar ` W ) $.
-    $( A module has a basis iff it is isomorphic to a free module.  Some
-       authors define "free module" to refer to any module with a basis. $)
+    $( A module has a basis iff it is isomorphic to a free module.  In settings
+       where isomorphic objects are not distinguished, it is common to define
+       "free module" as any module with a basis; thus for instance ~ lbsex
+       might be described as "every vector space is free."  (Contributed by
+       Stefan O'Rear, 26-Feb-2015.) $)
     lmisfree $p |- ( W e. LMod -> ( J =/= (/) <->
         E. k W ~=m ( F freeLMod k ) ) ) $=
       ( vj clmod wcel c0 wne cv cfrlm co clmic wbr wex wa cvv eqid n0 cen enref
