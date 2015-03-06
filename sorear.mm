@@ -1,4 +1,4 @@
-$[ set_clean.mm $] $( set.mm - Version of 17-Feb-2015 $)
+$[ set_clean.mm $] $( set.mm - Version of 28-Feb-2015 $)
 
 $(
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -229,20 +229,11 @@ $)
       $( [5-Feb-2015] $)
   $}
 
-  $( Composition with the converse.  (Contributed by Jeff Madsen,
-     2-Sep-2009.) $)
-  cnvcan $p |- ( Fun G -> ( G o. `' G ) = ( _I |` ran G ) ) $=
-    ( wfun ccnv ccom cid wss crn cres wceq wrel df-fun simprbi cdm dfdm4 dmcoeq
-    iss ax-mp df-rn eqtr4i a1i reseq2d eqeq2d syl5bb mpbid ) ABZAACZDZEFZUGEAGZ
-    HZIZUEAJUHAKLUHUGEUGMZHZIUEUKUGPUEUMUJUGUEULUIEULUIIUEULUFMZUIAMUFGIULUNIAN
-    AUFOQARSTUAUBUCUD $.
-    $( [2-Sep-2009] $)
-
   $( The composition of an onto function and its converse. _EDITORIAL_:
      Generalizes ~ f1ococnv2 .  (Contributed by Stefan O'Rear, 12-Feb-2015.) $)
   fococnv2 $p |- ( F : A -onto-> B -> ( F o. `' F ) = ( _I |` B ) ) $=
-    ( wfo ccnv ccom cid crn cres wfun wceq fofun cnvcan syl forn reseq2d eqtrd
-    ) ABCDZCCEFZGCHZIZGBIRCJSUAKABCLCMNRTBGABCOPQ $.
+    ( wfo ccnv ccom cid crn cres wfun wceq fofun funcocnv2 forn reseq2d eqtrd
+    syl ) ABCDZCCEFZGCHZIZGBIRCJSUAKABCLCMQRTBGABCNOP $.
     $( [12-Feb-2015] $)
 
   ${
@@ -643,16 +634,16 @@ $)
      19-Feb-2015.) $)
   difsnen $p |- ( ( X e. V /\ A e. X /\ B e. X ) ->
       ( X \ { A } ) ~~ ( X \ { B } ) ) $=
-    ( wcel csn cdif cen wbr wceq cvv difexg enrefg syl wne cun cin c0 disjdif
-    incom w3a 3ad2ant1 sneq difeq2d breq2d syl5ibcom imp wa simpl1 3syl dif32
-    syl6breq simpl3 simpl2 en2sn syl2anc eqtri a1i unen syl22anc simpr necomd
-    eldifsn sylanbrc difsnid 3brtr3d pm2.61dane ) DCEZADEZBDEZUAZDAFZGZDBFZGZ
-    HIZABVKABJZVPVKVMVMHIZVQVPVHVIVRVJVHVMKEZVRDVLCLZVMKMNUBVQVMVOVMHVQVLVNDA
-    BUCUDUEUFUGVKABOZUHZVMVNGZVNPZVOVLGZVLPZVMVOHWBWCWEHIVNVLHIZWCVNQZRJZWEVL
-    QZRJZWDWFHIWBWCWCWEHWBWCKEZWCWCHIWBVHVSWLVHVIVJWAUIVTVMVNKLUJWCKMNDVLVNUK
-    ULWBVJVIWGVHVIVJWAUMZVHVIVJWAUNZBADDUOUPWIWBWHVNWCQRWCVNTVNVMSUQURWKWBWJV
-    LWEQRWEVLTVLVOSUQURWCWEVNVLUSUTWBBVMEZWDVMJWBVJBAOWOWMWBABVKWAVAZVBBDAVCV
-    DVMBVENWBAVOEZWFVOJWBVIWAWQWNWPADBVCVDVOAVENVFVG $.
+    ( wcel csn cdif cen wbr wceq cvv difexg enrefg syl wne cun c0 incom disjdif
+    cin w3a 3ad2ant1 sneq difeq2d breq2d syl5ibcom imp wa simpl1 dif32 syl6breq
+    3syl simpl3 simpl2 en2sn syl2anc eqtri unen syl22anc simpr eldifsn sylanbrc
+    a1i necomd difsnid 3brtr3d pm2.61dane ) DCEZADEZBDEZUAZDAFZGZDBFZGZHIZABVKA
+    BJZVPVKVMVMHIZVQVPVHVIVRVJVHVMKEZVRDVLCLZVMKMNUBVQVMVOVMHVQVLVNDABUCUDUEUFU
+    GVKABOZUHZVMVNGZVNPZVOVLGZVLPZVMVOHWBWCWEHIVNVLHIZWCVNTZQJZWEVLTZQJZWDWFHIW
+    BWCWCWEHWBWCKEZWCWCHIWBVHVSWLVHVIVJWAUIVTVMVNKLULWCKMNDVLVNUJUKWBVJVIWGVHVI
+    VJWAUMZVHVIVJWAUNZBADDUOUPWIWBWHVNWCTQWCVNRVNVMSUQVCWKWBWJVLWETQWEVLRVLVOSU
+    QVCWCWEVNVLURUSWBBVMEZWDVMJWBVJBAOWOWMWBABVKWAUTZVDBDAVAVBVMBVENWBAVOEZWFVO
+    JWBVIWAWQWNWPADBVAVBVOAVENVFVG $.
     $( [19-Feb-2015] $)
 
   ${
@@ -1779,11 +1770,11 @@ $)
   $( A set is weakly dominant over its image under any function.  (Contributed
      by Stefan O'Rear, 14-Feb-2015.) $)
   wdomimag $p |- ( ( Fun F /\ A e. V ) -> ( F " A ) ~<_* A ) $=
-    ( wfun wcel wa cima crn cwdom df-ima cdm wbr cvv resfunexg funres funforn
-    cres wfo sylib syl2anc adantr fowdom cdom wss dmres inss1 eqsstri ssdom2g
-    cin mpi domwdom syl adantl wdomtr syl5eqbr ) BDZACEZFZBAGBAQZHZAIBAJURUTU
-    SKZILZVAAILZUTAILURUSMEVAUTUSRZVBBACNUPVDUQUPUSDVDABOUSPSUAUSMUTVAUBTUQVC
-    UPUQVAAUCLZVCUQVAAUDVEVAABKZUIABAUEAVFUFUGVAACUHUJVAAUKULUMUTVAAUNTUO $.
+    ( wfun wcel wa cima cres crn cwdom df-ima cdm wbr cvv wfo resfunexg funforn
+    funres sylib syl2anc adantr fowdom cdom wss cin dmres inss1 eqsstri ssdom2g
+    mpi domwdom syl adantl wdomtr syl5eqbr ) BDZACEZFZBAGBAHZIZAJBAKURUTUSLZJMZ
+    VAAJMZUTAJMURUSNEVAUTUSOZVBBACPUPVDUQUPUSDVDABRUSQSUAUSNUTVAUBTUQVCUPUQVAAU
+    CMZVCUQVAAUDVEVAABLZUEABAUFAVFUGUHVAACUIUJVAAUKULUMUTVAAUNTUO $.
     $( [14-Feb-2015] $)
 
 $(
@@ -15104,14 +15095,14 @@ $)
        ` om ` .  (Contributed by Stefan O'Rear, 6-Nov-2014.) $)
     dffin3-2 $p |- Fin3 = { x | -. E. y y : x -onto-> om } $=
       ( va vb cfin3 cv com wfo wex cab wcel cpw cdom wbr cvv vex notbid cfin3ds
-      wn cfin4 csdm wi fornex ax-mp canth2g sdomdom 3syl fopwdom mpan syl2anc
-      domtr df-fin3 abeq2i pwex wceq breq2 dffin4-2 elab2 bitri con2bii exlimiv
-      sylib con2i fin23lem41 df32lem12 con1i sseldi impbii weq foeq2 elab eqriv
-      exbidv bitr4i ) CEAFZGBFZHZBIZSZAJZCFZEKZWAGVPHZBIZSZWAVTKWBWEWDWBWCWBSZB
-      WCGWALZMNZWFWCGGLZMNZWIWGMNZWHWCGOKZGWIUANWJWAOKWCWLUBCPZWAGOVPUCUDGOUEGW
-      IUFUGVPOKWCWKBPWAGVPUHUIGWIWGUKUJWBWHWBWGTKZWHSZWNCECULUMGDFZMNZSWODWGTWA
-      WMUNWPWGUOWQWHWPWGGMUPQDUQURUSUTVBVAVCWEREWAVDWARKWDBCVEVFVGVHVSWEAWAWMAC
-      VIZVRWDWRVQWCBVOWAGVPVJVMQVKVNVL $.
+      wn cfin4 csdm wi fornex canth2g sdomdom 3syl fopwdom mpan syl2anc df-fin3
+      ax-mp domtr abeq2i breq2 dffin4-2 elab2 bitri con2bii sylib exlimiv con2i
+      pwex wceq fin23lem41 df32lem12 con1i sseldi impbii weq exbidv elab bitr4i
+      foeq2 eqriv ) CEAFZGBFZHZBIZSZAJZCFZEKZWAGVPHZBIZSZWAVTKWBWEWDWBWCWBSZBWC
+      GWALZMNZWFWCGGLZMNZWIWGMNZWHWCGOKZGWIUANWJWAOKWCWLUBCPZWAGOVPUCUKGOUDGWIU
+      EUFVPOKWCWKBPWAGVPUGUHGWIWGULUIWBWHWBWGTKZWHSZWNCECUJUMGDFZMNZSWODWGTWAWM
+      VBWPWGVCWQWHWPWGGMUNQDUOUPUQURUSUTVAWEREWAVDWARKWDBCVEVFVGVHVSWEAWAWMACVI
+      ZVRWDWRVQWCBVOWAGVPVMVJQVKVLVN $.
       $( [6-Nov-2014] $)
 
     $( Weakly Dedekind-infinite sets are exactly those with an ` om ` -indexed
@@ -20449,8 +20440,8 @@ $)
        would lead to unpleasant corner case behavior with the zero ring.
 
        This is equivalent to the common definition of having no nontrivial
-       representations of zero ( ~ islindf4) and only one representation for
-       each element of the range ( ~ islindf5). $)
+       representations of zero ( ~ islindf4 ) and only one representation for
+       each element of the range ( ~ islindf5 ). $)
     df-lindf $a |- LIndF = { <. f , w >. | ( f : dom f --> ( Base ` w ) /\
             [ ( Scalar ` w ) / s ] A. x e. dom f
                 A. k e. ( ( Base ` s ) \ { ( 0g ` s ) } )
@@ -20813,24 +20804,24 @@ $)
   $( Any restriction of an independent family is independent.  (Contributed by
      Stefan O'Rear, 24-Feb-2015.) $)
   lindfres $p |- ( ( W e. LMod /\ F LIndF W ) -> ( F |` X ) LIndF W ) $=
-    ( clmod wcel clindf wbr cid cres cdm ccom wf1 wf1o f1oi f1of1 ax-mp resss
-    wa wss syl dmss f1ss mp2an f1lindf mp3an3 wrel wceq cbs cfv lindff ancoms
-    wf eqid frel coires1 resdmres syl6eq breq1d mpbid ) BDEZABFGZRZAHACIZJZIZ
-    KZBFGZVCBFGUTVAVDAJZVELZVGVDVDVELZVDVHSZVIVDVDVEMVJVDNVDVDVEOPVCASVKACQVC
-    AUAPVDVDVHVEUBUCAVEVDBUDUEVBVFVCBFVBVFAVDIZVCVBAUFZVFVLUGVBVHBUHUIZAULZVM
-    VAUTVOVNABDVNUMUJUKVHVNAUNTAVDUOTACUPUQURUS $.
+    ( clmod wcel clindf wbr wa cid cres cdm ccom wf1 wss wf1o f1of1 ax-mp resss
+    f1oi syl dmss f1ss mp2an f1lindf mp3an3 wrel wceq cbs wf eqid lindff ancoms
+    cfv frel coires1 resdmres syl6eq breq1d mpbid ) BDEZABFGZHZAIACJZKZJZLZBFGZ
+    VCBFGUTVAVDAKZVEMZVGVDVDVEMZVDVHNZVIVDVDVEOVJVDSVDVDVEPQVCANVKACRVCAUAQVDVD
+    VHVEUBUCAVEVDBUDUEVBVFVCBFVBVFAVDJZVCVBAUFZVFVLUGVBVHBUHUMZAUIZVMVAUTVOVNAB
+    DVNUJUKULVHVNAUNTAVDUOTACUPUQURUS $.
     $( [24-Feb-2015] $)
 
   $( Any subset of an independent set is independent.  (Contributed by Stefan
      O'Rear, 24-Feb-2015.) $)
   lindsss $p |- ( ( W e. LMod /\ F e. ( LIndS ` W ) /\ G C_ F ) ->
       G e. ( LIndS ` W ) ) $=
-    ( clmod wcel clinds cfv wss w3a cbs cid cres clindf wa eqid linds1 adantl
-    wbr sstr2 wb syl5com 3impia simp1 linds2 3ad2ant2 lindfres syl2anc breq1d
-    resabs1 3ad2ant3 mpbid islinds 3ad2ant1 mpbir2and ) CDEZACFGZEZBAHZIZBUPE
-    ZBCJGZHZKBLZCMRZUOUQURVBUOUQNAVAHZURVBUQVEUOVACAVAOZPQBAVASUAUBUSKALZBLZC
-    MRZVDUSUOVGCMRZVIUOUQURUCUQUOVJURCAUDUEVGCBUFUGURUOVIVDTUQURVHVCCMKBAUIUH
-    UJUKUOUQUTVBVDNTURVADCBVFULUMUN $.
+    ( clmod wcel clinds cfv wss w3a cbs cid cres clindf wbr linds1 adantl sstr2
+    wa eqid wb syl5com 3impia linds2 3ad2ant2 lindfres syl2anc resabs1 3ad2ant3
+    simp1 breq1d mpbid islinds 3ad2ant1 mpbir2and ) CDEZACFGZEZBAHZIZBUPEZBCJGZ
+    HZKBLZCMNZUOUQURVBUOUQRAVAHZURVBUQVEUOVACAVASZOPBAVAQUAUBUSKALZBLZCMNZVDUSU
+    OVGCMNZVIUOUQURUIUQUOVJURCAUCUDVGCBUEUFURUOVIVDTUQURVHVCCMKBAUGUJUHUKUOUQUT
+    VBVDRTURVADCBVFULUMUN $.
     $( [24-Feb-2015] $)
 
   $( A family constructed from non-repeated elements of an independent set is
