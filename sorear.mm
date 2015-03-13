@@ -16,7 +16,6 @@ $)
   $c Irred $. $( Ring irreducible $)
   $c RPrime $. $( Ring prime element $)
   $c UFD $. $( Unique factorization domain $)
-  $c RingHom $. $( Ring homomorphism $)
   $c RingIso $. $( Ring isomorphism $)
   $c "s $. $( Image structure $)
   $c /s $. $( Quotient structure $)
@@ -72,10 +71,6 @@ $)
        characterization due to Kaplansky). $)
     df-ufd $a |- UFD = { r e. CRing | ( ( AbsVal ` r ) =/= (/) /\
       A. i e. ( PrIdl ` r ) ( i i^i ( RPrime ` r ) ) =/= (/) ) } $.
-
-    $( Define the set of ring isomorphisms from ` r ` to ` s ` . $)
-    df-rngiso $a |- RingIso = ( r e. _V , s e. _V |->
-      { f e. ( r RingHom s ) | `' f e. ( s RingHom r ) } ) $.
 
     $( Define an image structure, which takes a structure and a function on the
        base set, and maps all the operations via the function.  For this to
@@ -699,8 +694,6 @@ $)
   $c mPoly $. $( Multivariate polynomial $)
   $c mHomP $. $( Homogeneous polynomials $)
   $c mPSDer $. $( Polynomial or power series derivative $)
-  $c evalSub $. $( Evaluation in a subring $)
-  $c eval $. $( Evaluation of a multivariate polynomial $)
   $c selectVars $. $( Treat polynomial as a polynomial of polynomials $)
   $c mDeg $. $( Multivariate polynomial degree $)
   $c AlgInd $. $( Algebraically independent $)
@@ -721,12 +714,6 @@ $)
 
   $( Power series partial derivative function. $)
   cpsd $a class mPSDer $.
-
-  $( Evaluation in a subring. $)
-  ces $a class evalSub $.
-
-  $( Evaluation of a multivariate polynomial. $)
-  cevl $a class eval $.
 
   $( Select a subset of variables in a multivariate polynomial. $)
   cslv $a class selectVars $.
@@ -788,54 +775,10 @@ $)
           ( ( ( k ` x ) + 1 ) ( .g ` r ) ( f `
             ( k oF + ( y e. i |-> if ( y = x , 1 , 0 ) ) ) ) ) ) ) ) ) $.
 
-    $( Define the evaluation map for the polynomial algebra.  The function
-       ` ( ( I evalSub S ) `` R ) : V --> ( S ^m ( S ^m I ) ) ` makes sense
-       when ` I ` is an index set, ` S ` is a ring, ` R ` is a subring of
-       ` S ` , and where ` V ` is the set of polynomials in
-       ` ( I mPoly R ) ` .  This function maps an element of the formal
-       polynomial algebra (with coefficients in ` R ` ) to a function from
-       assignments ` I --> S ` of the variables to elements of ` S ` formed by
-       evaluating the polynomial with the given assignments. $)
-    df-evls $a |- evalSub = ( i e. _V , s e. _V |-> [_ ( Base ` s ) / b ]_
-      ( r e. ~P b |-> [_ ( i mPoly ( s |`s r ) ) / w ]_ [_ ( Base ` w ) / v ]_
-        ( iota_ f e. ( w RingHom ( s ^s ( b ^m i ) ) )
-        A. x e. i ( f ` ( ( i mVar ( s |`s r ) ) ` x ) ) =
-          ( g e. ( b ^m i ) |-> ( g ` x ) ) ) ) ) $.
-
-    $( A simplication of ` evalSub ` when the evaluation ring is the same as
-       the coefficient ring. $)
-    df-evl $a |- eval = ( i e. _V , r e. _V |->
-      ( ( i evalSub r ) ` ( Base ` r ) ) ) $.
-
-    $( Define the "variable selection" function.  The function
-       ` ( ( I selectVars R ) `` J ) ` maps elements of ` ( I mPoly R ) `
-       bijectively onto ` ( J mPoly ( ( I \ J ) mPoly R ) ) ` in the natural
-       way, for example if ` I = { x , y } ` and ` J = { y } ` it would map
-       ` 1 + x + y + x y e. ( { x , y } mPoly ZZ ) ` to
-       ` ( 1 + x ) + ( 1 + x ) y e. ( { y } mPoly ( { x } mPoly ZZ ) ) ` .
-       This, for example, allows one to treat a multivariate polynomial as a
-       univariate polynomial with coefficients in a polynomial ring with one
-       less variable. $)
-    df-selv $a |- selectVars = ( i e. _V , r e. _V |->
-      ( j e. ~P i |-> ( f e. ( i mPoly r ) |->
-      [_ ( ( i \ j ) mPoly r ) / s ]_ [_ ( x e. ( Scalar ` s ) |->
-      ( x ( vsca ` s ) ( 1r ` s ) ) ) / c ]_
-        ( ( ( ( i evalSub s ) ` ( c "s r ) ) ` ( c o. f ) ) `
-          ( x e. i |-> if ( x e. j , ( ( j mVar ( ( i \ j ) mPoly r ) ) ` x ) ,
-            ( c o. ( ( ( i \ j ) mVar r ) ` x ) ) ) ) ) ) ) ) $.
-
     $( Define the degree of a polynomial. $)
     df-mdeg $a |- mDeg = ( i e. _V , r e. _V |-> ( f e. ( i mPoly r ) |->
       sup ( ran ( h e. ( `' f " ( _V \ { ( 0g ` r ) } ) ) |->
         sum_ x e. i ( h ` x ) ) , NN0 , < ) ) ) $.
-
-    $( Define the predicate "the set ` v ` is algebraically independent in the
-       algebra ` w ` ".  A collection of vectors is algebraically independent
-       if no nontrivial polynomial with elements from the subset evaluates to
-       zero. $)
-    df-algind $a |- AlgInd = ( w e. _V , k e. ~P ( Base ` w ) |->
-      { v e. ~P ( Base ` w ) | Fun `' ( f e. ( Base ` ( v mPoly ( w |`s k ) ) )
-        |-> ( ( ( ( v evalSub w ) ` k ) ` f ) ` ( _I |` v ) ) ) } ) $.
 
     $( Define a well-order on the set of all finite bags from the index set
        ` i ` given a wellordering ` r ` of ` i ` . $)
@@ -3471,21 +3414,6 @@ $)
     df-ply1 $a |- Poly1 = ( r e. _V |->
       ( ( PwSer1 ` r ) |`s ( Base ` ( 1o mPoly r ) ) ) ) $.
 
-    $( Define the evaluation map for the univariate polynomial algebra.  The
-       function ` ( S evalSub1 R ) : V --> ( S ^m S ) ` makes sense when ` S `
-       is a ring and ` R ` is a subring of ` S ` , and where ` V ` is the set
-       of polynomials in ` ( Poly1 `` R ) ` .  This function maps an element of
-       the formal polynomial algebra (with coefficients in ` R ` ) to a
-       function from assignments to the variable from ` S ` into an element of
-       ` S ` formed by evaluating the polynomial with the given assignment. $)
-    df-evls1 $a |- evalSub1 = ( s e. _V , r e. ~P ( Base ` s ) |->
-      [_ ( Base ` s ) / b ]_ ( ( x e. ( b ^m ( b ^m 1o ) ) |-> ( x o.
-        ( y e. b |-> ( 1o X. { y } ) ) ) ) o. ( ( 1o evalSub s ) ` r ) ) ) $.
-
-    $( A simplication of ` evalSub1 ` when the evaluation ring is the same as
-       the coefficient ring. $)
-    df-evl1 $a |- eval1 = ( r e. _V |-> ( r evalSub1 ( Base ` r ) ) ) $.
-
     $( Define the degree of a univariate polynomial. $)
     df-deg1 $a |- deg1 = ( r e. _V , f e. ( Poly1 ` r ) |->
       ( ( 1o mDeg r ) ` f ) ) $.
@@ -3778,6 +3706,14 @@ $)
       wb syl ) CDEZBCFGHZBAICJHZACKZLZUCADLUACMUBUESDCNABCOTUAUCAUDDDCPQR $.
       $( [30-Jan-2015] $)
   $}
+
+  $( The function value of an operand in a set is contained in the image of
+     that set, using the ` Fn ` abbreviation. $)
+  fnfvima $p |- ( ( F Fn A /\ S C_ A /\ X e. S ) -> ( F ` X ) e. ( F " S ) ) $=
+    ( wfn wss wcel w3a wfun cdm wa cima fnfun 3ad2ant1 simp2 wceq fndm sseqtr4d
+    cfv jca simp3 funfvima2 sylc ) CAEZBAFZDBGZHZCIZBCJZFZKUFDCSCBLGUGUHUJUDUEU
+    HUFACMNUGBAUIUDUEUFOUDUEUIAPUFACQNRTUDUEUFUABDCUBUC $.
+    $( [10-Mar-2015] $)
 
   $( Images under a function never map nonempty sets to empty sets.
      _EDITORIAL_: usable in ~ fnwe2lem2 .  (Contributed by Stefan O'Rear,
@@ -4156,11 +4092,167 @@ $)
       $( [28-Feb-2015] $)
   $}
 
+  ${
+    $d B x $.  $d V x $.  $d X x $.
+    fvtresfn.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
+    $( Functionality of a tuple-restriction function.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
+    fvtresfn $p |- ( X e. B -> ( F ` X ) = ( X |` V ) ) $=
+      ( wcel cres cvv cfv wceq resexg cv reseq1 fvmptg mpdan ) EBGEDHZIGECJQKED
+      BLAEAMZDHQBICREDNFOP $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d A y $.  $d B y $.  $d C x y $.
+    $( Unrestricted restriction of the mapping operation.  (Contributed by
+       Stefan O'Rear, 24-Jan-2015.) $)
+    resmpt3 $p |- ( ( x e. A |-> B ) |` C ) = ( x e. ( A i^i C ) |-> B ) $=
+      ( vy cv wcel wceq wa copab cres cin cmpt resopab ancom bitri anbi1i anass
+      elin df-mpt bitr2i opabbii eqtri reseq1i 3eqtr4i ) AFZBGZEFCHZIZAEJZDKZUF
+      BDLZGZUHIZAEJZABCMZDKAULCMUKUFDGZUIIZAEJUOUIAEDNURUNAEUNUQUGIZUHIURUMUSUH
+      UMUGUQIUSUFBDSUGUQOPQUQUGUHRUAUBUCUPUJDAEBCTUDAEULCTUE $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d F x a b $.  $d G x a b $.  $d V x $.  $d W x $.  $d R x a b $.
+    $d D x $.
+    $( General value of ` ( F oF R G ) ` with no assumptions on functionality
+       of ` F ` and ` G ` .  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
+    offval3 $p |- ( ( F e. V /\ G e. W ) -> ( F oF R G ) =
+        ( x e. ( dom F i^i dom G ) |-> ( ( F ` x ) R ( G ` x ) ) ) ) $=
+      ( va vb wcel wa cvv cdm cin cv cfv co cmpt wceq elex adantr adantl inex1g
+      dmexg mptexg 3syl dmeq ineqan12d fveq1 oveqan12d mpteq12dv df-of ovmpt2ga
+      cof syl3anc ) CEIZDFIZJCKIZDKIZACLZDLZMZANZCOZVBDOZBPZQZKIZCDBUMZPVFRUOUQ
+      UPCESTUPURUODFSUAUOVGUPUOUSKIVAKIVGCEUCUSUTKUBAVAVEKUDUETGHCDKKAGNZLZHNZL
+      ZMZVBVIOZVBVKOZBPZQVFVHKVICRZVKDRZJAVMVPVAVEVQVRVJUSVLUTVICUFVKDUFUGVQVRV
+      NVCVOVDBVBVICUHVBVKDUHUIUJABGHUKULUN $.
+      $( [24-Jan-2015] $)
+
+    $( Pointwise combination commutes with restriction.  (Contributed by Stefan
+       O'Rear, 24-Jan-2015.) $)
+    offres $p |- ( ( F e. V /\ G e. W ) -> ( ( F oF R G ) |` D ) =
+        ( ( F |` D ) oF R ( G |` D ) ) ) $=
+      ( vx wcel cdm cin cfv co cmpt cres wceq fvres dmres 3eqtr4ri offval3 cvv
+      wa cv cof inss2 sseli oveq12d mpteq2ia inindi incom ineq12i eqid mpteq12i
+      syl resmpt3 reseq1d resexg syl2an 3eqtr4a ) CEHZDFHZUAZGCIZDIZJZGUBZCKZVE
+      DKZBLZMZANZGCANZIZDANZIZJZVEVKKZVEVMKZBLZMZCDBUCZLZANVKVMVTLZGVDAJZVRMGWC
+      VHMVSVJGWCVRVHVEWCHVEAHZVRVHOWCAVEVDAUDUEWDVPVFVQVGBVEACPVEADPUFUMUGGVOVR
+      WCVRAVDJAVBJZAVCJZJWCVOAVBVCUHVDAUIVLWEVNWFCAQDAQUJRVRUKULGVDVHAUNRVAWAVI
+      AGBCDEFSUOUSVKTHVMTHWBVSOUTCAEUPDAFUPGBVKVMTTSUQUR $.
+      $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d F a $.  $d D a $.  $d Y a $.  $d X a x $.  $d V x $.
+    mptcnvima.f $e |- F = ( x e. D |-> Y ) $.
+    $( Converse image of a function defined by maps-to.  (Contributed by Stefan
+       O'Rear, 25-Jan-2015.) $)
+    mptcnvima $p |- ( `' F " X ) = { x e. D | Y e. X } $=
+      ( va ccnv cima cv wcel wceq wa copab cres crn eqtri wex cab 3eqtri df-mpt
+      crab cnveqi cnvopab imaeq1i df-ima resopab rneqi rnopab ancom anass bitri
+      cmpt exbii 19.42v df-clel bicomi anbi2i 3bitri abbii df-rab eqtr4i ) CHZD
+      IAJBKZGJZELZMZGANZDIVHDOZPZEDKZABUBZVCVHDVCVGAGNZHVHCVMCABEUMVMFAGBEUAQUC
+      VGAGUDQUEVHDUFVJVEDKZVGMZGANZPVOGRZASZVLVIVPVGGADUGUHVOGAUIVRVDVKMZASVLVQ
+      VSAVQVDVFVNMZMZGRVDVTGRZMVSVOWAGVOVGVNMWAVNVGUJVDVFVNUKULUNVDVTGUOWBVKVDV
+      KWBGEDUPUQURUSUTVKABVAVBTT $.
+      $( [25-Jan-2015] $)
+
+    $( Converse singleton image of a function defined by maps-to.  (Contributed
+       by Stefan O'Rear, 25-Jan-2015.) $)
+    mptiniseg $p |- ( X e. V -> ( `' F " { X } ) = { x e. D | Y = X } ) $=
+      ( wcel ccnv csn cima crab wceq mptcnvima elsnc2g rabbidv syl5eq ) EDHZCIE
+      JZKFSHZABLFEMZABLABCSFGNRTUAABFEDOPQ $.
+      $( [25-Jan-2015] $)
+  $}
+
+  $( Functionality of a composition with weakened out of domain condition on
+     the first argument. $)
+  fco2 $p |- ( ( ( F |` B ) : B --> C /\ G : A --> B ) ->
+      ( F o. G ) : A --> C ) $=
+    ( cres wf wa ccom fco wceq crn wss frn cores syl adantl feq1d mpbid ) BCDBF
+    ZGZABEGZHZACTEIZGACDEIZGABCTEJUCACUDUEUBUDUEKZUAUBELBMUFABENDEBOPQRS $.
+    $( [11-Mar-2015] $)
+
+  ${
+    $d F x y $.  $d I x $.  $d X x y $.  $d Y x y $.
+    $( Composition with a constant function. $)
+    fcoconst $p |- ( ( F Fn X /\ Y e. X ) ->
+        ( F o. ( I X. { Y } ) ) = ( I X. { ( F ` Y ) } ) ) $=
+      ( vx vy wfn wcel wa csn cxp ccom cfv cmpt simplr wceq fconstmpt a1i cvv
+      cv wf simpl dffn2 sylib feqmptd fveq2 fmptco syl6eqr ) ACGZDCHZIZABDJKZLE
+      BDAMZNBUMJKUKEFBCDFTZAMUMULAUIUJETBHOULEBDNPUKEBDQRUKFCSAUKUICSAUAUIUJUBC
+      AUCUDUEUNDAUFUGEBUMQUH $.
+      $( [11-Mar-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Extensions beyond function theory
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
+
+  ${
+    $d ph x $.  $d Y x $.  $d Z x $.
+    suppssfv.a $e |- ( ph -> ( `' ( x e. D |-> A ) " ( _V \ { Y } ) ) C_ L ) $.
+    suppssfv.f $e |- ( ph -> ( F ` Y ) = Z ) $.
+    suppssfv.v $e |- ( ( ph /\ x e. D ) -> A e. V ) $.
+    $( Formula building theorem for support restriction, on a function which
+       preserves zero. $)
+    suppssfv $p |- ( ph -> ( `' ( x e. D |-> ( F ` A ) ) "
+            ( _V \ { Z } ) ) C_ L ) $=
+      ( cfv cmpt ccnv cvv csn cdif wcel wceq cima crab wne eldifsn simprbi elex
+      cv wa syl adantr wi fveq2 eqeq1d syl5ibrcom necon3d imp sylanbrc ss2rabdv
+      ex syl5 eqid mptcnvima 3sstr4g sstrd ) ABDCEMZNZOPIQRZUAZBDCNZOPHQRZUAZFA
+      VEVGSZBDUBCVJSZBDUBVHVKAVLVMBDVLVEIUCZABUGDSZUHZVMVLVEPSVNVEPIUDUEVPVNVMV
+      PVNUHCPSZCHUCZVMVPVQVNVPCGSVQLCGUFUIUJVPVNVRAVNVRUKVOACHVEIAVEITCHTZHEMZI
+      TKVSVEVTICHEULUMUNUOUJUPCPHUDUQUSUTURBDVFVGVEVFVAVBBDVIVJCVIVAVBVCJVD $.
+      $( [9-Mar-2015] $)
+  $}
+
+  ${
+    $d ph v $.  $d ph x $.  $d B v $.  $d O v $.  $d R v $.  $d Y v $.
+    $d Y x $.  $d Z v $.  $d Z x $.
+    suppssov1.s $e |- ( ph ->
+        ( `' ( x e. D |-> A ) " ( _V \ { Y } ) ) C_ L ) $.
+    suppssov1.o $e |- ( ( ph /\ v e. R ) -> ( Y O v ) = Z ) $.
+    suppssov1.a $e |- ( ( ph /\ x e. D ) -> A e. V ) $.
+    suppssov1.b $e |- ( ( ph /\ x e. D ) -> B e. R ) $.
+    $( Formula building theorem for support restrictions: operator with left
+       annihilator. $)
+    suppssov1 $p |- ( ph -> ( `' ( x e. D |-> ( A O B ) ) "
+            ( _V \ { Z } ) ) C_ L ) $=
+      ( co cvv wcel wceq cmpt ccnv csn cdif cima crab cv wa wne elex syl adantr
+      eldifsn simprbi wral ralrimiva oveq2 eqeq1d rcla4va syl2anc oveq1 necon3d
+      syl5ibrcom syl5 imp sylanbrc ex ss2rabdv eqid mptcnvima 3sstr4g sstrd ) A
+      BFDEIQZUAZUBRLUCUDZUEZBFDUAZUBRKUCUDZUEZHAVMVOSZBFUFDVRSZBFUFVPVSAVTWABFA
+      BUGFSZUHZVTWAWCVTUHDRSZDKUIZWAWCWDVTWCDJSWDODJUJUKULWCVTWEVTVMLUIZWCWEVTV
+      MRSWFVMRLUMUNWCDKVMLWCVMLTDKTZKEIQZLTZWCEGSKCUGZIQZLTZCGUOZWIPAWMWBAWLCGN
+      UPULWLWICEGWJETWKWHLWJEKIUQURUSUTWGVMWHLDKEIVAURVCVBVDVEDRKUMVFVGVHBFVNVO
+      VMVNVIVJBFVQVRDVQVIVJVKMVL $.
+      $( [9-Mar-2015] $)
+  $}
+
+  ${
+    $d ph v x $.  $d A x $.  $d B v x $.  $d D x $.  $d O v x $.  $d R v $.
+    $d Y v x $.  $d Z v x $.
+    suppssof1.s $e |- ( ph -> ( `' A " ( _V \ { Y } ) ) C_ L ) $.
+    suppssof1.o $e |- ( ( ph /\ v e. R ) -> ( Y O v ) = Z ) $.
+    suppssof1.a $e |- ( ph -> A : D --> V ) $.
+    suppssof1.b $e |- ( ph -> B : D --> R ) $.
+    suppssof1.d $e |- ( ph -> D e. W ) $.
+    $( Formula building theorem for support restrictions: vector operation with
+       left annihilator. $)
+    suppssof1 $p |- ( ph -> ( `' ( A oF O B ) " ( _V \ { Z } ) ) C_ L ) $=
+      ( vx ccnv cvv cof co csn cdif cima cv cfv cmpt wf wfn ffn syl inidm eqidd
+      wcel wa offval cnveqd imaeq1d feqmptd eqsstr3d fvex a1i ffvelrn suppssov1
+      sylan eqsstrd ) ACDHUAUBZSZTLUCUDZUERERUFZCUGZVKDUGZHUBUHZSZVJUEGAVIVOVJA
+      VHVNAREEVLVMHECDJJAEICUICEUJOEICUKULAEFDUIZDEUJPEFDUKULQQEUMAVKEUOZUPZVLU
+      NVRVMUNUQURUSARBVLVMEFGHTKLAREVLUHZSZTKUCUDZUECSZWAUEGAWBVTWAACVSAREICOUT
+      URUSMVANVLTUOVRVKCVBVCAVPVQVMFUOPEFVKDVDVFVEVG $.
+      $( [9-Mar-2015] $)
+  $}
 
   ${
     $( Images of finite sets are finite.  (Contributed by Stefan O'Rear,
@@ -4682,6 +4774,258 @@ $)
       vex elpw eqrdv ) ABFGZHZECFGZUBAIZJZUCEKZUDHUGUBHZUGALZMZUGUFHZAUGBCDNUKU
       HUGUEHZMUJUGUBUEOULUIUHUGAESTPQRUA $.
       $( [9-Mar-2015] $)
+  $}
+
+  $( The multiplicative group operator is a function. $)
+  fnmgp $p |- mulGrp Fn _V $=
+    ( vx cv cnx cplusg cfv cmulr cop csts co cvv wcel cmgp wfn df-mgp fnmpt a1i
+    ovex mprg ) ABZCDESFEGZHIZJKZLJMAJAJUALJANOUBSJKSTHQPR $.
+    $( [11-Mar-2015] $)
+
+  $( Restricted functionality of the multiplicative group on rings. $)
+  mgpf $p |- ( mulGrp |` Ring ) : Ring --> Mnd $=
+    ( va crg cmnd cmgp cres wf wfn cv cfv wcel wral cvv wss fnmgp fnssres mp2an
+    ssv fvres eqid1 rngmgp eqeltrd rgen ffnfv mpbir2an ) BCDBEZFUEBGZAHZUEIZCJZ
+    ABKDLGBLMUFNBQLBDOPUIABUGBJUHUGDIZCUGBDRUGUJUJSTUAUBABCUEUCUD $.
+    $( [11-Mar-2015] $)
+
+  ${
+    prdmmgp.y $e |- Y = ( S Xm_ R ) $.
+    prdmmgp.m $e |- M = ( mulGrp ` Y ) $.
+    prdmmgp.z $e |- Z = ( S Xm_ ( mulGrp o. R ) ) $.
+    prdmmgp.i $e |- ( ph -> I e. V ) $.
+    prdmmgp.s $e |- ( ph -> S e. W ) $.
+    prdmmgp.r $e |- ( ph -> R Fn I ) $.
+
+    ${
+      $d ph x $.  $d B x $.  $d C x $.  $d I x $.  $d R x $.  $d S x $.
+      $d V x $.  $d W x $.  $d Y x $.  $d Z x $.
+      prdmmgp1.b $e |- B = ( Base ` M ) $.
+      prdmmgp1.c $e |- C = ( Base ` Z ) $.
+      $( Multiplicative monoid of a product is the product of the
+         multiplicative monoids of the factors: base set. $)
+      prdmmgp1 $p |- ( ph -> B = C ) $=
+        ( vx cv cfv cbs cixp cmgp ccom wceq wral wcel wa mgpbas wfn fvco2 sylan
+        eqcomd fveq2d syl5eq ralrimiva ixpeq2 syl eqtr4i prdmbas2 cvv crn fnmgp
+        eqid wss a1i ssv fnco syl3anc 3eqtr3d ) ATFTUAZDUBZUCUBZUDZTFVMUEDUFZUB
+        ZUCUBZUDZBCAVOVSUGZTFUHVPVTUGAWATFAVMFUIZUJZVOVNUEUBZUCUBVSVOVNWDWDVFVO
+        VFUKWCWDVRUCWCVRWDADFULZWBVRWDUGQFUEDVMUMUNUOUPUQURTFVOVSUSUTATBDEFIHJL
+        BGUCUBJUCUBZRWFJGMWFVFUKVAPOQVBATCVQEFIHKNSPOAUEVCULZWEDVDZVCVGZVQFULWG
+        AVEVHQWIAWHVIVHVCFUEDVJVKVBVL $.
+        $( [11-Mar-2015] $)
+    $}
+
+    ${
+      $d ph x y z $.  $d I z $.  $d M x y z $.  $d R x y z $.  $d S x y z $.
+      $d Y x y z $.  $d Z x y z $.
+      prdmmgp2.t $e |- T = ( +g ` M ) $.
+      prdmmgp2.u $e |- U = ( +g ` Z ) $.
+      $( Multiplicative monoid of a product is the product of the
+         multiplicative monoids of the factors: internal operation. $)
+      prdmmgp2 $p |- ( ph -> T = U ) $=
+        ( cfv vx vy vz cmulr cplusg cbs cdm cv co cmpt cmpt2 cmgp ccom prdmmgp1
+        eqid wcel wa eqid1 mgpplusg wceq fvco2 sylan eqcomd fveq2d syl5eq oveqd
+        wfn mpteq2dva fndm mpteq1 3syl cvv crn wss a1i ssv fnco syl3anc 3eqtr4d
+        fnmgp mpt2eq123dv fnex syl2anc mgpbas eqcomi prdmmulr prdmplusg 3eqtr3d
+        eqtr4i 3eqtr4g ) AJUDTZKUETZDEAUAUBGUFTZWMUCBUGZUCUHZUAUHTZWOUBUHTZWOBT
+        ZUDTZUIZUJZUKZUAUBKUFTZXCUCULBUMZUGZWPWQWOXDTZUETZUIZUJZUKZWKWLAUAUBWMW
+        MXAXCXCXIAWMXCBCFGHIJKLMNOPQWMUOXCUOZUNZXLAUCFWTUJZUCFXHUJZXAXIAUCFWTXH
+        AWOFUPZUQZWSXGWPWQXPWSWRULTZUETXGWRWSXQXQURWSUOUSXPXQXFUEXPXFXQABFVGZXO
+        XFXQUTQFULBWOVAVBVCVDVEVFVHAXRWNFUTXAXMUTQFBVIUCWNFWTVJVKAXDFVGZXEFUTXI
+        XNUTAULVLVGZXRBVMZVLVNZXSXTAVTVOQYBAYAVPVOVLFULBVQVRZFXDVIUCXEFXHVJVKVS
+        WAACIUPZBVLUPZXBWKUTPAXRFHUPZYEQOFHBWBWCUCWMJBCUAUBIVLLJUFTZWMYGJGMYGUO
+        WDWEWFWCAYDXDVLUPZXJWLUTPAXSYFYHYCOFHXDWBWCUCXCKXDCUAUBIVLNXKWGWCWHDGUE
+        TWKRJWKGMWKUOUSWISWJ $.
+        $( [11-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    prdmmulrcl.y $e |- Y = ( S Xm_ R ) $.
+    prdmmulrcl.b $e |- B = ( Base ` Y ) $.
+    prdmmulrcl.t $e |- T = ( .r ` Y ) $.
+    prdmmulrcl.s $e |- ( ph -> S e. V ) $.
+    prdmmulrcl.i $e |- ( ph -> I e. W ) $.
+    prdmmulrcl.r $e |- ( ph -> R : I --> Ring ) $.
+    $d ph x $.  $d B x $.  $d F x $.  $d G x $.  $d I x $.  $d R x $.
+    $d S x $.  $d T x $.  $d V x $.  $d W x $.  $d Y x $.
+    prdmmulrcl.f $e |- ( ph -> F e. B ) $.
+    prdmmulrcl.g $e |- ( ph -> G e. B ) $.
+    $( A structure product of rings has closed binary operation. $)
+    prdmmulrcl $p |- ( ph -> ( F T G ) e. B ) $=
+      ( wcel vx co cv cfv cmulr cmpt crg wfn ffn syl prdmmulrval wral ffvelrn
+      wf cbs wa sylan adantr simpr prdmbasprj eqid rngcl ralrimiva prdmbasmpt
+      syl3anc mpbird eqeltrd ) AFGEUBUAHUAUCZFUDZVHGUDZVHCUDZUEUDZUBZUFZBAUAB
+      CDEFGHIJKLMOPAHUGCUNZCHUHZQHUGCUIUJZRSNUKAVNBTVMVKUOUDZTZUAHULAVSUAHAVH
+      HTZUPZVKUGTZVIVRTVJVRTVSAVOVTWBQHUGVHCUMUQWABCDFHVHIJKLMADITVTOURZAHJTV
+      TPURZAVPVTVQURZAFBTVTRURAVTUSZUTWABCDGHVHIJKLMWCWDWEAGBTVTSURWFUTVRVKVL
+      VIVJVRVAVLVAVBVEVCAUABCDVMHIJKLMOPVQVDVFVG $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    $d ph w x y z $.  $d I w $.  $d R w x y $.  $d S w x y $.  $d V w $.
+    $d W w $.  $d Y w x y z $.
+    prdmrngd.y $e |- Y = ( S Xm_ R ) $.
+    prdmrngd.i $e |- ( ph -> I e. W ) $.
+    prdmrngd.s $e |- ( ph -> S e. V ) $.
+    prdmrngd.r $e |- ( ph -> R : I --> Ring ) $.
+    $( A product of rings is a ring. $)
+    prdmrngd $p |- ( ph -> Y e. Ring ) $=
+      ( vx vw wcel cfv cmnd co crg eqid adantr vy vz cgrp cmgp cv cmulr wceq wa
+      cplusg cbs wral wf wss rnggrp ssriv sylancl prdmgrpd ccom cprdm cres mgpf
+      fss fco2 sylancr prdmmndd eqidd wfn ffn prdmmgp1 prdmmgp2 mndpropd mpbird
+      syl oveqd cmpt ffvelrn sylan simplr1 simpr prdmbasprj simpr2 simpr3 rngdi
+      w3a syl13anc prdmplusgfval oveq2d oveq12d 3eqtr4d mpteq2dva simpr1 rngmnd
+      prdmmulrfval prdmplusgcl prdmmulrval prdmmulrcl rngdir oveq1d ralrimivvva
+      prdmplusgval jca isrng syl3anbrc ) AGUCNGUDOZPNZLUEZUAUEZUBUEZGUIOZQZGUFO
+      ZQZXFXGXKQZXFXHXKQZXIQZUGZXFXGXIQZXHXKQZXNXGXHXKQZXIQZUGZUHZUBGUJOZUKUAYC
+      UKLYCUKGRNABCDEFGHIJADRBULZRUCUMDUCBULKLRUCXFUNUODRUCBVBUPUQAXECUDBURZUSQ
+      ZPNAYECDEFYFYFSZIJARPUDRUTULYDDPYEULVAKDRPUDBVCVDVEALUAXDUJOZXDYFAYHVFAYH
+      YFUJOZBCDXDFEGYFHXDSZYGIJAYDBDVGZKDRBVHVMZYHSYISVIAXFXGXDUIOZQXFXGYFUIOZQ
+      UGXFYHNXGYHNUHAYMYNXFXGABCYMYNDXDFEGYFHYJYGIJYLYMSYNSVJVNTVKVLAYBLUAUBYCY
+      CYCAXFYCNZXGYCNZXHYCNZWDZUHZXPYAYSMDMUEZXFOZYTXJOZYTBOZUFOZQZVOMDYTXMOZYT
+      XNOZUUCUIOZQZVOXLXOYSMDUUEUUIYSYTDNZUHZUUAYTXGOZYTXHOZUUHQZUUDQZUUAUULUUD
+      QZUUAUUMUUDQZUUHQZUUEUUIUUKUUCRNZUUAUUCUJOZNZUULUUTNZUUMUUTNZUUOUURUGYSYD
+      UUJUUSAYDYRKTZDRYTBVPVQZUUKYCBCXFDYTEFGHYCSZYSCENZUUJAUVGYRJTZTZYSDFNZUUJ
+      AUVJYRITZTZYSYKUUJAYKYRYLTZTZYOYPYQAUUJVRZYSUUJVSZVTZUUKYCBCXGDYTEFGHUVFU
+      VIUVLUVNYSYPUUJAYOYPYQWAZTZUVPVTZUUKYCBCXHDYTEFGHUVFUVIUVLUVNYSYQUUJAYOYP
+      YQWBZTZUVPVTZUUTUUHUUCUUDUUAUULUUMUUTSZUUHSZUUDSZWCWEUUKUUBUUNUUAUUDUUKYC
+      XIBCXGXHDYTEFGHUVFUVIUVLUVNUVSUWBXISZUVPWFWGUUKUUFUUPUUGUUQUUHUUKYCBCXKXF
+      XGDYTEFGHUVFUVIUVLUVNUVOUVSXKSZUVPWMUUKYCBCXKXFXHDYTEFGHUVFUVIUVLUVNUVOUW
+      BUWHUVPWMZWHWIWJYSMYCBCXKXFXJDEFGHUVFUVHUVKUVMAYOYPYQWKZYSYCXIBCXGXHDEFGH
+      UVFUWGUVHUVKADPBULZYRAYDRPUMUWKKLRPXFWLUODRPBVBUPTZUVRUWAWNUWHWOYSMYCXIBC
+      XMXNDEFGHUVFUVHUVKUVMYSYCBCXKXFXGDEFGHUVFUWHUVHUVKUVDUWJUVRWPYSYCBCXKXFXH
+      DEFGHUVFUWHUVHUVKUVDUWJUWAWPZUWGWTWIYSMDYTXQOZUUMUUDQZVOMDUUGYTXSOZUUHQZV
+      OXRXTYSMDUWOUWQUUKUUAUULUUHQZUUMUUDQZUUQUULUUMUUDQZUUHQZUWOUWQUUKUUSUVAUV
+      BUVCUWSUXAUGUVEUVQUVTUWCUUTUUHUUCUUDUUAUULUUMUWDUWEUWFWQWEUUKUWNUWRUUMUUD
+      UUKYCXIBCXFXGDYTEFGHUVFUVIUVLUVNUVOUVSUWGUVPWFWRUUKUUGUUQUWPUWTUUHUWIUUKY
+      CBCXKXGXHDYTEFGHUVFUVIUVLUVNUVSUWBUWHUVPWMWHWIWJYSMYCBCXKXQXHDEFGHUVFUVHU
+      VKUVMYSYCXIBCXFXGDEFGHUVFUWGUVHUVKUWLUWJUVRWNUWAUWHWOYSMYCXIBCXNXSDEFGHUV
+      FUVHUVKUVMUWMYSYCBCXKXGXHDEFGHUVFUWHUVHUVKUVDUVRUWAWPUWGWTWIXAWSLUAUBYCXI
+      GXKXDUVFYJUWGUWHXBXC $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    $d ph x y $.  $d R x y $.  $d S x y $.  $d Y x y $.
+    prdmcrngd.y $e |- Y = ( S Xm_ R ) $.
+    prdmcrngd.i $e |- ( ph -> I e. W ) $.
+    prdmcrngd.s $e |- ( ph -> S e. V ) $.
+    prdmcrngd.r $e |- ( ph -> R : I --> CRing ) $.
+    $( A product of commutative rings is a commutative ring.  Since the
+       resulting ring will have zero divisors in all nontrivial cases, this
+       cannot be strengthened much further. $)
+    prdmcrngd $p |- ( ph -> Y e. CRing ) $=
+      ( vx crg wcel cmgp cfv ccmn ccrg wf eqid vy wss crngrng ssriv fss sylancl
+      cv prdmrngd ccom cprdm co cres wfn wral cvv fnmgp ssv fnssres mp2an fvres
+      eqid1 crngmgp eqeltrd rgen ffnfv mpbir2an a1i fco2 syl2anc prdmcmnd eqidd
+      cbs ffn syl prdmmgp1 cplusg wceq wa prdmmgp2 oveqd adantr cmnpropd mpbird
+      iscrng sylanbrc ) AGMNGOPZQNZGRNABCDEFGHIJADRBSZRMUBDMBSKLRMLUGZUCUDDRMBU
+      EUFUHAWGCOBUIZUJUKZQNAWJCDEFWKWKTZIJARQORULZSZWHDQWJSWNAWNWMRUMZWIWMPZQNZ
+      LRUNOUOUMRUOUBWOUPRUQUOROURUSWQLRWIRNWPWIOPZQWIROUTWIWRWRVAVBVCVDLRQWMVEV
+      FVGKDRQOBVHVIVJALUAWFVLPZWFWKAWSVKAWSWKVLPZBCDWFFEGWKHWFTZWLIJAWHBDUMKDRB
+      VMVNZWSTWTTVOAWIUAUGZWFVPPZUKWIXCWKVPPZUKVQWIWSNXCWSNVRAXDXEWIXCABCXDXEDW
+      FFEGWKHXAWLIJXBXDTXETVSVTWAWBWCGWFXAWDWE $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    $d ph x y $.  $d R x y $.  $d S x y $.  $d Y x y $.
+    prdm1.y $e |- Y = ( S Xm_ R ) $.
+    prdm1.i $e |- ( ph -> I e. W ) $.
+    prdm1.s $e |- ( ph -> S e. V ) $.
+    prdm1.r $e |- ( ph -> R : I --> Ring ) $.
+    $( Value of the ring unit in a structure family product. $)
+    prdm1 $p |- ( ph -> ( 1r o. R ) = ( 1r ` Y ) ) $=
+      ( cmgp ccom cprdm c0g cfv eqid crg wcel cvv vx vy co cur cbs eqidd wf wfn
+      ffn syl prdmmgp1 cv cplusg wceq prdmmgp2 oveqd adantr fvex a1i grpidpropd
+      wa ovex eqcomd df-ur coeq1i coass eqtri cmnd cres mgpf fco2 prdm0g syl5eq
+      syl2anc eqeltri rngidval 3eqtr4d ) ACLBMZNUCZOPZGLPZOPZUDBMZGUDPZAWBVTAUA
+      UBWAUEPZWAVSAWEUFAWEVSUEPZBCDWAFEGVSHWAQZVSQZIJADRBUGZBDUHKDRBUIUJZWEQWFQ
+      UKAUAULZUBULZWAUMPZUCWKWLVSUMPZUCUNWKWESWLWESVAAWMWNWKWLABCWMWNDWAFEGVSHW
+      GWHIJWJWMQWNQUOUPUQWATSAGLURUSVSTSACVRNVBUSUTVCAWCOVRMZVTWCOLMZBMWOUDWPBV
+      DVEOLBVFVGAVRCDEFVSWHIJARVHLRVIUGZWIDVHVRUGWQAVJUSKDRVHLBVKVNVLVMAGTSZWDW
+      BUNWRAGCBNUCTHCBNVBVOUSGWDWATWGWDQVPUJVQ $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    pwsrng.y $e |- Y = ( R ^s I ) $.
+    $( A structure power of a ring is a ring. $)
+    pwsrng $p |- ( ( R e. Ring /\ I e. V ) -> Y e. Ring ) $=
+      ( crg wcel wa csca cfv csn cxp cprdm co eqid pwsval cvv simpr fvex a1i wf
+      fconst6g adantr prdmrngd eqeltrd ) AFGZBCGZHZDAIJZBAKLZMNZFAUIBFCDEUIOPUH
+      UJUIBQCUKUKOUFUGRUIQGUHAISTUFBFUJUAUGBAFUBUCUDUE $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    pws1.y $e |- Y = ( R ^s I ) $.
+    pws1.o $e |- O = ( 1r ` R ) $.
+    $( Value of the ring unit in a structure power. $)
+    pws1 $p |- ( ( R e. Ring /\ I e. V ) -> ( I X. { O } ) = ( 1r ` Y ) ) $=
+      ( crg wcel cur cfv csca csn cxp ccom cvv a1i wfn c0g cmgp wa cprdm pwsval
+      co eqid fveq2d simpr fvex wf fconst6g adantr prdm1 wceq crn wss fnmgp ssv
+      fn0g fnco syl3anc df-ur fneq1i sylibr elex fcoconst syl2anc sneqi syl6eqr
+      xpeq2i 3eqtr2rd ) AHIZBDIZUAZEJKALKZBAMNZUBUDZJKJVOOZBCMZNZVMEVPJAVNBHDEF
+      VNUEUCUFVMVOVNBPDVPVPUEVKVLUGVNPIVMALUHQVKBHVOUIVLBAHUJUKULVMVQBAJKZMZNZV
+      SVMJPRZAPIZVQWBUMVMSTOZPRZWCVMSPRZTPRZTUNZPUOZWFWGVMURQWHVMUPQWJVMWIUQQPP
+      STUSUTPJWEVAVBVCVKWDVLAHVDUKJBPAVEVFVRWABCVTGVGVIVHVJ $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    pwscrng.y $e |- Y = ( R ^s I ) $.
+    $( A structure power of a commutative ring is a commutative ring. $)
+    pwscrng $p |- ( ( R e. CRing /\ I e. V ) -> Y e. CRing ) $=
+      ( ccrg wcel wa csca cfv csn cxp cprdm co eqid pwsval cvv simpr fvex a1i
+      wf fconst6g adantr prdmcrngd eqeltrd ) AFGZBCGZHZDAIJZBAKLZMNZFAUIBFCDEUI
+      OPUHUJUIBQCUKUKOUFUGRUIQGUHAISTUFBFUJUAUGBAFUBUCUDUE $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
+    $d R x $.
+    mgpsca.m $e |- M = ( mulGrp ` R ) $.
+    mgpsca.s $e |- S = ( Scalar ` R ) $.
+    $( The multiplication monoid has the same (if any) scalars as the original
+       ring.  Mostly to simplify ~ pwsmgp . $)
+    mgpsca $p |- S = ( Scalar ` M ) $=
+      ( vx cvv wcel csca cfv wceq cnx cplusg wn syl5eq fveq2d eqtr4d fvprc cmgp
+      c0 cmulr cop csts co scaid cbs cpr wne lmodlem1 fvex prid2 eleq1 necon3bi
+      mpbiri ax-mp setsnid eqid mgpval str0 syl6eqr pm2.61i ) AGHZBCIJZKVBBALMJ
+      ZAUAJZUBUCUDZIJZVCVBBAIJZVGEVEVDIGAFFUEZLIJZLUFJZVDUGZHZNVJVDUHUIVMVJVDVJ
+      VDKVMVDVLHVKVDLMUJUKVJVDVLULUNUMUOUPOVBCVFIAVECGDVEUQURPQVBNZBTVCVNBVHTEA
+      IROVNVCTIJTVNCTIVNCASJTDASROPIVJFVIUSUTQVA $.
+      $( [12-Mar-2015] $)
+  $}
+
+  ${
+    pwsmgp.y $e |- Y = ( R ^s I ) $.
+    pwsmgp.m $e |- M = ( mulGrp ` R ) $.
+    pwsmgp.z $e |- Z = ( M ^s I ) $.
+    pwsmgp.n $e |- N = ( mulGrp ` Y ) $.
+    pwsmgp.b $e |- B = ( Base ` N ) $.
+    pwsmgp.c $e |- C = ( Base ` Z ) $.
+    pwsmgp.p $e |- P = ( +g ` N ) $.
+    pwsmgp.q $e |- Q = ( +g ` Z ) $.
+    $( The multiplicative group of the power structure resembles the power of
+       the multiplicative group. $)
+    pwsmgp $p |- ( ( R e. V /\ I e. W ) -> ( B = C /\ P = Q ) ) $=
+      ( wcel wa wceq cbs cfv csca csn cxp cprdm co cmgp ccom cvv eqid simpr a1i
+      fvex fnconstg adantr prdmmgp1 pwsval fveq2d syl5eq eqeltri sylancr mgpsca
+      cpws eqcomi sneqi xpeq2i fnmgp elex fcoconst syl2anc eqcomd oveq12d eqtrd
+      wfn 3eqtr4d 3eqtr4g cplusg prdmmgp2 jca ) EIUAZFJUAZUBZABUCCDUCWFHUDUEZLU
+      DUEZABWFEUFUEZFEUGUHZUIUJZUKUEZUDUEZWIUKWJULZUIUJZUDUEZWGWHWFWMWPWJWIFWLJ
+      UMWKWOWKUNZWLUNZWOUNZWDWEUOZWIUMUAWFEUFUQUPZWDWJFVRWEFEIURUSZWMUNWPUNUTWF
+      HWLUDWFHKUKUEWLPWFKWKUKEWIFIJKMWIUNZVAVBVCZVBWFLWOUDWFLGFVGUJZWOOWFXEGUFU
+      EZFGUGZUHZUIUJZWOWFGUMUAWEXEXIUCGEUKUEZUMNEUKUQVDWTGXFFUMJXEXEUNXFUNVAVEW
+      FXFWIXHWNUIXFWIUCWFWIXFEWIGNXCVFVHUPWFXHFXJUGZUHZWNXGXKFGXJNVIVJWFWNXLWFU
+      KUMVRZEUMUAZWNXLUCXMWFVKUPWDXNWEEIVLUSUKFUMEVMVNVOVCVPVQVCZVBVSQRVTWFHWAU
+      EZLWAUEZCDWFWLWAUEZWOWAUEZXPXQWFWJWIXRXSFWLJUMWKWOWQWRWSWTXAXBXRUNXSUNWBW
+      FHWLWAXDVBWFLWOWAXOVBVSSTVTWC $.
+      $( [12-Mar-2015] $)
   $}
 
 $(
@@ -21875,6 +22219,422 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Monoid homomorphisms and submonoids
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c MndHom SubMnd $.
+
+  $( Hom-set generator class for monoids. $)
+  cmhm $a class MndHom $.
+
+  $( Class function taking a monoid to its lattice of submonoids. $)
+  csubmnd $a class SubMnd $.
+
+  ${
+    $d s t f x y $.
+    $( A monoid homomorphism is a function on the base sets which preserves the
+       binary operation and the identity. $)
+    df-mhm $a |- MndHom = ( s e. Mnd , t e. Mnd |->
+          { f e. ( ( Base ` t ) ^m ( Base ` s ) ) |
+            ( A. x e. ( Base ` s ) A. y e. ( Base ` s )
+                  ( f ` ( x ( +g ` s ) y ) ) =
+                    ( ( f ` x ) ( +g ` t ) ( f ` y ) ) /\
+              ( f ` ( 0g ` s ) ) = ( 0g ` t ) ) } ) $.
+
+    $( A submonoid is a subset of a monoid which contains the identity and is
+       closed under the operation.  Such subsets are themselves monoids with
+       the same identity. $)
+    df-submnd $a |- SubMnd = ( s e. Mnd |-> { t e. ~P ( Base ` s ) |
+            ( ( 0g ` s ) e. t /\
+              A. x e. t A. y e. t ( x ( +g ` s ) y ) e. t ) } ) $.
+  $}
+
+  ${
+    $d A x y z $.  $d B x y z $.  $d C z $.
+    elmpt2cl.f $e |- F = ( x e. A , y e. B |-> C ) $.
+    $( If a two-parameter class is not empty, constrain the implicit pair. $)
+    elmpt2cl2 $p |- ( X e. ( S F T ) -> <. S , T >. e. ( A X. B ) ) $=
+      ( vz co wcel cdm cxp cop cv wa wceq copab2 cmpt2 df-mpt2 dmoprabss elfvdm
+      eqtri dmeqi eqsstri cfv df-ov eleq2s sseldi ) IFGHLZMHNZCDOZFGPZUMAQCMBQD
+      MRKQESZRABKTZNUNHUQHABCDEUAUQJABKCDEUBUEUFUPABKCDUCUGUOUMMIUOHUHULIUOHUDF
+      GHUIUJUK $.
+      $( [7-Mar-2015] $)
+
+    $( If a two-parameter class is not empty, the first argument is in its
+       nominal domain. $)
+    elmpt2lcl $p |- ( X e. ( S F T ) -> S e. A ) $=
+      ( co wcel cop cxp elmpt2cl2 opelxp1 syl ) IFGHKLFGMCDNLFCLABCDEFGHIJOFGCD
+      PQ $.
+      $( [7-Mar-2015] $)
+
+    $( If a two-parameter class is not empty, the second argument is in its
+       nominal domain, subject to ~ opprc2 issues. $)
+    elmpt2rcl $p |- ( ( X e. ( S F T ) /\ T e. V ) -> T e. B ) $=
+      ( co wcel cop cxp elmpt2cl2 wa opelxpg biimpac simprd sylan ) JFGHLMFGNCD
+      OMZGIMZGDMZABCDEFGHJKPUBUCQFCMZUDUCUBUEUDQFGCDIRSTUA $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d f s t x y $.
+    $( Reverse closure of a monoid homomorphism. $)
+    mhmrcl1 $p |- ( F e. ( S MndHom T ) -> S e. Mnd ) $=
+      ( vs vt vx vy vf cmnd cv cplusg cfv co wceq cbs wral c0g wa cmap crab
+      cmhm df-mhm elmpt2lcl ) DEIIFJZGJZDJZKLMHJZLUDUGLUEUGLEJZKLMNGUFOLZPFUIPU
+      FQLUGLUHQLNRHUHOLUISMTABUACFGEHDUBUC $.
+      $( [7-Mar-2015] $)
+
+    $( Reverse closure of a monoid homomorphism. $)
+    mhmrcl2 $p |- ( ( F e. ( S MndHom T ) /\ T e. V ) -> T e. Mnd ) $=
+      ( vs vt vx vy vf cmnd cv cplusg cfv co wceq cbs wral c0g wa cmap df-mhm
+      crab cmhm elmpt2rcl ) EFJJGKZHKZEKZLMNIKZMUEUHMUFUHMFKZLMNOHUGPMZQGUJQUGR
+      MUHMUIRMOSIUIPMUJTNUBABUCDCGHFIEUAUD $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d B f s t x y $.  $d S f s t x y $.  $d T f s t x y $.  $d C f s t $.
+    $d P f s t $.  $d Q f s t $.  $d Y f s t $.  $d Z f s t $.  $d F f x y $.
+    ismhm.b $e |- B = ( Base ` S ) $.
+    ismhm.c $e |- C = ( Base ` T ) $.
+    ismhm.p $e |- P = ( +g ` S ) $.
+    ismhm.q $e |- Q = ( +g ` T ) $.
+    ismhm.z $e |- Z = ( 0g ` S ) $.
+    ismhm.y $e |- Y = ( 0g ` T ) $.
+    $( Property of a monoid homomorphism. $)
+    ismhm $p |- ( ( S e. Mnd /\ T e. Mnd ) -> ( F e. ( S MndHom T ) <->
+          ( F : B --> C /\ A. x e. B A. y e. B ( F ` ( x P y ) ) =
+                  ( ( F ` x ) Q ( F ` y ) ) /\ ( F ` Z ) = Y ) ) ) $=
+      ( co cfv wceq vf vs vt cmnd wcel wa cmhm cv wral cmap crab w3a cplusg cbs
+      wf c0g fveq2 syl6eqr oveqan12rd adantr fveq2d eqeqan12d raleqbidv anbi12d
+      oveqd rabeqbidv df-mhm ovex rabex ovmpt2a eleq2d cvv eqeltri elmap anbi1i
+      fvex fveq1 oveq12d eqeq12d 2ralbidv eqeq1d elrab 3anass 3bitr4i syl6bb )
+      GUDUEHUDUEUFZIGHUGRZUEIAUHZBUHZERZUAUHZSZWHWKSZWIWKSZFRZTZBCUIZACUIZKWKSZ
+      JTZUFZUADCUJRZUKZUEZCDIUOZWJISZWHISZWIISZFRZTZBCUIACUIZKISZJTZULZWFWGXCIU
+      BUCGHUDUDWHWIUBUHZUMSZRZWKSZWMWNUCUHZUMSZRZTZBXOUNSZUIZAYCUIZXOUPSZWKSZXS
+      UPSZTZUFZUAXSUNSZYCUJRZUKXCUGXOGTZXSHTZUFZYJXAUAYLXBYNYMYKDYCCUJYNYKHUNSZ
+      DXSHUNUQMURYMYCGUNSZCXOGUNUQLURZUSYOYEWRYIWTYOYDWQAYCCYMYCCTYNYRUTZYOYBWP
+      BYCCYSYMYNXRWLYAWOYMXQWJWKYMXPEWHWIYMXPGUMSEXOGUMUQNURVEVAYNXTFWMWNYNXTHU
+      MSFXSHUMUQOURVEVBVCVCYMYNYGWSYHJYMYFKWKYMYFGUPSKXOGUPUQPURVAYNYHHUPSJXSHU
+      PUQQURVBVDVFABUCUAUBVGXAUAXBDCUJVHVIVJVKIXBUEZXKXMUFZUFXEUUAUFXDXNYTXEUUA
+      DCIDYPVLMHUNVPVMCYQVLLGUNVPVMVNVOXAUUAUAIXBWKITZWRXKWTXMUUBWPXJABCCUUBWLX
+      FWOXIWJWKIVQUUBWMXGWNXHFWHWKIVQWIWKIVQVRVSVTUUBWSXLJKWKIVQWAVDWBXEXKXMWCW
+      DWE $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d B x y $.  $d C x y $.  $d F x y $.  $d P x y $.  $d Q x y $.
+    $d S x y $.  $d T x y $.
+    isghm3.b $e |- B = ( Base ` S ) $.
+    isghm3.c $e |- C = ( Base ` T ) $.
+    isghm3.p $e |- P = ( +g ` S ) $.
+    isghm3.q $e |- Q = ( +g ` T ) $.
+    $( Property of a group homomorphism, similar to ~ ismhm . $)
+    isghm3 $p |- ( ( S e. Grp /\ T e. Grp ) -> ( F e. ( S GrpHom T ) <->
+          ( F : B --> C /\ A. x e. B A. y e. B ( F ` ( x P y ) ) =
+                  ( ( F ` x ) Q ( F ` y ) ) ) ) ) $=
+      ( cgrp wcel wa co cv cfv wral cghm wf wceq wb isghm adantl ibar bitr4d )
+      GNOZHNOZPZIGHUAQOZUKCDIUBARZBRZEQISUMISUNISFQUCBCTACTPZPZUOUJULUPUDUIBAEF
+      GHINCDJKLMUEUFUKUOUGUH $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d B y $.  $d F x y $.  $d N x $.  $d S x y $.  $d T x y $.
+    islmhm3.b $e |- B = ( Base ` S ) $.
+    islmhm3.k $e |- K = ( Scalar ` S ) $.
+    islmhm3.l $e |- L = ( Scalar ` T ) $.
+    islmhm3.n $e |- N = ( Base ` K ) $.
+    islmhm3.v $e |- V = ( vsca ` S ) $.
+    islmhm3.w $e |- W = ( vsca ` T ) $.
+    $( Property of a module homomorphism, similar to ~ ismhm . $)
+    islmhm3 $p |- ( ( S e. LMod /\ T e. LMod ) -> ( F e. ( S LMHom T ) <->
+          ( F e. ( S GrpHom T ) /\ L = K /\
+            A. x e. N A. y e. B ( F ` ( x V y ) ) = ( x W ( F ` y ) ) ) ) ) $=
+      ( clmod wcel co wa clmhm cghm wceq cfv wral w3a islmhm adantl ibar bitr4d
+      cv wb ) DRSZERSZUAZFDEUBTSZUPFDEUCTSHGUDAULZBULZJTFUEURUSFUEKTUDBCUFAIUFU
+      GZUAZUTUOUQVAUMUNABIDECFGHJKRMNOLPQUHUIUPUTUJUK $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d B x y $.  $d F x y $.  $d S x y $.  $d T x y $.
+    mhmf.b $e |- B = ( Base ` S ) $.
+    mhmf.c $e |- C = ( Base ` T ) $.
+    $( A monoid homomorphism is a function. $)
+    mhmf $p |- ( ( F e. ( S MndHom T ) /\ T e. V ) -> F : B --> C ) $=
+      ( vx vy co wcel cv cplusg cfv wceq wral c0g cmnd eqid cmhm wa wf simpl wb
+      w3a mhmrcl1 adantr mhmrcl2 ismhm syl2anc mpbid simp1d ) ECDUAKLZDFLZUBZAB
+      EUCZIMZJMZCNOZKEOUREOUSEODNOZKPJAQIAQZCROZEODROZPZUPUNUQVBVEUFZUNUOUDUPCS
+      LZDSLUNVFUEUNVGUOCDEUGUHCDEFUIIJABUTVACDEVDVCGHUTTVATVCTVDTUJUKULUM $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d B x y $.  $d F x y $.  $d P x y $.  $d Q x y $.  $d S x y $.
+    $d T x y $.  $d X x y $.  $d Y x y $.
+    mhmlin.b $e |- B = ( Base ` S ) $.
+    mhmlin.p $e |- P = ( +g ` S ) $.
+    mhmlin.q $e |- Q = ( +g ` T ) $.
+    $( A monoid homomorphism commutes with composition. $)
+    mhmlin $p |- ( ( ( F e. ( S MndHom T ) /\ T e. V ) /\
+          ( X e. B /\ Y e. B ) ) ->
+        ( F ` ( X P Y ) ) = ( ( F ` X ) Q ( F ` Y ) ) ) $=
+      ( vx vy wcel wa co cfv wceq eqid cmhm cv wral cbs wf c0g w3a cmnd mhmrcl1
+      simpl adantr mhmrcl2 ismhm syl2anc mpbid simp2d oveq1 fveq2d fveq2 oveq1d
+      wb eqeq12d oveq2 oveq2d rcla42va sylan2 ancoms ) HAOIAOPZFDEUAQOZEGOZPZHI
+      BQZFRZHFRZIFRZCQZSZVKVHMUBZNUBZBQZFRZVRFRZVSFRZCQZSZNAUCMAUCZVQVKAEUDRZFU
+      EZWFDUFRZFREUFRZSZVKVIWHWFWKUGZVIVJUJVKDUHOZEUHOVIWLVAVIWMVJDEFUIUKDEFGUL
+      MNAWGBCDEFWJWIJWGTKLWITWJTUMUNUOUPWEVQHVSBQZFRZVNWCCQZSMNHIAAVRHSZWAWOWDW
+      PWQVTWNFVRHVSBUQURWQWBVNWCCVRHFUSUTVBVSISZWOVMWPVPWRWNVLFVSIHBVCURWRWCVOV
+      NCVSIFUSVDVBVEVFVG $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d F x y $.  $d S x y $.  $d T x y $.
+    mhm0.z $e |- Z = ( 0g ` S ) $.
+    mhm0.y $e |- Y = ( 0g ` T ) $.
+    $( A monoid homorphism preserves zero. $)
+    mhm0 $p |- ( ( F e. ( S MndHom T ) /\ T e. V ) -> ( F ` Z ) = Y ) $=
+      ( vx vy co wcel cbs cfv cv cplusg wceq wral cmnd eqid cmhm wa wf simpl wb
+      w3a mhmrcl1 adantr mhmrcl2 ismhm syl2anc mpbid simp3d ) CABUAKLZBDLZUBZAM
+      NZBMNZCUCZIOZJOZAPNZKCNUTCNVACNBPNZKQJUQRIUQRZFCNEQZUPUNUSVDVEUFZUNUOUDUP
+      ASLZBSLUNVFUEUNVGUOABCUGUHABCDUIIJUQURVBVCABCEFUQTURTVBTVCTGHUJUKULUM $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d ph x y $.  $d B x y $.  $d F x y $.  $d G x y $.  $d H x y $.
+    $d K x y $.  $d Z x y $.
+    gsummhm.b $e |- B = ( Base ` G ) $.
+    gsummhm.z $e |- Z = ( 0g ` G ) $.
+    gsummhm.g $e |- ( ph -> G e. CMnd ) $.
+    gsummhm.h $e |- ( ph -> H e. CMnd ) $.
+    gsummhm.a $e |- ( ph -> A e. V ) $.
+    gsummhm.k $e |- ( ph -> K e. ( G MndHom H ) ) $.
+    gsummhm.f $e |- ( ph -> F : A --> B ) $.
+    gsummhm.w $e |- ( ph -> ( `' F " ( _V \ { Z } ) ) e. Fin ) $.
+    $( Commutativity of a monoid sum with an explicit monoid homomorphism. $)
+    gsummhm $p |- ( ph -> ( H gsum ( K o. F ) ) = ( K ` ( G gsum F ) ) ) $=
+      ( cfv eqid wcel vx vy cbs cplusg c0g cmhm co ccmn wf mhmf syl2anc wceq wa
+      mhm0 cv jca mhmlin sylan gsumhomo ) AUAUBBCFUCRZEUDRZFUDRZDEFGFUERZHIJUTS
+      ZKVCSZVASZVBSZLMNAGEFUFUGTZFUHTZCUTGUIOMCUTEFGUHJVDUJUKAVHVIIGRVCULOMEFGU
+      HVCIKVEUNUKAVHVIUMUAUOZCTUBUOZCTUMVJVKVAUGGRVJGRVKGRVBUGULAVHVIOMUPCVAVBE
+      FGUHVJVKJVFVGUQURPQUS $.
+      $( [8-Mar-2015] $)
+  $}
+
+  ${
+    $d ph i j x y $.  $d B i j x y $.  $d I i j k x y $.  $d J i j k x y $.
+    $d R i j k x $.  $d T i j k x y $.  $d V i $.  $d X i j k y $.
+    $d Y i j k x $.  $d Z i j $.
+    gsumdixp.b $e |- B = ( Base ` R ) $.
+    gsumdixp.t $e |- T = ( .r ` R ) $.
+    gsumdixp.z $e |- Z = ( 0g ` R ) $.
+    gsumdixp.i $e |- ( ph -> I e. V ) $.
+    gsumdixp.j $e |- ( ph -> J e. W ) $.
+    gsumdixp.r $e |- ( ph -> R e. Ring ) $.
+    gsumdixp.x $e |- ( ( ph /\ x e. I ) -> X e. B ) $.
+    gsumdixp.y $e |- ( ( ph /\ y e. J ) -> Y e. B ) $.
+    gsumdixp.xf $e |- ( ph ->
+        ( `' ( x e. I |-> X ) " ( _V \ { Z } ) ) e. Fin ) $.
+    gsumdixp.yf $e |- ( ph ->
+        ( `' ( y e. J |-> Y ) " ( _V \ { Z } ) ) e. Fin ) $.
+    $( Distribute a binary product of sums to a sum of binary products in a
+       ring. $)
+    gsumdixp $p |- ( ph ->
+        ( ( R gsum ( x e. I |-> X ) ) T ( R gsum ( y e. J |-> Y ) ) ) =
+          ( R gsum ( x e. I , y e. J |-> ( X T Y ) ) ) ) $=
+      ( vi vj vk co cmpt2 cgsu cmpt cv cfv ccnv cvv csn cdif cima cxp wcel ccmn
+      crg rngcmn syl adantr wa wf eqid fmptd simpl ffvelrn syl2an simpr syl3anc
+      rngcl cfn xpfi syl2anc wbr wn wceq wo vex notbii ianor bitri simprl eldif
+      brxp biimpri sylan wss ssid a1i suppssr syldan oveq1d rnglz simprr oveq2d
+      eqtrd rngrz jaodan sylan2b anasss hbmpt1 ax17el hbfv ax-17 hbov weq fveq2
+      gsum2d2 oveqan12d cbvmpt2 simp2 3adant3 fvmpt2 3adant2 oveq12d mpt2eq3dva
+      simp3 syl5eq hbmpt mpteq2dv cbvmpt syl6eq 3expa mpteq2dva 3eqtr3d adantlr
+      w3a cplusg gsummulc2 gsumcl gsummulc1 3eqtrrd ) AEBCGHKLFUGZUHZUIUGZEBGEC
+      HYQUJZUIUGZUJZUIUGZEBGKECHLUJZUIUGZFUGZUJZUIUGEBGKUJZUIUGUUEFUGAEUDUEGHUD
+      UKZUUHULZUEUKZUUDULZFUGZUHZUIUGEUDGEUEHUUMUJZUIUGZUJZUIUGYSUUCAGDHUUHUMUN
+      MUOUPZUQZUUDUMUURUQZURZUDUEEIJUUMMNPAEVAUSZEUTUSSEVBVCZQAHJUSZUUIGUSZRVDA
+      UVEUUKHUSZVEZVEZUVBUUJDUSZUULDUSZUUMDUSAUVBUVGSVDZAGDUUHVFZUVEUVIUVGABGKD
+      UUHTUUHVGZVHZUVEUVFVIGDUUIUUHVJVKZAHDUUDVFZUVFUVJUVGACHLDUUDUAUUDVGZVHZUV
+      EUVFVLHDUUKUUDVJVKZDEFUUJUULNOVNVMAUUSVOUSUUTVOUSZUVAVOUSUBUCUUSUUTVPVQAU
+      VGUUIUUKUVAVRZVSZUUMMVTZUWBUVHUUIUUSUSZVSZUUKUUTUSZVSZWAZUWCUWBUWDUWFVEZV
+      SUWHUWAUWIUUIUUKUUSUUTUEWBWHWCUWDUWFWDWEUVHUWEUWCUWGUVHUWEVEZUUMMUULFUGZM
+      UWJUUJMUULFUVHUWEUUIGUUSUPUSZUUJMVTUVHUVEUWEUWLAUVEUVFWFUWLUVEUWEVEUUIGUU
+      SWGWIWJUVHGDUUHUUSUUIMAUVLUVGUVNVDUUSUUSWKUVHUUSWLWMWNWOWPUVHUWKMVTZUWEUV
+      HUVBUVJUWMUVKUVSDEFUULMNOPWQVQVDWTUVHUWGVEZUUMUUJMFUGZMUWNUULMUUJFUVHUWGU
+      UKHUUTUPUSZUULMVTUVHUVFUWGUWPAUVEUVFWRUWPUVFUWGVEUUKHUUTWGWIWJUVHHDUUDUUT
+      UUKMAUVPUVGUVRVDUUTUUTWKUVHUUTWLWMWNWOWSUVHUWOMVTZUWGUVHUVBUVIUWQUVKUVODE
+      FUUJMNOPXAVQVDWTXBXCXDXLAUUNYREUIAUUNBCGHBUKZUUHULZCUKZUUDULZFUGZUHYRUDUE
+      BCUFGHUUMUXBBUFUUJUULFBUFUUIUUHBUFGKXEUFUDBXFXGUFUKZFUSZBXHUXCUULUSBXHXIZ
+      CUFUUJUULFUXCUUJUSCXHUXDCXHZCUFUUKUUDCUFHLXEUFUECXFXGZXIUXCUXBUSZUDXHUXHU
+      EXHZUDBXJZUECXJZUUJUWSUULUXAFUUIUWRUUHXKZUUKUWTUUDXKZXMXNABCGHUXBYQAUWRGU
+      SZUWTHUSZYKZUWSKUXALFUXPUXNKDUSZUWSKVTAUXNUXOXOAUXNUXQUXOTXPBGKDUUHUVMXQV
+      QUXPUXOLDUSZUXALVTAUXNUXOYAAUXOUXRUXNUAXRCHLDUUDUVQXQVQXSZXTYBWSAUUQUUBEU
+      IAUUQBGECHUXBUJZUIUGZUJUUBUDBUFGUUPUYABUFEUUOUIUXCEUSBXHUXCUIUSBXHBUEUFHU
+      UMUXCHUSBXHUXEYCXIUXCUYAUSUDXHUXJUUOUXTEUIUXJUUOUEHUWSUULFUGZUJUXTUXJUEHU
+      UMUYBUXJUUJUWSUULFUXLWPYDUECUFHUYBUXBCUFUWSUULFUXCUWSUSCXHUXFUXGXIUXIUXKU
+      ULUXAUWSFUXMWSYEYFWSYEABGUYAUUAAUXNVEZUXTYTEUIUYCCHUXBYQAUXNUXOUXBYQVTUXS
+      YGYHWSYHYBWSYIAUUBUUGEUIABGUUAUUFUYCHDEYLULZEFCJLKMNPUYDVGZOAUVBUXNSVDAUV
+      DUXNRVDTAUXOUXRUXNUAYJAUVTUXNUCVDYMYHWSAGDUYDEFBIKUUEMNPUYEOSQAHDUUDEJMNP
+      UVCRUVRUCYNTUBYOYP $.
+      $( [8-Mar-2015] $)
+  $}
+
+  ${
+    $d F s t x y $.  $d S f x y s t $.  $d T f x y s t $.
+    $( A group homorphism is a monoid homorphism. $)
+    ghmmhm $p |- ( F e. ( S GrpHom T ) -> F e. ( S MndHom T ) ) $=
+      ( vs vt vx vy cghm cmhm cv co wcel cvv cbs cfv cplusg wceq wral c0g eqid
+      reldmghm vex wa ghmf ghmlin ralrimivva ghmid cmnd w3a cgrp ghmgrp1 adantr
+      wf wb grpmnd syl ghmgrp2 ismhm syl2anc mpbir3and mpan2 gimlem2 ) DEHICABU
+      ACDJZEJZHKLZVDMLZCVCVDIKLZEUBVEVFUCZVGVCNOZVDNOZCUMZFJZGJZVCPOZKCOVLCOVMC
+      OVDPOZKQZGVIRFVIRZVCSOZCOVDSOZQZVCVDCMVIVJVITZVJTZUDVHVPFGVIVIVNVOVCVDVLC
+      VMMVIWAVNTZVOTZUEUFVCVDCMVRVSVRTZVSTZUGVHVCUHLZVDUHLZVGVKVQVTUIUNVHVCUJLZ
+      WGVEWIVFVCVDCUKULVCUOUPVHVDUJLWHVCVDCMUQVDUOUPFGVIVJVNVOVCVDCVSVRWAWBWCWD
+      WEWFURUSUTVAVB $.
+      $( [7-Mar-2015] $)
+
+    $( Group homorphisms and monoid homomorphisms coincide.  (Thus, ` GrpHom `
+       is somewhat redundant, although its stronger reverse closure properties
+       are sometimes useful.) $)
+    ghmmhmb $p |- ( ( S e. Grp /\ T e. Grp ) ->
+        ( S GrpHom T ) = ( S MndHom T ) ) $=
+      ( vf vx vy cgrp wcel wa cghm co cmhm cv ghmmhm cplusg cfv cbs eqid simprr
+      simpl wf mhmf adantl wceq mhmlin adantll ancom2s anassrs ex impbid2 eqrdv
+      isghmd ) AFGZBFGZHZCABIJZABKJZUNCLZUOGZUQUPGZABUQMUNUSURULUMUSURULUSUMURU
+      LUSUMHZHDEANOZBNOZABUQAPOZBPOZVCQZVDQZVAQZVBQZULUTSULUSUMRUTVCVDUQTULVCVD
+      ABUQFVEVFUAUBUTDLZVCGELZVCGHVIVJVAJUQOVIUQOVJUQOVBJUCULVCVAVBABUQFVIVJVEV
+      GVHUDUEUKUFUGUHUIUJ $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d M m t x y $.  $d S t x y $.  $d s t x y $.
+    $( Reverse closure for submonoids. $)
+    submrcl $p |- ( S e. ( SubMnd ` M ) -> M e. Mnd ) $=
+      ( vs vt vx vy csubmnd cfv wcel cdm cmnd elfvdm cv c0g cplusg wral cbs cpw
+      co wa crab df-submnd dmmptss sseli syl ) ABGHIBGJZIBKIABGLUFKBCKCMZNHDMZI
+      EMFMUGOHSUHIFUHPEUHPTDUGQHRUAGEFDCUBUCUDUE $.
+      $( [7-Mar-2015] $)
+
+    issubm.b $e |- B = ( Base ` M ) $.
+    issubm.z $e |- Z = ( 0g ` M ) $.
+    issubm.p $e |- P = ( +g ` M ) $.
+    $( Expand definition of a submonoid. $)
+    issubm $p |- ( M e. Mnd -> ( S e. ( SubMnd ` M ) <->
+          ( S C_ B /\ Z e. S /\ A. x e. S A. y e. S ( x P y ) e. S ) ) ) $=
+      ( vt vm wcel cfv c0g cv cplusg wral wa cbs cmnd csubmnd cpw crab wss wceq
+      co w3a fveq2 pweqd eleq1d oveqd 2ralbidv anbi12d rabeqbidv df-submnd fvex
+      pwex rabex fvmpt eleq2d elpw2 anbi1i sseq2i eleq1i 2ralbii anbi12i bitr4i
+      oveqi eleq2 raleqbi1dv elrab 3anass 3bitr4i syl6bb ) FUAMZEFUBNZMEFONZKPZ
+      MZAPZBPZFQNZUGZVSMZBVSRZAVSRZSZKFTNZUCZUDZMZECUEZGEMZWAWBDUGZEMZBERAERZUH
+      ZVPVQWKELFLPZONZVSMZWAWBWSQNZUGZVSMZBVSRAVSRZSZKWSTNZUCZUDWKUAUBWSFUFZXFW
+      HKXHWJXIXGWIWSFTUIUJXIXAVTXEWGXIWTVRVSWSFOUIUKXIXDWEABVSVSXIXCWDVSXIXBWCW
+      AWBWSFQUIULUKUMUNUOABKLUPWHKWJWIFTUQZURUSUTVAEWJMZVREMZWDEMZBERZAERZSZSZW
+      MWNWQSZSZWLWRXQEWIUEZXPSXSXKXTXPEWIXJVBVCWMXTXRXPCWIEHVDWNXLWQXOGVREIVEWP
+      XMABEEWOWDEDWCWAWBJVIVEVFVGVGVHWHXPKEWJVSEUFVTXLWGXOVSEVRVJWFXNAVSEWEXMBV
+      SEVSEWDVJVKVKUNVLWMWNWQVMVNVO $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d B x y $.  $d H x y $.  $d M x y $.  $d S x y $.  $d Z x y $.
+    issubm2.b $e |- B = ( Base ` M ) $.
+    issubm2.z $e |- Z = ( 0g ` M ) $.
+    issubm2.h $e |- H = ( M |`s S ) $.
+    $( Submonoids are subsets that are also monoids with the same zero. $)
+    issubm2 $p |- ( M e. Mnd -> ( S e. ( SubMnd ` M ) <->
+          ( S C_ B /\ Z e. S /\ H e. Mnd ) ) ) $=
+      ( vx vy cmnd wcel csubmnd cfv wss cv wral w3a wa df-3an cplusg co eqid wb
+      issubm eqid1 issubmnd bicomd 3expb pm5.32da 3bitr4g bitrd ) DKLZBDMNLBAOZ
+      EBLZIPJPDUANZUBBLJBQIBQZRZUNUOCKLZRZIJAUPBDEFGUPUCUEUMUNUOSZUQSVAUSSURUTU
+      MVAUQUSUMUNUOUQUSUDUMUNUORUSUQIJAUPBDCEFUPUFGHUGUHUIUJUNUOUQTUNUOUSTUKUL
+      $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    submss.b $e |- B = ( Base ` M ) $.
+    $( Submonoids are subsets of the base set. $)
+    submss $p |- ( S e. ( SubMnd ` M ) -> S C_ B ) $=
+      ( csubmnd cfv wcel wss c0g cress co cmnd w3a submrcl eqid issubm2 syl ibi
+      wb simp1d ) BCEFGZBAHZCIFZBGZCBJKZLGZUAUBUDUFMZUACLGUAUGSBCNABUECUCDUCOUE
+      OPQRT $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    subm0el.z $e |- Z = ( 0g ` M ) $.
+    $( Submonoids contain zero. $)
+    subm0el $p |- ( S e. ( SubMnd ` M ) -> Z e. S ) $=
+      ( csubmnd cfv wcel cbs wss cress co cmnd w3a submrcl eqid issubm2 syl ibi
+      wb simp2d ) ABEFGZABHFZIZCAGZBAJKZLGZUAUCUDUFMZUABLGUAUGSABNUBAUEBCUBODUE
+      OPQRT $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d M x y $.  $d P x y $.  $d S x y $.  $d X x y $.  $d Y y $.
+    submcl.p $e |- P = ( +g ` M ) $.
+    $( Submonoids are closed under the monoid operation. $)
+    submcl $p |- ( ( S e. ( SubMnd ` M ) /\ X e. S /\ Y e. S ) ->
+        ( X P Y ) e. S ) $=
+      ( vx vy csubmnd cfv wcel co wa cv wral cbs wss eqid wceq eleq1d wb issubm
+      c0g w3a cmnd submrcl syl simp3d oveq1 oveq2 rcla42va sylan2 ancoms 3impb
+      ibi ) BCIJKZDBKZEBKZDEALZBKZUQURMZUPUTUPVAGNZHNZALZBKZHBOGBOZUTUPBCPJZQZC
+      UCJZBKZVFUPVHVJVFUDZUPCUEKUPVKUABCUFGHVGABCVIVGRVIRFUBUGUOUHVEUTDVCALZBKG
+      HDEBBVBDSVDVLBVBDVCAUITVCESVLUSBVCEDAUJTUKULUMUN $.
+      $( [10-Mar-2015] $)
+  $}
+
+  ${
+    submmnd.h $e |- H = ( M |`s S ) $.
+    $( Submonoids are themselves monoids under the given operation. $)
+    submmnd $p |- ( S e. ( SubMnd ` M ) -> H e. Mnd ) $=
+      ( csubmnd cfv wcel cbs wss c0g cmnd w3a wb submrcl issubm2 syl ibi simp3d
+      eqid ) ACEFGZACHFZIZCJFZAGZBKGZTUBUDUELZTCKGTUFMACNUAABCUCUASUCSDOPQR $.
+      $( [7-Mar-2015] $)
+
+    subm0.z $e |- Z = ( 0g ` M ) $.
+    $( Submonoids have the same identity. $)
+    subm0 $p |- ( S e. ( SubMnd ` M ) -> Z = ( 0g ` H ) ) $=
+      ( csubmnd cfv wcel cmnd cbs wss wceq submrcl submmnd eqid subm0el submnd0
+      c0g submss syl22anc ) ACGHICJIBJIACKHZLDAIDBSHMACNABCEOUBACUBPZTACDFQUBAC
+      BDUCFERUA $.
+      $( [7-Mar-2015] $)
+  $}
+
+  ${
+    $d F x y z $.  $d M x y z $.  $d N x y z $.  $d V x z $.  $d X x y z $.
+    $( The homomorphic image of a submonoid is a submonoid. $)
+    mhmima $p |- ( ( ( F e. ( M MndHom N ) /\ N e. V ) /\
+          X e. ( SubMnd ` M ) ) -> ( F " X ) e. ( SubMnd ` N ) ) $=
+      ( vx vy vz co wcel wa cfv wss cv wral eqid adantr syl wceq syl2anc cplusg
+      cmhm csubmnd cima cbs c0g crn imassrn wf eqid1 mhmf frn syl5ss wfn submss
+      mhm0 ffn adantl subm0el fnfvima syl3anc eqeltrrd simpll sseld anim12d imp
+      mhmlin submcl 3expb adantll ralrimiva wb oveq2 eleq1d ralima mpbird oveq1
+      anassrs ralbidv cmnd w3a mhmrcl2 issubm mpbir3and ) ABCUBIJCDJKZEBUCLJZKZ
+      AEUDZCUCLJZWHCUELZMZCUFLZWHJZFNZGNZCUALZIZWHJZGWHOZFWHOZWGWHAUGZWJAEUHWGB
+      UELZWJAUIZXAWJMWEXCWFXBWJBCADXBUJZWJPZUKQZXBWJAULRUMWGBUFLZALZWLWHWEXHWLS
+      WFBCADWLXGXGPZWLPZUPQWGAXBUNZEXBMZXGEJZXHWHJWGXCXKXFXBWJAUQRZWFXLWEXBEBXD
+      UOURZWFXMWEEBXGXIUSURXBEAXGUTVAVBWGWTHNZALZWOWPIZWHJZGWHOZHEOZWGXTHEWGXPE
+      JZKZXTXQWNALZWPIZWHJZFEOZYCYFFEWGYBWNEJZYFWGYBYHKZKZXPWNBUALZIZALZYEWHYJW
+      EXPXBJZWNXBJZKZYMYESWEWFYIVCWGYIYPWGYBYNYHYOWGEXBXPXOVDWGEXBWNXOVDVEVFXBY
+      KWPBCADXPWNXBPYKPZWPPZVGTYJXKXLYLEJZYMWHJWGXKYIXNQWGXLYIXOQWFYIYSWEWFYBYH
+      YSYKEBXPWNYQVHVIVJXBEAYLUTVAVBVRVKWGXTYGVLZYBWGXKXLYTXNXOXSYFGFXBEAWOYDSX
+      RYEWHWOYDXQWPVMVNVOTQVPVKWGXKXLWTYAVLXNXOWSXTFHXBEAWNXQSZWRXSGWHUUAWQXRWH
+      WNXQWOWPVQVNVSVOTVPWGCVTJZWIWKWMWTWAVLWEUUBWFBCADWBQFGWJWPWHCWLXEXJYRWCRW
+      D $.
+      $( [10-Mar-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Addenda for structure powers
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
@@ -22019,6 +22779,17 @@ $)
   ${
     $d Y x a b $.  $d R x a b $.  $d I x a b $.  $d B x a b $.  $d F a b $.
     $d W x a b $.
+    pwsdiagmhm.y $e |- Y = ( R ^s I ) $.
+    pwsdiagmhm.b $e |- B = ( Base ` R ) $.
+    pwsdiagmhm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
+    $( Diagonal monoid homomorphism into a structure power. $)
+    pwsdiagmhm $p |- ( ( R e. Mnd /\ I e. W ) -> F e. ( R MndHom Y ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d Y x a b $.  $d R x a b $.  $d I x a b $.  $d B x a b $.  $d F a b $.
+    $d W x a b $.
     pwsdiagghm.y $e |- Y = ( R ^s I ) $.
     pwsdiagghm.b $e |- B = ( Base ` R ) $.
     pwsdiagghm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
@@ -22065,81 +22836,6 @@ $)
       CWTIXLYCYEVMVNVOABDEFXBJVPVQXPXDXRWSXEWKXNXDXRRWJXMABDEFWTJVPVRVTVSWAWBGT
       NXKWNXJOWCGCEWDPTHCEWDWEWFKLXHCGBDWQWPXAXETXLWPSYEIYCYDWGWHWI $.
       $( [24-Jan-2015] $)
-  $}
-
-  ${
-    $d B x $.  $d V x $.  $d X x $.
-    fvtresfn.f $e |- F = ( x e. B |-> ( x |` V ) ) $.
-    $( Functionality of a tuple-restriction function.  (Contributed by Stefan
-       O'Rear, 24-Jan-2015.) $)
-    fvtresfn $p |- ( X e. B -> ( F ` X ) = ( X |` V ) ) $=
-      ( wcel cres cvv cfv wceq resexg cv reseq1 fvmptg mpdan ) EBGEDHZIGECJQKED
-      BLAEAMZDHQBICREDNFOP $.
-      $( [24-Jan-2015] $)
-  $}
-
-  ${
-    $d A y $.  $d B y $.  $d C x y $.
-    $( Unrestricted restriction of the mapping operation.  (Contributed by
-       Stefan O'Rear, 24-Jan-2015.) $)
-    resmpt3 $p |- ( ( x e. A |-> B ) |` C ) = ( x e. ( A i^i C ) |-> B ) $=
-      ( vy cv wcel wceq wa copab cres cin cmpt resopab ancom bitri anbi1i anass
-      elin df-mpt bitr2i opabbii eqtri reseq1i 3eqtr4i ) AFZBGZEFCHZIZAEJZDKZUF
-      BDLZGZUHIZAEJZABCMZDKAULCMUKUFDGZUIIZAEJUOUIAEDNURUNAEUNUQUGIZUHIURUMUSUH
-      UMUGUQIUSUFBDSUGUQOPQUQUGUHRUAUBUCUPUJDAEBCTUDAEULCTUE $.
-      $( [24-Jan-2015] $)
-  $}
-
-  ${
-    $d F x a b $.  $d G x a b $.  $d V x $.  $d W x $.  $d R x a b $.
-    $d D x $.
-    $( General value of ` ( F oF R G ) ` with no assumptions on functionality
-       of ` F ` and ` G ` .  (Contributed by Stefan O'Rear, 24-Jan-2015.) $)
-    offval3 $p |- ( ( F e. V /\ G e. W ) -> ( F oF R G ) =
-        ( x e. ( dom F i^i dom G ) |-> ( ( F ` x ) R ( G ` x ) ) ) ) $=
-      ( va vb wcel wa cvv cdm cin cv cfv co cmpt wceq elex adantr adantl inex1g
-      dmexg mptexg 3syl dmeq ineqan12d fveq1 oveqan12d mpteq12dv df-of ovmpt2ga
-      cof syl3anc ) CEIZDFIZJCKIZDKIZACLZDLZMZANZCOZVBDOZBPZQZKIZCDBUMZPVFRUOUQ
-      UPCESTUPURUODFSUAUOVGUPUOUSKIVAKIVGCEUCUSUTKUBAVAVEKUDUETGHCDKKAGNZLZHNZL
-      ZMZVBVIOZVBVKOZBPZQVFVHKVICRZVKDRZJAVMVPVAVEVQVRVJUSVLUTVICUFVKDUFUGVQVRV
-      NVCVOVDBVBVICUHVBVKDUHUIUJABGHUKULUN $.
-      $( [24-Jan-2015] $)
-
-    $( Pointwise combination commutes with restriction.  (Contributed by Stefan
-       O'Rear, 24-Jan-2015.) $)
-    offres $p |- ( ( F e. V /\ G e. W ) -> ( ( F oF R G ) |` D ) =
-        ( ( F |` D ) oF R ( G |` D ) ) ) $=
-      ( vx wcel cdm cin cfv co cmpt cres wceq fvres dmres 3eqtr4ri offval3 cvv
-      wa cv cof inss2 sseli oveq12d mpteq2ia inindi incom ineq12i eqid mpteq12i
-      syl resmpt3 reseq1d resexg syl2an 3eqtr4a ) CEHZDFHZUAZGCIZDIZJZGUBZCKZVE
-      DKZBLZMZANZGCANZIZDANZIZJZVEVKKZVEVMKZBLZMZCDBUCZLZANVKVMVTLZGVDAJZVRMGWC
-      VHMVSVJGWCVRVHVEWCHVEAHZVRVHOWCAVEVDAUDUEWDVPVFVQVGBVEACPVEADPUFUMUGGVOVR
-      WCVRAVDJAVBJZAVCJZJWCVOAVBVCUHVDAUIVLWEVNWFCAQDAQUJRVRUKULGVDVHAUNRVAWAVI
-      AGBCDEFSUOUSVKTHVMTHWBVSOUTCAEUPDAFUPGBVKVMTTSUQUR $.
-      $( [24-Jan-2015] $)
-  $}
-
-  ${
-    $d F a $.  $d D a $.  $d Y a $.  $d X a x $.  $d V x $.
-    mptcnvima.f $e |- F = ( x e. D |-> Y ) $.
-    $( Converse image of a function defined by maps-to.  (Contributed by Stefan
-       O'Rear, 25-Jan-2015.) $)
-    mptcnvima $p |- ( `' F " X ) = { x e. D | Y e. X } $=
-      ( va ccnv cima cv wcel wceq wa copab cres crn eqtri wex cab 3eqtri df-mpt
-      crab cnveqi cnvopab imaeq1i df-ima resopab rneqi rnopab ancom anass bitri
-      cmpt exbii 19.42v df-clel bicomi anbi2i 3bitri abbii df-rab eqtr4i ) CHZD
-      IAJBKZGJZELZMZGANZDIVHDOZPZEDKZABUBZVCVHDVCVGAGNZHVHCVMCABEUMVMFAGBEUAQUC
-      VGAGUDQUEVHDUFVJVEDKZVGMZGANZPVOGRZASZVLVIVPVGGADUGUHVOGAUIVRVDVKMZASVLVQ
-      VSAVQVDVFVNMZMZGRVDVTGRZMVSVOWAGVOVGVNMWAVNVGUJVDVFVNUKULUNVDVTGUOWBVKVDV
-      KWBGEDUPUQURUSUTVKABVAVBTT $.
-      $( [25-Jan-2015] $)
-
-    $( Converse singleton image of a function defined by maps-to.  (Contributed
-       by Stefan O'Rear, 25-Jan-2015.) $)
-    mptiniseg $p |- ( X e. V -> ( `' F " { X } ) = { x e. D | Y = X } ) $=
-      ( wcel ccnv csn cima crab wceq mptcnvima elsnc2g rabbidv syl5eq ) EDHZCIE
-      JZKFSHZABLFEMZABLABCSFGNRTUAABFEDOPQ $.
-      $( [25-Jan-2015] $)
   $}
 
   ${
@@ -23165,395 +23861,19 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Monoid homomorphisms and submonoids
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-$)
-
-  $c MndHom SubMnd $.
-
-  $( Hom-set generator class for monoids. $)
-  cmhm $a class MndHom $.
-
-  $( Class function taking a monoid to its lattice of submonoids. $)
-  csubmnd $a class SubMnd $.
-
-  ${
-    $d s t f x y $.
-    $( A monoid homomorphism is a function on the base sets which preserves the
-       binary operation and the identity. $)
-    df-mhm $a |- MndHom = ( s e. Mnd , t e. Mnd |->
-          { f e. ( ( Base ` t ) ^m ( Base ` s ) ) |
-            ( A. x e. ( Base ` s ) A. y e. ( Base ` s )
-                  ( f ` ( x ( +g ` s ) y ) ) =
-                    ( ( f ` x ) ( +g ` t ) ( f ` y ) ) /\
-              ( f ` ( 0g ` s ) ) = ( 0g ` t ) ) } ) $.
-
-    $( A submonoid is a subset of a monoid which contains the identity and is
-       closed under the operation.  Such subsets are themselves monoids with
-       the same identity. $)
-    df-submnd $a |- SubMnd = ( s e. Mnd |-> { t e. ~P ( Base ` s ) |
-            ( ( 0g ` s ) e. t /\
-              A. x e. t A. y e. t ( x ( +g ` s ) y ) e. t ) } ) $.
-  $}
-
-  ${
-    $d A x y z $.  $d B x y z $.  $d C z $.
-    elmpt2cl.f $e |- F = ( x e. A , y e. B |-> C ) $.
-    $( If a two-parameter class is not empty, constrain the implicit pair. $)
-    elmpt2cl2 $p |- ( X e. ( S F T ) -> <. S , T >. e. ( A X. B ) ) $=
-      ( vz co wcel cdm cxp cop cv wa wceq copab2 cmpt2 df-mpt2 dmoprabss elfvdm
-      eqtri dmeqi eqsstri cfv df-ov eleq2s sseldi ) IFGHLZMHNZCDOZFGPZUMAQCMBQD
-      MRKQESZRABKTZNUNHUQHABCDEUAUQJABKCDEUBUEUFUPABKCDUCUGUOUMMIUOHUHULIUOHUDF
-      GHUIUJUK $.
-      $( [7-Mar-2015] $)
-
-    $( If a two-parameter class is not empty, the first argument is in its
-       nominal domain. $)
-    elmpt2lcl $p |- ( X e. ( S F T ) -> S e. A ) $=
-      ( co wcel cop cxp elmpt2cl2 opelxp1 syl ) IFGHKLFGMCDNLFCLABCDEFGHIJOFGCD
-      PQ $.
-      $( [7-Mar-2015] $)
-
-    $( If a two-parameter class is not empty, the second argument is in its
-       nominal domain, subject to ~ opprc2 issues. $)
-    elmpt2rcl $p |- ( ( X e. ( S F T ) /\ T e. V ) -> T e. B ) $=
-      ( co wcel cop cxp elmpt2cl2 wa opelxpg biimpac simprd sylan ) JFGHLMFGNCD
-      OMZGIMZGDMZABCDEFGHJKPUBUCQFCMZUDUCUBUEUDQFGCDIRSTUA $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d f s t x y $.
-    $( Reverse closure of a monoid homomorphism. $)
-    mhmrcl1 $p |- ( F e. ( S MndHom T ) -> S e. Mnd ) $=
-      ( vs vt vx vy vf cmnd cv cplusg cfv co wceq cbs wral c0g wa cmap crab
-      cmhm df-mhm elmpt2lcl ) DEIIFJZGJZDJZKLMHJZLUDUGLUEUGLEJZKLMNGUFOLZPFUIPU
-      FQLUGLUHQLNRHUHOLUISMTABUACFGEHDUBUC $.
-      $( [7-Mar-2015] $)
-
-    $( Reverse closure of a monoid homomorphism. $)
-    mhmrcl2 $p |- ( ( F e. ( S MndHom T ) /\ T e. V ) -> T e. Mnd ) $=
-      ( vs vt vx vy vf cmnd cv cplusg cfv co wceq cbs wral c0g wa cmap df-mhm
-      crab cmhm elmpt2rcl ) EFJJGKZHKZEKZLMNIKZMUEUHMUFUHMFKZLMNOHUGPMZQGUJQUGR
-      MUHMUIRMOSIUIPMUJTNUBABUCDCGHFIEUAUD $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d B f s t x y $.  $d S f s t x y $.  $d T f s t x y $.  $d C f s t $.
-    $d P f s t $.  $d Q f s t $.  $d Y f s t $.  $d Z f s t $.  $d F f x y $.
-    ismhm.b $e |- B = ( Base ` S ) $.
-    ismhm.c $e |- C = ( Base ` T ) $.
-    ismhm.p $e |- P = ( +g ` S ) $.
-    ismhm.q $e |- Q = ( +g ` T ) $.
-    ismhm.z $e |- Z = ( 0g ` S ) $.
-    ismhm.y $e |- Y = ( 0g ` T ) $.
-    $( Property of a monoid homomorphism. $)
-    ismhm $p |- ( ( S e. Mnd /\ T e. Mnd ) -> ( F e. ( S MndHom T ) <->
-          ( F : B --> C /\ A. x e. B A. y e. B ( F ` ( x P y ) ) =
-                  ( ( F ` x ) Q ( F ` y ) ) /\ ( F ` Z ) = Y ) ) ) $=
-      ( co cfv wceq vf vs vt cmnd wcel wa cmhm cv wral cmap crab w3a cplusg cbs
-      wf c0g fveq2 syl6eqr oveqan12rd adantr fveq2d eqeqan12d raleqbidv anbi12d
-      oveqd rabeqbidv df-mhm ovex rabex ovmpt2a eleq2d cvv eqeltri elmap anbi1i
-      fvex fveq1 oveq12d eqeq12d 2ralbidv eqeq1d elrab 3anass 3bitr4i syl6bb )
-      GUDUEHUDUEUFZIGHUGRZUEIAUHZBUHZERZUAUHZSZWHWKSZWIWKSZFRZTZBCUIZACUIZKWKSZ
-      JTZUFZUADCUJRZUKZUEZCDIUOZWJISZWHISZWIISZFRZTZBCUIACUIZKISZJTZULZWFWGXCIU
-      BUCGHUDUDWHWIUBUHZUMSZRZWKSZWMWNUCUHZUMSZRZTZBXOUNSZUIZAYCUIZXOUPSZWKSZXS
-      UPSZTZUFZUAXSUNSZYCUJRZUKXCUGXOGTZXSHTZUFZYJXAUAYLXBYNYMYKDYCCUJYNYKHUNSZ
-      DXSHUNUQMURYMYCGUNSZCXOGUNUQLURZUSYOYEWRYIWTYOYDWQAYCCYMYCCTYNYRUTZYOYBWP
-      BYCCYSYMYNXRWLYAWOYMXQWJWKYMXPEWHWIYMXPGUMSEXOGUMUQNURVEVAYNXTFWMWNYNXTHU
-      MSFXSHUMUQOURVEVBVCVCYMYNYGWSYHJYMYFKWKYMYFGUPSKXOGUPUQPURVAYNYHHUPSJXSHU
-      PUQQURVBVDVFABUCUAUBVGXAUAXBDCUJVHVIVJVKIXBUEZXKXMUFZUFXEUUAUFXDXNYTXEUUA
-      DCIDYPVLMHUNVPVMCYQVLLGUNVPVMVNVOXAUUAUAIXBWKITZWRXKWTXMUUBWPXJABCCUUBWLX
-      FWOXIWJWKIVQUUBWMXGWNXHFWHWKIVQWIWKIVQVRVSVTUUBWSXLJKWKIVQWAVDWBXEXKXMWCW
-      DWE $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d B x y $.  $d C x y $.  $d F x y $.  $d P x y $.  $d Q x y $.
-    $d S x y $.  $d T x y $.
-    isghm3.b $e |- B = ( Base ` S ) $.
-    isghm3.c $e |- C = ( Base ` T ) $.
-    isghm3.p $e |- P = ( +g ` S ) $.
-    isghm3.q $e |- Q = ( +g ` T ) $.
-    $( Property of a group homomorphism, similar to ~ ismhm . $)
-    isghm3 $p |- ( ( S e. Grp /\ T e. Grp ) -> ( F e. ( S GrpHom T ) <->
-          ( F : B --> C /\ A. x e. B A. y e. B ( F ` ( x P y ) ) =
-                  ( ( F ` x ) Q ( F ` y ) ) ) ) ) $=
-      ( cgrp wcel wa co cv cfv wral cghm wf wceq wb isghm adantl ibar bitr4d )
-      GNOZHNOZPZIGHUAQOZUKCDIUBARZBRZEQISUMISUNISFQUCBCTACTPZPZUOUJULUPUDUIBAEF
-      GHINCDJKLMUEUFUKUOUGUH $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d B y $.  $d F x y $.  $d N x $.  $d S x y $.  $d T x y $.
-    islmhm3.b $e |- B = ( Base ` S ) $.
-    islmhm3.k $e |- K = ( Scalar ` S ) $.
-    islmhm3.l $e |- L = ( Scalar ` T ) $.
-    islmhm3.n $e |- N = ( Base ` K ) $.
-    islmhm3.v $e |- V = ( vsca ` S ) $.
-    islmhm3.w $e |- W = ( vsca ` T ) $.
-    $( Property of a module homomorphism, similar to ~ ismhm . $)
-    islmhm3 $p |- ( ( S e. LMod /\ T e. LMod ) -> ( F e. ( S LMHom T ) <->
-          ( F e. ( S GrpHom T ) /\ L = K /\
-            A. x e. N A. y e. B ( F ` ( x V y ) ) = ( x W ( F ` y ) ) ) ) ) $=
-      ( clmod wcel co wa clmhm cghm wceq cfv wral w3a islmhm adantl ibar bitr4d
-      cv wb ) DRSZERSZUAZFDEUBTSZUPFDEUCTSHGUDAULZBULZJTFUEURUSFUEKTUDBCUFAIUFU
-      GZUAZUTUOUQVAUMUNABIDECFGHJKRMNOLPQUHUIUPUTUJUK $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d B x y $.  $d F x y $.  $d S x y $.  $d T x y $.
-    mhmf.b $e |- B = ( Base ` S ) $.
-    mhmf.c $e |- C = ( Base ` T ) $.
-    $( A monoid homomorphism is a function. $)
-    mhmf $p |- ( ( F e. ( S MndHom T ) /\ T e. V ) -> F : B --> C ) $=
-      ( vx vy co wcel cv cplusg cfv wceq wral c0g cmnd eqid cmhm wa wf simpl wb
-      w3a mhmrcl1 adantr mhmrcl2 ismhm syl2anc mpbid simp1d ) ECDUAKLZDFLZUBZAB
-      EUCZIMZJMZCNOZKEOUREOUSEODNOZKPJAQIAQZCROZEODROZPZUPUNUQVBVEUFZUNUOUDUPCS
-      LZDSLUNVFUEUNVGUOCDEUGUHCDEFUIIJABUTVACDEVDVCGHUTTVATVCTVDTUJUKULUM $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d B x y $.  $d F x y $.  $d P x y $.  $d Q x y $.  $d S x y $.
-    $d T x y $.  $d X x y $.  $d Y x y $.
-    mhmlin.b $e |- B = ( Base ` S ) $.
-    mhmlin.p $e |- P = ( +g ` S ) $.
-    mhmlin.q $e |- Q = ( +g ` T ) $.
-    $( A monoid homomorphism commutes with composition. $)
-    mhmlin $p |- ( ( ( F e. ( S MndHom T ) /\ T e. V ) /\
-          ( X e. B /\ Y e. B ) ) ->
-        ( F ` ( X P Y ) ) = ( ( F ` X ) Q ( F ` Y ) ) ) $=
-      ( vx vy wcel wa co cfv wceq eqid cmhm cv wral cbs wf c0g w3a cmnd mhmrcl1
-      simpl adantr mhmrcl2 ismhm syl2anc mpbid simp2d oveq1 fveq2d fveq2 oveq1d
-      wb eqeq12d oveq2 oveq2d rcla42va sylan2 ancoms ) HAOIAOPZFDEUAQOZEGOZPZHI
-      BQZFRZHFRZIFRZCQZSZVKVHMUBZNUBZBQZFRZVRFRZVSFRZCQZSZNAUCMAUCZVQVKAEUDRZFU
-      EZWFDUFRZFREUFRZSZVKVIWHWFWKUGZVIVJUJVKDUHOZEUHOVIWLVAVIWMVJDEFUIUKDEFGUL
-      MNAWGBCDEFWJWIJWGTKLWITWJTUMUNUOUPWEVQHVSBQZFRZVNWCCQZSMNHIAAVRHSZWAWOWDW
-      PWQVTWNFVRHVSBUQURWQWBVNWCCVRHFUSUTVBVSISZWOVMWPVPWRWNVLFVSIHBVCURWRWCVOV
-      NCVSIFUSVDVBVEVFVG $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d F x y $.  $d S x y $.  $d T x y $.
-    mhm0.z $e |- Z = ( 0g ` S ) $.
-    mhm0.y $e |- Y = ( 0g ` T ) $.
-    $( A monoid homorphism preserves zero. $)
-    mhm0 $p |- ( ( F e. ( S MndHom T ) /\ T e. V ) -> ( F ` Z ) = Y ) $=
-      ( vx vy co wcel cbs cfv cv cplusg wceq wral cmnd eqid cmhm wa wf simpl wb
-      w3a mhmrcl1 adantr mhmrcl2 ismhm syl2anc mpbid simp3d ) CABUAKLZBDLZUBZAM
-      NZBMNZCUCZIOZJOZAPNZKCNUTCNVACNBPNZKQJUQRIUQRZFCNEQZUPUNUSVDVEUFZUNUOUDUP
-      ASLZBSLUNVFUEUNVGUOABCUGUHABCDUIIJUQURVBVCABCEFUQTURTVBTVCTGHUJUKULUM $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d ph x y $.  $d B x y $.  $d F x y $.  $d G x y $.  $d H x y $.
-    $d K x y $.  $d Z x y $.
-    gsummhm.b $e |- B = ( Base ` G ) $.
-    gsummhm.z $e |- Z = ( 0g ` G ) $.
-    gsummhm.g $e |- ( ph -> G e. CMnd ) $.
-    gsummhm.h $e |- ( ph -> H e. CMnd ) $.
-    gsummhm.a $e |- ( ph -> A e. V ) $.
-    gsummhm.k $e |- ( ph -> K e. ( G MndHom H ) ) $.
-    gsummhm.f $e |- ( ph -> F : A --> B ) $.
-    gsummhm.w $e |- ( ph -> ( `' F " ( _V \ { Z } ) ) e. Fin ) $.
-    $( Commutativity of a monoid sum with an explicit monoid homomorphism. $)
-    gsummhm $p |- ( ph -> ( H gsum ( K o. F ) ) = ( K ` ( G gsum F ) ) ) $=
-      ( cfv eqid wcel vx vy cbs cplusg c0g cmhm co ccmn wf mhmf syl2anc wceq wa
-      mhm0 cv jca mhmlin sylan gsumhomo ) AUAUBBCFUCRZEUDRZFUDRZDEFGFUERZHIJUTS
-      ZKVCSZVASZVBSZLMNAGEFUFUGTZFUHTZCUTGUIOMCUTEFGUHJVDUJUKAVHVIIGRVCULOMEFGU
-      HVCIKVEUNUKAVHVIUMUAUOZCTUBUOZCTUMVJVKVAUGGRVJGRVKGRVBUGULAVHVIOMUPCVAVBE
-      FGUHVJVKJVFVGUQURPQUS $.
-      $( [8-Mar-2015] $)
-  $}
-
-  ${
-    $d ph i j x y $.  $d B i j x y $.  $d I i j k x y $.  $d J i j k x y $.
-    $d R i j k x $.  $d T i j k x y $.  $d V i $.  $d X i j k y $.
-    $d Y i j k x $.  $d Z i j $.
-    gsumdixp.b $e |- B = ( Base ` R ) $.
-    gsumdixp.t $e |- T = ( .r ` R ) $.
-    gsumdixp.z $e |- Z = ( 0g ` R ) $.
-    gsumdixp.i $e |- ( ph -> I e. V ) $.
-    gsumdixp.j $e |- ( ph -> J e. W ) $.
-    gsumdixp.r $e |- ( ph -> R e. Ring ) $.
-    gsumdixp.x $e |- ( ( ph /\ x e. I ) -> X e. B ) $.
-    gsumdixp.y $e |- ( ( ph /\ y e. J ) -> Y e. B ) $.
-    gsumdixp.xf $e |- ( ph ->
-        ( `' ( x e. I |-> X ) " ( _V \ { Z } ) ) e. Fin ) $.
-    gsumdixp.yf $e |- ( ph ->
-        ( `' ( y e. J |-> Y ) " ( _V \ { Z } ) ) e. Fin ) $.
-    $( Distribute a binary product of sums to a sum of binary products in a
-       ring. $)
-    gsumdixp $p |- ( ph ->
-        ( ( R gsum ( x e. I |-> X ) ) T ( R gsum ( y e. J |-> Y ) ) ) =
-          ( R gsum ( x e. I , y e. J |-> ( X T Y ) ) ) ) $=
-      ( vi vj vk co cmpt2 cgsu cmpt cv cfv ccnv cvv csn cdif cima cxp wcel ccmn
-      crg rngcmn syl adantr wa wf eqid fmptd simpl ffvelrn syl2an simpr syl3anc
-      rngcl cfn xpfi syl2anc wbr wn wceq wo vex notbii ianor bitri simprl eldif
-      brxp biimpri sylan wss ssid a1i suppssr syldan oveq1d rnglz simprr oveq2d
-      eqtrd rngrz jaodan sylan2b anasss hbmpt1 ax17el hbfv ax-17 hbov weq fveq2
-      gsum2d2 oveqan12d cbvmpt2 simp2 3adant3 fvmpt2 3adant2 oveq12d mpt2eq3dva
-      simp3 syl5eq hbmpt mpteq2dv cbvmpt syl6eq 3expa mpteq2dva 3eqtr3d adantlr
-      w3a cplusg gsummulc2 gsumcl gsummulc1 3eqtrrd ) AEBCGHKLFUGZUHZUIUGZEBGEC
-      HYQUJZUIUGZUJZUIUGZEBGKECHLUJZUIUGZFUGZUJZUIUGEBGKUJZUIUGUUEFUGAEUDUEGHUD
-      UKZUUHULZUEUKZUUDULZFUGZUHZUIUGEUDGEUEHUUMUJZUIUGZUJZUIUGYSUUCAGDHUUHUMUN
-      MUOUPZUQZUUDUMUURUQZURZUDUEEIJUUMMNPAEVAUSZEUTUSSEVBVCZQAHJUSZUUIGUSZRVDA
-      UVEUUKHUSZVEZVEZUVBUUJDUSZUULDUSZUUMDUSAUVBUVGSVDZAGDUUHVFZUVEUVIUVGABGKD
-      UUHTUUHVGZVHZUVEUVFVIGDUUIUUHVJVKZAHDUUDVFZUVFUVJUVGACHLDUUDUAUUDVGZVHZUV
-      EUVFVLHDUUKUUDVJVKZDEFUUJUULNOVNVMAUUSVOUSUUTVOUSZUVAVOUSUBUCUUSUUTVPVQAU
-      VGUUIUUKUVAVRZVSZUUMMVTZUWBUVHUUIUUSUSZVSZUUKUUTUSZVSZWAZUWCUWBUWDUWFVEZV
-      SUWHUWAUWIUUIUUKUUSUUTUEWBWHWCUWDUWFWDWEUVHUWEUWCUWGUVHUWEVEZUUMMUULFUGZM
-      UWJUUJMUULFUVHUWEUUIGUUSUPUSZUUJMVTUVHUVEUWEUWLAUVEUVFWFUWLUVEUWEVEUUIGUU
-      SWGWIWJUVHGDUUHUUSUUIMAUVLUVGUVNVDUUSUUSWKUVHUUSWLWMWNWOWPUVHUWKMVTZUWEUV
-      HUVBUVJUWMUVKUVSDEFUULMNOPWQVQVDWTUVHUWGVEZUUMUUJMFUGZMUWNUULMUUJFUVHUWGU
-      UKHUUTUPUSZUULMVTUVHUVFUWGUWPAUVEUVFWRUWPUVFUWGVEUUKHUUTWGWIWJUVHHDUUDUUT
-      UUKMAUVPUVGUVRVDUUTUUTWKUVHUUTWLWMWNWOWSUVHUWOMVTZUWGUVHUVBUVIUWQUVKUVODE
-      FUUJMNOPXAVQVDWTXBXCXDXLAUUNYREUIAUUNBCGHBUKZUUHULZCUKZUUDULZFUGZUHYRUDUE
-      BCUFGHUUMUXBBUFUUJUULFBUFUUIUUHBUFGKXEUFUDBXFXGUFUKZFUSZBXHUXCUULUSBXHXIZ
-      CUFUUJUULFUXCUUJUSCXHUXDCXHZCUFUUKUUDCUFHLXEUFUECXFXGZXIUXCUXBUSZUDXHUXHU
-      EXHZUDBXJZUECXJZUUJUWSUULUXAFUUIUWRUUHXKZUUKUWTUUDXKZXMXNABCGHUXBYQAUWRGU
-      SZUWTHUSZYKZUWSKUXALFUXPUXNKDUSZUWSKVTAUXNUXOXOAUXNUXQUXOTXPBGKDUUHUVMXQV
-      QUXPUXOLDUSZUXALVTAUXNUXOYAAUXOUXRUXNUAXRCHLDUUDUVQXQVQXSZXTYBWSAUUQUUBEU
-      IAUUQBGECHUXBUJZUIUGZUJUUBUDBUFGUUPUYABUFEUUOUIUXCEUSBXHUXCUIUSBXHBUEUFHU
-      UMUXCHUSBXHUXEYCXIUXCUYAUSUDXHUXJUUOUXTEUIUXJUUOUEHUWSUULFUGZUJUXTUXJUEHU
-      UMUYBUXJUUJUWSUULFUXLWPYDUECUFHUYBUXBCUFUWSUULFUXCUWSUSCXHUXFUXGXIUXIUXKU
-      ULUXAUWSFUXMWSYEYFWSYEABGUYAUUAAUXNVEZUXTYTEUIUYCCHUXBYQAUXNUXOUXBYQVTUXS
-      YGYHWSYHYBWSYIAUUBUUGEUIABGUUAUUFUYCHDEYLULZEFCJLKMNPUYDVGZOAUVBUXNSVDAUV
-      DUXNRVDTAUXOUXRUXNUAYJAUVTUXNUCVDYMYHWSAGDUYDEFBIKUUEMNPUYEOSQAHDUUDEJMNP
-      UVCRUVRUCYNTUBYOYP $.
-      $( [8-Mar-2015] $)
-  $}
-
-  ${
-    $d F s t x y $.  $d S f x y s t $.  $d T f x y s t $.
-    $( A group homorphism is a monoid homorphism. $)
-    ghmmhm $p |- ( F e. ( S GrpHom T ) -> F e. ( S MndHom T ) ) $=
-      ( vs vt vx vy cghm cmhm cv co wcel cvv cbs cfv cplusg wceq wral c0g eqid
-      reldmghm vex wa ghmf ghmlin ralrimivva ghmid cmnd w3a cgrp ghmgrp1 adantr
-      wf wb grpmnd syl ghmgrp2 ismhm syl2anc mpbir3and mpan2 gimlem2 ) DEHICABU
-      ACDJZEJZHKLZVDMLZCVCVDIKLZEUBVEVFUCZVGVCNOZVDNOZCUMZFJZGJZVCPOZKCOVLCOVMC
-      OVDPOZKQZGVIRFVIRZVCSOZCOVDSOZQZVCVDCMVIVJVITZVJTZUDVHVPFGVIVIVNVOVCVDVLC
-      VMMVIWAVNTZVOTZUEUFVCVDCMVRVSVRTZVSTZUGVHVCUHLZVDUHLZVGVKVQVTUIUNVHVCUJLZ
-      WGVEWIVFVCVDCUKULVCUOUPVHVDUJLWHVCVDCMUQVDUOUPFGVIVJVNVOVCVDCVSVRWAWBWCWD
-      WEWFURUSUTVAVB $.
-      $( [7-Mar-2015] $)
-
-    $( Group homorphisms and monoid homomorphisms coincide.  (Thus, ` GrpHom `
-       is somewhat redundant, although its stronger reverse closure properties
-       are sometimes useful.) $)
-    ghmmhmb $p |- ( ( S e. Grp /\ T e. Grp ) ->
-        ( S GrpHom T ) = ( S MndHom T ) ) $=
-      ( vf vx vy cgrp wcel wa cghm co cmhm cv ghmmhm cplusg cfv cbs eqid simprr
-      simpl wf mhmf adantl wceq mhmlin adantll ancom2s anassrs ex impbid2 eqrdv
-      isghmd ) AFGZBFGZHZCABIJZABKJZUNCLZUOGZUQUPGZABUQMUNUSURULUMUSURULUSUMURU
-      LUSUMHZHDEANOZBNOZABUQAPOZBPOZVCQZVDQZVAQZVBQZULUTSULUSUMRUTVCVDUQTULVCVD
-      ABUQFVEVFUAUBUTDLZVCGELZVCGHVIVJVAJUQOVIUQOVJUQOVBJUCULVCVAVBABUQFVIVJVEV
-      GVHUDUEUKUFUGUHUIUJ $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d M m t x y $.  $d S t x y $.  $d s t x y $.
-    $( Reverse closure for submonoids. $)
-    submrcl $p |- ( S e. ( SubMnd ` M ) -> M e. Mnd ) $=
-      ( vs vt vx vy csubmnd cfv wcel cdm cmnd elfvdm cv c0g cplusg wral cbs cpw
-      co wa crab df-submnd dmmptss sseli syl ) ABGHIBGJZIBKIABGLUFKBCKCMZNHDMZI
-      EMFMUGOHSUHIFUHPEUHPTDUGQHRUAGEFDCUBUCUDUE $.
-      $( [7-Mar-2015] $)
-
-    issubm.b $e |- B = ( Base ` M ) $.
-    issubm.z $e |- Z = ( 0g ` M ) $.
-    issubm.p $e |- P = ( +g ` M ) $.
-    $( Expand definition of a submonoid. $)
-    issubm $p |- ( M e. Mnd -> ( S e. ( SubMnd ` M ) <->
-          ( S C_ B /\ Z e. S /\ A. x e. S A. y e. S ( x P y ) e. S ) ) ) $=
-      ( vt vm wcel cfv c0g cv cplusg wral wa cbs cmnd csubmnd cpw crab wss wceq
-      co w3a fveq2 pweqd eleq1d oveqd 2ralbidv anbi12d rabeqbidv df-submnd fvex
-      pwex rabex fvmpt eleq2d elpw2 anbi1i sseq2i eleq1i 2ralbii anbi12i bitr4i
-      oveqi eleq2 raleqbi1dv elrab 3anass 3bitr4i syl6bb ) FUAMZEFUBNZMEFONZKPZ
-      MZAPZBPZFQNZUGZVSMZBVSRZAVSRZSZKFTNZUCZUDZMZECUEZGEMZWAWBDUGZEMZBERAERZUH
-      ZVPVQWKELFLPZONZVSMZWAWBWSQNZUGZVSMZBVSRAVSRZSZKWSTNZUCZUDWKUAUBWSFUFZXFW
-      HKXHWJXIXGWIWSFTUIUJXIXAVTXEWGXIWTVRVSWSFOUIUKXIXDWEABVSVSXIXCWDVSXIXBWCW
-      AWBWSFQUIULUKUMUNUOABKLUPWHKWJWIFTUQZURUSUTVAEWJMZVREMZWDEMZBERZAERZSZSZW
-      MWNWQSZSZWLWRXQEWIUEZXPSXSXKXTXPEWIXJVBVCWMXTXRXPCWIEHVDWNXLWQXOGVREIVEWP
-      XMABEEWOWDEDWCWAWBJVIVEVFVGVGVHWHXPKEWJVSEUFVTXLWGXOVSEVRVJWFXNAVSEWEXMBV
-      SEVSEWDVJVKVKUNVLWMWNWQVMVNVO $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    $d B x y $.  $d H x y $.  $d M x y $.  $d S x y $.  $d Z x y $.
-    issubm2.b $e |- B = ( Base ` M ) $.
-    issubm2.z $e |- Z = ( 0g ` M ) $.
-    issubm2.h $e |- H = ( M |`s S ) $.
-    $( Submonoids are subsets that are also monoids with the same zero. $)
-    issubm2 $p |- ( M e. Mnd -> ( S e. ( SubMnd ` M ) <->
-          ( S C_ B /\ Z e. S /\ H e. Mnd ) ) ) $=
-      ( vx vy cmnd wcel csubmnd cfv wss cv wral w3a wa df-3an cplusg co eqid wb
-      issubm eqid1 issubmnd bicomd 3expb pm5.32da 3bitr4g bitrd ) DKLZBDMNLBAOZ
-      EBLZIPJPDUANZUBBLJBQIBQZRZUNUOCKLZRZIJAUPBDEFGUPUCUEUMUNUOSZUQSVAUSSURUTU
-      MVAUQUSUMUNUOUQUSUDUMUNUORUSUQIJAUPBDCEFUPUFGHUGUHUIUJUNUOUQTUNUOUSTUKUL
-      $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    submss.b $e |- B = ( Base ` M ) $.
-    $( Submonoids are subsets of the base set. $)
-    submss $p |- ( S e. ( SubMnd ` M ) -> S C_ B ) $=
-      ( csubmnd cfv wcel wss c0g cress co cmnd w3a submrcl eqid issubm2 syl ibi
-      wb simp1d ) BCEFGZBAHZCIFZBGZCBJKZLGZUAUBUDUFMZUACLGUAUGSBCNABUECUCDUCOUE
-      OPQRT $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    subm0el.z $e |- Z = ( 0g ` M ) $.
-    $( Submonoids contain zero. $)
-    subm0el $p |- ( S e. ( SubMnd ` M ) -> Z e. S ) $=
-      ( csubmnd cfv wcel cbs wss cress co cmnd w3a submrcl eqid issubm2 syl ibi
-      wb simp2d ) ABEFGZABHFZIZCAGZBAJKZLGZUAUCUDUFMZUABLGUAUGSABNUBAUEBCUBODUE
-      OPQRT $.
-      $( [7-Mar-2015] $)
-  $}
-
-  ${
-    submmnd.h $e |- H = ( M |`s S ) $.
-    $( Submonoids are themselves monoids under the given operation. $)
-    submmnd $p |- ( S e. ( SubMnd ` M ) -> H e. Mnd ) $=
-      ( csubmnd cfv wcel cbs wss c0g cmnd w3a wb submrcl issubm2 syl ibi simp3d
-      eqid ) ACEFGZACHFZIZCJFZAGZBKGZTUBUDUELZTCKGTUFMACNUAABCUCUASUCSDOPQR $.
-      $( [7-Mar-2015] $)
-
-    subm0.z $e |- Z = ( 0g ` M ) $.
-    $( Submonoids have the same identity. $)
-    subm0 $p |- ( S e. ( SubMnd ` M ) -> Z = ( 0g ` H ) ) $=
-      ( csubmnd cfv wcel cmnd cbs wss wceq submrcl submmnd eqid subm0el submnd0
-      c0g submss syl22anc ) ACGHICJIBJIACKHZLDAIDBSHMACNABCEOUBACUBPZTACDFQUBAC
-      BDUCFERUA $.
-      $( [7-Mar-2015] $)
-  $}
-
-
-$(
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Ring homomorphisms
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
+
+  $c RingHom $. $( Ring homomorphism $)
 
   $( Ring homomorphisms. $)
   crh $a class RingHom $.
 
   ${
     $d r s v w f x y m n $.
-    $( Define the set of ring homomorphisms from ` r ` to ` s ` . $)
+    $( Define the set of ring homomorphisms from ` r ` to ` s ` .  (Contributed
+       by Mario Carneiro). $)
     df-rnghom $a |- RingHom = ( r e. Ring , s e. Ring |->
       [_ ( Base ` r ) / v ]_ [_ ( Base ` s ) / w ]_
    { f e. ( w ^m v ) | ( ( f ` ( 1r ` r ) ) = ( 1r ` s ) /\ A. x e. v A. y e. v
@@ -23695,6 +24015,17 @@ $)
       $( [8-Mar-2015] $)
   $}
 
+  ${
+    $d Y x a b $.  $d R x a b $.  $d I x a b $.  $d B x a b $.  $d F a b $.
+    $d W x a b $.
+    pwsdiagrhm.y $e |- Y = ( R ^s I ) $.
+    pwsdiagrhm.b $e |- B = ( Base ` R ) $.
+    pwsdiagrhm.f $e |- F = ( x e. B |-> ( I X. { x } ) ) $.
+    $( Diagonal homomorphism into a structure power (Rings). $)
+    pwsdiagrhm $p |- ( ( R e. Grp /\ I e. W ) -> F e. ( R RingHom Y ) ) $=
+      ? $.
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Equalizers in algebraic structures
@@ -23802,6 +24133,18 @@ $)
       $( [7-Mar-2015] $)
   $}
 
+  $( The homomorphic image of a subring is a subring. $)
+  rhmima $p |- ( ( ( F e. ( M RingHom N ) /\ N e. V ) /\
+        X e. ( SubRing ` M ) ) -> ( F " X ) e. ( SubRing ` N ) ) $=
+    ( crh co wcel wa csubrg cfv csubg cmgp csubmnd cvv eqid crg issubrg3 syl
+    wb cima cghm rhmghm ad2antrr subrgsubg adantl simplr ghmima syl3anc jctir
+    cmhm rhmmhm fvex subrgrcl eqid1 ibi simprd mhmima syl2an adantr mpbir2and
+    rhmrcl2 ) ABCFGHZCDHZIZEBJKHZIZAEUAZCJKHZVHCLKHZVHCMKZNKHZVGABCUBGHZEBLKH
+    ZVDVJVCVMVDVFBCAUCUDVFVNVEEBUEUFVCVDVFUGBCEADUHUIVEABMKZVKUKGHZVKOHZIEVON
+    KHZVLVFVEVPVQBCAVOVKDVOPVKPZULCMUMUJVFVNVRVFVNVRIZVFBQHVFVTTEBUNBEVOVOUOR
+    SUPUQAVOVKOEURUSVGCQHZVIVJVLITVEWAVFBCADVBUTCVHVKVSRSVA $.
+    $( [10-Mar-2015] $)
+
   ${
     $d F x y z $.  $d G x y z $.  $d S x y z $.  $d T x y $.  $d U x y $.
     $d V x y $.
@@ -23857,7 +24200,7 @@ $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    Polynomial evaluation
+    Unital algebras; scalar lift function
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
 
@@ -24047,6 +24390,12 @@ $)
       $( [9-Mar-2015] $)
   $}
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    More multivariate polynomials
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
   ${
     $d ph x $.  $d B x $.  $d I x $.  $d V x $.
     mvrf2.p $e |- P = ( I mPoly R ) $.
@@ -24201,6 +24550,87 @@ $)
   $}
 
   ${
+    $d ph w y z $.  $d ph x $.  $d B w y z $.  $d B x $.  $d H w y z $.
+    $d H x $.  $d I x $.  $d K x $.  $d P w y z $.  $d P x $.  $d T x y $.
+    $d V x $.  $d Y w y z $.  $d Y x $.  $d x z $.
+    mplind.sk $e |- K = ( Base ` R ) $.
+    mplind.sv $e |- V = ( I mVar R ) $.
+    mplind.sy $e |- Y = ( I mPoly R ) $.
+    mplind.sp $e |- P = ( +g ` Y ) $.
+    mplind.st $e |- T = ( .r ` Y ) $.
+    mplind.sc $e |- C = ( algSc ` Y ) $.
+    mplind.sb $e |- B = ( Base ` Y ) $.
+    mplind.p $e |- ( ( ph /\ ( x e. H /\ y e. H ) ) -> ( x P y ) e. H ) $.
+    mplind.t $e |- ( ( ph /\ ( x e. H /\ y e. H ) ) -> ( x T y ) e. H ) $.
+    mplind.s $e |- ( ( ph /\ x e. K ) -> ( C ` x ) e. H ) $.
+    mplind.v $e |- ( ( ph /\ x e. I ) -> ( V ` x ) e. H ) $.
+    mplind.x $e |- ( ph -> X e. B ) $.
+    mplind.i $e |- ( ph -> I e. _V ) $.
+    mplind.r $e |- ( ph -> R e. CRing ) $.
+    $( Prove a property of polynomials by "structural" induction, under a
+       simplified model of structure which loses the sum of products
+       structure.  The commutativity condition is stronger than strictly
+       needed. $)
+    mplind $p |- ( ph -> X e. H ) $=
+      ( vz vw cin inss1 crn cmps co casp cfv casa wcel cbs wss cvv eqid psrassa
+      inss2 csubrg ccrg crg crngrng syl mplsubrg subrgss syl5ss wfn cv wf mvrf2
+      wral ffn ralrimiva fnfvrnss syl2anc wa ssin bicomi sylanbrc aspss syl3anc
+      frn mplbas2 syl6eqr eqcomd clss wceq cress csubg cur wne cminusg a1i csca
+      c0 crh mplassa asclrhm assarng rhm1 mplsca eqeltrrd rngidcl fveq2d syl5eq
+      cascl eleqtrrd eqcomi fveq2 eleq1d rcla4va elin sseli anim12i sylan2 cgrp
+      caovclg clmod assalmod adantr simprl sseldi simprr grpinvcl jca mpbir3and
+      w3a wb 3anidm23 ralrimivva eleqtrd mpbid simpld fveq1i ne0i lmodgrp grpcl
+      syl5eqel anassrs simpr rngnegl simpl rhmghm ghminv eqtrd syl12anc issubg2
+      cghm rnggrp simp3l simp3r rngcl issubrg2 mplval2 subsubrg asclmul1 syldan
+      cvsca weq lmodvscl islss4 mpbir2and mpllss lsslss aspid 3sstr4d sseldd )
+      AIDUKZIMIDULZADUVOMALUMZJGUNUOZUPUQZUQZUVOUVSUQZDUVOAUVRURUSZUVOUVRUTUQZV
+      AUVQUVOVAZUVTUWAVAAGUVRJVBUVRVCZUGUHVDZAUVODUWCIDVEZADUVRVFUQZUSZDUWCVAAN
+      GUVRDJVBUWEQUAUGAGVGUSZGVHUSUHGVIVJZVKZDUWCUVRUWCVCZVLVJVMAUVQIVAZUVQDVAZ
+      UWDALJVNZBVOZLUQIUSZBJVRUWNAJDLVPZUWPADNGJLVBQPUAUGUWKVQZJDLVSVJAUWRBJUEV
+      TBJILWAWBAUWSUWOUWTJDLWIVJUWNUWOWCUWDUVQIDWDWEWFUVSUVOUVQUWCUVRUVSVCZUWMW
+      GWHAUVTDAUVTNUTUQDAUVSNGUVRJLVBQUWEPUXAUGUHWJUAWKWLAUWAUVOAUWBUVOUWHUSZUV
+      OUVRWMUQZUSZUWAUVOWNUWFAUXBUVODVAZAUVOUVRDWOUOZVFUQZUSZUXBUXEWCZAUVONVFUQ
+      ZUXGAUVOUXJUSZUVONWPUQZUSZNWQUQZUVOUSZUWQCVOZHUOZUVOUSZCUVOVRBUVOVRZAUXMU
+      XEUVOXBWRZUIVOZUJVOZFUOZUVOUSZUJUVOVRZUYANWSUQZUQZUVOUSZWCZUIUVOVRZUXEAUW
+      GWTAUXOUXTAUXNIUSUXNDUSZUXOANXAUQZWQUQZNXMUQZUQZUXNIAUYNUYLNXCUOUSZNVHUSZ
+      UYOUXNWNANURUSZUYPAJVBUSUWJUYRUGUHNGJVBQXDWBZUYLNUYLVCZXEVJZAUYRUYQUYSNXF
+      VJZUYLNUYNUXNUYMVHUYMVCZUXNVCZXGWBZAUYMKUSUWQUYNUQZIUSZBKVRZUYOIUSZAUYMUY
+      LUTUQZKAUYLVHUSZUYMVUJUSZAGUYLVHANGJVBVGQUGUHXHZUWKXIZVUJUYLUYMVUJVCZVUCX
+      JVJZAKGUTUQVUJOAGUYLUTVUMXKXLZXNAVUGBKAUWQKUSWCVUFUWQEUQIUWQUYNEEUYNTXOUU
+      AUDUUEVTZVUGVUIBUYMKUWQUYMWNVUFUYOIUWQUYMUYNXPXQXRWBXIAUYQUYKVUBDNUXNUAVU
+      DXJVJUXNIDXSWFZUVOUXNUUBVJAUYIUIUVOAUYAUVOUSZWCZUYEUYHVVAUYDUJUVOAVUTUYBU
+      VOUSZUYDAVUTVVBWCZWCZUYCIUSZUYCDUSZUYDVVCAUYAIUSZUYBIUSZWCVVEVUTVVGVVBVVH
+      UVOIUYAUVPXTUVOIUYBUVPXTYAABCUYAUYBIIIFUBYDYBVVDNYCUSZUYADUSZUYBDUSZVVFAV
+      VIVVCANYEUSZVVIAUYRVVLUYSNYFVJZNUUCVJZYGVVDUVODUYAUWGAVUTVVBYHYIVVDUVODUY
+      BUWGAVUTVVBYJYIDFNUYAUYBUARUUDWHUYCIDXSWFUUFVTVVAUYGIUSUYGDUSZUYHVVAUXNUY
+      FUQZUYAHUOZUYGIVVADNHUXNUYFUYAUASVUDUYFVCZAUYQVUTVUBYGVVAUVODUYAUWGAVUTUU
+      GZYIZUUHVVAAVVPIUSZVVGVVQIUSAVUTUUIAVWAVUTAUYMUYLWSUQZUQZUYNUQZVVPIAVWDUY
+      OUYFUQZVVPAUYNUYLNUUOUOUSZUYRVULVWDVWEWNAUYPVWFVUAUYLNUYNUUJVJUYSVUPVUJUY
+      LNUYNVWBUYFURUYMVUOVWBVCZVVRUUKWHAUYOUXNUYFVUEXKUULAVWCKUSVUHVWDIUSZAVWCV
+      UJKAUYLYCUSZVULVWCVUJUSAVUKVWIVUNUYLUUPVJVUPVUJUYLVWBUYMVUOVWGYKWBVUQXNVU
+      RVUGVWHBVWCKUWQVWCWNVUFVWDIUWQVWCUYNXPXQXRWBXIYGVVAUVOIUYAUVPVVSYIABCVVPU
+      YAIIIHUCYDUUMXIVVAVVIVVJVVOAVVIVUTVVNYGVVTDNUYFUYAUAVVRYKWBUYGIDXSWFYLVTA
+      VVIUXMUXEUXTUYJYNYOVVNUIUJDFUVONUYFUARVVRUUNVJYMZVUSAUXRBCUVOUVOAUWQUVOUS
+      ZUXPUVOUSZWCZWCZUXQIUSZUXQDUSZUXRVWMAUWQIUSZUXPIUSZWCVWOVWKVWQVWLVWRUVOIU
+      WQUVPXTUVOIUXPUVPXTYAUCYBVWNUYQUWQDUSUXPDUSVWPAUYQVWMVUBYGVWNUVODUWQUWGAV
+      WMVWKAVWMVWKVWLUUQYPYIVWNUVODUXPUWGAVWMVWLAVWMVWKVWLUURYPYIDNHUWQUXPUASUU
+      SWHUXQIDXSWFYQAUYQUXKUXMUXOUXSYNYOVUBBCUVODNHUXNUAVUDSUUTVJYMANUXFVFANGUV
+      RDJVBVGQUWEUAUGUHUVAZXKYRAUWIUXHUXIYOUWLDUVOUVRUXFUXFVCZUVBVJYSYTAUXDUXEA
+      UVOUXFWMUQZUSZUXDUXEWCZAUVONWMUQZVXAAUVOVXDUSZUXMUYAUYBNUVEUQZUOZUVOUSZUJ
+      UVOVRUIVUJVRZVWJAVXHUIUJVUJUVOAUYAVUJUSZVVBWCZWCZVXGIUSVXGDUSZVXHVXLUYAUY
+      NUQZUYBHUOZVXGIVXLUYRVXJVVKVXOVXGWNAUYRVXKUYSYGAVXJVVBYHZVXLUVODUYBUWGAVX
+      JVVBYJZYIZUYAVXFHUYLVUJDNUYBUYTVUOUASVXFVCZUVCWHAVXKVXNIUSZVVHWCVXOIUSVXL
+      VXTVVHVXLUYAKUSVUHVXTVXLUYAVUJKVXPAKVUJWNVXKVUQYGXNAVUHVXKVURYGVUGVXTBUYA
+      KBUIUVFVUFVXNIUWQUYAUYNXPXQXRWBVXLUVOIUYBUVPVXQYIYLABCVXNUYBIIIHUCYDUVDXI
+      VXLVVLVXJVVKVXMAVVLVXKVVMYGVXPVXRUYAVXFUYLVUJDNUYBUAUYTVXSVUOUVGWHVXGIDXS
+      WFYQAVVLVXEUXMVXIWCYOVVMVUJVXDVXFUVOUYLUXLDNUIUJUYTVUOUAVXSVXDVCUXLVCUVHV
+      JUVIANUXFWMVWSXKYRAUVRYEUSZDUXCUSVXBVXCYOAUWBVYAUWFUVRYFVJANGUVRDJVBUWEQU
+      AUGUWKUVJUXCVXADUVOUVRUXFVWTUXCVCZVXAVCUVKWBYSYTUVSUVOUXCUWCUVRUXAUWMVYBU
+      VLWHWLUVMUFUVNYI $.
+      $( [11-Mar-2015] $)
+  $}
+
+  ${
     $d ph k y $.  $d B k $.  $d D k y $.  $d I f k y $.  $d P k y $.
     $d R f k y $.  $d W k $.  $d X f k y $.  $d Z f k y $.
     mplcoe4.p $e |- P = ( I mPoly R ) $.
@@ -24221,6 +24651,12 @@ $)
       KUSUTVAVBVCVD $.
       $( [8-Mar-2015] $)
   $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Polynomial evaluation
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
 
   ${
     $d ph x y z $.  $d B x y $.  $d I i j k x y $.  $d I z $.
@@ -24262,67 +24698,6 @@ $)
       AWQUVIUWDAYAGUVGXDVTUVTHDYFYLYEKUVTWSYLYLWTUVTYLXOWEXAVAXIUWBUVRYDDSZUWCK
       TAUVRUVIOWQAUVOYBGSUWEUVIUVQYAGUVGWRGDYBYCXEXFDEFYDKLNMXJVAXHXKXLXMXN $.
       $( [8-Mar-2015] $)
-  $}
-
-  ${
-    $d ph x $.  $d Y x $.  $d Z x $.
-    suppssfv.a $e |- ( ph -> ( `' ( x e. D |-> A ) " ( _V \ { Y } ) ) C_ L ) $.
-    suppssfv.f $e |- ( ph -> ( F ` Y ) = Z ) $.
-    suppssfv.v $e |- ( ( ph /\ x e. D ) -> A e. V ) $.
-    $( Formula building theorem for support restriction, on a function which
-       preserves zero. $)
-    suppssfv $p |- ( ph -> ( `' ( x e. D |-> ( F ` A ) ) "
-            ( _V \ { Z } ) ) C_ L ) $=
-      ( cfv cmpt ccnv cvv csn cdif wcel wceq cima crab wne eldifsn simprbi elex
-      cv wa syl adantr wi fveq2 eqeq1d syl5ibrcom necon3d imp sylanbrc ss2rabdv
-      ex syl5 eqid mptcnvima 3sstr4g sstrd ) ABDCEMZNZOPIQRZUAZBDCNZOPHQRZUAZFA
-      VEVGSZBDUBCVJSZBDUBVHVKAVLVMBDVLVEIUCZABUGDSZUHZVMVLVEPSVNVEPIUDUEVPVNVMV
-      PVNUHCPSZCHUCZVMVPVQVNVPCGSVQLCGUFUIUJVPVNVRAVNVRUKVOACHVEIAVEITCHTZHEMZI
-      TKVSVEVTICHEULUMUNUOUJUPCPHUDUQUSUTURBDVFVGVEVFVAVBBDVIVJCVIVAVBVCJVD $.
-      $( [9-Mar-2015] $)
-  $}
-
-  ${
-    $d ph v $.  $d ph x $.  $d B v $.  $d O v $.  $d R v $.  $d Y v $.
-    $d Y x $.  $d Z v $.  $d Z x $.
-    suppssov1.s $e |- ( ph ->
-        ( `' ( x e. D |-> A ) " ( _V \ { Y } ) ) C_ L ) $.
-    suppssov1.o $e |- ( ( ph /\ v e. R ) -> ( Y O v ) = Z ) $.
-    suppssov1.a $e |- ( ( ph /\ x e. D ) -> A e. V ) $.
-    suppssov1.b $e |- ( ( ph /\ x e. D ) -> B e. R ) $.
-    $( Formula building theorem for support restrictions: operator with left
-       annihilator. $)
-    suppssov1 $p |- ( ph -> ( `' ( x e. D |-> ( A O B ) ) "
-            ( _V \ { Z } ) ) C_ L ) $=
-      ( co cvv wcel wceq cmpt ccnv csn cdif cima crab cv wa wne elex syl adantr
-      eldifsn simprbi wral ralrimiva oveq2 eqeq1d rcla4va syl2anc oveq1 necon3d
-      syl5ibrcom syl5 imp sylanbrc ex ss2rabdv eqid mptcnvima 3sstr4g sstrd ) A
-      BFDEIQZUAZUBRLUCUDZUEZBFDUAZUBRKUCUDZUEZHAVMVOSZBFUFDVRSZBFUFVPVSAVTWABFA
-      BUGFSZUHZVTWAWCVTUHDRSZDKUIZWAWCWDVTWCDJSWDODJUJUKULWCVTWEVTVMLUIZWCWEVTV
-      MRSWFVMRLUMUNWCDKVMLWCVMLTDKTZKEIQZLTZWCEGSKCUGZIQZLTZCGUOZWIPAWMWBAWLCGN
-      UPULWLWICEGWJETWKWHLWJEKIUQURUSUTWGVMWHLDKEIVAURVCVBVDVEDRKUMVFVGVHBFVNVO
-      VMVNVIVJBFVQVRDVQVIVJVKMVL $.
-      $( [9-Mar-2015] $)
-  $}
-
-  ${
-    $d ph v x $.  $d A x $.  $d B v x $.  $d D x $.  $d O v x $.  $d R v $.
-    $d Y v x $.  $d Z v x $.
-    suppssof1.s $e |- ( ph -> ( `' A " ( _V \ { Y } ) ) C_ L ) $.
-    suppssof1.o $e |- ( ( ph /\ v e. R ) -> ( Y O v ) = Z ) $.
-    suppssof1.a $e |- ( ph -> A : D --> V ) $.
-    suppssof1.b $e |- ( ph -> B : D --> R ) $.
-    suppssof1.d $e |- ( ph -> D e. W ) $.
-    $( Formula building theorem for support restrictions: vector operation with
-       left annihilator. $)
-    suppssof1 $p |- ( ph -> ( `' ( A oF O B ) " ( _V \ { Z } ) ) C_ L ) $=
-      ( vx ccnv cvv cof co csn cdif cima cv cfv cmpt wf wfn ffn syl inidm eqidd
-      wcel wa offval cnveqd imaeq1d feqmptd eqsstr3d fvex a1i ffvelrn suppssov1
-      sylan eqsstrd ) ACDHUAUBZSZTLUCUDZUERERUFZCUGZVKDUGZHUBUHZSZVJUEGAVIVOVJA
-      VHVNAREEVLVMHECDJJAEICUICEUJOEICUKULAEFDUIZDEUJPEFDUKULQQEUMAVKEUOZUPZVLU
-      NVRVMUNUQURUSARBVLVMEFGHTKLAREVLUHZSZTKUCUDZUECSZWAUEGAWBVTWAACVSAREICOUT
-      URUSMVANVLTUOVRVKCVBVCAVPVQVMFUOPEFVKDVDVFVEVG $.
-      $( [9-Mar-2015] $)
   $}
 
   ${
@@ -24751,6 +25126,174 @@ $)
       TVWPUVOJHYTYOVQUVCVWQUXFVWMVWOVSUXIUVOUXCUXDUVDVWMUXGVWOUXHUVEUVGUVHUVIUV
       JUWEUXKFUVKVQUVLUWAFUWBUVMUVN $.
       $( [9-Mar-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    The ` evalSub ` function
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c evalSub $. $( Evaluation in a subring $)
+  $c eval $. $( Evaluation of a multivariate polynomial $)
+
+  $( Evaluation in a superring. $)
+  ces $a class evalSub $.
+
+  $( Evaluation of a multivariate polynomial. $)
+  cevl $a class eval $.
+
+  ${
+    $d i s b r w v f x g $.
+    $( Define the evaluation map for the polynomial algebra.  The function
+       ` ( ( I evalSub S ) `` R ) : V --> ( S ^m ( S ^m I ) ) ` makes sense
+       when ` I ` is an index set, ` S ` is a ring, ` R ` is a subring of
+       ` S ` , and where ` V ` is the set of polynomials in
+       ` ( I mPoly R ) ` .  This function maps an element of the formal
+       polynomial algebra (with coefficients in ` R ` ) to a function from
+       assignments ` I --> S ` of the variables to elements of ` S ` formed by
+       evaluating the polynomial with the given assignments. $)
+    df-evls $a |- evalSub = ( i e. _V , s e. _V |-> [_ ( Base ` s ) / b ]_
+      ( r e. ~P b |-> [_ ( i mPoly ( s |`s r ) ) / w ]_
+        ( iota_ f e. ( w RingHom ( s ^s ( b ^m i ) ) )
+        ( ( f o. ( algSc ` w ) ) = ( x e. r |-> ( b X. { x } ) ) /\
+          ( f o. ( i mVar ( s |`s r ) ) ) = ( x e. i |-> ( g e. ( b ^m i ) |->
+        ( g ` x ) ) ) ) ) ) ) $.
+
+    $( A simplication of ` evalSub ` when the evaluation ring is the same as
+       the coefficient ring. $)
+    df-evl $a |- eval = ( i e. _V , r e. _V |->
+      ( ( i evalSub r ) ` ( Base ` r ) ) ) $.
+  $}
+
+  ${
+    $d I b f g i r s w x $.  $d R f r x $.  $d S b f g i r s w x $.  $d T f $.
+    $d W f $.
+    evlsval.q $e |- Q = ( ( I evalSub S ) ` R ) $.
+    evlsval.w $e |- W = ( I mPoly U ) $.
+    evlsval.v $e |- V = ( I mVar U ) $.
+    evlsval.u $e |- U = ( S |`s R ) $.
+    evlsval.t $e |- T = ( S ^s ( B ^m I ) ) $.
+    evlsval.b $e |- B = ( Base ` S ) $.
+    evlsval.a $e |- A = ( algSc ` W ) $.
+    evlsval.x $e |- X = ( x e. R |-> ( B X. { x } ) ) $.
+    evlsval.y $e |- Y = ( x e. I |-> ( g e. ( B ^m I ) |-> ( g ` x ) ) ) $.
+    $( Value of the polynomial evaluation map function. $)
+    evlsval $p |- ( ( I e. _V /\ S e. _V /\ R e. ~P B ) ->
+        Q = ( iota_ f e. ( W RingHom T ) ( ( f o. A ) = X /\
+              ( f o. V ) = Y ) ) ) $=
+      ( vr vi vs vb vw cvv wcel cpw w3a cbs cfv cv cress co cmpl cascl ccom csn
+      cxp cmpt wceq cmvr cmap wa cpws crh crio ces csb fveq2 adantl csbeq1d a1i
+      fvex pweq simpll ad2antlr oveq12d ovex simprr simplr simprl fveq2d coeq2d
+      oveq1 xpeq1d mpteq2dv eqeq12d eqidd mpteq12dv anbi12d riotaeqbidv anassrs
+      oveq1d csbied eqtrd df-evls pwex mptex ovmpt2a fveq1d syl5eq pweqi eleq2i
+      3adant3 oveq2 oveq2d mpteq1 eqeq1d eqid riotaex fvmpt sylbi oveq2i oveq1i
+      wtru eqtri oveq12i wb fveq2i coeq2i xpeq1i mpteq2i eqeq12i eqid1 mpteq12i
+      anbi12i trud syl6eqr 3ad2ant3 ) KUJUKZFUJUKZECULZUKZUMDEUEFUNUOZULZIUPZKF
+      UEUPZUQURZUSURZUTUOZVAZAUUBYSAUPZVBZVCZVDZVEZUUAKUUCVFURZVAZAKJYSKVGURZUU
+      GJUPUOZVDZVDZVEZVHZIUUDFUUNVIURZVJURZVKZVDZUOZUUABVAZNVEZUUALVAZOVEZVHZIM
+      GVJURZVKZYOYPDUVDVEYRYOYPVHZDEKFVLURZUOUVDPUVLEUVMUVCUFUGKFUJUJUHUGUPZUNU
+      OZUEUHUPZULZUIUFUPZUVNUUBUQURZUSURZUUAUIUPZUTUOZVAZAUUBUVPUUHVCZVDZVEZUUA
+      UVRUVSVFURZVAZAUVRJUVPUVRVGURZUUOVDZVDZVEZVHZIUWAUVNUWIVIURZVJURZVKZVMZVD
+      ZVMZUVCVLUVRKVEZUVNFVEZVHZUWSUHYSUWRVMUVCUXBUHUVOYSUWRUXAUVOYSVEUWTUVNFUN
+      VNVOVPUXBUHYSUWRUVCUJYSUJUKUXBFUNVRZVQUXBUVPYSVEZVHZUEUVQUWQYTUVBUXDUVQYT
+      VEUXBUVPYSVSVOUXEUWQUIUUDUWPVMUVBUXEUIUVTUUDUWPUXEUVRKUVSUUCUSUWTUXAUXDVT
+      UXAUVSUUCVEUWTUXDUVNFUUBUQWIWAWBVPUXEUIUUDUWPUVBUJUUDUJUKUXEKUUCUSWCVQUXB
+      UXDUWAUUDVEZUWPUVBVEUXBUXDUXFVHZVHZUWMUUSIUWOUVAUXHUWAUUDUWNUUTVJUXBUXDUX
+      FWDZUXHUVNFUWIUUNVIUWTUXAUXGWEZUXHUVPYSUVRKVGUXBUXDUXFWFZUWTUXAUXGVTZWBZW
+      BWBUXHUWFUUKUWLUURUXHUWCUUFUWEUUJUXHUWBUUEUUAUXHUWAUUDUTUXIWGWHUXHAUUBUWD
+      UUIUXHUVPYSUUHUXKWJWKWLUXHUWHUUMUWKUUQUXHUWGUULUUAUXHUVRKUVSUUCVFUXLUXHUV
+      NFUUBUQUXJWRWBWHUXHAUVRUWJKUUPUXLUXHJUWIUUOUUNUUOUXMUXHUUOWMWNWNWLWOWPWQW
+      SWTWNWSWTAUIIJUFUGUEUHXAUEYTUVBYSUXCXBXCXDXEXFXIYRYOUVDUVKVEYPYRUVDUUAKFE
+      UQURZUSURZUTUOZVAZAEUUIVDZVEZUUAKUXNVFURZVAZUUQVEZVHZIUXOUUTVJURZVKZUVKYR
+      EYTUKUVDUYEVEYQYTECYSUAXGXHUEEUVBUYEYTUVCUUBEVEZUUSUYCIUVAUYDUYFUUDUXOUUT
+      VJUYFUUCUXNKUSUUBEFUQXJZXKZWRUYFUUKUXSUURUYBUYFUUFUXQUUJUXRUYFUUEUXPUUAUY
+      FUUDUXOUTUYHWGWHAUUBEUUIXLWLUYFUUMUYAUUQUYFUULUXTUUAUYFUUCUXNKVFUYGXKWHXM
+      WOWPUVCXNUYCIUYDXOXPXQUVKUYEVEXTUVIUYCIUVJUYDUVJUYDVEXTMUXOGUUTVJMKHUSURU
+      XOQHUXNKUSSXRYAZGFCKVGURZVIURUUTTUYJUUNFVICYSKVGUAXSZXRYAYBVQUVIUYCYCXTUV
+      FUXSUVHUYBUVEUXQNUXRBUXPUUABMUTUOUXPUBMUXOUTUYIYDYAYENAECUUHVCZVDUXRUCAEU
+      YLUUICYSUUHUAYFYGYAYHUVGUYAOUUQLUXTUUALKHVFURUXTRHUXNKVFSXRYAYEOAKJUYJUUO
+      VDZVDUUQUDAKUYMUUPJUYJUUOUUNUUOUYKUUOYIYJYGYAYHYKVQWPYLYMYNWT $.
+      $( [11-Mar-2015] $)
+
+    $d A m $.
+    $d B g $.
+    $d I m $.
+    $d Q m $.
+    $d R g m $.
+    $d S m $.
+    $d T m x $.
+    $d V m $.
+    $d W m $.
+    $d X m $.
+    $d Y m $.
+    $( Characterizing properties of the polynomial evaluation map function. $)
+    evlsval2 $p |- ( ( I e. _V /\ S e. CRing /\ R e. ( SubRing ` S ) ) ->
+        ( Q e. ( W RingHom T ) /\ ( ( Q o. A ) = X /\ ( Q o. V ) = Y ) ) ) $=
+      ( vm cvv wcel ccrg csubrg cfv w3a cv ccom wceq crh crab crio cpw elex wss
+      wa co subrgss cbs fvex eqeltri elpw2 sylibr evlsval wreu cascl eqid simp1
+      syl3an subrgcrng 3adant1 cmap simp2 ovex a1i pwscrng syl2anc wf wb simpl1
+      elmapg biimpa simplr ffvelrn simpl2 pwselbasb mpbird evlseu coeq2i eqeq1i
+      cmpt fmptd anbi1i eubii riotacl2 eqeltrd coeq1 eqeq1d anbi12d elrab sylib
+      syl ) JUEUFZFUGUFZEFUHUIUFZUJZDUDUKZBULZMUMZXKKULZNUMZUTZUDLGUNVAZUOZUFDX
+      QUFDBULZMUMZDKULZNUMZUTZUTXJDXPUDXQUPZXRXGXGXHFUEUFXIECUQUFZDYDUMJUEURFUG
+      URXIECUSYEECFTVBECCFVCUIUETFVCVDVEZVFVGABCDEFGHUDIJKLMNOPQRSTUAUBUCVHVMXJ
+      XPUDXQVIZYDXRUFXJXKLVJUIZULZMUMZXOUTZUDXQVIYGXJGVCUIZLHGUDMNJKPYLVKZQXGXH
+      XIVLXHXIHUGUFXGEFHRVNVOXJXHCJVPVAZUEUFZGUGUFXGXHXIVQYOXJCJVPVRZVSFYNUEGSV
+      TWA?XJAJIYNAUKZIUKZUIZWOZYLNXJYQJUFZUTZYTYLUFZYNCYTWBZUUBIYNYSCYTUUBYRYNU
+      FZUTJCYRWBZUUAYSCUFUUBUUEUUFUUBCUEUFZXGUUEUUFWCUUGUUBYFVSXGXHXIUUAWDCJYRU
+      EUEWEWAWFXJUUAUUEWGJCYQYRWHWAYTVKWPUUBXHYOUUCUUDWCXGXHXIUUAWIYOUUBYPVSCYL
+      FYNUGUEYTGSTYMWJWAWKUCWPWLXPYK?XMYJXOXLYIMBYHXKUAWMWNWQWRVGXPUDXQWSXFWTXP
+      YCUDDXQXKDUMZXMXTXOYBUUHXLXSMXKDBXAXBUUHXNYANXKDKXAXBXCXDXE $.
+  $}
+
+  ${
+    evlsrhm.q $e |- Q = ( ( I evalSub S ) ` R ) $.
+    evlsrhm.w $e |- W = ( I mPoly U ) $.
+    evlsrhm.u $e |- U = ( S |`s R ) $.
+    evlsrhm.t $e |- T = ( S ^s ( B ^m I ) ) $.
+    $( Polynomial evaluation is a homomorphism (into the product ring). $)
+    evlsrhm $p |- ( ( I e. V /\ S e. CRing /\ R e. ( SubRing ` S ) ) ->
+        Q e. ( W RingHom T ) ) $=
+      ? $.
+  $}
+
+  ${
+    evlssca.q $e |- Q = ( ( I evalSub S ) ` R ) $.
+    evlssca.w $e |- W = ( I mPoly U ) $.
+    evlssca.u $e |- U = ( S |`s R ) $.
+    evlssca.b $e |- B = ( Base ` S ) $.
+    evlssca.a $e |- A = ( algSc ` W ) $.
+    evlssca.i $e |- ( ph -> I e. V ) $.
+    evlssca.s $e |- ( ph -> S e. CRing ) $.
+    evlssca.r $e |- ( ph -> R e. ( SubRing ` S ) ) $.
+    evlssca.x $e |- ( ph -> X e. R ) $.
+    $( Polynomial evaluation maps scalars to constant functions. $)
+    evlssca $p |- ( ph -> ( Q ` ( A ` X ) ) = ( B X. { A } ) ) $=
+      ? $.
+  $}
+
+  ${
+    evlsvar.q $e |- Q = ( ( I evalSub S ) ` R ) $.
+    evlsvar.v $e |- V = ( I mVar U ) $.
+    evlsvar.u $e |- U = ( S |`s R ) $.
+    evlsvar.b $e |- B = ( Base ` S ) $.
+    evlsvar.i $e |- ( ph -> I e. W ) $.
+    evlsvar.s $e |- ( ph -> S e. CRing ) $.
+    evlsvar.r $e |- ( ph -> R e. ( SubRing ` S ) ) $.
+    evlsvar.x $e |- ( ph -> X e. I ) $.
+    $( Polynomial evaluation maps variables to projections. $)
+    evlsvar $p |- ( ph -> ( Q ` ( V ` X ) ) =
+          ( g e. ( B ^m I ) |-> ( g ` X ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    evlval.q $e |- Q = ( I eval R ) $.
+    evlval.b $e |- B = ( Base ` R ) $.
+    $( Value of the simple/same ring evalutation map. $)
+    evlval $p |- Q = ( ( I evalSub R ) ` B ) $=
+      ? $.
   $}
 
 
