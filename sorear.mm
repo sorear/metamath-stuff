@@ -695,7 +695,6 @@ $)
   $c mHomP $. $( Homogeneous polynomials $)
   $c mPSDer $. $( Polynomial or power series derivative $)
   $c selectVars $. $( Treat polynomial as a polynomial of polynomials $)
-  $c mDeg $. $( Multivariate polynomial degree $)
   $c AlgInd $. $( Algebraically independent $)
   $c <bag $. $( Order on terms $)
   $c ordPwSer $. $( Order on power series $)
@@ -717,9 +716,6 @@ $)
 
   $( Select a subset of variables in a multivariate polynomial. $)
   cslv $a class selectVars $.
-
-  $( Multivariate polynomial degree. $)
-  cmdg $a class mDeg $.
 
   $( Algebraically independent. $)
   cai $a class AlgInd $.
@@ -774,11 +770,6 @@ $)
         ( k e. { h e. ( NN0 ^m i ) | ( `' h " NN ) e. Fin } |->
           ( ( ( k ` x ) + 1 ) ( .g ` r ) ( f `
             ( k oF + ( y e. i |-> if ( y = x , 1 , 0 ) ) ) ) ) ) ) ) ) $.
-
-    $( Define the degree of a polynomial. $)
-    df-mdeg $a |- mDeg = ( i e. _V , r e. _V |-> ( f e. ( i mPoly r ) |->
-      sup ( ran ( h e. ( `' f " ( _V \ { ( 0g ` r ) } ) ) |->
-        sum_ x e. i ( h ` x ) ) , NN0 , < ) ) ) $.
 
     $( Define a well-order on the set of all finite bags from the index set
        ` i ` given a wellordering ` r ` of ` i ` . $)
@@ -3368,10 +3359,6 @@ $)
   $c Poly1 $. $( Univariate polynomial $)
   $c evalSub1 $. $( Evaluation in a subring $)
   $c eval1 $. $( Evaluation of a univariate polynomial $)
-  $c deg1 $. $( Univariate polynomial degree $)
-  $c coe1 $. $( Multivariate -> univariate $)
-  $c toPoly1 $. $( Univariate -> multivariate $)
-  $c Monic1 $. $( Monic polynomial $)
 
   $( Univariate power series. $)
   cps1 $a class PwSer1 $.
@@ -3388,18 +3375,6 @@ $)
   $( Evaluation of a univariate polynomial. $)
   ce1 $a class eval1 $.
 
-  $( Univariate polynomial degree. $)
-  cdg1 $a class deg1 $.
-
-  $( Convert a multivariate polynomial representation to univariate. $)
-  cco1 $a class coe1 $.
-
-  $( Convert a univariate polynomial representation to multivariate. $)
-  ctp1 $a class toPoly1 $.
-
-  $( Monic polynomials. $)
-  cmn1 $a class Monic1 $.
-
   ${
     $d b f n r s x y $.
     $( Define the algebra of univariate power series. $)
@@ -3413,23 +3388,6 @@ $)
     $( Define the algebra of univariate polynomials. $)
     df-ply1 $a |- Poly1 = ( r e. _V |->
       ( ( PwSer1 ` r ) |`s ( Base ` ( 1o mPoly r ) ) ) ) $.
-
-    $( Define the degree of a univariate polynomial. $)
-    df-deg1 $a |- deg1 = ( r e. _V , f e. ( Poly1 ` r ) |->
-      ( ( 1o mDeg r ) ` f ) ) $.
-
-    $( Define the coefficient function for a univariate polynomial. $)
-    df-coe1 $a |- coe1 = ( f e. _V |-> ( n e. NN0 |->
-      ( f ` ( 1o X. { n } ) ) ) ) $.
-
-    $( Define a function which maps a coefficient function for a univariate
-       polynomial to the corresponding polynomial object. $)
-    df-toply1 $a |- toPoly1 = ( f e. _V |-> ( n e. ( NN0 ^m 1o ) |->
-      ( f ` ( n ` (/) ) ) ) ) $.
-
-    $( Define the set of monic univariate polynomials. $)
-    df-mon1 $a |- Monic1 = ( r e. _V |-> { f e. ( Poly1 ` r ) |
-      ( ( coe1 ` f ) ` ( r deg1 f ) ) = ( 1r ` r ) } ) $.
   $}
 
 
@@ -8726,7 +8684,7 @@ $(
 $)
 
   $( Two real numbers are equal to 0 iff their Euclidean norm is.  Closed
-     theorem of ~ sumsqeq0 .  (Contributed by Stefan O'Rear, 5-Oct-2014.) $)
+     theorem of ~ sumsqne0i .  (Contributed by Stefan O'Rear, 5-Oct-2014.) $)
   sumsqeq0 $p |- ( ( A e. RR /\ B e. RR ) -> ( ( A = 0 /\ B = 0 ) <-> ( ( A ^ 2
       ) + ( B ^ 2 ) ) = 0 ) ) $=
     ( cr wcel wa cc0 wceq c2 cexp co caddc wne wo wb neeq1 oveq1 neeq1d bibi12d
@@ -25274,6 +25232,56 @@ $)
   $}
 
   ${
+    $d b f g i r s w x $.
+    $( Well-behaved binary operation property of ` evalSub ` . $)
+    reldmevls $p |- Rel dom evalSub $=
+      ( vi vs vb vr vw vf vx vg cvv ccrg cv cbs cfv csubrg cress ccom cmpt wceq
+      co csb cmpl cascl cmap csn cxp cmvr cpws crh crio ces df-evls reldmmpt2
+      wa ) ABIJCBKZLMDUNNMEAKZUNDKZOSZUASFKZEKZUBMPGUPCKUOUCSZGKZUDUEQRURUOUQUF
+      SPGUOHUTVAHKMQQRUMFUSUNUTUGSUHSUITQTUJGEFHABDCUKUL $.
+      $( [19-Mar-2015] $)
+
+    $d I a $.  $d I b $.  $d I f $.  $d I g $.  $d I i $.  $d I r $.  $d I s $.
+    $d I w $.  $d I x $.  $d S a $.  $d S b $.  $d S f $.  $d S g $.  $d S i $.
+    $d S r $.  $d S s $.  $d S w $.  $d S x $.  $d b z $.  $d f z $.  $d g z $.
+    $d i z $.  $d r z $.  $d s z $.  $d w z $.  $d x z $.
+    mpfrcl.s $e |- S e. _V $.
+    mpfrcl.q $e |- Q = ran ( ( I evalSub S ) ` R ) $.
+    $( Reverse closure for the set of polynomial functions. $)
+    mpfrcl $p |- ( X e. Q -> ( I e. _V /\ S e. CRing /\
+          R e. ( SubRing ` S ) ) ) $=
+      ( vb vr vw vx wcel co cfv c0 cvv wceq cv cmpt csb va vi vs vf ces crn wne
+      vg vz ccrg csubrg w3a ne0i eleq2s rneq rn0 syl6eq necon3i fveq1 reldmevls
+      wa fv01 ovprc1 necon1ai wex wi n0 cbs cress cmpl cascl ccom cmap csn cmvr
+      cxp cpws crh crio df-evls elmpt2rcl mpan2 a1d exlimiv sylbi jcai syl fvex
+      wn cdm ax-17 hbcsb1 hbmpt csbeq1a mpteq2dv csbief fveq2 adantl csbeq1d id
+      oveq1 oveqan12d oveq2 oveqan12rd oveq2d adantr xpeq1d eqeq2d coeq2d simpl
+      eqidd mpteq12dv eqeq12d anbi12d riotaeqbidv csbeq2dv eqtrd syl5eq ovmpt2a
+      ovex mptex dmeqd wss eqid dmmptss eqsstrd sseld con3d ndmfv syl6 necon1ad
+      a1i com12 df-3an sylibr 3syl ) EALBDCUEMZNZUFZOUGZYROUGZDPLZCUJLZBCUKNZLZ
+      ULZYTEYSAYSEUMGUNYROYSOYROQZYSOUFOYROUOUPUQURUUAUUBUUCVAZUUEVAUUFUUAUUHUU
+      EUUAYQOUGZUUHYQOYROYQOQYRBONOBYQOUSBVBUQURUUIUUBUUCUUBYQODCUEUTVCVDUUIUAR
+      ZYQLZUAVEUUBUUCVFZUAYQVGUUKUULUAUUKUUCUUBUUKCPLUUCFUBUCPUJHUCRZVHNZIUUMUK
+      NZJUBRZUUMIRZVIMZVJMZUDRZJRZVKNVLZKUUQHRZUUPVMMZKRZVNZVPZSZQZUUTUUPUURVOM
+      ZVLZKUUPUHUVDUVEUHRNZSZSZQZVAZUDUVAUUMUVDVQMZVRMZVSZTZSZTZDCUEPUUJKJUDUHU
+      BUCIHVTZWAWBWCWDWEWFWGUUHUUAUUEUUHUUEYROUUHUUEWIBYQWJZLZWIUUGUUHUWEUUEUUH
+      UWDUUDBUUHUWDIUUDHCVHNZJDCUUQVIMZVJMZUVBKUUQUVCDVMMZUVFVPZSZQZUUTDUWGVOMZ
+      VLZKDUHUWIUVLSZSZQZVAZUDUVACUWIVQMZVRMZVSZTZTZSZWJZUUDUUHYQUXDUBUCDCPUJUW
+      BUXDUEUUPDQZUUMCQZVAZUWBIUUOHUUNUVTTZSZUXDHUIUUNUWAUXJUUMVHWHHIUIUUOUXIUI
+      RZUUOLHWKHUIUUNUVTUXKUUNLHWKWLWMUVCUUNQIUUOUVTUXIHUUNUVTWNWOWPUXHIUUOUXIU
+      UDUXCUXGUUOUUDQUXFUUMCUKWQWRUXHUXIHUWFUVTTZUXCUXHHUUNUWFUVTUXGUUNUWFQUXFU
+      UMCVHWQWRWSUXHUWFPLUXLUXCQCVHWHUXHHUWFUVTUXBPUXHUVTJUWHUVSTZUXBUXHJUUSUWH
+      UVSUXFUXGUUPDUURUWGVJUXFWTZUUMCUUQVIXAZXBWSUXHUWHPLUXMUXBQDUWGVJXTUXHJUWH
+      UVSUXAPUXHUVPUWRUDUVRUWTUXHUVQUWSUVAVRUXGUXFUUMCUVDUWIVQUXGWTUUPDUVCVMXCZ
+      XDXEUXHUVIUWLUVOUWQUXHUVHUWKUVBUXHKUUQUVGUWJUXHUVDUWIUVFUXFUVDUWIQUXGUXPX
+      FZXGWOXHUXHUVKUWNUVNUWPUXHUVJUWMUUTUXFUXGUUPDUURUWGVOUXNUXOXBXIUXHKUUPUVM
+      DUWOUXFUXGXJUXHUHUVDUVLUWIUVLUXQUXHUVLXKXLXLXMXNXOXPWBXQXPWBXQXLXRUWCIUUD
+      UXCCUKWHYAXSYBUXEUUDYCUUHIUUDUXCUXDUXDYDYEYLYFYGYHBYQYIYJYKYMWFUUBUUCUUEY
+      NYOYP $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
     $d I b f g i r s w x $.  $d R f r x $.  $d S b f g i r s w x $.  $d T f $.
     $d W f $.
     evlsval.q $e |- Q = ( ( I evalSub S ) ` R ) $.
@@ -25367,11 +25375,7 @@ $)
   $}
 
   ${
-    $d B x y $.
-    $d I x y $.
-    $d R x y $.
-    $d S x y $.
-    $d X x $.
+    $d B x y $.  $d I x y $.  $d R x y $.  $d S x y $.  $d X x $.
     evlssca.q $e |- Q = ( ( I evalSub S ) ` R ) $.
     evlssca.w $e |- W = ( I mPoly U ) $.
     evlssca.u $e |- U = ( S |`s R ) $.
@@ -25423,13 +25427,501 @@ $)
   $}
 
   ${
+    $d B i r $.  $d I i r $.  $d R i r $.
+    evlval.r $e |- R e. _V $.
     evlval.q $e |- Q = ( I eval R ) $.
     evlval.b $e |- B = ( Base ` R ) $.
     $( Value of the simple/same ring evalutation map. $)
     evlval $p |- Q = ( ( I evalSub R ) ` B ) $=
+      ( vi vr cevl co ces cfv cvv wcel wceq cv cbs c0 ovprc1 wa syl6eqr fveq12d
+      oveq12 fveq2 adantl df-evl fvex ovmpt2a mpan2 wn reldmmpt2 reldmevls fv01
+      fveq1d syl6eq eqtr4d pm2.61i eqtri ) BDCJKZADCLKZMZFDNOZUTVBPZVCCNOVDEHID
+      CNNIQZRMZHQZVELKZMZVBJVGDPZVECPZUAVFAVHVAVGDVECLUDVKVFAPVJVKVFCRMAVECRUEG
+      UBUFUCHIUGZAVAUHUIUJVCUKZUTSVBDCJHINNVIJVLULTVMVBASMSVMAVASDCLUMTUOAUNUPU
+      QURUS $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
+    mpfconst.b $e |- B = ( Base ` S ) $.
+    mpfconst.q $e |- Q = ran ( ( I evalSub S ) ` R ) $.
+    mpfconst.i $e |- ( ph -> I e. V ) $.
+    mpfconst.s $e |- ( ph -> S e. CRing ) $.
+    mpfconst.r $e |- ( ph -> R e. ( SubRing ` S ) ) $.
+    ${
+      mpfconst.x $e |- ( ph -> X e. R ) $.
+      $( Constants are multivariate polynomial functions. $)
+      mpfconst $p |- ( ph -> ( ( B ^m I ) X. { X } ) e. Q ) $=
+      ( co cfv eqid cbs wcel cvv cmap csn cxp ces cress cmpl cascl evlssca cpws
+      crn wfn wf crh ccrg csubrg evlsrhm syl3anc ovex a1i rhmf syl2anc ffn csca
+      syl casa subrgcrng mplassa asclrhm sylancl wss wceq subrgss mplsca fveq2d
+      ressbas2 eqtrd eleqtrd ffvelrn fnfvelrn eqeltrrd syl6eleqr ) ABFUAOZHUBUC
+      ZDFEUDOPZUJZCAHFEDUEOZUFOZUGPZPZWDPZWCWEAWHBWDDEWFFGWGHWDQZWGQZWFQZIWHQKL
+      MNUHAWDWGRPZUKZWIWNSZWJWESAWNEWBUIOZRPZWDULZWOAWDWGWQUMOSZWQTSZWSAFGSZEUN
+      SZDEUOPSZWTKLMBWDDEWQWFFGWGWKWLWMWQQIUPUQXAAEWBUIURUSWNWRWGWQWDTWNQZWRQUT
+      VAWNWRWDVBVDAWGVCPZRPZWNWHULZHXGSWPAWHXFWGUMOSZWGTSXHAWGVESZXIAXBWFUNSZXJ
+      KAXCXDXKLMDEWFWMVFVAWGWFFGWLVGVAXFWGXFQVHVDFWFUFURXGWNXFWGWHTXGQXEUTVIAHD
+      XGNADWFRPZXGADBVJZDXLVKAXDXMMDBEIVLVDDBWFEWMIVOVDAWFXFRAWGWFFGTWLKWFTSAED
+      UEURUSVMVNVPVQXGWNHWHVRVAWNWIWDVSVAVTJWA $.
+      $( [19-Mar-2015] $)
+    $}
+
+    $d B f $.  $d I f $.  $d J f $.  $d R f $.  $d S f $.
+    mpfproj.j $e |- ( ph -> J e. I ) $.
+    $( Projections are multivariate polynomial functions. $)
+    mpfproj $p |- ( ph -> ( f e. ( B ^m I ) |-> ( f ` J ) ) e. Q ) $=
+      ( co cfv eqid cbs wcel cress cmvr ces cmap cmpt evlsvar crn cmpl wfn cpws
+      cv wf crh cvv ccrg csubrg eqid1 evlsrhm syl3anc ovex rhmf sylancl ffn syl
+      crg subrgrng mvrcl fnfvelrn syl2anc syl6eleqr eqeltrrd ) AHGEDUAPZUBPZQZD
+      GEUCPQZQZFBGUDPZHFUKQUECABVODEVLFGVMIHVORVMRZVLRZJLMNOUFAVPVOUGZCAVOGVLUH
+      PZSQZUIZVNWBTVPVTTAWBEVQUJPZSQZVOULZWCAVOWAWDUMPTZWDUNTWFAGITEUOTDEUPQTZW
+      GLMNBVODEWDVLGIWAVOUQWARZVSWDRJURUSEVQUJUTWBWEWAWDVOUNWBRZWERVAVBWBWEVOVC
+      VDAWBWAVLGVMIHWIVRWJLAWHVLVETNDEVLVSVFVDOVGWBVNVOVHVIKVJVK $.
+      $( [20-Mar-2015] $)
+  $}
+
+  ${
+    mpfaddcl.s $e |- S e. _V $.
+    mpfaddcl.q $e |- Q = ran ( ( I evalSub S ) ` R ) $.
+    $( Polynomial functions are a subring. $)
+    mpfaddlem $p |- ( F e. Q ->
+        Q e. ( SubRing ` ( S ^s ( ( Base ` S ) ^m I ) ) ) ) $=
+      ( wcel ces co cfv cress cbs cpws csubrg cvv eqid syl2anc syl crg cmpl crn
+      cima cmap wfn wceq wf crh ccrg mpfrcl simp1d simp2d eqid1 evlsrhm syl3anc
+      simp3d ovex a1i rhmf fnima eqcomd syl5eq subrgrng mplrng subrgid syl21anc
+      ffn rhmima eqeltrd ) DAHZABECIJKZECBLJZUAJZMKZUCZCCMKZEUDJZNJZOKZVJAVKUBZ
+      VOGVJVOVTVJVKVNUEZVOVTUFVJVNVRMKZVKUGZWAVJVKVMVRUHJHZVRPHZWCVJEPHZCUIHZBC
+      OKHZWDVJWFWGWHABCEDFGUJZUKZVJWFWGWHWIULVJWFWGWHWIUPZVPVKBCVRVLEPVMVKQVMQZ
+      VLQZVRQVPUMUNUOZWEVJCVQNUQURZVNWBVMVRVKPVNQZWBQUSRVNWBVKVGSVNVKUTSVAVBVJW
+      DWEVNVMOKHZVOVSHWNWOVJVMTHZWQVJWFVLTHZWRWJVJWHWSWKBCVLWMVCSVMVLEPWLVDRVNV
+      MWPVESVKVMVRPVNVHVFVI $.
+      $( [19-Mar-2015] $)
+
+    ${
+      mpff.b $e |- B = ( Base ` S ) $.
+      $( Polynomial functions are functions. $)
+      mpff $p |- ( F e. Q -> F : ( B ^m I ) --> B ) $=
+        ( wcel cmap co cbs cfv cpws cvv eqcomi oveq1i oveq2i a1i eqid mpfaddlem
+        ovex csubrg wss subrgss syl id sseldd pwselbas ) EBJZADAFKLZDDMNZFKLZOL
+        ZMNZPEUOPUNULDOUMAFKAUMIQRSIUPUAZDPJUKGTULPJUKAFKUCTUKBUPEUKBUOUDNJBUPU
+        EBCDEFGHUBBUPUOUQUFUGUKUHUIUJ $.
+        $( [19-Mar-2015] $)
+    $}
+
+    ${
+      mpfaddcl.p $e |- P = ( +g ` S ) $.
+      $( The sum of multivariate polynomial functions. $)
+      mpfaddcl $p |- ( ( F e. Q /\ G e. Q ) -> ( F oF P G ) e. Q ) $=
+        ( wcel wa cbs cfv cmap co cvv eqid a1i sseldd cpws cplusg cof mpfaddlem
+        ovex csubrg wss adantr subrgss syl simpl simpr pwsplusgval 3expib mpcom
+        subrgacl eqeltrrd ) EBKZFBKZLZEFDDMNZGOPZUAPZUBNZPZEFAUCPBUTAVCMNZVDDEF
+        VBQQVCVCRVFRZDQKUTHSVBQKUTVAGOUESUTBVFEUTBVCUFNKZBVFUGURVHUSBCDEGHIUDUH
+        ZBVFVCVGUIUJZURUSUKTUTBVFFVJURUSULTJVDRZUMVHUTVEBKZVIVHURUSVLBVDVCEFVKU
+        PUNUOUQ $.
+        $( [19-Mar-2015] $)
+    $}
+
+    ${
+      mpfmulcl.t $e |- T = ( .r ` S ) $.
+      $( The product of multivariate polynomial functions. $)
+      mpfmulcl $p |- ( ( F e. Q /\ G e. Q ) -> ( F oF T G ) e. Q ) $=
+        ( wcel wa cbs cfv cmap co cvv eqid a1i sseldd cpws cmulr cof csubrg wss
+        ovex mpfaddlem adantr subrgss syl simpl simpr pwsmulrval subrgmcl mpcom
+        3expib eqeltrrd ) EAKZFAKZLZEFCCMNZGOPZUAPZUBNZPZEFDUCPAUTVCMNZCVDEFVBD
+        QQVCVCRVFRZCQKUTHSVBQKUTVAGOUFSUTAVFEUTAVCUDNKZAVFUEURVHUSABCEGHIUGUHZA
+        VFVCVGUIUJZURUSUKTUTAVFFVJURUSULTJVDRZUMVHUTVEAKZVIVHURUSVLAVCVDEFVKUNU
+        PUOUQ $.
+        $( [19-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    $d ch i x $.  $d et x $.  $d ph f g i j $.  $d ph y $.  $d ps f g i j $.
+    $d ps y $.  $d rh x $.  $d si x $.  $d ta x $.  $d th x $.  $d ze x $.
+    $d A x y $.  $d B f g i x $.  $d I f g i j x $.  $d I y $.  $d P f g x $.
+    $d Q f g $.  $d R f g i j $.  $d R y $.  $d S f g i j $.  $d S y $.
+    $d T f g x $.  $d i y $.  $d j y $.
+    mpfind.cb $e |- B = ( Base ` S ) $.
+    mpfind.cp $e |- P = ( +g ` S ) $.
+    mpfind.ct $e |- T = ( .r ` S ) $.
+    mpfind.cq $e |- Q = ran ( ( I evalSub S ) ` R ) $.
+    mpfind.vs $e |- S e. _V $.
+    mpfind.ad $e |- ( ( ph /\ ( ( f e. Q /\ ta ) /\ ( g e. Q /\ et ) ) ) ->
+        ze ) $.
+    mpfind.mu $e |- ( ( ph /\ ( ( f e. Q /\ ta ) /\ ( g e. Q /\ et ) ) ) ->
+        si ) $.
+    mpfind.wa $e |- ( x = ( ( B ^m I ) X. { f } ) -> ( ps <-> ch ) ) $.
+    mpfind.wb $e |- ( x = ( g e. ( B ^m I ) |-> ( g ` f ) ) ->
+        ( ps <-> th ) ) $.
+    mpfind.wc $e |- ( x = f -> ( ps <-> ta ) ) $.
+    mpfind.wd $e |- ( x = g -> ( ps <-> et ) ) $.
+    mpfind.we $e |- ( x = ( f oF P g ) -> ( ps <-> ze ) ) $.
+    mpfind.wf $e |- ( x = ( f oF T g ) -> ( ps <-> si ) ) $.
+    mpfind.wg $e |- ( x = A -> ( ps <-> rh ) ) $.
+    mpfind.co $e |- ( ( ph /\ f e. R ) -> ch ) $.
+    mpfind.pr $e |- ( ( ph /\ f e. I ) -> th ) $.
+    mpfind.a $e |- ( ph -> A e. Q ) $.
+    $( Prove a property of polynomials by "structural" induction, under a
+       simplified model of structure which loses the sum of products
+       structure.  The commutativity condition is stronger than strictly
+       needed. $)
+    mpfind $p |- ( ph -> rh ) $=
+      ( vy vi vj cab wcel cv ces co cfv wceq cress cmpl cbs crn syl6eleq wfn wb
+      wrex cmap cpws wf crh cvv ccrg csubrg w3a mpfrcl syl simp1d simp2d simp3d
+      eqid evlsrhm syl3anc ovex rhmf sylancl ffn mpbid wa adantr cplusg syl2anc
+      crg elpreima simpld cof a1i syl22anc ffvelrn fnfvelrn syl6eleqr fvimacnvi
+      cmulr eqtrd jca fvex eleq1 vex elab syl5bbr anbi12d oveq12 eleq1d imbi12d
+      wi vtocl2 syl12anc eqeltrd mpbir2and adantlr cmgp mgpplusg eleq2d csn cxp
+      wral ralrimiva cbvralv sylib r19.21bi simpr cmpt wfun ccnv cima ffun cmvr
+      fvelrnb cascl subrgcrng crngrng mplrng simprl simprr rngacl rhmghm ghmlin
+      cghm pwsplusgval simpl bi2anan9 anbi2d cmhm rhmmhm mgpbas pwsmulrval csca
+      mhmlin casa mplassa asclrhm mplsca fveq2d biimpa subrgss ressbas2 biimpar
+      rngcl wss evlssca snex xpex sneq xpeq2d syldan mvrcl evlsvar mptex sylibr
+      weq fveq2 mpteq2dv mplind syl5ibcom rexlimdva mpd elabg ) AKBJVAZVBZIAURV
+      CZOTPVDVEVFZVFZKVGZURTPOVHVEZVIVEZVJVFZVOZUWQAKUWSVKZVBZUXEAKNUXFUQUDVLAU
+      WSUXDVMZUXGUXEVNAUXDPLTVPVEZVQVEZVJVFZUWSVRZUXHAUWSUXCUXJVSVEVBZUXJVTVBZU
+      XLATVTVBZPWAVBZOPWBVFVBZUXMAUXOUXPUXQAKNVBZUXOUXPUXQWCUQNOPTKUEUDWDWEZWFZ
+      AUXOUXPUXQUXSWGZAUXOUXPUXQUXSWHZLUWSOPUXJUXBTVTUXCUWSWIZUXCWIZUXBWIZUXJWI
+      ZUAWJWKZPUXIVQWLZUXDUXKUXCUXJUWSVTUXDWIZUXKWIZWMWNZUXDUXKUWSWOWEZURUXDKUW
+      SUUFWEWPAUXAUWQURUXDAUWRUXDVBZWQZUWTUWPVBZUXAUWQUYNUWSUUAZUWRUWSUUBUWPUUC
+      ZVBUYOAUYPUYMAUXLUYPUYKUXDUXKUWSUUDWEZWRUYNUSUTUXDUXCUUGVFZUXCWSVFZUXBUXC
+      XKVFZUYQTUXBVJVFZTUXBUUEVEZUWRUXCVUBWIVUCWIZUYDUYTWIZVUAWIZUYSWIZUYIAUSVC
+      ZUYQVBZUTVCZUYQVBZWQZVUHVUJUYTVEZUYQVBZUYMAVULWQZVUNVUMUXDVBZVUMUWSVFZUWP
+      VBZVUOUXCXAVBZVUHUXDVBZVUJUXDVBZVUPAVUSVULAUXOUXBXAVBZVUSUXTAUXBWAVBZVVBA
+      UXPUXQVVCUYAUYBOPUXBUYEUUHWTZUXBUUIWEZUXCUXBTVTUYDUUJWTWRZVUOVUTVUHUWSVFZ
+      UWPVBZVUOVUIVUTVVHWQZAVUIVUKUUKZAVUIVVIVNZVULAUXHVVKUYLUXDVUHUWPUWSXBWEWR
+      WPXCZVUOVVAVUJUWSVFZUWPVBZVUOVUKVVAVVNWQZAVUIVUKUULZAVUKVVOVNZVULAUXHVVQU
+      YLUXDVUJUWPUWSXBWEWRWPXCZUXDUYTUXCVUHVUJUYIVUEUUMWKVUOVUQVVGVVMMXDZVEZUWP
+      VUOVUQVVGVVMUXJWSVFZVEZVVTVUOUWSUXCUXJUUPVEVBZUXNVUTVVAVUQVWBVGAVWCVULAUX
+      MVWCUYGUXCUXJUWSUUNWEWRUXNVUOUYHXEVVLVVRUYTVWAUXCUXJVUHUWSVUJVTUXDUYIVUEV
+      WAWIZUUOXFVUOMUXKVWAPVVGVVMUXIWAVTUXJUYFUYJAUXPVULUYAWRZUXIVTVBVUOLTVPWLZ
+      XEZVUOUXLVUTVVGUXKVBAUXLVULUYKWRZVVLUXDUXKVUHUWSXGWTZVUOUXLVVAVVMUXKVBVWH
+      VVRUXDUXKVUJUWSXGWTZUBVWDUUQXLVUOAVVGNVBZVVHWQZVVMNVBZVVNWQZVVTUWPVBZAVUL
+      UURZVUOVWKVVHVUOVVGUXFNVUOUXHVUTVVGUXFVBAUXHVULUYLWRZVVLUXDVUHUWSXHWTUDXI
+      VUOUYPVUIVVHAUYPVULUYRWRZVVJVUHUWPUWSXJWTXMZVUOVWMVVNVUOVVMUXFNVUOUXHVVAV
+      VMUXFVBVWQVVRUXDVUJUWSXHWTUDXIVUOUYPVUKVVNVWRVVPVUJUWPUWSXJWTXMZARVCZNVBZ
+      EWQZSVCZNVBZFWQZWQZWQZGYCAVWLVWNWQZWQZVWOYCRSVVGVVMVUHUWSXNZVUJUWSXNZVXAV
+      VGVGZVXDVVMVGZWQZVXHVXJGVWOVXOVXGVXIAVXMVXCVWLVXNVXFVWNVXMVXBVWKEVVHVXAVV
+      GNXOEVXAUWPVBVXMVVHBEJVXARXPUJXQVXAVVGUWPXOXRXSVXNVXEVWMFVVNVXDVVMNXOFVXD
+      UWPVBVXNVVNBFJVXDSXPUKXQVXDVVMUWPXOXRXSUUSUUTZGVXAVXDVVSVEZUWPVBVXOVWOBGJ
+      VXQVXAVXDVVSWLULXQVXOVXQVVTUWPVXAVVGVXDVVMVVSXTYAXRYBUFYDYEYFAVUNVUPVURWQ
+      VNZVULAUXHVXRUYLUXDVUMUWPUWSXBWEWRYGYHAVULVUHVUJVUAVEZUYQVBZUYMVUOVXTVXSU
+      XDVBZVXSUWSVFZUWPVBZVUOVUSVUTVVAVYAVVFVVLVVRUXDUXCVUAVUHVUJUYIVUFUVPWKVUO
+      VYBVVGVVMQXDZVEZUWPVUOVYBVVGVVMUXJXKVFZVEZVYEVUOUWSUXCYIVFZUXJYIVFZUVAVEV
+      BZVYIVTVBZVUTVVAVYBVYGVGAVYJVULAUXMUXNVYJUYGUYHUXCUXJUWSVYHVYIVTVYHWIZVYI
+      WIZUVBWNWRVYKVUOUXJYIXNXEVVLVVRUXDVUAVYFVYHVYIUWSVTVUHVUJUXDUXCVYHVYLUYIU
+      VCUXCVUAVYHVYLVUFYJUXJVYFVYIVYMVYFWIZYJUVFXFVUOUXKPVYFVVGVVMUXIQWAVTUXJUY
+      FUYJVWEVWGVWIVWJUCVYNUVDXLVUOAVWLVWNVYEUWPVBZVWPVWSVWTVXHHYCVXJVYOYCRSVVG
+      VVMVXKVXLVXOVXHVXJHVYOVXPHVXAVXDVYDVEZUWPVBVXOVYOBHJVYPVXAVXDVYDWLUMXQVXO
+      VYPVYEUWPVXAVVGVXDVVMVYDXTYAXRYBUGYDYEYFAVXTVYAVYCWQVNZVULAUXHVYQUYLUXDVX
+      SUWPUWSXBWEWRYGYHAVUHVUBVBZVUHUYSVFZUYQVBZUYMAVYRWQZVYTVYSUXDVBZVYSUWSVFZ
+      UWPVBZWUAUXCUVEVFZVJVFZUXDUYSVRZVUHWUFVBZWUBAWUGVYRAUYSWUEUXCVSVEVBZUXCVT
+      VBWUGAUXCUVGVBZWUIAUXOVVCWUJUXTVVDUXCUXBTVTUYDUVHWTWUEUXCWUEWIUVIWETUXBVI
+      WLWUFUXDWUEUXCUYSVTWUFWIUYIWMWNWRAVYRWUHAVUBWUFVUHAUXBWUEVJAUXCUXBTVTWAUY
+      DUXTVVDUVJUVKYKUVLWUFUXDVUHUYSXGWTWUAWUCUXIVUHYLZYMZUWPWUAUYSLUWSOPUXBTVT
+      UXCVUHUYCUYDUYEUAVUGAUXOVYRUXTWRAUXPVYRUYAWRAUXQVYRUYBWRAVUHOVBZVYRAOVUBV
+      UHAOLUVQZOVUBVGAUXQWUNUYBOLPUAUVMWEOLUXBPUYEUAUVNWEYKUVOZUVRAVYRWUMWULUWP
+      VBZWUOAWUPUSOACROYNWUPUSOYNACROUOYOCWUPRUSOCUXIVXAYLZYMZUWPVBRUSUWHZWUPBC
+      JWURUXIWUQVWFVXAUVSUVTUHXQWUSWURWULUWPWUSWUQWUKUXIVXAVUHUWAUWBYAXRYPYQYRU
+      WCYFAVYTWUBWUDWQVNZVYRAUXHWUTUYLUXDVYSUWPUWSXBWEWRYGYHAVUHTVBZVUHVUCVFZUY
+      QVBZUYMAWVAWQZWVCWVBUXDVBZWVBUWSVFZUWPVBZWVDUXDUXCUXBTVUCVTVUHUYDVUDUYIAU
+      XOWVAUXTWRZAVVBWVAVVEWRAWVAYSZUWDWVDWVFSUXIVUHVXDVFZYTZUWPWVDLUWSOPUXBSTV
+      UCVTVUHUYCVUDUYEUAWVHAUXPWVAUYAWRAUXQWVAUYBWRWVIUWEAWVKUWPVBZUSTASUXIVXAV
+      XDVFZYTZUWPVBZRTYNWVLUSTYNAWVORTAVXATVBWQDWVOUPBDJWVNSUXIWVMVWFUWFUIXQUWG
+      YOWVOWVLRUSTWUSWVNWVKUWPWUSSUXIWVMWVJVXAVUHVXDUWIUWJYAYPYQYRYFAWVCWVEWVGW
+      QVNZWVAAUXHWVPUYLUXDWVBUWPUWSXBWEWRYGYHAUYMYSAUXOUYMUXTWRAVVCUYMVVDWRUWKU
+      WRUWPUWSXJWTUWTKUWPXOUWLUWMUWNAUXRUWQIVNUQBIJKNUNUWOWEWP $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
+    $d I a b x y $.  $d I f g $.  $d b f g $.
+    $( Relationship between multivariate Z-polynomials and general multivariate
+       polynomial functions. $)
+    mzpmfp $p |- ( mzPoly ` I ) = ran ( I eval ( CCfld |`s ZZ ) ) $=
+      ( va vb vg vy cvv wcel cfv ccnfld cz co cevl cv caddc cmul wa a1i syl2anc
+      eleq1 c0 vf vx cmzp cress crn wceq cmap csn cxp cmpt cof cc wss cbs zsscn
+      eqid cnfldbas ressbas2 ax-mp ovex evlval rneqi simpl csubrg cncrng zsubrg
+      ces subrgcrng mp2an crg subrgrng subrgid simpr mpfconst mpfproj wf simp2r
+      w3a simp3r cnfldadd ressplusg mpfaddcl cnfldmul ressmulr mpfmulcl mzpindd
+      ccrg simprlr simprrr mzpadd mzpmul mzpconst adantlr mzpproj impbida eqrdv
+      mpfind wn fvprc df-evl reldmmpt2 ovprc1 rneqd rn0 syl6eq eqtr4d pm2.61i )
+      AFGZAUCHZAIJUDKZLKZUEZUFXHBXIXLXHBMZXIGZXMXLGZXHCMZXLGJAUGKZUAMZUHUIZXLGD
+      XQXRDMZHUJZXLGXRXLGZXTXLGZXRXTNUKZKZXLGZXRXTOUKZKZXLGZXOCXMUADAXHXRJGZPZJ
+      XLJXJAFXRJULUMJXJUNHUFUOJULXJIXJUPZUQURUSZXKJAXJVGKHJXKXJAIJUDUTZXKUPYMVA
+      VBZXHYJVCXJWGGZYKIWGGJIVDHGZYPVEVFJIXJYLVHVIZQJXJVDHGZYKXJVJGZYSYQYTVFJIX
+      JYLVKUSJXJYMVLUSZQXHYJVMVNXHXRAGZPZJXLJXJDAXRFYMYOXHUUBVCYPUUCYRQYSUUCUUA
+      QXHUUBVMVOXHXQJXRVPZYBPZXQJXTVPZYCPZVRZYBYCYFXHUUDYBUUGVQZXHUUEUUFYCVSZNX
+      LJXJXRXTAYNYOJNIXJYLVTWAZWBRUUHYBYCYIUUIUUJXLJXJOXRXTAYNYOJIXJOYLWCWDZWER
+      XPXSXLSXPYAXLSXPXRXLSXPXTXLSXPYEXLSXPYHXLSXPXMXLSWFXHXOPZXPXIGXQUBMZUHUIZ
+      XIGZEXQUUNEMZHUJZXIGZUUNXIGZUUQXIGZUUNUUQYDKZXIGZUUNUUQYGKZXIGZXNCXMJNXLJ
+      XJOUBEAYMUUKUULYOYNUUMUUNXLGZUUTPZUUQXLGZUVAPZPPZUUTUVAUVCUUMUVFUUTUVIWHZ
+      UUMUVGUVHUVAWIZUUNUUQAWJRUVJUUTUVAUVEUVKUVLUUNUUQAWKRXPUUOXISXPUURXISXPUU
+      NXISXPUUQXISXPUVBXISXPUVDXISXPXMXISXHUUNJGUUPXOUUNAWLWMXHUUNAGUUSXOEAUUNW
+      NWMXHXOVMWQWOWPXHWRZXITXLAUCWSUVMXLTUETUVMXKTAXJLBCFFXPUNHXMXPVGKHLBCWTXA
+      XBXCXDXEXFXG $.
+      $( [20-Mar-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Structure of univariate polynomials
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c coe1 $. $( Multivariate -> univariate $)
+  $c toPoly1 $. $( Univariate -> multivariate $)
+  $c Monic1 $. $( Monic polynomial $)
+
+  $( Convert a multivariate polynomial representation to univariate. $)
+  cco1 $a class coe1 $.
+
+  $( Convert a univariate polynomial representation to multivariate. $)
+  ctp1 $a class toPoly1 $.
+
+  $( Monic polynomials. $)
+  cmn1 $a class Monic1 $.
+
+  ${
+    $d f n r $.
+
+    $( Define the coefficient function for a univariate polynomial. $)
+    df-coe1 $a |- coe1 = ( f e. _V |-> ( n e. NN0 |->
+      ( f ` ( 1o X. { n } ) ) ) ) $.
+
+    $( Define a function which maps a coefficient function for a univariate
+       polynomial to the corresponding polynomial object. $)
+    df-toply1 $a |- toPoly1 = ( f e. _V |-> ( n e. ( NN0 ^m 1o ) |->
+      ( f ` ( n ` (/) ) ) ) ) $.
+  $}
+
+  ${
+    vr1cl.x $e |- X = ( var1 ` R ) $.
+    vr1cl.p $e |- P = ( Poly1 ` R ) $.
+    vr1cl.b $e |- B = ( Base ` P ) $.
+    $( The generator of a univariate polynomial algebra is contained in the
+       base set. $)
+    vr1cl $p |- ( R e. Ring -> X e. B ) $=
+      ( crg wcel c0 c1o cmvr co cfv vr1val cmpl cbs com eqid a1i id 0lt1o mvrcl
+      1onn cps1 ply1bas eleqtrrd eqeltrd ) CHIZDJKCLMZNZACHDEOUIUKKCPMZQNZAUIUM
+      ULCKUJRJULSUJSUMSKRIUIUDTUIUAJKIUIUBTUCBCCUENZAHFUNSGUFUGUH $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
+    ply1coe.p $e |- P = ( Poly1 ` R ) $.
+    ply1coe.x $e |- X = ( var1 ` R ) $.
+    ply1coe.b $e |- B = ( Base ` P ) $.
+    ply1coe.n $e |- N = ( vsca ` P ) $.
+    ply1coe.m $e |- M = ( mulGrp ` P ) $.
+    ply1coe.e $e |- E = ( .g ` M ) $.
+    ply1coe.a $e |- A = ( coe1 ` K ) $.
+    $( Decompose a univariate polynomial as a sum of powers. $)
+    ply1coe $p |- ( ( R e. CRing /\ K e. B ) -> K =
+          ( P gsum ( k e. NN0 |-> ( ( A ` k ) N ( k E X ) ) ) ) ) $=
       ? $.
   $}
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Univariate polynomial evaluation
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Polynomial degrees
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c mDeg $. $( Multivariate polynomial degree $)
+  $c deg1 $. $( Univariate polynomial degree $)
+
+  $( Multivariate polynomial degree. $)
+  cmdg $a class mDeg $.
+
+  $( Univariate polynomial degree. $)
+  cdg1 $a class deg1 $.
+
+  ${
+    $d i r f h x $.
+    $( Define the degree of a polynomial.  Note (SO): as an experiment I am
+       using a definition which makes the degree of the zero polynomial
+       ` -oo ` , contrary to the convention used in ~ df-dgr . $)
+    df-mdeg $a |- mDeg = ( i e. _V , r e. _V |-> ( f e. ( Base ` ( i mPoly r )
+        ) |->
+      sup ( ran ( h e. ( `' f " ( _V \ { ( 0g ` r ) } ) ) |->
+        ( CCfld gsum h ) ) , RR* , < ) ) ) $.
+
+    $( Define the degree of a univariate polynomial. $)
+    df-deg1 $a |- deg1 = ( r e. _V , f e. ( Poly1 ` r ) |->
+      ( ( 1o mDeg r ) ` f ) ) $.
+
+    $( Define the set of monic univariate polynomials. $)
+    df-mon1 $a |- Monic1 = ( r e. _V |-> { f e. ( Poly1 ` r ) |
+      ( ( coe1 ` f ) ` ( r deg1 f ) ) = ( 1r ` r ) } ) $.
+  $}
+
+  ${
+    $d f i r w $.
+    mplrcl.p $e |- P = ( I mPoly R ) $.
+    mplrcl.b $e |- B = ( Base ` P ) $.
+    $( Reverse closure for the polynomial index set. $)
+    mplrcl $p |- ( X e. B -> I e. _V ) $=
+      ( vi vr vw vf cvv wcel c0 cbs cfv cmpl co cv syl5eq wn noel cmps ccnv c0g
+      csn cdif cima cfn crab csb df-mpl reldmmpt2 ovprc1 fveq2d cnx baseid str0
+      cress eqcomi syl6eq eleq2d mtbiri con4i ) DLMZEAMZVEUAZVFENMEUBVGANEVGABO
+      PZNGVGVHNOPZNVGBNOVGBDCQRNFDCQHILLJHSISZUCRJSZKSUDLVJUEPUFUGUHUIMKVKOPUJU
+      SRUKQJKHIULUMUNTUONVIOUPOPHHUQURUTVATVBVCVD $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
+    $d A h x y $.  $d I h m $.  $d I x y $.  $d V h x y $.
+    tdeglem.a $e |- A = { m e. ( NN0 ^m I ) | ( `' m " NN ) e. Fin } $.
+    tdeglem.h $e |- H = ( h e. A |-> ( CCfld gsum h ) ) $.
+    $( Functionality of the total degree helper function. $)
+    tdeglem1 $p |- ( I e. V -> H : A --> NN0 ) $=
+      ( vx vy wcel ccnfld cv co cn0 wa cc caddc cc0 a1i cnfldadd cnfldbas cnrng
+      cgsu cnfld0 ccmn crg rngcmn ax-mp simpl wss nn0sscn 0nn0 nn0addcl psrbagf
+      adantl ccnv cvv csn cdif cima cfn psrbagsuppfi ancoms gsumsubmcl fmptd )
+      EFKZBALBMZUDNODVGVHAKZPZIJEQROVHLFSUEUAUBLUFKZVJLUGKVKUCLUHUITVGVIUJOQUKV
+      JULTSOKVJUMTIMZOKJMZOKPVLVMRNOKVJVLVMUNUPACVHEFGUOVIVGVHUQURSUSUTVAVBKACE
+      FVHGVCVDVEHVF $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
+    $d A h $.  $d B f i r $.  $d I f i r $.  $d I m $.  $d R f i r $.
+    $d V f $.  $d W f $.  $d Z h i r $.  $d f h $.
+    mdegval.d $e |- D = ( I mDeg R ) $.
+    mdegval.p $e |- P = ( I mPoly R ) $.
+    mdegval.b $e |- B = ( Base ` P ) $.
+    mdegval.z $e |- Z = ( 0g ` R ) $.
+    mdegval.a $e |- A = { m e. ( NN0 ^m I ) | ( `' m " NN ) e. Fin } $.
+    mdegval.h $e |- H = ( h e. A |-> ( CCfld gsum h ) ) $.
+    $( Value of the multivariate degree function. $)
+    mdegfval $p |- ( ( I e. V /\ R e. W ) -> D = ( f e. B |-> sup ( ( H " ( `'
+        f " ( _V \ { Z } ) ) ) , RR* , < ) ) ) $=
+      ( cvv vi vr wcel wa cv ccnv csn cdif cima ccnfld cgsu co cmpt crn cxr clt
+      csup wceq elex cmdg cbs cfv c0g oveq12 syl6eqr fveq2d fveq2 sneqd difeq2d
+      cmpl imaeq2d mpteq1 syl rneqd supeq1d adantl mpteq12dv df-mdeg fvex mptex
+      eqeltri ovmpt2a syl5eq syl2an cres wss cdm cnvimass wf eqid simpll simplr
+      simpr mplelf fdm syl5sseq resmpt eqcomd reseq1i df-ima mpteq2dva eqtrd )
+      JKUCZELUCZUDZCFBGFUEZUFZTMUGZUHZUIZUJGUEUKULZUMZUNZUOUPUQZUMZFBIXJUIZUOUP
+      UQZUMXCJTUCZETUCZCXOURXDJKUSELUSXRXSUDCJEUTULXONUAUBJETTFUAUEZUBUEZVJULZV
+      AVBZGXGTYAVCVBZUGZUHZUIZXKUMZUNZUOUPUQZUMXOUTXTJURZYAEURZUDZFYCYJBXNYMYCD
+      VAVBZBYMYBDVAYMYBJEVJULDXTJYAEVJVDOVEVFPVEYLYJXNURYKYLUOYIXMUPYLYHXLYLYGX
+      JURYHXLURYLYFXIXGYLYEXHTYLYDMYLYDEVCVBMYAEVCVGQVEVHVIVKGYGXJXKVLVMVNVOVPV
+      QFGUAUBVRFBXNBYNTPDVAVSWAVTWBWCWDXEFBXNXQXEXFBUCZUDZUOXMXPUPYPXMIXJWEZUNX
+      PYPXLYQYPXLGAXKUMZXJWEZYQYPYSXLYPXJAWFYSXLURYPXFWGZXJAXFXIWHYPAEVAVBZXFWI
+      YTAURYPBADEHJUUAKXFLOUUAWJPRXCXDYOWKXCXDYOWLXEYOWMWNAUUAXFWOVMWPGAXJXKWQV
+      MWRIYRXJSWSVEVNIXJWTVEVOXAXB $.
+      $( [19-Mar-2015] $)
+
+    $d F f $.  $d H f $.  $d Z f $.
+    $( Value of the multivariate degree function at some particular
+       polynomial. $)
+    mdegval $p |- ( ( R e. W /\ F e. B ) -> ( D ` F ) = sup ( ( H " ( `' F " (
+        _V \ { Z } ) ) ) , RR* , < ) ) $=
+      ( vf cima wcel cfv ccnv cvv csn cdif cxr clt csup cmpt wceq mplrcl adantl
+      wa simpl mdegfval syl2anc fveq1d cnveq imaeq1d imaeq2d supeq1d eqid supex
+      cv xrltso fvmpt eqtrd ) EKUAZHBUAZUNZHCUBHSBISVEZUCZUDLUEUFZTZTZUGUHUIZUJ
+      ZUBZIHUCZVNTZTZUGUHUIZVKHCVRVKJUDUAZVICVRUKVJWDVIBDEJHNOULUMVIVJUOABCDESF
+      GIJUDKLMNOPQRUPUQURVJVSWCUKVISHVQWCBVRVLHUKZUGVPWBUHWEVOWAIWEVMVTVNVLHUSU
+      TVAVBVRVCUGWBUHVFVDVGUMVH $.
+      $( [19-Mar-2015] $)
+
+    $d A x y $.  $d B x $.  $d F x y $.  $d G x y $.  $d H x y $.  $d I h $.
+    $d R x $.  $d W x $.  $d Z x y $.  $d h m $.
+    $( Property of being of limited degree. $)
+    mdegle $p |- ( ( R e. W /\ F e. B /\ G e. RR* ) -> ( ( D ` F ) <_ G <->
+          A. x e. A ( G < ( H ` x ) -> ( F ` x ) = Z ) ) ) $=
+      ( vy wcel cxr w3a cfv cle wbr ccnv cvv csn cdif cima csup cv wral wceq wi
+      clt simp1 simp2 mdegval syl2anc breq1d wss wb crn imassrn cn0 wf 3ad2ant2
+      mplrcl tdeglem1 syl cr nn0ssre ressxr sstri syl6ss syl5ss simp3 supxrleub
+      frn wfn wa ffn cdm cnvimass cbs eqid mplelf fdm syl5sseq jca breq1 ralima
+      elpreima imbi1d impexp wn con34b simpl3 ffvelrn sseldi xrltnle bicomd wne
+      sylan wo eldifsn notbii ianor bitri fvex notnoti biorfi bicomi nne 3bitri
+      orcom a1i syl5bb imbi12d pm5.74da bitrd ralbidv2 3bitrd ) FMUBZICUBZJUCUB
+      ZUDZIDUEZJUFUGKIUHUINUJUKZULZULZUCURUMZJUFUGZUAUNZJUFUGZUAYNUOZJAUNZKUEZU
+      RUGZYTIUEZNUPZUQZABUOZYJYKYOJUFYJYGYHYKYOUPYGYHYIUSZYGYHYIUTZBCDEFGHIKLMN
+      OPQRSTVAVBVCYJYNUCVDYIYPYSVEYJYNKVFZUCKYMVGYJUUIVHUCYJBVHKVIZUUIVHVDYJLUI
+      UBZUUJYHYGUUKYICEFLIPQVKVJZBGHKLUISTVLVMZBVHKWBVMVHVNUCVOVPVQZVRVSYGYHYIV
+      TUAYNJWAVBYJYSUUAJUFUGZAYMUOZUUFYJKBWCZYMBVDZWDYSUUPVEYJUUQUURYJUUJUUQUUM
+      BVHKWEVMYJIWFZYMBIYLWGYJBFWHUEZIVIZUUSBUPYJCBEFHLUUTUIIMPUUTWIQSUULUUGUUH
+      WJZBUUTIWKVMWLWMYRUUOUAABYMKYQUUAJUFWNWOVMYJUUOUUEAYMBYJYTYMUBZUUOUQYTBUB
+      ZUUCYLUBZWDZUUOUQZUVDUUEUQZYJUVCUVFUUOYJIBWCZUVCUVFVEYJUVAUVIUVBBUUTIWEVM
+      BYTYLIWPVMWQUVGUVDUVEUUOUQZUQYJUVHUVDUVEUUOWRYJUVDUVJUUEUVJUUOWSZUVEWSZUQ
+      YJUVDWDZUUEUVEUUOWTUVMUVKUUBUVLUUDUVMUUBUVKUVMYIUUAUCUBUUBUVKVEYGYHYIUVDX
+      AUVMVHUCUUAUUNYJUUJUVDUUAVHUBUUMBVHYTKXBXGXCJUUAXDVBXEUVLUUCUIUBZWSZUUCNX
+      FZWSZXHZUVMUUDUVLUVNUVPWDZWSUVRUVEUVSUUCUINXIXJUVNUVPXKXLUVRUUDVEUVMUVRUV
+      QUVOXHZUVQUUDUVOUVQXSUVQUVTUVOUVQUVNYTIXMXNXOXPUUCNXQXRXTYAYBYAYCYAYDYEYD
+      YF $.
+      $( [19-Mar-2015] $)
+
+    mdegcoe.y $e |- Y = ( 0g ` P ) $.
+    $( A nonzero polynomial has some coefficient which witnesses its degree. $)
+    mdegcoe $p |- ( ( R e. W /\ F e. B /\ F =/= Y ) ->
+        E. x e. A ( ( F ` x ) =/= Z /\ ( H ` x ) = ( D ` F ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    $d I x y $.  $d R y $.
+    mdegxrcl.d $e |- D = ( I mDeg R ) $.
+    mdegxrcl.p $e |- P = ( I mPoly R ) $.
+    mdegxrcl.b $e |- B = ( Base ` P ) $.
+    $( Closure of polynomial degree in the extended reals. $)
+    mdegxrcl $p |- ( ( R e. W /\ F e. B ) -> ( D ` F ) e. RR* ) $=
+      ( vy vx wcel cfv cima cn0 cvv cxr eqid syl wa cv ccnv cn cfn cmap co crab
+      ccnfld cgsu cmpt c0g csn cdif clt mdegval wss crn imassrn mplrcl tdeglem1
+      csup wf adantl frn cr nn0ssre ressxr sstri syl6ss syl5ss supxrcl eqeltrd
+      ) DGMZEAMZUAZEBNKLUBUCUDOUEMLPFUFUGUHZUIKUBUJUGUKZEUCQDULNZUMUNOZOZRUOVBZ
+      RVQABCDKLEVRFGVSHIJVSSVQSZVRSZUPVPWARUQWBRMVPWAVRURZRVRVTUSVPWEPRVPVQPVRV
+      CZWEPUQVPFQMZWFVOWGVNACDFEIJUTVDVQKLVRFQWCWDVATVQPVRVETPVFRVGVHVIVJVKWAVL
+      TVM $.
+      $( [19-Mar-2015] $)
+
+    $d B f $.  $d B z $.  $d D f $.  $d I f $.  $d I z $.  $d R f $.  $d R z $.
+    $d V f $.  $d V z $.  $d W f $.  $d W z $.  $d y z $.
+    $( Functionality of polynomial degree in the extended reals. $)
+    mdegxrf $p |- ( ( I e. V /\ R e. W ) -> D : B --> RR* ) $=
+      ( vf vz vy vx wcel cv cxr cima cvv eqid wa wfn cfv wral ccnv cfn cn0 cmap
+      wf cn crab ccnfld cgsu cmpt c0g csn cdif clt csup fnmpt xrltso supex mprg
+      a1i mdegfval fneq1d mpbird simplr simpr mdegxrcl ralrimiva ffnfv sylanbrc
+      co syl2anc ) EFOZDGOZUAZBAUBZKPZBUCQOZKAUDAQBUIVRVSLAMNPUEUJRUFONUGEUHVNU
+      KZULMPUMVNUNZLPZUESDUOUCZUPUQRRZQURUSZUNZAUBZWIVRWGSOZWILALAWGWHSWHTUTWJW
+      DAOQWFURVAVBVDVCVDVRABWHWBABCDLMNWCEFGWEHIJWETWBTWCTVEVFVGVRWAKAVRVTAOZUA
+      VQWKWAVPVQWKVHVRWKVIABCDVTEGHIJVJVOVKKAQBVLVM $.
+      $( [19-Mar-2015] $)
+  $}
+
+  ${
+    $d I x y $.  $d R y $.  $d V y $.
+    mdeg0.d $e |- D = ( I mDeg R ) $.
+    mdeg0.p $e |- P = ( I mPoly R ) $.
+    mdeg0.z $e |- Z = ( 0g ` P ) $.
+    $( Degree of the zero polynomial. $)
+    mdeg0 $p |- ( ( I e. V /\ R e. Ring ) -> ( D ` Z ) = -oo ) $=
+      ( vy vx wcel cfv ccnv cima cvv cxr clt eqid c0 crg wa cv cn cfn cmap crab
+      cn0 co ccnfld cgsu cmpt c0g csn cdif csup cmnf cbs wceq simpr cgrp rnggrp
+      simpl adantl mplgrp syl2anc grpidcl syl mdegval cxp cnveqd imaeq1d wss wf
+      mpl0 fvex fconst6g ax-mp a1i eldifi fvconst2 suppss ss0 eqtrd ima0 syl6eq
+      imaeq2d supeq1d xrsup0 ) DELZCUALZUBZFAMZJKUCNUDOUELKUHDUFUIUGZUJJUCZUKUI
+      ULZFNZPCUMMZUNZUOZOZOZQRUPZUQWLWKFBURMZLZWMXCUSWJWKUTWLBVALZXEWLWJCVALZXF
+      WJWKVCZWKXGWJCVBVDZBCDEHVEVFXDBFXDSZIVGVHWNXDABCJKFWPDUAWRGHXJWRSZWNSZWPS
+      VIVFWLXCTQRUPUQWLQXBTRWLXBWPTOTWLXATWPWLXAWNWSVJZNZWTOZTWLWQXNWTWLFXMWLWN
+      BCKDWREFHXLXKIXHXIVOVKVLWLXOTVMXOTUSWLWNPJXMTWRWNPXMVNZWLWRPLXPCUMVPZWNWR
+      PVQVRVSWOWNTUOLZWOXMMWRUSZWLXRWOWNLXSWOWNTVTWNWRWOXQWAVHVDWBXOWCVHWDWGWPW
+      EWFWHWIWFWD $.
+      $( [20-Mar-2015] $)
+
+    $( Degree of a nonzero polynomial. $)
+    mdegnn0cl $p |- ( ( R e. Ring /\ F e. B /\ F =/= Z ) ->
+        ( D ` Z ) e. NN0 ) $=
+      ? $.
+  $}
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
