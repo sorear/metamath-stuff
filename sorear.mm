@@ -4145,11 +4145,50 @@ $)
       $( [11-Mar-2015] $)
   $}
 
+  ${
+    $d B x y $.  $d S x y $.  $d X y $.
+    mapsncnv.s $e |- S = { X } $.
+    mapsncnv.b $e |- B e. _V $.
+    mapsncnv.x $e |- X e. _V $.
+    mapsncnv.f $e |- F = ( x e. ( B ^m S ) |-> ( x ` X ) ) $.
+    $( Expression for the inverse of the canonical map between a set and its
+       set of singleton functions. $)
+    mapsncnv $p |- `' F = ( y e. B |-> ( S X. { y } ) ) $=
+      ( cv cmap co wcel cfv wceq wa copab csn cxp ccnv cmpt wf snex biimpi snid
+      elmap ffvelrn sylancl cop fsn2 simprbi sylbi fvex xpsn syl6eqr eleq1 sneq
+      jca xpeq2d eqeq2d anbi12d syl5ibrcom fconst6g sylibr fvconst2 mp1i eqcomd
+      imp fveq1 impbii oveq2i eleq2i anbi1i xpeq1i eqeq2i anbi2i 3bitr4i df-mpt
+      vex opabbii eqtri cnveqi cnvopab 3eqtr4i ) AKZCDLMZNZBKZFWFOZPZQZBARZWICN
+      ZWFDWISZTZPZQZBAREUAZBCWPUBWLWRBAWFCFSZLMZNZWKQZWNWFWTWOTZPZQZWLWRXCXFXBW
+      KXFXBXFWKWJCNZWFWTWJSZTZPZQXBXGXJXBWTCWFUCZFWTNZXGXBXKCWTWFHFUDZUGZUEFIUF
+      ZWTCFWFUHUIXBWFFWJUJSZXIXBXKWFXPPZXNXKXGXQFCWFIUKULUMFWJIFWFUNUOUPUSWKWNX
+      GXEXJWIWJCUQWKXDXIWFWKWOXHWTWIWJURUTVAVBVCVIWNXEXCWNXCXEXDXANZWIFXDOZPZQW
+      NXRXTWNWTCXDUCXRWTWICVDCWTXDHXMUGVEWNXSWIXLXSWIPWNXOWTWIFBVTVFVGVHUSXEXBX
+      RWKXTWFXDXAUQXEWJXSWIFWFXDVJVAVBVCVIVKWHXBWKWGXAWFDWTCLGVLVMVNWQXEWNWPXDW
+      FDWTWOGVOVPVQVRWAWSWLABRZUAWMEYAEAWGWJUBYAJABWGWJVSWBWCWLABWDWBBACWPVSWE
+      $.
+      $( [21-Mar-2015] $)
+
+    $( Explicit bijection between a set and its singleton functions. $)
+    mapsnf1o2 $p |- F : ( B ^m S ) -1-1-onto-> B $=
+      ( vy cmap wfn cv cvv wcel fnmpt a1i mprg csn snex wf1o ccnv cfv fvex cmpt
+      co cxp eqid eqeltri xpex mapsncnv fneq1i mpbir dff1o4 mpbir2an ) BCKUFZBD
+      UADUPLZDUBZBLZEAMZUCZNOZUQAUPAUPVADNIPVBUTUPOEUTUDQRUSJBCJMZSZUGZUEZBLZVE
+      NOZVGJBJBVEVFNVFUHPVHVCBOCVDCESNFETUIVCTUJQRBURVFAJBCDEFGHIUKULUMUPBDUNUO
+      $.
+      $( [21-Mar-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Extensions beyond function theory
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $)
+
+  $( Natural numbers are finite sets. $)
+  nnfi $p |- ( A e. om -> A e. Fin ) $=
+    ( com cfn con0 cin onfin2 inss2 eqsstri sseli ) BCABDCECFDCGHI $.
+    $( [21-Mar-2015] $)
 
   ${
     $d ph x $.  $d Y x $.  $d Z x $.
@@ -4221,6 +4260,19 @@ $)
       ACZBDEZFZABGAABHZIZGZDABJUJULDEZULUMAULHZKZUMDEUJUIULBLUNUHUIMULBAIZNBABO
       BUQQPBULRSUHUIULUQLZUPUKALURUJABTUKAUAUBULAUCUDULUMUOUEUFUG $.
       $( [22-Feb-2015] $)
+  $}
+
+  ${
+    suppfif1.f $e |- ( ph -> ( `' F " ( _V \ { Z } ) ) e. Fin ) $.
+    suppfif1.g $e |- ( ph -> G : X -1-1-> Y ) $.
+    $( Formula building theorem for finite supports: rearranging the index
+       set. $)
+    suppfif1 $p |- ( ph -> ( `' ( F o. G ) " ( _V \ { Z } ) ) e. Fin ) $=
+      ( ccom ccnv cvv csn cdif cima cfn cnvco imaeq1i imaco eqtri wcel wfun wf1
+      wf df-f1 simprbi syl imafi syl2anc syl5eqel ) ABCIJZKFLMZNZCJZBJZUKNZNZOU
+      LUMUNIZUKNUPUJUQUKBCPQUMUNUKRSAUMUAZUOOTUPOTADECUBZURHUSDECUCURDECUDUEUFG
+      UMUOUGUHUI $.
+      $( [21-Mar-2015] $)
   $}
 
   ${
@@ -23217,6 +23269,158 @@ $)
   $}
 
   ${
+    strfvi.e $e |- E = ( a e. _V |-> ( a ` N ) ) $.
+    strfvi.x $e |- X = ( E ` S ) $.
+    $( Structure slot extractors cannot distinguish between proper classes and
+       ` (/) ` , so they can be protected using the identity function. $)
+    strfvi $p |- X = ( E ` ( _I ` S ) ) $=
+      ( cfv cid cvv wcel wceq fvi eqcomd fveq2d wn c0 str0 fvprc 3eqtr4a eqtri
+      pm2.61i ) DABHZAIHZBHZGAJKZUCUELUFAUDBUFUDAAJMNOUFPZQQBHUCUEBCEFRABSUGUDQ
+      BAISOTUBUA $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d ph a x y $.  $d F a x y $.  $d M a x y $.  $d P a x y $.  $d Q a x y $.
+    $d S x y $.
+    seqfeq3.m $e |- ( ph -> M e. ZZ ) $.
+    seqfeq3.f $e |- ( ( ph /\ x e. ( ZZ>= ` M ) ) -> ( F ` x ) e. S ) $.
+    seqfeq3.cl $e |- ( ( ph /\ ( x e. S /\ y e. S ) ) -> ( x P y ) e. S ) $.
+    seqfeq3.id $e |- ( ( ph /\ ( x e. S /\ y e. S ) ) ->
+        ( x P y ) = ( x Q y ) ) $.
+    $( Equality of series under different addition operations which agree on an
+       an additively closed subset. $)
+    seqfeq3 $p |- ( ph -> seq M ( P , F ) = seq M ( Q , F ) ) $=
+      ( cfv wcel wa cid cvv wceq fvi ax-mp va cuz cseq cz wfn seqfn syl cv fvex
+      co adantlr cfz simpll elfzuz adantl syl2anc simpr vex oveq12i 3eqtr4g a1i
+      ovex seqhomo syl5eqr eqfnfvd ) AUAHUBMZDGHUCZEGHUCZAHUDNZVGVFUEIDGHUFUGAV
+      IVHVFUEIEGHUFUGAUAUHZVFNZOZVJVGMZVMPMZVJVHMVMQNVNVMRVJVGUIVMQSTVLBCDEFGGP
+      HVJABUHZFNCUHZFNOZVOVPDUJZFNVKKUKVLVOHVJULUJNZOZAVOVFNZVOGMZFNAVKVSUMVSWA
+      VLVOHVJUNUOJUPAVKUQAVQVRPMZVOPMZVPPMZEUJZRVKAVQOVRVOVPEUJWCWFLVRQNWCVRRVO
+      VPDVBVRQSTWDVOWEVPEVOQNWDVORBURVOQSTVPQNWEVPRCURVPQSTUSUTUKWBPMWBRZVTWBQN
+      WGVOGUIWBQSTVAVCVDVE $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d B x y $.  $d G x y $.
+    grpinvfn.b $e |- B = ( Base ` G ) $.
+    grpinvfn.n $e |- N = ( invg ` G ) $.
+    $( Functionality of the group inverse function. $)
+    grpinvfn $p |- N Fn B $=
+      ( vx vy cvv wcel wfn cv cplusg cfv eqid mpbiri cminusg fvprc syl5eq cbs
+      c0 co c0g wceq crio cmpt fnmpt riotaex a1i grpinvfval fneq1d wn wf f0 ffn
+      mprg ax-mp fneq12d pm2.61i ) BHIZCAJZUSUTFAGKFKZBLMZUABUBMZUCZGAUDZUEZAJZ
+      VEHIZVGFAFAVEVFHVFNUFVHVAAIVDGAUGUHUOUSACVFFGAVBBCVCHDVBNVCNEUIUJOUSUKZUT
+      TTJZTTTULVJTUMTTTUNUPVIATCTVICBPMTEBPQRVIABSMTDBSQRUQOUR $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    grpinvfvi.t $e |- N = ( invg ` G ) $.
+    $( The group inverse function is compatible with identity-function
+       protection. $)
+    grpinvfvi $p |- N = ( invg ` ( _I ` G ) ) $=
+      ( va cminusg cfv cid cvv wcel wceq fvi fveq2d wn fvprc wfn cbs cnx baseid
+      c0 str0 eqid grpinvfn fn0 mpbi syl6eq eqtr4d pm2.61i eqtr4i ) BAEFZAGFZEF
+      ZCAHIZUKUIJULUJAEAHKLULMZUKSUIUMUKSEFZSUMUJSEAGNLUNSOUNSJSSUNPQPFDDRTUNUA
+      UBUNUCUDUEAENUFUGUH $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d ph x y $.  $d B x y $.  $d K x y $.  $d L x y $.
+    grpinvpropd2.k $e |- ( ph -> B = ( Base ` K ) ) $.
+    grpinvpropd2.l $e |- ( ph -> B = ( Base ` L ) ) $.
+    grpinvpropd2.e $e |- ( ( ph /\ ( x e. B /\ y e. B ) ) ->
+        ( x ( +g ` K ) y ) = ( x ( +g ` L ) y ) ) $.
+    $( If two structures have the same group components (properties), they have
+       the same group inversion function. $)
+    grpinvpropd2 $p |- ( ph -> ( invg ` K ) = ( invg ` L ) ) $=
+      ( va cbs cfv cplusg co cid wceq crio cmpt wcel eqid cv c0g cminusg wa cnx
+      baseid strfvi syl6eq plusgid oveqi 3eqtr3g cvv fvex a1i grpidpropd adantr
+      wb eqeq12d anassrs an32s riotabidva mpteq2dva riotaeqdv mpteq12dv 3eqtr3d
+      grpinvfvi grpinvfval ax-mp 3eqtr4g ) ACEKLZBUAZCUAZEMLZNZEOLZUBLZPZBVJQZR
+      ZCFKLZVKVLFMLZNZFOLZUBLZPZBVTQZRZEUCLZFUCLZACDVQBDQZRCDWEBDQZRVSWGACDWJWK
+      AVLDSZUDVQWEBDAVKDSZWLVQWEUQZAWMWLWNAWMWLUDZUDZVNWBVPWDIAVPWDPWOABCDVOWCA
+      DVJVOKLGEKUEKLZVJJJUFZVJTUGZUHADVTWCKLHFKWQVTJWRVTTUGZUHWPVNWBVKVLVOMLZNV
+      KVLWCMLZNIVMXAVKVLEMUEMLZVMJJUIZVMTUGZUJWAXBVKVLFMXCWAJXDWATUGZUJUKVOULSZ
+      AEOUMZUNWCULSZAFOUMZUNUOUPURUSUTVAVBACDWJVJVRGAVQBDVJGVCVDACDWKVTWFHAWEBD
+      VTHVCVDVEXGWHVSPXHCBVJVMVOWHVPULWSXEVPTEWHWHTVFVGVHXIWIWGPXJCBVTWAWCWIWDU
+      LWTXFWDTFWIWITVFVGVHVI $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d B n x $.  $d G n x $.
+    mulgfn.b $e |- B = ( Base ` G ) $.
+    mulgfn.t $e |- T = ( .g ` G ) $.
+    $( Functionality of the group multiple function. $)
+    mulgfn $p |- T Fn ( ZZ X. B ) $=
+      ( vn vx cvv wcel cz cxp wfn cv cc0 c0g cfv cif fvex eqid c0 clt cplusg cn
+      wceq wbr c1 cseq cneg cminusg cmpt2 wral ifex rgen2w fnmpt2 mpbi mulgfval
+      csn fneq1d mpbiri wn wf ffn ax-mp cmg fvprc syl5eq cbs xpeq2d xp0 fneq12d
+      f0 syl6eq pm2.61i ) CHIZBJAKZLZVNVPFGJAFMZNUDZCOPZNVQUAUEZVQCUBPZUCGMUQKU
+      FUGZPZVQUHWBPZCUIPZPZQZQZUJZVOLZWHHIZGAUKFJUKWJWKFGJAVRVSWGCORVTWCWFVQWBR
+      WDWERULULUMFGJAWHWIWISUNUOVNVOBWIGAWABFCWEVSHDWASVSSWESEUPURUSVNUTZVPTTLZ
+      TTTVAWMTVKTTTVBVCWLVOTBTWLBCVDPTECVDVEVFWLVOJTKTWLATJWLACVGPTDCVGVEVFVHJV
+      IVLVJUSVM $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    mulgfvi.t $e |- T = ( .g ` G ) $.
+    $( The group multiple function is compatible with identity-function
+       protection. $)
+    mulgfvi $p |- T = ( .g ` ( _I ` G ) ) $=
+      ( va cmg cfv cid cvv wcel wceq fvi eqcomd fveq2d wn c0 fvprc wfn cbs mpbi
+      cz cxp cnx baseid str0 eqid mulgfn xp0 fneq2i syl6eq eqtr4d pm2.61i eqtri
+      fn0 ) ABEFZBGFZEFZCBHIZUNUPJUQBUOEUQUOBBHKLMUQNZUNOUPBEPURUPOEFZOURUOOEBG
+      PMUSOQZUSOJUSTOUAZQUTOUSORUBRFDDUCUDUSUEUFVAOUSTUGUHSUSUMSUIUJUKUL $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d ph a b x y $.  $d B x y $.  $d G a b x y $.  $d H a b x y $.
+    $d K x y $.
+    mulgpropd.m $e |- M = ( .g ` G ) $.
+    mulgpropd.n $e |- N = ( .g ` H ) $.
+    mulgpropd.b1 $e |- ( ph -> B = ( Base ` G ) ) $.
+    mulgpropd.b2 $e |- ( ph -> B = ( Base ` H ) ) $.
+    mulgpropd.i $e |- ( ph -> B C_ K ) $.
+    mulgpropd.k $e |- ( ( ph /\ ( x e. K /\ y e. K ) ) ->
+        ( x ( +g ` G ) y ) e. K ) $.
+    mulgpropd.e $e |- ( ( ph /\ ( x e. K /\ y e. K ) ) ->
+        ( x ( +g ` G ) y ) = ( x ( +g ` H ) y ) ) $.
+    $( Two structures with the same group-nature have the same group multiple
+       function. ` K ` is expected to either be ` _V ` (when strong equality is
+       available) or ` B ` (when closure is available). $)
+    mulgpropd $p |- ( ph -> M = N ) $=
+      ( va cz cfv wcel vb cbs cv cc0 wceq cid c0g clt wbr cplusg cn csn c1 cseq
+      cxp cneg cminusg cif cmpt2 w3a biidd cnx baseid strfvi syl6eq eqid1 wa co
+      eqid wss ssel anim12d syl imp syldan plusgid oveqi 3eqtr3g cvv grpidpropd
+      wi fvex a1i 3ad2ant1 1z cuz vex fvconst2 nnuz eqcomi eleq2s adantl sseldd
+      adantr eqeltrd 3ad2antl1 seqfeq3 fveq1d grpinvpropd2 ifbieq12d mpt2eq3dva
+      simp3 fveq12d eqidd mpt2eq123dv 3eqtr3d grpinvfvi mulgfvi mulgfval ax-mp
+      3eqtr4g ) AQUAREUBSZQUCZUDUEZEUFSZUGSZUDXMUHUIZXMEUJSZUKUAUCZULUOZUMUNZSZ
+      XMUPZYASZEUQSZSZURZURZUSZQUARFUBSZXNFUFSZUGSZXQXMFUJSZXTUMUNZSZYCYNSZFUQS
+      ZSZURZURZUSZHIAQUARDYHUSQUARDYTUSYIUUAAQUARDYHYTAXMRTZXSDTZUTZXNXNXPYGYLY
+      SUUDXNVAAUUBXPYLUEUUCABCDXOYKADXLXOUBSLEUBVBUBSZXLQQVCZXLVIVDZVEADYJYKUBS
+      MFUBUUEYJQUUFYJVFVDZVEABUCZDTZCUCZDTZVGZVGUUIUUKXRVHZUUIUUKYMVHZUUIUUKXOU
+      JSZVHUUIUUKYKUJSZVHAUUMUUIGTZUUKGTZVGZUUNUUOUEZAUUMUUTADGVJZUUMUUTWANUVBU
+      UJUURUULUUSDGUUIVKDGUUKVKVLVMVNPVOZXRUUPUUIUUKEUJVBUJSZXRQQVPZXRVFVDZVQYM
+      UUQUUIUUKFUJUVDYMQUVEYMVIVDZVQVRXOVSTZAEUFWBZWCYKVSTZAFUFWBZWCVTWDUUDXQXQ
+      YBYFYOYRUUDXQVAUUDXMYAYNUUDBCXRYMGXTUMUMRTUUDWEWCUUDUUIUMWFSZTZVGUUIXTSZX
+      SGUVMUVNXSUEZUUDUVOUUIUKUVLUKXSUUIUAWGWHUKUVLWIWJWKWLUUDXSGTUVMUUDDGXSAUU
+      BUVBUUCNWDAUUBUUCXBWMWNWOAUUBUUTUUNGTUUCOWPAUUBUUTUVAUUCPWPWQZWRUUDYDYPYE
+      YQAUUBYEYQUEUUCABCDEFLMUVCWSWDUUDYCYAYNUVPWRXCWTWTXAAQUARDYHRXLYHARXDZLAY
+      HXDXEAQUARDYTRYJYTUVQMAYTXDXEXFUVHHYIUEUVIUAXLXRHQXOYEXPVSUUGUVFXPVIEYEYE
+      VFXGHEJXHXIXJUVJIUUAUEUVKUAYJYMIQYKYQYLVSUUHUVGYLVIFYQYQVFXGIFKXHXIXJXK
+      $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
     $d ph a b c d e f g h $.  $d F a b c d e f g h $.  $d G a b c d e f g h $.
     $d H a b c d e f g h $.
     gsumpropd.f $e |- ( ph -> F e. V ) $.
@@ -25696,6 +25900,110 @@ $)
   $}
 
   ${
+    ply1rcl.p $e |- P = ( Poly1 ` R ) $.
+    ply1rcl.b $e |- B = ( Base ` P ) $.
+    $( Reverse closure for ring existence from the univariate polynomial base
+       set. $)
+    ply1rcl $p |- ( F e. B -> R e. _V ) $=
+      ( va cvv wcel wn c0 noel cbs cfv cpl1 fvprc syl5eq fveq2d cnx baseid str0
+      syl6eqr eleq2d mtbiri con4i ) CHIZDAIZUFJZUGDKIDLUHAKDUHABMNZKFUHUIKMNKUH
+      BKMUHBCONKECOPQRMSMNGGTUAUBQUCUDUE $.
+      $( [21-Mar-2015] $)
+
+    ply1basf.k $e |- K = ( Base ` R ) $.
+    $( Univariate polynomial base set elements are functions. $)
+    ply1basf $p |- ( F e. B -> F : ( NN0 ^m 1o ) --> K ) $=
+      ( va wcel c1o cmpl co cbs cfv cn0 cmap com cvv eqid psr1baslem ply1rcl id
+      1onn a1i wceq cps1 ply1bas syl eleqtrd mplelf ) DAJZKCLMZNOZPKQMUMCIKERDS
+      UMTHUNTIUAKRJULUDUEABCDFGUBZULDAUNULUCULCSJAUNUFUOBCCUGOZASFUPTGUHUIUJUK
+      $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d F f n $.
+    coe1fval.a $e |- A = ( coe1 ` F ) $.
+    $( Value of the univariate polynomial coefficient function. $)
+    coe1fval $p |- ( F e. V -> A =
+        ( n e. NN0 |-> ( F ` ( 1o X. { n } ) ) ) ) $=
+      ( vf wcel cvv cn0 c1o cv csn cxp cfv cmpt wceq elex cco1 fveq1 mpteq2dv
+      df-coe1 nn0ex mptex fvmpt syl5eq syl ) CDGCHGZABIJBKLMZCNZOZPCDQUGACRNUJE
+      FCBIUHFKZNZOUJHRUKCPBIULUIUHUKCSTFBUABIUIUBUCUDUEUF $.
+      $( [21-Mar-2015] $)
+
+    ${
+      $d N n $.
+      $( Value of an evaluated coefficient in a polynomial coefficient
+         vector. $)
+      coe1fv $p |- ( ( F e. V /\ N e. NN0 ) -> ( A ` N ) =
+            ( F ` ( 1o X. { N } ) ) ) $=
+      ( vn wcel cn0 cfv c1o cv csn cmpt coe1fval fveq1d wceq sneq xpeq2d fveq2d
+      cxp eqid fvex fvmpt sylan9eq ) BDGZCHGCAICFHJFKZLZTZBIZMZIJCLZTZBIZUECAUJ
+      AFBDENOFCUIUMHUJUFCPZUHULBUNUGUKJUFCQRSUJUAULBUBUCUD $.
+      $( [21-Mar-2015] $)
+
+      $( Value of a multivariate coefficient in terms of the coefficient
+         vector. $)
+      fvcoe1 $p |- ( ( F e. V /\ X e. ( NN0 ^m 1o ) ) ->
+          ( F ` X ) = ( A ` ( X ` (/) ) ) ) $=
+      ( wcel cn0 c1o cmap co wa cfv c0 csn cxp wceq cop wf df1o2 0ex nn0ex 1onn
+      elexi elmap feq2i bitri fsn2 simprbi sylbi xpeq1i fvex xpsn eqtri syl6eqr
+      com adantl fveq2d biimpi 0lt1o ffvelrn sylancl coe1fv sylan2 eqtr4d ) BCF
+      ZDGHIJFZKZDBLHMDLZNZOZBLZVHALZVGDVJBVFDVJPVEVFDMVHQNZVJVFMNZGDRZDVMPZVFHG
+      DRZVOGHDUAHUOUBUCUDZHVNGDSUEUFVOVHGFZVPMGDTUGUHUIVJVNVIOVMHVNVISUJMVHTMDU
+      KULUMUNUPUQVFVEVSVLVKPVFVQMHFVSVFVQVRURUSHGMDUTVAABVHCEVBVCVD $.
+      $( [21-Mar-2015] $)
+    $}
+
+    coe1f.b $e |- B = ( Base ` P ) $.
+    coe1f.p $e |- P = ( Poly1 ` R ) $.
+    ${
+      $d B y $.  $d F x y $.
+      coe1fval2.g $e |- G = ( y e. NN0 |-> ( 1o X. { y } ) ) $.
+      $( Univariate polynomial coeffecient vectors expressed as a function
+         composition. $)
+      coe1fval2 $p |- ( F e. B -> A = ( F o. G ) ) $=
+        ( vx wcel cn0 c1o cv csn cxp cfv cmpt ccom coe1fval cmap co wf fconst6g
+        nn0ex com 1onn elexi elmap sylibr adantl wceq a1i eqid ply1basf feqmptd
+        cbs fveq2 fmptco eqtr4d ) FCMZBANOAPZQRZFSZTFGUABAFCHUBVCALNNOUCUDZVELP
+        ZFSVFGFVDNMZVEVGMZVCVIONVEUEVJOVDNUFNOVEUGOUHUIUJUKULUMGANVETUNVCKUOVCL
+        VGEUSSZFCDEFVKJIVKUPUQURVHVEFUTVAVB $.
+        $( [21-Mar-2015] $)
+    $}
+
+    $d B x $.  $d F x $.
+    coe1f.k $e |- K = ( Base ` R ) $.
+    $( Functionality of univariate polynomial coefficient vectors. $)
+    coe1f $p |- ( F e. B -> A : NN0 --> K ) $=
+      ( vx wcel cn0 wf c1o cv csn cxp cmpt wtru ccom co ply1basf fconst6g nn0ex
+      cmap com 1onn elexi elmap sylibr adantl eqid fmptd trud sylancl coe1fval2
+      fco feq1d mpbird ) EBLZMFANMFEKMOKPZQRZSZUAZNZVAMOUFUBZFENMVGVDNZVFBCDEFI
+      HJUCVHTKMVCVGVDVBMLZVCVGLZTVIOMVCNVJOVBMUDMOVCUEOUGUHUIUJUKULVDUMZUNUOMVG
+      FEVDURUPVAMFAVEKABCDEVDGHIVKUQUSUT $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d B y $.  $d F y $.  $d x y $.
+    coe1sfi.a $e |- A = ( coe1 ` F ) $.
+    coe1sfi.b $e |- B = ( Base ` P ) $.
+    coe1sfi.p $e |- P = ( Poly1 ` R ) $.
+    coe1sfi.z $e |- Z = ( 0g ` R ) $.
+    $( Finite support of univariate polynomial coefficient vectors. $)
+    coe1sfi $p |- ( F e. B -> ( `' A " ( _V \ { Z } ) ) e. Fin ) $=
+      ( vx wcel ccnv cvv cima cn0 c1o co cfv eqid vy csn cdif cmap c0 cmpt ccom
+      cv cfn df1o2 nn0ex 0ex mapsncnv coe1fval2 cnveqd imaeq1d cmps cbs cmpl wa
+      id wceq ply1rcl cps1 ply1bas syl eleqtrd com 1onn a1i mplelbas simprd wf1
+      mpbid wf1o mapsnf1o2 f1ocnv f1of1 mp2b suppfif1 eqeltrd ) EBLZAMZNFUBUCZO
+      EKPQUDRZUEKUHSUFZMZUGZMZWDOUIWBWCWIWDWBAWHUAABCDEWGGHIKUAPQWFUEUJUKULWFTZ
+      UMUNUOUPWBEWGPWEFWBEQDUQRZURSZLZEMWDOUILZWBEQDUSRZURSZLWMWNUTWBEBWPWBVAWB
+      DNLBWPVBBCDEIHVCZCDDVDSZBNIWRTHVEVFVGWBWLWODWKWPQVHENFWOTWKTWLTJQVHLWBVIV
+      JWQWPTVKVNVLPWEWGVMZWBWEPWFVOPWEWGVOWSKPQWFUEUJUKULWJVPWEPWFVQPWEWGVRVSVJ
+      VTWA $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
     vr1cl.x $e |- X = ( var1 ` R ) $.
     vr1cl.p $e |- P = ( Poly1 ` R ) $.
     vr1cl.b $e |- B = ( Base ` P ) $.
@@ -25709,6 +26017,154 @@ $)
   $}
 
   ${
+    $d a b c d e f g h i j $.
+    $( The multivariate power series constructor is a proper binary
+       operator. $)
+    reldmpsr $p |- Rel dom mPwSer $=
+      ( va vb vd vc ve vf vg vh vi vj cvv cv cmap co crab cfv cnx cop cof cxp
+      ccnv cima cfn wcel cn0 cbs cplusg cres cmulr cle cofr wbr cmin cmpt cmpt2
+      cn cgsu ctp csca cvsca csn cts cpt cun csb cmps df-psr reldmmpt2 ) ABKKCD
+      LUAUPUBUCUDDUEALMNOEBLZUFPZCLZMNQUFPELZRQUGPVIUGPSVLVLTUHRQUIPFGVLVLHVKVI
+      IJLHLZUJUKULJVKOILZFLZPVMVNUMSNGLPVIUIPZNUNUQNUNUORURQUSPVIRQUTPIFVJVLVKV
+      NVATVOVPSNUORQVBPVKVIVBPVATVCPRURVDVEVEVFIJFGDAHBECVGVH $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    $d a b c d $.
+    $( The multivariate polynomial constructor is a proper binary operator. $)
+    reldmmpl $p |- Rel dom mPoly $=
+      ( va vb vc vd cvv cv cmps co ccnv c0g cfv csn cdif cima cfn wcel cbs crab
+      cress csb cmpl df-mpl reldmmpt2 ) ABEECAFBFZGHCFZDFIEUDJKLMNOPDUEQKRSHTUA
+      CDABUBUC $.
+      $( [21-Mar-2015] $)
+  $}
+
+  ${
+    mplplusg.y $e |- Y = ( I mPoly R ) $.
+    mplplusg.s $e |- S = ( I mPwSer R ) $.
+    ${
+      mplplusg.p $e |- P = ( +g ` Y ) $.
+      mplplusg.q $e |- Q = ( +g ` S ) $.
+      $( Value of addition in a polynomial ring. $)
+      mplplusg $p |- ( R e. V -> P = Q ) $=
+        ( wcel cplusg cfv cvv co eqid fveq2d c0 cmpl wceq cbs cress simpl simpr
+        mplval2 ressplusg syl6eqr reldmmpl ovprc1 syl5eq reldmpsr eqtr4d adantr
+        wa wn cmps pm2.61ian 3eqtr4g ) CFLZGMNZDMNZABEOLZUTVAVBUAZVCUTUOZVADGUB
+        NZUCPZMNVBVEGVGMVEGCDVFEOFHIVFQVCUTUDVCUTUEUFRVFVBDVGVGQVBQUGUHVCUPZVDU
+        TVHVASMNVBVHGSMVHGECTPSHECTUIUJUKRVHDSMVHDECUQPSIECUQULUJUKRUMUNURJKUS
+        $.
+        $( [21-Mar-2015] $)
+    $}
+
+    ${
+      mplvscafval.n $e |- N = ( vsca ` Y ) $.
+      mplvscafval.o $e |- O = ( vsca ` S ) $.
+      $( Value of scalar multiplication in a polynomial ring. $)
+      mplvscafval $p |- ( R e. V -> N = O ) $=
+        ( wcel cvsca cfv cvv co eqid fveq2d c0 cmpl wceq wa cress simpl mplval2
+        cbs simpr ressvsca syl6eqr wn reldmmpl ovprc1 syl5eq cmps eqtr4d adantr
+        reldmpsr pm2.61ian 3eqtr4g ) AFLZGMNZBMNZDECOLZUTVAVBUAZVCUTUBZVABGUFNZ
+        UCPZMNVBVEGVGMVEGABVFCOFHIVFQVCUTUDVCUTUGUERVFVBBVGVGQVBQUHUIVCUJZVDUTV
+        HVASMNVBVHGSMVHGCATPSHCATUKULUMRVHBSMVHBCAUNPSICAUNUQULUMRUOUPURJKUS $.
+        $( [21-Mar-2015] $)
+    $}
+
+    ${
+      mplmulr.n $e |- N = ( .r ` Y ) $.
+      mplmulr.o $e |- O = ( .r ` S ) $.
+      $( Value of multiplication in a polynomial ring. $)
+      mplmulr $p |- ( R e. V -> N = O ) $=
+        ( wcel cmulr cfv cvv co eqid fveq2d c0 cmpl wceq wa cress simpl mplval2
+        cbs simpr ressmulr syl6eqr wn reldmmpl ovprc1 syl5eq cmps eqtr4d adantr
+        reldmpsr pm2.61ian 3eqtr4g ) AFLZGMNZBMNZDECOLZUTVAVBUAZVCUTUBZVABGUFNZ
+        UCPZMNVBVEGVGMVEGABVFCOFHIVFQVCUTUDVCUTUGUERVFBVGVBVGQVBQUHUIVCUJZVDUTV
+        HVASMNVBVHGSMVHGCATPSHCATUKULUMRVHBSMVHBCAUNPSICAUNUQULUMRUOUPURJKUS $.
+        $( [21-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    psr1plusg.y $e |- Y = ( PwSer1 ` R ) $.
+    psr1plusg.s $e |- S = ( 1o mPwSer R ) $.
+    ${
+      psr1plusg.p $e |- P = ( +g ` Y ) $.
+      psr1plusg.q $e |- Q = ( +g ` S ) $.
+      $( Value of addition in a univariate power series ring. $)
+      psr1plusg $p |- ( R e. V -> P = Q ) $=
+        ( wcel c0 c1o copws co cfv cplusg syl5eq com a1i psr1val fveq2d eqid id
+        1onn cxp wss 0ss opsrplusg eqtr4d ) CEKZALMCNOPZQPZBUKAFQPUMIUKFULQCFEG
+        UAUBRUKBDQPUMJUKCDLMULSEHULUCMSKUKUETUKUDLMMUFZUGUKUNUHTUIRUJ $.
+        $( [21-Mar-2015] $)
+    $}
+
+    ${
+      psr1vscafval.n $e |- N = ( vsca ` Y ) $.
+      psr1vscafval.o $e |- O = ( vsca ` S ) $.
+      $( Value of scalar multiplication in a univariate power series ring. $)
+      psr1vsca $p |- ( R e. V -> N = O ) $=
+        ( wcel cvsca cfv c0 c1o copws co psr1val com a1i fveq2d eqid id cxp wss
+        1onn 0ss opsrvsca eqtr4d 3eqtr4g ) AEKZFLMZBLMZCDUKULNOAPQMZLMUMUKFUNLA
+        FEGRUAUKABNOUNSEHUNUBOSKUKUFTUKUCNOOUDZUEUKUOUGTUHUIIJUJ $.
+        $( [21-Mar-2015] $)
+    $}
+
+    ${
+      psr1mulr.n $e |- N = ( .r ` Y ) $.
+      psr1mulr.o $e |- O = ( .r ` S ) $.
+      $( Value of multiplication in a univariate power series ring. $)
+      psr1mulr $p |- ( R e. V -> N = O ) $=
+        ( wcel cmulr cfv c0 c1o copws co psr1val com a1i fveq2d eqid id cxp wss
+        1onn 0ss opsrmulr eqtr4d 3eqtr4g ) AEKZFLMZBLMZCDUKULNOAPQMZLMUMUKFUNLA
+        FEGRUAUKABNOUNSEHUNUBOSKUKUFTUKUCNOOUDZUEUKUOUGTUHUIIJUJ $.
+        $( [21-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    ply1plusg.y $e |- Y = ( Poly1 ` R ) $.
+    ply1plusg.s $e |- S = ( 1o mPwSer R ) $.
+    ${
+      ply1plusg.p $e |- P = ( +g ` Y ) $.
+      ply1plusg.q $e |- Q = ( +g ` S ) $.
+      $( Value of addition in a univariate polynomial ring. $)
+      ply1plusg $p |- ( R e. V -> P = Q ) $=
+        ( wcel cplusg cfv cps1 c1o cmpl co cbs cress eqid ply1val fveq2d eqtr4d
+        ressplusg psr1plusg syl5reqr 3eqtr4g ) CEKZFLMZDLMZABUHUICNMZOCPQRMZSQZ
+        LMZUJUHFUMLFCUKEGUKTZUAUBUHUNUKLMZUJULUPUKUMUMTUPTZUDUPUJCDEUKUOHUQUJTU
+        EUFUCIJUG $.
+        $( [21-Mar-2015] $)
+    $}
+
+    ${
+      ply1vscafval.n $e |- N = ( vsca ` Y ) $.
+      ply1vscafval.o $e |- O = ( vsca ` S ) $.
+      $( Value of scalar multiplication in a univariate polynomial ring. $)
+      ply1vsca $p |- ( R e. V -> N = O ) $=
+        ( wcel cvsca cfv cps1 c1o cmpl co cbs cress eqid fveq2d ressvsca eqtr4d
+        ply1val psr1vsca syl5reqr 3eqtr4g ) AEKZFLMZBLMZCDUHUIANMZOAPQRMZSQZLMZ
+        UJUHFUMLFAUKEGUKTZUDUAUHUNUKLMZUJULUPUKUMUMTUPTZUBABUPUJEUKUOHUQUJTUEUF
+        UCIJUG $.
+        $( [21-Mar-2015] $)
+    $}
+
+    ${
+      ply1mulr.n $e |- N = ( .r ` Y ) $.
+      ply1mulr.o $e |- O = ( .r ` S ) $.
+      $( Value of multiplication in a univariate polynomial ring. $)
+      ply1mulr $p |- ( R e. V -> N = O ) $=
+        ( wcel cmulr cfv cps1 c1o cmpl co cbs cress eqid fveq2d ressmulr eqtr4d
+        ply1val psr1mulr syl5reqr 3eqtr4g ) AEKZFLMZBLMZCDUHUIANMZOAPQRMZSQZLMZ
+        UJUHFUMLFAUKEGUKTZUDUAUHUNUKLMZUJULUKUMUPUMTUPTZUBABUPUJEUKUOHUQUJTUEUF
+        UCIJUG $.
+        $( [21-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    $d A a k $.  $d B a b c $.  $d B k $.  $d E a k $.  $d K a b c d $.
+    $d K k $.  $d M a b $.  $d N a b $.  $d N k $.  $d R a b c d $.  $d R k $.
+    $d X a c $.  $d X k $.
     ply1coe.p $e |- P = ( Poly1 ` R ) $.
     ply1coe.x $e |- X = ( var1 ` R ) $.
     ply1coe.b $e |- B = ( Base ` P ) $.
@@ -25716,10 +26172,60 @@ $)
     ply1coe.m $e |- M = ( mulGrp ` P ) $.
     ply1coe.e $e |- E = ( .g ` M ) $.
     ply1coe.a $e |- A = ( coe1 ` K ) $.
+    ply1coe.r $e |- R e. _V $.
     $( Decompose a univariate polynomial as a sum of powers. $)
     ply1coe $p |- ( ( R e. CRing /\ K e. B ) -> K =
           ( P gsum ( k e. NN0 |-> ( ( A ` k ) N ( k E X ) ) ) ) ) $=
-      ? $.
+      ( wcel cfv va vb vd vc ccrg wa c1o cmpl co cn0 cmap weq cur c0g cmpt cgsu
+      cv cif com eqid psr1baslem 1onn a1i cvv cbs wceq cps1 ply1bas ax-mp cvsca
+      cmps ply1vsca mplvscafval eqtr4i crg crngrng adantr simpr mplcoe1 adantll
+      c0 fvcoe1 cmgp cmvr cmg simpll mplcoe2 csn df1o2 mpteq1 ccmn mplcrng mpan
+      oveq2i crngmgp syl 0ex mgpbas wss ssv cplusg ovex cmulr ply1mulr mgpplusg
+      mplmulr 3eqtr3i oveqi mulgpropd oveqd cmnd ply1crng rngmgp wf nn0ex elexi
+      elmap biimpi 0lt1o ffvelrn sylancl adantl vr1cl mulgnn0cl syl3anc eqeltrd
+      fveq2 vr1val oveq12d 3eqtrd oveq2d syl2anc sylan ccnv cdif cima fvex cpl1
+      cfn eqidd syl6eqr gsumsn syl5eq mpteq2dva ccom clmod mpllmod lmodcmn csca
+      coe1f simpl mplsca mp2an lmodvscl coe1sfi feqmptd imaeq1d eqimss2 lmod0vs
+      fmptd cnveqd suppssov1 ssfi wf1o mapsnf1o2 gsumf1o mptex eqtr3i ply1plusg
+      eqeltri mplplusg gsumpropd oveq1 fmptco eqcomd 3eqtr4rd ) DUESZGBSZUFZGUG
+      DUHUIZUAUJUGUKUIZUAUQZGTZUBUWAUBUAULDUMTZDUNTZURUOZIUIZUOZUPUIUVTUAUWAWAU
+      WBTZATZUWIJFUIZIUIZUOZUPUIZCEUJEUQZATZUWOJFUIZIUIZUOZUPUIZUVSUBBUWAUVTDUC
+      UAUGIUWDUSGUWEUVTUTZUCVAZUWEUTZUWDUTZUGUSSZUVSVBVCZDVDSZBUVTVETZVFRCDDVGT
+      ZBVDKUXIUTMVHVIZIUGDVKUIZVJTZUVTVJTZUXGIUXLVFRDUXKIUXLVDCKUXKUTZNUXLUTZVL
+      VIUXGUXMUXLVFRDUXKUGUXMUXLVDUVTUXAUXNUXMUTUXOVMVIVNZUVQDVOSZUVRDVPVQZUVQU
+      VRVRVSUVSUWHUWMUVTUPUVSUAUWAUWGUWLUVSUWBUWASZUFZUWCUWJUWFUWKIUVRUXSUWCUWJ
+      VFUVQAGBUWBQWBVTUXTUWFUVTWCTZUDUGUDUQZUWBTZUYBUGDWDUIZTZUYAWETZUIZUOZUPUI
+      ZUWIJUYFUIZUWKUXTUBUWAUVTDUCUDUYAUGUYFUWDUYDUSUWBUWEUXAUXBUXCUXDUXEUXTVBV
+      CUYAUTZUYFUTZUYDUTUVQUVRUXSWFUVSUXSVRWGUXTUYIUYAUDWAWHZUYGUOZUPUIZUYJUYHU
+      YNUYAUPUGUYMVFUYHUYNVFWIUDUGUYMUYGWJVIWNUXTUYAWKSZWAVDSZUYJBSUYOUYJVFUVSU
+      YPUXSUVSUVTUESZUYPUVQUYRUVRUXEUVQUYRVBUVTDUGUSUXAWLWMVQUVTUYAUYKWOWPVQUYQ
+      UXTWQVCUXTUYJUWKBUVSUYJUWKVFUXSUVSUYFFUWIJUVSUAUBBUYAHVDUYFFUYLPBUYAVETVF
+      UVSBUVTUYAUYKUXJWRZVCBHVETVFUVSBCHOMWRZVCBVDWSUVSBWTVCUWBUBUQZUYAXATZUIZV
+      DSUVSUWBVDSVUAVDSUFUFZUWBVUAVUBXBVCVUCUWBVUAHXATZUIVFVUDVUBVUEUWBVUAUVTXC
+      TZCXCTZVUBVUEVUFUXKXCTZVUGUXGVUFVUHVFRDUXKUGVUFVUHVDUVTUXAUXNVUFUTZVUHUTZ
+      XFVIUXGVUGVUHVFRDUXKVUGVUHVDCKUXNVUGUTZVUJXDVIVNUVTVUFUYAUYKVUIXECVUGHOVU
+      KXEXGXHVCXIXJVQZUXTHXKSZUWIUJSZJBSZUWKBSUVSVUMUXSUVSCVOSZVUMUVSCUESZVUPUV
+      QVUQUVRCDKXLVQCVPWPCHOXMWPZVQUXSVUNUVSUXSUGUJUWBXNZWAUGSVUNUXSVUSUJUGUWBX
+      OUGUSVBXPXQXRXSUGUJWAUWBXTYAYBZUVSVUOUXSUVSUXQVUOUXRBCDJLKMYCWPZVQBFHUWIJ
+      UYTPYDYEYFUYGBUYJUDUYAWAVDUYSUYBWAVFZUYCUWIUYEJUYFUYBWAUWBYGVVBUYEWAUYDTZ
+      JUYBWAUYDYGUXGJVVCVFRDVDJLYHVIUUAYIUUBYEUUCVULYJYIUUDYKUVSUVTUWSUPUIUVTUW
+      SUAUWAUWIUOZUUEZUPUIZUWTUWNUVSUJBUWAUWSUVTVVDVDUVTUNTZUXJVVGUTZUVSUVTUUFS
+      ZUVTWKSUVSUXEUXQVVIUXFUXRUVTDUGUSUXAUUGYLZUVTUUHWPUJVDSUVSXOVCUVSEUJUWRBU
+      WSUVSUWOUJSZUFZVVIUWPDVETZSZUWQBSZUWRBSUVSVVIVVKVVJVQUVSUJVVMAXNZVVKVVNUV
+      RVVPUVQABCDGVVMQMKVVMUTZUUJYBZUJVVMUWOAXTYMVVLVUMVVKVUOVVOUVSVUMVVKVURVQU
+      VSVVKVRUVSVUOVVKVVAVQBFHUWOJUYTPYDYEZUWPIDVVMBUVTUWQUXJUXEUXGDUVTUUITVFVB
+      RUXEUXGUFUVTDUGUSVDUXAUXEUXGUUKUXEUXGVRUULUUMZUXPVVQUUNYEUWSUTUUTUVSAYNZV
+      DUWEWHYOZYPZYSSZUWSYNVDVVGWHYOYPZVWCWSVWEYSSUVRVWDUVQABCDGUWEQMKUXCUUOYBU
+      VSEUAUWPUWQUJBVWCIVDUWEVVGUVSVWCEUJUWPUOZYNZVWBYPZVFVWHVWCWSUVSVWAVWGVWBU
+      VSAVWFUVSEUJVVMAVVRUUPUVAUUQVWHVWCUURWPUVSVVIUWBBSUWEUWBIUIVVGVFVVJIDUWEB
+      UVTUWBVVGUXJVVTUXPUXCVVHUUSYMUWPVDSVVLUWOAYQVCVVSUVBVWCVWEUVCYLUWAUJVVDUV
+      DUVSUAUJUGVVDWAWIXOWQVVDUTUVEVCUVFUVSUWSCUVTVDVDVDUWSVDSUVSEUJUWRXOUVGVCC
+      VDSUVSCDYRTVDKDYRYQUVJVCUVTVDSUVSUGDUHXBVCCVETZUXHVFUVSBVWIUXHMUXJUVHVCCX
+      ATZUVTXATZVFUVSVWJUXKXATZVWKUXGVWJVWLVFRVWJVWLDUXKVDCKUXNVWJUTVWLUTZUVIVI
+      UXGVWKVWLVFRVWKVWLDUXKUGVDUVTUXAUXNVWKUTVWMUVKVIVNVCUVLUVSVVFUWNUVSVVEUWM
+      UVTUPUVSUAEUWAUJUWIUWRUWLVVDUWSVUTUVSVVDYTUVSUWSYTUWOUWIVFUWPUWJUWQUWKIUW
+      OUWIAYGUWOUWIJFUVMYIUVNYKUVOUVPYJ $.
+      $( [21-Mar-2015] $)
   $}
 
 $(
@@ -25922,6 +26428,13 @@ $)
         ( D ` Z ) e. NN0 ) $=
       ? $.
   $}
+
+  $( Polynomial division algorithm $)
+    $( Existence if leading is unit $)
+
+    $( Uniqueness if leading is non-zero-divisor: P=qA+r /\ P = q'A+r' => (q'-q)A+(r'-r) = 0 but nonzero * unit leading => large degree $)
+      $( nonzero * unit leading -> large degree $)
+        $( gauss lemma ??? $)
 
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
