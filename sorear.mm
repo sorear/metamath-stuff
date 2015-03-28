@@ -26031,16 +26031,12 @@ $)
 
   $c coe1 $. $( Multivariate -> univariate $)
   $c toPoly1 $. $( Univariate -> multivariate $)
-  $c Monic1 $. $( Monic polynomial $)
 
   $( Convert a multivariate polynomial representation to univariate. $)
   cco1 $a class coe1 $.
 
   $( Convert a univariate polynomial representation to multivariate. $)
   ctp1 $a class toPoly1 $.
-
-  $( Monic polynomials. $)
-  cmn1 $a class Monic1 $.
 
   ${
     $d f n r $.
@@ -27201,7 +27197,7 @@ $)
   cdomn $a class Domn $.
 
   ${
-    $d r x y $.
+    $d b r x y z $.
     $( Define the set of _left-regular elements_ in a ring as those elements
        which are not left zero divisors, meaning that multiplying a nonzero
        element on the left by a left-regular element gives a nonzero
@@ -27309,10 +27305,6 @@ $)
 
     $( Define the degree of a univariate polynomial. $)
     df-deg1 $a |- deg1 = ( r e. _V |-> ( 1o mDeg r ) ) $.
-
-    $( Define the set of monic univariate polynomials. $)
-    df-mon1 $a |- Monic1 = ( r e. _V |-> { f e. ( Poly1 ` r ) |
-      ( ( coe1 ` f ) ` ( r deg1 f ) ) = ( 1r ` r ) } ) $.
 
     $( Multivariate degree is a binary operation. $)
     reldmmdeg $p |- Rel dom mDeg $=
@@ -27814,10 +27806,7 @@ $)
     $( [28-Mar-2015] $)
 
   ${
-    $d ph x y $.
-    $d B x y $.
-    $d R x y $.
-    $d S x y $.
+    $d ph x y $.  $d B x y $.  $d R x y $.  $d S x y $.
     deg1propd.b1 $e |- ( ph -> B = ( Base ` R ) ) $.
     deg1propd.b2 $e |- ( ph -> B = ( Base ` S ) ) $.
     deg1propd.p $e |- ( ( ph /\ ( x e. B /\ y e. B ) ) ->
@@ -28270,6 +28259,70 @@ $)
       ? $.
   $}
 
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    The division algorithm for univariate polynomials
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  $c Monic1p $. $( Monic polynomial $)
+  $c Unic1p $. $( Unitic polynomial $)
+  $c quot1p $. $( Univariate polynomial quotient $)
+  $c rem1p $. $( Univariate polynomial remainder $)
+  $c idlGen1p $. $( Univariate polynomial ideal generator $)
+
+  $( Monic polynomials. $)
+  cmn1 $a class Monic1p $.
+
+  $( Unitic polynomials. $)
+  cuc1p $a class Unic1p $.
+
+  $( Univariate polynomial quotient. $)
+  cq1p $a class quot1p $.
+
+  $( Univariate polynomial remainder. $)
+  cr1p $a class rem1p $.
+
+  $( Univariate polynomial ideal generator. $)
+  cig1p $a class idlGen1p $.
+
+  ${
+    $d r f g b p q i $.
+    $( Define the set of monic univariate polynomials. $)
+    df-mon1 $a |- Monic1p = ( r e. _V |-> { f e. ( Base ` ( Poly1 ` r ) ) |
+      ( f =/= ( 0g ` ( Poly1 ` r ) ) /\
+        ( ( coe1 ` f ) ` ( ( deg1 ` r ) ` f ) ) = ( 1r ` r ) ) } ) $.
+
+    $( Define the set of unitic univariate polynomials, as the polynomials with
+       an invertable leading coefficient.  This is not a standard concept but
+       is useful to us as the set of polynomials which can be used as the
+       divisor in the polynomial division theorem ~ ply1divalg . $)
+    df-uc1p $a |- Unic1p = ( r e. _V |-> { f e. ( Base ` ( Poly1 ` r ) ) |
+      ( f =/= ( 0g ` ( Poly1 ` r ) ) /\
+        ( ( coe1 ` f ) ` ( ( deg1 ` r ) ` f ) ) e. ( Unit ` r ) ) } ) $.
+
+    $( Define the quotient of two univariate polynomials, which is guaranteed
+       to exist and be unique by ~ ply1divalg .  We actually use the reversed
+       version for better harmony with our divisibility ~ df-dvdsr . $)
+    df-q1p $a |- quot1p = ( r e. _V |-> [_ ( Poly1 ` r ) / p ]_
+      [_ ( Base ` p ) / b ]_ ( f e. b , g e. b |->
+        ( iota_ q e. b ( ( deg1 ` r ) ` ( f ( -g ` p ) ( q ( .r ` p ) g ) ) ) <
+          ( ( deg1 ` r ) ` g ) ) ) ) $.
+
+    $( Define the remainder after dividing two univariate polynomials. $)
+    df-r1p $a |- rem1p = ( r e. _V |-> [_ ( Base ` ( Poly1 ` r ) ) / b ]_
+        ( f e. b , g e. b |-> ( f ( -g ` ( Poly1 ` r ) )
+        ( ( f ( quot1p ` r ) g ) ( .r ` ( Poly1 ` r ) ) g ) ) ) ) $.
+
+    $( Define a choice function for generators of ideals over a division ring;
+       this is the unique monic polynomial of minimal degree in the ideal. $)
+    df-ig1p $a |- idlGen1p = ( r e. _V |-> ( i e. ( LIdeal ` ( Poly1 `
+      r ) ) |-> if ( i = { ( 0g ` ( Poly1 ` r ) ) } , ( 0g ` ( Poly1 ` r ) ) ,
+      ( iota_ g e. ( i i^i ( Monic1p ` r ) ) ( ( deg1 ` r ) ` g ) =
+      sup ( ( ( deg1 ` r ) " ( i \ { ( 0g ` ( Poly1 ` r ) ) } ) ) ,
+      RR , `' < ) ) ) ) ) $.
+  $}
+
   ${
     ply1divalg.p $e |- P = ( Poly1 ` R ) $.
     ply1divalg.d $e |- D = ( deg1 ` R ) $.
@@ -28452,6 +28505,292 @@ $)
         ZAEWCVDZXDWCVDSEXDXPWDWETUAUBUCEXDGUDXPWFWGAXCXJLBAYOVEZXAXIXBUHYRWTXHC
         YRWSXGHJYRXGWSYRYQIBVDZYOXGWSUPAYQYOSWJAYSYOUAWJAYOWHBEXDFXFIWRDXEMXPXK
         RYPOWIWKWLWMWNWOWPWQ $.
+        $( [28-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    uc1pval.p $e |- P = ( Poly1 ` R ) $.
+    uc1pval.b $e |- B = ( Base ` P ) $.
+    uc1pval.z $e |- Z = ( 0g ` P ) $.
+    uc1pval.d $e |- D = ( deg1 ` R ) $.
+    ${
+      $d B f r $.  $d D f r $.  $d F f $.  $d R f r $.  $d U f r $.
+      $d Z f r $.
+      uc1pval.c $e |- C = ( Unic1p ` R ) $.
+      uc1pval.u $e |- U = ( Unit ` R ) $.
+      $( Value of the set of unitic polynomials. $)
+      uc1pval $p |- C = { f e. B | ( f =/= Z /\
+              ( ( coe1 ` f ) ` ( D ` f ) ) e. U ) } $=
+        ( cfv cpl1 cbs syl6eqr fveq2d c0 vr va cuc1p cv wne cco1 wcel crab wceq
+        wa cvv c0g cdg1 cui fveq2 neeq2d eleq12d anbi12d rabeqbidv df-uc1p fvex
+        fveq1d eqeltri rabex fvmpt wn fvprc wss ssrab2 syl5eq cnx str0 syl5sseq
+        baseid ss0 syl eqtr4d pm2.61i eqtri ) BEUCOZGUDZHUEZWACOZWAUFOZOZFUGZUJ
+        ZGAUHZMEUKUGZVTWHUIUAEWAUAUDZPOZULOZUEZWAWJUMOZOZWDOZWJUNOZUGZUJZGWKQOZ
+        UHWHUKUCWJEUIZWSWGGWTAXAWTDQOZAXAWKDQXAWKEPOZDWJEPUOIRZSJRXAWMWBWRWFXAW
+        LHWAXAWLDULOHXAWKDULXDSKRUPXAWPWEWQFXAWOWCWDXAWAWNCXAWNEUMOCWJEUMUOLRVB
+        SXAWQEUNOFWJEUNUONRUQURUSGUAUTWGGAAXBUKJDQVAVCVDVEWIVFZVTTWHEUCVGXEWHTV
+        HWHTUIXEAWHTWGGAVIXEAXBTJXEXBTQOTXEDTQXEDXCTIEPVGVJSQVKQOUBUBVNVLRVJVMW
+        HVOVPVQVRVS $.
+        $( [28-Mar-2015] $)
+
+      $( Being a unitic polynomial. $)
+      isuc1p $p |- ( F e. C <-> ( F e. B /\ F =/= Z /\
+            ( ( coe1 ` F ) ` ( D ` F ) ) e. U ) ) $=
+        ( vf wcel wne cfv cco1 wa w3a wceq neeq1 fveq12d eleq1d anbi12d uc1pval
+        cv fveq2 elrab2 3anass bitr4i ) GBPGAPZGHQZGCRZGSRZRZFPZTZTUMUNURUAOUHZ
+        HQZUTCRZUTSRZRZFPZTUSOGABUTGUBZVAUNVEURUTGHUCVFVDUQFVFVBUOVCUPUTGSUIUTG
+        CUIUDUEUFABCDEFOHIJKLMNUGUJUMUNURUKUL $.
+        $( [28-Mar-2015] $)
+    $}
+
+    ${
+      $d B f r $.  $d D f r $.  $d F f $.  $d O f r $.  $d R f r $.
+      $d Z f r $.
+      mon1pval.m $e |- M = ( Monic1p ` R ) $.
+      mon1pval.o $e |- O = ( 1r ` R ) $.
+      $( Value of the set of monic polynomials. $)
+      mon1pval $p |- M = { f e. B | ( f =/= Z /\
+              ( ( coe1 ` f ) ` ( D ` f ) ) = O ) } $=
+        ( cfv wceq cpl1 cbs syl6eqr c0 vr va cmn1 cv wne cco1 crab cvv wcel c0g
+        wa cdg1 cur fveq2d neeq2d fveq1d eqeq12d anbi12d rabeqbidv df-mon1 fvex
+        fveq2 eqeltri rabex fvmpt wn fvprc wss ssrab2 syl5eq cnx baseid 3eqtr4g
+        str0 syl5sseq ss0 syl eqtr4d pm2.61i eqtri ) FDUCOZEUDZHUEZWBBOZWBUFOZO
+        ZGPZUKZEAUGZMDUHUIZWAWIPUADWBUAUDZQOZUJOZUEZWBWKULOZOZWEOZWKUMOZPZUKZEW
+        LROZUGWIUHUCWKDPZWTWHEXAAXBXACROZAXBWLCRXBWLDQOZCWKDQVBISZUNJSXBWNWCWSW
+        GXBWMHWBXBWMCUJOHXBWLCUJXEUNKSUOXBWQWFWRGXBWPWDWEXBWBWOBXBWODULOBWKDULV
+        BLSUPUNXBWRDUMOGWKDUMVBNSUQURUSEUAUTWHEAAXCUHJCRVAVCVDVEWJVFZWATWIDUCVG
+        XFWITVHWITPXFAWITWHEAVIXFXCTROATXFCTRXFCXDTIDQVGVJUNJRVKROUBUBVLVNVMVOW
+        IVPVQVRVSVT $.
+        $( [28-Mar-2015] $)
+
+      $( Being a monic polynomial. $)
+      ismon1p $p |- ( F e. M <-> ( F e. B /\ F =/= Z /\
+            ( ( coe1 ` F ) ` ( D ` F ) ) = O ) ) $=
+        ( vf wcel cfv cco1 wceq wa wne w3a neeq1 fveq2 fveq12d anbi12d mon1pval
+        cv eqeq1d elrab2 3anass bitr4i ) EFPEAPZEHUAZEBQZERQZQZGSZTZTUMUNURUBOU
+        HZHUAZUTBQZUTRQZQZGSZTUSOEAFUTESZVAUNVEURUTEHUCVFVDUQGVFVBUOVCUPUTERUDU
+        TEBUDUEUIUFABCDOFGHIJKLMNUGUJUMUNURUKUL $.
+        $( [28-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    uc1pcl.p $e |- P = ( Poly1 ` R ) $.
+    uc1pcl.b $e |- B = ( Base ` P ) $.
+    ${
+      uc1pcl.c $e |- C = ( Unic1p ` R ) $.
+      $( Unitic polynomials are polynomials. $)
+      uc1pcl $p |- ( F e. C -> F e. B ) $=
+        ( wcel c0g cfv wne cdg1 cco1 cui eqid isuc1p simp1bi ) EBIEAIECJKZLEDMK
+        ZKENKKDOKZIABTCDUAESFGSPTPHUAPQR $.
+        $( [28-Mar-2015] $)
+    $}
+
+    ${
+      mon1pcl.m $e |- M = ( Monic1p ` R ) $.
+      $( Monic polynomials are polynomials. $)
+      mon1pcl $p |- ( F e. M -> F e. B ) $=
+        ( wcel c0g cfv wne cdg1 cco1 cur wceq eqid ismon1p simp1bi ) DEIDAIDBJK
+        ZLDCMKZKDNKKCOKZPAUABCDEUBTFGTQUAQHUBQRS $.
+        $( [28-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    uc1pn0.p $e |- P = ( Poly1 ` R ) $.
+    uc1pn0.z $e |- Z = ( 0g ` P ) $.
+    uc1pn0.c $e |- C = ( Unic1p ` R ) $.
+    $( Unitic polynomials are not zero. $)
+    uc1pn0 $p |- ( F e. C -> F =/= Z ) $=
+      ( wcel cbs cfv wne cdg1 cco1 cui eqid isuc1p simp2bi ) DAIDBJKZIDELDCMKZK
+      DNKKCOKZISATBCUADEFSPGTPHUAPQR $.
+      $( [28-Mar-2015] $)
+  $}
+
+  ${
+    uc1pdeg.d $e |- D = ( deg1 ` R ) $.
+    uc1pdeg.c $e |- C = ( Unic1p ` R ) $.
+    $( Unitic polynomials have nonnegative degrees. $)
+    uc1pdeg $p |- ( ( R e. Ring /\ F e. C ) -> ( D ` F ) e. NN0 ) $=
+      ( crg wcel wa cpl1 cfv cbs c0g wne cn0 simpl eqid uc1pcl adantl uc1pn0
+      deg1nn0cl syl3anc ) CGHZDAHZIUCDCJKZLKZHZDUEMKZNZDBKOHUCUDPUDUGUCUFAUECDU
+      EQZUFQZFRSUDUIUCAUECDUHUJUHQZFTSUFBUECDUHEUJULUKUAUB $.
+      $( [28-Mar-2015] $)
+  $}
+
+  ${
+    uc1pldg.d $e |- D = ( deg1 ` R ) $.
+    uc1pldg.u $e |- U = ( Unit ` R ) $.
+    uc1pldg.c $e |- C = ( Unic1p ` R ) $.
+    $( Unitic polynomials have unit leading coefficients. $)
+    uc1pldg $p |- ( F e. C -> ( ( coe1 ` F ) ` ( D ` F ) ) e. U ) $=
+      ( wcel cpl1 cfv cbs c0g wne cco1 eqid isuc1p simp3bi ) EAIECJKZLKZIESMKZN
+      EBKEOKKDITABSCDEUASPTPUAPFHGQR $.
+      $( [28-Mar-2015] $)
+  $}
+
+  ${
+    $d B b f g p q r $.  $d D b f g p r $.  $d F f g q $.  $d G f g q $.
+    $d M b f g p r $.  $d P b f g p q $.  $d R b f g p q r $.
+    $d T b f g p r $.
+    q1pval.q $e |- Q = ( quot1p ` R ) $.
+    q1pval.p $e |- P = ( Poly1 ` R ) $.
+    q1pval.b $e |- B = ( Base ` P ) $.
+    q1pval.d $e |- D = ( deg1 ` R ) $.
+    q1pval.m $e |- M = ( -g ` P ) $.
+    q1pval.t $e |- T = ( .r ` P ) $.
+    $( Value of the univariate polynomial quotient function. $)
+    q1pval $p |- ( ( F e. B /\ G e. B ) -> ( F Q G ) =
+          ( iota_ q e. B ( D ` ( F M ( q T G ) ) ) < ( D ` G ) ) ) $=
+      ( vf cfv cvv wceq vg vr vp vb wcel wa cv clt crio cmpt2 ply1rcl cq1p cpl1
+      co wbr cbs cmulr csg cdg1 fveq2 syl6eqr csbeq1d fvex eqeltri adantl simpr
+      csb a1i ad2antrr ad2antlr eqidd oveqd oveq123d fveq12d fveq1d riotaeqbidv
+      breq12d mpt2eq123dv csbied eqtrd df-q1p mpt2ex fvmpt syl5eq syl oveqan12d
+      id oveq2 fveq2d riotabidv simpl riotaex ovmpt2d ) GAUEZHAUEZUFZQUAGHAAQUG
+      ZJUGZUAUGZFUNZIUNZBRZWSBRZUHUOZJAUIZGWRHFUNZIUNZBRZHBRZUHUOZJAUIZDSWODQUA
+      AAXEUJZTZWNWOESUEZXMACEHLMUKXNDEULRXLKUBEUCUBUGZUMRZUDUCUGZUPRZQUAUDUGZXS
+      WQWRWSXQUQRZUNZXQURRZUNZXOUSRZRZWSYDRZUHUOZJXSUIZUJZVGZVGZXLSULXOETZYKUCC
+      YJVGXLYLUCXPCYJYLXPEUMRZCXOEUMUTLVAVBYLUCCYJXLSCSUEYLCYMSLEUMVCVDVHYLXQCT
+      ZUFZYJUDAYIVGXLYOUDXRAYIYOXRCUPRZAYNXRYPTYLXQCUPUTVEMVAVBYOUDAYIXLSASUEYO
+      AYPSMCUPVCVDZVHYOXSATZUFZQUAXSXSYHAAXEYOYRVFZYTYSYGXDJXSAYTYSYEXBYFXCUHYS
+      YCXAYDBYSYDEUSRZBYLYDUUATYNYRXOEUSUTVINVAZYSWQWQYAWTYBIYSYBCURRZIYNYBUUCT
+      YLYRXQCURUTVJOVAYSWQVKYSXTFWRWSYSXTCUQRZFYNXTUUDTYLYRXQCUQUTVJPVAVLVMVNYS
+      WSYDBUUBVOVQVPVRVSVTVSVTQUAUBJUCUDWAQUAAAXEYQYQWBWCWDWEVEWQGTZWSHTZUFZXEX
+      KTWPUUGXDXJJAUUGXBXHXCXIUHUUGXAXGBUUEUUFWQGWTXFIUUEWGWSHWRFWHWFWIUUFXCXIT
+      UUEWSHBUTVEVQWJVEWNWOWKWNWOVFXKSUEWPXJJAWLVHWM $.
+      $( [28-Mar-2015] $)
+
+    $d C q $.  $d D q $.  $d M q $.  $d T q $.  $d X q $.
+    q1peqb.c $e |- C = ( Unic1p ` R ) $.
+    $( Characterizing property of the polynomial quotient. $)
+    q1peqb $p |- ( ( R e. Ring /\ F e. B /\ G e. C ) ->
+        ( ( X e. B /\ ( D ` ( F M ( X T G ) ) ) < ( D ` G ) ) <->
+          ( F Q G ) = X ) ) $=
+      ( vq wcel crg w3a cvv co cfv clt wbr wa wceq elex adantr ovex eleq1 mpbii
+      wi a1i wb cio simpr weu wreu cui c0g eqid simp1 simp2 uc1pcl 3ad2ant3 wne
+      uc1pn0 cco1 uc1pldg ply1divalg2 df-reu sylib oveq2d fveq2d breq1d anbi12d
+      oveq1 adantl iota2d crio q1pval syl2anc riotaiota syl eqtrd eqeq1d bitr4d
+      cv ex pm5.21ndd ) FUATZHATZIBTZUBZKUCTZKATZHKIGUDZJUDZCUEZICUEZUFUGZUHZHI
+      EUDZKUIZXEWRUOWQWSWRXDKAUJUKUPXGWRUOWQXGXFUCTWRHIEULXFKUCUMUNUPWQWRXEXGUQ
+      WQWRUHZXESWKZATZHXIIGUDZJUDZCUEZXCUFUGZUHZSURZKUIXGXHXOXESKUCWQWRUSWQXOSU
+      TZWRWQXNSAVAZXQWQACDFGFVBUEZHIJDVCUEZSMONPXTVDZQWNWOWPVEWNWOWPVFZWPWNIATZ
+      WOABDFIMNRVGVHZWPWNIXTVIWOBDFIXTMYARVJVHWPWNXCIVKUEUEXSTWOBCFXSIOXSVDZRVL
+      VHYEVMZXNSAVNVOUKXIKUIZXOXEUQXHYGXJWSXNXDXIKAUMYGXMXBXCUFYGXLXACYGXKWTHJX
+      IKIGVTVPVQVRVSWAWBXHXFXPKWQXFXPUIWRWQXFXNSAWCZXPWQWOYCXFYHUIYBYDACDEFGHIJ
+      SLMNOPQWDWEWQXRYHXPUIYFXNSAWFWGWHUKWIWJWLWM $.
+      $( [28-Mar-2015] $)
+  $}
+
+  ${
+    q1pcl.q $e |- Q = ( quot1p ` R ) $.
+    q1pcl.p $e |- P = ( Poly1 ` R ) $.
+    q1pcl.b $e |- B = ( Base ` P ) $.
+    q1pcl.c $e |- C = ( Unic1p ` R ) $.
+    $( Closure of the quotient by a unitic polynomial. $)
+    q1pcl $p |- ( ( R e. Ring /\ F e. B /\ G e. C ) -> ( F Q G ) e. B ) $=
+      ( crg wcel w3a co cmulr cfv csg cdg1 eqid clt wbr wa q1peqb mpbiri simpld
+      wceq ) ELMFAMGBMNZFGDOZAMZFUIGCPQZOCRQZOESQZQGUMQUAUBZUHUJUNUCUIUIUGUITAB
+      UMCDEUKFGULUIHIJUMTULTUKTKUDUEUF $.
+      $( [28-Mar-2015] $)
+  $}
+
+  ${
+    r1pval.e $e |- E = ( rem1p ` R ) $.
+    r1pval.p $e |- P = ( Poly1 ` R ) $.
+    r1pval.b $e |- B = ( Base ` P ) $.
+
+    ${
+      $d B b f g r $.  $d F f g $.  $d G f g $.  $d M b f g r $.
+      $d Q b f g r $.  $d R b f g r $.  $d T b f g r $.
+      r1pval.q $e |- Q = ( quot1p ` R ) $.
+      r1pval.t $e |- T = ( .r ` P ) $.
+      r1pval.m $e |- M = ( -g ` P ) $.
+      $( Value of the polynomial remainder function. $)
+      r1pval $p |- ( ( F e. B /\ G e. B ) -> ( F E G ) =
+          ( F M ( ( F Q G ) T G ) ) ) $=
+        ( vf vg co cvv cfv vr vb wcel wa cv cmpt2 wceq ply1rcl adantr cr1p cpl1
+        cbs cq1p cmulr csg csb fveq2 syl6eqr fveq2d csbeq1d eqeltri simpr eqidd
+        fvex oveqd oveq123d mpt2eq123dv csbied eqtrd df-r1p mpt2ex fvmpt syl5eq
+        a1i syl simpl oveq12 oveq12d adantl ovex ovmpt2d ) GAUCZHAUCZUDZPQGHAAP
+        UEZWEQUEZCRZWFERZIRZGGHCRZHERZIRZFSWDDSUCZFPQAAWIUFZUGWBWMWCABDGKLUHUIW
+        MFDUJTWNJUADUBUAUEZUKTZULTZPQUBUEZWRWEWEWFWOUMTZRZWFWPUNTZRZWPUOTZRZUFZ
+        UPZWNSUJWODUGZXFUBAXEUPWNXGUBWQAXEXGWQBULTZAXGWPBULXGWPDUKTBWODUKUQKURZ
+        USLURUTXGUBAXEWNSASUCXGAXHSLBULVDVAZVNXGWRAUGZUDPQWRWRXDAAWIXGXKVBZXLXG
+        XDWIUGXKXGWEWEXBWHXCIXGXCBUOTIXGWPBUOXIUSOURXGWEVCXGWTWGWFWFXAEXGXABUNT
+        EXGWPBUNXIUSNURXGWSCWEWFXGWSDUMTCWODUMUQMURVEXGWFVCVFVFUIVGVHVIPQUAUBVJ
+        PQAAWIXJXJVKVLVMVOWEGUGZWFHUGZUDZWIWLUGWDXOWEGWHWKIXMXNVPXOWGWJWFHEWEGW
+        FHCVQXMXNVBVRVRVSWBWCVPWBWCVBWLSUCWDGWKIVTVNWA $.
+        $( [28-Mar-2015] $)
+    $}
+
+    r1pcl.c $e |- C = ( Unic1p ` R ) $.
+    $( Closure of remainder following division by a unitic polynomial. $)
+    r1pcl $p |- ( ( R e. Ring /\ F e. B /\ G e. C ) -> ( F E G ) e. B ) $=
+      ( crg wcel w3a co cq1p cfv cmulr eqid syl3anc wceq uc1pcl 3ad2ant3 r1pval
+      csg simp2 syl2anc cgrp ply1rng 3ad2ant1 rnggrp syl q1pcl grpsubcl eqeltrd
+      rngcl ) DLMZFAMZGBMZNZFGEOZFFGDPQZOZGCRQZOZCUEQZOZAUTURGAMZVAVGUAUQURUSUF
+      ZUSUQVHURABCDGIJKUBUCZACVBDVDEFGVFHIJVBSZVDSZVFSZUDUGUTCUHMZURVEAMZVGAMUT
+      CLMZVNUQURVPUSCDIUIUJZCUKULVIUTVPVCAMVHVOVQABCVBDFGVKIJKUMVJACVDVCGJVLUPT
+      ACVFFVEJVMUNTUO $.
+      $( [28-Mar-2015] $)
+
+    r1pdeglt.d $e |- D = ( deg1 ` R ) $.
+    $( The remainder has a degree smaller than the divisor. $)
+    r1pdeglt $p |- ( ( R e. Ring /\ F e. B /\ G e. C ) ->
+        ( D ` ( F E G ) ) < ( D ` G ) ) $=
+      ( crg wcel co cfv clt wceq eqid w3a cq1p cmulr csg uc1pcl 3ad2ant3 r1pval
+      simp2 syl2anc fveq2d wbr wa q1peqb mpbiri simprd eqbrtrd ) ENOZGAOZHBOZUA
+      ZGHFPZCQGGHEUBQZPZHDUCQZPDUDQZPZCQZHCQZRUTVAVFCUTURHAOZVAVFSUQURUSUHUSUQV
+      IURABDEHJKLUEUFADVBEVDFGHVEIJKVBTZVDTZVETZUGUIUJUTVCAOZVGVHRUKZUTVMVNULVC
+      VCSVCTABCDVBEVDGHVEVCVJJKMVLVKLUMUNUOUP $.
+      $( [28-Mar-2015] $)
+  $}
+
+  ${
+    dvdsq1p.p $e |- P = ( Poly1 ` R ) $.
+    dvdsq1p.d $e |- D = ( ||r ` P ) $.
+    dvdsq1p.b $e |- B = ( Base ` P ) $.
+    dvdsq1p.c $e |- C = ( Unic1p ` R ) $.
+    ${
+      $d B q $.  $d C q $.  $d F q $.  $d G q $.  $d P q $.  $d Q q $.
+      $d R q $.  $d T q $.
+      dvdsq1p.t $e |- T = ( .r ` P ) $.
+      dvdsq1p.q $e |- Q = ( quot1p ` R ) $.
+      $( Divisibility in a polynomial ring is witnessed by the quotient. $)
+      dvdsq1p $p |- ( ( R e. Ring /\ F e. B /\ G e. C ) -> ( G D F <->
+            F = ( ( F Q G ) T G ) ) ) $=
+        ( vq wcel wceq cfv syl crg w3a wbr co cv wrex wb uc1pcl 3ad2ant3 dvdsr2
+        simp2 syl2anc wa eqcom simprr csg cdg1 clt simprl cmnf c0g cgrp ply1rng
+        simpl1 rnggrp simpl2 simpr adantr syl3anc eqid grpsubeq0 biimprd fveq2d
+        rngcl impr deg1z eqtrd cn0 uc1pdeg 3adant2 nn0re mnflt eqbrtrd mpbi2and
+        cr q1peqb oveq1d eqtr4d expr syl5bi rexlimdva q1pcl dvdsrmul syl5ibrcom
+        sylbid breq2 impbid ) FUAQZHAQZIBQZUBZIHCUCZHHIEUDZIGUDZRZXAXBPUEZIGUDZ
+        HRZPAUFZXEXAIAQZWSXBXIUGWTWRXJWSABDFIJLMUHUIZWRWSWTUKPACDGAIHLKNUJULXAX
+        HXEPAXHHXGRZXAXFAQZUMZXEXGHUNXAXMXLXEXAXMXLUMZUMZHXGXDXAXMXLUOXPXCXFIGX
+        PXMHXGDUPSZUDZFUQSZSZIXSSZURUCZXCXFRZXAXMXLUSXPXTUTYAURXPXTDVASZXSSZUTX
+        PXRYDXSXAXMXLXRYDRZXNYFXLXNDVBQZWSXGAQZYFXLUGXNDUAQZYGXNWRYIWRWSWTXMVDD
+        FJVCTZDVETWRWSWTXMVFXNYIXMXJYHYJXAXMVGXAXJXMXKVHADGXFILNVNVIADXQYDHXGLY
+        DVJZXQVJZVKVIVLVOVMXPWRYEUTRWRWSWTXOVDXSDFYDXSVJZJYKVPTVQXPYAWEQZUTYAUR
+        UCXAYNXOXAYAVRQZYNWRWTYOWSBXSFIYMMVSVTYAWATVHYAWBTWCXAXMYBUMYCUGXOABXSD
+        EFGHIXQXFOJLYMYLNMWFVHWDWGWHWIWJWKWOXAXBXEIXDCUCZXAXJXCAQYPXKABDEFHIOJL
+        MWLACDGIXCLKNWMULHXDICWPWNWQ $.
+        $( [28-Mar-2015] $)
+    $}
+
+    ${
+      dvdsr1p.z $e |- Z = ( 0g ` P ) $.
+      dvdsr1p.e $e |- E = ( rem1p ` R ) $.
+      $( Divisibility in a polynomial ring in terms of the remainder. $)
+      dvdsr1p $p |- ( ( R e. Ring /\ F e. B /\ G e. C ) -> ( G D F <->
+            ( F E G ) = Z ) ) $=
+        ( wcel cfv co wceq eqid crg w3a cq1p cmulr csg cgrp wb ply1rng 3ad2ant1
+        wbr rnggrp syl simp2 q1pcl uc1pcl 3ad2ant3 rngcl syl3anc r1pval syl2anc
+        grpsubeq0 eqeq1d dvdsq1p 3bitr4rd ) EUAPZGAPZHBPZUBZGGHEUCQZRZHDUDQZRZD
+        UEQZRZISZGVLSZGHFRZISHGCUJVHDUFPZVFVLAPZVOVPUGVHDUAPZVRVEVFVTVGDEJUHUIZ
+        DUKULVEVFVGUMZVHVTVJAPHAPZVSWAABDVIEGHVITZJLMUNVGVEWCVFABDEHJLMUOUPZADV
+        KVJHLVKTZUQURADVMIGVLLNVMTZVAURVHVQVNIVHVFWCVQVNSWBWEADVIEVKFGHVMOJLWDW
+        FWGUSUTVBABCDVIEVKGHJKLMWFWDVCVD $.
         $( [28-Mar-2015] $)
     $}
   $}
