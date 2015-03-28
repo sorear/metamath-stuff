@@ -4218,6 +4218,27 @@ $)
       $( [24-Mar-2015] $)
   $}
 
+  ${
+    $d ph x y z $.  $d A x y z $.  $d B y z $.  $d I z $.  $d M x y z $.
+    $d S x y $.
+    caonncan.i $e |- ( ph -> I e. V ) $.
+    caonncan.a $e |- ( ph -> A : I --> S ) $.
+    caonncan.b $e |- ( ph -> B : I --> S ) $.
+    caonncan.z $e |- ( ( ph /\ ( x e. S /\ y e. S ) ) ->
+        ( x M ( x M y ) ) = y ) $.
+    $( Transfer ~ nncan -shaped laws to vectors of numbers. $)
+    caonncan $p |- ( ph -> ( A oF M ( A oF M B ) ) = B ) $=
+      ( vz cv co wcel wceq cvv a1i cfv cmpt wa wral wf ffvelrn sylan ralrimivva
+      cof adantr id oveq1 oveq12d eqeq1d oveq2 oveq2d eqeq12d rcla42va syl21anc
+      mpteq2dva fvex ovex feqmptd offval2 3eqtr4d ) ANGNOZDUAZVGVFEUAZHPZHPZUBN
+      GVHUBDDEHUIZPZVKPEANGVJVHAVFGQZUCZVGFQZVHFQZBOZVQCOZHPZHPZVRRZCFUDBFUDZVJ
+      VHRZAGFDUEVMVOKGFVFDUFUGAGFEUEVMVPLGFVFEUFUGAWBVMAWABCFFMUHUJWAWCVGVGVRHP
+      ZHPZVRRBCVGVHFFVQVGRZVTWEVRWFVQVGVSWDHWFUKVQVGVRHULUMUNVRVHRZWEVJVRVHWGWD
+      VIVGHVRVHVGHUOUPWGUKUQURUSUTANGVGVIHDVLISSJVGSQVNVFDVATZVISQVNVGVHHVBTANG
+      FDKVCZANGVGVHHDEISSJWHVHSQVNVFEVATWIANGFELVCZVDVDWJVE $.
+      $( [27-Mar-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Extensions beyond function theory
@@ -23564,6 +23585,41 @@ $)
       $( [1-Feb-2015] $)
   $}
 
+  ${
+    $d B g x y $.  $d G g x y $.  $d I g $.  $d P g $.
+    grpsubfval2.b $e |- B = ( Base ` G ) $.
+    grpsubfval2.p $e |- P = ( +g ` G ) $.
+    grpsubfval2.i $e |- I = ( invg ` G ) $.
+    grpsubfval2.m $e |- M = ( -g ` G ) $.
+    $( Group subtraction (division) operation. $)
+    grpsubfval2 $p |- M = ( x e. B , y e. B |-> ( x P ( I ` y ) ) ) $=
+      ( vg cvv cv cfv cmpt2 wceq csg cbs c0 wcel co cminusg fveq2 syl6eqr eqidd
+      cplusg fveq1d oveq123d mpt2eq123dv df-sbg fvex eqeltri mpt2ex fvmpt fvprc
+      syl5eq wn mpt2eq12 anidms syl mpt20 syl6eq eqtr4d pm2.61i ) EMUAZGABCCANZ
+      BNZFOZDUBZPZQVFGEROZVKKLEABLNZSOZVNVGVHVMUCOZOZVMUGOZUBZPVKMRVMEQZABVNVNV
+      RCCVJVSVNESOZCVMESUDHUEZWAVSVGVGVPVIVQDVSVQEUGODVMEUGUDIUEVSVGUFVSVHVOFVS
+      VOEUCOFVMEUCUDJUEUHUIUJABLUKABCCVJCVTMHESULUMZWBUNUOUQVFURZGTVKWCGVLTKERU
+      PUQWCVKABTTVJPZTWCCTQZVKWDQZWCCVTTHESUPUQWEWFABCCTTVJUSUTVATVJABVBVCVDVE
+      $.
+      $( [27-Mar-2015] $)
+  $}
+
+  ${
+    $d ph a b $.  $d ph x y $.  $d G a b $.  $d G x y $.  $d H a b $.
+    $d H x y $.
+    grpsubpropd.b $e |- ( ph -> ( Base ` G ) = ( Base ` H ) ) $.
+    grpsubpropd.p $e |- ( ph -> ( +g ` G ) = ( +g ` H ) ) $.
+    $( Weak property deduction for the group subtraction operation. $)
+    grpsubpropd $p |- ( ph -> ( -g ` G ) = ( -g ` H ) ) $=
+      ( va vb vx vy cbs cfv cv cminusg cplusg co cmpt2 csg eqidd wcel eqid wceq
+      oveqd adantr grpinvpropd2 fveq1d oveq123d mpt2eq123dv grpsubfval2 3eqtr4g
+      wa ) AFGBJKZUKFLZGLZBMKZKZBNKZOZPFGCJKZURULUMCMKZKZCNKZOZPBQKZCQKZAFGUKUK
+      UQURURVBDDAULULUOUTUPVAEAULRAUMUNUSAHIUKBCAUKRDAHLZILZUPOVEVFVAOUAVEUKSVF
+      UKSUJAUPVAVEVFEUBUCUDUEUFUGFGUKUPBUNVCUKTUPTUNTVCTUHFGURVACUSVDURTVATUSTV
+      DTUHUI $.
+      $( [27-Mar-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Direct sum of left modules
@@ -26355,6 +26411,225 @@ $)
   $}
 
   ${
+    $d I a $.
+    psrbaspropd.e $e |- ( ph -> ( Base ` R ) = ( Base ` S ) ) $.
+    psrbaspropd.r $e |- ( ph -> R e. V ) $.
+    psrbaspropd.s $e |- ( ph -> S e. W ) $.
+    $( Property deduction for power series base set. $)
+    psrbaspropd $p |- ( ph -> ( Base ` ( I mPwSer R ) ) =
+          ( Base ` ( I mPwSer S ) ) ) $=
+      ( va cvv wcel cmps co cbs cfv wceq cmap adantr eqid wa cv ccnv cn cfn cn0
+      cima crab oveq1d simpr psrbas eqid1 3eqtr4d reldmpsr ovprc1 eqtr4d fveq2d
+      wn c0 adantl pm2.61dan ) ADKLZDBMNZOPZDCMNZOPZQZAVBUAZBOPZJUBUCUDUGUELJUF
+      DRNUHZRNCOPZVJRNVDVFVHVIVKVJRAVIVKQVBGSUIVHVDVJBVCJDVIKEVCTVITVJTZVDTAVBU
+      JZABELVBHSUKVHVFVJCVEJDVKKFVETVKTVLVFULVMACFLVBISUKUMVBURZVGAVNVCVEOVNVCU
+      SVEDBMUNUODCMUNUOUPUQUTVA $.
+      $( [27-Mar-2015] $)
+  $}
+
+  ${
+    $d ph a b d y $.  $d ph x $.  $d B x y $.  $d I a b d $.  $d I c $.
+    $d R a b d y $.  $d R x $.  $d S a b d y $.  $d S x $.  $d a x $.
+    $d c d $.  $d d x $.
+    psrplusgpropd.r $e |- ( ph -> R e. V ) $.
+    psrplusgpropd.s $e |- ( ph -> S e. W ) $.
+    psrplusgpropd.b1 $e |- ( ph -> B = ( Base ` R ) ) $.
+    psrplusgpropd.b2 $e |- ( ph -> B = ( Base ` S ) ) $.
+    psrplusgpropd.p $e |- ( ( ph /\ ( x e. B /\ y e. B ) ) ->
+        ( x ( +g ` R ) y ) = ( x ( +g ` S ) y ) ) $.
+    $( Property deduction for power series addition. $)
+    psrplusgpropd $p |- ( ph -> ( +g ` ( I mPwSer R ) ) =
+          ( +g ` ( I mPwSer S ) ) ) $=
+      ( va vb cvv wcel cfv eqid vd vc cmps co cplusg wceq wa cof cbs cres cmpt2
+      cxp cv w3a ccnv cn cima cfn cn0 cmap crab cmpt simpl1l wf simp1r 3ad2ant1
+      adantr simp2 psrelbas ffvelrn sylan syl eleqtrrd simp3 syl12anc mpteq2dva
+      proplem wfn ffn ovex rabex a1i inidm eqidd 3eqtr4d mpt2eq3dva psrbaspropd
+      offval eqtr3d mpt2eq12 anidms eqtrd 3eqtr4g simpr psrplusg wn c0 reldmpsr
+      ofmres ovprc1 eqtr4d fveq2d adantl pm2.61dan ) AGQRZGEUCUDZUESZGFUCUDZUES
+      ZUFZAXEUGZEUESZUHZXFUISZXNULUJZFUESZUHZXHUISZXRULUJZXGXIXKOPXNXNOUMZPUMZX
+      MUDZUKZOPXRXRXTYAXQUDZUKZXOXSXKYCOPXNXNYDUKZYEXKOPXNXNYBYDXKXTXNRZYAXNRZU
+      NZUAUBUMUOUPUQURRZUBUSGUTUDZVAZUAUMZXTSZYMYASZXLUDZVBUAYLYNYOXPUDZVBYBYDY
+      IUAYLYPYQYIYMYLRZUGZAYNDRYODRYPYQUFAXEYGYHYRVCZYSYNEUISZDYIYLUUAXTVDZYRYN
+      UUARYIXNYLEXFUBGUUAQHXTXFTZUUATZYLTZXNTZAXEYGYHVEZXKYGEHRZYHAUUHXEJVGZVFZ
+      XKYGYHVHVIZYLUUAYMXTVJVKYSADUUAUFYTLVLZVMYSYOUUADYIYLUUAYAVDZYRYOUUARYIXN
+      YLEXFUBGUUAQHYAUUCUUDUUEUUFUUGUUJXKYGYHVNVIZYLUUAYMYAVJVKUULVMABCDDXLXPYN
+      YONVQVOVPYIUAYLYLYNYOXLYLXTYAQQYIUUBXTYLVRUUKYLUUAXTVSVLZYIUUMYAYLVRUUNYL
+      UUAYAVSVLZYLQRYIYJUBYKUSGUTVTWAWBZUUQYLWCZYSYNWDZYSYOWDZWHYIUAYLYLYNYOXPY
+      LXTYAQQUUOUUPUUQUUQUURUUSUUTWHWEWFXKXNXRUFZYFYEUFZAUVAXEAEFGHIADUUAFUISLM
+      WIJKWGVGUVAUVBOPXNXNXRXRYDWJWKVLWLXNXNXLOPWSXRXRXPOPWSWMXKXLXNXGEXFGQHUUC
+      UUFXLTXGTAXEWNZUUIWOXKXPXRXIFXHGQIXHTXRTXPTXITUVCAFIRXEKVGWOWEXEWPZXJAUVD
+      XFXHUEUVDXFWQXHGEUCWRWTGFUCWRWTXAXBXCXD $.
+      $( [27-Mar-2015] $)
+
+    $( Property deduction for polynomial base set. $)
+    mplbaspropd $p |- ( ph -> ( Base ` ( I mPoly R ) ) =
+          ( Base ` ( I mPoly S ) ) ) $=
+      ( va cvv wcel cbs cfv eqid cmpl co wceq wa cv ccnv c0g csn cdif cima cmps
+      cfn crab eqtr3d psrbaspropd adantr wb elex syl grpidpropd difeq2d imaeq2d
+      sneqd eleq1d rabeqbidv simpr mplbas 3eqtr3d reldmmpl ovprc1 eqtr4d fveq2d
+      wn c0 adantl pm2.61dan ) AGPQZGEUAUBZRSZGFUAUBZRSZUCZAVQUDZOUEUFZPEUGSZUH
+      ZUIZUJZULQZOGEUKUBZRSZUMZWDPFUGSZUHZUIZUJZULQZOGFUKUBZRSZUMZVSWAWCWIWQOWK
+      WSAWKWSUCVQAEFGHIADERSFRSLMUNJKUOUPAWIWQUQVQAWHWPULAWGWOWDAWFWNPAWEWMABCD
+      EFLMNAEHQZEPQJEHURUSAFIQZFPQKFIURUSUTVCVAVBVDUPVEWCWKVREWJWLOGPHWEVRTWJTW
+      KTWETAVQVFZAXAVQJUPWLTVGWCWSVTFWRWTOGPIWMVTTWRTWSTWMTXCAXBVQKUPWTTVGVHVQV
+      MZWBAXDVRVTRXDVRVNVTGEUAVIVJGFUAVIVJVKVLVOVP $.
+      $( [27-Mar-2015] $)
+  $}
+
+  ${
+    strov2rcl.s $e |- S = ( I F R ) $.
+    strov2rcl.b $e |- B = ( Base ` S ) $.
+    strov2rcl.f $e |- Rel dom F $.
+    $( Reverse closure for polynomial-resembling things. $)
+    strov2rcl $p |- ( X e. B -> I e. _V ) $=
+      ( va cvv wcel wn c0 noel cbs cfv co ovprc1 syl5eq fveq2d cnx str0 syl6eqr
+      baseid eleq2d mtbiri con4i ) EKLZFALZUIMZUJFNLFOUKANFUKACPQZNHUKULNPQNUKC
+      NPUKCEBDRNGEBDISTUAPUBPQJJUEUCUDTUFUGUH $.
+      $( [27-Mar-2015] $)
+  $}
+
+  ${
+    $d B b c e f $.  $d F b c e f $.  $d G b c e f $.  $d I a b c d e f $.
+    $d R b c e f $.  $d S b c $.  $d Z b c $.
+    psropprmul.y $e |- Y = ( I mPwSer R ) $.
+    psropprmul.s $e |- S = ( oppR ` R ) $.
+    psropprmul.z $e |- Z = ( I mPwSer S ) $.
+    psropprmul.t $e |- T = ( .r ` Y ) $.
+    psropprmul.u $e |- U = ( .r ` Z ) $.
+    psropprmul.b $e |- B = ( Base ` Y ) $.
+    $( Reversing multiplication in a ring reverses multiplication in the power
+       series ring. $)
+    psropprmul $p |- ( ( R e. Ring /\ F e. B /\ G e. B ) ->
+        ( F U G ) = ( G T F ) ) $=
+      ( wcel co cfv cvv vb va vc vd ve vf crg w3a cv ccnv cn cima cfn cmap crab
+      cn0 cle cofr wbr cmin cof cmulr cmpt cgsu wa wceq ovex rabex mptex a1i id
+      coppr fvex eqeltri cbs eqid opprbas cplusg gsumpropd 3ad2ant1 adantr ccom
+      oppradd cmps reldmpsr strov2rcl 3ad2ant3 ad2antrr wf psrbagf sylan ssrab2
+      sseli syl2an cc nn0cn nncan adantl caonncan fveq2d simp1 psrelbas ffvelrn
+      oveq2d simp2 simp3 simplr simpr psrbagconcl syl3anc sseldi syl2anc eqtr2d
+      opprmul mpteq2dva eqidd fveq2 oveq2 oveq12d fmptco eqtr4d c0g ccmn rngcmn
+      simpll1 rngcl fmptd csn wss psrbaglefi cdm cnvimass dmmptss sstri sylancl
+      cdif ssfi fveq2i eleqtrd psrmulfval wf1o psrbagconf1o gsumf1o psrbaspropd
+      eqtr3d eqtri 3eqtr4g 3eqtr4d ) BUGQZFAQZGAQZUHZUAUBUIUJUKULUMQZUBUPHUNRZU
+      OZCUCUDUIUAUIZUQURUSZUDUUOUOZUCUIZFSZUUPUUSUTVAZRZGSZCVBSZRZVCZVDRZVCUAUU
+      OBUEUURUEUIZGSZUUPUVHUVARZFSZBVBSZRZVCZVDRZVCFGERGFDRUULUAUUOUVGUVOUULUUP
+      UUOQZVEZBUVFVDRZUVGUVOUULUVRUVGVFZUVPUUIUUJUVSUUKUUIUVFBCTUGTUVFTQUUIUCUU
+      RUVEUUQUDUUOUUMUBUUNUPHUNVGVHVHZVIVJUUIVKCTQZUUICBVLSTLBVLVMVNZVJBVOSZCVO
+      SVFZUUIUWCBCLUWCVPZVQZVJBVRSZCVRSVFUUIUWGBCLUWGVPWCVJVSVTWAUVQUVRBUVNUCUU
+      RUVBVCZWBZVDRUVOUVQUVFUWIBVDUVQUVFUCUURUVCUUPUVBUVARZFSZUVLRZVCUWIUVQUCUU
+      RUVEUWLUVQUUSUURQZVEZUWLUVCUUTUVLRZUVEUWNUWKUUTUVCUVLUWNUWJUUSFUWNUEUFUUP
+      UUSUPHUTTUULHTQZUVPUWMUUKUUIUWPUUJABIWDHGKPWEWFWGZWHZUVQHUPUUPWIZUWMUULUW
+      PUVPUWSUWQUUOUBUUPHTUUOVPZWJWKWAUVQUWPUUSUUOQZHUPUUSWIUWMUULUWPUVPUWQWAUU
+      RUUOUUSUUQUDUUOWLZWMZUUOUBUUSHTUWTWJWNUVHUPQZUFUIZUPQZVEUVHUVHUXEUTRUTRUX
+      EVFZUWNUXDUVHWOQUXEWOQUXGUXFUVHWPUXEWPUVHUXEWQWNWRWSWTXDUWNUUTUWCQZUVCUWC
+      QZUWOUVEVFUVQUUOUWCFWIZUXAUXHUWMUULUXJUVPUULAUUOBIUBHUWCTUGFKUWEUWTPUWQUU
+      IUUJUUKXAZUUIUUJUUKXEZXBZWAUXCUUOUWCUUSFXCWNUWNUUOUWCGWIZUVBUUOQUXIUULUXN
+      UVPUWMUULAUUOBIUBHUWCTUGGKUWEUWTPUWQUXKUUIUUJUUKXFZXBZWHUWNUURUUOUVBUXBUW
+      NUWPUVPUWMUVBUURQUWRUULUVPUWMXGUVQUWMXHUDUUOUURUBUUPHTUUSUWTUURVPZXIXJZXK
+      UUOUWCUVBGXCXLUWCBUVLUVDCUUTUVCUWEUVLVPZLUVDVPZXNXLXMXOUVQUCUEUURUURUVBUV
+      MUWLUWHUVNUXRUVQUWHXPUVQUVNXPUVHUVBVFZUVIUVCUVKUWKUVLUVHUVBGXQUYAUVJUWJFU
+      VHUVBUUPUVAXRWTXSXTYAXDUVQUURUWCUURUVNBUWHTBYBSZUWEUYBVPUULBYCQZUVPUUIUUJ
+      UYCUUKBYDVTWAUURTQUVQUVTVJUVQUEUURUVMUWCUVNUVQUVHUURQZVEZUUIUVIUWCQZUVKUW
+      CQZUVMUWCQUUIUUJUUKUVPUYDYEUVQUXNUVHUUOQUYFUYDUULUXNUVPUXPWAUURUUOUVHUXBW
+      MUUOUWCUVHGXCWNUYEUXJUVJUUOQUYGUULUXJUVPUYDUXMWHUYEUURUUOUVJUXBUYEUWPUVPU
+      YDUVJUURQUULUWPUVPUYDUWQWHUULUVPUYDXGUVQUYDXHUDUUOUURUBUUPHTUVHUWTUXQXIXJ
+      XKUUOUWCUVJFXCXLUWCBUVLUVIUVKUWEUXSYFXJUVNVPZYGUVQUURUMQZUVNUJTUYBYHYPZUL
+      ZUURYIUYKUMQUULUWPUVPUYIUWQUDUUOUBUUPHTUWTYJWKUYKUVNYKUURUVNUYJYLUEUURUVM
+      UVNUYHYMYNUURUYKYQYOUULUWPUVPUURUURUWHUUAUWQUCUDUUOUURUBUUPHTUWTUXQUUBWKU
+      UCYAUUEXOUULUCUDJVOSZUUOCJEUBUAFGHUVDTTMUYLVPUXTOUWTUWQUWAUULUWBVJZUULFAU
+      YLUXLUULHBWDRZVOSZHCWDRZVOSAUYLUULBCHUGTUWDUULUWFVJUXKUYMUUDAIVOSUYOPIUYN
+      VOKYRUUFJUYPVOMYRUUGZYSUULGAUYLUXOUYQYSYTUULUEUDAUUOBIDUBUAGFHUVLTUGKPUXS
+      NUWTUWQUXKUXOUXLYTUUH $.
+      $( [27-Mar-2015] $)
+  $}
+
+  ${
+    ply1opprmul.y $e |- Y = ( Poly1 ` R ) $.
+    ply1opprmul.s $e |- S = ( oppR ` R ) $.
+    ply1opprmul.z $e |- Z = ( Poly1 ` S ) $.
+    ply1opprmul.t $e |- T = ( .r ` Y ) $.
+    ply1opprmul.u $e |- U = ( .r ` Z ) $.
+    ply1opprmul.b $e |- B = ( Base ` Y ) $.
+    $( Reversing multiplication in a ring reverses multiplication in the
+       univariate polynomial ring. $)
+    ply1opprmul $p |- ( ( R e. Ring /\ F e. B /\ G e. B ) ->
+        ( F U G ) = ( G T F ) ) $=
+      ( wcel c1o co cfv eqid crg w3a cmps cbs wceq id1 cps1 ply1bascl psr1bascl
+      cmulr syl psropprmul syl3an cvv coppr fvex eqeltri ply1mulr mp1i 3ad2ant1
+      oveqd 3eqtr4d ) BUAPZFAPZGAPZUBZFGQCUCRZUJSZRZGFQBUCRZUJSZRZFGERGFDRVCVCV
+      DFVJUDSZPZVEGVMPZVIVLUEVCUFVDFBUGSZUDSZPVNAHBFJOUHVQVPBFVPTZVQTZUIUKVEGVQ
+      PVOAHBGJOUHVQVPBGVRVSUIUKVMBCVKVHFGQVJVGVJTZKVGTZVKTZVHTZVMTULUMVFEVHFGCU
+      NPEVHUEVFCBUOSUNKBUOUPUQCVGEVHUNILWANWCURUSVAVFDVKGFVCVDDVKUEVEBVJDVKUAHJ
+      VTMWBURUTVAVB $.
+      $( [27-Mar-2015] $)
+  $}
+
+  $( Lemma for ~ ply1basfvi and ~ deg1fvi . $)
+  00ply1bas $p |- (/) = ( Base ` ( Poly1 ` (/) ) ) $=
+    ( va c0 cpl1 cfv cbs wceq cv wcel wn eq0 c1o cc0 csn cxp noel cn0 cmap eqid
+    co wf baseid str0 ply1basf 0nn0 fconst6g ax-mp nn0ex con0 elexi elmap mpbir
+    cnx 1on ffvelrn sylancl mto mpgbir eqcomi ) BCDZEDZBUTBFAGZUTHZIAAUTJVBKLMN
+    ZVADZBHZVDOVBPKQSZBVATVCVFHZVEUTUSBVABUSRUTREULEDAAUAUBUCVGKPVCTZLPHVHUDKLP
+    UEUFPKVCUGKUHUMUIUJUKVFBVCVAUNUOUPUQUR $.
+    $( [28-Mar-2015] $)
+
+  $( Protection compatibility of the univariate polynomial base set. $)
+  ply1basfvi $p |- ( Base ` ( Poly1 ` R ) ) =
+      ( Base ` ( Poly1 ` ( _I ` R ) ) ) $=
+    ( va cvv wcel cpl1 cfv cbs cid wceq fvi eqcomd fveq2d wn c0 cnx baseid str0
+    00ply1bas eqtr3i fvprc 3eqtr4a pm2.61i ) ACDZAEFZGFZAHFZEFZGFZIUCUDUGGUCAUF
+    EUCUFAACJKLLUCMZNGFZNEFZGFZUEUHNUJULGOGFBBPQRSUIUDNGAETLUIUGUKGUIUFNEAHTLLU
+    AUB $.
+    $( [27-Mar-2015] $)
+
+  $( Protection compatibility of the univariate polynomial addition. $)
+  ply1plusgfvi $p |- ( +g ` ( Poly1 ` R ) ) =
+      ( +g ` ( Poly1 ` ( _I ` R ) ) ) $=
+    ( va cvv wcel cpl1 cfv cplusg wceq fveq2d c0 c1o co eqid cbs cxp cn0 cmap
+    wtru con0 cc0 cid fvi eqcomd wn cnx plusgid str0 0ex cmps cof cres baseid
+    psr1baslem 1on a1i psrbas trud csn wne wf 0nn0 fconst6g ax-mp nn0ex elexi
+    elmap mpbir ne0i ovex map0b mp2b eqtri xpeq2i xp0 reseq2i eqtr2i psrplusg
+    res0 eqtr4i ply1plusg eqcomi eqtr3i fvprc 3eqtr4a pm2.61i ) ACDZAEFZGFZAU
+    AFZEFZGFZHWFWGWJGWFAWIEWFWIAACUBUCIIWFUDZJGFZJEFZGFZWHWKJWMWOGUEGFBBUFUGW
+    OJJCDZWOJHUHWOJJKJUILZCWNWNMWQMZWOMJWMUJZWQNFZWTOZUKZWQGFZXBWSJUKJXAJWSXA
+    WTJOJWTJWTWTJPKQLZQLZJWTXEHRWTXDJWQBKJSCWRNUENFBBULUGBUMWTMZKSDRUNUOZWPRU
+    HUOZUPUQKTUROZXDDZXDJUSXEJHXJKPXIUTZTPDXKVAKTPVBVCPKXIVDKSUNVEVFVGXDXIVHX
+    DPKQVIVJVKVLVMWTVNVLVOWSVRVPXCXBHRWMWTXCJWQKSCWRXFWMMXCMXGXHVQUQVSVTVCWAW
+    BWLWGJGAEWCIWLWJWNGWLWIJEAUAWCIIWDWE $.
+    $( [27-Mar-2015] $)
+
+  ${
+    $d ph x y $.  $d B x y $.  $d R x y $.  $d S x y $.
+    ply1baspropd.b1 $e |- ( ph -> B = ( Base ` R ) ) $.
+    ply1baspropd.b2 $e |- ( ph -> B = ( Base ` S ) ) $.
+    ply1baspropd.p $e |- ( ( ph /\ ( x e. B /\ y e. B ) ) ->
+        ( x ( +g ` R ) y ) = ( x ( +g ` S ) y ) ) $.
+    $( Property deduction for univariate polynomial base set. $)
+    ply1baspropd $p |- ( ph -> ( Base ` ( Poly1 ` R ) ) =
+          ( Base ` ( Poly1 ` S ) ) ) $=
+      ( va cid cfv co cbs cpl1 cvv wcel eqid1 strfvi cplusg c1o cmpl a1i baseid
+      fvex cnx syl6eq cv plusgid oveqi 3eqtr3g mplbaspropd wceq cps1 ply1basfvi
+      wa eqid ply1bas ax-mp 3eqtr4g ) AUAEKLZUBMNLZUAFKLZUBMNLZEOLNLZFOLNLZABCD
+      VAVCUAPPVAPQZAEKUEZUCVCPQZAFKUEZUCADENLZVANLGENUFNLZVKJJUDZVKRSUGADFNLZVC
+      NLHFNVLVNJVMVNRSUGABUHZDQCUHZDQUPUPVOVPETLZMVOVPFTLZMVOVPVATLZMVOVPVCTLZM
+      IVQVSVOVPETUFTLZVQJJUIZVQRSUJVRVTVOVPFTWAVRJWBVRRSUJUKULVGVEVBUMVHVAOLZVA
+      VAUNLZVEPWCUQWDUQEUOURUSVIVFVDUMVJVCOLZVCVCUNLZVFPWEUQWFUQFUOURUSUT $.
+      $( [27-Mar-2015] $)
+    $( Property deduction for univariate polynomial addition. $)
+    ply1plusgpropd $p |- ( ph -> ( +g ` ( Poly1 ` R ) ) =
+          ( +g ` ( Poly1 ` S ) ) ) $=
+      ( va cid cfv co cplusg cpl1 cvv wcel cbs eqid1 eqid c1o cmps fvex a1i cnx
+      baseid strfvi cv wa plusgid oveqi 3eqtr3g psrplusgpropd wceq ply1plusgfvi
+      syl6eq ply1plusg ax-mp 3eqtr4g ) AUAEKLZUBMZNLZUAFKLZUBMZNLZEOLNLZFOLNLZA
+      BCDUTVCUAPPUTPQZAEKUCZUDVCPQZAFKUCZUDADERLZUTRLGERUERLZVLJJUFZVLSUGUPADFR
+      LZVCRLHFRVMVOJVNVOSUGUPABUHZDQCUHZDQUIUIVPVQENLZMVPVQFNLZMVPVQUTNLZMVPVQV
+      CNLZMIVRVTVPVQENUENLZVRJJUJZVRSUGUKVSWAVPVQFNWBVSJWCVSSUGUKULUMVHVFVBUNVI
+      VFVBUTVAPUTOLZWDTVATEUOVBTUQURVJVGVEUNVKVGVEVCVDPVCOLZWETVDTFUOVETUQURUS
+      $.
+      $( [27-Mar-2015] $)
+  $}
+
+  ${
     $d ph x y $.  $d I x y $.  $d O x y $.  $d R x y $.
     opsrrng.o $e |- O = ( ( I ordPwSer R ) ` T ) $.
     opsrrng.i $e |- ( ph -> I e. V ) $.
@@ -27038,6 +27313,13 @@ $)
     $( Define the set of monic univariate polynomials. $)
     df-mon1 $a |- Monic1 = ( r e. _V |-> { f e. ( Poly1 ` r ) |
       ( ( coe1 ` f ) ` ( r deg1 f ) ) = ( 1r ` r ) } ) $.
+
+    $( Multivariate degree is a binary operation. $)
+    reldmmdeg $p |- Rel dom mDeg $=
+      ( vi vr vf vh cvv cv cmpl cbs cfv ccnv c0g csn cdif cima ccnfld cgsu cmpt
+      co crn cxr clt csup cmdg df-mdeg reldmmpt2 ) ABEECAFBFZGRHIDCFJEUFKILMNOD
+      FPRQSTUAUBQUCCDABUDUE $.
+      $( [28-Mar-2015] $)
   $}
 
   ${
@@ -27497,6 +27779,59 @@ $)
       EKDLMZJZNOPUAZUNEBUOUNDQIZBUORACDEGHUDZBDQFUBSUCUNUREKDUEMZUFJZIUPUQIUSUN
       EAVAUNUGUNURAVARUSCDDUHJZAQGVBTHUISUJVAUOUTDEKQUOTUTTVATUKULUM $.
       $( [23-Mar-2015] $)
+  $}
+
+  ${
+    $d ph c $.  $d ph x y $.  $d B x y $.  $d I a b $.  $d I c $.  $d R b c $.
+    $d R x y $.  $d S b c $.  $d S x y $.  $d V c $.  $d W c $.
+    mdegpropd.r $e |- ( ph -> R e. V ) $.
+    mdegpropd.s $e |- ( ph -> S e. W ) $.
+    mdegpropd.b1 $e |- ( ph -> B = ( Base ` R ) ) $.
+    mdegpropd.b2 $e |- ( ph -> B = ( Base ` S ) ) $.
+    mdegpropd.p $e |- ( ( ph /\ ( x e. B /\ y e. B ) ) ->
+        ( x ( +g ` R ) y ) = ( x ( +g ` S ) y ) ) $.
+    $( Property deduction for polynomial degree. $)
+    mdegpropd $p |- ( ph -> ( I mDeg R ) = ( I mDeg S ) ) $=
+      ( vc cvv wcel co cima eqid vb va cmdg wceq wa cmpl cbs cfv cv ccnv cn cfn
+      cn0 cmap crab ccnfld cgsu cmpt c0g csn cdif cxr clt csup mplbaspropd elex
+      grpidpropd sneqd difeq2d imaeq2d supeq1d mpteq12dv adantl mdegfval sylan2
+      syl 3eqtr4d wn c0 reldmmdeg ovprc1 eqtr4d adantr pm2.61ian ) GPQZAGEUCRZG
+      FUCRZUDZWEAUEOGEUFRZUGUHZUAUBUIUJUKSULQUBUMGUNRUOZUPUAUIUQRURZOUIUJZPEUSU
+      HZUTZVAZSZSZVBVCVDZURZOGFUFRZUGUHZWLWMPFUSUHZUTZVAZSZSZVBVCVDZURZWFWGAWTX
+      IUDWEAOWJWSXBXHABCDEFGHIJKLMNVEAVBWRXGVCAWQXFWLAWPXEWMAWOXDPAWNXCABCDEFLM
+      NAEHQZEPQJEHVFVPAFIQZFPQKFIVFVPVGVHVIVJVJVKVLVMAWEXJWFWTUDJWKWJWFWIEOUAUB
+      WLGPHWNWFTWITWJTWNTWKTZWLTZVNVOAWEXKWGXIUDKWKXBWGXAFOUAUBWLGPIXCWGTXATXBT
+      XCTXLXMVNVOVQWEVRZWHAXNWFVSWGGEUCVTWAGFUCVTWAWBWCWD $.
+      $( [28-Mar-2015] $)
+  $}
+
+  $( Univariate polynomial degree respects protection. $)
+  deg1fvi $p |- ( deg1 ` R ) = ( deg1 ` ( _I ` R ) ) $=
+    ( cid cfv cdg1 cvv wcel wceq fvi fveq2d wn c0 wfn wf cpl1 00ply1bas deg1xrf
+    cxr eqid ffn fvprc ax-mp fn0 mpbi 3eqtr4a pm2.61i eqcomi ) ABCZDCZADCZAEFZU
+    HUIGUJUGADAEHIUJJZKDCZKUHUIULKLZULKGKQULMUMKULKNCZKULRUNROPKQULSUAULUBUCUKU
+    GKDABTIADTUDUEUF $.
+    $( [28-Mar-2015] $)
+
+  ${
+    $d ph x y $.
+    $d B x y $.
+    $d R x y $.
+    $d S x y $.
+    deg1propd.b1 $e |- ( ph -> B = ( Base ` R ) ) $.
+    deg1propd.b2 $e |- ( ph -> B = ( Base ` S ) ) $.
+    deg1propd.p $e |- ( ( ph /\ ( x e. B /\ y e. B ) ) ->
+        ( x ( +g ` R ) y ) = ( x ( +g ` S ) y ) ) $.
+    $( Property deduction for polynomial degree. $)
+    deg1propd $p |- ( ph -> ( deg1 ` R ) = ( deg1 ` S ) ) $=
+      ( va c1o cid cfv cmdg co cvv wcel cbs strfvi cplusg cdg1 fvex baseid eqid
+      a1i syl6eq cv plusgid eqid1 oveqi 3eqtr3g mdegpropd wceq deg1fvi deg1fval
+      cnx wa ax-mp 3eqtr4g ) AKELMZNOZKFLMZNOZEUAMZFUAMZABCDUTVBKPPUTPQZAELUBZU
+      EVBPQZAFLUBZUEADERMZUTRMGERUPRMZVJJJUCZVJUDSUFADFRMZVBRMHFRVKVMJVLVMUDSUF
+      ABUGZDQCUGZDQUQUQVNVOETMZOVNVOFTMZOVNVOUTTMZOVNVOVBTMZOIVPVRVNVOETUPTMZVP
+      JJUHZVPUISUJVQVSVNVOFTVTVQJWAVQUISUJUKULVFVDVAUMVGVDUTPEUNUOURVHVEVCUMVIV
+      EVBPFUNUOURUS $.
+      $( [28-Mar-2015] $)
   $}
 
   ${
@@ -28097,10 +28432,27 @@ $)
         UCEVRGVTWCVSUDWIWFWDVDVCVEABCDEFEVFUGZHIJKLMNOPQRSTUAUBAGWJVSAWGGWJVKSE
         GWJWJUTZUDVGVLUCVHWKVIVQLBVMVN $.
         $( [27-Mar-2015] $)
+      $d B r $.  $d P r $.  $d R r $.  $d q r $.
       $( PLEASE PUT DESCRIPTION HERE. $)
       ply1divalg2 $p |- ( ph -> E! q e. B
             ( D ` ( F M ( q T G ) ) ) < ( D ` G ) ) $=
-        ? $.
+        ( vr cv cfv clt wbr wreu coppr cpl1 cmulr eqid cdg1 wceq wtru cbs eqidd
+        co opprbas a1i cplusg wcel wa oppradd oveqi deg1propd trud eqtri fveq2i
+        ply1baspropd 3eqtri csg ply1plusgpropd grpsubpropd c0g cvv fvex eqeltri
+        eqtr3i grpidpropd crg opprrng syl opprunit ply1divalg simpr ply1opprmul
+        adantr syl3anc eqcomd oveq2d fveq2d breq1d reubidva mpbird ) AHLUFZIFUT
+        ZJUTZCUGZICUGZUHUIZLBUJHIWREUKUGZULUGZUMUGZUTZJUTZCUGZXBUHUIZLBUJABCXEX
+        DXFGHIJKLXEUNZCEUOUGZXDUOUGZNXLXMUPUQLUEEURUGZEXDUQXNUSZXNXDURUGUPUQXNE
+        XDXDUNZXNUNVAVBZWRUEUFZEVCUGZUTWRXRXDVCUGZUTUPUQWRXNVDXRXNVDVEVEXSXTWRX
+        RXSEXDXPXSUNVFVGVBZVHVIVJBDURUGZEULUGZURUGZXEURUGZODYCURMVKYDYEUPUQLUEX
+        NEXDXOXQYAVLVIVMZJDVNUGZXEVNUGZPYGYHUPUQDXEYBYEUPUQBYBYEOYFWAVBDVCUGZXE
+        VCUGZUPUQYIYCVCUGZYJDYCVCMVKYKYJUPUQLUEXNEXDXOXQYAVOVIVJZVBVPVIVJKDVQUG
+        ZXEVQUGZQYMYNUPUQLUEBDXEBYBUPUQOVBBYEUPUQYFVBWRXRYIUTWRXRYJUTUPUQWRBVDZ
+        XRBVDVEVEYIYJWRXRYLVGVBDVRVDUQDYCVRMEULVSVTVBXEVRVDUQXDULVSVBWBVIVJXFUN
+        ZAEWCVDZXDWCVDSEXDXPWDWETUAUBUCEXDGUDXPWFWGAXCXJLBAYOVEZXAXIXBUHYRWTXHC
+        YRWSXGHJYRXGWSYRYQIBVDZYOXGWSUPAYQYOSWJAYSYOUAWJAYOWHBEXDFXFIWRDXEMXPXK
+        RYPOWIWKWLWMWNWOWPWQ $.
+        $( [28-Mar-2015] $)
     $}
   $}
 
