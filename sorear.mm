@@ -5154,6 +5154,30 @@ $)
       $( [23-Mar-2015] $)
   $}
 
+  ${
+    $d B x $.  $d R x $.  $d X x $.  $d Z x $.
+    dvdsr0.b $e |- B = ( Base ` R ) $.
+    dvdsr0.d $e |- D = ( ||r ` R ) $.
+    dvdsr0.z $e |- Z = ( 0g ` R ) $.
+    $( In a ring, zero is divisible by all elements.  ("Zero divisor" as a term
+       has a somewhat different meaning, see ~ df-rlreg .) $)
+    dvdsr01 $p |- ( ( R e. Ring /\ X e. B ) -> X D Z ) $=
+      ( vx crg wcel wa wbr cv cmulr cfv co wceq wrex syl2anc rng0cl adantr eqid
+      rnglz oveq1 eqeq1d rcla4ev wb simpr dvdsr2 mpbird ) CJKZDAKZLZDEBMZINZDCO
+      PZQZERZIASZUNEAKZEDUQQZERZUTULVAUMACEFHUAUBZACUQDEFUQUCZHUDUSVCIEAUPERURV
+      BEUPEDUQUEUFUGTUNUMVAUOUTUHULUMUIVDIABCUQADEFGVEUJTUK $.
+      $( [29-Mar-2015] $)
+
+    $( Only zero is divisible by zero. $)
+    dvdsr02 $p |- ( ( R e. Ring /\ X e. B ) -> ( Z D X <-> X = Z ) ) $=
+      ( vx crg wcel wa wbr cv cmulr cfv wceq wrex wb syl co rng0cl dvdsr2 sylan
+      eqid rngrz eqeq1d eqcom syl6bb rexbidva wne rnggrp grpbn0 r19.9rzv bitr4d
+      c0 cgrp adantr bitrd ) CJKZDAKZLEDBMZINZECOPZUAZDQZIARZDEQZUTEAKVAVBVGSAC
+      EFHUBIABCVDAEDFGVDUEZUCUDUTVGVHSVAUTVGVHIARZVHUTVFVHIAUTVCAKLZVFEDQVHVKVE
+      EDACVDVCEFVIHUFUGEDUHUIUJUTAUPUKZVHVJSUTCUQKVLCULACFUMTVHIAUNTUOURUS $.
+      $( [29-Mar-2015] $)
+  $}
+
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     Additional topology
@@ -29300,7 +29324,6 @@ $)
       $( [29-Mar-2015] $)
   $}
 
-
 $(
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     The division algorithm for univariate polynomials
@@ -30000,6 +30023,172 @@ $)
       VVNUWSWKTZVVEYGZVUQUVTUWMUWBVWBVVFYGZUWMBVURUVNUWBUWRVVCUUSXNUWMABCVUSMIU
       WRUUTRUVRVVAUVASYTUVDUVEVUQVVSVVTVUCVUTUWFWEVWAVWCVWDUWMBVURHUVNUWBUWRKVV
       CUVFXNYTUVGUVSUWDEUAUVTUWFUVOUWCUVRUVNUWBAYIYKUVHYD $.
+      $( [29-Mar-2015] $)
+  $}
+
+  ${
+    ig1pval.p $e |- P = ( Poly1 ` R ) $.
+    ig1pval.g $e |- G = ( idlGen1p ` R ) $.
+
+    ${
+      $d D i r $.  $d I g i $.  $d M g i r $.  $d R g i r $.  $d U i r $.
+      $d Z i r $.
+      ig1pval.z $e |- Z = ( 0g ` P ) $.
+      ig1pval.u $e |- U = ( LIdeal ` P ) $.
+      ig1pval.d $e |- D = ( deg1 ` R ) $.
+      ig1pval.m $e |- M = ( Monic1p ` R ) $.
+      $( Substitutions for the polynomial ideal generator function. $)
+      ig1pval $p |- ( ( R e. V /\ I e. U ) -> ( G ` I ) = if ( I = { Z } , Z ,
+              ( iota_ g e. ( I i^i M ) ( D ` g ) =
+                  sup ( ( D " ( I \ { Z } ) ) , RR , `' < ) ) ) ) $=
+        ( vi cfv wceq cr vr wcel csn cdif cima clt ccnv csup cin crio cif cig1p
+        cv cmpt cvv elex cpl1 clidl cdg1 cmn1 fveq2 syl6eqr fveq2d sneqd eqeq2d
+        ineq2d fveq1d imaeq1d difeq2d imaeq2d eqtrd supeq1d eqeq12d riotaeqbidv
+        ifbieq12d mpteq12dv df-ig1p fvex eqeltri mptex fvmpt syl5eq eqeq1 eqidd
+        c0g syl ineq1 difeq1 eqid riotaex ifex sylan9eq ) CIUBZGDUBGFRGQDQUMZJU
+        CZSZJEUMZARZAWNWOUDZUEZTUFUGZUHZSZEWNHUIZUJZUKZUNZRGWOSZJWRAGWOUDZUEZTX
+        AUHZSZEGHUIZUJZUKZWMGFXGWMFCULRZXGLWMCUOUBXPXGSCIUPUACQUAUMZUQRZURRZWNX
+        RWERZUCZSZXTWQXQUSRZRZYCWNYAUDZUEZTXAUHZSZEWNXQUTRZUIZUJZUKZUNXGUOULXQC
+        SZQXSYLDXFYMXSBURRZDYMXRBURYMXRCUQRBXQCUQVAKVBZVCNVBYMYBWPXTYKJXEYMYAWO
+        WNYMXTJYMXTBWERZJYMXRBWEYOVCMVBZVDZVEYQYMYHXCEYJXDYMYIHWNYMYICUTRHXQCUT
+        VAPVBVFYMYDWRYGXBYMWQYCAYMYCCUSRAXQCUSVAOVBZVGYMTYFWTXAYMYFAYEUEWTYMYCA
+        YEYSVHYMYEWSAYMYAWOWNYRVIVJVKVLVMVNVOVPEQUAVQQDXFDYNUONBURVRVSVTWAWFWBV
+        GQGXFXODXGWNGSZWPXHJXEJXNWNGWOWCYTJWDYTXCXLEXDXMWNGHWGYTXBXKWRYTTWTXJXA
+        YTWSXIAWNGWOWHVJVLVEVNVOXGWIXHJXNJYPUOMBWEVRVSXLEXMWJWKWAWL $.
+        $( [29-Mar-2015] $)
+    $}
+
+    ${
+      $d R g $.  $d Z g $.
+      ig1pval2.z $e |- Z = ( 0g ` P ) $.
+      $( Generator of the zero ideal. $)
+      ig1pval2 $p |- ( R e. Ring -> ( G ` { Z } ) = Z ) $=
+        ( vg crg wcel csn cfv wceq cv cdg1 cdif cima cr clt eqid ccnv csup cmn1
+        cin crio cif clidl ply1rng lidl0 syl ig1pval mpdan iftrue ax-mp syl6eq
+        ) BIJZDKZCLZUQUQMZDHNBOLZLUTUQUQPQRSUAUBMHUQBUCLZUDUEZUFZDUPUQAUGLZJZUR
+        VCMUPAIJVEABEUHAVDDVDTZGUIUJUTABVDHCUQVAIDEFGVFUTTVATUKULUSVCDMUQTUSDVB
+        UMUNUO $.
+        $( [29-Mar-2015] $)
+    $}
+
+    ${
+      $d D g $.  $d G g $.  $d I g $.  $d M g $.  $d P g $.  $d R g $.
+      $d U g $.  $d Z g $.
+      ig1pval3.z $e |- Z = ( 0g ` P ) $.
+      ig1pval3.u $e |- U = ( LIdeal ` P ) $.
+      ig1pval3.d $e |- D = ( deg1 ` R ) $.
+      ig1pval3.m $e |- M = ( Monic1p ` R ) $.
+      $( Characterizing properties of the monic generator of a nonzero ideal of
+         polynomials. $)
+      ig1pval3 $p |- ( ( R e. DivRing /\ I e. U /\ I =/= { Z } ) ->
+          ( ( G ` I ) e. I /\ ( G ` I ) e. M /\ ( D ` ( G ` I ) ) =
+              sup ( ( D " ( I \ { Z } ) ) , RR , `' < ) ) ) $=
+        ( vg cdr wcel cfv wceq wa csn wne w3a cv cdif cima cr clt ccnv csup cin
+        crab crio cif simp1 simp2 ig1pval syl2anc simp3 df-ne sylib iffalse syl
+        wn eqtrd wreu ig1peu riotacl2 eqeltrd anbi1i fveq2 eqeq1d elrab 3bitr4i
+        elin df-3an ) CPQZFDQZFHUAZUBZUCZFERZOUDZARZAFVSUEUFUGUHUIUJZSZOFGUKZUL
+        ZQZWBFQZWBGQZWBARZWESZUCZWAWBWFOWGUMZWHWAWBFVSSZHWOUNZWOWAVQVRWBWQSVQVR
+        VTUOVQVRVTUPABCDOEFGPHIJKLMNUQURWAWPVDZWQWOSWAVTWRVQVRVTUSFVSUTVAWPHWOV
+        BVCVEWAWFOWGVFWOWHQABCDOFGHILKNMVGWFOWGVHVCVIWBWGQZWMTWJWKTZWMTWIWNWSWT
+        WMWBFGVOVJWFWMOWBWGWCWBSWDWLWEWCWBAVKVLVMWJWKWMVPVNVA $.
+        $( [29-Mar-2015] $)
+    $}
+
+    ${
+      ig1pcl.u $e |- U = ( LIdeal ` P ) $.
+      $( The monic generator of an ideal is always in the ideal. $)
+      ig1pcl $p |- ( ( R e. DivRing /\ I e. U ) -> ( G ` I ) e. I ) $=
+        ( cdr wcel wa cfv c0g csn wceq crg drngrng eqid ig1pval2 syl fvex elsnc
+        sylibr adantr fveq2 id eleq12d syl5ibrcom imp wne w3a cmn1 cdg1 cdif cr
+        cima clt ccnv csup ig1pval3 simp1d 3expa pm2.61dane ) BIJZECJZKZEDLZEJZ
+        EAMLZNZVFEVJOZVHVFVHVKVJDLZVJJZVDVMVEVDVLVIOZVMVDBPJVNBQABDVIFGVIRZSTVL
+        VIVJDUAUBUCUDVKVGVLEVJEVJDUEVKUFUGUHUIVDVEEVJUJZVHVDVEVPUKVHVGBULLZJVGB
+        UMLZLVREVJUNUPUOUQURUSOVRABCDEVQVIFGVOHVRRVQRUTVAVBVC $.
+        $( [29-Mar-2015] $)
+
+      ${
+        ig1pdvds.d $e |- D = ( ||r ` P ) $.
+        $( The monic generator of an ideal divides all elements of the
+           ideal. $)
+        ig1pdvds $p |- ( ( R e. DivRing /\ I e. U /\ X e. I ) ->
+            ( G ` I ) D X ) $=
+          ( wcel cfv wceq syl wss eqid syl2anc cxr c0 cdr w3a wbr c0g wa lidlss
+          csn crg drngrng ply1rng 3ad2ant1 ig1pcl 3adant3 sseldd dvdsr01 adantr
+          cbs 3ad2ant2 eleq2 biimpac 3ad2antl3 elsni breqtrrd cr1p co cdg1 cdif
+          wne cima cr clt ccnv csup wn cuc1p simpl1 simpl2 simpl3 cmn1 ig1pval3
+          cle simpr syl3anc simp2d mon1puc1p r1pdeglt simp3d breqtrd wb deg1xrf
+          wf eqid1 cq1p cmulr csg simp1d r1pval q1pcl lidlmcl lidlsubcl eqeltrd
+          syl22anc ffvelrn sylancr cc0 cuz ssdif deg1n0ima nn0uz syl6sseq sstrd
+          imass2 cn0 cz uzssz zssre ressxr sstri syl6ss lidl0cl necomd pssdifn0
+          snssd wfn ffn ax-mp difss syl5ss fnimaeq0 necon3bid mpbird infmssuzcl
+          a1i xrltnle mpbid eldifsn sylanbrc fnfvima infmssuzle ex necon1bd mpd
+          dvdsr1p pm2.61dane ) CUALZFDLZGFLZUBZFEMZGAUCZFBUDMZUGZUUHFUULNZUEZUU
+          IUUKGAUUHUUIUUKAUCZUUMUUHBUHLZUUIBUQMZLZUUOUUEUUFUUPUUGUUECUHLZUUPCUI
+          ZBCHUJZOUKUUHFUUQUUIUUFUUEFUUQPZUUGUUQFDBUUQQZJUFZURUUEUUFUUIFLZUUGBC
+          DEFHIJULUMUNUUQABUUIUUKUVCKUUKQZUORUPUUNGUULLZGUUKNUUGUUEUUMUVGUUFUUM
+          UUGUVGFUULGUSUTVAGUUKVBOVCUUHFUULVHZUEZUUJGUUICVDMZVEZUUKNZUVICVFMZFU
+          ULVGZVIZVJVKVLVMZUVKUVMMZWAUCZVNZUVLUVIUVQUVPVKUCZUVSUVIUVQUUIUVMMZUV
+          PVKUVIUUSGUUQLZUUICVOMZLZUVQUWAVKUCUVIUUEUUSUUEUUFUUGUVHVPZUUTOZUVIFU
+          UQGUVIUUFUVBUUEUUFUUGUVHVQZUVDOZUUEUUFUUGUVHVRZUNZUVIUUSUUICVSMZLZUWD
+          UWFUVIUVEUWLUWAUVPNZUVIUUEUUFUVHUVEUWLUWMUBUWEUWGUUHUVHWBZUVMBCDEFUWK
+          UUKHIUVFJUVMQZUWKQZVTWCZWDUWCCUWKUUIUWCQZUWPWERZUUQUWCUVMBCUVJGUUIUVJ
+          QZHUVCUWRUWOWFWCUVIUVEUWLUWMUWQWGWHUVIUVQSLZUVPSLUVTUVSWIUVIUUQSUVMWK
+          ZUVKUUQLUXAUUQUVMBCUVMWLHUVCWJZUVIFUUQUVKUWHUVIUVKGGUUICWMMZVEZUUIBWN
+          MZVEZBWOMZVEZFUVIUWBUURUVKUXINUWJUVIFUUQUUIUWHUVIUVEUWLUWMUWQWPZUNUUQ
+          BUXDCUXFUVJGUUIUXHUWTHUVCUXDQZUXFQZUXHQZWQRUVIUUPUUFUUGUXGFLZUXIFLUVI
+          UUSUUPUWFUVAOZUWGUWIUVIUUPUUFUXEUUQLZUVEUXNUXOUWGUVIUUSUWBUWDUXPUWFUW
+          JUWSUUQUWCBUXDCGUUIUXKHUVCUWRWRWCUXJUUQBUXFDFUXEUUIJUVCUXLWSXBBDFUXHG
+          UXGJUXMWTXBXAZUNUUQSUVKUVMXCXDUVIUVOSUVPUVIUVOXEXFMZSUVIUVOUVMUUQUULV
+          GZVIZUXRUVIUVNUXSPZUVOUXTPUVIUVBUYAUWHFUUQUULXGOUVNUXSUVMXLOUVIUXTXMU
+          XRUVIUUSUXTXMPUWFUUQUVMBCUUKUWOHUVFUVCXHOXIXJXKZUXRXNSXEXOXNVJSXPXQXR
+          XRXSUVIUVOUXRPZUVOTVHZUVPUVOLUYBUVIUYDUVNTVHZUVIUULFPUULFVHUYEUVIUUKF
+          UVIUUPUUFUUKFLUXOUWGBDFUUKJUVFXTRYCUVIFUULUWNYAUULFYBRUVIUVOTUVNTUVIU
+          VMUUQYDZUVNUUQPZUVOTNUVNTNWIUYFUVIUXBUYFUXCUUQSUVMYEYFZYMUVIUVNFUUQFU
+          ULYGUWHYHZUUQUVNUVMYIRYJYKUVOXEYLRUNUVQUVPYNRYOUVIUVRUVKUUKUVIUVKUUKV
+          HZUVRUVIUYJUEZUYCUVQUVOLZUVRUVIUYCUYJUYBUPUYKUYFUYGUVKUVNLZUYLUYFUYKU
+          YHYMUVIUYGUYJUYIUPUYKUVKFLZUYJUYMUVIUYNUYJUXQUPUVIUYJWBUVKFUUKYPYQUUQ
+          UVNUVMUVKYRWCUVQUVOXEYSRYTUUAUUBUVIUUSUWBUWDUUJUVLWIUWFUWJUWSUUQUWCAB
+          CUVJGUUIUUKHKUVCUWRUVFUWTUUCWCYKUUD $.
+          $( [29-Mar-2015] $)
+      $}
+
+      $d G x $.  $d I x $.  $d K x $.  $d P x $.  $d R x $.  $d U x $.
+      ig1prsp.k $e |- K = ( RSpan ` P ) $.
+      $( Any ideal of polynomials over a division ring is generated by the
+         ideal's canonical generator. $)
+      ig1prsp $p |- ( ( R e. DivRing /\ I e. U ) ->
+          I = ( K ` { ( G ` I ) } ) ) $=
+        ( vx cdr wcel wa cfv csn wceq cv cdsr crg wbr wral ig1pcl eqid ig1pdvds
+        3expa ralrimiva cbs wb drngrng ply1rng adantr simpr eqid1 lidlss adantl
+        syl wss sseldd lidldvgen syl3anc mpbir2and ) BLMZECMZNZEEDOZPFOQZVFEMZV
+        FKRZASOZUAZKEUBZABCDEGHIUCZVEVKKEVCVDVIEMVKVJABCDEVIGHIVJUDZUEUFUGVEATM
+        ZVDVFAUHOZMVGVHVLNUIVCVOVDVCBTMVOBUJABGUKUQULVCVDUMVEEVPVFVDEVPURVCVPEC
+        AVPUNZIUOUPVMUSKVPVJACVFEFVQIJVNUTVAVB $.
+        $( [29-Mar-2015] $)
+    $}
+  $}
+
+  ${
+    $d P i j $.  $d R i j $.
+    ply1lpir.p $e |- P = ( Poly1 ` R ) $.
+    $( The ring of polynomials over a division ring has the principal ideal
+       property. $)
+    ply1lpir $p |- ( R e. DivRing -> P e. LPIR ) $=
+      ( vi cdr wcel crg clidl cfv clpidl wss clpir drngrng ply1rng syl csn wceq
+      vj cv eqid crsp cbs wrex cig1p lidlss adantl ig1pcl sseldd ig1prsp fveq2d
+      wa sneq eqeq2d rcla4ev syl2anc wb adantr islpidl mpbird ex ssrdv sylanbrc
+      islpir2 ) BEFZAGFZAHIZAJIZKALFVDBGFVEBMABCNOZVDDVFVGVDDSZVFFZVIVGFZVDVJUK
+      ZVKVIRSZPZAUAIZIZQZRAUBIZUCZVLVIBUDIZIZVRFVIWAPZVOIZQZVSVLVIVRWAVJVIVRKVD
+      VRVIVFAVRTZVFTZUEUFABVFVTVICVTTZWFUGUHABVFVTVIVOCWGWFVOTZUIVQWDRWAVRVMWAQ
+      ZVPWCVIWIVNWBVOVMWAULUJUMUNUOVLVEVKVSUPVDVEVJVHUQVRVGARVIVOVGTZWHWEUROUSU
+      TVAVGAVFWJWFVCVB $.
+      $( [29-Mar-2015] $)
+
+    $( The polynomials over a field are a PID. $)
+    ply1pid $p |- ( R e. Field -> P e. PID ) $=
+      ( cfield wcel cidom clpir cpid fldidom ply1idom syl ccrg df-field simplbi
+      cdr elin2 ply1lpir df-pid sylanbrc ) BDEZAFEZAGEZAHETBFEUABIABCJKTBOEZUBT
+      UCBLEBOLDMPNABCQKAFGHRPS $.
       $( [29-Mar-2015] $)
   $}
 
