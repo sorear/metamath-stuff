@@ -7014,8 +7014,9 @@ $)
        complexity of an arbitrary mixed collection of functions of various
        arities (especially if the axiom of infinity ~ omex is to be avoided),
        we consider a single function defined on finite sets instead. $)
-    df-acs $a |- ACS = { c | E. f ( f : ( ~P U. c i^i Fin ) --> ~P U. c /\
-      A. x e. ~P U. c ( x e. c <-> ( f " ~P x ) C_ x ) ) } $.
+    df-acs $a |- ACS = ( x e. _V |-> { c e. ( Moore ` x ) |
+            E. f ( f : ( ~P x i^i Fin ) --> ~P x /\
+                A. s e. ~P x ( s e. c <-> U. ( f " ~P s ) C_ s ) ) } ) $.
   $}
 
   ${
@@ -7892,6 +7893,127 @@ $)
       VJUWFXJZXLYSUVAXSIZUVBXTIZYSEFCDJUVCUVDUWGUWRUWSXMUUDXSGWJZLUWTUXAPUUGXSU
       UEUXBUACXKUUFUXBUUENUJUUEGXNULXOXSUVAGXPXARXQXR $.
       $( [1-Feb-2015] $)
+  $}
+
+$(
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    Algebraic closure systems
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$)
+
+  ${
+    $d C c f s $.
+    $d C t y $.
+    $d K f s t y $.
+    $d X c f s x $.
+    $d X t y $.
+    $( A set is an algebraic closure system iff it is specified by some
+       function of the finite subsets, such that a set is closed iff it does
+       not expand under the operation. $)
+    isacs $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
+        E. f ( f : ( ~P X i^i Fin ) --> ~P X /\
+            A. s e. ~P X ( s e. C <-> U. ( f " ~P s ) C_ s ) ) ) ) $=
+      ( vc vx cacs cfv wcel cvv cmre cpw cfn cin cv wf wb wral wa wex cima cuni
+      wss cdm elfvdm elex syl adantr crab wceq fveq2 pweq ineq1d feq23d raleqdv
+      wel anbi12d exbidv rabeqbidv df-acs fvex rabex fvmpt eleq2d eleq2 ralbidv
+      bibi1d anbi2d elrab syl6bb pm5.21nii ) ACGHZIZCJIZACKHZIZCLZMNZVQBOZPZDOZ
+      AIZVSWALUAUBWAUCZQZDVQRZSZBTZSZVMCGUDZIVNACGUECWIUFUGVPVNWGVPCKUDZIVNACKU
+      ECWJUFUGUHVNVMAVTDEUPZWCQZDVQRZSZBTZEVOUIZIWHVNVLWPAFCFOZLZMNZWRVSPZWLDWR
+      RZSZBTZEWQKHZUIWPJGWQCUJZXCWOEXDVOWQCKUKXEXBWNBXEWTVTXAWMXEWSWRVRVQVSXEWR
+      VQMWQCULZUMXFUNXEWLDWRVQXFUOUQURUSFBDEUTWOEVOCKVAVBVCVDWOWGEAVOEOZAUJZWNW
+      FBXHWMWEVTXHWLWDDVQXHWKWBWCXGAWAVEVGVFVHURVIVJVK $.
+      $( [2-Apr-2015] $)
+
+    $( Algebraic closure systems are closure systems. $)
+    acsmre $p |- ( C e. ( ACS ` X ) -> C e. ( Moore ` X ) ) $=
+      ( vf vs cacs cfv wcel cmre cpw cfn cin cv wf cima cuni wss wb wral wa wex
+      isacs simplbi ) ABEFGABHFGBIZJKUCCLZMDLZAGUDUEINOUEPQDUCRSCTACBDUAUB $.
+      $( [2-Apr-2015] $)
+
+    isacs2.k $e |- K = ( mrCls ` C ) $.
+    $( In the definition of an algebraic closure system, we may always take the
+       operation being closed over as the Moore closure. $)
+    isacs2 $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
+          A. s e. ~P X ( s e. C <->
+              A. y e. ( ~P s i^i Fin ) ( K ` y ) C_ s ) ) ) $=
+      ( vt wcel cfn cin cima cuni wss wral wa unieqd syl wceq cres syl2anc cacs
+      vf cfv cmre cpw cv wf wb wex isacs weq eleq1 pweq imaeq2d sseq12d bibi12d
+      id cbvralv simpll inss1 sseli elpwi adantl simplr mrcsscl syl3anc adantlr
+      ralrimiva ciun simpllr wfun ffun funiunfv crn incom reseq2i resres eqtr4i
+      wrel cdm frel fdm inss2 a1i eqsstrd relssres reseq1d syl5eq rneqd 3eqtr4g
+      eqtrd wi ad2antlr sspwb sylib ad2antll ssrin sseld impr eleqtrrd ad2antrl
+      df-ima jca sstrd mrcssid elpw sylibr funfvima sylc elssuni mrccl ad2antrr
+      vex mresspw sseldd simprll rcla4va mpbid anassrs sstr2 ralimdva imp iunss
+      eqsstr3d simplrr simplrl mpbird impbida syl5bi expimpd exlimdv fss fssres
+      ex mrcf adantr syl6eqr sseq1d bibi2d cmrc syl5reqr ineq1d reseq2d syl5bbr
+      df-ss in32 ralbidva biimpa fvex eqeltri resex feq1 imaeq1 ralbidv anbi12d
+      cvv cla4ev impbid pm5.32i bitri ) BDUAUCHBDUDUCHZDUEZIJZUVBUBUFZUGZEUFZBH
+      ZUVDUVFUEZKZLZUVFMZUHZEUVBNZOZUBUIZOUVAUVGAUFZCUCZUVFMZAUVHIJZNZUHZEUVBNZ
+      OZBUBDEUJUVAUVOUWBUVAUVOUWBUVAUVNUWBUBUVAUVEUVMUWBUVMGUFZBHZUVDUWDUEZKZLZ
+      UWDMZUHZGUVBNZUVAUVEOZUWBUVLUWJEGUVBEGUKZUVGUWEUVKUWIUVFUWDBULUWMUVJUWHUV
+      FUWDUWMUVIUWGUWMUVHUWFUVDUVFUWDUMUNPUWMUQUOUPURUWLUWKUWBUWLUWKOUWAEUVBUWL
+      UWKUVFUVBHZUWAUWLUWKUWNOZOZUVGUVTUWLUVGUVTUWOUVAUVGUVTUVEUVAUVGOZUVRAUVSU
+      WQUVPUVSHZOUVAUVPUVFMZUVGUVRUVAUVGUWRUSUWRUWSUWQUWRUVPUVHHUWSUVSUVHUVPUVH
+      IUTVAUVPUVFVBQZVCUVAUVGUWRVDBUVPCUVFDFVEVFVHVGVGUWPUVTOZUVGUVKUXAUVJAUVSU
+      VPUVDUCZVIZUVFUXAUVEUXCUVJRUVAUVEUWOUVTVJUVEUXCUVDUVSKZLZUVJUVEUVDVKZUXCU
+      XERUVCUVBUVDVLZAUVSUVDVMQUVEUXDUVIUVEUVDUVSSZVNUVDUVHSZVNUXDUVIUVEUXHUXIU
+      VEUXHUVDISZUVHSZUXIUXHUVDIUVHJZSUXKUVSUXLUVDUVHIVOVPUVDIUVHVQVRUVEUXJUVDU
+      VHUVEUVDVSUVDVTZIMUXJUVDRUVCUVBUVDWAUVEUXMUVCIUVCUVBUVDWBZUVCIMUVEUVBIWCW
+      DWEUVDIWFTWGWHWIUVDUVSXBUVDUVHXBWJPWKQUXAUXBUVFMZAUVSNZUXCUVFMUWPUVTUXPUW
+      PUVRUXOAUVSUWPUWROUXBUVQMZUVRUXOWLUWLUWOUWRUXQUWLUWOUWROZOZUXBUVDUVQUEZKZ
+      LZUVQUXSUXBUYAHZUXBUYBMUXSUXFUVPUXMHZOUVPUXTHZUYCUXSUXFUYDUVEUXFUVAUXRUXG
+      WMUXSUVPUVCUXMUWLUWOUWRUVPUVCHUWPUVSUVCUVPUWPUVHUVBMZUVSUVCMUWNUYFUWLUWKU
+      WNUVFDMZUYFUVFDVBZUVFDWNWOZWPUVHUVBIWQQWRWSUVEUXMUVCRUVAUXRUXNWMWTXCUXSUV
+      PUVQMZUYEUXSUVAUVPDMZUYJUVAUVEUXRUSZUXSUVPUVFDUWRUWSUWLUWOUWTWPUWOUYGUWLU
+      WRUWNUYGUWKUYHVCXAXDZBUVPCDFXETUVPUVQAXMXFXGUXTUVPUVDXHXIUXBUYAXJQUXSUVQB
+      HZUYBUVQMZUXSUVAUYKUYNUYLUYMBUVPCDFXKTZUXSUVQUVBHUWKUYNUYOUHZUXSBUVBUVQUV
+      ABUVBMZUVEUXRBDXNZXLUYPXOUWLUWKUWNUWRXPUWJUYQGUVQUVBUWDUVQRZUWEUYNUWIUYOU
+      WDUVQBULUYTUWHUYBUWDUVQUYTUWGUYAUYTUWFUXTUVDUWDUVQUMUNPUYTUQUOUPXQTXRXDXS
+      UXBUVQUVFXTQYAYBAUVSUXBUVFYCXGYDUXAUWNUWKUVLUWLUWKUWNUVTYEUWLUWKUWNUVTYFU
+      WJUVLGUVFUVBGEUKZUWEUVGUWIUVKUWDUVFBULVUAUWHUVJUWDUVFVUAUWGUVIVUAUWFUVHUV
+      DUWDUVFUMUNPVUAUQUOUPXQTYGYHXSVHYNYIYJYKUVAUWBUVOUWCUVCUVBCUVCSZUGZUVGVUB
+      UVHKZLZUVFMZUHZEUVBNZUVOUVAVUCUWBUVAUVBUVBCUGZUVCUVBMZVUCUVAUVBBCUGZUYRVU
+      IBCDFYOZUYSUVBBUVBCYLTVUJUVAUVBIUTWDUVBUVBUVCCYMTYPUVAUWBVUHUVAUWAVUGEUVB
+      UVAUWNOZUVTVUFUVGUVTAUVSUVQVIZUVFMVUMVUFAUVSUVQUVFYCVUMVUNVUEUVFVUMVUNCUV
+      SKZLZVUEUVAVUNVUPRZUWNUVACVKZVUQUVAVUKVURVULUVBBCVLQAUVSCVMQYPVUMVUOVUDVU
+      MCUVSSZVNVUBUVHSZVNVUOVUDVUMVUSVUTVUMVUSCUVCUVHJZSVUTVUMUVSVVACVUMUVSUVBU
+      VHJZIJVVAVUMUVHVVBIUWNUVHVVBRUVAUWNVVBUVHUVBJZUVHUVHUVBVOUWNUYFVVCUVHRUYI
+      UVHUVBUUEWOUUAVCUUBUVBIUVHUUFYQUUCCUVCUVHVQYQWICUVSXBVUBUVHXBWJPWKYRUUDYS
+      UUGUUHUVNVUCVUHOUBVUBCUVCCBYTUCUUPFBYTUUIUUJUUKUVDVUBRZUVEVUCUVMVUHUVCUVB
+      UVDVUBUULVVDUVLVUGEUVBVVDUVKVUFUVGVVDUVJVUEUVFVVDUVIVUDUVDVUBUVHUUMPYRYSU
+      UNUUOUUQTYNUURUUSUUT $.
+      $( [2-Apr-2015] $)
+
+    $( A set is closed in an algebraic closure system iff it contains all
+       closures of finite subsets. $)
+    acsfiel $p |- ( C e. ( ACS ` X ) -> ( S e. C <->
+          ( S C_ X /\ A. y e. ( ~P S i^i Fin ) ( K ` y ) C_ S ) ) ) $=
+      ? $.
+  $}
+
+  ${
+    $( An algebraic closure system contains all directed unions of closed
+       sets. $)
+    acsdrsel $p |- ( ( C e. ( ACS ` X ) /\ Y C_ C /\
+          ( toInc ` Y ) e. Dirset ) -> U. Y e. C ) $=
+      ? $.
+
+    acsdrscl.k $e |- K = ( mrCls ` C ) $.
+    $( In an algebraic closure system, closure commutes with directed
+       unions. $)
+    acsdrscl $p |- ( ( C e. ( ACS ` X ) /\ Y C_ ~P X /\
+          ( toInc ` Y ) e. Dirset ) -> ( K ` U. Y ) = U. ( K " Y ) ) $=
+      ? $.
+
+    $( A closure in an algebraic closure system is the union of the closures of
+       finite subsets. $)
+    acsficl $p |- ( ( C e. ( ACS ` X ) /\ S C_ X ) ->
+        ( K ` S ) = U. ( K " ( ~P S i^i Fin ) ) ) $=
+      ? $.
+    $( PLEASE PUT DESCRIPTION HERE. $)
+    isacs3 $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
+          A. s e. ~P X ( K ` s ) = U. ( K " ( ~P s i^i Fin ) ) ) ) $=
+      ? $.
   $}
 
 $(
