@@ -4372,6 +4372,26 @@ $)
   $}
 
   ${
+    $d A c f $.  $d A x $.  $d B c f $.  $d B x z $.  $d f x z $.
+    $( A finite subset of a union is covered by finitely many elements. $)
+    fissuni $p |- ( ( A C_ U. B /\ A e. Fin ) ->
+        E. c e. ( ~P B i^i Fin ) A C_ U. c ) $=
+      ( vf vx vz cuni wss cfn wcel wa cv wral simpr dfss3 adantr syl2anc sylibr
+      wrex cvv cfv wex cpw cin wel eluni2 ralbii bitri biimpi eleq2 ac6sfi cima
+      wf crn imassrn frn syl5ss vex imaexg ax-mp elpw ad2antrl wfun ffun simplr
+      imafi elin sylanbrc wfn ffn ssid a1i fnfvima syl3anc elssuni syl ralimdva
+      sseld imp adantl wceq unieq sseq2d rcla4ev ex exlimdv mpd ) ABGZHZAIJZKZA
+      BDLZUMZELZWNWLUAZJZEAMZKZDUBZACLZGZHZCBUCZIUDZSZWKWJEFUEZFBSZEAMZWSWIWJNW
+      IXHWJWIXHWIWNWHJZEAMXHEAWHOXIXGEAFWNBUFUGUHUIPXFWPEFABDFLWOWNUJUKQWKWRXED
+      WKWRXEWKWRKZWLAULZXDJZAXKGZHZXEXJXKXCJZXKIJZXLWMXOWKWQWMXKBHXOWMXKWLUNBWL
+      AUOABWLUPUQXKBWLTJXKTJDURWLATUSUTVARVBXJWLVCZWJXPWMXQWKWQABWLVDVBWIWJWRVE
+      WLAVFQXKXCIVGVHWRXNWKWRWNXMJZEAMZXNWMWQXSWMWPXREAWMWNAJZKZWOXMWNYAWOXKJZW
+      OXMHYAWLAVIZAAHZXTYBWMYCXTABWLVJPYDYAAVKVLWMXTNAAWLWNVMVNWOXKVOVPVRVQVSEA
+      XMORVTXBXNCXKXDWTXKWAXAXMAWTXKWBWCWDQWEWFWG $.
+      $( [2-Apr-2015] $)
+  $}
+
+  ${
     suppfif1.f $e |- ( ph -> ( `' F " ( _V \ { Z } ) ) e. Fin ) $.
     suppfif1.g $e |- ( ph -> G : X -1-1-> Y ) $.
     $( Formula building theorem for finite supports: rearranging the index
@@ -7015,8 +7035,8 @@ $)
        arities (especially if the axiom of infinity ~ omex is to be avoided),
        we consider a single function defined on finite sets instead. $)
     df-acs $a |- ACS = ( x e. _V |-> { c e. ( Moore ` x ) |
-            E. f ( f : ( ~P x i^i Fin ) --> ~P x /\
-                A. s e. ~P x ( s e. c <-> U. ( f " ~P s ) C_ s ) ) } ) $.
+            E. f ( f : ~P x --> ~P x /\ A. s e. ~P x ( s e. c <->
+                    U. ( f " ( ~P s i^i Fin ) ) C_ s ) ) } ) $.
   $}
 
   ${
@@ -7329,6 +7349,14 @@ $)
       ( vs cmre cfv wcel wss wa cv crab cint ssintub mrcval syl5sseqr ) ADGHIBD
       JKBFLJFAMNBBCHFBAOABCDFEPQ $.
       $( [31-Jan-2015] $)
+
+    $( A set is closed iff it contains its closure. $)
+    mrcidb2 $p |- ( ( C e. ( Moore ` X ) /\ U C_ X ) ->
+        ( U e. C <-> ( F ` U ) C_ U ) ) $=
+      ( cmre cfv wcel wss wa wceq mrcidb adantr mrcssid biantrud syl6rbbr bitrd
+      wb eqss ) ADFGHZBDIZJZBAHZBCGZBKZUDBIZTUCUERUAABCDELMUBUFUFBUDIZJUEUBUGUF
+      ABCDENOUDBSPQ $.
+      $( [2-Apr-2015] $)
 
     $( The closure operation is idempotent.  (Contributed by Stefan O'Rear,
        31-Jan-2015.) $)
@@ -7902,118 +7930,322 @@ $(
 $)
 
   ${
-    $d C c f s $.
-    $d C t y $.
-    $d K f s t y $.
-    $d X c f s x $.
+    $d A a $.  $d A w z $.  $d A x y $.  $d X w z $.  $d x z $.  $d y z $.
+    $( Condition for a family of sets to be directed by inclusion. $)
+    isipodrs $p |- ( ( toInc ` A ) e. Dirset <-> ( A e. _V /\ A =/= (/) /\
+            A. x e. A A. y e. A E. z e. A ( x u. y ) C_ z ) ) $=
+      ( cipo cfv wcel cvv c0 wne cv wss wrex wral w3a cbs eqid wa wb anbi12d wn
+      cdrs cun wceq drsbn0 df-ne sylib fvprc fveq2d cnx baseid str0 nsyl2 simp1
+      syl6eqr cpreset cple wbr isdrs cpo ipopos posprs ax-mp a1i id 2thd ipobas
+      neeq1 rexeq raleqbi1dv syl simpll simplrl simpr ipole syl3anc unss syl6bb
+      simplrr rexbidva 2ralbidva anbi2d bitr3d 3anass 3bitr4g syl5bb pm5.21nii
+      ) DEFZUBGZDHGZWJDIJZAKZBKZUCCKZLZCDMZBDNADNZOZWIWHPFZIUDZWJWIWSIJZWTUAWSW
+      HWSQZUEWSIUFUGWJUAZWSIPFIXCWHIPDEUHUIPUJPFAAUKULUOUMWJWKWQUNWIWHUPGZXAWLW
+      NWHUQFZURZWMWNXEURZRZCWSMZBWSNZAWSNZOZWJWRABCWSWHXEXBXEQZUSWJXDXAXKRZRWJW
+      KWQRZRXLWRWJXDWJXNXOWJXDWJXDWJWHUTGXDDWHWHQZVAWHVBVCVDWJVEVFWJWKXHCDMZBDN
+      ZADNZRZXNXOWJDWSUDZXTXNSDWHHXPVGYAWKXAXSXKDWSIVHXRXJADWSXQXIBDWSXHCDWSVIV
+      JVJTVKWJXSWQWKWJXQWPABDDWJWLDGZWMDGZRZRZXHWOCDYEWNDGZRZXHWLWNLZWMWNLZRWOY
+      GXFYHXGYIYGWJYBYFXFYHSWJYDYFVLZWJYBYCYFVMYEYFVNZDWHXEHWLWNXPXMVOVPYGWJYCY
+      FXGYISYJWJYBYCYFVSYKDWHXEHWMWNXPXMVOVPTWLWMWNVQVRVTWAWBWCTXDXAXKWDWJWKWQW
+      DWEWFWG $.
+      $( [2-Apr-2015] $)
+
+    $( Direction by inclusion as used here implies sethood. $)
+    ipodrscl $p |- ( ( toInc ` A ) e. Dirset -> A e. _V ) $=
+      ( vx vy vz cipo cfv cdrs wcel cvv c0 wne cv cun wss wrex isipodrs simp1bi
+      wral ) AEFGHAIHAJKBLCLMDLNDAOCARBARBCDAPQ $.
+      $( [2-Apr-2015] $)
+
+    $( Finite upper bound property for directed collections of sets. $)
+    ipodrsfi $p |- ( ( ( toInc ` A ) e. Dirset /\ X C_ A /\ X e. Fin ) ->
+        E. z e. A U. X C_ z ) $=
+      ( vw cipo cfv cdrs wcel wss cfn w3a cv cple wbr wral wrex cvv 3ad2ant1 wa
+      eqid cbs cuni simp2 ipodrscl ipobas syl sseqtrd drsdirfi syld3an2 rexeqdv
+      wceq wb adantr sselda adantrl simprl ipole syl3anc anassrs unissb syl6bbr
+      ralbidva rexbidva bitr3d mpbid ) BEFZGHZCBIZCJHZKZDLZALZVFMFZNZDCOZAVFUAF
+      ZPZCUBVLIZABPZVGCVPIVHVIVQVJCBVPVGVHVIUCZVGVHBVPUKZVIVGBQHZWABUDZBVFQVFTZ
+      UEUFRZUGADVPVFVMCVPTVMTZUHUIVJVOABPVQVSVJVOABVPWEUJVJVOVRABVJVLBHZSZVOVKV
+      LIZDCOVRWHVNWIDCVJWGVKCHZVNWIULZVJWGWJSZSWBVKBHZWGWKVJWBWLVGVHWBVIWCRUMVJ
+      WJWMWGVJCBVKVTUNUOVJWGWJUPBVFVMQVKVLWDWFUQURUSVBDCVLUTVAVCVDVE $.
+      $( [2-Apr-2015] $)
+
+    $( A set is the union of its finite subsets. $)
+    unifpw $p |- U. ( ~P A i^i Fin ) = A $=
+      ( va cpw cfn cin cuni cv wcel wss inss1 uniss ax-mp unipw sseqtri snelpwi
+      sseli csn snfi a1i elin sylanbrc elssuni syl vex snid sseldd impbii eqriv
+      ) BACZDEZFZABGZUKHULAHZUKAULUKUIFZAUJUIIUKUNIUIDJUJUIKLAMNPUMULQZUKULUMUO
+      UJHZUOUKIUMUOUIHUODHZUPULAOUQUMULRSUOUIDTUAUOUJUBUCULUOHUMULBUDUESUFUGUH
+      $.
+      $( [2-Apr-2015] $)
+
+    $( The finite subsets of any set are directed by inclusion. $)
+    fpwipodrs $p |- ( A e. V -> ( toInc ` ( ~P A i^i Fin ) ) e. Dirset ) $=
+      ( vx vy vz wcel cpw cfn cin cvv c0 wne cv cun wss wral elin wa elpwi vex
+      wrex cipo cfv cdrs pwexg inex1g syl 0elpw 0fin mpbir2an ne0i mp1i anim12i
+      unss unex elpw bitr4i sylib ad2ant2r unfi ad2ant2l sylanbrc syl2anb sseq2
+      ssid rcla4ev sylancl rgen2a a1i isipodrs syl3anbrc ) ABFZAGZHIZJFZVNKLZCM
+      ZDMZNZEMZOZEVNUAZDVNPCVNPZVNUBUCUDFVLVMJFVOABUEVMHJUFUGKVNFZVPVLWDKVMFKHF
+      AUHUIKVMHQUJVNKUKULWCVLWBCDVNVQVNFZVRVNFZRVSVNFZVSVSOZWBWEVQVMFZVQHFZRZVR
+      VMFZVRHFZRZWGWFVQVMHQVRVMHQWKWNRVSVMFZVSHFZWGWIWLWOWJWMWIWLRVQAOZVRAOZRZW
+      OWIWQWLWRVQASVRASUMWSVSAOWOVQVRAUNVSAVQVRCTDTUOUPUQURUSWJWMWPWIWLVQVRUTVA
+      VSVMHQVBVCVSVEWAWHEVSVNVTVSVSVDVFVGVHVICDEVNVJVK $.
+      $( [2-Apr-2015] $)
+  $}
+
+  ${
+    $d ph a b c u v $.  $d A a b c u v $.  $d A x y z $.  $d B a b c z $.
+    $d B x y $.  $d F a b c u v $.  $d F x y z $.  $d a x y $.  $d b y $.
+    ipodrsima.f $e |- ( ph -> F Fn ~P A ) $.
+    ipodrsima.m $e |- ( ( ph /\ ( u C_ v /\ v C_ A ) ) ->
+        ( F ` u ) C_ ( F ` v ) ) $.
+    ipodrsima.d $e |- ( ph -> ( toInc ` B ) e. Dirset ) $.
+    ipodrsima.s $e |- ( ph -> B C_ ~P A ) $.
+    ipodrsima.a $e |- ( ph -> ( F " B ) e. V ) $.
+    $( The monotone image of a directed set. $)
+    ipodrsima $p |- ( ph -> ( toInc ` ( F " B ) ) e. Dirset ) $=
+      ( vz va vb vc wcel wss wral wa vx vy cima cvv c0 wne cv cun wrex cipo cfv
+      cdrs elex syl w3a isipodrs sylib simp2d cpw wfn wceq wb syl2anc necon3bid
+      fnimaeq0 mpbird simp3d wi simplll simpr ad2antrr simprr sseldd adantr vex
+      elpwi weq sseq12 sseq1 adantl anbi12d anbi2d fveq2 syl2an vtocl2 syl12anc
+      imbi12d ex anim12d 3imtr3g exp43 imp41 reximdva ralimdva mpd uneq1 sseq1d
+      unss rexbidv ralbidv ralima uneq2 sseq2 rexima bitrd syl3anbrc ) AFEUCZUD
+      QZXGUEUFZUAUGZUBUGZUHZMUGZRZMXGUIZUBXGSZUAXGSZXGUJUKULQAXGGQXHLXGGUMUNAXI
+      EUEUFZAEUDQZXRNUGZOUGZUHPUGZRZPEUIZOESZNESZAEUJUKULQXSXRYFUOJNOPEUPUQZURA
+      XGUEEUEAFDUSZUTZEYHRZXGUEVAEUEVAVBHKYHEFVEVCVDVFAXQXTFUKZYAFUKZUHZYBFUKZR
+      ZPEUIZOESZNESZAYFYRAXSXRYFYGVGAYEYQNEAXTEQZTZYDYPOEYTYAEQZTYCYOPEAYSUUAYB
+      EQZYCYOVHZAYSUUAUUBUUCYTUUAUUBTZTZXTYBRZYAYBRZTYKYNRZYLYNRZTYCYOUUEUUFUUH
+      UUGUUIUUEUUFUUHUUEUUFTAUUFYBDRZUUHAYSUUDUUFVIUUEUUFVJUUEUUJUUFUUEYBYHQUUJ
+      UUEEYHYBAYJYSUUDKVKYTUUAUUBVLVMYBDVPUNZVNACUGZBUGZRZUUMDRZTZTZUULFUKZUUMF
+      UKZRZVHZAUUFUUJTZTZUUHVHCBXTYBNVOPVOZCNVQZBPVQZTZUUQUVCUUTUUHUVGUUPUVBAUV
+      GUUNUUFUUOUUJUULXTUUMYBVRUVFUUOUUJVBZUVEUUMYBDVSZVTWAWBUVEUURYKVAUUSYNVAZ
+      UUTUUHVBUVFUULXTFWCUUMYBFWCZUURYKUUSYNVRWDWGIWEWFWHUUEUUGUUIUUEUUGTAUUGUU
+      JUUIAYSUUDUUGVIUUEUUGVJUUEUUJUUGUUKVNUVAAUUGUUJTZTZUUIVHCBYAYBOVOUVDCOVQZ
+      UVFTZUUQUVMUUTUUIUVOUUPUVLAUVOUUNUUGUUOUUJUULYAUUMYBVRUVFUVHUVNUVIVTWAWBU
+      VNUURYLVAUVJUUTUUIVBUVFUULYAFWCUVKUURYLUUSYNVRWDWGIWEWFWHWIXTYAYBWRYKYLYN
+      WRWJWKWLWMWNWNWOAXQYKXKUHZXMRZMXGUIZUBXGSZNESZYRAYIYJXQUVTVBHKXPUVSUANYHE
+      FXJYKVAZXOUVRUBXGUWAXNUVQMXGUWAXLUVPXMXJYKXKWPWQWSWTXAVCAUVSYQNEAUVSYMXMR
+      ZMXGUIZOESZYQAYIYJUVSUWDVBHKUVRUWCUBOYHEFXKYLVAZUVQUWBMXGUWEUVPYMXMXKYLYK
+      XBWQWSXAVCAUWCYPOEAYIYJUWCYPVBHKUWBYOMPYHEFXMYNYMXCXDVCWTXEWTXEVFUAUBMXGU
+      PXF $.
+      $( [2-Apr-2015] $)
+  $}
+
+  ${
+    $d C c f s $.  $d C t y $.  $d F f s t y z $.  $d S s y $.  $d X c f s x $.
     $d X t y $.
     $( A set is an algebraic closure system iff it is specified by some
        function of the finite subsets, such that a set is closed iff it does
        not expand under the operation. $)
     isacs $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
-        E. f ( f : ( ~P X i^i Fin ) --> ~P X /\
-            A. s e. ~P X ( s e. C <-> U. ( f " ~P s ) C_ s ) ) ) ) $=
-      ( vc vx cacs cfv wcel cvv cmre cpw cfn cin cv wf wb wral wa wex cima cuni
-      wss cdm elfvdm elex syl adantr crab wceq fveq2 pweq ineq1d feq23d raleqdv
-      wel anbi12d exbidv rabeqbidv df-acs fvex rabex fvmpt eleq2d eleq2 ralbidv
-      bibi1d anbi2d elrab syl6bb pm5.21nii ) ACGHZIZCJIZACKHZIZCLZMNZVQBOZPZDOZ
-      AIZVSWALUAUBWAUCZQZDVQRZSZBTZSZVMCGUDZIVNACGUECWIUFUGVPVNWGVPCKUDZIVNACKU
-      ECWJUFUGUHVNVMAVTDEUPZWCQZDVQRZSZBTZEVOUIZIWHVNVLWPAFCFOZLZMNZWRVSPZWLDWR
-      RZSZBTZEWQKHZUIWPJGWQCUJZXCWOEXDVOWQCKUKXEXBWNBXEWTVTXAWMXEWSWRVRVQVSXEWR
-      VQMWQCULZUMXFUNXEWLDWRVQXFUOUQURUSFBDEUTWOEVOCKVAVBVCVDWOWGEAVOEOZAUJZWNW
-      FBXHWMWEVTXHWLWDDVQXHWKWBWCXGAWAVEVGVFVHURVIVJVK $.
+          E. f ( f : ~P X --> ~P X /\ A. s e. ~P X ( s e. C <->
+                  U. ( f " ( ~P s i^i Fin ) ) C_ s ) ) ) ) $=
+      ( vc vx cacs cfv wcel cvv cmre cpw cv wf wb wral wa wex cdm elfvdm adantr
+      cfn cin cima cuni wss elex syl wel crab wceq fveq2 feq23d raleqdv anbi12d
+      pweq exbidv rabeqbidv df-acs fvex rabex fvmpt eleq2d eleq2 bibi1d ralbidv
+      anbi2d elrab syl6bb pm5.21nii ) ACGHZIZCJIZACKHZIZCLZVPBMZNZDMZAIZVQVSLUB
+      UCUDUEVSUFZOZDVPPZQZBRZQZVLCGSZIVMACGTCWGUGUHVOVMWEVOCKSZIVMACKTCWHUGUHUA
+      VMVLAVRDEUIZWAOZDVPPZQZBRZEVNUJZIWFVMVKWNAFCFMZLZWPVQNZWJDWPPZQZBRZEWOKHZ
+      UJWNJGWOCUKZWTWMEXAVNWOCKULXBWSWLBXBWQVRWRWKXBWPWPVPVPVQWOCUPZXCUMXBWJDWP
+      VPXCUNUOUQURFBDEUSWMEVNCKUTVAVBVCWMWEEAVNEMZAUKZWLWDBXEWKWCVRXEWJWBDVPXEW
+      IVTWAXDAVSVDVEVFVGUQVHVIVJ $.
       $( [2-Apr-2015] $)
 
     $( Algebraic closure systems are closure systems. $)
     acsmre $p |- ( C e. ( ACS ` X ) -> C e. ( Moore ` X ) ) $=
-      ( vf vs cacs cfv wcel cmre cpw cfn cin cv wf cima cuni wss wb wral wa wex
-      isacs simplbi ) ABEFGABHFGBIZJKUCCLZMDLZAGUDUEINOUEPQDUCRSCTACBDUAUB $.
+      ( vf vs cacs cfv wcel cmre cpw cv wf cfn cin cima cuni wss wb wral wa wex
+      isacs simplbi ) ABEFGABHFGBIZUCCJZKDJZAGUDUEILMNOUEPQDUCRSCTACBDUAUB $.
       $( [2-Apr-2015] $)
 
-    isacs2.k $e |- K = ( mrCls ` C ) $.
+    isacs2.f $e |- F = ( mrCls ` C ) $.
     $( In the definition of an algebraic closure system, we may always take the
        operation being closed over as the Moore closure. $)
     isacs2 $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
           A. s e. ~P X ( s e. C <->
-              A. y e. ( ~P s i^i Fin ) ( K ` y ) C_ s ) ) ) $=
-      ( vt wcel cfn cin cima cuni wss wral wa unieqd syl wceq cres syl2anc cacs
-      vf cfv cmre cpw cv wf wb wex isacs weq eleq1 pweq imaeq2d sseq12d bibi12d
-      id cbvralv simpll inss1 sseli elpwi adantl simplr mrcsscl syl3anc adantlr
-      ralrimiva ciun simpllr wfun ffun funiunfv crn incom reseq2i resres eqtr4i
-      wrel cdm frel fdm inss2 a1i eqsstrd relssres reseq1d syl5eq rneqd 3eqtr4g
-      eqtrd wi ad2antlr sspwb sylib ad2antll ssrin sseld impr eleqtrrd ad2antrl
-      df-ima jca sstrd mrcssid elpw sylibr funfvima sylc elssuni mrccl ad2antrr
-      vex mresspw sseldd simprll rcla4va mpbid anassrs sstr2 ralimdva imp iunss
-      eqsstr3d simplrr simplrl mpbird impbida syl5bi expimpd exlimdv fss fssres
-      ex mrcf adantr syl6eqr sseq1d bibi2d cmrc syl5reqr ineq1d reseq2d syl5bbr
-      df-ss in32 ralbidva biimpa fvex eqeltri resex feq1 imaeq1 ralbidv anbi12d
-      cvv cla4ev impbid pm5.32i bitri ) BDUAUCHBDUDUCHZDUEZIJZUVBUBUFZUGZEUFZBH
-      ZUVDUVFUEZKZLZUVFMZUHZEUVBNZOZUBUIZOUVAUVGAUFZCUCZUVFMZAUVHIJZNZUHZEUVBNZ
-      OZBUBDEUJUVAUVOUWBUVAUVOUWBUVAUVNUWBUBUVAUVEUVMUWBUVMGUFZBHZUVDUWDUEZKZLZ
-      UWDMZUHZGUVBNZUVAUVEOZUWBUVLUWJEGUVBEGUKZUVGUWEUVKUWIUVFUWDBULUWMUVJUWHUV
-      FUWDUWMUVIUWGUWMUVHUWFUVDUVFUWDUMUNPUWMUQUOUPURUWLUWKUWBUWLUWKOUWAEUVBUWL
-      UWKUVFUVBHZUWAUWLUWKUWNOZOZUVGUVTUWLUVGUVTUWOUVAUVGUVTUVEUVAUVGOZUVRAUVSU
-      WQUVPUVSHZOUVAUVPUVFMZUVGUVRUVAUVGUWRUSUWRUWSUWQUWRUVPUVHHUWSUVSUVHUVPUVH
-      IUTVAUVPUVFVBQZVCUVAUVGUWRVDBUVPCUVFDFVEVFVHVGVGUWPUVTOZUVGUVKUXAUVJAUVSU
-      VPUVDUCZVIZUVFUXAUVEUXCUVJRUVAUVEUWOUVTVJUVEUXCUVDUVSKZLZUVJUVEUVDVKZUXCU
-      XERUVCUVBUVDVLZAUVSUVDVMQUVEUXDUVIUVEUVDUVSSZVNUVDUVHSZVNUXDUVIUVEUXHUXIU
-      VEUXHUVDISZUVHSZUXIUXHUVDIUVHJZSUXKUVSUXLUVDUVHIVOVPUVDIUVHVQVRUVEUXJUVDU
-      VHUVEUVDVSUVDVTZIMUXJUVDRUVCUVBUVDWAUVEUXMUVCIUVCUVBUVDWBZUVCIMUVEUVBIWCW
-      DWEUVDIWFTWGWHWIUVDUVSXBUVDUVHXBWJPWKQUXAUXBUVFMZAUVSNZUXCUVFMUWPUVTUXPUW
-      PUVRUXOAUVSUWPUWROUXBUVQMZUVRUXOWLUWLUWOUWRUXQUWLUWOUWROZOZUXBUVDUVQUEZKZ
-      LZUVQUXSUXBUYAHZUXBUYBMUXSUXFUVPUXMHZOUVPUXTHZUYCUXSUXFUYDUVEUXFUVAUXRUXG
-      WMUXSUVPUVCUXMUWLUWOUWRUVPUVCHUWPUVSUVCUVPUWPUVHUVBMZUVSUVCMUWNUYFUWLUWKU
-      WNUVFDMZUYFUVFDVBZUVFDWNWOZWPUVHUVBIWQQWRWSUVEUXMUVCRUVAUXRUXNWMWTXCUXSUV
-      PUVQMZUYEUXSUVAUVPDMZUYJUVAUVEUXRUSZUXSUVPUVFDUWRUWSUWLUWOUWTWPUWOUYGUWLU
-      WRUWNUYGUWKUYHVCXAXDZBUVPCDFXETUVPUVQAXMXFXGUXTUVPUVDXHXIUXBUYAXJQUXSUVQB
-      HZUYBUVQMZUXSUVAUYKUYNUYLUYMBUVPCDFXKTZUXSUVQUVBHUWKUYNUYOUHZUXSBUVBUVQUV
-      ABUVBMZUVEUXRBDXNZXLUYPXOUWLUWKUWNUWRXPUWJUYQGUVQUVBUWDUVQRZUWEUYNUWIUYOU
-      WDUVQBULUYTUWHUYBUWDUVQUYTUWGUYAUYTUWFUXTUVDUWDUVQUMUNPUYTUQUOUPXQTXRXDXS
-      UXBUVQUVFXTQYAYBAUVSUXBUVFYCXGYDUXAUWNUWKUVLUWLUWKUWNUVTYEUWLUWKUWNUVTYFU
-      WJUVLGUVFUVBGEUKZUWEUVGUWIUVKUWDUVFBULVUAUWHUVJUWDUVFVUAUWGUVIVUAUWFUVHUV
-      DUWDUVFUMUNPVUAUQUOUPXQTYGYHXSVHYNYIYJYKUVAUWBUVOUWCUVCUVBCUVCSZUGZUVGVUB
-      UVHKZLZUVFMZUHZEUVBNZUVOUVAVUCUWBUVAUVBUVBCUGZUVCUVBMZVUCUVAUVBBCUGZUYRVU
-      IBCDFYOZUYSUVBBUVBCYLTVUJUVAUVBIUTWDUVBUVBUVCCYMTYPUVAUWBVUHUVAUWAVUGEUVB
-      UVAUWNOZUVTVUFUVGUVTAUVSUVQVIZUVFMVUMVUFAUVSUVQUVFYCVUMVUNVUEUVFVUMVUNCUV
-      SKZLZVUEUVAVUNVUPRZUWNUVACVKZVUQUVAVUKVURVULUVBBCVLQAUVSCVMQYPVUMVUOVUDVU
-      MCUVSSZVNVUBUVHSZVNVUOVUDVUMVUSVUTVUMVUSCUVCUVHJZSVUTVUMUVSVVACVUMUVSUVBU
-      VHJZIJVVAVUMUVHVVBIUWNUVHVVBRUVAUWNVVBUVHUVBJZUVHUVHUVBVOUWNUYFVVCUVHRUYI
-      UVHUVBUUEWOUUAVCUUBUVBIUVHUUFYQUUCCUVCUVHVQYQWICUVSXBVUBUVHXBWJPWKYRUUDYS
-      UUGUUHUVNVUCVUHOUBVUBCUVCCBYTUCUUPFBYTUUIUUJUUKUVDVUBRZUVEVUCUVMVUHUVCUVB
-      UVDVUBUULVVDUVLVUGEUVBVVDUVKVUFUVGVVDUVJVUEUVFVVDUVIVUDUVDVUBUVHUUMPYRYSU
-      UNUUOUUQTYNUURUUSUUT $.
+              A. y e. ( ~P s i^i Fin ) ( F ` y ) C_ s ) ) ) $=
+      ( vf vt vz cfv wcel cpw cv cfn wss wb wral wa sseq1d syl2anc cacs cmre wf
+      cin cima cuni wex isacs ciun wfun wceq ffun funiunfv bicomd syl6bb bibi2d
+      syl iunss ralbidv pm5.32i exbii simpll inss1 sseli adantl mrcsscl syl3anc
+      elpwi simplr ralrimiva adantlr adantllr wi simplll ad2antlr sstrd mrcssid
+      vex elpw sylibr inss2 elin sylanbrc mrccl mresspw ad3antrrr sseldd simprr
+      ad2antrr eleq1 pweq sseq2 raleqbidv bibi12d rcla4va mpbid weq fveq2 sstr2
+      ineq1d ralimdva cbvralv sylib mpbird impbida ex exlimdv mrcf adantr simpr
+      imp fss cmrc fvex eqeltri feq1 fveq1 anbi12d cla4ev impbid syl5bb bitri
+      cvv ) BDUAJKBDUBJKZDLZYEGMZUCZHMZBKZYFYHLZNUDZUEUFZYHOZPZHYEQZRZGUGZRYDEM
+      ZBKZAMZCJZYROZAYRLZNUDZQZPZEYEQZRZBGDHUHYDYQUUGYQYGYIIMZYFJZYHOZIYKQZPZHY
+      EQZRZGUGZYDUUGYPUUOGYGYOUUNYGYNUUMHYEYGYMUULYIYGYMIYKUUJUIZYHOZUULYGUURYM
+      YGUUQYLYHYGYFUJUUQYLUKYEYEYFULIYKYFUMUQSUNIYKUUJYHURUOUPUSUTVAYDUUPUUGYDU
+      UOUUGGYDUUOUUGYDUUORZUUFEYEUUSYRYEKZRZYSUUEYDUUTYSUUEUUOYDYSUUEUUTYDYSRZU
+      UBAUUDUVBYTUUDKZRYDYTYROZYSUUBYDYSUVCVBUVCUVDUVBUVCYTUUCKUVDUUDUUCYTUUCNV
+      CVDYTYRVHUQZVEYDYSUVCVIBYTCYRDFVFVGVJVKVLUVAUUERZYSUUJYROZIUUDQZUVFYTYFJZ
+      YROZAUUDQZUVHUVAUUEUVKUVAUUBUVJAUUDUVAUVCRZUVIUUAOZUUBUVJVMUVLYTUUALZNUDZ
+      KZUUJUUAOZIUVOQZUVMUVLYTUVNKZYTNKZUVPUVLYTUUAOZUVSUVLYDYTDOZUWAYDUUOUUTUV
+      CVNZUVLYTYRDUVCUVDUVAUVEVEUUTYRDOUUSUVCYRDVHVOVPZBYTCDFVQTYTUUAAVRVSVTUVC
+      UVTUVAUUDNYTUUCNWAVDVEYTUVNNWBWCUVLUUABKZUVRUVLYDUWBUWEUWCUWDBYTCDFWDTZUV
+      LUUAYEKUUNUWEUVRPZUVLBYEUUAYDBYEOZUUOUUTUVCBDWEZWFUWFWGUUSUUNUUTUVCYDYGUU
+      NWHZWIUUMUWGHUUAYEYHUUAUKZYIUWEUULUVRYHUUABWJUWKUUKUVQIYKUVOUWKYJUVNNYHUU
+      AWKWTYHUUAUUJWLWMWNWOTWPUVQUVMIYTUVOIAWQZUUJUVIUUAUUIYTYFWRSWOTUVIUUAYRWS
+      UQXAXKUVJUVGAIUUDAIWQUVIUUJYRYTUUIYFWRSXBXCUVFUUTUUNYSUVHPZUUSUUTUUEVIUUS
+      UUNUUTUUEUWJWIUUMUWMHYRYEHEWQZYIYSUULUVHYHYRBWJZUWNUUKUVGIYKUUDUWNYJUUCNY
+      HYRWKWTZYHYRUUJWLWMWNWOTXDXEVJXFXGYDUUGUUPUUHYEYECUCZUUGUUPYDUWQUUGYDYEBC
+      UCUWHUWQBCDFXHUWIYEBYECXLTXIYDUUGXJUUOUWQUUGRGCCBXMJYCFBXMXNXOYFCUKZYGUWQ
+      UUNUUGYEYEYFCXPUWRUUNYIUUAYHOZAYKQZPZHYEQUUGUWRUUMUXAHYEUWRUULUWTYIUWRUUL
+      UUICJZYHOZIYKQUWTUWRUUKUXCIYKUWRUUJUXBYHUUIYFCXQSUSUXCUWSIAYKUWLUXBUUAYHU
+      UIYTCWRSXBUOUPUSUXAUUFHEYEUWNYIYSUWTUUEUWOUWNUWSUUBAYKUUDUWPYHYRUUAWLWMWN
+      XBUOXRXSTXFXTYAUTYB $.
       $( [2-Apr-2015] $)
 
     $( A set is closed in an algebraic closure system iff it contains all
        closures of finite subsets. $)
     acsfiel $p |- ( C e. ( ACS ` X ) -> ( S e. C <->
-          ( S C_ X /\ A. y e. ( ~P S i^i Fin ) ( K ` y ) C_ S ) ) ) $=
-      ? $.
+          ( S C_ X /\ A. y e. ( ~P S i^i Fin ) ( F ` y ) C_ S ) ) ) $=
+      ( vs cacs cfv wcel wss wa cv cpw cfn cin wral cmre acsmre wb mress ex cdm
+      sylan pm4.71rd elfvdm elpw2g syl biimpar isacs2 simprbi adantr wceq eleq1
+      pweq ineq1d sseq2 raleqbidv bibi12d rcla4va syl2anc pm5.32da bitrd ) BEHI
+      JZCBJZCEKZVELVFAMDIZCKZACNZOPZQZLVDVEVFVDVEVFVDBERIJZVEVFBESBCEUAUDUBUEVD
+      VFVEVKVDVFLCENZJZGMZBJZVGVOKZAVONZOPZQZTZGVMQZVEVKTZVDVNVFVDEHUCZJVNVFTBE
+      HUFCEWDUGUHUIVDWBVFVDVLWBABDEGFUJUKULWAWCGCVMVOCUMZVPVEVTVKVOCBUNWEVQVHAV
+      SVJWEVRVIOVOCUOUPVOCVGUQURUSUTVAVBVC $.
+      $( [2-Apr-2015] $)
   $}
 
   ${
+    $d C s t x y $.  $d F s t x y $.  $d X s t x y $.  $d Y s t $.  $d S s $.
+    $( An algebraic closure system satisfies ~ isacs3 . $)
+    isacs3lem $p |- ( C e. ( ACS ` X ) -> ( C e. ( Moore ` X ) /\
+          A. s e. ~P C ( ( toInc ` s ) e. Dirset -> U. s e. C ) ) ) $=
+      ( vx vy cfv wcel cv cpw wa wss cfn syl elpwi sseli ad2antrr sstrd syl3anc
+      cuni adantl cacs cmre cipo cdrs wral acsmre cmrc cin mresspw sspwb sselda
+      wi sylib sspwuni adantr wrex inss1 inss2 fissuni syl2anc ad3antrrr simprr
+      ad2antll uniss ad2antrl eqid mrcss ipodrsfi simprl sseldd mrcsscl elssuni
+      simpl wel exp32 rexlimdv mpd anassrs adantrr adantlrr ralrimiva mpbir2and
+      wb acsfiel ex jca ) ABUAFGZABUBFGZCHZUCFUDGZWISZAGZULZCAIZUEABUFZWGWMCWNW
+      GWIWNGZJZWJWLWQWJJZWLWKBKZDHZAUGFZFZWKKZDWKIZLUHZUEZWQWSWJWQWIBIZKZWSWQWI
+      XGIZGXHWGWNXIWIWGAXGKZWNXIKWGWHXJWOABUIMAXGUJUMUKWIXGNMWIBUNUMZUOWRXCDXEW
+      QWJWTXEGZXCWQWJXLJZJZWTEHZSZKZEWIIZLUHZUPZXCXLXTWQWJXLWTWKKZWTLGXTXLWTXDG
+      YAXEXDWTXDLUQOWTWKNMXELWTXDLUROWTWIEUSUTVCXNXQXCEXSXNXOXSGZXQXCXNYBXQJZJZ
+      XBXPXAFZWKYDWHXQXPBKXBYEKWGWHWPXMYCWOVAXNYBXQVBYDXPWKBYBXPWKKZXNXQYBXOWIK
+      ZYFYBXOXRGYGXSXRXOXRLUQOXOWINMZXOWIVDMVEWQWSXMYCXKPQAWTXAXPBXAVFZVGRWQWJY
+      CYEWKKZXLWRYBYJXQWQWJYBYJWQWJYBJZJZXPWTKZDWIUPZYJYKYNWQYKWJYGXOLGZYNWJYBV
+      MYBYGWJYHTYBYOWJXSLXOXRLUROTDWIXOVHRTYLYMYJDWIYLDCVNZYMYJYLYPYMJZJZYEWTWK
+      YRWHYMWTAGYEWTKWGWHWPYKYQWOVAYLYPYMVBYRWIAWTWQWIAKZYKYQWPYSWGWIANTPYLYPYM
+      VIVJAXPXAWTBYIVKRYPYAYLYMWTWIVLVEQVOVPVQVRVSVTQVOVPVQVRWAWGWLWSXFJWCWPWJD
+      AWKXABYIWDPWBWEWAWF $.
+      $( [2-Apr-2015] $)
+
     $( An algebraic closure system contains all directed unions of closed
        sets. $)
     acsdrsel $p |- ( ( C e. ( ACS ` X ) /\ Y C_ C /\
           ( toInc ` Y ) e. Dirset ) -> U. Y e. C ) $=
-      ? $.
+      ( vs cacs cfv wcel wss cipo cdrs cuni wa cv wi wral elpw2g biimpar eleq1d
+      cpw cmre isacs3lem simprd adantr wceq fveq2 unieq imbi12d rcla4va syl2anc
+      3impia ) ABEFZGZCAHZCIFZJGZCKZAGZULUMLCASZGZDMZIFZJGZUTKZAGZNZDUROZUOUQNZ
+      ULUSUMCAUKPQULVFUMULABTFGVFABDUAUBUCVEVGDCURUTCUDZVBUOVDUQVHVAUNJUTCIUERV
+      HVCUPAUTCUFRUGUHUIUJ $.
+      $( [2-Apr-2015] $)
 
-    acsdrscl.k $e |- K = ( mrCls ` C ) $.
+    acsdrscl.f $e |- F = ( mrCls ` C ) $.
+    $( In a closure system in which directed unions of closed sets are closed,
+       closure commutes with directed unions. $)
+    isacs4lem $p |- ( ( C e. ( Moore ` X ) /\
+          A. s e. ~P C ( ( toInc ` s ) e. Dirset -> U. s e. C ) ) ->
+        ( C e. ( Moore ` X ) /\ A. t e. ~P ~P X ( ( toInc ` t ) e. Dirset ->
+              ( F ` U. t ) = U. ( F " t ) ) ) ) $=
+      ( vy cfv wcel cv cipo cdrs cuni wi cpw wceq wa wss syl2anc cvv cmre elpwi
+      vx wral cima simpll ad2antrl mrcuni wfn mrcf ffn syl adantr simprl simprr
+      mrcss syl3anc cmrc fvex eqeltri imaexg mp1i ipodrsima adantlr crn imassrn
+      frn syl5ss ax-mp elpw sylibr ad2antrr simplr fveq2 eleq1d imbi12d rcla4va
+      wf unieq mpd mrcid eqtrd exp32 ralrimiv ex imdistani ) BDUAHIZEJZKHZLIZWH
+      MZBIZNZEBOZUDZAJZKHLIZWPMCHZCWPUEZMZPZNZADOZOZUDZWGWOXEWGWOQZXBAXDXFWPXDI
+      ZWQXAXFXGWQQZQZWRWTCHZWTXIWGWPXCRZWRXJPWGWOXHUFZXGXKXFWQWPXCUBZUGBWPCDFUH
+      SXIWGWTBIZXJWTPXLXIWSKHZLIZXNWGXHXPWOWGXHQZGUCDWPCTWGCXCUIZXHWGXCBCVRZXRB
+      CDFUJZXCBCUKULUMXQUCJZGJZRZYBDRZQZQWGYCYDYACHYBCHRWGXHYEUFXQYCYDUNXQYCYDU
+      OBYACYBDFUPUQWGXGWQUOXGXKWGWQXMUGCTIZWSTIZXQCBURHTFBURUSUTZCWPTVAZVBVCVDX
+      IWSWNIZWOXPXNNZWGYJWOXHWGWSBRYJWGWSCVEZBCWPVFWGXSYLBRXTXCBCVGULVHWSBYFYGY
+      HYIVIVJVKVLWGWOXHVMWMYKEWSWNWHWSPZWJXPWLXNYMWIXOLWHWSKVNVOYMWKWTBWHWSVSVO
+      VPVQSVTBWTCDFWASWBWCWDWEWF $.
+      $( [2-Apr-2015] $)
+
+    $( If closure commutes with directed unions, then the closure of a set is
+       the closure of its finite subsets. $)
+    isacs5lem $p |- ( ( C e. ( Moore ` X ) /\
+          A. t e. ~P ~P X ( ( toInc ` t ) e. Dirset ->
+              ( F ` U. t ) = U. ( F " t ) ) ) -> ( C e. ( Moore ` X ) /\
+          A. s e. ~P X ( F ` s ) = U. ( F " ( ~P s i^i Fin ) ) ) ) $=
+      ( cfv wcel cv cipo cdrs cuni cima wceq wi cpw wral cfn wa wss cmre unifpw
+      cin fveq2i cvv fpwipodrs mp1i inss1 elpwi sspwb sylib adantl syl5ss inex1
+      pwex elpw sylibr adantlr simplr fveq2 eleq1d fveq2d imaeq2 unieqd eqeq12d
+      vex unieq imbi12d rcla4va syl2anc mpd syl5eqr ralrimiva ex imdistani ) BD
+      UAGHZAIZJGZKHZVQLZCGZCVQMZLZNZOZADPZPZQZEIZCGZCWIPZRUCZMZLZNZEWFQZVPWHWPV
+      PWHSZWOEWFWQWIWFHZSZWJWLLZCGZWNWTWICWIUBUDWSWLJGZKHZXAWNNZWIUEHXCWSEVFZWI
+      UEUFUGWSWLWGHZWHXCXDOZVPWRXFWHVPWRSZWLWFTXFXHWLWKWFWKRUHWRWKWFTZVPWRWIDTX
+      IWIDUIWIDUJUKULUMWLWFWKRWIXEUOUNUPUQURVPWHWRUSWEXGAWLWGVQWLNZVSXCWDXDXJVR
+      XBKVQWLJUTVAXJWAXAWCWNXJVTWTCVQWLVGVBXJWBWMVQWLCVCVDVEVHVIVJVKVLVMVNVO $.
+      $( [2-Apr-2015] $)
+
     $( In an algebraic closure system, closure commutes with directed
        unions. $)
     acsdrscl $p |- ( ( C e. ( ACS ` X ) /\ Y C_ ~P X /\
-          ( toInc ` Y ) e. Dirset ) -> ( K ` U. Y ) = U. ( K " Y ) ) $=
-      ? $.
+          ( toInc ` Y ) e. Dirset ) -> ( F ` U. Y ) = U. ( F " Y ) ) $=
+      ( vt vs cacs cfv wcel cpw cipo cdrs cuni cima wceq wa cv wi syl wb elfvdm
+      wss wral cvv pwexg elpw2g biimpar isacs3lem isacs4lem simprd adantr fveq2
+      cdm cmre eleq1d unieq fveq2d imaeq2 unieqd eqeq12d imbi12d rcla4va 3impia
+      syl2anc ) ACHIJZDCKZUCZDLIZMJZDNZBIZBDOZNZPZVFVHQDVGKZJZFRZLIZMJZVRNZBIZB
+      VROZNZPZSZFVPUDZVJVOSZVFVQVHVFVGUEJZVQVHUAVFCHUNZJWIACHUBCWJUFTDVGUEUGTUH
+      VFWGVHVFACUOIJZWGVFWKGRZLIMJWLNAJSGAKUDQWKWGQACGUIFABCGEUJTUKULWFWHFDVPVR
+      DPZVTVJWEVOWMVSVIMVRDLUMUPWMWBVLWDVNWMWAVKBVRDUQURWMWCVMVRDBUSUTVAVBVCVEV
+      D $.
+      $( [2-Apr-2015] $)
 
     $( A closure in an algebraic closure system is the union of the closures of
        finite subsets. $)
     acsficl $p |- ( ( C e. ( ACS ` X ) /\ S C_ X ) ->
-        ( K ` S ) = U. ( K " ( ~P S i^i Fin ) ) ) $=
-      ? $.
-    $( PLEASE PUT DESCRIPTION HERE. $)
+        ( F ` S ) = U. ( F " ( ~P S i^i Fin ) ) ) $=
+      ( vs vt cacs cfv wcel wa cpw cv cfn cin cima cuni wceq wral cipo wss cmre
+      cdm wb elfvdm elpw2g biimpar cdrs wi isacs3lem isacs4lem isacs5lem simprd
+      syl 3syl adantr fveq2 pweq ineq1d imaeq2d unieqd eqeq12d rcla4va syl2anc
+      ) ADHIJZBDUAZKBDLZJZFMZCIZCVILZNOZPZQZRZFVGSZBCIZCBLZNOZPZQZRZVEVHVFVEDHU
+      CZJVHVFUDADHUEBDWCUFUNUGVEVPVFVEADUBIJZVPVEWDVITIUHJVIQAJUIFALSKWDGMZTIUH
+      JWEQCICWEPQRUIGVGLSKWDVPKADFUJGACDFEUKGACDFEULUOUMUPVOWBFBVGVIBRZVJVQVNWA
+      VIBCUQWFVMVTWFVLVSCWFVKVRNVIBURUSUTVAVBVCVD $.
+      $( [2-Apr-2015] $)
+
+    $( A closure system is algebraic iff the closure of a generating set is the
+       union of the closures of its finite subsets. $)
+    isacs5 $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
+          A. s e. ~P X ( F ` s ) = U. ( F " ( ~P s i^i Fin ) ) ) ) $=
+      ( vt cfv wcel cv cpw cima cuni wceq wral wa cipo cdrs wi wss wb cacs cmre
+      cfn cin isacs3lem isacs4lem isacs5lem 3syl simpl elpwi sylan2 adantr ciun
+      mrcidb2 simpr wfun wf mrcf ffun syl funiunfv ad2antrr eqtr4d sseq1d iunss
+      syl6bb bitrd ex ralimdva imp isacs2 sylanbrc impbii ) ACUAGHZACUBGHZDIZBG
+      ZBVPJUCUDZKLZMZDCJZNZOZVNVOVPPGQHVPLAHRDAJNOVOFIZPGQHWDLBGBWDKLMRFWAJNOWC
+      ACDUEFABCDEUFFABCDEUGUHWCVOVPAHZWDBGZVPSFVRNZTZDWANZVNVOWBUIVOWBWIVOVTWHD
+      WAVOVPWAHZOZVTWHWKVTOZWEVQVPSZWGWKWEWMTZVTWJVOVPCSWNVPCUJAVPBCEUNUKULWLWM
+      FVRWFUMZVPSWGWLVQWOVPWLVQVSWOWKVTUOVOWOVSMZWJVTVOBUPZWPVOWAABUQWQABCEURWA
+      ABUSUTFVRBVAUTVBVCVDFVRWFVPVEVFVGVHVIVJFABCDEVKVLVM $.
+      $( [2-Apr-2015] $)
+
+    $( A closure system is algebraic iff closure commutes with directed
+       unions. $)
+    isacs4 $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
+          A. s e. ~P ~P X ( ( toInc ` s ) e. Dirset ->
+              ( F ` U. s ) = U. ( F " s ) ) ) ) $=
+      ( vt cacs cfv wcel cmre cv cipo cdrs cuni cima wceq wi cpw wral wa isacs5
+      isacs3lem isacs4lem syl cfn cin isacs5lem sylibr impbii ) ACGHIZACJHIZDKZ
+      LHMIULNBHBULONPQDCRZRSTZUJUKFKZLHMIUONAIQFARSTUNACFUBDABCFEUCUDUNUKUOBHBU
+      ORUEUFONPFUMSTUJDABCFEUGABCFEUAUHUI $.
+      $( [2-Apr-2015] $)
+  $}
+
+  ${
+    $d C s t $.  $d X s t $.
+    $( A closure system is algebraic iff directed unions of closed sets are
+       closed. $)
     isacs3 $p |- ( C e. ( ACS ` X ) <-> ( C e. ( Moore ` X ) /\
-          A. s e. ~P X ( K ` s ) = U. ( K " ( ~P s i^i Fin ) ) ) ) $=
-      ? $.
+          A. s e. ~P C ( ( toInc ` s ) e. Dirset -> U. s e. C ) ) ) $=
+      ( vt cacs cfv wcel cmre cv cipo cdrs cuni wi cpw wral isacs3lem cmrc cima
+      wa wceq eqid isacs4lem isacs4 sylibr impbii ) ABEFGZABHFGZCIZJFKGUHLAGMCA
+      NOSZABCPUIUGDIZJFKGUJLAQFZFUKUJRLTMDBNNOSUFDAUKBCUKUAZUBAUKBDULUCUDUE $.
+      $( [2-Apr-2015] $)
   $}
 
 $(
