@@ -3538,6 +3538,87 @@ $(
 $)
 
   ${
+    $d A x y $.  $d X x y $.
+    $( Relative intersection of an empty set. $)
+    rint0 $p |- ( X = (/) -> ( A i^i |^| X ) = A ) $=
+      ( c0 wceq cint cin inteq ineq2d cvv int0 ineq2i inv1 eqtri syl6eq ) BCDZA
+      BEZFACEZFZAOPQABCGHRAIFAQIAJKALMN $.
+      $( [3-Apr-2015] $)
+
+    $( Relative intersection of an empty family. $)
+    riin0 $p |- ( X = (/) -> ( A i^i |^|_ x e. X S ) = A ) $=
+      ( c0 wceq ciin cin iineq1 ineq2d cvv 0iin ineq2i inv1 eqtri syl6eq ) DEFZ
+      BADCGZHBAECGZHZBQRSBADECIJTBKHBSKBACLMBNOP $.
+      $( [3-Apr-2015] $)
+
+    $( Relative intersection of a nonempty set. $)
+    rintn0 $p |- ( ( X C_ ~P A /\ X =/= (/) ) -> ( A i^i |^| X ) = |^| X ) $=
+      ( cpw wss c0 wne cint cin incom wceq intssuni2 unipw syl6sseq df-ss sylib
+      wa cuni syl5eq ) BACZDBEFPZABGZHUAAHZUAAUAITUAADUBUAJTUASQABSKALMUAANOR
+      $.
+      $( [3-Apr-2015] $)
+
+    $( Relative intersection of a nonempty family. $)
+    riinn0 $p |- ( ( A. x e. X S C_ A /\ X =/= (/) ) ->
+        ( A i^i |^|_ x e. X S ) = |^|_ x e. X S ) $=
+      ( wss wral c0 wne wa ciin incom wceq wrex r19.2z ancoms iinss df-ss sylib
+      cin syl syl5eq ) CBEZADFZDGHZIZBADCJZSUFBSZUFBUFKUEUFBEZUGUFLUEUBADMZUHUD
+      UCUIUBADNOADCBPTUFBQRUA $.
+      $( [3-Apr-2015] $)
+
+    $( Relative intersection of a relative abstraction. $)
+    riinrab $p |- ( A i^i |^|_ x e. X { y e. A | ph } ) =
+        { y e. A | A. x e. X ph } $=
+      ( crab ciin cin wral wceq c0 riin0 rzal ralrimivw rabid2 sylibr eqtrd wne
+      wss ssrab2 rgenw riinn0 mpan iinrab pm2.61ine ) DBEACDFZGZHZABEIZCDFZJEKE
+      KJZUHDUJBDUFELUKUICDIDUJJUKUICDABEMNUICDOPQEKRZUHUGUJUFDSZBEIULUHUGJUMBEA
+      CDTUABDUFEUBUCABCEDUDQUE $.
+      $( [3-Apr-2015] $)
+  $}
+
+  ${
+    $d B y $.  $d X y $.
+    $( Membership in a restricted intersection. $)
+    elrint $p |- ( X e. ( A i^i |^| B ) <-> ( X e. A /\ A. y e. B X e. y ) ) $=
+      ( cint cin wcel wa cv wral elin elintg pm5.32i bitri ) DBCEZFGDBGZDOGZHPD
+      AIGACJZHDBOKPQRADCBLMN $.
+      $( [3-Apr-2015] $)
+    $( Membership in a restricted intersection. $)
+    elrint2 $p |- ( X e. A -> ( X e. ( A i^i |^| B ) <->
+          A. y e. B X e. y ) ) $=
+      ( wcel cv wral wa cint cin ibar elrint syl6rbbr ) DBEZDAFEACGZNOHDBCIJENO
+      KABCDLM $.
+      $( [3-Apr-2015] $)
+  $}
+
+  ${
+    elfpw.a $e |- A e. _V $.
+    $( Membership in a class of finite subsets. $)
+    elfpw $p |- ( A e. ( ~P B i^i Fin ) <-> ( A C_ B /\ A e. Fin ) ) $=
+      ( cpw cfn cin wcel wa wss elin elpw anbi1i bitri ) ABDZEFGANGZAEGZHABIZPH
+      ANEJOQPABCKLM $.
+      $( [4-Apr-2015] $)
+  $}
+
+  ${
+    $d A x $.  $d B x $.
+    $( Restricted universal quantification on a subset in terms of superset. $)
+    ralss $p |- ( A C_ B -> ( A. x e. A ph <->
+          A. x e. B ( x e. A -> ph ) ) ) $=
+      ( wss cv wcel wi wa ssel pm4.71rd imbi1d impexp syl6bb ralbidv2 ) CDEZABF
+      ZCGZAHZBCDPSQDGZRIZAHTSHPRUAAPRTCDQJKLTRAMNO $.
+      $( [3-Apr-2015] $)
+
+    $( Restricted existential quantification on a subset in terms of
+       superset. $)
+    rexss $p |- ( A C_ B -> ( E. x e. A ph <->
+          E. x e. B ( x e. A /\ ph ) ) ) $=
+      ( wss cv wcel wa ssel pm4.71rd anbi1d anass syl6bb rexbidv2 ) CDEZABFZCGZ
+      AHZBCDORPDGZQHZAHSRHOQTAOQSCDPIJKSQALMN $.
+      $( [3-Apr-2015] $)
+  $}
+
+  ${
     elin2.x $e |- X = ( B i^i C ) $.
     $( Membership in a class defined as an intersection. $)
     elin2 $p |- ( A e. X <-> ( A e. B /\ A e. C ) ) $=
@@ -4298,6 +4379,19 @@ $)
     syl wne lssn0 df-ne sylib pm2.65i mpgbir eqcomi ) BCDZBUFBEAFZUFGZHAAUFIUHU
     GBEZUHUGBJUIUFUGBBKLKDAAMNUFOZPUGQRUHUGBSUIHUFUGBUJTUGBUAUBUCUDUE $.
     $( [31-Mar-2015] $)
+
+  ${
+    $d a b $.
+    $( ~ fvco4i lemma for linear spans. $)
+    00lsp $p |- (/) = ( LSpan ` (/) ) $=
+    ( va vb c0 clspn cfv cpw cv wss crab cint cmpt cvv wcel wceq 0ex eqid ax-mp
+    cbs eqtri mpbir cnx baseid str0 00lss lspfval cdm dmmpt wn wral vprc inteqi
+    rab0 int0 eleq1i mtbir rgenw rabeq0 wrel wfun funmpt funrel reldm0 eqtr2i
+    wb ) CDEZACFZAGBGHZBCIZJZKZCCLMVEVJNOBCVECCLARUAREAAUBUCUDVEPUEQVJCNZVJUFZC
+    NZVLVILMZAVFIZCAVFVIVJVJPUGVOCNVNUHZAVFUIVPAVFVNLLMUJVILLVICJLVHCVGBULUKUMS
+    UNUOUPVNAVFUQTSVJURZVKVMVDVJUSVQAVFVIUTVJVAQVJVBQTVC $.
+    $( [4-Apr-2015] $)
+  $}
 
   ${
     $d ph x $.  $d Y x $.  $d Z x $.
@@ -7112,6 +7206,26 @@ $)
       URWFWIWJWIADUSUTVAVTAFDVBVCVDWAFVEVIVFVGVHVJBWBEVKVLVM $.
       $( [1-Feb-2015] $)
 
+    $( The relative intersection of a set of closed sets is closed. $)
+    mrerintcl $p |- ( ( C e. ( Moore ` X ) /\ S C_ C ) ->
+        ( X i^i |^| S ) e. C ) $=
+      ( cmre cfv wcel wss wa cint cin wceq rint0 adantl mre1cl ad2antrr eqeltrd
+      c0 wne w3a cpw simp2 mresspw 3ad2ant1 sstrd simp3 rintn0 syl2anc mreintcl
+      3expa pm2.61dane ) ACDEFZBAGZHZCBIZJZAFZBQUMBQKZHUOCAUQUOCKUMCBLMUKCAFULU
+      QACNOPUKULBQRZUPUKULURSZUOUNAUSBCTZGURUOUNKUSBAUTUKULURUAUKULAUTGURACUBUC
+      UDUKULURUECBUFUGABCUHPUIUJ $.
+      $( [3-Apr-2015] $)
+
+    $( The relative intersection of a family of closed sets is closed. $)
+    mreriincl $p |- ( ( C e. ( Moore ` X ) /\ A. y e. I S e. C ) ->
+        ( X i^i |^|_ y e. I S ) e. C ) $=
+      ( cmre cfv wcel wral wa ciin c0 wceq riin0 adantl mre1cl ad2antrr eqeltrd
+      cin wne wss mress ex ralimdv imp riinn0 sylan simpll simpr simplr syl3anc
+      mreiincl pm2.61dane ) BEFGHZCBHZADIZJZEADCKZSZBHDLUQDLMZJUSEBUTUSEMUQAECD
+      NOUNEBHUPUTBEPQRUQDLTZJZUSURBUQCEUAZADIZVAUSURMUNUPVDUNUOVCADUNUOVCBCEUBU
+      CUDUEAECDUFUGVBUNVAUPURBHUNUPVAUHUQVAUIUNUPVAUJABCDEULUKRUM $.
+      $( [3-Apr-2015] $)
+
     $( Two closed sets have a closed intersection.  (Contributed by Stefan
        O'Rear, 30-Jan-2015.) $)
     mreincl $p |- ( ( C e. ( Moore ` X ) /\ A e. C /\ B e. C ) ->
@@ -7152,6 +7266,22 @@ $)
       3expia ismre syl3anbrc ) ABCHICBJDKZLMZUFNBJZOZDBHZPBCQRJEFAUIDUJUFUJJAUF
       BIZUIUFBDSTAUKUGUHGUCUAUBBCDUDUE $.
       $( [30-Jan-2015] $)
+  $}
+
+  ${
+    $d ph s $.  $d C s $.  $d X s $.
+    ismred2.ss $e |- ( ph -> C C_ ~P X ) $.
+    ismred2.in $e |- ( ( ph /\ s C_ C ) -> ( X i^i |^| s ) e. C ) $.
+    $( Properties that determine a Moore collection, using restricted
+       intersection. $)
+    ismred2 $p |- ( ph -> C e. ( Moore ` X ) ) $=
+      ( c0 cint cin wceq eqid rint0 ax-mp wss wcel 0ss cv wa wi 0ex sseq1 inteq
+      anbi2d ineq2d eleq1d imbi12d vtocl mpan2 syl5eqelr wne w3a simp2 3ad2ant1
+      cpw sstrd simp3 rintn0 syl2anc 3adant3 eqeltrrd ismred ) ABCDEACCGHZIZBGG
+      JVCCJGKCGLMAGBNZVCBOZBPADQZBNZRZCVFHZIZBOZSAVDRZVESDGTVFGJZVHVLVKVEVMVGVD
+      AVFGBUAUCVMVJVCBVMVIVBCVFGUBUDUEUFFUGUHUIAVGVFGUJZUKZVJVIBVOVFCUNZNVNVJVI
+      JVOVFBVPAVGVNULAVGBVPNVNEUMUOAVGVNUPCVFUQURAVGVKVNFUSUTVA $.
+      $( [3-Apr-2015] $)
   $}
 
   ${
@@ -8106,6 +8236,15 @@ $)
       HUFCEWDUGUHUIVDWBVFVDVLWBABDEGFUJUKULWAWCGCVMVOCUMZVPVEVTVKVOCBUNWEVQVHAV
       SVJWEVRVIOVOCUOUPVOCVGUQURUSUTVAVBVC $.
       $( [2-Apr-2015] $)
+
+    $( A set is closed in an algebraic closure system iff it contains all
+       closures of finite subsets. $)
+    acsfiel2 $p |- ( ( C e. ( ACS ` X ) /\ S C_ X ) -> ( S e. C <->
+          A. y e. ( ~P S i^i Fin ) ( F ` y ) C_ S ) ) $=
+      ( cacs cfv wcel wss wa cv cpw cfn cin wral wb acsfiel adantr ibar adantl
+      bitr4d ) BEGHIZCEJZKCBIZUDALDHCJACMNOPZKZUFUCUEUGQUDABCDEFRSUDUFUGQUCUDUF
+      TUAUB $.
+      $( [3-Apr-2015] $)
   $}
 
   ${
@@ -8246,6 +8385,388 @@ $)
       wa wceq eqid isacs4lem isacs4 sylibr impbii ) ABEFGZABHFGZCIZJFKGUHLAGMCA
       NOSZABCPUIUGDIZJFKGUJLAQFZFUKUJRLTMDBNNOSUFDAUKBCUKUAZUBAUKBDULUCUDUE $.
       $( [2-Apr-2015] $)
+  $}
+
+  ${
+    $d F a s t $.  $d F f $.  $d V a t $.  $d X a s t $.  $d X f $.
+    $d f s t $.
+    $( A closure system determined by a function is a closure system and
+       algebraic. $)
+    isacs1i $p |- ( ( X e. V /\ F : ~P X --> ~P X ) ->
+        { s e. ~P X | U. ( F " ( ~P s i^i Fin ) ) C_ s } e. ( ACS ` X ) ) $=
+      ( vf vt va wcel cpw wa cv cfn cin cima cuni wss wral syl unieqd cvv wf wb
+      crab cmre cfv wex cacs ssrab2 a1i cint elpw2g mpbiri ad2antrr crn imassrn
+      inss1 adantl syl5ss uniss unipw syl6sseq adantr inss2 intss1 sspwb biimpi
+      frn wel ssrin 3syl imass2 ssel2 pweq ineq1d imaeq2d sseq12d elrab simprbi
+      id adantll sstrd ralrimiva ssint sylibr ssin bicomi sylanbrc wceq ismred2
+      weq cxp fssxp pwexg xpexg anidms ssexg syl2anr simpr elrab3 rgen jca feq1
+      imaeq1 sseq1d bibi2d ralbidv anbi12d cla4egv sylc isacs ) CBHZCIZXLAUAZJZ
+      ADKZIZLMZNZOZXOPZDXLUCZCUDUEHXLXLEKZUAZFKZYAHZYBYDIZLMZNZOZYDPZUBZFXLQZJZ
+      EUFZYACUGUEHXNYACFYAXLPXNXTDXLUHUIXNYDYAPZJZCYDUJZMZXLHZAYRIZLMZNZOZYRPZY
+      RYAHXKYSXMYOXKYSYRCPCYQUPYRCBUKULUMYPUUCCPZUUCYQPZUUDXNUUEYOXNUUCXLOZCXNU
+      UBXLPUUCUUGPXNUUBAUNZXLAUUAUOXMUUHXLPXKXLXLAVGUQURUUBXLUSRCUTVAVBYPUUCGKZ
+      PZGYDQUUFYPUUJGYDYPGFVHZJZUUCAUUIIZLMZNZOZUUIUULUUAUUNPZUUBUUOPUUCUUPPUUL
+      YRUUIPZYTUUMPZUUQUUKUURYPUUKYRYQUUICYQVCUUIYDVDURUQUURUUSYRUUIVEVFYTUUMLV
+      IVJUUAUUNAVKUUBUUOUSVJYOUUKUUPUUIPZXNYOUUKJUUIYAHZUUTYDYAUUIVLUVAUUIXLHUU
+      TXTUUTDUUIXLDGWJZXSUUPXOUUIUVBXRUUOUVBXQUUNAUVBXPUUMLXOUUIVMVNVOSUVBVSVPV
+      QVRRVTWAWBGUUCYDWCWDUUEUUFJUUDUUCCYQWEWFWGXTUUDDYRXLXOYRWHZXSUUCXOYRUVCXR
+      UUBUVCXQUUAAUVCXPYTLXOYRVMVNVOSUVCVSVPVQWGWIXNATHZXMYEAYGNZOZYDPZUBZFXLQZ
+      JZYNXMAXLXLWKZPUVKTHZUVDXKXLXLAWLXKXLTHZUVLCBWMUVMUVLXLXLTTWNWORAUVKTWPWQ
+      XNXMUVIXKXMWRUVIXNUVHFXLXTUVGDYDXLDFWJZXSUVFXOYDUVNXRUVEUVNXQYGAUVNXPYFLX
+      OYDVMVNVOSUVNVSVPWSWTUIXAYMUVJEATYBAWHZYCXMYLUVIXLXLYBAXBUVOYKUVHFXLUVOYJ
+      UVGYEUVOYIUVFYDUVOYHUVEYBAYGXCSXDXEXFXGXHXIYAECFXJWG $.
+      $( [3-Apr-2015] $)
+  $}
+
+  ${
+    $d K a b c $.  $d T a b c $.  $d V a b c $.  $d X a b c x $.  $d a d e $.
+    $d a f $.  $d b d e $.  $d b f $.  $d c d e $.  $d c f $.  $d d f x $.
+    $d e x $.
+    $( Algebraicity is a composible property; combining several algebraic
+       closure properties gives another. $)
+    mreacs $p |- ( X e. V -> ( ACS ` X ) e. ( Moore ` ~P X ) ) $=
+      ( va vf vb vc vd ve cv cfv cpw cmre wcel wceq wss syl sylibr wral wa cvv
+      vx cacs fveq2 pweq fveq2d eleq12d wtru acsmre mresspw vex elpw ssriv cint
+      a1i cin wf cfn cima cuni wb mremre mp1i sstr mpan2 mrerintcl syl2anc cmrc
+      wex ciun cmpt cxp wel ssel2 eqid mrcssv ralrimiva iunss elpw2 fmptd fssxp
+      adantr pwex ssexg sylancl adantlr elpwi ad2antlr acsfiel2 ralbidva ralbii
+      xpex ralcom bitri syl6bbr elrint2 adantl wfun funmpt funiunfv ax-mp inss1
+      sseq1i sspwb syl5ss sselda ad2antrr iuneq2dv fvmptg sseq1d syl5bb syl5bbr
+      sylib weq 3bitr4d feq1 imaeq1 unieqd bibi2d ralbidv anbi12d cla4egv isacs
+      jca sylc sylanbrc ismred2 trud vtoclg ) UAIZUBJZYIKZLJZMZBUBJZBKZLJZMUABA
+      YIBNZYJYNYLYPYIBUBUCYQYKYOLYIBUDUEUFYMUGYJYKCYJYKKZOUGCYJYRCIZYJMZYSYKOZY
+      SYRMYTYSYILJZMUUAYSYIUHZYSYIUIPYSYKCUJUKQULUNYSYJOZYKYSUMUOZYJMZUGUUDUUEU
+      UBMZYKYKDIZUPZEIZUUEMZUUHUUJKZUQUOZURZUSZUUJOZUTZEYKRZSZDVHZUUFUUDUUBYLMZ
+      YSUUBOZUUGYITMZUVAUUDUAUJZTYIVAVBUUDYJUUBOUVBCYJUUBUUCULYSYJUUBVCVDUUBYSY
+      KVEVFUUDFYKGYSFIZGIZVGJZJZVIZVJZTMZYKYKUVJUPZUUKUVJUUMURZUSZUUJOZUTZEYKRZ
+      SZUUTUUDUVJYKYKVKZOZUVSTMUVKUUDUVLUVTUUDFYKUVIYKUVJUUDUVEYKMZSZUVIYIOZUVI
+      YKMUWBUVHYIOZGYSRZUWCUUDUWEUWAUUDUWDGYSUUDGCVLZSZUVFUUBMZUWDUWGUVFYJMZUWH
+      YSYJUVFVMZUVFYIUHPZUVFUVEUVGYIUVGVNZVOPVPWAGYSUVHYIVQQUVIYIUVDVRQUVJVNZVS
+      ZYKYKUVJVTPYKYKYIUVDWBZUWOWKUVJUVSTWCWDUUDUVLUVQUWNUUDUVPEYKUUDUUJYKMZSZE
+      GVLZGYSRZGYSHIZUVGJZVIZUUJOZHUUMRZUUKUVOUWQUWSUXAUUJOZHUUMRZGYSRZUXDUWQUW
+      RUXFGYSUWQUWFSUWIUUJYIOZUWRUXFUTUUDUWFUWIUWPUWJWEUWPUXHUUDUWFUUJYIWFZWGHU
+      VFUUJUVGYIUWLWHVFWIUXDUXEGYSRZHUUMRUXGUXCUXJHUUMGYSUXAUUJVQWJUXEHGUUMYSWL
+      WMWNUWPUUKUWSUTUUDGYKYSUUJWOWPUVOHUUMUWTUVJJZVIZUUJOZUWQUXDUXLUVNUUJUVJWQ
+      UXLUVNNFYKUVIWRHUUMUVJWSWTXBUXMUXKUUJOZHUUMRUWQUXDHUUMUXKUUJVQUWQUXNUXCHU
+      UMUWQUWTUUMMZSZUXKUXBUUJUXPUWTYKMUXBTMZUXKUXBNUWQUUMYKUWTUWQUUMUULYKUULUQ
+      XAUWPUULYKOZUUDUWPUXHUXRUXIUUJYIXCXLWPXDXEUXPUXBYIOZUVCUXQUXPUXAYIOZGYSRZ
+      UXSUUDUYAUWPUXOUUDUXTGYSUWGUWHUXTUWKUVFUWTUVGYIUWLVOPVPXFGYSUXAYIVQQUVDUX
+      BYITWCWDFUWTUVIUXBYKTUVJFHXMZGYSUVHUXAUYBUVHUXANUWFUVEUWTUVGUCWAXGUWMXHVF
+      XIWIXJXKXNVPYCUUSUVRDUVJTUUHUVJNZUUIUVLUURUVQYKYKUUHUVJXOUYCUUQUVPEYKUYCU
+      UPUVOUUKUYCUUOUVNUUJUYCUUNUVMUUHUVJUUMXPXQXIXRXSXTYAYDUUEDYIEYBYEWPYFYGYH
+      $.
+      $( [3-Apr-2015] $)
+
+    $( Algebraicity of a conditional point closure condition. $)
+    acsfn $p |- ( ( ( X e. V /\ K e. X ) /\ ( T C_ X /\ T e. Fin ) ) ->
+        { a e. ~P X | ( T C_ a -> K e. a ) } e. ( ACS ` X ) ) $=
+      ( vb vc wcel wa wss cfn cv wi wceq c0 wral syl wb adantl wal cpw crab csn
+      cif cmpt cin cima cuni cacs cfv ciun wfun funiunfv mp1i inss1 sseli elpwi
+      funmpt sylan9ssr vex elpw sylibr adantll eqeq1 ifbid eqid snex ifex fvmpt
+      weq 0ex iuneq2dv eqtr3d sseq1d iunss sseq1 bibi1d snssg adantr bitr3d 0ss
+      biimt a1i pm2.21 2thd ifbothda ralbidv ad2antrr syl5bb sspwb sylib syl5ss
+      wn ralss bi2.04 ralbii elpwg biimparc ad2antlr ax-17 ax-gen eleq1 mp3an12
+      imbi1d ceqsralt simplrr biantrud syl6bbr elpw2 3bitrd 3bitrrd rabbidva wf
+      elin simpll snelpwi 0elpw ifcl sylancl fmptd isacs1i syl2anc eqeltrd ) DC
+      HZBDHZIZADJZAKHZIZIZAELZJZBYKHZMZEDUAZUBFYOFLZANZBUCZOUDZUEZYKUAZKUFZUGUH
+      ZYKJZEYOUBZDUIUJZYJYNUUDEYOYJYKYOHZIZUUDGUUBGLZANZYROUDZUKZYKJZUUJYMMZGUU
+      BPZYNUUHUUCUULYKUUHGUUBUUIYTUJZUKZUUCUULYTULUUQUUCNUUHFYOYSURGUUBYTUMUNUU
+      HGUUBUUPUUKUUHUUIUUBHZIUUIYOHZUUPUUKNUUGUURUUSYJUUGUURIUUIDJUUSUURUUGUUIY
+      KDUURUUIUUAHUUIYKJUUBUUAUUIUUAKUOZUPUUIYKUQQYKDUQZUSUUIDGUTVAVBVCFUUIYSUU
+      KYOYTFGVJYQUUJYROYPUUIAVDVEYTVFZUUJYROBVGVKVHVIQVLVMVNUUMUUKYKJZGUUBPZUUH
+      UUOGUUBUUKYKVOYFUVDUUORZYIUUGYEUVEYDYEUVCUUNGUUBUUJYRYKJZUUNROYKJZUUNRZUV
+      CUUNRYEYROYRUUKNUVFUVCUUNYRUUKYKVPVQOUUKNUVGUVCUUNOUUKYKVPVQYEUUJIYMUVFUU
+      NYEYMUVFRUUJBYKDVRVSUUJYMUUNRYEUUJYMWBSVTUUJWMZUVHYEUVIUVGUUNUVGUVIYKWAWC
+      UUJYMWDWESWFWGSWHWIUUHUUOUURUUNMZGYOPZAUUBHZYMMZYNUUHUUBYOJZUUOUVKRUUGUVN
+      YJUUGUUBUUAYOUUTUUGYKDJUUAYOJUVAYKDWJWKWLSUUNGUUBYOWNQUVKUUJUURYMMZMZGYOP
+      ZUUHUVMUVJUVPGYOUURUUJYMWOWPUUHAYOHZUVQUVMRZYIUVRYFUUGYHUVRYGADKWQWRWSUVM
+      UVMGTMZGTUUJUVOUVMRMZGTUVRUVSUVTGUVMGWTXAUWAGUUJUURUVLYMUUIAUUBXBXDXAUVOU
+      VMGAYOXEXCQWIUUHUVLYLYMUUHAUUAHZUVLYLUUHUWBUWBYHIUVLUUHYHUWBYFYGYHUUGXFXG
+      AUUAKXNXHUWBYLRUUHAYKEUTXIWCVTXDXJXKXLYJYDYOYOYTXMUUEUUFHYDYEYIXOYJFYOYSY
+      OYTYJYSYOHZYPYOHYJYRYOHZOYOHUWCYEUWDYDYIBDXPWSDXQYQYROYOXRXSVSUVBXTYTCDEY
+      AYBYC $.
+      $( [3-Apr-2015] $)
+
+    $( Algebraicity of a point closure condition. $)
+    acsfn0 $p |- ( ( X e. V /\ K e. X ) ->
+        { a e. ~P X | K e. a } e. ( ACS ` X ) ) $=
+      ( wcel wa cv cpw crab c0 wss wi cacs cfv wb 0ss a1bi a1i rabbiia cfn 0fin
+      acsfn mpanr12 syl5eqel ) CBEACEFZADGZEZDCHZIJUFKZUGLZDUHIZCMNZUGUJDUHUGUJ
+      OUFUHEUIUGUFPQRSUEJCKJTEUKULECPUAJABCDUBUCUD $.
+      $( [3-Apr-2015] $)
+
+    $d E a $.
+    $( Algebraicity of a one-argument closure condition. $)
+    acsfn1 $p |- ( ( X e. V /\ A. b e. X E e. X ) ->
+        { a e. ~P X | A. b e. a E e. a } e. ( ACS ` X ) ) $=
+      ( wcel wral wa cv cpw crab csn wss wi ciin cin cacs cfv wel wb elpwi snss
+      ralss syl vex imbi1i ralbii syl6bb rabbiia riinrab eqtr4i cmre mreacs cfn
+      adantr simpll simpr snssi ad2antlr snfi acsfn syl22anc ralimdva mreriincl
+      a1i ex imp syl2anc syl5eqel ) CBFZACFZECGZHZADIZFZEVNGZDCJZKZVQECEIZLZVNM
+      ZVONZDVQKZOPZCQRZVRWBECGZDVQKWDVPWFDVQVNVQFZVPEDSZVONZECGZWFWGVNCMVPWJTVN
+      CUAVOEVNCUCUDWIWBECWHWAVOVSVNEUEUBUFUGUHUIWBEDVQCUJUKVMWEVQULRFZWCWEFZECG
+      ZWDWEFVJWKVLBCUMUOVJVLWMVJVKWLECVJVSCFZHZVKWLWOVKHZVJVKVTCMZVTUNFZWLVJWNV
+      KUPWOVKUQWNWQVJVKVSCURUSWRWPVSUTVEVTABCDVAVBVFVCVGEWEWCCVQVDVHVI $.
+      $( [3-Apr-2015] $)
+
+    $( Algebraicity of a one-argument closure condition with additional
+       constant. $)
+    acsfn1c $p |- ( ( X e. V /\ A. b e. K A. c e. X E e. X ) ->
+        { a e. ~P X | A. b e. K A. c e. a E e. a } e. ( ACS ` X ) ) $=
+      ( wcel wral wa cv cpw crab ciin cin cacs cfv riinrab cmre mreacs ralimdv
+      adantr acsfn1 ex imp mreriincl syl2anc syl5eqelr ) DCHZADHGDIZFBIZJZAEKZH
+      GUMIZFBIEDLZMUOFBUNEUOMZNOZDPQZUNFEUOBRULURUOSQHZUPURHZFBIZUQURHUIUSUKCDT
+      UBUIUKVAUIUJUTFBUIUJUTACDEGUCUDUAUEFURUPBUOUFUGUH $.
+      $( [3-Apr-2015] $)
+
+    $( Algebraicity of a two-argument closure condition. $)
+    acsfn2 $p |- ( ( X e. V /\ A. b e. X A. c e. X E e. X ) ->
+        { a e. ~P X | A. b e. a A. c e. a E e. a } e. ( ACS ` X ) ) $=
+      ( wcel wral wa cv crab wss wi ciin cin cfv wel ralss vex riinrab cpw cacs
+      cpr wb elpwi r19.21v impexp prss imbi1i bitr3i ralbii 3bitr3g ralbidv syl
+      bitrd rabbiia eqtr4i cmre mreacs adantr ad2antrr cfn simpll simprr ancoms
+      prssi ad2ant2lr prfi a1i acsfn syl22anc expr ralimdva mreriincl syl5eqelr
+      imp syl2anc ex syl5eqel ) CBGZACGZFCHZECHZIZADJZGZFWEHZEWEHZDCUAZKZWIECFJ
+      ZEJZUCZWELZWFMZFCHZDWIKZNOZCUBPZWJWPECHZDWIKWRWHWTDWIWEWIGWECLZWHWTUDWECU
+      EXAWHEDQZWGMZECHWTWGEWECRXAXCWPECXAXBWFMZFWEHFDQZXDMZFCHXCWPXDFWECRXBWFFW
+      EUFXFWOFCXFXEXBIZWFMWOXEXBWFUGXGWNWFWKWLWEFSESUHUIUJUKULUMUOUNUPWPEDWICTU
+      QWDWSWIURPGZWQWSGZECHZWRWSGVTXHWCBCUSZUTVTWCXJVTWBXIECVTWLCGZIZWBXIXMWBIZ
+      WQWIFCWODWIKZNOZWSWOFDWICTXNXHXOWSGZFCHZXPWSGVTXHXLWBXKVAXMWBXRXMWAXQFCXM
+      WKCGZWAXQXMXSWAIZIZVTWAWMCLZWMVBGZXQVTXLXTVCXMXSWAVDXLXSYBVTWAXSXLYBWKWLC
+      VFVEVGYCYAWKWLVHVIWMABCDVJVKVLVMVPFWSXOCWIVNVQVOVRVMVPEWSWQCWIVNVQVS $.
+      $( [3-Apr-2015] $)
+  $}
+
+  ${
+    $d B s x y $.  $d G s x y $.
+    subgacs.b $e |- B = ( Base ` G ) $.
+    $( Subgroups are an algebraic closure system. $)
+    subgacs $p |- ( G e. Grp -> ( SubGrp ` G ) e. ( ACS ` B ) ) $=
+      ( vs vx vy wcel cfv cv wral wa crab cin wss wb wi eqid cvv eqid1 sylancr
+      cgrp csubg c0g cplusg cminusg cpw cacs incom dfin5 wceq subgss vex sylibr
+      co elpw ssriv df-ss 3eqtr3i elpwi subg0cl a1i simpl c0 wne issubg2 adantr
+      mpbi w3a simplrr simpr3 simplrl ne0i ad2antrl simprr impbida bitrd r19.26
+      3jca anbi2i syl6bb expr pm5.21ndd sylan2 rabbidva syl5eqr inrab cmre fvex
+      jca cbs eqeltri mreacs mp1i acsfn0 grpcl 3expb ralrimivva acsfn2 grpinvcl
+      grpidcl ralrimiva acsfn1 mreincl syl3anc syl5eqelr eqeltrd ) BUAGZBUBHZBU
+      CHZDIZGZEIZFIZBUDHZUNZXJGFXJJZEXJJZXLBUEHZHZXJGZEXJJZKZKZDAUFZLZAUGHZXGXH
+      XJXHGZDYDLZYEYDXHMXHYDMZYHXHYDXHUHDYDXHUIXHYDNYIXHUJDXHYDYGXJANZXJYDGZAXJ
+      BCUKXJADULUOUMUPXHYDUQVGURXGYGYCDYDYKXGYJYGYCOZXJAUSXGYJKZXKYGYCYGXKPYMXJ
+      BXIXIQUTVAYCXKPYMXKYBVBVAXGYJXKYLXGYJXKKZKZYGXKXPXTKEXJJZKZYCYOYGYJXJVCVD
+      ZYPVHZYQXGYGYSOYNEFAXNXJBXRCXNQXRQVEVFYOYSYQYOYSKXKYPXGYJXKYSVIYOYJYRYPVJ
+      WIYOYQKYJYRYPXGYJXKYQVKXKYRYOYPXJXIVLVMYOXKYPVNVRVOVPYPYBXKXPXTEXJVQVSVTW
+      AWBWCWDWEXGYEXKDYDLZYBDYDLZMZYFXKYBDYDWFXGYFYDWGHGZYTYFGZUUAYFGUUBYFGARGZ
+      UUCXGABWJHRCBWJWHWKZRAWLWMZXGUUEXIAGUUDUUFABXICXISWTXIRADWNTXGUUAXQDYDLZY
+      ADYDLZMZYFXQYADYDWFXGUUCUUHYFGZUUIYFGZUUJYFGUUGXGUUEXOAGZFAJEAJUUKUUFXGUU
+      MEFAAXGXLAGXMAGUUMAXNBXLXMCXNSWOWPWQXORADEFWRTXGUUEXSAGZEAJUULUUFXGUUNEAA
+      BXRXLCXRSWSXAXSRADEXBTUUHUUIYFYDXCXDXEYTUUAYFYDXCXDXEXF $.
+      $( [4-Apr-2015] $)
+  $}
+
+  ${
+    $d B a b x y $.  $d S a x y $.  $d W a b x y $.
+    lssacs.b $e |- B = ( Base ` W ) $.
+    lssacs.s $e |- S = ( LSubSp ` W ) $.
+    $( Submodules are an algebraic closure system. $)
+    lssacs $p |- ( W e. LMod -> S e. ( ACS ` B ) ) $=
+      ( vx vy vb va wcel cfv cv wral cbs wi a1i wb wa eqid cvv clmod csubg csca
+      cvsca co cpw crab cin wss lssss inss2 ssrab2 sstri sseli elpwi syl islss4
+      cacs adantr vex elpw eleq2 raleqbi1dv ralbidv elrab3 sylbir adantl anbi2d
+      bitr4d elin syl6bbr ex pm5.21ndd eqrdv cmre fvex eqeltri mreacs mp1i cgrp
+      lmodgrp subgacs lmodvscl 3expb ralrimivva acsfn1c sylancr mreincl syl3anc
+      weq eqeltrd ) CUAJZBCUBKZFLZGLZCUDKZUEZHLZJZGWRMZFCUCKZNKZMZHAUFZUGZUHZAU
+      RKZWLIBXFWLILZAUIZXHBJZXHXFJZXJXIOWLBXHACDEUJPXKXIOWLXKXHXDJZXIXFXDXHXFXE
+      XDWMXEUKXCHXDULUMUNXHAUOUPPWLXIXJXKQWLXIRZXJXHWMJZXHXEJZRZXKXMXJXNWQXHJZG
+      XHMZFXBMZRZXPWLXJXTQXIXBBWPXHXAWMACFGXASZXBSZDWPSZEWMSUQUSXMXOXSXNXIXOXSQ
+      ZWLXIXLYDXHAIUTVAXCXSHXHXDHIWJWTXRFXBWSXQGWRXHWRXHWQVBVCVDVEVFVGVHVIXHWMX
+      EVJVKVLVMVNWLXGXDVOKJZWMXGJZXEXGJZXFXGJATJZYEWLACNKTDCNVPVQZTAVRVSWLCVTJY
+      FCWAACDWBUPWLYHWQAJZGAMFXBMYGYIWLYJFGXBAWLWNXBJWOAJYJWNWPXAXBACWODYAYCYBW
+      CWDWEWQXBTAHFGWFWGWMXEXGXDWHWIWK $.
+      $( [4-Apr-2015] $)
+  $}
+
+  $c NoeACS $.
+
+  $( Class of Noetherian closure systems. $)
+  cnacs $a class NoeACS $.
+
+  ${
+    $d x c s g $.
+    $( Define a closure system of _Noetherian type_ (not standard terminology)
+       as an algebraic system where all closed sets are finitely generated. $)
+    df-nacs $a |- NoeACS = ( x e. _V |-> { c e. ( ACS ` x ) | A. s e. c
+              E. g e. ( ~P x i^i Fin ) s = ( ( mrCls ` c ) ` g ) } ) $.
+  $}
+
+  ${
+    $d C c g s $.  $d F c g s $.  $d S g s $.  $d X c g s x $.
+    isnacs.f $e |- F = ( mrCls ` C ) $.
+    $( Expand definition of Noetherian-type closure system. $)
+    isnacs $p |- ( C e. ( NoeACS ` X ) <-> ( C e. ( ACS ` X ) /\
+          A. s e. C E. g e. ( ~P X i^i Fin ) s = ( F ` g ) ) ) $=
+      ( vc vx cnacs cfv wcel cvv cacs cv wceq cpw cfn wrex wral cmrc cin wa cdm
+      elfvdm elex syl adantr crab pweq ineq1d rexeqdv ralbidv rabeqbidv df-nacs
+      fveq2 fvex rabex fvmpt eleq2d syl6eqr fveq1d rexbidv raleqbi1dv pm5.21nii
+      eqeq2d elrab syl6bb ) ADIJZKZDLKZADMJZKZENZBNZCJZOZBDPZQUAZRZEASZUBZVIDIU
+      CZKVJADIUDDWBUEUFVLVJVTVLDMUCZKVJADMUDDWCUEUFUGVJVIAVMVNGNZTJZJZOZBVRRZEW
+      DSZGVKUHZKWAVJVHWJAHDWGBHNZPZQUAZRZEWDSZGWKMJZUHWJLIWKDOZWOWIGWPVKWKDMUOW
+      QWNWHEWDWQWGBWMVRWQWLVQQWKDUIUJUKULUMHBEGUNWIGVKDMUPUQURUSWIVTGAVKWHVSEWD
+      AWDAOZWGVPBVRWRWFVOVMWRVNWECWRWEATJCWDATUOFUTVAVEVBVCVFVGVD $.
+      $( [4-Apr-2015] $)
+
+    $( In a Noetherian-type closure system, all closed sets are finitely
+       generated. $)
+    nacsfg $p |- ( ( C e. ( NoeACS ` X ) /\ S e. C ) ->
+        E. g e. ( ~P X i^i Fin ) S = ( F ` g ) ) $=
+      ( vs wcel cnacs cfv cv wceq cpw cfn cin wrex wral cacs isnacs simprbi
+      eqeq1 rexbidv rcla4va sylan2 ancoms ) BAHZAEIJHZBCKDJZLZCEMNOZPZUGUFGKZUH
+      LZCUJPZGAQZUKUGAERJHUOACDEGFSTUNUKGBAULBLUMUICUJULBUHUAUBUCUDUE $.
+      $( [4-Apr-2015] $)
+
+    $( Express Noetherian-type closure system with fewer quantifiers. $)
+    isnacs2 $p |- ( C e. ( NoeACS ` X ) <-> ( C e. ( ACS ` X ) /\
+          ( F " ( ~P X i^i Fin ) ) = C ) ) $=
+      ( vs vg cnacs cfv wcel cacs cv wceq cpw cfn wrex wral wa wss 3syl syl6bbr
+      cin cima isnacs wfn wb cmre acsmre mrcf ffn inss1 fvelimab sylancl rexbii
+      wf eqcom syl6rbbr ralbidv dfss3 crn imassrn syl5ss biantrurd eqss pm5.32i
+      frn bitrd bitri ) ACGHIACJHIZEKZFKBHZLZFCMZNUAZOZEAPZQVHBVMUBZALZQAFBCEDU
+      CVHVOVQVHVOAVPRZVQVHVOVIVPIZEAPVRVHVNVSEAVHVSVJVILZFVMOZVNVHBVLUDZVMVLRVS
+      WAUEVHACUFHIZVLABUNZWBACUGZABCDUHZVLABUISVLNUJFVLVMVIBUKULVKVTFVMVIVJUOUM
+      UPUQEAVPURTVHVRVPARZVRQVQVHWGVRVHVPBUSZABVMUTVHWCWDWHARWEWFVLABVESVAVBVPA
+      VCTVFVDVG $.
+      $( [4-Apr-2015] $)
+
+    $( Slight variation on finite genration for closure systems. $)
+    mrefg2 $p |- ( C e. ( Moore ` X ) ->
+        ( E. g e. ( ~P X i^i Fin ) S = ( F ` g ) <->
+          E. g e. ( ~P S i^i Fin ) S = ( F ` g ) ) ) $=
+      ( cmre cfv wcel cv wceq cpw cfn cin wb wa wss elpw 3bitr4g elin simpr vex
+      mrcssid mrcssv adantr impbida anbi1d pweq ineq1d eleq2d bibi2d syl5ibrcom
+      sstrd pm5.32rd rexbidv2 ) AEGHIZBCJZDHZKZUSCELZMNZBLZMNZUPUSUQVAIZUQVCIZU
+      PVDVEOUSVDUQURLZMNZIZOUPUQUTIZUQMIZPUQVFIZVJPVDVHUPVIVKVJUPUQEQZUQURQZVIV
+      KUPVLVMAUQDEFUCUPVMPUQUREUPVMUAUPUREQVMAUQDEFUDUEUMUFUQECUBZRUQURVNRSUGUQ
+      UTMTUQVFMTSUSVEVHVDUSVCVGUQUSVBVFMBURUHUIUJUKULUNUO $.
+      $( [4-Apr-2015] $)
+
+    $( Slight variation on finite genration for closure systems. $)
+    mrefg3 $p |- ( ( C e. ( Moore ` X ) /\ S e. C ) ->
+        ( E. g e. ( ~P X i^i Fin ) S = ( F ` g ) <->
+          E. g e. ( ~P S i^i Fin ) S C_ ( F ` g ) ) ) $=
+      ( cmre cfv wcel wa cv wceq cpw cfn cin wrex wss wb mrefg2 adantr biantrud
+      simpll inss1 sseli elpwi syl adantl simplr mrcsscl eqss syl6rbbr rexbidva
+      syl3anc bitrd ) AEGHIZBAIZJZBCKZDHZLZCEMNOPZUTCBMZNOZPZBUSQZCVCPUOVAVDRUP
+      ABCDEFSTUQUTVECVCUQURVCIZJZVEVEUSBQZJUTVGVHVEVGUOURBQZUPVHUOUPVFUBVFVIUQV
+      FURVBIVIVCVBURVBNUCUDURBUEUFUGUOUPVFUHAURDBEFUIUMUABUSUJUKULUN $.
+      $( [4-Apr-2015] $)
+  $}
+
+  ${
+    $d C g h i s $.  $d C t $.  $d X g h i s $.  $d X t $.  $d g t $.
+    $d h t $.  $d s t $.
+    $( A closure system of Noetherian type is algebraic. $)
+    nacsacs $p |- ( C e. ( NoeACS ` X ) -> C e. ( ACS ` X ) ) $=
+      ( cnacs cfv wcel cacs cmrc cpw cfn cin cima wceq eqid isnacs2 simplbi ) A
+      BCDEABFDEAGDZBHIJKALAPBPMNO $.
+      $( [4-Apr-2015] $)
+
+    $( A choice-free order equivalent to the Noetherian condition on a closure
+       system. $)
+    isnacs3 $p |- ( C e. ( NoeACS ` X ) <-> ( C e. ( Moore ` X ) /\
+          A. s e. ~P C ( ( toInc ` s ) e. Dirset -> U. s e. s ) ) ) $=
+      ( vg vh vi vt cfv wcel cv wi cpw wa syl wceq cfn wrex wss adantlr cvv cin
+      cnacs cmre cipo cdrs cuni wral cacs nacsacs acsmre cmrc ad2antrr ad2antlr
+      simpll elpwi simpr acsdrsel syl3anc nacsfg syl2anc mrefg2 mpbid vex elfpw
+      eqid fissuni sylbi ipodrsfi 3expb sylan2b wel ancoms simprr simprl sseldd
+      wb sstr mrcsscl adantr eqsstrd simplrl elssuni eqssd eqeltrd ex expr syl5
+      exp3a rexlimdva expdimp rexlimdv mpd ralrimiva jca adantl imim2d ralimdva
+      simpl sseld imp isacs3 sylanbrc cima mrcid acsficl eqtr3d wfn wf mrcf ffn
+      mress mrcss fpwipodrs mp1i inss1 sspwb sylib syl5ss fvex imaexg ax-mp a1i
+      ipodrsima crn imassrn frn elpw sylibr simplr fveq2 eleq1d eleq12d imbi12d
+      unieq id rcla4va fvelimab eqcom rexbii mpbird isnacs impbii ) ABUBHIZABUC
+      HIZCJZUDHZUEIZUUEUFZUUEIZKZCALZUGZMZUUCUUDUULUUCABUHHIZUUDABUIZABUJNZUUCU
+      UJCUUKUUCUUEUUKIZMZUUGUUIUURUUGMZUUHDJZAUKHZHZOZDUUHLPUAZQZUUIUUSUVCDBLZP
+      UAZQZUVEUUSUUCUUHAIZUVHUUCUUQUUGUNUUSUUNUUEARZUUGUVIUUCUUNUUQUUGUUOULUUQU
+      VJUUCUUGUUEAUOZUMUURUUGUPABUUEUQURAUUHDUVABUVAVEZUSUTUUCUVHUVEVPZUUQUUGUU
+      CUUDUVMUUPAUUHDUVABUVLVANULVBUUSUVCUUIDUVDUUTUVDIZUUTEJZUFZRZEUUELPUAZQZU
+      USUVCUUIKZUVNUUTUUHRUUTPIMUVSUUTUUHDVCVDUUTUUEEVFVGUUSUVQUVTEUVRUURUUGUVO
+      UVRIZUVQUVTKZUUGUWAMUVPFJZRZFUUEQZUURUWBUWAUUGUVOUUERZUVOPIZMUWEUVOUUEEVC
+      VDUUGUWFUWGUWEFUUEUVOVHVIVJUURUWDUWBFUUEUURFCVKZMZUWDUVQUVTUWDUVQMUUTUWCR
+      ZUWIUVTUVQUWDUWJUUTUVPUWCVQVLUURUWHUWJUVTUURUWHUWJMZMZUVCUUIUWLUVCMZUUHUW
+      CUUEUWMUUHUWCUWMUUHUVBUWCUWLUVCUPUWLUVBUWCRZUVCUWLUUDUWJUWCAIUWNUUCUUDUUQ
+      UWKUUPULUURUWHUWJVMUWLUUEAUWCUUQUVJUUCUWKUVKUMUURUWHUWJVNVOAUUTUVAUWCBUVL
+      VRURVSVTUWMUWHUWCUUHRUURUWHUWJUVCWAZUWCUUEWBNWCUWOWDWEWFWGWHWIWGWJWKWGWKW
+      LWEWMWNUUMUUNGJZUVBOZDUVGQZGAUGUUCUUMUUDUUGUVIKZCUUKUGZUUNUUDUULWRUUDUULU
+      WTUUDUUJUWSCUUKUUDUUQMZUUIUVIUUGUXAUUEAUUHUUQUVJUUDUVKWOWSWPWQWTABCXAXBZU
+      UMUWRGAUUMUWPAIZMZUWRUWQDUWPLZPUAZQZUXDUVBUWPOZDUXFQZUXGUXDUWPUVAUXFXCZIZ
+      UXIUXDUWPUXJUFZUXJUXDUWPUVAHZUWPUXLUUDUXCUXMUWPOUULAUWPUVABUVLXDSUXDUUNUW
+      PBRZUXMUXLOUUMUUNUXCUXBVSUUDUXCUXNUULAUWPBXKZSAUWPUVABUVLXEUTXFUXDUXJUDHZ
+      UEIZUXLUXJIZUUDUXCUXQUULUUDUXCMZEDBUXFUVATUUDUVAUVFXGZUXCUUDUVFAUVAXHZUXT
+      AUVABUVLXIZUVFAUVAXJNVSZUUDUUTUVORZUVOBRZMUVBUVOUVAHRZUXCUUDUYDUYEUYFAUUT
+      UVAUVOBUVLXLVISUWPTIUXFUDHUEIUXSGVCUWPTXMXNUXSUXFUXEUVFUXEPXOUXSUXNUXEUVF
+      RUXOUWPBXPXQXRZUXJTIZUXSUVATIUYHAUKXSUVAUXFTXTYAZYBYCSUXDUXJUUKIZUULUXQUX
+      RKZUUDUXCUYJUULUXSUXJARZUYJUUDUYLUXCUUDUXJUVAYDZAUVAUXFYEUUDUYAUYMARUYBUV
+      FAUVAYFNXRVSUXJAUYIYGYHSUUDUULUXCYIUUJUYKCUXJUUKUUEUXJOZUUGUXQUUIUXRUYNUU
+      FUXPUEUUEUXJUDYJYKUYNUUHUXLUUEUXJUUEUXJYNUYNYOYLYMYPUTWLWDUUDUXCUXKUXIVPZ
+      UULUXSUXTUXFUVFRUYOUYCUYGDUVFUXFUWPUVAYQUTSVBUWQUXHDUXFUWPUVBYRYSYHUUDUWR
+      UXGVPUULUXCAUWPDUVABUVLVAULYTWMADUVABGUVLUUAXBUUB $.
+      $( [4-Apr-2015] $)
+  $}
+
+  ${
+    $d A a b $.  $d B a $.  $d F a b x $.
+    $( Transitivity induction of subsets, lemma for ~ nacsfix . $)
+    incssnn0 $p |- ( ( A. x e. NN0 ( F ` x ) C_ ( F ` ( x + 1 ) ) /\
+        A e. NN0 /\ B e. ( ZZ>= ` A ) ) -> ( F ` A ) C_ ( F ` B ) ) $=
+      ( va vb cv cfv c1 caddc co wss cn0 wcel wa wi wceq fveq2 sseq2d imbi2d cz
+      wral cuz weq ssid a1ii eluznn0 ancoms oveq1 fveq2d sseq12d rcla4v expimpd
+      syl ancomsd sstr2 com12 syl6 a2d uzind4 3impia ) AGZDHZVBIJKZDHZLZAMUBZBM
+      NZCBUCHZNZBDHZCDHZLZVJVGVHOZVMVNVKEGZDHZLZPVNVKVKLZPVNVKFGZDHZLZPVNVKVSIJ
+      KZDHZLZPVNVMPEFBCVOBQZVQVRVNWEVPVKVKVOBDRSTEFUDZVQWAVNWFVPVTVKVOVSDRSTVOW
+      BQZVQWDVNWGVPWCVKVOWBDRSTVOCQZVQVMVNWHVPVLVKVOCDRSTBUANVNVRVKUEUFVSVINZVN
+      WAWDWIVNVTWCLZWAWDPWIVHVGWJWIVHVGWJWIVHOVSMNZVGWJPVHWIWKVSBUGUHVFWJAVSMAF
+      UDZVCVTVEWCVBVSDRWLVDWBDVBVSIJUIUJUKULUNUMUOWAWJWDVKVTWCUPUQURUSUTUQVA $.
+      $( [4-Apr-2015] $)
+  $}
+
+  ${
+    $d C a b z $.  $d C y $.  $d F a b c w $.  $d F y z $.  $d X a b z $.
+    $d X y $.  $d a x y $.  $d b x $.  $d w y z $.  $d x z $.  $d F x $.
+    $( An increasing sequence of closed sets in a Noetherian-type closure
+       system eventually fixates. $)
+    nacsfix $p |- ( ( C e. ( NoeACS ` X ) /\ F : NN0 --> C /\
+          A. x e. NN0 ( F ` x ) C_ ( F ` ( x + 1 ) ) ) ->
+        E. y e. NN0 A. z e. ( ZZ>= ` y ) ( F ` z ) = ( F ` y ) ) $=
+      ( vw va vb vc cfv wcel cn0 cv wss wral wceq wrex syl wa cnacs wf c1 caddc
+      co w3a crn cuni cuz cipo cdrs cvv c0 wne cun cpw frn 3ad2ant2 wb 3ad2ant1
+      elpw2g mpbird elex cc0 wfn ffn 0nn0 fnfvelrn sylancl cr ad2antrl ad2antll
+      ne0i nn0re cle wbr simplrr simpll3 simplrl cz nn0z syl2an biimpar adantll
+      eluz incssnn0 syl3anc ssequn1 sylib eqimss sseq2d rcla4ev syl2anc syl2anr
+      fveq2 ssequn2 lecasei ralrimivva uneq1 sseq1d rexbidv ralbidv ralrn uneq2
+      sseq2 rexrn bitrd isipodrs syl3anbrc wi cmre isnacs3 simprbi eleq1d unieq
+      weq eleq12d imbi12d rcla4va fvelrnb mpbid fvssunirn syl5sseqr simpr eqssd
+      id mpd ralrimiva expr reximdva ) DFUAKZLZMDEUBZANZEKYNUCUDUEEKOAMPZUFZBNZ
+      EKZEUGZUHZQZBMRZCNZEKZYRQZCYQUIKZPZBMRYPYTYSLZUUBYPYSUJKZUKLZUUHYPYSULLZY
+      SUMUNZYQUUCUOZGNZOZGYSRZCYSPZBYSPZUUJYPYSDUPZLZUUKYPUUTYSDOZYMYLUVAYOMDEU
+      QURYLYMUUTUVAUSYOYSDYKVAUTVBZYSUUSVCSYPVDEKZYSLZUULYPEMVEZVDMLUVDYMYLUVEY
+      OMDEVFURZVGMVDEVHVIYSUVCVMSYPUURHNZEKZINZEKZUOZJNZEKZOZJMRZIMPZHMPZYPUVOH
+      IMMYPUVGMLZUVIMLZTZTZUVOUVGUVIUVRUVGVJLYPUVSUVGVNVKUVSUVIVJLYPUVRUVIVNVLU
+      WAUVGUVIVOVPZTZUVSUVKUVJOZUVOYPUVRUVSUWBVQUWCUVKUVJQZUWDUWCUVHUVJOZUWEUWC
+      YOUVRUVIUVGUIKLZUWFYLYMYOUVTUWBVRYPUVRUVSUWBVSUVTUWBUWGYPUVTUWGUWBUVRUVGV
+      TLZUVIVTLZUWGUWBUSUVSUVGWAZUVIWAZUVGUVIWEWBWCWDAUVGUVIEWFWGUVHUVJWHWIUVKU
+      VJWJSUVNUWDJUVIMJIXPUVMUVJUVKUVLUVIEWOWKWLWMUWAUVIUVGVOVPZTZUVRUVKUVHOZUV
+      OYPUVRUVSUWLVSUWMUVKUVHQZUWNUWMUVJUVHOZUWOUWMYOUVSUVGUVIUIKLZUWPYLYMYOUVT
+      UWLVRYPUVRUVSUWLVQUVTUWLUWQYPUVTUWQUWLUVSUWIUWHUWQUWLUSUVRUWKUWJUVIUVGWEW
+      NWCWDAUVIUVGEWFWGUVJUVHWPWIUVKUVHWJSUVNUWNJUVGMJHXPUVMUVHUVKUVLUVGEWOWKWL
+      WMWQWRYPUVEUURUVQUSUVFUVEUURUVHUUCUOZUUNOZGYSRZCYSPZHMPUVQUUQUXABHMEYQUVH
+      QZUUPUWTCYSUXBUUOUWSGYSUXBUUMUWRUUNYQUVHUUCWSWTXAXBXCUVEUXAUVPHMUVEUXAUVK
+      UUNOZGYSRZIMPUVPUWTUXDCIMEUUCUVJQZUWSUXCGYSUXEUWRUVKUUNUUCUVJUVHXDWTXAXCU
+      VEUXDUVOIMUXCUVNGJMEUUNUVMUVKXEXFXBXGXBXGSVBBCGYSXHXIYPUUTYQUJKZUKLZYQUHZ
+      YQLZXJZBUUSPZUUJUUHXJZUVBYLYMUXKYOYLDFXKKLUXKDFBXLXMUTUXJUXLBYSUUSYQYSQZU
+      XGUUJUXIUUHUXMUXFUUIUKYQYSUJWOXNUXMUXHYTYQYSYQYSXOUXMYFXQXRXSWMYGYPUVEUUH
+      UUBUSUVFBMYTEXTSYAYPUUAUUGBMYPYQMLZUUAUUGYPUXNUUATZTZUUECUUFUXPUUCUUFLZTZ
+      UUDYRUXRYTUUDYREUUCYBYPUXNUUAUXQVQYCUXRYOUXNUXQYRUUDOYLYMYOUXOUXQVRYPUXNU
+      UAUXQVSUXPUXQYDAYQUUCEWFWGYEYHYIYJYG $.
+      $( [4-Apr-2015] $)
   $}
 
 $(
@@ -24410,11 +24931,17 @@ $)
 
     $( Value of the ring span function.  (Contributed by Stefan O'Rear,
        6-Dec-2014.) $)
-    rspval $p |- ( W e. X -> ( RSpan ` W ) =
+    rspvalOLD $p |- ( W e. X -> ( RSpan ` W ) =
         ( LSpan ` ( ringLMod ` W ) ) ) $=
       ( wcel crsp cfv clspn crglmod ccom df-rsp fveq1i cvv wfn wceq rlmfn fvco2
       elex sylancr syl5eq ) ABCZADEAFGHZEZAGEFEZADTIJSGKLAKCUAUBMNABPKFGAOQR $.
       $( [6-Dec-2014] $)
+
+    $( Value of the ring span function. $)
+    rspval $p |- ( RSpan ` W ) = ( LSpan ` ( ringLMod ` W ) ) $=
+      ( crsp cfv clspn crglmod ccom df-rsp 00lsp cvv wfn wfun rlmfn fnfun ax-mp
+      fveq1i fvco4i eqtri ) ABCADEFZCAECDCABRGODEAHEIJEKLIEMNPQ $.
+      $( [4-Apr-2015] $)
   $}
 
   $( Base set of the ring module.  (Contributed by Stefan O'Rear,
@@ -24513,6 +25040,13 @@ $)
       GADJIZUIEUGUMUOUIPUNDULUERSUF $.
       $( [28-Mar-2015] $)
 
+    $( The ideal system is an algebraic closure system on the base set. $)
+    lidlacs $p |- ( W e. Ring -> I e. ( ACS ` B ) ) $=
+      ( crg wcel crglmod cfv clss cacs clidl lidlval eqtri clmod rlmlmod rlmbas
+      cbs eqid lssacs syl syl5eqel ) CFGZBCHIZJIZAKIZBCLIUEECMNUCUDOGUEUFGCPAUE
+      UDACRIUDRIDCQNUESTUAUB $.
+      $( [4-Apr-2015] $)
+
     $( An ideal is a subset of the base set.  (Contributed by Stefan O'Rear,
        3-Jan-2015.) $)
     lidlssOLD $p |- ( ( W e. V /\ U e. I ) -> U C_ B ) $=
@@ -24521,6 +25055,18 @@ $)
       BUKMUGUHUMUGCULBUGCENJULGEDOPQRULBUKUJUKSULSUAUBUGAUKUCUHUGAEKJUKFEDUDPUE
       UF $.
       $( [3-Jan-2015] $)
+  $}
+
+  ${
+    mrcrsp.u $e |- U = ( LIdeal ` R ) $.
+    mrcrsp.k $e |- K = ( RSpan ` R ) $.
+    mrcrsp.f $e |- F = ( mrCls ` U ) $.
+    $( Moore closure generalizes ideal span. $)
+    mrcrsp $p |- ( R e. Ring -> K = F ) $=
+      ( crg wcel crglmod clmod wceq rlmlmod clidl clss lidlval eqtri crsp clspn
+      cfv rspval mrclsp syl ) AHIAJTZKIDCLAMBCDUDBANTUDOTEAPQDARTUDSTFAUAQGUBUC
+      $.
+      $( [4-Apr-2015] $)
   $}
 
   ${
@@ -24665,7 +25211,7 @@ $)
            Stefan O'Rear, 3-Jan-2015.) $)
         rspcl $p |- ( ( R e. Ring /\ G C_ B ) -> ( K ` G ) e. U ) $=
           ( crg wcel wss wa cfv crglmod clspn cbs adantr syl5eq eqid wceq clmod
-          clss rlmlmod rlmbaseOLD sseq2d biimpa syl2anc crsp rspval fveq1d lidlvalOLD
+          clss rlmlmod rlmbaseOLD sseq2d biimpa syl2anc crsp rspvalOLD fveq1d lidlvalOLD
           lspcl clidl eleq12d mpbird ) BIJZDAKZLZDEMZCJDBNMZOMZMZUTUBMZJZURUTUA
           JZDUTPMZKZVDUPVEUQBUCQUPUQVGUPAVFDUPABPMVFGBIUDRUEUFVCDVAVFUTVFSVCSVA
           SULUGURUSVBCVCUPUSVBTUQUPDEVAUPEBUHMVAFBIUIRUJQUPCVCTUQUPCBUMMVCHBIUK
@@ -24677,7 +25223,7 @@ $)
          (Contributed by Stefan O'Rear, 3-Jan-2015.) $)
       rspssid $p |- ( ( R e. Ring /\ G C_ B ) -> G C_ ( K ` G ) ) $=
         ( crg wcel wss cfv crglmod clspn clmod cbs rlmlmod adantr syl5eq sseq2d
-        wa eqid rlmbaseOLD biimpa lspssid syl2anc wb crsp rspval fveq1d mpbird ) B
+        wa eqid rlmbaseOLD biimpa lspssid syl2anc wb crsp rspvalOLD fveq1d mpbird ) B
         GHZCAIZSZCCDJZIZCCBKJZLJZJZIZULUOMHZCUONJZIZURUJUSUKBOPUJUKVAUJAUTCUJAB
         NJUTFBGUAQRUBCUPUTUOUTTUPTUCUDUJUNURUEUKUJUMUQCUJCDUPUJDBUFJUPEBGUGQUHR
         PUI $.
@@ -24702,7 +25248,7 @@ $)
          Stefan O'Rear, 3-Jan-2015.) $)
       rsp0 $p |- ( R e. Ring -> ( K ` { Z } ) = { Z } ) $=
         ( crg wcel csn cfv wceq crglmod c0g clspn clmod rlmlmod eqid lspsn0 syl
-        crsp syl5eq rspval rlm0 sneqd fveq12d eqeq12d mpbird ) AFGZCHZBIZUHJAKI
+        crsp syl5eq rspvalOLD rlm0 sneqd fveq12d eqeq12d mpbird ) AFGZCHZBIZUHJAKI
         ZLIZHZUJMIZIZULJZUGUJNGUOAOUMUJUKUKPUMPQRUGUIUNUHULUGUHULBUMUGBASIUMDAF
         UATUGCUKUGCALIUKEAFUBTUCZUDUPUEUF $.
         $( [3-Jan-2015] $)
@@ -24714,7 +25260,7 @@ $)
          subring which contains those elements.  (Contributed by Stefan O'Rear,
          3-Jan-2015.) $)
       rspssp $p |- ( ( R e. Ring /\ I e. U /\ G C_ I ) -> ( K ` G ) C_ I ) $=
-        ( crg wcel wss w3a crglmod clspn wceq crsp rspval syl5eq 3ad2ant1 eqid
+        ( crg wcel wss w3a crglmod clspn wceq crsp rspvalOLD syl5eq 3ad2ant1 eqid
         cfv fveq1d clmod clss rlmlmod clidl lidlvalOLD eleq2d biimpa 3adant3 simp3
         lspssp syl3anc eqsstrd ) AHIZDBIZCDJZKZCETZCALTZMTZTZDUNUOURVANUPUNCEUT
         UNEAOTUTFAHPQUARUQUSUBIZDUSUCTZIZUPVADJUNUOVBUPAUDRUNUOVDUPUNUOVDUNBVCD
@@ -28146,7 +28692,7 @@ $)
     rspsn $p |- ( ( R e. Ring /\ G e. B ) ->
         ( K ` { G } ) = { x | G D x } ) $=
       ( va crg wcel cfv cv co wceq cbs wrex adantr eqid csn crglmod clspn cvsca
-      wa csca cab crsp rspval syl5eq fveq1d clmod rlmlmod rlmbaseOLD eleq2d biimpa
+      wa csca cab crsp rspvalOLD syl5eq fveq1d clmod rlmlmod rlmbaseOLD eleq2d biimpa
       wbr lspsn syl2anc cmulr cvv eleq2i biimpi adantl vex eqid1 dvdsr2 sylancl
       wb rlmsca fveq2d eqcom oveqd eqeq2d syl5bb rexeqbidv bitr2d abbidv 3eqtrd
       rlmvscaOLD ) DKLZEBLZUEZEUAZFMWDDUBMZUCMZMZANZJNZEWEUDMZOZPZJWEUFMZQMZRZAUGZ
@@ -32691,12 +33237,28 @@ $)
         A. i e. U E. g e. ( ~P B i^i Fin ) i = ( N ` g ) ) ) $=
       ( wcel crg cfv wa cv wceq cpw cfn cin eqid syl5eq clnr crglmod clnm islnr
       wrex wral clspn cbs clmod rlmlmod biantrurd islnm2 syl6rbbr clidl lidlvalOLD
-      clss rlmbaseOLD pweqd ineq1d rspval fveq1d eqeq2d rexeqbidv raleqbidv bitr4d
+      clss rlmbaseOLD pweqd ineq1d rspvalOLD fveq1d eqeq2d rexeqbidv raleqbidv bitr4d
       crsp pm5.32i bitri ) BUAJBKJZBUBLZUCJZMVIENZDNZFLZOZDAPZQRZUEZECUFZMBUDVI
       VKVSVIVKVLVMVJUGLZLZOZDVJUHLZPZQRZUEZEVJUPLZUFZVSVIWHVJUIJZWHMVKVIWIWHBUJ
       UKWCWGDEVJVTWCSWGSVTSULUMVIVRWFECWGVICBUNLWGHBKUOTVIVOWBDVQWEVIVPWDQVIAWC
       VIABUHLWCGBKUQTURUSVIVNWAVLVIVMFVTVIFBVFLVTIBKUTTVAVBVCVDVEVGVH $.
       $( [24-Jan-2015] $)
+  $}
+
+  ${
+    $d B x y $.  $d R x y $.  $d U x y $.
+    islnr3.b $e |- B = ( Base ` R ) $.
+    islnr3.u $e |- U = ( LIdeal ` R ) $.
+    $( Relate left-Noetherian rings to Noetherian-type closure property of the
+       left ideal system. $)
+    islnr3 $p |- ( R e. LNoeR <-> ( R e. Ring /\ U e. ( NoeACS ` B ) ) ) $=
+      ( vx vy clnr wcel crg cv crsp cfv wceq cpw cfn wrex wral wa eqid cin cacs
+      cnacs islnr2 mrcrsp fveq1d eqeq2d rexbidv ralbidv lidlacs biantrurd bitrd
+      cmrc isnacs syl6bbr pm5.32i bitri ) BHIBJIZFKZGKZBLMZMZNZGAOPUAZQZFCRZSUR
+      CAUCMIZSABCGFVADEVATZUDURVFVGURVFCAUBMIZUSUTCUMMZMZNZGVDQZFCRZSZVGURVFVNV
+      OURVEVMFCURVCVLGVDURVBVKUSURUTVAVJBCVJVAEVHVJTZUEUFUGUHUIURVIVNACBDEUJUKU
+      LCGVJAFVPUNUOUPUQ $.
+      $( [4-Apr-2015] $)
   $}
 
   ${
@@ -32899,6 +33461,29 @@ $)
     $}
 
     ${
+      $d I i j x y $.  $d R i j r x y $.  $d S x $.  $d T x $.  $d U i r x $.
+      hbtlem7.t $e |- T = ( LIdeal ` R ) $.
+      $( Functionality of leading coefficient ideal sequence. $)
+      hbtlem7 $p |- ( ( R e. Ring /\ I e. U ) -> ( S ` I ) : NN0 --> T ) $=
+        ( vx vj vy vi wcel cfv cn0 cv wceq cvv vr crg wa wfn wral cdg1 cle cco1
+        wf wbr wrex cab cmpt wss simpr reximi ss2abi abrexexg sylancr ralrimivw
+        ssexg adantl eqid fnmpt syl cldgis elex cpl1 clidl fveq2 syl6eqr fveq2d
+        fveq1d breq1d anbi1d rexbidv abbidv mpteq2dv mpteq12dv df-ldgis eqeltri
+        mptex fvmpt syl5eq adantr rexeq nn0ex eqtrd fneq1d mpbird hbtlem2 3expa
+        fvex ralrimiva ffnfv sylanbrc ) BUBOZFEOZUCZFCPZQUDZKRZWTPDOZKQUEQDWTUI
+        WSXAKQLRZBUFPZPZXBUGUJZMRXBXDUHPPZSZUCZLFUKZMULZUMZQUDZWSXLTOZKQUEZXNWR
+        XPWQWRXOKQWRXLXILFUKZMULZUNXRTOXOXKXQMXJXILFXGXIUOUPUQLMFXHEURXLXRTVAUS
+        UTVBKQXLXMTXMVCVDVEWSQWTXMWSWTFNEKQXJLNRZUKZMULZUMZUMZPZXMWQWTYDSWRWQFC
+        YCWQCBVFPZYCIWQBTOYEYCSBUBVGUABNUARZVHPZVIPZKQXDYFUFPZPZXBUGUJZXIUCZLXS
+        UKZMULZUMZUMYCTVFYFBSZNYHYOEYBYPYHAVIPZEYPYGAVIYPYGBVHPAYFBVHVJGVKVLHVK
+        YPKQYNYAYPYMXTMYPYLXJLXSYPYKXGXIYPYJXFXBUGYPXDYIXEYFBUFVJVMVNVOVPVQVRVS
+        KNMLUAVTNEYBEYQTHAVIWMWAWBWCVEWDVMWEWRYDXMSWQNFYBXMEYCXSFSZKQYAXLYRXTXK
+        MXJLXSFWFVQVRYCVCKQXLWGWBWCVBWHWIWJWSXCKQWQWRXBQOXCABCDEFXBGHIJWKWLWNKQ
+        DWTWOWP $.
+        $( [4-Apr-2015] $)
+    $}
+
+    ${
       $d ph a c $.  $d I a b c $.  $d P b $.  $d R a b c $.  $d X a b c $.
       $d Y a b c $.
       hbtlem4.r $e |- ( ph -> R e. Ring ) $.
@@ -33062,57 +33647,63 @@ $)
   $}
 
   ${
-    $d P a b c e f $.  $d P g $.  $d R a b c e f $.  $d R d g $.  $d a d g $.
-    $d c d g $.  $d d f $.  $d e g $.  $d f g $.
+    $d P a b c e f $.  $d P g $.  $d R a b c d f $.  $d R e g $.  $d a g $.
+    $d c g $.  $d d g $.  $d f g $.
     hbt.p $e |- P = ( Poly1 ` R ) $.
     $( The Hilbert Basis Theorem - the ring of univariate polynomials over a
        Noetherian ring is a Noetherian ring. $)
     hbt $p |- ( R e. LNoeR -> P e. LNoeR ) $=
-      ( vb ve vg wcel cv cfv wceq cfn wral syl cn0 wss ralrimiva adantr syl2anc
+      ( vb ve vg wcel cv cfv wceq cfn wral syl cn0 wss adantr ralrimiva syl2anc
       wa fveq2 va vd vc vf clnr crg crsp cbs cpw cin wrex lnrrng ply1rng cldgis
-      clidl cuz cc0 cfz co wf wex fzfi eqid simpll simplr elfznn0 adantl fveq2d
-      hbtlem6 fveq1d sseq2d ac6sfi sylancr cuni simprl inss1 syl6ss uniss unipw
-      crn frn syl6sseq simpllr lidlss sstrd fvex elpw2 ciun wfn ffn fniunfv a1i
-      sylibr inss2 ffvelrn sylan sseldi iunfi eqeltrrd sylanbrc ad3antrrr rspcl
-      rspssp syl3anc cr nn0re simplrl cle wbr simprr wb fznn0 mpbir2and simplrr
-      elin weq fveq12d sseq12d rcla4va fvssunirn syl5ss rspssid hbtlem3 anassrs
-      id cz nn0z ad2antrl eluz2 syl3anbrc ad2antrr eqeq1d leid wi breq1 imbi12d
-      expr mpd hbtlem4 eqsstrd lecasei hbtlem5 eqcomd eqeq2d rcla4ev ex exlimdv
+      clidl cuz cnacs wf c1 caddc co eqid1 islnr3 simprbi eqid hbtlem7 ad2antrr
+      sylan simplr simpr peano2nn0 adantl cle wbr cr nn0re lep1 hbtlem4 nacsfix
+      syl3anc cc0 cfz wex fzfi simpll elfznn0 hbtlem6 fveq2d fveq1d sylancr crn
+      sseq2d ac6sfi simprl frn inss1 syl6ss uniss unipw syl6sseq simpllr lidlss
+      cuni sstrd fvex elpw2 sylibr ciun wfn ffn fniunfv 3syl inss2 sseldi iunfi
+      ffvelrn eqeltrrd sylanbrc ad3antrrr rspcl rspssp simplrl simprr mpbir2and
+      elin wb fznn0 simplrr weq id fveq12d sseq12d rcla4va syl5ss anassrs cz wi
+      nn0z expr mpd fvssunirn rspssid hbtlem3 eluz2 syl3anbrc eqeq1d leid breq1
+      ad2antrl imbi12d eqsstrd lecasei hbtlem5 eqcomd eqeq2d rcla4ev ex exlimdv
       rexlimdva islnr2 ) BUEGZAUFGZUAHZDHZAUGIZIZJZDAUHIZUIZKUJZUKZUAAUOIZLAUEG
-      UUJBUFGZUUKBULZABCUMZMZUUJUUTUAUVAUUJUULUVAGZSZUBHZUULBUNIZIZIZUCHZUVJIZJ
-      ZUBUVLUPIZLZUCNUKUUT?UVGUVPUUTUCNUVGUVLNGZUVPUUTUVGUVQUVPSZSZUQUVLURUSZUU
-      LUIZKUJZUDHZUTZEHZUVJIZUWEUWEUWCIZUUNIZUVIIZIZOZEUVTLZSZUDVAZUUTUVGUWNUVR
-      UVGUVTKGZUWFUWEUUOUVIIZIZOZDUWBUKZEUVTLUWNUQUVLVBZUVGUWSEUVTUVGUWEUVTGZSA
-      BUVIUVADUULUUNUWECUVAVCZUVIVCZUUNVCZUUJUVFUXAVDUUJUVFUXAVEUXAUWENGUVGUWEU
-      VLVFVGVIPUWRUWKEDUVTUWBUDUUMUWGJZUWQUWJUWFUXEUWEUWPUWIUXEUUOUWHUVIUUMUWGU
-      UNTVHVJVKVLVMQUVSUWMUUTUDUVSUWMUUTUVSUWMSZUWCVTZVNZUUSGZUULUXHUUNIZJZUUTU
-      XFUXHUURGZUXHKGUXIUXFUXHUUQOZUXLUXFUXHUULUUQUXFUXHUWAVNZUULUXFUXGUWAOUXHU
-      XNOUXFUXGUWBUWAUXFUWDUXGUWBOUVSUWDUWLVOZUVTUWBUWCWAMUWAKVPVQUXGUWAVRMUULV
-      SWBZUXFUVFUULUUQOUUJUVFUVRUWMWCZUUQUULUVAAUUQVCZUXBWDMWEZUXHUUQAUHWFWGWMU
-      XFFUVTFHZUWCIZWHZUXHKUXFUWCUVTWIZUYBUXHJUXFUWDUYCUXOUVTUWBUWCWJMFUVTUWCWK
-      MUXFUWOUYAKGZFUVTLUYBKGUWOUXFUWTWLUXFUYDFUVTUXFUXTUVTGZSUWBKUYAUWAKWNUXFU
-      WDUYEUYAUWBGUXOUVTUWBUXTUWCWOWPWQPFUVTUYAWRRWSUXHUURKXOWTUXFUXJUULUXFFABU
-      VIUVAUXJUULCUXBUXCUUJUVBUVFUVRUWMUVCXAZUXFUUKUXMUXJUVAGZUUJUUKUVFUVRUWMUV
-      EXAZUXSUUQAUVAUXHUUNUXDUXRUXBXBRZUXQUXFUUKUVFUXHUULOUXJUULOUYHUXQUXPAUVAU
-      XHUULUUNUXDUXBXCXDUXFUXTUVJIZUXTUXJUVIIZIZOZFNUXFUXTNGZSZUYMUXTUVLUYNUXTX
-      EGUXFUXTXFVGUYOUVQUVLXEGZUXFUVQUYNUVGUVQUVPUWMXGZQUVLXFZMUXFUYNUXTUVLXHXI
-      ZUYMUXFUYNUYSSZSZUYJUXTUYAUUNIZUVIIZIZUYLVUAUYEUWLUYJVUDOZVUAUYEUYNUYSUXF
-      UYNUYSVOZUXFUYNUYSXJVUAUVQUYEUYTXKUXFUVQUYTUYQQUXTUVLXLMXMUVSUWDUWLUYTXNU
-      WKVUEEUXTUVTEFXPZUWFUYJUWJVUDUWEUXTUVJTVUGUWEUXTUWIVUCVUGUWHVUBUVIVUGUWGU
-      YAUUNUWEUXTUWCTVHVHVUGYEXQXRXSRVUAABUVIUVAVUBUXJUXTCUXBUXCUXFUVBUYTUYFQUX
-      FVUBUVAGZUYTUXFUUKUYAUUQOVUHUYHUXFUYAUXHUUQUWCUXTXTZUXSYAUUQAUVAUYAUUNUXD
-      UXRUXBXBRQUXFUYGUYTUYIQZVUAUUKUYGUYAUXJOVUBUXJOUXFUUKUYTUXFUVBUUKUYFUVDMQ
-      VUJVUAUYAUXHUXJVUIUXFUXHUXJOZUYTUXFUUKUXMVUKUYHUXSUUQAUXHUUNUXDUXRYBRQYAA
-      UVAUYAUXJUUNUXDUXBXCXDVUFYCWEZYDUXFUYNUVLUXTXHXIZUYMUXFUYNVUMSZSZUYJUVMUY
-      LVUOUXTUVOGZUVPUYJUVMJZUXFUVQVUNVUPUYQUVQVUNSUVLYFGZUXTYFGZVUMVUPUVQVURVU
-      NUVLYGQUYNVUSUVQVUMUXTYGYHUVQUYNVUMXJUVLUXTYIYJWPUVSUVPUWMVUNUVGUVQUVPXJY
-      KUVNVUQUBUXTUVOUBFXPUVKUYJUVMUVHUXTUVJTYLXSRVUOUVMUVLUYKIZUYLUXFUVMVUTOZV
-      UNUXFUVLUVLXHXIZVVAUXFUYPVVBUXFUVQUYPUYQUYRMUVLYMMUXFUVQUYSUYMYNZFNLVVBVV
-      AYNZUYQUXFVVCFNUXFUYNUYSUYMVULYQPVVCVVDFUVLNFUCXPZUYSVVBUYMVVAUXTUVLUVLXH
-      YOVVEUYJUVMUYLVUTUXTUVLUVJTUXTUVLUYKTXRYPXSRYRQVUOABUVIUVAUXJUVLUXTCUXBUX
-      CUXFUVBVUNUYFQUXFUYGVUNUYIQUXFUVQVUNUYQQUXFUYNVUMVOUXFUYNVUMXJYSWEYTYDUUA
-      PUUBUUCUUPUXKDUXHUUSUUMUXHJUUOUXJUULUUMUXHUUNTUUDUUERUUFUUGYRYQUUHYRPUUQA
-      UVADUAUUNUXRUXBUXDUUIWT $.
+      UVABUFGZUVBBULZABCUMZMZUVAUVKUAUVLUVAUVCUVLGZSZUBHZUVCBUNIZIZIZUCHZUWAIZJ
+      ZUBUWCUPIZLZUCNUKZUVKUVRBUOIZBUHIZUQIGZNUWIUWAURZUVDUWAIUVDUSUTVAZUWAIOZD
+      NLUWHUVAUWKUVQUVAUVMUWKUWJBUWIUWJVBUWIVBVCVDPUVAUVMUVQUWLUVNABUVTUWIUVLUV
+      CCUVLVEZUVTVEZUWIVEVFVHUVRUWNDNUVRUVDNGZSABUVTUVLUVCUVDUWMCUWOUWPUVAUVMUV
+      QUWQUVNVGUVAUVQUWQVIUVRUWQVJUWQUWMNGUVRUVDVKVLUWQUVDUWMVMVNZUVRUWQUVDVOGU
+      WRUVDVPUVDVQMVLVRQDUCUBUWIUWAUWJVSVTUVRUWGUVKUCNUVRUWCNGZUWGUVKUVRUWSUWGS
+      ZSZWAUWCWBVAZUVCUIZKUJZUDHZURZEHZUWAIZUXGUXGUXEIZUVEIZUVTIZIZOZEUXBLZSZUD
+      WCZUVKUVRUXPUWTUVRUXBKGZUXHUXGUVFUVTIZIZOZDUXDUKZEUXBLUXPWAUWCWDZUVRUYAEU
+      XBUVRUXGUXBGZSABUVTUVLDUVCUVEUXGCUWOUWPUVEVEZUVAUVQUYCWEUVAUVQUYCVIUYCUXG
+      NGUVRUXGUWCWFVLWGQUXTUXMEDUXBUXDUDUVDUXIJZUXSUXLUXHUYEUXGUXRUXKUYEUVFUXJU
+      VTUVDUXIUVETWHWIWLWMWJPUXAUXOUVKUDUXAUXOUVKUXAUXOSZUXEWKZXCZUVJGZUVCUYHUV
+      EIZJZUVKUYFUYHUVIGZUYHKGUYIUYFUYHUVHOZUYLUYFUYHUVCUVHUYFUYHUXCXCZUVCUYFUY
+      GUXCOUYHUYNOUYFUYGUXDUXCUYFUXFUYGUXDOUXAUXFUXNWNZUXBUXDUXEWOMUXCKWPWQUYGU
+      XCWRMUVCWSWTZUYFUVQUVCUVHOUVAUVQUWTUXOXAZUVHUVCUVLAUVHVEZUWOXBMXDZUYHUVHA
+      UHXEXFXGUYFFUXBFHZUXEIZXHZUYHKUYFUXFUXEUXBXIVUBUYHJUYOUXBUXDUXEXJFUXBUXEX
+      KXLUYFUXQVUAKGZFUXBLVUBKGUYBUYFVUCFUXBUYFUYTUXBGZSUXDKVUAUXCKXMUYFUXFVUDV
+      UAUXDGUYOUXBUXDUYTUXEXPVHXNQFUXBVUAXOWJXQUYHUVIKYEXRUYFUYJUVCUYFFABUVTUVL
+      UYJUVCCUWOUWPUVAUVMUVQUWTUXOUVNXSZUYFUVBUYMUYJUVLGZUVAUVBUVQUWTUXOUVPXSZU
+      YSUVHAUVLUYHUVEUYDUYRUWOXTRZUYQUYFUVBUVQUYHUVCOUYJUVCOVUGUYQUYPAUVLUYHUVC
+      UVEUYDUWOYAVTUYFUYTUWAIZUYTUYJUVTIZIZOZFNUYFUYTNGZSZVULUYTUWCVUMUYTVOGUYF
+      UYTVPVLVUNUWSUWCVOGZUYFUWSVUMUVRUWSUWGUXOYBZPUWCVPZMUYFVUMUYTUWCVMVNZVULU
+      YFVUMVURSZSZVUIUYTVUAUVEIZUVTIZIZVUKVUTVUDUXNVUIVVCOZVUTVUDVUMVURUYFVUMVU
+      RWNZUYFVUMVURYCVUTUWSVUDVUSYFUYFUWSVUSVUPPUYTUWCYGMYDUXAUXFUXNVUSYHUXMVVD
+      EUYTUXBEFYIZUXHVUIUXLVVCUXGUYTUWATVVFUXGUYTUXKVVBVVFUXJVVAUVTVVFUXIVUAUVE
+      UXGUYTUXETWHWHVVFYJYKYLYMRVUTABUVTUVLVVAUYJUYTCUWOUWPUYFUVMVUSVUEPUYFVVAU
+      VLGZVUSUYFUVBVUAUVHOVVGVUGUYFVUAUYHUVHUXEUYTUUAZUYSYNUVHAUVLVUAUVEUYDUYRU
+      WOXTRPUYFVUFVUSVUHPZVUTUVBVUFVUAUYJOVVAUYJOUYFUVBVUSUYFUVMUVBVUEUVOMPVVIV
+      UTVUAUYHUYJVVHUYFUYHUYJOZVUSUYFUVBUYMVVJVUGUYSUVHAUYHUVEUYDUYRUUBRPYNAUVL
+      VUAUYJUVEUYDUWOYAVTVVEUUCXDZYOUYFVUMUWCUYTVMVNZVULUYFVUMVVLSZSZVUIUWDVUKV
+      VNUYTUWFGZUWGVUIUWDJZUYFUWSVVMVVOVUPUWSVVMSUWCYPGZUYTYPGZVVLVVOUWSVVQVVMU
+      WCYRPVUMVVRUWSVVLUYTYRUUIUWSVUMVVLYCUWCUYTUUDUUEVHUXAUWGUXOVVMUVRUWSUWGYC
+      VGUWEVVPUBUYTUWFUBFYIUWBVUIUWDUVSUYTUWATUUFYMRVVNUWDUWCVUJIZVUKUYFUWDVVSO
+      ZVVMUYFUWCUWCVMVNZVVTUYFUWSVUOVWAVUPVUQUWCUUGXLUYFUWSVURVULYQZFNLVWAVVTYQ
+      ZVUPUYFVWBFNUYFVUMVURVULVVKYSQVWBVWCFUWCNFUCYIZVURVWAVULVVTUYTUWCUWCVMUUH
+      VWDVUIUWDVUKVVSUYTUWCUWATUYTUWCVUJTYLUUJYMRYTPVVNABUVTUVLUYJUWCUYTCUWOUWP
+      UYFUVMVVMVUEPUYFVUFVVMVUHPUYFUWSVVMVUPPUYFVUMVVLWNUYFVUMVVLYCVRXDUUKYOUUL
+      QUUMUUNUVGUYKDUYHUVJUVDUYHJUVFUYJUVCUVDUYHUVETUUOUUPRUUQUURYTYSUUSYTQUVHA
+      UVLDUAUVEUYRUWOUYDUUTXR $.
+      $( [4-Apr-2015] $)
   $}
 
 $(
